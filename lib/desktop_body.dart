@@ -22,7 +22,7 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
     FeatureModel("c", "des 3", "Cookie.png", "routePath"),
     FeatureModel("d", "des 4", "Consent.png", "routePath"),
     FeatureModel("e", "des 5", "data.png", "routePath"),
-    FeatureModel("f", "des 6", "dtbr.png", "routePath"),
+    FeatureModel("f", "des 6", "breach.png", "routePath"),
     FeatureModel("g", "des 7", "audit.png", "routePath"),
     FeatureModel("h", "des 8", "Policy.png", "routePath"),
     FeatureModel("i", "des 9", "discovery.png", "routePath"),
