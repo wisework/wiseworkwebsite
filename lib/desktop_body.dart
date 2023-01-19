@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'responsive_layout.dart';
 
 class FeatureModel {
   final String title;
@@ -91,7 +92,6 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
                         child: new Container(
                           width: 100.0,
                           height: 100.0,
-                          
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[

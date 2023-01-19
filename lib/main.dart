@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 // import 'package:fluttertoast/fluttertoast.dart';
 // import 'package:wiseintern/OnHover.dart';
 import 'package:wiseintern/desktop_body.dart';
+import 'responsive_layout.dart';
 import 'HomePage.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home:MyDesktopBody(),
       theme: ThemeData(
         // This is the theme of your application.
 
