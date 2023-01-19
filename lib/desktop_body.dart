@@ -8,14 +8,14 @@ class FeatureModel {
   FeatureModel(this.title, this.description, this.imageUrl, this.routePath);
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class MyDesktopBody extends StatefulWidget {
+  const MyDesktopBody({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<MyDesktopBody> createState() => _MyDesktopBodyState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _MyDesktopBodyState extends State<MyDesktopBody> {
   List<FeatureModel> features = [
     FeatureModel(
         "PD Management",
