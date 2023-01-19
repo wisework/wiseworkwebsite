@@ -22,7 +22,7 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
     FeatureModel("c", "des 3", "Cookie.png", "routePath"),
     FeatureModel("d", "des 4", "Consent.png", "routePath"),
     FeatureModel("e", "des 5", "data.png", "routePath"),
-    FeatureModel("f", "des 6", "dash.png", "routePath"),
+    FeatureModel("f", "des 6", "audit.png", "routePath"),
     FeatureModel("g", "des 7", "audit.png", "routePath"),
     FeatureModel("h", "des 8", "Policy.png", "routePath"),
     FeatureModel("i", "des 9", "discovery.png", "routePath"),
@@ -41,7 +41,7 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
       backgroundColor: Color.fromARGB(255, 228, 236, 248),
       body: Center(
         child: Container(
-          width: 800,
+          width: 1000,
           color: Colors.green[50],
           child: Padding(
             padding: const EdgeInsets.all(20),
@@ -52,6 +52,8 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
                 itemCount: features.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(100)),
                     child: new Material(
                       child: new InkWell(
                         onTap: () {
@@ -64,17 +66,19 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               SizedBox(
-                                  width: 100,
-                                  height: 100,
+                                  width: 50,
+                                  height: 50,
                                   child: Image.asset(
-                                      'assets/${features[index].imageUrl}')),
+                                    'assets/${features[index].imageUrl}',
+                                  )),
                               Text('${features[index].title}'),
                               Text('${features[index].description}'),
                               Container(
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(4),
+                                    borderRadius: BorderRadius.circular(10),
                                     border: Border.all(
-                                        width: 1, color: Colors.blue)),
+                                        width: 1, color: Colors.blue),
+                                    color: Colors.lime),
                                 width: 100,
                                 height: 40,
                               )
