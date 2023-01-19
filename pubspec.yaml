@@ -58,7 +58,7 @@ dev_dependencies:
 flutter:
   assets:
   - assets/audit.png
-  - assets/branch.png
+  - assets/breach.png
   - assets/consent.png
   - assets/cookie.png
   - assets/data.png
