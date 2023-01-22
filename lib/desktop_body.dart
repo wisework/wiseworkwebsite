@@ -17,6 +17,51 @@ class MyDesktopBody extends StatefulWidget {
 }
 
 class _MyDesktopBodyState extends State<MyDesktopBody> {
+  // List title = [
+  //   " PD Management",
+  //   "DPIA & Risk Management",
+  //   "Cookie Consent",
+  //   "Consent Management",
+  //   "Data Subject Right Management",
+  //   "Data Breach",
+  //   "Audit&Gap Management",
+  //   "Policy&Notices Management",
+  //   "Data Deiscover",
+  //   "Executive Support System",
+  //   "Legitimate Interest Assessment",
+  //   "System Setting Management",
+  // ];
+
+  // List desc = [
+  //   " จัดการบันทึกรายการข้อมูลส่วนบุคคลและการไหลของข้อมูล",
+  //   "การบริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล",
+  //   "การขอความยินยอมจากเจ้าของข้อมูลและการบริหารจัดการคุกกี้",
+  //   "การบริหารจัดการให้ความยินยอม",
+  //   "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูล",
+  //   "บริหารกรณีเกิดข้อมูลรั่วไหล",
+  //   "บริหารงานตรจสอบและการทำ GAP Analysis",
+  //   "บริหารการสื่อสารนโยบายและประกาศความเป็นส่วนตัว",
+  //   "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
+  //   "บริหารงานและจัดการรายงาน สำหรับผู้บริหาร",
+  //   "การประเมินการนำฐานกฏหมายมาใช้",
+  //   "ส่วนการตั้งค่า ส่วนส่งเสริมที่ถูกพัฒนาขึ้นมาเพื่อให้ผู้ดูแลระบบจัดการกับข้อมูลต่างๆ",
+  // ];
+
+  // List img = [
+  //   "folder.png",
+  //   "risk.png",
+  //   "Cookie.png",
+  //   "Consent.png",
+  //   "data.png",
+  //   "breach.png",
+  //   "audit.png",
+  //   "Policy.png",
+  //   "discovery.png",
+  //   "executive.png",
+  //   "legi.png",
+  //   "system.png",
+  // ];
+
   List<FeatureModel> features = [
     FeatureModel(
         "PD Management",
@@ -57,7 +102,7 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
         "การประเมินการนำฐานกฏหมายมาใช้", "legi.png", "routePath"),
     FeatureModel(
         "System Setting Management",
-        "ส่วนการตั้งค่า ส่วนส่งเสริมที่ถูกพัฒนาขึ้นมาเพื่อให้ผู้ดูแลระบบจัดการกับข้อมูลต่างๆ",
+        "ส่วนการตั้งค่าส่วนส่งเสริมที่ถูกพัฒนาขึ้นมาเพื่อให้ผู้ดูแลระบบจัดการกับข้อมูลต่างๆ",
         "system.png",
         "routePath"),
   ];
@@ -69,86 +114,94 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 228, 236, 248),
-      body: Center(
-        child: Container(
-          width: 1000,
-          color: Color.fromARGB(255, 228, 236, 248),
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: isSmallScreen() ? 2 : 3,
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 20),
-                itemCount: features.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Container(
-                    child: new Material(
-                      child: new InkWell(
-                        onTap: () {
-                          print("tapped");
-                        },
-                        child: new Container(
-                          width: 100.0,
-                          height: 100.0,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              SizedBox(
-                                  width: 50,
-                                  height: 50,
-                                  child: Image.asset(
-                                    'assets/${features[index].imageUrl}',
-                                  )),
-                              Text('${features[index].title}',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.bold)),
-                              Text('${features[index].description}',
-                                  style: TextStyle(
-                                    color: Color.fromARGB(255, 77, 85, 97),
-                                  )),
-                              Container(
-                                  // decoration: BoxDecoration(
-                                  //     borderRadius: BorderRadius.circular(10),
-                                  //     border: Border.all(
-                                  //         width: 1, color: Colors.blue),
-                                  //     color: Colors.lime),
-                                  // width: 100,
-                                  // height: 40,
-                                  child: Column(
-                                children: [
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        Text(
-                                          'more ',
-                                          style: TextStyle(fontSize: 13),
-                                        ), // <-- Text
-
-                                        Icon(
-                                          // <-- Icon
-                                          Icons.arrow_forward_sharp,
-                                          size: 13.0,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ))
-                            ],
-                          ),
-                        ),
-                      ),
-                      color: Colors.transparent,
+        backgroundColor: Color.fromARGB(255, 228, 236, 248),
+        body: Center(
+          child: Container(
+            width: 1000,
+            color: Color.fromARGB(255, 228, 236, 248),
+            child: Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Center(
+                child: GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: isSmallScreen() ? 2 : 3,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
                     ),
-                  );
-                }),
+                    itemCount: features.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        // decoration: BoxDecoration(
+                        //   borderRadius: BorderRadius.circular(20),
+                        //   color: Color.fromARGB(255, 178, 205, 244),
+                        // ),
+
+                        child: new Material(
+                          child: new InkWell(
+                            onTap: () {},
+                            child: new Container(
+                              width: 100,
+                              height: 100,
+                              child: Center(
+                                child: Container(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      SizedBox(
+                                          width: 50,
+                                          height: 50,
+                                          child: Image.asset(
+                                            'assets/${features[index].imageUrl}',
+                                          )),
+                                      Text('${features[index].title}',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold)),
+                                      Text(
+                                        '${features[index].description}',
+                                        style: TextStyle(
+                                          color:
+                                              Color.fromARGB(255, 77, 85, 97),
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      Container(
+                                        child: Column(
+                                          children: [
+                                            TextButton(
+                                              onPressed: () {},
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.min,
+                                                children: [
+                                                  Text(
+                                                    'more ',
+                                                    style:
+                                                        TextStyle(fontSize: 13),
+                                                  ), // <-- Text
+
+                                                  Icon(
+                                                    // <-- Icon
+                                                    Icons.arrow_forward_sharp,
+                                                    size: 13.0,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          color: Colors.transparent,
+                        ),
+                      );
+                    }),
+              ),
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
