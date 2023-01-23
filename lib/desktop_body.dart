@@ -154,7 +154,7 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
                               height: 200,
                               child: Center(
                                 child: Container(
-                                  margin: EdgeInsets.all(10),
+                                  margin: EdgeInsets.all(15),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
