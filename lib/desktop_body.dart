@@ -66,12 +66,12 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
     FeatureModel(
         "PD Management",
         "จัดการบันทึกรายการข้อมูลส่วนบุคคลและการไหลของข้อมูล",
-        "folder.png",
+        "features/folder.png",
         "routePath"),
     FeatureModel(
         "DPIA & Risk Management",
         "การบริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล",
-        "risk.png",
+        "features/risk.png",
         "routePath"),
     FeatureModel(
         "Cookie Consent",
