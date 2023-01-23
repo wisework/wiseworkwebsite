@@ -107,24 +107,35 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
         "routePath"),
   ];
 
-  bool isSmallScreen() {
-    return false;
-  }
+  bool isSmallScreen = false;
+  bool isMediamScreen = false;
+  bool isLargeScreen = false;
 
   @override
   Widget build(BuildContext context) {
+    var deviceData = MediaQuery.of(context);
+    var screenSize = MediaQuery.of(context).size;
+    if (screenSize.width > 1200) {
+      isLargeScreen = true;
+      // } else if (screenSize.width >= 800 && screenSize.width <= 1200) {
+      //   isMediamScreen = true;
+    } else {
+      isSmallScreen = true;
+    }
+
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 228, 236, 248),
         body: Center(
           child: Container(
             width: 1000,
             color: Color.fromARGB(255, 228, 236, 248),
+            margin: EdgeInsets.all(20.0),
             child: Padding(
-              padding: const EdgeInsets.all(30.0),
+              padding: const EdgeInsets.all(20.0),
               child: Center(
                 child: GridView.builder(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: isSmallScreen() ? 2 : 3,
+                      crossAxisCount: screenSize.width > 800 ? 3 : 2,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
                     ),
@@ -135,27 +146,31 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
                         //   borderRadius: BorderRadius.circular(20),
                         //   color: Color.fromARGB(255, 178, 205, 244),
                         // ),
-
                         child: new Material(
                           child: new InkWell(
                             onTap: () {},
                             child: new Container(
-                              width: 100,
-                              height: 100,
+                              width: 200,
+                              height: 200,
                               child: Center(
                                 child: Container(
+                                  margin: EdgeInsets.all(10),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       SizedBox(
-                                          width: 50,
-                                          height: 50,
+                                          width: 45,
+                                          height: 45,
                                           child: Image.asset(
                                             'assets/${features[index].imageUrl}',
                                           )),
-                                      Text('${features[index].title}',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
+                                      Text(
+                                        '${features[index].title}',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                       Text(
                                         '${features[index].description}',
                                         style: TextStyle(
