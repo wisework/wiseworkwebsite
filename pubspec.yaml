@@ -57,18 +57,18 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-  - assets/audit.png
-  - assets/breach.png
-  - assets/consent.png
-  - assets/cookie.png
-  - assets/data.png
-  - assets/discovery.png
-  - assets/executive.png
-  - assets/folder.png
-  - assets/legi.png
-  - assets/policy.png
-  - assets/risk.png
-  - assets/system.png
+  - assets/features/audit.png
+  - assets/features/breach.png
+  - assets/features/consent.png
+  - assets/features/cookie.png
+  - assets/features/data.png
+  - assets/features/discovery.png
+  - assets/features/executive.png
+  - assets/features/folder.png
+  - assets/features/legi.png
+  - assets/features/policy.png
+  - assets/features/risk.png
+  - assets/features/system.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
