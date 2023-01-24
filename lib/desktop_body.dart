@@ -113,7 +113,7 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
 
   @override
   Widget build(BuildContext context) {
-    var deviceData = MediaQuery.of(context);
+    // var deviceData = MediaQuery.of(context);
     var screenSize = MediaQuery.of(context).size;
     if (screenSize.width > 800) {
       isLargeScreen = true;
