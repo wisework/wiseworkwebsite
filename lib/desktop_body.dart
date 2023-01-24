@@ -108,14 +108,14 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
   ];
 
   bool isSmallScreen = false;
-  bool isMediamScreen = false;
+  // bool isMediamScreen = false;
   bool isLargeScreen = false;
 
   @override
   Widget build(BuildContext context) {
     // var deviceData = MediaQuery.of(context);
     var screenSize = MediaQuery.of(context).size;
-    if (screenSize.width > 800) {
+    if (screenSize.width > 700) {
       isLargeScreen = true;
       // } else if (screenSize.width >= 800 && screenSize.width <= 1200) {
       //   isMediamScreen = true;
@@ -135,7 +135,7 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
               child: Center(
                 child: GridView.builder(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: screenSize.width > 800 ? 3 : 2,
+                      crossAxisCount: screenSize.width > 700 ? 3 : 2,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
                     ),
