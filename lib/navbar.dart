@@ -33,8 +33,8 @@ class _TopBarContentsState extends State<TopBarContents> {
       preferredSize: Size(screenSize.width, 1000),
       child: Container(
         child: AppBar(
-          leading: Image.asset('assets/logo.png'),
-          title: Text("My app"),
+          leading: Image.asset('assets/features/logo.png'),
+          
           backgroundColor: Color.fromARGB(255, 52, 144, 206),
           actions: <Widget>[
             Row(
