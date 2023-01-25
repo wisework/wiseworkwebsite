@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'responsive_layout.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'navbar.dart';
 
 class FeatureModel {
   final String title;
@@ -15,6 +17,12 @@ class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _MyHomePageState();
 }
+
+// final List<String> listHome = <String>['h1', 'h2', 'h3', 'h4'];
+// final List<String> listAbout = <String>['ab1', 'ab2', 'ab3', 'ab4'];
+// final List<String> listServices = <String>['sv1', 'sv2', 'sv3', 'sv4'];
+// final List<String> listBlogs = <String>['b1', 'b2', 'b3', 'b4'];
+// final List<String> listContact = <String>['ct1', 'ct2', 'ct3', 'ct4'];
 
 class _MyHomePageState extends State<HomePage> {
   // List title = [
@@ -65,7 +73,7 @@ class _MyHomePageState extends State<HomePage> {
   List<FeatureModel> features = [
     FeatureModel(
         "PD Management",
-        "จัดการบันทึกรายการข้อมูลส่วนบุคคลและการไหลของข้อมูล",
+        "จัดการบันทึกรายการข้อมูลส่วนบุคคลและการไหลของข้อมูล (Data Flow)",
         "features/folder.png",
         "routePath"),
     FeatureModel(
@@ -80,10 +88,13 @@ class _MyHomePageState extends State<HomePage> {
         "routePath"),
     FeatureModel("Consent Management", "การบริหารจัดการให้ความยินยอม",
         "features/Consent.png", "routePath"),
-    FeatureModel("Data Subject Right Management",
-        "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูล", "features/data.png", "routePath"),
-    FeatureModel("Data Breach", "บริหารกรณีเกิดข้อมูลรั่วไหล", "features/breach.png",
+    FeatureModel(
+        "Data Subject Right Management",
+        "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูล",
+        "features/data.png",
         "routePath"),
+    FeatureModel("Data Breach", "บริหารกรณีเกิดข้อมูลรั่วไหล",
+        "features/breach.png", "routePath"),
     FeatureModel("Audit&Gap Management", "บริหารงานตรจสอบและการทำ GAP Analysis",
         "features/audit.png", "routePath"),
     FeatureModel(
@@ -109,6 +120,13 @@ class _MyHomePageState extends State<HomePage> {
 
   bool isSmallScreen = false;
   bool isLargeScreen = false;
+  double _opacity = 0;
+
+  // String? HomeValue;
+  // String? AboutValue;
+  // String? ServicesValue;
+  // String? BlogsValue;
+  // String? ContactValue;
 
   @override
   Widget build(BuildContext context) {
@@ -121,99 +139,114 @@ class _MyHomePageState extends State<HomePage> {
     }
 
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 228, 236, 248),
-        body: Center(
-          child: Container(
-            width: 1000,
-            color: Color.fromARGB(255, 228, 236, 248),
-            margin: EdgeInsets.all(20.0),
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Center(
-                child: GridView.builder(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: screenSize.width > 700 ? 3 : 2,
-                      crossAxisSpacing: 20,
-                      mainAxisSpacing: 20,
-                    ),
-                    itemCount: features.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        // decoration: BoxDecoration(
-                        //   borderRadius: BorderRadius.circular(20),
-                        //   color: Color.fromARGB(255, 178, 205, 244),
-                        // ),
-                        child: new Material(
-                          child: new InkWell(
-                            onTap: () {},
-                            child: new Container(
-                              width: 200,
-                              height: 200,
-                              child: Center(
-                                child: Container(
-                                  margin: EdgeInsets.all(15),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      SizedBox(
-                                          width: 45,
-                                          height: 45,
-                                          child: Image.asset(
-                                            'assets/${features[index].imageUrl}',
-                                          )),
-                                      Text(
-                                        '${features[index].title}',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      Text(
-                                        '${features[index].description}',
-                                        style: TextStyle(
+      backgroundColor: Color.fromARGB(255, 228, 236, 248),
+      appBar: 
+      PreferredSize(
+        
+        preferredSize: Size(screenSize.width, 60),
+        child: TopBarContents(_opacity),
+      ),
+      body: Center(
+        child: Container(
+          width: 1000,
+          color: Color.fromARGB(255, 228, 236, 248),
+          margin: EdgeInsets.all(00.0),
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Center(
+              child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: screenSize.width > 700 ? 3 : 2,
+                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 20,
+                  ),
+                  itemCount: features.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                      // decoration: BoxDecoration(
+                      //   borderRadius: BorderRadius.circular(20),
+                      //   color: Color.fromARGB(255, 178, 205, 244),
+                      // ),
+                      child: new Material(
+                        child: new InkWell(
+                          onTap: () {},
+                          child: new Container(
+                            width: 350,
+                            height: 350,
+                            child: Center(
+                              child: Container(
+                                margin: EdgeInsets.all(15),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    SizedBox(
+                                        width: 50,
+                                        height: 50,
+                                        child: Image.asset(
+                                          'assets/${features[index].imageUrl}',
+                                        )),
+                                    Text(
+                                      '${features[index].title}',
+                                      style: GoogleFonts.poppins(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 16,
                                           color:
-                                              Color.fromARGB(255, 77, 85, 97),
-                                        ),
-                                        textAlign: TextAlign.center,
+                                              Color.fromARGB(255, 16, 24, 40)),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    Text(
+                                      '${features[index].description}',
+                                      style: GoogleFonts.ibmPlexSansThai(
+                                        color:
+                                            Color.fromARGB(255, 102, 112, 133),
+                                        fontSize: 13,
                                       ),
-                                      Container(
-                                        child: Column(
-                                          children: [
-                                            TextButton(
-                                              onPressed: () {},
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                children: [
-                                                  Text(
-                                                    'more ',
-                                                    style:
-                                                        TextStyle(fontSize: 13),
-                                                  ), // <-- Text
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        children: [
+                                          TextButton(
+                                            onPressed: () {},
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                Text(
+                                                  'more ',
+                                                  style: GoogleFonts.inter(
+                                                      fontSize: 14,
+                                                      color: Color.fromARGB(
+                                                          255, 57, 129, 237)),
+                                                ), // <-- Text
 
-                                                  Icon(
-                                                    // <-- Icon
-                                                    Icons.arrow_forward_sharp,
-                                                    size: 13.0,
-                                                  ),
-                                                ],
-                                              ),
+                                                Icon(
+                                                  // <-- Icon
+                                                  Icons.arrow_forward_sharp,
+                                                  color: Color.fromARGB(
+                                                      255, 57, 129, 237),
+                                                  size: 14.0,
+                                                ),
+                                              ],
                                             ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
                             ),
                           ),
-                          color: Colors.transparent,
                         ),
-                      );
-                    }),
-              ),
+                        color: Colors.transparent,
+                      ),
+                    );
+                  }),
             ),
           ),
-        ));
+        ),
+      ),
+      // bottomNavigationBar: MyBottomNavigationBar()
+    );
   }
 }

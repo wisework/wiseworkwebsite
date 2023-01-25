@@ -42,6 +42,10 @@ dev_dependencies:
   hovering: ^1.0.4 
   flutter_test:
     sdk: flutter
+  dropdown_button2: ^1.9.2
+  
+  google_fonts: ^3.0.1
+
   
 
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -69,6 +73,7 @@ flutter:
   - assets/features/policy.png
   - assets/features/risk.png
   - assets/features/system.png
+  - assets/logo.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
