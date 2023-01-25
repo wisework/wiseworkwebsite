@@ -73,7 +73,7 @@ flutter:
   - assets/features/policy.png
   - assets/features/risk.png
   - assets/features/system.png
-  - assets/features/logo.png
+  - assets/logo.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

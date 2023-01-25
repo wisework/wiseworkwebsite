@@ -121,6 +121,7 @@ class _MyHomePageState extends State<HomePage> {
   bool isSmallScreen = false;
   bool isLargeScreen = false;
   double _opacity = 0;
+  bool _isNavMenuVisible = false;
 
   // String? HomeValue;
   // String? AboutValue;
@@ -140,11 +141,13 @@ class _MyHomePageState extends State<HomePage> {
 
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 228, 236, 248),
-      appBar: 
-      PreferredSize(
-        
+      appBar: PreferredSize(
         preferredSize: Size(screenSize.width, 60),
-        child: TopBarContents(_opacity),
+        child: Column(
+          children: [
+            TopBarContents(_opacity),
+          ],
+        ),
       ),
       body: Center(
         child: Container(
