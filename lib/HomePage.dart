@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _children = [
     // Feature2(),
     PackagesPage(),
-    FeaturesPage()
+    FeaturePage()
     // other pages
   ];
 
@@ -40,11 +40,11 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size(screenSize.width, 1000),
-        child: Navbar(_opacity),
+        child: NavBar(_opacity),
       ),
       body: Stack(
         children: <Widget>[
-          FeaturesPage(),
+          FeaturePage(),
           // NavigationBar(),
           // PackagesPage(),
         ],
