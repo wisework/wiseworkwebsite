@@ -11,12 +11,12 @@ class FeatureModel {
   FeatureModel(this.title, this.description, this.imageUrl, this.routePath);
 }
 
-class FeaturesPage extends StatefulWidget {
-  const FeaturesPage({Key? key}) : super(key: key);
+// class FeaturesPage extends StatefulWidget {
+//   const FeaturesPage({Key? key}) : super(key: key);
 
-  @override
-  State<FeaturesPage> createState() => _FeaturesPageState();
-}
+//   @override
+//   State<FeaturesPage> createState() => _FeaturesPageState();
+// }
 
 final List<String> listHome = <String>['h1', 'h2', 'h3', 'h4'];
 final List<String> listAbout = <String>['ab1', 'ab2', 'ab3', 'ab4'];
@@ -24,7 +24,7 @@ final List<String> listServices = <String>['sv1', 'sv2', 'sv3', 'sv4'];
 final List<String> listBlogs = <String>['b1', 'b2', 'b3', 'b4'];
 final List<String> listContact = <String>['ct1', 'ct2', 'ct3', 'ct4'];
 
-class _FeaturesPageState extends State<FeaturesPage> {
+class FeaturePage extends StatelessWidget {
   List<FeatureModel> features = [
     FeatureModel(
         "PD Management",
@@ -79,11 +79,6 @@ class _FeaturesPageState extends State<FeaturesPage> {
   double _opacity = 0;
   bool _isNavMenuVisible = false;
 
-  // String? HomeValue;
-  // String? AboutValue;
-  // String? ServicesValue;
-  // String? BlogsValue;
-  // String? ContactValue;
 
   @override
   Widget build(BuildContext context) {
@@ -99,10 +94,10 @@ class _FeaturesPageState extends State<FeaturesPage> {
 
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 228, 236, 248),
-      appBar: PreferredSize(
-        preferredSize: Size(screenSize.width, 80),
-        child: Navbar(_opacity),
-      ),
+      // appBar: PreferredSize(
+      //   preferredSize: Size(screenSize.width, 80),
+      //   child: NavBar(),
+      // ),
       body: SingleChildScrollView(
         child: Center(
           child: Container(
