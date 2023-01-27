@@ -11,11 +11,11 @@ class FeatureModel {
   FeatureModel(this.title, this.description, this.imageUrl, this.routePath);
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class FeaturesPage extends StatefulWidget {
+  const FeaturesPage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _MyHomePageState();
+  State<FeaturesPage> createState() => _FeaturesPageState();
 }
 
 final List<String> listHome = <String>['h1', 'h2', 'h3', 'h4'];
@@ -24,7 +24,7 @@ final List<String> listServices = <String>['sv1', 'sv2', 'sv3', 'sv4'];
 final List<String> listBlogs = <String>['b1', 'b2', 'b3', 'b4'];
 final List<String> listContact = <String>['ct1', 'ct2', 'ct3', 'ct4'];
 
-class _MyHomePageState extends State<HomePage> {
+class _FeaturesPageState extends State<FeaturesPage> {
   List<FeatureModel> features = [
     FeatureModel(
         "PD Management",
