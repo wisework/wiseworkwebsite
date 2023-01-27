@@ -5,6 +5,8 @@ import 'packagepage.dart';
 import 'responsive.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'customers.dart';
+import 'story.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -20,7 +22,9 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _children = [
     // Feature2(),
     PackagesPage(),
-    FeaturesPage()
+    FeaturesPage(),
+    CustomerPage(),
+    StoryPage()
     // other pages
   ];
 
@@ -46,7 +50,7 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           // FeaturesPage(),
           // NavigationBar(),
-          PackagesPage(),
+          StoryPage(),
         ],
       ),
       // bottomNavigationBar: NavBar(),

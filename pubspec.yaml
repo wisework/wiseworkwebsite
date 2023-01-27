@@ -110,6 +110,8 @@ flutter:
   - assets/customer/sbp.png
   - assets/customer/win.png
 
+  - assets/story/storypic.png
+  - assets/story/storybg.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
