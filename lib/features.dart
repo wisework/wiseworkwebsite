@@ -24,7 +24,7 @@ final List<String> listServices = <String>['sv1', 'sv2', 'sv3', 'sv4'];
 final List<String> listBlogs = <String>['b1', 'b2', 'b3', 'b4'];
 final List<String> listContact = <String>['ct1', 'ct2', 'ct3', 'ct4'];
 
-class FeaturePage extends StatelessWidget {
+class FeaturesPage extends StatelessWidget {
   List<FeatureModel> features = [
     FeatureModel(
         "PD Management",

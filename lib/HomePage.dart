@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _children = [
     // Feature2(),
     PackagesPage(),
-    FeaturePage()
+    FeaturesPage()
     // other pages
   ];
 
@@ -44,9 +44,9 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Stack(
         children: <Widget>[
-          FeaturePage(),
+          // FeaturesPage(),
           // NavigationBar(),
-          // PackagesPage(),
+          PackagesPage(),
         ],
       ),
       // bottomNavigationBar: NavBar(),
