@@ -179,6 +179,9 @@ class StoryPage extends StatelessWidget {
                         ],
                       ),
                     ),
+              SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),
