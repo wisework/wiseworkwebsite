@@ -5,41 +5,39 @@ import 'navbar.dart';
 
 class CustomerModel {
   final String imageUrl;
-  CustomerModel(this.imageUrl, );
+  CustomerModel(
+    this.imageUrl,
+  );
 }
 
-
-
-
 class CustomerPage extends StatelessWidget {
-  List customer = [
-    '/customer/nia.png',
-    '/customer/viriya.png',
-    '/customer/royalTH.png',
-    '/customer/bitkub.png',
-    '/customer/bdms.png',
-    '/customer/boonrawd.png',
-    '/customer/brr.png',
-    '/customer/pat.png',
-    '/customer/advice.png',
-    '/customer/ichitan.png',
-    '/customer/singha.png',
-    '/customer/click.png',
-    '/customer/p-pat.png',
-    '/customer/rise-consulting.png',
-    '/customer/meng.png',
-    '/customer/singha-beer.png',
-    '/customer/daiichi.png',
-    '/customer/kdn.png',
-    '/customer/national-economic.png',
-    '/customer/intrarat.png',
-    '/customer/singha-park.png',
-    '/customer/muzik.png',
-    '/customer/santafe.png',
-    '/customer/ku.png',
-    '/customer/sbp.png',
-    '/customer/win.png',
-
+  List<CustomerModel> customer = [
+    CustomerModel('customer/nia.png'),
+    CustomerModel('customer/viriya.png'),
+    CustomerModel('customer/royalTH.png'),
+    CustomerModel('customer/bitkub.png'),
+    CustomerModel('customer/bdms.png'),
+    CustomerModel('customer/boonrawd.png'),
+    CustomerModel('customer/brr.png'),
+    CustomerModel('customer/pat.png'),
+    CustomerModel('customer/advice.png'),
+    CustomerModel('customer/ichitan.png'),
+    CustomerModel('customer/singha.png'),
+    CustomerModel('customer/click.png'),
+    CustomerModel('customer/p-pat.png'),
+    CustomerModel('customer/rise-consulting.png'),
+    CustomerModel('customer/meng.png'),
+    CustomerModel('customer/singha-beer.png'),
+    CustomerModel('customer/daiichi.png'),
+    CustomerModel('customer/kdn.png'),
+    CustomerModel('customer/national-economic.png'),
+    CustomerModel('customer/intrarat.png'),
+    CustomerModel('customer/singha-park.png'),
+    CustomerModel('customer/muzik.png'),
+    CustomerModel('customer/santafe.png'),
+    CustomerModel('customer/ku.png'),
+    CustomerModel('customer/sbp.png'),
+    CustomerModel('customer/win.png')
   ];
 
   bool isSmallScreen = false;
@@ -47,21 +45,18 @@ class CustomerPage extends StatelessWidget {
   double _opacity = 0;
   bool _isNavMenuVisible = false;
 
-
   @override
   Widget build(BuildContext context) {
-    
     var screenSize = MediaQuery.of(context).size;
     if (screenSize.width > 1000) {
       isLargeScreen = true;
-      
     } else {
       isSmallScreen = true;
     }
 
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 228, 236, 248),
-      
+
       body: SingleChildScrollView(
         child: Center(
           child: Container(
@@ -115,7 +110,6 @@ class CustomerPage extends StatelessWidget {
                                               child: Image.asset(
                                                 'assets/${customer[index].imageUrl}',
                                               )),
-                                         
                                         ],
                                       ),
                                     ),
