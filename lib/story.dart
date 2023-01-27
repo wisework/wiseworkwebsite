@@ -155,7 +155,7 @@ class StoryPage extends StatelessWidget {
                       ],
                     )
                   : Container(
-                      color: Colors.lime,
+                      color: Color.fromARGB(0, 204, 220, 57),
                       child: Column(
                         children: [
                           groupofpic,
