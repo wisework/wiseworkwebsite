@@ -18,58 +18,13 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _MyHomePageState();
 }
 
-// final List<String> listHome = <String>['h1', 'h2', 'h3', 'h4'];
-// final List<String> listAbout = <String>['ab1', 'ab2', 'ab3', 'ab4'];
-// final List<String> listServices = <String>['sv1', 'sv2', 'sv3', 'sv4'];
-// final List<String> listBlogs = <String>['b1', 'b2', 'b3', 'b4'];
-// final List<String> listContact = <String>['ct1', 'ct2', 'ct3', 'ct4'];
+final List<String> listHome = <String>['h1', 'h2', 'h3', 'h4'];
+final List<String> listAbout = <String>['ab1', 'ab2', 'ab3', 'ab4'];
+final List<String> listServices = <String>['sv1', 'sv2', 'sv3', 'sv4'];
+final List<String> listBlogs = <String>['b1', 'b2', 'b3', 'b4'];
+final List<String> listContact = <String>['ct1', 'ct2', 'ct3', 'ct4'];
 
 class _MyHomePageState extends State<HomePage> {
-  // List title = [
-  //   " PD Management",
-  //   "DPIA & Risk Management",
-  //   "Cookie Consent",
-  //   "Consent Management",
-  //   "Data Subject Right Management",
-  //   "Data Breach",
-  //   "Audit&Gap Management",
-  //   "Policy&Notices Management",
-  //   "Data Deiscover",
-  //   "Executive Support System",
-  //   "Legitimate Interest Assessment",
-  //   "System Setting Management",
-  // ];
-
-  // List desc = [
-  //   " จัดการบันทึกรายการข้อมูลส่วนบุคคลและการไหลของข้อมูล",
-  //   "การบริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล",
-  //   "การขอความยินยอมจากเจ้าของข้อมูลและการบริหารจัดการคุกกี้",
-  //   "การบริหารจัดการให้ความยินยอม",
-  //   "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูล",
-  //   "บริหารกรณีเกิดข้อมูลรั่วไหล",
-  //   "บริหารงานตรจสอบและการทำ GAP Analysis",
-  //   "บริหารการสื่อสารนโยบายและประกาศความเป็นส่วนตัว",
-  //   "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
-  //   "บริหารงานและจัดการรายงาน สำหรับผู้บริหาร",
-  //   "การประเมินการนำฐานกฏหมายมาใช้",
-  //   "ส่วนการตั้งค่า ส่วนส่งเสริมที่ถูกพัฒนาขึ้นมาเพื่อให้ผู้ดูแลระบบจัดการกับข้อมูลต่างๆ",
-  // ];
-
-  // List img = [
-  //   "folder.png",
-  //   "risk.png",
-  //   "Cookie.png",
-  //   "Consent.png",
-  //   "data.png",
-  //   "breach.png",
-  //   "audit.png",
-  //   "Policy.png",
-  //   "discovery.png",
-  //   "executive.png",
-  //   "legi.png",
-  //   "system.png",
-  // ];
-
   List<FeatureModel> features = [
     FeatureModel(
         "PD Management",
@@ -120,6 +75,7 @@ class _MyHomePageState extends State<HomePage> {
 
   bool isSmallScreen = false;
   bool isLargeScreen = false;
+  bool isMedScreen = false;
   double _opacity = 0;
   bool _isNavMenuVisible = false;
 
@@ -133,8 +89,10 @@ class _MyHomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     // var deviceData = MediaQuery.of(context);
     var screenSize = MediaQuery.of(context).size;
-    if (screenSize.width > 700) {
+    if (screenSize.width > 1000) {
       isLargeScreen = true;
+    // } else if (screenSize.width <= 1000 && screenSize.width > 700) {
+    //   isMedScreen = true;
     } else {
       isSmallScreen = true;
     }
@@ -142,114 +100,133 @@ class _MyHomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 228, 236, 248),
       appBar: PreferredSize(
-        preferredSize: Size(screenSize.width, 60),
-        child: Column(
-          children: [
-            TopBarContents(_opacity),
-          ],
-        ),
+        preferredSize: Size(screenSize.width, 80),
+        child: Navbar(_opacity),
       ),
-      body: Center(
-        child: Container(
-          width: 1000,
-          color: Color.fromARGB(255, 228, 236, 248),
-          margin: EdgeInsets.all(00.0),
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Center(
-              child: GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: screenSize.width > 700 ? 3 : 2,
-                    crossAxisSpacing: 20,
-                    mainAxisSpacing: 20,
-                  ),
-                  itemCount: features.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                      // decoration: BoxDecoration(
-                      //   borderRadius: BorderRadius.circular(20),
-                      //   color: Color.fromARGB(255, 178, 205, 244),
-                      // ),
-                      child: new Material(
-                        child: new InkWell(
-                          onTap: () {},
-                          child: new Container(
-                            width: 350,
-                            height: 350,
-                            child: Center(
-                              child: Container(
-                                margin: EdgeInsets.all(15),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    SizedBox(
-                                        width: 50,
-                                        height: 50,
-                                        child: Image.asset(
-                                          'assets/${features[index].imageUrl}',
-                                        )),
-                                    Text(
-                                      '${features[index].title}',
-                                      style: GoogleFonts.poppins(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 16,
-                                          color:
-                                              Color.fromARGB(255, 16, 24, 40)),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    Text(
-                                      '${features[index].description}',
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                        color:
-                                            Color.fromARGB(255, 102, 112, 133),
-                                        fontSize: 13,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    Container(
+      body: SingleChildScrollView(
+        child: Center(
+          child: Container(
+            width: 1000,
+            color: Color.fromARGB(255, 228, 236, 248),
+            margin: EdgeInsets.all(00.0),
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Center(
+                child: Column(
+                  children: [
+                    Text(
+                      'Key Features',
+                      style: GoogleFonts.ibmPlexSans(
+                        fontWeight: FontWeight.w700,
+                        color: Color.fromARGB(255, 24, 84, 110),
+                        fontSize: 35,
+                      ),
+                    ),
+                    GridView.builder(
+                        shrinkWrap: true,
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: screenSize.width > 1000 ? 3 : 1,
+                          crossAxisSpacing: 20,
+                          mainAxisSpacing: 20,
+                        ),
+                        itemCount: features.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            // decoration: BoxDecoration(
+                            //   borderRadius: BorderRadius.circular(20),
+                            //   color: Color.fromARGB(255, 178, 205, 244),
+                            // ),
+                            child: new Material(
+                              child: new InkWell(
+                                onTap: () {},
+                                child: new Container(
+                                  width: 300,
+                                  height: 300,
+                                  child: Center(
+                                    child: Container(
+                                      margin: EdgeInsets.all(15),
                                       child: Column(
-                                        children: [
-                                          TextButton(
-                                            onPressed: () {},
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          SizedBox(
+                                              width: 100,
+                                              height: 100,
+                                              child: Image.asset(
+                                                'assets/${features[index].imageUrl}',
+                                              )),
+                                          Text(
+                                            '${features[index].title}',
+                                            style: GoogleFonts.poppins(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 22,
+                                                color: Color.fromARGB(
+                                                    255, 16, 24, 40)),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          Text(
+                                            '${features[index].description}',
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                              color: Color.fromARGB(
+                                                  255, 102, 112, 133),
+                                              fontSize: 16,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          Container(
+                                            child: Column(
                                               children: [
-                                                Text(
-                                                  'more ',
-                                                  style: GoogleFonts.inter(
-                                                      fontSize: 14,
-                                                      color: Color.fromARGB(
-                                                          255, 57, 129, 237)),
-                                                ), // <-- Text
+                                                TextButton(
+                                                  onPressed: () {},
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: [
+                                                      Text(
+                                                        'more ',
+                                                        style:
+                                                            GoogleFonts.inter(
+                                                                fontSize: 18,
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        57,
+                                                                        129,
+                                                                        237)),
+                                                      ), // <-- Text
 
-                                                Icon(
-                                                  // <-- Icon
-                                                  Icons.arrow_forward_sharp,
-                                                  color: Color.fromARGB(
-                                                      255, 57, 129, 237),
-                                                  size: 14.0,
+                                                      Icon(
+                                                        // <-- Icon
+                                                        Icons
+                                                            .arrow_forward_sharp,
+                                                        color: Color.fromARGB(
+                                                            255, 57, 129, 237),
+                                                        size: 18.0,
+                                                      ),
+                                                    ],
+                                                  ),
                                                 ),
                                               ],
                                             ),
-                                          ),
+                                          )
                                         ],
                                       ),
-                                    )
-                                  ],
+                                    ),
+                                  ),
                                 ),
                               ),
+                              color: Colors.transparent,
                             ),
-                          ),
-                        ),
-                        color: Colors.transparent,
-                      ),
-                    );
-                  }),
+                          );
+                        }),
+                  ],
+                ),
+              ),
             ),
           ),
         ),
       ),
-      // bottomNavigationBar: MyBottomNavigationBar()
+      // drawer: NavBar(),
     );
   }
 }
