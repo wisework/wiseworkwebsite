@@ -91,8 +91,8 @@ class _MyHomePageState extends State<HomePage> {
     var screenSize = MediaQuery.of(context).size;
     if (screenSize.width > 1000) {
       isLargeScreen = true;
-    // } else if (screenSize.width <= 1000 && screenSize.width > 700) {
-    //   isMedScreen = true;
+      // } else if (screenSize.width <= 1000 && screenSize.width > 700) {
+      //   isMedScreen = true;
     } else {
       isSmallScreen = true;
     }
@@ -138,6 +138,7 @@ class _MyHomePageState extends State<HomePage> {
                             // ),
                             child: new Material(
                               child: new InkWell(
+                                borderRadius: BorderRadius.circular(20),
                                 onTap: () {},
                                 child: new Container(
                                   width: 300,
