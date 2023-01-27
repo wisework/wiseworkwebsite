@@ -76,7 +76,8 @@ flutter:
   - assets/features/risk.png
   - assets/features/system.png
   - assets/logo.png
-    - assets/packages/check.png
+  
+  - assets/packages/check.png
   - assets/packages/cloud.png
   - assets/packages/clouds.png
   - assets/packages/rainbow_cloud.png
