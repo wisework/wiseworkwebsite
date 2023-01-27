@@ -82,6 +82,34 @@ flutter:
   - assets/packages/clouds.png
   - assets/packages/rainbow_cloud.png
   - assets/packages/record.png
+
+  - assets/customer/nia.png
+  - assets/customer/viriya.png
+  - assets/customer/royalTH.png
+  - assets/customer/bitkub.png
+  - assets/customer/bdms.png
+  - assets/customer/boonrawd.png
+  - assets/customer/brr.png
+  - assets/customer/pat.png
+  - assets/customer/advice.png
+  - assets/customer/ichitan.png
+  - assets/customer/singha.png
+  - assets/customer/click.png
+  - assets/customer/p-pat.png
+  - assets/customer/rise-consulting.png
+  - assets/customer/meng.png
+  - assets/customer/singha-beer.png
+  - assets/customer/daiichi.png
+  - assets/customer/kdn.png
+  - assets/customer/national-economic.png
+  - assets/customer/intrarat.png
+  - assets/customer/singha-park.png
+  - assets/customer/muzik.png
+  - assets/customer/santafe.png
+  - assets/customer/ku.png
+  - assets/customer/sbp.png
+  - assets/customer/win.png
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
