@@ -43,8 +43,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   dropdown_button2: ^1.9.2
-  
+    
   google_fonts: ^3.0.1
+  dotted_line: ^3.1.0
+  
 
   
 
@@ -74,6 +76,11 @@ flutter:
   - assets/features/risk.png
   - assets/features/system.png
   - assets/logo.png
+    - assets/packages/check.png
+  - assets/packages/cloud.png
+  - assets/packages/clouds.png
+  - assets/packages/rainbow_cloud.png
+  - assets/packages/record.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
