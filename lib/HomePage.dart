@@ -6,7 +6,6 @@ import 'responsive.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -21,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _children = [
     // Feature2(),
     PackagesPage(),
-    FeaturePage()
+    FeaturesPage()
     // other pages
   ];
 
@@ -40,12 +39,12 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: PreferredSize(
-              preferredSize: Size(screenSize.width, 1000),
-              child: NavBar(_opacity),
-            ),
+        preferredSize: Size(screenSize.width, 1000),
+        child: Navbar(_opacity),
+      ),
       body: Stack(
         children: <Widget>[
-          FeaturePage(),
+          FeaturesPage(),
           // NavigationBar(),
           // PackagesPage(),
         ],
