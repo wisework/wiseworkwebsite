@@ -7,6 +7,7 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'customers.dart';
 import 'story.dart';
+import 'menu_drawer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -37,37 +38,36 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+
     _opacity = _scrollPosition < screenSize.height * 0.40
         ? _scrollPosition / (screenSize.height * 0.40)
         : 1;
 
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size(screenSize.width, 1000),
-        child: NavBar(_opacity),
-      ),
+      appBar: ResponsiveWidget.isSmallScreen(context)
+          ? AppBar(
+              iconTheme: IconThemeData(color: Colors.white),
+              backgroundColor: Color.fromARGB(255, 52, 144, 206),
+              elevation: 0,
+              centerTitle: true,
+              title: Image.asset(
+                'logo.png',
+                height: 30,
+              ),
+            )
+          : PreferredSize(
+              preferredSize: Size(screenSize.width, 60),
+              child: NavBar(),
+            ),
+      drawer: MenuDrawer(),
       body: Stack(
         children: <Widget>[
           // FeaturesPage(),
           // NavigationBar(),
           StoryPage(),
+          CustomerPage()
         ],
       ),
-      // bottomNavigationBar: NavBar(),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   onTap: onTabTapped,
-      //   currentIndex: _currentIndex,
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: new Icon(Icons.home),
-      //       label: 'Home',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: new Icon(Icons.search),
-      //       label: 'search',
-      //     ),
-      //   ],
-      // ),
     );
   }
 }
