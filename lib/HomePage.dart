@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'customers.dart';
 import 'story.dart';
 import 'menu_drawer.dart';
+import 'FAQ.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -64,8 +65,10 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           // FeaturesPage(),
           // NavigationBar(),
-          StoryPage(),
-          CustomerPage()
+
+          // StoryPage(),
+          // CustomerPage(),
+          FAQ(),
         ],
       ),
     );
