@@ -174,7 +174,6 @@ class _FAQState extends State<FAQ> {
         itemBuilder: (context, index) {
           return ListTile(
             dense: true,
-            
             title: Transform.translate(
               offset: Offset(0, 0),
               child: Text(
@@ -186,10 +185,7 @@ class _FAQState extends State<FAQ> {
             leading: Transform.translate(
               offset: Offset(600, -10),
               child: SizedBox(
-                  width: 12,
-                  height: 12,
-                  child:
-                      Icon(Icons.expand_more)),
+                  width: 12, height: 12, child: Icon(Icons.expand_more)),
             ),
           );
         },
@@ -220,9 +216,9 @@ class _FAQState extends State<FAQ> {
                             height: 1300,
                             color: Color.fromARGB(0, 204, 220, 57),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     consult,
                                     hashtag,
@@ -257,7 +253,6 @@ class _FAQState extends State<FAQ> {
                                 SizedBox(
                                   height: 50,
                                 ),
-                                
                                 listChoice,
                               ],
                             ),
