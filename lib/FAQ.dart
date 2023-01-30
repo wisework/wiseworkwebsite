@@ -198,6 +198,7 @@ class _FAQState extends State<FAQ> {
     }
 
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 228, 236, 248),
       body: SingleChildScrollView(
         child: Center(
           child: Container(

@@ -67,6 +67,9 @@ class CustomerPage extends StatelessWidget {
               child: Center(
                 child: Column(
                   children: [
+                    SizedBox(
+                      height: 123,
+                    ),
                     Text(
                       'ลูกค้าคนสำคัญของเรา',
                       style: GoogleFonts.nunito(
@@ -87,6 +90,9 @@ class CustomerPage extends StatelessWidget {
                           textAlign: TextAlign.center,
                         ),
                       ],
+                    ),
+                    SizedBox(
+                      height: 110,
                     ),
                     Column(
                       children: [

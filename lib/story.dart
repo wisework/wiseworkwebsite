@@ -115,6 +115,7 @@ class StoryPage extends StatelessWidget {
     }
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Center(
           child: Column(

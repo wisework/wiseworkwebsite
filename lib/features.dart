@@ -79,7 +79,6 @@ class FeaturesPage extends StatelessWidget {
   double _opacity = 0;
   bool _isNavMenuVisible = false;
 
-
   @override
   Widget build(BuildContext context) {
     // var deviceData = MediaQuery.of(context);
@@ -109,13 +108,19 @@ class FeaturesPage extends StatelessWidget {
               child: Center(
                 child: Column(
                   children: [
+                    SizedBox(
+                      height: 90,
+                    ),
                     Text(
                       'Key Features',
                       style: GoogleFonts.ibmPlexSans(
                         fontWeight: FontWeight.w700,
                         color: Color.fromARGB(255, 24, 84, 110),
-                        fontSize: 35,
+                        fontSize: 48,
                       ),
+                    ),
+                    SizedBox(
+                      height: 50,
                     ),
                     GridView.builder(
                         shrinkWrap: true,
