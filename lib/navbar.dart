@@ -122,9 +122,8 @@ class _NavigationBarState extends State<NavBar> {
                   });
                 },
                 dropdownDecoration: BoxDecoration(
-                  color: Color.fromARGB(255, 171, 204, 227),
-                  borderRadius: BorderRadius.circular(5)
-                ),
+                    color: Color.fromARGB(255, 171, 204, 227),
+                    borderRadius: BorderRadius.circular(5)),
                 buttonHeight: 40,
                 buttonWidth: 70,
                 itemHeight: 40,
@@ -163,9 +162,8 @@ class _NavigationBarState extends State<NavBar> {
                   });
                 },
                 dropdownDecoration: BoxDecoration(
-                  color: Color.fromARGB(255, 171, 204, 227),
-                  borderRadius: BorderRadius.circular(5)
-                ),
+                    color: Color.fromARGB(255, 171, 204, 227),
+                    borderRadius: BorderRadius.circular(5)),
                 buttonHeight: 40,
                 buttonWidth: 100,
                 itemHeight: 40,
@@ -204,9 +202,8 @@ class _NavigationBarState extends State<NavBar> {
                   });
                 },
                 dropdownDecoration: BoxDecoration(
-                  color: Color.fromARGB(255, 171, 204, 227),
-                  borderRadius: BorderRadius.circular(5)
-                ),
+                    color: Color.fromARGB(255, 171, 204, 227),
+                    borderRadius: BorderRadius.circular(5)),
                 buttonHeight: 40,
                 buttonWidth: 110,
                 itemHeight: 40,
@@ -245,9 +242,8 @@ class _NavigationBarState extends State<NavBar> {
                   });
                 },
                 dropdownDecoration: BoxDecoration(
-                  color: Color.fromARGB(255, 171, 204, 227),
-                  borderRadius: BorderRadius.circular(5)
-                ),
+                    color: Color.fromARGB(255, 171, 204, 227),
+                    borderRadius: BorderRadius.circular(5)),
                 buttonHeight: 40,
                 buttonWidth: 70,
                 itemHeight: 40,
@@ -286,9 +282,8 @@ class _NavigationBarState extends State<NavBar> {
                   });
                 },
                 dropdownDecoration: BoxDecoration(
-                  color: Color.fromARGB(255, 171, 204, 227),
-                  borderRadius: BorderRadius.circular(5)
-                ),
+                    color: Color.fromARGB(255, 171, 204, 227),
+                    borderRadius: BorderRadius.circular(5)),
                 buttonHeight: 40,
                 buttonWidth: 100,
                 itemHeight: 40,
