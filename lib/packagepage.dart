@@ -61,6 +61,7 @@ class PackagesPage extends StatelessWidget {
     }
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -178,9 +179,12 @@ class PackageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: backgroundcolor ?? Color.fromARGB(255, 255, 255, 255),
+      ),
       height: 749,
       width: 460,
-      color: backgroundcolor ?? Color.fromARGB(255, 255, 255, 255),
       padding: EdgeInsets.all(10.0),
       child: Column(
         children: [
