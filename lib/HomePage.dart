@@ -61,15 +61,19 @@ class _HomePageState extends State<HomePage> {
               child: NavBar(),
             ),
       drawer: MenuDrawer(),
-      body: Stack(
-        children: <Widget>[
-          // FeaturesPage(),
-          // NavigationBar(),
-
-          // StoryPage(),
-          // CustomerPage(),
-          FAQ(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(height: 634, width: double.infinity, child: StoryPage()),
+            Container(
+                height: 1633, width: double.infinity, child: FeaturesPage()),
+            Container(
+                height: 1095, width: double.infinity, child: PackagesPage()),
+            Container(
+                height: 1504, width: double.infinity, child: CustomerPage()),
+            Container(height: 1525, width: double.infinity, child: FAQ()),
+          ],
+        ),
       ),
     );
   }
