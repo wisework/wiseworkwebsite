@@ -83,9 +83,9 @@ class FeaturesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // var deviceData = MediaQuery.of(context);
     var screenSize = MediaQuery.of(context).size;
-    if (screenSize.width > 1000) {
+    if (screenSize.width > 1200) {
       isLargeScreen = true;
-      // } else if (screenSize.width <= 1000 && screenSize.width > 700) {
+      // } else if (screenSize.width <= 1200 && screenSize.width > 700) {
       //   isMedScreen = true;
     } else {
       isSmallScreen = true;
@@ -93,8 +93,8 @@ class FeaturesPage extends StatelessWidget {
 
     return Center(
       child: Container(
-        width: 1000,
-        color: Color.fromARGB(255, 228, 236, 248),
+        // width: MediaQuery.of(context).size.width > 1200 ? 1200 : 500,
+        // color: Color.fromARGB(255, 228, 236, 248),
         margin: EdgeInsets.all(00.0),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -102,14 +102,14 @@ class FeaturesPage extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: 90,
+                  height: MediaQuery.of(context).size.width > 1200 ? 90 : 45,
                 ),
                 Text(
                   'Key Features',
                   style: GoogleFonts.ibmPlexSans(
                     fontWeight: FontWeight.w700,
                     color: Color.fromARGB(255, 24, 84, 110),
-                    fontSize: 48,
+                    fontSize: MediaQuery.of(context).size.width > 1200 ? 48 : 25,
                   ),
                 ),
                 SizedBox(
@@ -118,9 +118,15 @@ class FeaturesPage extends StatelessWidget {
                 GridView.builder(
                     shrinkWrap: true,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: screenSize.width > 1000 ? 3 : 1,
-                      crossAxisSpacing: 20,
-                      mainAxisSpacing: 20,
+                      crossAxisCount: MediaQuery.of(context).size.width > 1200
+                                  ? 3
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 2
+                                      : 1,
+                      crossAxisSpacing:
+                          MediaQuery.of(context).size.width > 1200 ? 20 : 10,
+                      mainAxisSpacing:
+                          MediaQuery.of(context).size.width > 1200 ? 20 : 10,
                     ),
                     itemCount: features.length,
                     itemBuilder: (BuildContext context, int index) {
@@ -134,8 +140,16 @@ class FeaturesPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                             onTap: () {},
                             child: new Container(
-                              width: 300,
-                              height: 300,
+                              width: MediaQuery.of(context).size.width > 1200
+                                  ? 368
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 200
+                                      : 100,
+                              height: MediaQuery.of(context).size.width > 1200
+                                  ? 368
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 200
+                                      : 100,
                               child: Center(
                                 child: Container(
                                   margin: EdgeInsets.all(15),
@@ -143,8 +157,28 @@ class FeaturesPage extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       SizedBox(
-                                          width: 100,
-                                          height: 100,
+                                          width: MediaQuery.of(context)
+                                                      .size
+                                                      .width >
+                                                  1200
+                                              ? 100
+                                              : MediaQuery.of(context)
+                                                          .size
+                                                          .width >
+                                                      600
+                                                  ? 70
+                                                  : 70,
+                                          height: MediaQuery.of(context)
+                                                      .size
+                                                      .width >
+                                                  1200
+                                              ? 100
+                                              : MediaQuery.of(context)
+                                                          .size
+                                                          .width >
+                                                      600
+                                                  ? 70
+                                                  : 70,
                                           child: Image.asset(
                                             'assets/${features[index].imageUrl}',
                                           )),
@@ -152,7 +186,17 @@ class FeaturesPage extends StatelessWidget {
                                         '${features[index].title}',
                                         style: GoogleFonts.poppins(
                                             fontWeight: FontWeight.w500,
-                                            fontSize: 22,
+                                            fontSize: MediaQuery.of(context)
+                                                        .size
+                                                        .width >
+                                                    1200
+                                                ? 24
+                                                : MediaQuery.of(context)
+                                                            .size
+                                                            .width >
+                                                        600
+                                                    ? 20
+                                                    : 18,
                                             color: Color.fromARGB(
                                                 255, 16, 24, 40)),
                                         textAlign: TextAlign.center,
@@ -162,7 +206,17 @@ class FeaturesPage extends StatelessWidget {
                                         style: GoogleFonts.ibmPlexSansThai(
                                           color: Color.fromARGB(
                                               255, 102, 112, 133),
-                                          fontSize: 16,
+                                          fontSize: MediaQuery.of(context)
+                                                      .size
+                                                      .width >
+                                                  1200
+                                              ? 20
+                                              : MediaQuery.of(context)
+                                                          .size
+                                                          .width >
+                                                      600
+                                                  ? 16
+                                                  : 15,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -177,7 +231,18 @@ class FeaturesPage extends StatelessWidget {
                                                   Text(
                                                     'more ',
                                                     style: GoogleFonts.inter(
-                                                        fontSize: 18,
+                                                        fontSize: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .width >
+                                                                1200
+                                                            ? 18
+                                                            : MediaQuery.of(context)
+                                                                        .size
+                                                                        .width >
+                                                                    600
+                                                                ? 18
+                                                                : 12,
                                                         color: Color.fromARGB(
                                                             255, 57, 129, 237)),
                                                   ), // <-- Text
@@ -187,7 +252,17 @@ class FeaturesPage extends StatelessWidget {
                                                     Icons.arrow_forward_sharp,
                                                     color: Color.fromARGB(
                                                         255, 57, 129, 237),
-                                                    size: 18.0,
+                                                    size: MediaQuery.of(context)
+                                                                .size
+                                                                .width >
+                                                            1200
+                                                        ? 18
+                                                        : MediaQuery.of(context)
+                                                                    .size
+                                                                    .width >
+                                                                600
+                                                            ? 18
+                                                            : 12,
                                                   ),
                                                 ],
                                               ),

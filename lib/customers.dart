@@ -69,7 +69,7 @@ class CustomerPage extends StatelessWidget {
                   style: GoogleFonts.nunito(
                     fontWeight: FontWeight.w700,
                     color: Color.fromARGB(255, 24, 84, 110),
-                    fontSize: 35,
+                    fontSize: MediaQuery.of(context).size.width > 1000 ? 35 : 25,
                   ),
                 ),
                 Column(
@@ -79,7 +79,7 @@ class CustomerPage extends StatelessWidget {
                       style: GoogleFonts.ibmPlexSansThai(
                         fontWeight: FontWeight.w400,
                         color: Color.fromARGB(255, 24, 84, 110),
-                        fontSize: 20,
+                        fontSize: MediaQuery.of(context).size.width > 1000 ? 20 : 14,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -93,7 +93,7 @@ class CustomerPage extends StatelessWidget {
                     GridView.builder(
                         shrinkWrap: true,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: screenSize.width > 1000 ? 5 : 3,
+                          crossAxisCount: screenSize.width > 1000 ? 5 : 2,
                           crossAxisSpacing: 20,
                           mainAxisSpacing: 20,
                         ),
