@@ -93,7 +93,11 @@ class FeaturesPage extends StatelessWidget {
 
     return Center(
       child: Container(
-        // width: MediaQuery.of(context).size.width > 1200 ? 1200 : 500,
+        width: MediaQuery.of(context).size.width > 1200
+                                  ? 1200
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 900
+                                      : 500,
         // color: Color.fromARGB(255, 228, 236, 248),
         margin: EdgeInsets.all(00.0),
         child: Padding(
