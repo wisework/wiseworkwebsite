@@ -60,102 +60,96 @@ class PackagesPage extends StatelessWidget {
       return screenWidth > 1400;
     }
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 71.52,
-              ),
-              Container(
-                  height: 140,
-                  width: 1440,
-                  child: Center(
-                    child: RichText(
-                        text: TextSpan(
-                      style: GoogleFonts.nunitoSans(
-                        fontSize: 48,
-                        fontWeight: FontWeight.w700,
-                      ),
-                      children: <TextSpan>[
-                        TextSpan(
-                            text: 'เลือก ',
-                            style: TextStyle(color: Colors.black)),
-                        TextSpan(
-                            text: 'แพ็กเกจ',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 75, 195, 211))),
-                        TextSpan(
-                            text: ' ที่เหมาะกับธุรกิจของคุณ ?',
-                            style: TextStyle(color: Colors.black)),
-                      ],
-                    )),
-                  )),
-              SizedBox(
-                height: 52.72,
-              ),
-              _isLargeScreen()
-                  ? Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        PackageCard(
-                          packageicon: 'assets/packages/cloud.png',
-                          title: 'Express',
-                          lisence: 'SaaS',
-                          packages: express,
-                          buttoncolor: true,
-                        ),
-                        PackageCard(
-                          packageicon: 'assets/packages/clouds.png',
-                          title: 'Standard',
-                          lisence: 'Subscriptions License',
-                          packages: standard,
-                          backgroundcolor: Color.fromARGB(255, 232, 242, 254),
-                          buttoncolor: false,
-                        ),
-                        PackageCard(
-                          packageicon: 'assets/packages/rainbow_cloud.png',
-                          title: 'Enterprise',
-                          lisence: 'Perpreptual License',
-                          packages: enterprise,
-                          buttoncolor: true,
-                        )
-                      ],
-                    )
-                  : Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        PackageCard(
-                          packageicon: 'assets/packages/cloud.png',
-                          title: 'Express',
-                          lisence: 'SaaS',
-                          packages: express,
-                          buttoncolor: true,
-                        ),
-                        SizedBox(height: 22),
-                        PackageCard(
-                          packageicon: 'assets/packages/clouds.png',
-                          title: 'Standard',
-                          lisence: 'Subscriptions License',
-                          packages: standard,
-                          backgroundcolor: Color.fromARGB(255, 232, 242, 254),
-                          buttoncolor: false,
-                        ),
-                        SizedBox(height: 22),
-                        PackageCard(
-                          packageicon: 'assets/packages/rainbow_cloud.png',
-                          title: 'Enterprise',
-                          lisence: 'Perpreptual License',
-                          packages: enterprise,
-                          buttoncolor: true,
-                        )
-                      ],
-                    )
-            ],
+    return Center(
+      child: Column(
+        children: [
+          SizedBox(
+            height: 71.52,
           ),
-        ),
+          Container(
+              height: 140,
+              width: 1440,
+              child: Center(
+                child: RichText(
+                    text: TextSpan(
+                  style: GoogleFonts.nunitoSans(
+                    fontSize: 48,
+                    fontWeight: FontWeight.w700,
+                  ),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: 'เลือก ', style: TextStyle(color: Colors.black)),
+                    TextSpan(
+                        text: 'แพ็กเกจ',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 75, 195, 211))),
+                    TextSpan(
+                        text: ' ที่เหมาะกับธุรกิจของคุณ ?',
+                        style: TextStyle(color: Colors.black)),
+                  ],
+                )),
+              )),
+          SizedBox(
+            height: 52.72,
+          ),
+          _isLargeScreen()
+              ? Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    PackageCard(
+                      packageicon: 'assets/packages/cloud.png',
+                      title: 'Express',
+                      lisence: 'SaaS',
+                      packages: express,
+                      buttoncolor: true,
+                    ),
+                    PackageCard(
+                      packageicon: 'assets/packages/clouds.png',
+                      title: 'Standard',
+                      lisence: 'Subscriptions License',
+                      packages: standard,
+                      backgroundcolor: Color.fromARGB(255, 232, 242, 254),
+                      buttoncolor: false,
+                    ),
+                    PackageCard(
+                      packageicon: 'assets/packages/rainbow_cloud.png',
+                      title: 'Enterprise',
+                      lisence: 'Perpreptual License',
+                      packages: enterprise,
+                      buttoncolor: true,
+                    )
+                  ],
+                )
+              : Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    PackageCard(
+                      packageicon: 'assets/packages/cloud.png',
+                      title: 'Express',
+                      lisence: 'SaaS',
+                      packages: express,
+                      buttoncolor: true,
+                    ),
+                    SizedBox(height: 22),
+                    PackageCard(
+                      packageicon: 'assets/packages/clouds.png',
+                      title: 'Standard',
+                      lisence: 'Subscriptions License',
+                      packages: standard,
+                      backgroundcolor: Color.fromARGB(255, 232, 242, 254),
+                      buttoncolor: false,
+                    ),
+                    SizedBox(height: 22),
+                    PackageCard(
+                      packageicon: 'assets/packages/rainbow_cloud.png',
+                      title: 'Enterprise',
+                      lisence: 'Perpreptual License',
+                      packages: enterprise,
+                      buttoncolor: true,
+                    )
+                  ],
+                )
+        ],
       ),
     );
   }

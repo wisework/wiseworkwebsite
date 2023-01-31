@@ -13,6 +13,47 @@ class MenuDrawer extends StatefulWidget {
   _MenuDrawerState createState() => _MenuDrawerState();
 }
 
+class Item {
+  // final int id;
+  final String title;
+  final String description;
+  bool isExpanded;
+  Item(
+    // this.id,
+    this.title,
+    this.description,
+    this.isExpanded,
+  );
+}
+
+List<Item> items = [
+  Item(
+      // 1,
+      "Home",
+      "",
+      false),
+  Item(
+      // 2,
+      "About Us",
+      "description-2",
+      false),
+  Item(
+      // 3,
+      "Our Services",
+      "description-3",
+      false),
+  Item(
+      // 4,
+      "Blogs",
+      "description-4",
+      false),
+  Item(
+      // 5,
+      "Contact Us",
+      "description-5",
+      false),
+];
+
 class _MenuDrawerState extends State<MenuDrawer> {
   final List<String> listHome = <String>['Home', 'h1', 'h2', 'h3', 'h4'];
   final List<String> listAbout = <String>[
@@ -37,7 +78,6 @@ class _MenuDrawerState extends State<MenuDrawer> {
     'ct3',
     'ct4'
   ];
-
 
   String? HomeValue;
   String? AboutValue;
@@ -79,217 +119,44 @@ class _MenuDrawerState extends State<MenuDrawer> {
               SizedBox(
                 width: screenSize.width / 15,
               ),
-              DropdownButtonHideUnderline(
-                child: DropdownButton2(
-                  hint: Text(
-                    'Home',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.black,
-                    ),
-                  ),
-                  icon: Transform.translate(
-                    offset: Offset(-14, -2),
-                    child: Icon(
-                      Icons.expand_more_outlined,
-                      color: Colors.black,
-                    ),
-                  ),
-                  items: listHome
-                      .map((item) => DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                  fontSize: 14, color: Colors.black),
-                            ),
-                          ))
-                      .toList(),
-                  value: HomeValue,
-                  onChanged: (value) {
-                    setState(() {
-                     HomeValue = value as String;
-                    });
-                  },
-                  dropdownDecoration: BoxDecoration(
-                    color: Color.fromARGB(255, 171, 204, 227),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  isExpanded: true,
-                  buttonHeight: 40,
-                  // buttonWidth: 70,
-                  itemHeight: 40,
-                ),
-              ),
-              DropdownButtonHideUnderline(
-                child: DropdownButton2(
-                  hint: Text(
-                    'About Us',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.black,
-                    ),
-                  ),
-                  icon: Transform.translate(
-                    offset: Offset(-14, -2),
-                    child: Icon(
-                      Icons.expand_more_outlined,
-                      color: Colors.black,
-                    ),
-                  ),
-                  items: listAbout
-                      .map((item) => DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                  fontSize: 14, color: Colors.black),
-                            ),
-                          ))
-                      .toList(),
-                  value: AboutValue,
-                  onChanged: (value) {
-                    setState(() {
-                      AboutValue = value as String;
-                    });
-                  },
-                  // dropdownDecoration: BoxDecoration(
-                  //   color: Color.fromARGB(255, 171, 204, 227),
-                  // ),
-                  isExpanded: true,
-                  buttonHeight: 40,
-                  // buttonWidth: 70,
-                  itemHeight: 40,
-                ),
-              ),
-              DropdownButtonHideUnderline(
-                child: DropdownButton2(
-                  hint: Text(
-                    'Our Services',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.black,
-                    ),
-                  ),
-                  icon: Transform.translate(
-                    offset: Offset(-14, -2),
-                    child: Icon(
-                      Icons.expand_more_outlined,
-                      color: Colors.black,
-                    ),
-                  ),
-                  items: listServices
-                      .map((item) => DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                  fontSize: 14, color: Colors.black),
-                            ),
-                          ))
-                      .toList(),
-                  value: ServicesValue,
-                  onChanged: (value) {
-                    setState(() {
-                     ServicesValue = value as String;
-                    });
-                  },
-                  // dropdownDecoration: BoxDecoration(
-                  //   color: Color.fromARGB(255, 171, 204, 227),
-                  // ),
-                  isExpanded: true,
-                  buttonHeight: 40,
-                  // buttonWidth: 70,
-                  itemHeight: 40,
-                ),
-              ),
-              DropdownButtonHideUnderline(
-                child: DropdownButton2(
-                  hint: Text(
-                    'Blogs',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.black,
-                    ),
-                  ),
-                  icon: Transform.translate(
-                    offset: Offset(-14, -2),
-                    child: Icon(
-                      Icons.expand_more_outlined,
-                      color: Colors.black,
-                    ),
-                  ),
-                  items: listBlogs
-                      .map((item) => DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                  fontSize: 14, color: Colors.black),
-                            ),
-                          ))
-                      .toList(),
-                  value: BlogsValue,
-                  onChanged: (value) {
-                    setState(() {
-                      BlogsValue = value as String;
-                    });
-                  },
-                  // dropdownDecoration: BoxDecoration(
-                  //   color: Color.fromARGB(255, 171, 204, 227),
-                  // ),
-                  isExpanded: true,
-                  buttonHeight: 40,
-                  // buttonWidth: 70,
-                  itemHeight: 40,
-                ),
-              ),
-              DropdownButtonHideUnderline(
-                child: DropdownButton2(
-                  hint: Text(
-                    'Contact Us',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.black,
-                    ),
-                  ),
-                  icon: Transform.translate(
-                    offset: Offset(-14, -2),
-                    child: Icon(
-                      Icons.expand_more_outlined,
-                      color: Colors.black,
-                    ),
-                  ),
-                  items: listContact
-                      .map((item) => DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                  fontSize: 14, color: Colors.black),
-                            ),
-                          ))
-                      .toList(),
-                  value:ContactValue,
-                  onChanged: (value) {
-                    setState(() {
-                      ContactValue = value as String;
-                    });
-                  },
-                  // dropdownDecoration: BoxDecoration(
-                  //   color: Color.fromARGB(255, 171, 204, 227),
-                  // ),
-                  isExpanded: true,
-                  buttonHeight: 40,
-                  // buttonWidth: 70,
-                  itemHeight: 40,
-                ),
-              ),
-              
+              _expandTog()
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget _expandTog() {
+    return ExpansionPanelList(
+      animationDuration: Duration(seconds: 1),
+      dividerColor: Color.fromARGB(255, 228, 236, 248),
+      elevation: 0,
+      expansionCallback: (int index, bool isExpanded) {
+        setState(() {
+          items[index].isExpanded = !isExpanded;
+        });
+      },
+      children: items.map<ExpansionPanel>((Item item) {
+        return ExpansionPanel(
+          // backgroundColor: Color.fromARGB(255, 228, 236, 248),
+          canTapOnHeader: true,
+          headerBuilder: (BuildContext context, bool isExpanded) {
+            return ListTile(
+              title: Text(
+                item.title,
+                style: TextStyle(color: Color.fromARGB(255, 76, 179, 211)),
+              ),
+              // selectedColor: Colors.amber,
+            );
+          },
+          body: ListTile(
+              contentPadding: EdgeInsets.only(top: 5, bottom: 20, left: 20),
+              title: Text(item.description),
+              onTap: () {}),
+          isExpanded: item.isExpanded,
+        );
+      }).toList(),
     );
   }
 }

@@ -2,6 +2,87 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 
+class Item {
+  // final int id;
+  final String title;
+  final String description;
+  bool isExpanded;
+  Item(
+    // this.id,
+    this.title,
+    this.description,
+    this.isExpanded,
+  );
+}
+
+List<Item> items = [
+  Item(
+      // 1,
+      "PDPA คืออะไร?",
+      "PDPA (Personal Data Protection Act, B.E. 2562 (2019)) หรือ พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ.2562 มีผลบังคับใช้อย่างเป็นทางการเมื่อ 1 มิ.ย. 2565 เหตุผลในการประกาศใช้ PDPA เนื่องมาจากเทคโนโลยีก้าวหน้าขึ้น ช่องทางสื่อสารต่างๆมีหลากหลายขึ้น ทำให้การละเมิดสิทธิความเป็นส่วนตัวของข้อมูลส่วนบุคคลทำได้ง่ายขึ้นและหลายครั้งก็นำมาซึ่งความเดือดร้อนรำคาญหรือสร้างความเสียหายให้แก่เจ้าของข้อมูล ตลอดจนสามารถส่งผลต่อเศรษฐกิจโดยรวมของประเทศได้ด้วย จึงต้องมีกฎหมายว่าด้วยการคุ้มครองข้อมูลส่วนบุคคลขึ้นเพื่อกำหนดหลักเกณฑ์ กลไก หรือมาตรการกำกับดูแลเกี่ยวกับการให้ความคุ้มครองข้อมูลส่วนบุคคลที่รวมถึงการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลขึ้น",
+      false),
+  Item(
+      // 2,
+      "ธุรกิจอะไรบ้างที่ต้องปฏิบัติตาม PDPA?",
+      "description-2",
+      false),
+  Item(
+      // 3,
+      "บทลงโทษของ PDPA เป็นอย่างไร?",
+      "description-3",
+      false),
+  Item(
+      // 4,
+      "ต้องการทำ PDPA จะเริ่มต้นอย่างไร?",
+      "description-4",
+      false),
+  Item(
+      // 5,
+      "wisework สามารถให้คำปรึกษาเรื่อง PDPA ได้ไหม?",
+      "description-5",
+      false),
+  Item(
+      // 6,
+      "wisework มีมาตรฐานอะไรบ้างในการควบคุม กระบวนการบริหารความเสี่ยง?",
+      "description-6",
+      false),
+  Item(
+      // 7,
+      "wisework มี solutions อะไรให้ใช้งานบ้าง?",
+      "description-7",
+      false),
+  Item(
+      // 8,
+      "wisework ติดตั้งบนระบบ ERP รูปแบบใด?",
+      "description-8",
+      false),
+  Item(
+      // 9,
+      "wisework สามารถเชื่อมต่อกับ software ภายในองค์กรได้ไหม?",
+      "description-9",
+      false),
+  Item(
+      // 10,
+      "wisework ช่วยประเมินความเสี่ยงได้อย่างไร แบบใด?",
+      "description-10",
+      false),
+  Item(
+      // 11,
+      "wisework จะช่วย support การบริหารจัดการได้ไหม?",
+      "description-11",
+      false),
+  Item(
+      // 12,
+      "wisework จะช่วย support การบริหารจัดการได้ไหม?",
+      "description-12",
+      false),
+  Item(
+      // 13,
+      "สนใจผลิตภัณฑ์ wisework ขอทดลองใช้งานได้อย่างไร?",
+      "description-13",
+      false),
+];
+
 class FAQ extends StatefulWidget {
   // final double opacity;
 
@@ -20,6 +101,19 @@ class _FAQState extends State<FAQ> {
       _selectedIndex = index;
     });
   }
+
+  final List _isHovering = [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -128,177 +222,198 @@ class _FAQState extends State<FAQ> {
       ),
     );
 
-    // List<String> pdpaList = [
-    //   "PDPA (Personal Data Protection Act, B.E. 2562 (2019)) หรือ พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล",
-    //   " พ.ศ.2562 มีผลบังคับใช้อย่างเป็นทางการเมื่อ 1 มิ.ย. 2565",
-    //   "เหตุผลในการประกาศใช้ PDPA เนื่องมาจากเทคโนโลยีก้าวหน้าขึ้น ช่องทางสื่อสารต่างๆ",
-    //   "มีหลากหลายขึ้น ทำให้การละเมิดสิทธิความเป็นส่วนตัวของข้อมูลส่วนบุคคลทำได้ง่ายขึ้น",
-    //   "และหลายครั้งก็นำมาซึ่งความเดือดร้อนรำคาญหรือสร้างความเสียหายให้แก่เจ้าของข้อมูล",
-    //   " ตลอดจนสามารถส่งผลต่อเศรษฐกิจโดยรวมของประเทศได้ด้วย จึงต้องมีกฎหมายว่าด้วย ",
-    //   "การคุ้มครองข้อมูลส่วนบุคคลขึ้นเพื่อกำหนดหลักเกณฑ์ กลไก หรือมาตรการกำกับดูแล ",
-    //   "เกี่ยวกับการให้ความคุ้มครองข้อมูลส่วนบุคคลที่รวมถึงการเก็บรวบรวม ใช้ หรือเปิดเผย",
-    //   " ข้อมูลส่วนบุคคลขึ้น"
-    // ];
-
     var pdpaList2 = Container(
       child: Text(
         'PDPA (Personal Data Protection Act, B.E. 2562 (2019)) หรือ พระราชบัญญัติ \nคุ้มครองข้อมูลส่วนบุคคล พ.ศ.2562 มีผลบังคับใช้อย่างเป็นทางการเมื่อ 1 มิ.ย. 2565 \nเหตุผลในการประกาศใช้ PDPA เนื่องมาจากเทคโนโลยีก้าวหน้าขึ้น ช่องทางสื่อสารต่างๆ \nมีหลากหลายขึ้น ทำให้การละเมิดสิทธิความเป็นส่วนตัวของข้อมูลส่วนบุคคลทำได้ง่ายขึ้น \nและหลายครั้งก็นำมาซึ่งความเดือดร้อนรำคาญหรือสร้างความเสียหายให้แก่เจ้าของข้อมูล \nตลอดจนสามารถส่งผลต่อเศรษฐกิจโดยรวมของประเทศได้ด้วย จึงต้องมีกฎหมายว่าด้วย \nการคุ้มครองข้อมูลส่วนบุคคลขึ้นเพื่อกำหนดหลักเกณฑ์ กลไก หรือมาตรการกำกับดูแล \nเกี่ยวกับการให้ความคุ้มครองข้อมูลส่วนบุคคลที่รวมถึงการเก็บรวบรวม ใช้ \nหรือเปิดเผยข้อมูลส่วนบุคคลขึ้น',
         style: GoogleFonts.ibmPlexSansThai(
-          fontSize: 18,
-        ),
+            fontSize: 18, fontWeight: FontWeight.w400),
       ),
     );
 
-    List<String> choices = [
-      "ธุรกิจอะไรบ้างที่ต้องปฏิบัติตาม PDPA?",
-      "บทลงโทษของ PDPA เป็นอย่างไร?",
-      "ต้องการทำ PDPA จะเริ่มต้นอย่างไร?",
-      "wisework สามารถให้คำปรึกษาเรื่อง PDPA ได้ไหม?",
-      "wisework มีมาตรฐานอะไรบ้างในการควบคุม กระบวนการบริหารความเสี่ยง?",
-      "wisework มี solutions อะไรให้ใช้งานบ้าง?",
-      "wisework ติดตั้งบนระบบ ERP รูปแบบใด?",
-      "wisework สามารถเชื่อมต่อกับ software ภายในองค์กรได้ไหม?",
-      "wisework ช่วยประเมินความเสี่ยงได้อย่างไร แบบใด?",
-      "wisework จะช่วย support การบริหารจัดการได้ไหม?",
-      "wisework จะช่วย support การบริหารจัดการได้ไหม?",
-      "สนใจผลิตภัณฑ์ wisework ขอทดลองใช้งานได้อย่างไร?"
-    ];
-    String? ChoicesValue;
-    var listChoice = Container(
-      color: Color.fromARGB(0, 255, 193, 7),
-      height: 700,
-      width: 600,
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: choices.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            dense: true,
-            
-            title: Transform.translate(
-              offset: Offset(0, 0),
-              child: Text(
-                choices[index],
-                style: GoogleFonts.ibmPlexSansThai(
-                    fontSize: 15, fontWeight: FontWeight.w400),
-              ),
-            ),
-            leading: Transform.translate(
-              offset: Offset(600, -10),
-              child: SizedBox(
-                  width: 12,
-                  height: 12,
-                  child:
-                      Icon(Icons.expand_more)),
-            ),
-          );
-        },
-      ),
-    );
+    // List<String> choices = [
+    //   "ธุรกิจอะไรบ้างที่ต้องปฏิบัติตาม PDPA?",
+    //   "บทลงโทษของ PDPA เป็นอย่างไร?",
+    //   "ต้องการทำ PDPA จะเริ่มต้นอย่างไร?",
+    //   "wisework สามารถให้คำปรึกษาเรื่อง PDPA ได้ไหม?",
+    //   "wisework มีมาตรฐานอะไรบ้างในการควบคุม กระบวนการบริหารความเสี่ยง?",
+    //   "wisework มี solutions อะไรให้ใช้งานบ้าง?",
+    //   "wisework ติดตั้งบนระบบ ERP รูปแบบใด?",
+    //   "wisework สามารถเชื่อมต่อกับ software ภายในองค์กรได้ไหม?",
+    //   "wisework ช่วยประเมินความเสี่ยงได้อย่างไร แบบใด?",
+    //   "wisework จะช่วย support การบริหารจัดการได้ไหม?",
+    //   "wisework จะช่วย support การบริหารจัดการได้ไหม?",
+    //   "สนใจผลิตภัณฑ์ wisework ขอทดลองใช้งานได้อย่างไร?"
+    // ];
+    // String? ChoicesValue;
+
+    // var listChoice = Container(
+    //   color: Color.fromARGB(0, 255, 193, 7),
+    //   height: 700,
+    //   width: 600,
+    //   child: ListView.builder(
+    //     shrinkWrap: true,
+    //     itemCount: choices.length,
+    //     itemBuilder: (context, index) {
+    //       return ListTile(
+    //         dense: true,
+    //         title: Transform.translate(
+    //           offset: Offset(0, 0),
+    //           child: Text(
+    //             choices[index],
+    //             style: GoogleFonts.ibmPlexSansThai(
+    //                 fontSize: 15, fontWeight: FontWeight.w400),
+    //           ),
+    //         ),
+    //         leading: Transform.translate(
+    //           offset: Offset(600, -10),
+    //           child: SizedBox(
+    //               width: 12, height: 12, child: Icon(Icons.expand_more)),
+    //         ),
+    //       );
+    //     },
+    //   ),
+    // );
 
     bool _isLargeScreen() {
       final double screenWidth = MediaQuery.of(context).size.width;
       return screenWidth > 1400;
     }
 
-    return Scaffold(
-      backgroundColor: Color.fromARGB(255, 228, 236, 248),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Container(
-            width: 1400,
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 42,
-                ),
-                _isLargeScreen()
-                    ? Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Container(
-                            width: 700,
-                            height: 1300,
-                            color: Color.fromARGB(0, 204, 220, 57),
-                            child: Column(
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    consult,
-                                    hashtag,
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                button,
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                groupofpic,
-                              ],
-                            ),
-                          ),
-                          Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Column(
-                                  children: [
-                                    Qth,
-                                  ],
-                                ),
-                                Qen,
-                                SizedBox(
-                                  height: 50,
-                                ),
-                                pdpa,
-                                pdpaList2,
-                                SizedBox(
-                                  height: 50,
-                                ),
-                                
-                                listChoice,
-                              ],
-                            ),
-                          ),
-                        ],
-                      )
-                    : Container(
+    return Center(
+      child: Container(
+        width: 1400,
+        child: Column(
+          children: [
+            SizedBox(
+              height: 42,
+            ),
+            _isLargeScreen()
+                ? Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: 700,
+                        height: 1500,
                         color: Color.fromARGB(0, 204, 220, 57),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            consult,
-                            hashtag,
+                            Column(
+                              children: [
+                                consult,
+                                hashtag,
+                              ],
+                            ),
                             SizedBox(
                               height: 20,
                             ),
                             button,
                             SizedBox(
-                              height: 50,
+                              height: 20,
                             ),
                             groupofpic,
-                            Qth,
-                            Qen,
-                            SizedBox(
-                              height: 50,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [pdpa, pdpaList2],
-                            ),
-                            SizedBox(
-                              height: 50,
-                            ),
-                            listChoice,
                           ],
                         ),
-                      )
-              ],
-            ),
-          ),
+                      ),
+                      Container(
+                        width: 700,
+                        height: 1300,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              children: [
+                                Qth,
+                              ],
+                            ),
+                            Qen,
+
+                            SizedBox(
+                              height: 50,
+                            ),
+                            // listChoice,
+                            _buildPanel(),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )
+                : Container(
+                    color: Color.fromARGB(0, 204, 220, 57),
+                    child: Column(
+                      children: [
+                        consult,
+                        hashtag,
+                        SizedBox(
+                          height: 20,
+                        ),
+                        button,
+                        SizedBox(
+                          height: 50,
+                        ),
+                        groupofpic,
+                        Qth,
+                        Qen,
+                        SizedBox(
+                          height: 50,
+                        ),
+                        _buildPanel(),
+                      ],
+                    ),
+                  )
+          ],
         ),
+      ),
+    );
+  }
+
+  bool _onHover = false;
+  bool _onFocus = false;
+  Color _titleColor = Colors.black;
+  bool _isexpanded = false;
+
+  // void _changeTitle() {
+  //   setState(() {
+  //     _isexpanded = !_isexpanded;
+  //     _titleColor = _isexpanded ? Colors.black : Color.fromARGB(255, 75, 195, 211);
+  //   });
+  // }
+
+  Widget _buildPanel() {
+    return Container(
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+      child: ExpansionPanelList(
+        animationDuration: Duration(seconds: 1),
+        dividerColor: Color.fromARGB(255, 228, 236, 248),
+        elevation: 0,
+        expansionCallback: (int index, bool isExpanded) {
+          setState(() {
+            items[index].isExpanded = !isExpanded;
+            // _titleColor = _isexpanded ? Colors.black : Color.fromARGB(255, 75, 195, 211);
+          });
+        },
+        children: items.map<ExpansionPanel>((Item item) {
+          return ExpansionPanel(
+            // backgroundColor: Colors.white,
+            canTapOnHeader: true,
+            headerBuilder: (BuildContext context, bool isExpanded) {
+              return ListTile(
+                // style: ListTileStyle.,
+                title: Text(
+                  item.title,
+                  style: TextStyle(color: Color.fromARGB(255, 75, 195, 211)),
+                ),
+
+                // selectedColor: Colors.amber,
+              );
+            },
+            body: ListTile(
+                contentPadding: EdgeInsets.all(20),
+                title: Text(item.description),
+                onTap: () {}),
+            isExpanded: item.isExpanded,
+          );
+        }).toList(),
       ),
     );
   }

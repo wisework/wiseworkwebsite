@@ -114,52 +114,21 @@ class StoryPage extends StatelessWidget {
       return screenWidth > 1400;
     }
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 42,
-              ),
-              _isLargeScreen()
-                  ? Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      // crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          color: Color.fromARGB(0, 204, 220, 57),
-                          child: Column(
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  title,
-                                  SizedBox(
-                                    height: 14,
-                                  ),
-                                  aboutus,
-                                ],
-                              ),
-                              aboutlist,
-                              SizedBox(
-                                height: 32,
-                              ),
-                              Padding(
-                                  padding: EdgeInsets.only(right: 250),
-                                  child: advice)
-                            ],
-                          ),
-                        ),
-                        groupofpic
-                      ],
-                    )
-                  : Container(
+    return Center(
+      child: Column(
+        children: [
+          SizedBox(
+            height: 42,
+          ),
+          _isLargeScreen()
+              ? Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  // crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
                       color: Color.fromARGB(0, 204, 220, 57),
                       child: Column(
                         children: [
-                          groupofpic,
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -180,14 +149,38 @@ class StoryPage extends StatelessWidget {
                         ],
                       ),
                     ),
-              SizedBox(
-                height: 50,
-              ),
-            ],
+                    groupofpic
+                  ],
+                )
+              : Container(
+                  color: Color.fromARGB(0, 204, 220, 57),
+                  child: Column(
+                    children: [
+                      groupofpic,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          title,
+                          SizedBox(
+                            height: 14,
+                          ),
+                          aboutus,
+                        ],
+                      ),
+                      aboutlist,
+                      SizedBox(
+                        height: 32,
+                      ),
+                      Padding(
+                          padding: EdgeInsets.only(right: 250), child: advice)
+                    ],
+                  ),
+                ),
+          SizedBox(
+            height: 50,
           ),
-        ),
+        ],
       ),
-      // ),
     );
   }
 }

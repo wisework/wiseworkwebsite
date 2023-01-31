@@ -91,143 +91,125 @@ class FeaturesPage extends StatelessWidget {
       isSmallScreen = true;
     }
 
-    return Scaffold(
-      backgroundColor: Color.fromARGB(255, 228, 236, 248),
-      // appBar: PreferredSize(
-      //   preferredSize: Size(screenSize.width, 80),
-      //   child: NavBar(),
-      // ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Container(
-            width: 1000,
-            color: Color.fromARGB(255, 228, 236, 248),
-            margin: EdgeInsets.all(00.0),
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Center(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 90,
+    return Center(
+      child: Container(
+        width: 1000,
+        color: Color.fromARGB(255, 228, 236, 248),
+        margin: EdgeInsets.all(00.0),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Center(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 90,
+                ),
+                Text(
+                  'Key Features',
+                  style: GoogleFonts.ibmPlexSans(
+                    fontWeight: FontWeight.w700,
+                    color: Color.fromARGB(255, 24, 84, 110),
+                    fontSize: 48,
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                GridView.builder(
+                    shrinkWrap: true,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: screenSize.width > 1000 ? 3 : 1,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
                     ),
-                    Text(
-                      'Key Features',
-                      style: GoogleFonts.ibmPlexSans(
-                        fontWeight: FontWeight.w700,
-                        color: Color.fromARGB(255, 24, 84, 110),
-                        fontSize: 48,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 50,
-                    ),
-                    GridView.builder(
-                        shrinkWrap: true,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: screenSize.width > 1000 ? 3 : 1,
-                          crossAxisSpacing: 20,
-                          mainAxisSpacing: 20,
-                        ),
-                        itemCount: features.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return Container(
-                            // decoration: BoxDecoration(
-                            //   borderRadius: BorderRadius.circular(20),
-                            //   color: Color.fromARGB(255, 178, 205, 244),
-                            // ),
-                            child: new Material(
-                              child: new InkWell(
-                                borderRadius: BorderRadius.circular(20),
-                                onTap: () {},
-                                child: new Container(
-                                  width: 300,
-                                  height: 300,
-                                  child: Center(
-                                    child: Container(
-                                      margin: EdgeInsets.all(15),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: <Widget>[
-                                          SizedBox(
-                                              width: 100,
-                                              height: 100,
-                                              child: Image.asset(
-                                                'assets/${features[index].imageUrl}',
-                                              )),
-                                          Text(
-                                            '${features[index].title}',
-                                            style: GoogleFonts.poppins(
-                                                fontWeight: FontWeight.w500,
-                                                fontSize: 22,
-                                                color: Color.fromARGB(
-                                                    255, 16, 24, 40)),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                          Text(
-                                            '${features[index].description}',
-                                            style: GoogleFonts.ibmPlexSansThai(
-                                              color: Color.fromARGB(
-                                                  255, 102, 112, 133),
-                                              fontSize: 16,
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                          Container(
-                                            child: Column(
-                                              children: [
-                                                TextButton(
-                                                  onPressed: () {},
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.min,
-                                                    children: [
-                                                      Text(
-                                                        'more ',
-                                                        style:
-                                                            GoogleFonts.inter(
-                                                                fontSize: 18,
-                                                                color: Color
-                                                                    .fromARGB(
-                                                                        255,
-                                                                        57,
-                                                                        129,
-                                                                        237)),
-                                                      ), // <-- Text
-
-                                                      Icon(
-                                                        // <-- Icon
-                                                        Icons
-                                                            .arrow_forward_sharp,
-                                                        color: Color.fromARGB(
-                                                            255, 57, 129, 237),
-                                                        size: 18.0,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          )
-                                        ],
+                    itemCount: features.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        // decoration: BoxDecoration(
+                        //   borderRadius: BorderRadius.circular(20),
+                        //   color: Color.fromARGB(255, 178, 205, 244),
+                        // ),
+                        child: new Material(
+                          child: new InkWell(
+                            borderRadius: BorderRadius.circular(20),
+                            onTap: () {},
+                            child: new Container(
+                              width: 300,
+                              height: 300,
+                              child: Center(
+                                child: Container(
+                                  margin: EdgeInsets.all(15),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      SizedBox(
+                                          width: 100,
+                                          height: 100,
+                                          child: Image.asset(
+                                            'assets/${features[index].imageUrl}',
+                                          )),
+                                      Text(
+                                        '${features[index].title}',
+                                        style: GoogleFonts.poppins(
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 22,
+                                            color: Color.fromARGB(
+                                                255, 16, 24, 40)),
+                                        textAlign: TextAlign.center,
                                       ),
-                                    ),
+                                      Text(
+                                        '${features[index].description}',
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                          color: Color.fromARGB(
+                                              255, 102, 112, 133),
+                                          fontSize: 16,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      Container(
+                                        child: Column(
+                                          children: [
+                                            TextButton(
+                                              onPressed: () {},
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.min,
+                                                children: [
+                                                  Text(
+                                                    'more ',
+                                                    style: GoogleFonts.inter(
+                                                        fontSize: 18,
+                                                        color: Color.fromARGB(
+                                                            255, 57, 129, 237)),
+                                                  ), // <-- Text
+
+                                                  Icon(
+                                                    // <-- Icon
+                                                    Icons.arrow_forward_sharp,
+                                                    color: Color.fromARGB(
+                                                        255, 57, 129, 237),
+                                                    size: 18.0,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
                                   ),
                                 ),
                               ),
-                              color: Colors.transparent,
                             ),
-                          );
-                        }),
-                  ],
-                ),
-              ),
+                          ),
+                          color: Colors.transparent,
+                        ),
+                      );
+                    }),
+              ],
             ),
           ),
         ),
       ),
-      // drawer: NavBar(),
     );
   }
 }
