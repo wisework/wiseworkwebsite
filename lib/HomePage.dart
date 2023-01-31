@@ -49,12 +49,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: 
            AppBar(
+            
             automaticallyImplyLeading: ResponsiveWidget.isSmallScreen(context),
               iconTheme: IconThemeData(color: Colors.white),
               backgroundColor: Color.fromARGB(255, 52, 144, 206),
               elevation: 0,
               centerTitle: true,
               title: ResponsiveWidget.isSmallScreen(context)? 
+              
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: SizedBox(
@@ -63,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                 child: Image.asset(
                   'logo.png',
                 ),
-            ),
+                        ),
               ): NavBar()
             ),
           

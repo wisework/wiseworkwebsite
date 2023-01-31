@@ -13,13 +13,13 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavigationBarState extends State<NavBar> {
-  int _selectedIndex = 0;
+  // int _selectedIndex = 0;
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+  // void _onItemTapped(int index) {
+  //   setState(() {
+  //     _selectedIndex = index;
+  //   });
+  // }
 
   final List<String> listHome = <String>['Home', 'h1', 'h2', 'h3', 'h4'];
   final List<String> listAbout = <String>[
