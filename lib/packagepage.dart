@@ -64,16 +64,18 @@ class PackagesPage extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 71.52,
+            height: MediaQuery.of(context).size.width < 1000 ? 15 : 71.52,
           ),
           Container(
+              padding: const EdgeInsets.only(left: 15),
               height: 140,
               width: 1440,
               child: Center(
                 child: RichText(
                     text: TextSpan(
                   style: GoogleFonts.nunitoSans(
-                    fontSize: 48,
+                    fontSize:
+                        MediaQuery.of(context).size.width < 1000 ? 32 : 48,
                     fontWeight: FontWeight.w700,
                   ),
                   children: <TextSpan>[
@@ -83,14 +85,18 @@ class PackagesPage extends StatelessWidget {
                         text: 'แพ็กเกจ',
                         style: TextStyle(
                             color: Color.fromARGB(255, 75, 195, 211))),
-                    TextSpan(
-                        text: ' ที่เหมาะกับธุรกิจของคุณ ?',
-                        style: TextStyle(color: Colors.black)),
+                    MediaQuery.of(context).size.width > 600
+                        ? TextSpan(
+                            text: ' ที่เหมาะกับธุรกิจของคุณ ?',
+                            style: TextStyle(color: Colors.black))
+                        : TextSpan(
+                            text: '\nที่เหมาะกับธุรกิจของคุณ ?',
+                            style: TextStyle(color: Colors.black))
                   ],
                 )),
               )),
           SizedBox(
-            height: 52.72,
+            height: MediaQuery.of(context).size.width < 1000 ? 20 : 52.72,
           ),
           _isLargeScreen()
               ? Row(
@@ -177,21 +183,25 @@ class PackageCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         color: backgroundcolor ?? Color.fromARGB(255, 255, 255, 255),
       ),
-      height: 749,
-      width: 460,
-      padding: EdgeInsets.all(10.0),
+      height: MediaQuery.of(context).size.width < 1000 ? 690 : 749,
+      width: MediaQuery.of(context).size.width < 1000 ? 350 : 460,
+      padding: EdgeInsets.all(20.0),
       child: Column(
         children: [
           Row(
             children: [
               SizedBox(
-                  height: 45.28, width: 66, child: Image.asset(packageicon)),
+                  height: MediaQuery.of(context).size.width < 1000 ? 40 : 45.28,
+                  width: MediaQuery.of(context).size.width < 1000 ? 50 : 66,
+                  child: Image.asset(packageicon)),
               Container(
                   padding: EdgeInsets.all(10.0),
                   child: Text(
                     title,
                     style: GoogleFonts.ibmPlexSansThai(
-                        fontSize: 32, fontWeight: FontWeight.w700),
+                        fontSize:
+                            MediaQuery.of(context).size.width < 1000 ? 24 : 32,
+                        fontWeight: FontWeight.w700),
                   )),
             ],
           ),
@@ -205,9 +215,10 @@ class PackageCard extends StatelessWidget {
           ),
           SizedBox(height: 52),
           Transform.translate(
-            offset: Offset(-25.0, 0.0),
+            offset: Offset(
+                MediaQuery.of(context).size.width < 1000 ? -5 : -25.0, 0.0),
             child: SizedBox(
-              width: 352,
+              width: MediaQuery.of(context).size.width < 1000 ? 340 : 352,
               child: DottedLine(
                 dashColor: Color.fromARGB(255, 122, 122, 122),
                 dashGapLength: 3,
@@ -223,14 +234,16 @@ class PackageCard extends StatelessWidget {
                 child: Text(
                   lisence,
                   style: GoogleFonts.ibmPlexSansThai(
-                      fontSize: 28, fontWeight: FontWeight.w700),
+                      fontSize:
+                          MediaQuery.of(context).size.width < 1000 ? 22 : 28,
+                      fontWeight: FontWeight.w700),
                 )),
           ),
           SizedBox(height: 22),
           buttoncolor
               ? SizedBox(
-                  width: 352,
-                  height: 64,
+                  width: MediaQuery.of(context).size.width < 1000 ? 280 : 352,
+                  height: MediaQuery.of(context).size.width < 1000 ? 50 : 64,
                   child: OutlinedButton(
                       onPressed: () {},
                       style: OutlinedButton.styleFrom(
@@ -246,14 +259,16 @@ class PackageCard extends StatelessWidget {
                       child: Text(
                         ' See more',
                         style: GoogleFonts.ibmPlexSansThai(
-                            fontSize: 22,
+                            fontSize: MediaQuery.of(context).size.width < 1000
+                                ? 20
+                                : 22,
                             fontWeight: FontWeight.w600,
                             color: Colors.black),
                       )),
                 )
               : SizedBox(
-                  width: 352,
-                  height: 64,
+                  width: MediaQuery.of(context).size.width < 1000 ? 280 : 352,
+                  height: MediaQuery.of(context).size.width < 1000 ? 50 : 64,
                   child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
@@ -265,10 +280,13 @@ class PackageCard extends StatelessWidget {
                       child: Text(
                         ' See more',
                         style: GoogleFonts.ibmPlexSansThai(
-                            fontSize: 22, fontWeight: FontWeight.w600),
+                            fontSize: MediaQuery.of(context).size.width < 1000
+                                ? 20
+                                : 22,
+                            fontWeight: FontWeight.w600),
                       )),
                 ),
-          SizedBox(height: 60),
+          SizedBox(height: MediaQuery.of(context).size.width < 1000 ? 30 : 60),
         ],
       ),
     );
@@ -287,8 +305,8 @@ class Buildpackagetile extends StatelessWidget {
           leading: Transform.translate(
             offset: Offset(-10, 0),
             child: SizedBox(
-                width: 20.83,
-                height: 20.83,
+                width: MediaQuery.of(context).size.width < 1000 ? 16 : 20.83,
+                height: MediaQuery.of(context).size.width < 1000 ? 16 : 20.83,
                 child: Image(image: AssetImage("assets/packages/check.png"))),
           ),
           title: Transform.translate(
@@ -296,7 +314,8 @@ class Buildpackagetile extends StatelessWidget {
             child: Text(
               package.title,
               style: GoogleFonts.ibmPlexSansThai(
-                  fontSize: 20, fontWeight: FontWeight.w400),
+                  fontSize: MediaQuery.of(context).size.width < 1000 ? 14 : 20,
+                  fontWeight: FontWeight.w400),
             ),
           ),
         ),
@@ -309,12 +328,14 @@ class Buildpackagetile extends StatelessWidget {
               dense: true,
               title: Text(package.children[index],
                   style: GoogleFonts.ibmPlexSansThai(
-                      fontSize: 18, fontWeight: FontWeight.w400)),
+                      fontSize:
+                          MediaQuery.of(context).size.width < 1000 ? 12 : 18,
+                      fontWeight: FontWeight.w400)),
               leading: Transform.translate(
                 offset: Offset(29, 0),
                 child: SizedBox(
-                    width: 12,
-                    height: 12,
+                    width: MediaQuery.of(context).size.width < 1000 ? 8 : 12,
+                    height: MediaQuery.of(context).size.width < 1000 ? 8 : 12,
                     child: Image(image: AssetImage("packages/record.png"))),
               ),
             );
