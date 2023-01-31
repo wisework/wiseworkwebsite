@@ -42,7 +42,7 @@ class StoryPage extends StatelessWidget {
     var title = Container(
       color: Color.fromARGB(0, 0, 187, 212),
       height: 65,
-      width: 461,
+      width: MediaQuery.of(context).size.width < 1000 ? 300 : 461,
       child: Text('wisework Story',
           style: GoogleFonts.ibmPlexSansThai(
               fontSize: MediaQuery.of(context).size.width < 1000 ? 38 : 48,
@@ -52,7 +52,7 @@ class StoryPage extends StatelessWidget {
     var aboutus = Container(
       color: Color.fromARGB(0, 255, 153, 0),
       height: MediaQuery.of(context).size.width < 1000 ? 80 : 156,
-      width: 726,
+      width: MediaQuery.of(context).size.width < 1000 ? 320 : 726,
       child: Text(
         '“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับกฎหมาย\n และกฎระเบียบจากหน่วยงานกำกับดูแล โดยทีมนักพัฒนา\n และผู้เชี่ยวชาญมากประสบการณ์"',
         style: GoogleFonts.ibmPlexSansThai(
@@ -64,7 +64,7 @@ class StoryPage extends StatelessWidget {
     var aboutlist = Container(
       color: Color.fromARGB(0, 255, 193, 7),
       height: MediaQuery.of(context).size.width < 1000 ? 180 : 230,
-      width: 660,
+      width: MediaQuery.of(context).size.width < 1000 ? 350 : 660,
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: storylist.length,
@@ -159,10 +159,11 @@ class StoryPage extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20),
                   color: Color.fromARGB(0, 204, 220, 57),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       groupofpic,
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        // crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           title,
                           SizedBox(
@@ -176,12 +177,7 @@ class StoryPage extends StatelessWidget {
                         height:
                             MediaQuery.of(context).size.width < 1000 ? 12 : 32,
                       ),
-                      Padding(
-                          padding: EdgeInsets.only(
-                              right: MediaQuery.of(context).size.width < 1000
-                                  ? 20
-                                  : 250),
-                          child: advice)
+                      Padding(padding: EdgeInsets.only(right: 0), child: advice)
                     ],
                   ),
                 ),
