@@ -57,7 +57,7 @@ class FeaturesPage extends StatelessWidget {
         "บริหารการสื่อสารนโยบายและประกาศความเป็นส่วนตัว",
         "features/Policy.png",
         "routePath"),
-    FeatureModel("Data Deiscover", "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
+    FeatureModel("Data Discover", "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
         "features/discovery.png", "routePath"),
     FeatureModel(
         "Executive Support System",

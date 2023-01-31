@@ -53,7 +53,7 @@ class CustomerPage extends StatelessWidget {
     // }
     return Center(
       child: Container(
-        width: 1000,
+        // width: 1000,
         color: Colors.white,
         margin: EdgeInsets.all(00.0),
         child: Padding(
@@ -69,7 +69,12 @@ class CustomerPage extends StatelessWidget {
                   style: GoogleFonts.nunito(
                     fontWeight: FontWeight.w700,
                     color: Color.fromARGB(255, 24, 84, 110),
-                    fontSize: MediaQuery.of(context).size.width > 1000 ? 35 : 25,
+                    fontSize:
+                        MediaQuery.of(context).size.width > 1200
+                                  ? 48
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 35
+                                      : 25,
                   ),
                 ),
                 Column(
@@ -79,7 +84,12 @@ class CustomerPage extends StatelessWidget {
                       style: GoogleFonts.ibmPlexSansThai(
                         fontWeight: FontWeight.w400,
                         color: Color.fromARGB(255, 24, 84, 110),
-                        fontSize: MediaQuery.of(context).size.width > 1000 ? 20 : 14,
+                        fontSize:
+                            MediaQuery.of(context).size.width > 1200
+                                  ? 20
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 20
+                                      : 14,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -93,9 +103,24 @@ class CustomerPage extends StatelessWidget {
                     GridView.builder(
                         shrinkWrap: true,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: screenSize.width > 1000 ? 5 : 2,
-                          crossAxisSpacing: 20,
-                          mainAxisSpacing: 20,
+                          crossAxisCount:
+                              MediaQuery.of(context).size.width > 1200
+                                  ? 5
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 3
+                                      : 2,
+                          crossAxisSpacing:
+                              MediaQuery.of(context).size.width > 1200
+                                  ? 20
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 20
+                                      : 10,
+                          mainAxisSpacing:
+                              MediaQuery.of(context).size.width > 1200
+                                  ? 20
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 20
+                                      : 10,
                         ),
                         itemCount: customer.length,
                         itemBuilder: (BuildContext context, int index) {
@@ -116,8 +141,28 @@ class CustomerPage extends StatelessWidget {
                                           MainAxisAlignment.center,
                                       children: <Widget>[
                                         SizedBox(
-                                          width: 100,
-                                          height: 100,
+                                          width: MediaQuery.of(context)
+                                                      .size
+                                                      .width >
+                                                  1200
+                                              ? 140
+                                              : MediaQuery.of(context)
+                                                          .size
+                                                          .width >
+                                                      600
+                                                  ? 140
+                                                  : 100,
+                                          height: MediaQuery.of(context)
+                                                      .size
+                                                      .width >
+                                                  1200
+                                              ? 140
+                                              : MediaQuery.of(context)
+                                                          .size
+                                                          .width >
+                                                      600
+                                                  ? 140
+                                                  : 100,
                                           child: Image.asset(customer[index]),
                                         )
                                       ],
