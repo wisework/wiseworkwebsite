@@ -109,7 +109,11 @@ class FeaturesPage extends StatelessWidget {
                   style: GoogleFonts.ibmPlexSans(
                     fontWeight: FontWeight.w700,
                     color: Color.fromARGB(255, 24, 84, 110),
-                    fontSize: MediaQuery.of(context).size.width > 1200 ? 48 : 25,
+                    fontSize: MediaQuery.of(context).size.width > 1200
+                                  ? 48
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 35
+                                      : 25,
                   ),
                 ),
                 SizedBox(

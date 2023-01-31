@@ -170,26 +170,74 @@ class _FAQState extends State<FAQ> {
     );
 
     var groupofpic = Container(
-      width: MediaQuery.of(context).size.width < 1000 ? 250 : 500,
-      height: MediaQuery.of(context).size.height < 1000 ? 250 : 500,
+      width: MediaQuery.of(context).size.width > 1200
+                                  ? 500
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 350
+                                      : 250,
+      height: MediaQuery.of(context).size.width > 1200
+                                  ? 500
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 350
+                                      : 250,
       child: new Stack(
         children: <Widget>[
           new SizedBox(
-            width: MediaQuery.of(context).size.width < 1000 ? 70 : 450,
-            height: MediaQuery.of(context).size.height < 1000 ? 70 : 450,
+            width:MediaQuery.of(context).size.width > 1200
+                                  ? 150
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 70
+                                      : 70,
+            height: MediaQuery.of(context).size.width > 1200
+                                  ? 150
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 70
+                                      : 70,
           ),
           new Positioned(
-            width: MediaQuery.of(context).size.width < 1000 ? 180 : 450,
-            height: MediaQuery.of(context).size.height < 1000 ? 180 : 450,
-            top: MediaQuery.of(context).size.width < 1000 ? 15 : 40,
-            left: MediaQuery.of(context).size.width < 1000 ? 40 : 90,
+            width: MediaQuery.of(context).size.width > 1200
+                                  ?450
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 300
+                                      : 180,
+            height: MediaQuery.of(context).size.width > 1200
+                                  ?450
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 300
+                                      : 180,
+            top: MediaQuery.of(context).size.width > 1200
+                                  ?40
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 20
+                                      : 20,
+            left: MediaQuery.of(context).size.width > 1200
+                                  ?90
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 40
+                                      : 40,
             child: new Image.asset('/faq/faq-bg.png'),
           ),
           new Positioned(
-            width: MediaQuery.of(context).size.width < 1000 ? 180 : 450,
-            height: MediaQuery.of(context).size.height < 1000 ? 180 : 450,
-            top: MediaQuery.of(context).size.width < 1000 ? 10 : 20,
-            left: MediaQuery.of(context).size.width < 1000 ? 20 : 40,
+           width: MediaQuery.of(context).size.width > 1200
+                                  ?450
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 300
+                                      : 180,
+            height: MediaQuery.of(context).size.width > 1200
+                                  ?450
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 300
+                                      : 180,
+            top: MediaQuery.of(context).size.width > 1200
+                                  ?20
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 10
+                                      : 10,
+            left: MediaQuery.of(context).size.width > 1200
+                                  ?40
+                                  : MediaQuery.of(context).size.width > 600
+                                      ? 20
+                                      : 20,
             child: new Image.asset('/faq/faq-pic.png'),
           ),
         ],
