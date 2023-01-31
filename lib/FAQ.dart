@@ -117,31 +117,38 @@ class _FAQState extends State<FAQ> {
 
   @override
   Widget build(BuildContext context) {
-    var consult = Container(
+    var consult = MediaQuery(
+      data: MediaQuery.of(context),
       child: Text(
         'พร้อมวางแผนให้ธุรกิจคุณปรึกษา',
         style: GoogleFonts.ibmPlexSansThai(
             color: Color.fromARGB(255, 24, 84, 110),
-            fontSize: 20,
+            fontSize: MediaQuery.of(context).size.width > 1000 ? 20 : 15,
             fontWeight: FontWeight.w400),
       ),
     );
-    var hashtag = Container(
+    var hashtag = MediaQuery(
+      data: MediaQuery.of(context),
       child: Text(
         '#Teamwisework',
         style: GoogleFonts.ibmPlexSansThai(
             color: Color.fromARGB(255, 24, 84, 110),
-            fontSize: 36,
+            fontSize: MediaQuery.of(context).size.width > 1000 ? 36 : 25,
             fontWeight: FontWeight.w700),
       ),
     );
-    var describe = Container(
+
+    var describe = MediaQuery(
+      data: MediaQuery.of(context),
       child: Text(
         'ให้องค์กรของคุณ วางแผนและจัดการกับ DATA \n หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย',
         style: GoogleFonts.ibmPlexSansThai(
-            color: Colors.black, fontSize: 18, fontWeight: FontWeight.w400),
+            color: Colors.black,
+            fontSize: MediaQuery.of(context).size.width > 1000 ? 18 : 13,
+            fontWeight: FontWeight.w400),
       ),
     );
+
     var button = SizedBox(
       width: 193,
       height: 48,
@@ -155,7 +162,7 @@ class _FAQState extends State<FAQ> {
         child: Text(
           'รับคำปรึกษา',
           style: GoogleFonts.ibmPlexSansThai(
-            fontSize: 20,
+            fontSize: MediaQuery.of(context).size.width > 1000 ? 20 : 14,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -163,116 +170,65 @@ class _FAQState extends State<FAQ> {
     );
 
     var groupofpic = Container(
-      height: 500,
-      width: 500,
+      width: MediaQuery.of(context).size.width < 1000 ? 250 : 500,
+      height: MediaQuery.of(context).size.height < 1000 ? 250 : 500,
       child: new Stack(
         children: <Widget>[
           new SizedBox(
-            height: 500,
-            width: 500,
+            width: MediaQuery.of(context).size.width < 1000 ? 70 : 450,
+            height: MediaQuery.of(context).size.height < 1000 ? 70 : 450,
           ),
           new Positioned(
-            height: 450,
-            width: 400,
-            top: 40,
-            left: 90,
+            width: MediaQuery.of(context).size.width < 1000 ? 180 : 450,
+            height: MediaQuery.of(context).size.height < 1000 ? 180 : 450,
+            top: MediaQuery.of(context).size.width < 1000 ? 15 : 40,
+            left: MediaQuery.of(context).size.width < 1000 ? 40 : 90,
             child: new Image.asset('/faq/faq-bg.png'),
           ),
           new Positioned(
-            height: 450,
-            width: 450,
-            top: 20,
-            left: 40,
+            width: MediaQuery.of(context).size.width < 1000 ? 180 : 450,
+            height: MediaQuery.of(context).size.height < 1000 ? 180 : 450,
+            top: MediaQuery.of(context).size.width < 1000 ? 10 : 20,
+            left: MediaQuery.of(context).size.width < 1000 ? 20 : 40,
             child: new Image.asset('/faq/faq-pic.png'),
           ),
         ],
       ),
     );
 
-    var Qth = Container(
+    var Qth = MediaQuery(
+      data: MediaQuery.of(context),
       child: Text(
         'รวมคำถามที่พบบ่อย',
         style: GoogleFonts.ibmPlexSansThai(
-          fontSize: 32,
+          fontSize: MediaQuery.of(context).size.width > 1000 ? 32 : 20,
           fontWeight: FontWeight.w600,
           color: Color.fromARGB(255, 75, 195, 211),
         ),
       ),
     );
 
-    var Qen = Container(
+    MediaQuery(
+      data: MediaQuery.of(context),
+      child: Text(
+        'Your Text',
+        style: TextStyle(
+          fontSize: MediaQuery.of(context).size.width > 500 ? 20 : 14,
+        ),
+      ),
+    );
+
+    var Qen = MediaQuery(
+      data: MediaQuery.of(context),
       child: Text(
         'Frequently Asked Questions',
         style: GoogleFonts.ibmPlexSansThai(
-          fontSize: 48,
-          fontWeight: FontWeight.w700,
+          fontSize: MediaQuery.of(context).size.width > 1000 ? 48 : 25,
+          fontWeight: FontWeight.w600,
           color: Color.fromARGB(255, 24, 84, 110),
         ),
       ),
     );
-
-    var pdpa = Container(
-      child: Text(
-        '         PDPA คืออะไร?',
-        style: GoogleFonts.ibmPlexSansThai(
-          color: Color.fromARGB(255, 75, 195, 211),
-          fontSize: 18,
-          fontWeight: FontWeight.w500,
-        ),
-      ),
-    );
-
-    var pdpaList2 = Container(
-      child: Text(
-        'PDPA (Personal Data Protection Act, B.E. 2562 (2019)) หรือ พระราชบัญญัติ \nคุ้มครองข้อมูลส่วนบุคคล พ.ศ.2562 มีผลบังคับใช้อย่างเป็นทางการเมื่อ 1 มิ.ย. 2565 \nเหตุผลในการประกาศใช้ PDPA เนื่องมาจากเทคโนโลยีก้าวหน้าขึ้น ช่องทางสื่อสารต่างๆ \nมีหลากหลายขึ้น ทำให้การละเมิดสิทธิความเป็นส่วนตัวของข้อมูลส่วนบุคคลทำได้ง่ายขึ้น \nและหลายครั้งก็นำมาซึ่งความเดือดร้อนรำคาญหรือสร้างความเสียหายให้แก่เจ้าของข้อมูล \nตลอดจนสามารถส่งผลต่อเศรษฐกิจโดยรวมของประเทศได้ด้วย จึงต้องมีกฎหมายว่าด้วย \nการคุ้มครองข้อมูลส่วนบุคคลขึ้นเพื่อกำหนดหลักเกณฑ์ กลไก หรือมาตรการกำกับดูแล \nเกี่ยวกับการให้ความคุ้มครองข้อมูลส่วนบุคคลที่รวมถึงการเก็บรวบรวม ใช้ \nหรือเปิดเผยข้อมูลส่วนบุคคลขึ้น',
-        style: GoogleFonts.ibmPlexSansThai(
-            fontSize: 18, fontWeight: FontWeight.w400),
-      ),
-    );
-
-    // List<String> choices = [
-    //   "ธุรกิจอะไรบ้างที่ต้องปฏิบัติตาม PDPA?",
-    //   "บทลงโทษของ PDPA เป็นอย่างไร?",
-    //   "ต้องการทำ PDPA จะเริ่มต้นอย่างไร?",
-    //   "wisework สามารถให้คำปรึกษาเรื่อง PDPA ได้ไหม?",
-    //   "wisework มีมาตรฐานอะไรบ้างในการควบคุม กระบวนการบริหารความเสี่ยง?",
-    //   "wisework มี solutions อะไรให้ใช้งานบ้าง?",
-    //   "wisework ติดตั้งบนระบบ ERP รูปแบบใด?",
-    //   "wisework สามารถเชื่อมต่อกับ software ภายในองค์กรได้ไหม?",
-    //   "wisework ช่วยประเมินความเสี่ยงได้อย่างไร แบบใด?",
-    //   "wisework จะช่วย support การบริหารจัดการได้ไหม?",
-    //   "wisework จะช่วย support การบริหารจัดการได้ไหม?",
-    //   "สนใจผลิตภัณฑ์ wisework ขอทดลองใช้งานได้อย่างไร?"
-    // ];
-    // String? ChoicesValue;
-
-    // var listChoice = Container(
-    //   color: Color.fromARGB(0, 255, 193, 7),
-    //   height: 700,
-    //   width: 600,
-    //   child: ListView.builder(
-    //     shrinkWrap: true,
-    //     itemCount: choices.length,
-    //     itemBuilder: (context, index) {
-    //       return ListTile(
-    //         dense: true,
-    //         title: Transform.translate(
-    //           offset: Offset(0, 0),
-    //           child: Text(
-    //             choices[index],
-    //             style: GoogleFonts.ibmPlexSansThai(
-    //                 fontSize: 15, fontWeight: FontWeight.w400),
-    //           ),
-    //         ),
-    //         leading: Transform.translate(
-    //           offset: Offset(600, -10),
-    //           child: SizedBox(
-    //               width: 12, height: 12, child: Icon(Icons.expand_more)),
-    //         ),
-    //       );
-    //     },
-    //   ),
-    // );
 
     bool _isLargeScreen() {
       final double screenWidth = MediaQuery.of(context).size.width;
@@ -355,7 +311,9 @@ class _FAQState extends State<FAQ> {
                         Qth,
                         Qen,
                         SizedBox(
-                          height: 50,
+                          height: MediaQuery.of(context).size.width > 1000
+                              ? 50
+                              : 25,
                         ),
                         _buildPanel(),
                       ],
@@ -380,8 +338,9 @@ class _FAQState extends State<FAQ> {
   // }
 
   Widget _buildPanel() {
-    return Container(
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+    return MediaQuery(
+      data: MediaQuery.of(context),
+      // decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
       child: ExpansionPanelList(
         animationDuration: Duration(seconds: 1),
         dividerColor: Color.fromARGB(255, 228, 236, 248),
@@ -394,14 +353,17 @@ class _FAQState extends State<FAQ> {
         },
         children: items.map<ExpansionPanel>((Item item) {
           return ExpansionPanel(
-            // backgroundColor: Colors.white,
+            backgroundColor: Color.fromARGB(0, 255, 255, 255),
             canTapOnHeader: true,
             headerBuilder: (BuildContext context, bool isExpanded) {
               return ListTile(
                 // style: ListTileStyle.,
                 title: Text(
                   item.title,
-                  style: TextStyle(color: Color.fromARGB(255, 75, 195, 211)),
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 75, 195, 211),
+                      fontSize:
+                          MediaQuery.of(context).size.width > 1000 ? 20 : 15),
                 ),
 
                 // selectedColor: Colors.amber,
@@ -409,7 +371,12 @@ class _FAQState extends State<FAQ> {
             },
             body: ListTile(
                 contentPadding: EdgeInsets.all(20),
-                title: Text(item.description),
+                title: Text(
+                  item.description,
+                  style: TextStyle(
+                      fontSize:
+                          MediaQuery.of(context).size.width > 1000 ? 20 : 15),
+                ),
                 onTap: () {}),
             isExpanded: item.isExpanded,
           );
