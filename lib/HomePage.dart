@@ -9,6 +9,7 @@ import 'customers.dart';
 import 'story.dart';
 import 'menu_drawer.dart';
 import 'FAQ.dart';
+import 'footer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -50,12 +51,12 @@ class _HomePageState extends State<HomePage> {
       appBar: 
            AppBar(
             
-            automaticallyImplyLeading: ResponsiveWidget.isSmallScreen(context),
+            automaticallyImplyLeading: Responsive.isMobile(context),
               iconTheme: IconThemeData(color: Colors.white),
               backgroundColor: Color.fromARGB(255, 52, 144, 206),
               elevation: 0,
               centerTitle: true,
-              title: ResponsiveWidget.isSmallScreen(context)? 
+              title: Responsive.isMobile(context)? 
               
               Padding(
                 padding: const EdgeInsets.all(20),
@@ -74,11 +75,12 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            StoryPage(),
-            FeaturesPage(),
-            PackagesPage(),
-            CustomerPage(),
-            FAQ(),
+            // StoryPage(),
+            // FeaturesPage(),
+            // PackagesPage(),
+            // CustomerPage(),
+            // FAQ(),
+            // Footer()
           ],
         ),
       ),
