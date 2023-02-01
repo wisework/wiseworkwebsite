@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StoryPage extends StatelessWidget {
@@ -14,27 +14,27 @@ class StoryPage extends StatelessWidget {
       "เชี่ยวชาญงานพัฒนาโปรแกรมตามกฎหมาย กฎระเบียบ \n และมาตรฐานสากล",
     ];
     var groupofpic = Container(
-      height: MediaQuery.of(context).size.width < 1000 ? 200 : 400,
-      width: MediaQuery.of(context).size.width < 1000 ? 290 : 580,
+      height: Responsive.isDesktop(context) ? 400 : 200,
+      width: Responsive.isDesktop(context) ? 580 : 290,
       // alignment: FractionalOffset.center,
       child: new Stack(
         //alignment:new Alignment(x, y)
         children: <Widget>[
           new SizedBox(
-            height: MediaQuery.of(context).size.width < 1000 ? 185 : 370,
-            width: MediaQuery.of(context).size.width < 1000 ? 285 : 570,
+            height: Responsive.isDesktop(context) ? 370 : 185,
+            width: Responsive.isDesktop(context) ? 570 : 285,
           ),
           new Positioned(
-            height: MediaQuery.of(context).size.width < 1000 ? 174 : 348,
-            width: MediaQuery.of(context).size.width < 1000 ? 265 : 530,
-            left: MediaQuery.of(context).size.width < 1000 ? 20.0 : 40.0,
+            height: Responsive.isDesktop(context) ? 348 : 174,
+            width: Responsive.isDesktop(context) ? 530 : 265,
+            left: Responsive.isDesktop(context) ? 40.0 : 20.0,
             child: new Image(image: AssetImage("assets/story/storybg.png")),
           ),
           new Positioned(
-              height: MediaQuery.of(context).size.width < 1000 ? 163.5 : 327,
-              width: MediaQuery.of(context).size.width < 1000 ? 263.5 : 527,
-              right: MediaQuery.of(context).size.width < 1000 ? 25.0 : 50.0,
-              top: MediaQuery.of(context).size.width < 1000 ? 20.0 : 40.0,
+              height: Responsive.isDesktop(context) ? 327 : 163.5,
+              width: Responsive.isDesktop(context) ? 527 : 263.5,
+              right: Responsive.isDesktop(context) ? 50.0 : 25.0,
+              top: Responsive.isDesktop(context) ? 40.0 : 20.0,
               child: new Image(image: AssetImage("assets/story/storypic.png"))),
         ],
       ),
@@ -42,29 +42,29 @@ class StoryPage extends StatelessWidget {
     var title = Container(
       color: Color.fromARGB(0, 0, 187, 212),
       height: 65,
-      width: MediaQuery.of(context).size.width < 1000 ? 300 : 461,
+      width: Responsive.isDesktop(context) ? 461 : 300,
       child: Text('wisework Story',
           style: GoogleFonts.ibmPlexSansThai(
-              fontSize: MediaQuery.of(context).size.width < 1000 ? 38 : 48,
+              fontSize: Responsive.isDesktop(context) ? 48 : 38,
               fontWeight: FontWeight.w700,
               color: Color.fromARGB(255, 24, 84, 110))),
     );
     var aboutus = Container(
       color: Color.fromARGB(0, 255, 153, 0),
-      height: MediaQuery.of(context).size.width < 1000 ? 80 : 156,
-      width: MediaQuery.of(context).size.width < 1000 ? 320 : 726,
+      height: Responsive.isDesktop(context) ? 156 : 80,
+      width: Responsive.isDesktop(context) ? 726 : 320,
       child: Text(
         '“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับกฎหมาย\n และกฎระเบียบจากหน่วยงานกำกับดูแล โดยทีมนักพัฒนา\n และผู้เชี่ยวชาญมากประสบการณ์"',
         style: GoogleFonts.ibmPlexSansThai(
-            fontSize: MediaQuery.of(context).size.width < 1000 ? 14 : 24,
+            fontSize: Responsive.isDesktop(context) ? 24 : 14,
             fontWeight: FontWeight.w400,
             color: Color.fromARGB(255, 24, 84, 110)),
       ),
     );
     var aboutlist = Container(
       color: Color.fromARGB(0, 255, 193, 7),
-      height: MediaQuery.of(context).size.width < 1000 ? 180 : 230,
-      width: MediaQuery.of(context).size.width < 1000 ? 350 : 660,
+      height: Responsive.isDesktop(context) ? 230 : 180,
+      width: Responsive.isDesktop(context) ? 660 : 350,
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: storylist.length,
@@ -74,8 +74,8 @@ class StoryPage extends StatelessWidget {
             leading: Transform.translate(
               offset: Offset(-10, 0),
               child: SizedBox(
-                  width: MediaQuery.of(context).size.width < 1000 ? 10 : 12,
-                  height: MediaQuery.of(context).size.width < 1000 ? 10 : 12,
+                  width: Responsive.isDesktop(context) ? 12 : 10,
+                  height: Responsive.isDesktop(context) ? 12 : 10,
                   child:
                       Image(image: AssetImage("assets/packages/record.png"))),
             ),
@@ -84,8 +84,7 @@ class StoryPage extends StatelessWidget {
               child: Text(
                 storylist[index],
                 style: GoogleFonts.ibmPlexSansThai(
-                    fontSize:
-                        MediaQuery.of(context).size.width < 1000 ? 10 : 20,
+                    fontSize: Responsive.isDesktop(context) ? 20 : 10,
                     fontWeight: FontWeight.w400),
               ),
             ),
@@ -107,7 +106,7 @@ class StoryPage extends StatelessWidget {
           child: Text(
             'รับคำปรึกษา',
             style: GoogleFonts.ibmPlexSansThai(
-                fontSize: MediaQuery.of(context).size.width < 1000 ? 17 : 20,
+                fontSize: Responsive.isDesktop(context) ? 20 : 17,
                 fontWeight: FontWeight.w600),
           )),
     );
@@ -121,7 +120,7 @@ class StoryPage extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.width < 1000 ? 20 : 42,
+            height: Responsive.isDesktop(context) ? 42 : 20,
           ),
           _isLargeScreen()
               ? Row(
@@ -174,8 +173,7 @@ class StoryPage extends StatelessWidget {
                       ),
                       aboutlist,
                       SizedBox(
-                        height:
-                            MediaQuery.of(context).size.width < 1000 ? 12 : 32,
+                        height: Responsive.isDesktop(context) ? 32 : 12,
                       ),
                       Padding(padding: EdgeInsets.only(right: 0), child: advice)
                     ],
