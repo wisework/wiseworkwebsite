@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'navbar.dart';
+import 'responsive.dart';
 
 class CustomerModel {
   final String imageUrl;
@@ -11,10 +12,7 @@ class CustomerModel {
 }
 
 class CustomerPage extends StatelessWidget {
-  // bool isSmallScreen = false;
-  // bool isLargeScreen = false;
-  // double _opacity = 0;
-  // bool _isNavMenuVisible = false;
+
 
   @override
   Widget build(BuildContext context) {
@@ -70,9 +68,9 @@ class CustomerPage extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                     color: Color.fromARGB(255, 24, 84, 110),
                     fontSize:
-                        MediaQuery.of(context).size.width > 1200
+                        Responsive.isDesktop(context)
                                   ? 48
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 35
                                       : 25,
                   ),
@@ -85,9 +83,9 @@ class CustomerPage extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         color: Color.fromARGB(255, 24, 84, 110),
                         fontSize:
-                            MediaQuery.of(context).size.width > 1200
+                            Responsive.isDesktop(context)
                                   ? 20
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 20
                                       : 14,
                       ),
@@ -104,21 +102,21 @@ class CustomerPage extends StatelessWidget {
                         shrinkWrap: true,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount:
-                              MediaQuery.of(context).size.width > 1200
+                              Responsive.isDesktop(context)
                                   ? 5
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 3
                                       : 2,
                           crossAxisSpacing:
-                              MediaQuery.of(context).size.width > 1200
+                              Responsive.isDesktop(context)
                                   ? 20
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 20
                                       : 10,
                           mainAxisSpacing:
-                              MediaQuery.of(context).size.width > 1200
+                              Responsive.isDesktop(context)
                                   ? 20
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 20
                                       : 10,
                         ),
@@ -141,26 +139,14 @@ class CustomerPage extends StatelessWidget {
                                           MainAxisAlignment.center,
                                       children: <Widget>[
                                         SizedBox(
-                                          width: MediaQuery.of(context)
-                                                      .size
-                                                      .width >
-                                                  1200
+                                          width: Responsive.isDesktop(context)
                                               ? 140
-                                              : MediaQuery.of(context)
-                                                          .size
-                                                          .width >
-                                                      600
+                                              : Responsive.isTablet(context)
                                                   ? 140
                                                   : 100,
-                                          height: MediaQuery.of(context)
-                                                      .size
-                                                      .width >
-                                                  1200
+                                          height: Responsive.isDesktop(context)
                                               ? 140
-                                              : MediaQuery.of(context)
-                                                          .size
-                                                          .width >
-                                                      600
+                                              : Responsive.isTablet(context)
                                                   ? 140
                                                   : 100,
                                           child: Image.asset(customer[index]),
