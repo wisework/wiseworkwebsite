@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'features.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,14 +12,6 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavigationBarState extends State<NavBar> {
-  // int _selectedIndex = 0;
-
-  // void _onItemTapped(int index) {
-  //   setState(() {
-  //     _selectedIndex = index;
-  //   });
-  // }
-
   final List<String> listHome = <String>['Home', 'h1', 'h2', 'h3', 'h4'];
   final List<String> listAbout = <String>[
     'About Us',
@@ -80,8 +71,8 @@ class _NavigationBarState extends State<NavBar> {
               width: screenSize.width / 4,
             ),
             SizedBox(
-              height: 60,
-              width: 100,
+              height: 58,
+              width: 157,
               child: Image.asset(
                 'logo.png',
               ),
@@ -94,12 +85,12 @@ class _NavigationBarState extends State<NavBar> {
                 hint: Text(
                   'Home',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 16,
                     color: Colors.white,
                   ),
                 ),
                 icon: Transform.translate(
-                  offset: Offset(-10, -2),
+                  offset: Offset(-10, 0),
                   child: Icon(
                     Icons.expand_more_outlined,
                     color: Colors.white,
@@ -111,7 +102,7 @@ class _NavigationBarState extends State<NavBar> {
                           child: Text(
                             item,
                             style: const TextStyle(
-                                fontSize: 14, color: Colors.white),
+                                fontSize: 16, color: Colors.white),
                           ),
                         ))
                     .toList(),
@@ -125,7 +116,7 @@ class _NavigationBarState extends State<NavBar> {
                     color: Color.fromARGB(255, 171, 204, 227),
                     borderRadius: BorderRadius.circular(5)),
                 buttonHeight: 40,
-                buttonWidth: 70,
+                buttonWidth: 80,
                 itemHeight: 40,
               ),
             ),
@@ -134,12 +125,12 @@ class _NavigationBarState extends State<NavBar> {
                 hint: Text(
                   'About Us',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 16,
                     color: Colors.white,
                   ),
                 ),
                 icon: Transform.translate(
-                  offset: Offset(-18, -2),
+                  offset: Offset(-12, 0),
                   child: Icon(
                     Icons.expand_more_outlined,
                     color: Colors.white,
@@ -151,7 +142,7 @@ class _NavigationBarState extends State<NavBar> {
                           child: Text(
                             item,
                             style: const TextStyle(
-                                fontSize: 14, color: Colors.white),
+                                fontSize: 16, color: Colors.white),
                           ),
                         ))
                     .toList(),
@@ -174,12 +165,12 @@ class _NavigationBarState extends State<NavBar> {
                 hint: Text(
                   'Our Services',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 16,
                     color: Colors.white,
                   ),
                 ),
                 icon: Transform.translate(
-                  offset: Offset(-10, -2),
+                  offset: Offset(-12, 0),
                   child: Icon(
                     Icons.expand_more_outlined,
                     color: Colors.white,
@@ -191,7 +182,7 @@ class _NavigationBarState extends State<NavBar> {
                           child: Text(
                             item,
                             style: const TextStyle(
-                                fontSize: 14, color: Colors.white),
+                                fontSize: 16, color: Colors.white),
                           ),
                         ))
                     .toList(),
@@ -205,7 +196,7 @@ class _NavigationBarState extends State<NavBar> {
                     color: Color.fromARGB(255, 171, 204, 227),
                     borderRadius: BorderRadius.circular(5)),
                 buttonHeight: 40,
-                buttonWidth: 110,
+                buttonWidth: 130,
                 itemHeight: 40,
               ),
             ),
@@ -214,12 +205,12 @@ class _NavigationBarState extends State<NavBar> {
                 hint: Text(
                   'Blogs',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 16,
                     color: Colors.white,
                   ),
                 ),
                 icon: Transform.translate(
-                  offset: Offset(-14, -2),
+                  offset: Offset(-14, 0),
                   child: Icon(
                     Icons.expand_more_outlined,
                     color: Colors.white,
@@ -231,7 +222,7 @@ class _NavigationBarState extends State<NavBar> {
                           child: Text(
                             item,
                             style: const TextStyle(
-                                fontSize: 14, color: Colors.white),
+                                fontSize: 16, color: Colors.white),
                           ),
                         ))
                     .toList(),
@@ -245,7 +236,7 @@ class _NavigationBarState extends State<NavBar> {
                     color: Color.fromARGB(255, 171, 204, 227),
                     borderRadius: BorderRadius.circular(5)),
                 buttonHeight: 40,
-                buttonWidth: 70,
+                buttonWidth: 80,
                 itemHeight: 40,
               ),
             ),
@@ -254,12 +245,12 @@ class _NavigationBarState extends State<NavBar> {
                 hint: Text(
                   'Contact Us',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 16,
                     color: Colors.white,
                   ),
                 ),
                 icon: Transform.translate(
-                  offset: Offset(-10, -2),
+                  offset: Offset(-17, 00),
                   child: Icon(
                     Icons.expand_more_outlined,
                     color: Colors.white,
@@ -271,7 +262,7 @@ class _NavigationBarState extends State<NavBar> {
                           child: Text(
                             item,
                             style: const TextStyle(
-                                fontSize: 14, color: Colors.white),
+                                fontSize: 16, color: Colors.white),
                           ),
                         ))
                     .toList(),
@@ -285,11 +276,13 @@ class _NavigationBarState extends State<NavBar> {
                     color: Color.fromARGB(255, 171, 204, 227),
                     borderRadius: BorderRadius.circular(5)),
                 buttonHeight: 40,
-                buttonWidth: 100,
+                buttonWidth: 120,
                 itemHeight: 40,
               ),
             ),
             Container(
+              width: 103,
+              height: 38,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
@@ -300,7 +293,48 @@ class _NavigationBarState extends State<NavBar> {
                 },
                 child: Text(
                   'Search',
-                  style: TextStyle(color: Colors.blue),
+                  style: GoogleFonts.ibmPlexSansThai(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600),
+                ),
+                // Changes the background color
+              ),
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Container(
+              width: 90,
+              height: 38,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white, width: 2),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: TextButton(
+                onPressed: () {
+                  // Perform some action
+                },
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.language,
+                      color: Colors.white,
+                      
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      'TH',
+                      style: GoogleFonts.ibmPlexSansThai(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ],
                 ),
                 // Changes the background color
               ),

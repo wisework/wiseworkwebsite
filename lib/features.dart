@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'navbar.dart';
+import 'responsive.dart';
 
 class FeatureModel {
   final String title;
@@ -73,31 +74,14 @@ class FeaturesPage extends StatelessWidget {
         "routePath"),
   ];
 
-  bool isSmallScreen = false;
-  bool isLargeScreen = false;
-  bool isMedScreen = false;
-  double _opacity = 0;
-  bool _isNavMenuVisible = false;
 
   @override
   Widget build(BuildContext context) {
-    // var deviceData = MediaQuery.of(context);
-    var screenSize = MediaQuery.of(context).size;
-    if (screenSize.width > 1200) {
-      isLargeScreen = true;
-      // } else if (screenSize.width <= 1200 && screenSize.width > 700) {
-      //   isMedScreen = true;
-    } else {
-      isSmallScreen = true;
-    }
+    
 
     return Center(
       child: Container(
-        width: MediaQuery.of(context).size.width > 1200
-                                  ? 1200
-                                  : MediaQuery.of(context).size.width > 600
-                                      ? 900
-                                      : 500,
+        width: Responsive.isDesktop(context) ? 1200 : Responsive.isTablet(context) ? 900 : 500,
         // color: Color.fromARGB(255, 228, 236, 248),
         margin: EdgeInsets.all(00.0),
         child: Padding(
@@ -106,16 +90,16 @@ class FeaturesPage extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: MediaQuery.of(context).size.width > 1200 ? 90 : 45,
+                  height: Responsive.isDesktop(context) ? 90 : 45,
                 ),
                 Text(
                   'Key Features',
                   style: GoogleFonts.ibmPlexSans(
                     fontWeight: FontWeight.w700,
                     color: Color.fromARGB(255, 24, 84, 110),
-                    fontSize: MediaQuery.of(context).size.width > 1200
+                    fontSize: Responsive.isDesktop(context)
                                   ? 48
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 35
                                       : 25,
                   ),
@@ -126,15 +110,15 @@ class FeaturesPage extends StatelessWidget {
                 GridView.builder(
                     shrinkWrap: true,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: MediaQuery.of(context).size.width > 1200
+                      crossAxisCount: Responsive.isDesktop(context)
                                   ? 3
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 2
                                       : 1,
                       crossAxisSpacing:
-                          MediaQuery.of(context).size.width > 1200 ? 20 : 10,
+                          Responsive.isDesktop(context)? 20 : 10,
                       mainAxisSpacing:
-                          MediaQuery.of(context).size.width > 1200 ? 20 : 10,
+                          Responsive.isDesktop(context) ? 20 : 10,
                     ),
                     itemCount: features.length,
                     itemBuilder: (BuildContext context, int index) {
@@ -148,14 +132,14 @@ class FeaturesPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                             onTap: () {},
                             child: new Container(
-                              width: MediaQuery.of(context).size.width > 1200
+                              width: Responsive.isDesktop(context)
                                   ? 368
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 200
                                       : 100,
-                              height: MediaQuery.of(context).size.width > 1200
+                              height: Responsive.isDesktop(context)
                                   ? 368
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 200
                                       : 100,
                               child: Center(
@@ -165,26 +149,14 @@ class FeaturesPage extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       SizedBox(
-                                          width: MediaQuery.of(context)
-                                                      .size
-                                                      .width >
-                                                  1200
+                                          width: Responsive.isDesktop(context)
                                               ? 100
-                                              : MediaQuery.of(context)
-                                                          .size
-                                                          .width >
-                                                      600
+                                              : Responsive.isTablet(context)
                                                   ? 70
                                                   : 70,
-                                          height: MediaQuery.of(context)
-                                                      .size
-                                                      .width >
-                                                  1200
+                                          height: Responsive.isDesktop(context)
                                               ? 100
-                                              : MediaQuery.of(context)
-                                                          .size
-                                                          .width >
-                                                      600
+                                              : Responsive.isTablet(context)
                                                   ? 70
                                                   : 70,
                                           child: Image.asset(
@@ -194,15 +166,9 @@ class FeaturesPage extends StatelessWidget {
                                         '${features[index].title}',
                                         style: GoogleFonts.poppins(
                                             fontWeight: FontWeight.w500,
-                                            fontSize: MediaQuery.of(context)
-                                                        .size
-                                                        .width >
-                                                    1200
+                                            fontSize: Responsive.isDesktop(context)
                                                 ? 24
-                                                : MediaQuery.of(context)
-                                                            .size
-                                                            .width >
-                                                        600
+                                                : Responsive.isTablet(context)
                                                     ? 20
                                                     : 18,
                                             color: Color.fromARGB(
@@ -214,15 +180,9 @@ class FeaturesPage extends StatelessWidget {
                                         style: GoogleFonts.ibmPlexSansThai(
                                           color: Color.fromARGB(
                                               255, 102, 112, 133),
-                                          fontSize: MediaQuery.of(context)
-                                                      .size
-                                                      .width >
-                                                  1200
+                                          fontSize: Responsive.isDesktop(context)
                                               ? 20
-                                              : MediaQuery.of(context)
-                                                          .size
-                                                          .width >
-                                                      600
+                                              : Responsive.isTablet(context)
                                                   ? 16
                                                   : 15,
                                         ),
@@ -239,16 +199,9 @@ class FeaturesPage extends StatelessWidget {
                                                   Text(
                                                     'more ',
                                                     style: GoogleFonts.inter(
-                                                        fontSize: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width >
-                                                                1200
+                                                        fontSize: Responsive.isDesktop(context)
                                                             ? 18
-                                                            : MediaQuery.of(context)
-                                                                        .size
-                                                                        .width >
-                                                                    600
+                                                            : Responsive.isTablet(context)
                                                                 ? 18
                                                                 : 12,
                                                         color: Color.fromARGB(
@@ -260,15 +213,9 @@ class FeaturesPage extends StatelessWidget {
                                                     Icons.arrow_forward_sharp,
                                                     color: Color.fromARGB(
                                                         255, 57, 129, 237),
-                                                    size: MediaQuery.of(context)
-                                                                .size
-                                                                .width >
-                                                            1200
+                                                    size: Responsive.isDesktop(context)
                                                         ? 18
-                                                        : MediaQuery.of(context)
-                                                                    .size
-                                                                    .width >
-                                                                600
+                                                        : Responsive.isTablet(context)
                                                             ? 18
                                                             : 12,
                                                   ),
