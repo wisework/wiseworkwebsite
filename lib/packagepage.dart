@@ -1,6 +1,6 @@
 import 'dart:html';
 import 'dart:ui';
-
+import 'responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -64,7 +64,7 @@ class PackagesPage extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.width < 1000 ? 15 : 71.52,
+            height: Responsive.isDesktop(context) ? 71.52 : 15,
           ),
           Container(
               padding: const EdgeInsets.only(left: 15),
@@ -74,8 +74,7 @@ class PackagesPage extends StatelessWidget {
                 child: RichText(
                     text: TextSpan(
                   style: GoogleFonts.nunitoSans(
-                    fontSize:
-                        MediaQuery.of(context).size.width < 1000 ? 32 : 48,
+                    fontSize: Responsive.isDesktop(context) ? 48 : 32,
                     fontWeight: FontWeight.w700,
                   ),
                   children: <TextSpan>[
@@ -96,7 +95,7 @@ class PackagesPage extends StatelessWidget {
                 )),
               )),
           SizedBox(
-            height: MediaQuery.of(context).size.width < 1000 ? 20 : 52.72,
+            height: Responsive.isDesktop(context) ? 52.72 : 20,
           ),
           _isLargeScreen()
               ? Row(
@@ -183,24 +182,23 @@ class PackageCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         color: backgroundcolor ?? Color.fromARGB(255, 255, 255, 255),
       ),
-      height: MediaQuery.of(context).size.width < 1000 ? 690 : 749,
-      width: MediaQuery.of(context).size.width < 1000 ? 350 : 460,
+      height: Responsive.isDesktop(context) ? 749 : 725,
+      width: Responsive.isDesktop(context) ? 460 : 350,
       padding: EdgeInsets.all(20.0),
       child: Column(
         children: [
           Row(
             children: [
               SizedBox(
-                  height: MediaQuery.of(context).size.width < 1000 ? 40 : 45.28,
-                  width: MediaQuery.of(context).size.width < 1000 ? 50 : 66,
+                  height: Responsive.isDesktop(context) ? 45.28 : 40,
+                  width: Responsive.isDesktop(context) ? 66 : 50,
                   child: Image.asset(packageicon)),
               Container(
                   padding: EdgeInsets.all(10.0),
                   child: Text(
                     title,
                     style: GoogleFonts.ibmPlexSansThai(
-                        fontSize:
-                            MediaQuery.of(context).size.width < 1000 ? 24 : 32,
+                        fontSize: Responsive.isDesktop(context) ? 32 : 24,
                         fontWeight: FontWeight.w700),
                   )),
             ],
@@ -215,10 +213,9 @@ class PackageCard extends StatelessWidget {
           ),
           SizedBox(height: 52),
           Transform.translate(
-            offset: Offset(
-                MediaQuery.of(context).size.width < 1000 ? -5 : -25.0, 0.0),
+            offset: Offset(Responsive.isDesktop(context) ? -25.0 : -5, 0.0),
             child: SizedBox(
-              width: MediaQuery.of(context).size.width < 1000 ? 340 : 352,
+              width: Responsive.isDesktop(context) ? 352 : 340,
               child: DottedLine(
                 dashColor: Color.fromARGB(255, 122, 122, 122),
                 dashGapLength: 3,
@@ -234,16 +231,15 @@ class PackageCard extends StatelessWidget {
                 child: Text(
                   lisence,
                   style: GoogleFonts.ibmPlexSansThai(
-                      fontSize:
-                          MediaQuery.of(context).size.width < 1000 ? 22 : 28,
+                      fontSize: Responsive.isDesktop(context) ? 28 : 22,
                       fontWeight: FontWeight.w700),
                 )),
           ),
           SizedBox(height: 22),
           buttoncolor
               ? SizedBox(
-                  width: MediaQuery.of(context).size.width < 1000 ? 280 : 352,
-                  height: MediaQuery.of(context).size.width < 1000 ? 50 : 64,
+                  width: Responsive.isDesktop(context) ? 352 : 280,
+                  height: Responsive.isDesktop(context) ? 64 : 50,
                   child: OutlinedButton(
                       onPressed: () {},
                       style: OutlinedButton.styleFrom(
@@ -260,15 +256,15 @@ class PackageCard extends StatelessWidget {
                         ' See more',
                         style: GoogleFonts.ibmPlexSansThai(
                             fontSize: MediaQuery.of(context).size.width < 1000
-                                ? 20
-                                : 22,
+                                ? 22
+                                : 20,
                             fontWeight: FontWeight.w600,
                             color: Colors.black),
                       )),
                 )
               : SizedBox(
-                  width: MediaQuery.of(context).size.width < 1000 ? 280 : 352,
-                  height: MediaQuery.of(context).size.width < 1000 ? 50 : 64,
+                  width: Responsive.isDesktop(context) ? 352 : 280,
+                  height: Responsive.isDesktop(context) ? 64 : 50,
                   child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
@@ -281,12 +277,12 @@ class PackageCard extends StatelessWidget {
                         ' See more',
                         style: GoogleFonts.ibmPlexSansThai(
                             fontSize: MediaQuery.of(context).size.width < 1000
-                                ? 20
-                                : 22,
+                                ? 22
+                                : 20,
                             fontWeight: FontWeight.w600),
                       )),
                 ),
-          SizedBox(height: MediaQuery.of(context).size.width < 1000 ? 30 : 60),
+          SizedBox(height: Responsive.isDesktop(context) ? 30 : 60),
         ],
       ),
     );
@@ -305,8 +301,8 @@ class Buildpackagetile extends StatelessWidget {
           leading: Transform.translate(
             offset: Offset(-10, 0),
             child: SizedBox(
-                width: MediaQuery.of(context).size.width < 1000 ? 16 : 20.83,
-                height: MediaQuery.of(context).size.width < 1000 ? 16 : 20.83,
+                width: Responsive.isDesktop(context) ? 20.83 : 16,
+                height: Responsive.isDesktop(context) ? 20.83 : 16,
                 child: Image(image: AssetImage("assets/packages/check.png"))),
           ),
           title: Transform.translate(
@@ -314,7 +310,7 @@ class Buildpackagetile extends StatelessWidget {
             child: Text(
               package.title,
               style: GoogleFonts.ibmPlexSansThai(
-                  fontSize: MediaQuery.of(context).size.width < 1000 ? 14 : 20,
+                  fontSize: Responsive.isDesktop(context) ? 20 : 14,
                   fontWeight: FontWeight.w400),
             ),
           ),
@@ -328,14 +324,13 @@ class Buildpackagetile extends StatelessWidget {
               dense: true,
               title: Text(package.children[index],
                   style: GoogleFonts.ibmPlexSansThai(
-                      fontSize:
-                          MediaQuery.of(context).size.width < 1000 ? 12 : 18,
+                      fontSize: Responsive.isDesktop(context) ? 18 : 12,
                       fontWeight: FontWeight.w400)),
               leading: Transform.translate(
                 offset: Offset(29, 0),
                 child: SizedBox(
-                    width: MediaQuery.of(context).size.width < 1000 ? 8 : 12,
-                    height: MediaQuery.of(context).size.width < 1000 ? 8 : 12,
+                    width: Responsive.isDesktop(context) ? 12 : 8,
+                    height: Responsive.isDesktop(context) ? 12 : 8,
                     child: Image(image: AssetImage("packages/record.png"))),
               ),
             );
