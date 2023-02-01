@@ -46,6 +46,7 @@ dev_dependencies:
     
   google_fonts: ^3.0.1
   dotted_line: ^3.1.0
+  carousel_slider: ^4.2.1
   
 
   
@@ -115,6 +116,8 @@ flutter:
 
   - assets/faq/faq-pic.png
   - assets/faq/faq-bg.png
+
+  - assets/carousel/crs1.png
   
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
