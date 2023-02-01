@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:wiseintern/responsive.dart';
 
 class Item {
   // final int id;
@@ -117,34 +117,31 @@ class _FAQState extends State<FAQ> {
 
   @override
   Widget build(BuildContext context) {
-    var consult = MediaQuery(
-      data: MediaQuery.of(context),
+    var consult =Container(
       child: Text(
         'พร้อมวางแผนให้ธุรกิจคุณปรึกษา',
         style: GoogleFonts.ibmPlexSansThai(
             color: Color.fromARGB(255, 24, 84, 110),
-            fontSize: MediaQuery.of(context).size.width > 1000 ? 20 : 15,
+            fontSize: Responsive.isDesktop(context) ? 20 : 15,
             fontWeight: FontWeight.w400),
       ),
     );
-    var hashtag = MediaQuery(
-      data: MediaQuery.of(context),
+    var hashtag = Container(
       child: Text(
         '#Teamwisework',
         style: GoogleFonts.ibmPlexSansThai(
             color: Color.fromARGB(255, 24, 84, 110),
-            fontSize: MediaQuery.of(context).size.width > 1000 ? 36 : 25,
+            fontSize: Responsive.isDesktop(context) ? 36 : 25,
             fontWeight: FontWeight.w700),
       ),
     );
 
-    var describe = MediaQuery(
-      data: MediaQuery.of(context),
+    var describe =Container(
       child: Text(
         'ให้องค์กรของคุณ วางแผนและจัดการกับ DATA \n หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย',
         style: GoogleFonts.ibmPlexSansThai(
             color: Colors.black,
-            fontSize: MediaQuery.of(context).size.width > 1000 ? 18 : 13,
+            fontSize: Responsive.isDesktop(context) ? 18 : 13,
             fontWeight: FontWeight.w400),
       ),
     );
@@ -162,7 +159,7 @@ class _FAQState extends State<FAQ> {
         child: Text(
           'รับคำปรึกษา',
           style: GoogleFonts.ibmPlexSansThai(
-            fontSize: MediaQuery.of(context).size.width > 1000 ? 20 : 14,
+            fontSize: Responsive.isDesktop(context) ? 20 : 14,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -170,22 +167,22 @@ class _FAQState extends State<FAQ> {
     );
 
     var groupofpic = Container(
-      width: MediaQuery.of(context).size.width > 1200
+      width: Responsive.isDesktop(context)
                                   ? 500
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 350
                                       : 250,
-      height: MediaQuery.of(context).size.width > 1200
+      height: Responsive.isDesktop(context)
                                   ? 500
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 350
                                       : 250,
       child: new Stack(
         children: <Widget>[
           new SizedBox(
-            width:MediaQuery.of(context).size.width > 1200
+            width: Responsive.isDesktop(context)
                                   ? 150
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 70
                                       : 70,
             height: MediaQuery.of(context).size.width > 1200
@@ -195,47 +192,47 @@ class _FAQState extends State<FAQ> {
                                       : 70,
           ),
           new Positioned(
-            width: MediaQuery.of(context).size.width > 1200
+            width: Responsive.isDesktop(context)
                                   ?450
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 300
                                       : 180,
-            height: MediaQuery.of(context).size.width > 1200
+            height: Responsive.isDesktop(context)
                                   ?450
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 300
                                       : 180,
-            top: MediaQuery.of(context).size.width > 1200
+            top: Responsive.isDesktop(context)
                                   ?40
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 20
                                       : 20,
-            left: MediaQuery.of(context).size.width > 1200
+            left:Responsive.isDesktop(context)
                                   ?90
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 40
                                       : 40,
             child: new Image.asset('/faq/faq-bg.png'),
           ),
           new Positioned(
-           width: MediaQuery.of(context).size.width > 1200
+           width: Responsive.isDesktop(context)
                                   ?450
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 300
                                       : 180,
-            height: MediaQuery.of(context).size.width > 1200
+            height: Responsive.isDesktop(context)
                                   ?450
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 300
                                       : 180,
-            top: MediaQuery.of(context).size.width > 1200
+            top: Responsive.isDesktop(context)
                                   ?20
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 10
                                       : 10,
-            left: MediaQuery.of(context).size.width > 1200
+            left: Responsive.isDesktop(context)
                                   ?40
-                                  : MediaQuery.of(context).size.width > 600
+                                  : Responsive.isTablet(context)
                                       ? 20
                                       : 20,
             child: new Image.asset('/faq/faq-pic.png'),
@@ -244,34 +241,22 @@ class _FAQState extends State<FAQ> {
       ),
     );
 
-    var Qth = MediaQuery(
-      data: MediaQuery.of(context),
+    var Qth = Container(
       child: Text(
         'รวมคำถามที่พบบ่อย',
         style: GoogleFonts.ibmPlexSansThai(
-          fontSize: MediaQuery.of(context).size.width > 1000 ? 32 : 20,
+          fontSize: Responsive.isDesktop(context)? 32 : 20,
           fontWeight: FontWeight.w600,
           color: Color.fromARGB(255, 75, 195, 211),
         ),
       ),
     );
 
-    MediaQuery(
-      data: MediaQuery.of(context),
-      child: Text(
-        'Your Text',
-        style: TextStyle(
-          fontSize: MediaQuery.of(context).size.width > 500 ? 20 : 14,
-        ),
-      ),
-    );
-
-    var Qen = MediaQuery(
-      data: MediaQuery.of(context),
+    var Qen = Container(
       child: Text(
         'Frequently Asked Questions',
         style: GoogleFonts.ibmPlexSansThai(
-          fontSize: MediaQuery.of(context).size.width > 1000 ? 48 : 25,
+          fontSize: Responsive.isDesktop(context) ? 48 : 25,
           fontWeight: FontWeight.w600,
           color: Color.fromARGB(255, 24, 84, 110),
         ),
@@ -297,7 +282,7 @@ class _FAQState extends State<FAQ> {
                     children: [
                       Container(
                         width: 700,
-                        height: 1500,
+                        height: 1000,
                         color: Color.fromARGB(0, 204, 220, 57),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -321,7 +306,6 @@ class _FAQState extends State<FAQ> {
                       ),
                       Container(
                         width: 700,
-                        height: 1300,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -373,17 +357,6 @@ class _FAQState extends State<FAQ> {
     );
   }
 
-  bool _onHover = false;
-  bool _onFocus = false;
-  Color _titleColor = Colors.black;
-  bool _isexpanded = false;
-
-  // void _changeTitle() {
-  //   setState(() {
-  //     _isexpanded = !_isexpanded;
-  //     _titleColor = _isexpanded ? Colors.black : Color.fromARGB(255, 75, 195, 211);
-  //   });
-  // }
 
   Widget _buildPanel() {
     return MediaQuery(

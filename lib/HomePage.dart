@@ -30,6 +30,7 @@ class _HomePageState extends State<HomePage> {
     StoryPage()
     // other pages
   ];
+  
 
   void onTabTapped(int index) {
     setState(() {
@@ -37,39 +38,29 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  
-
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
-
-    _opacity = _scrollPosition < screenSize.height * 0.40
-        ? _scrollPosition / (screenSize.height * 0.40)
-        : 1;
-
     return Scaffold(
-      appBar: 
-           AppBar(
-            
-            automaticallyImplyLeading: Responsive.isMobile(context),
-              iconTheme: IconThemeData(color: Colors.white),
-              backgroundColor: Color.fromARGB(255, 52, 144, 206),
-              elevation: 0,
-              centerTitle: true,
-              title: Responsive.isMobile(context)? 
-              
-              Padding(
-                padding: const EdgeInsets.all(20),
-                child: SizedBox(
-                height: 60,
-                width: 100,
-                child: Image.asset(
-                  'logo.png',
-                ),
-                        ),
-              ): NavBar()
-            ),
-          
+      appBar: AppBar(
+        toolbarHeight: Responsive.isDesktop(context)? 130:60,
+          automaticallyImplyLeading: !Responsive.isDesktop(context) ,
+          iconTheme: IconThemeData(color: Colors.white),
+          backgroundColor: Color.fromARGB(255, 52, 144, 206),
+          elevation: 0,
+          centerTitle: true,
+          title:!Responsive.isDesktop(context) 
+              ? Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: SizedBox(
+                    height: 60,
+                    width: 100,
+                    child: Image.asset(
+                      'logo.png',
+                    ),
+                  ),
+                )
+               
+              : NavBar()),
       drawer: MenuDrawer(),
       body: SingleChildScrollView(
         child: Column(
@@ -79,7 +70,7 @@ class _HomePageState extends State<HomePage> {
             // FeaturesPage(),
             // PackagesPage(),
             // CustomerPage(),
-            // FAQ(),
+            FAQ(),
             // Footer()
           ],
         ),
