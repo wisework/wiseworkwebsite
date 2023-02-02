@@ -117,15 +117,13 @@ flutter:
   - assets/faq/faq-pic.png
   - assets/faq/faq-bg.png
 
-<<<<<<< Updated upstream
-  - assets/carousel/crs1.png
-=======
   - assets/footer/logo.png
   - assets/footer/fb.png
   - assets/footer/ig.png
   - assets/footer/yt.png
   - assets/footer/tiktok.png
->>>>>>> Stashed changes
+
+  - assets/carousel/crs.png
   
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

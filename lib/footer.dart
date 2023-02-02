@@ -283,7 +283,6 @@ class _FooterState extends State<Footer> {
       color: Colors.white,
     );
 
-
     bool _isLargeScreen() {
       final double screenWidth = MediaQuery.of(context).size.width;
       return screenWidth > 1400;
@@ -301,90 +300,89 @@ class _FooterState extends State<Footer> {
               height: 40,
             ),
             _isLargeScreen()
-                ? Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Container(
-                          width: 450,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Column(
-                                children: [
-                                  logo,
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 40, left: 50),
-                                    child: address,
-                                  ),
-                                  mail,
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 50),
-                                    child: tel,
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: 250,
+                ? Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Container(
+                        width: 450,
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Column(
                               children: [
-                                QLink,
-                                navbarlist,
-                                connect,
+                                logo,
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 40, left: 50),
+                                  child: address,
+                                ),
+                                mail,
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 50),
+                                  child: tel,
+                                ),
                               ],
                             )
                           ],
                         ),
                       ),
-                      Container(
-                        width: 250,
+                    ),
+                    Container(
+                      width: 250,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              QLink,
+                              navbarlist,
+                              connect,
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: 250,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              services,
+                              svlist,
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Container(
+                        width: 450,
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Column(
-                              children: [services, svlist,
+                              children: [
+                                contact,
+                                form,
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  children: [
+                                    formEmail,
+                                    button,
+                                  ],
+                                ),
                               ],
                             )
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Container(
-                          width: 450,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Column(
-                                children: [
-                                  contact,
-                                  form,
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  formEmail,
-                                  button,
-                                  
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      
-                      
-                    ]
-                  )
-                  
+                    ),
+                  ])
                 : Container(
                     child: Column(
                       children: [

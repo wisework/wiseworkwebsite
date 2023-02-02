@@ -10,6 +10,7 @@ import 'story.dart';
 import 'menu_drawer.dart';
 import 'FAQ.dart';
 import 'footer.dart';
+import 'carousel.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -24,13 +25,14 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     // Feature2(),
+    CarouselPage(),
     PackagesPage(),
     FeaturesPage(),
     CustomerPage(),
-    StoryPage()
+    StoryPage(),
+    Footer()
     // other pages
   ];
-  
 
   void onTabTapped(int index) {
     setState(() {
@@ -42,13 +44,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: Responsive.isDesktop(context)? 130:60,
-          automaticallyImplyLeading: !Responsive.isDesktop(context) ,
+          toolbarHeight: Responsive.isDesktop(context) ? 130 : 60,
+          automaticallyImplyLeading: !Responsive.isDesktop(context),
           iconTheme: IconThemeData(color: Colors.white),
           backgroundColor: Color.fromARGB(255, 52, 144, 206),
           elevation: 0,
           centerTitle: true,
-          title:!Responsive.isDesktop(context) 
+          title: !Responsive.isDesktop(context)
               ? Padding(
                   padding: const EdgeInsets.all(20),
                   child: SizedBox(
@@ -59,19 +61,19 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 )
-               
               : NavBar()),
       drawer: MenuDrawer(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            CarouselPage(),
             StoryPage(),
             FeaturesPage(),
             PackagesPage(),
             CustomerPage(),
             FAQ(),
-            // Footer()
+            Footer()
           ],
         ),
       ),

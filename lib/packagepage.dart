@@ -1,5 +1,7 @@
 import 'dart:html';
 import 'dart:ui';
+import 'package:flutter/foundation.dart';
+
 import 'responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:dotted_line/dotted_line.dart';
@@ -61,100 +63,172 @@ class PackagesPage extends StatelessWidget {
     }
 
     return Center(
-      child: Column(
-        children: [
-          SizedBox(
-            height: Responsive.isDesktop(context) ? 71.52 : 15,
-          ),
-          Container(
-              padding: const EdgeInsets.only(left: 15),
-              height: 140,
-              width: 1440,
-              child: Center(
-                child: RichText(
-                    text: TextSpan(
-                  style: GoogleFonts.nunitoSans(
-                    fontSize: Responsive.isDesktop(context) ? 48 : 32,
-                    fontWeight: FontWeight.w700,
-                  ),
-                  children: <TextSpan>[
-                    TextSpan(
-                        text: 'เลือก ', style: TextStyle(color: Colors.black)),
-                    TextSpan(
-                        text: 'แพ็กเกจ',
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 75, 195, 211))),
-                    MediaQuery.of(context).size.width > 600
-                        ? TextSpan(
-                            text: ' ที่เหมาะกับธุรกิจของคุณ ?',
-                            style: TextStyle(color: Colors.black))
-                        : TextSpan(
-                            text: '\nที่เหมาะกับธุรกิจของคุณ ?',
-                            style: TextStyle(color: Colors.black))
-                  ],
+      child: Container(
+        width: 1440,
+        color: Colors.white,
+        child: Column(
+          children: [
+            SizedBox(
+              height: Responsive.isDesktop(context)
+                  ? 71.52
+                  : Responsive.isTablet(context)
+                      ? 35
+                      : 15,
+            ),
+            Container(
+                padding: const EdgeInsets.only(left: 15),
+                height: Responsive.isDesktop(context)
+                    ? 140
+                    : Responsive.isTablet(context)
+                        ? 60
+                        : 100,
+                width: 1440,
+                child: Center(
+                  child: RichText(
+                      text: TextSpan(
+                    style: GoogleFonts.nunitoSans(
+                      fontSize: Responsive.isDesktop(context)
+                          ? 48
+                          : Responsive.isTablet(context)
+                              ? 38
+                              : 32,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: 'เลือก ',
+                          style: TextStyle(color: Colors.black)),
+                      TextSpan(
+                          text: 'แพ็กเกจ',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 75, 195, 211))),
+                      !Responsive.isMobile(context)
+                          ? TextSpan(
+                              text: ' ที่เหมาะกับธุรกิจของคุณ ?',
+                              style: TextStyle(color: Colors.black))
+                          : TextSpan(
+                              text: '\nที่เหมาะกับธุรกิจของคุณ ?',
+                              style: TextStyle(color: Colors.black))
+                    ],
+                  )),
                 )),
-              )),
-          SizedBox(
-            height: Responsive.isDesktop(context) ? 52.72 : 20,
-          ),
-          _isLargeScreen()
-              ? Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    PackageCard(
-                      packageicon: 'assets/packages/cloud.png',
-                      title: 'Express',
-                      lisence: 'SaaS',
-                      packages: express,
-                      buttoncolor: true,
-                    ),
-                    PackageCard(
-                      packageicon: 'assets/packages/clouds.png',
-                      title: 'Standard',
-                      lisence: 'Subscriptions License',
-                      packages: standard,
-                      backgroundcolor: Color.fromARGB(255, 232, 242, 254),
-                      buttoncolor: false,
-                    ),
-                    PackageCard(
-                      packageicon: 'assets/packages/rainbow_cloud.png',
-                      title: 'Enterprise',
-                      lisence: 'Perpreptual License',
-                      packages: enterprise,
-                      buttoncolor: true,
-                    )
-                  ],
-                )
-              : Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    PackageCard(
-                      packageicon: 'assets/packages/cloud.png',
-                      title: 'Express',
-                      lisence: 'SaaS',
-                      packages: express,
-                      buttoncolor: true,
-                    ),
-                    SizedBox(height: 22),
-                    PackageCard(
-                      packageicon: 'assets/packages/clouds.png',
-                      title: 'Standard',
-                      lisence: 'Subscriptions License',
-                      packages: standard,
-                      backgroundcolor: Color.fromARGB(255, 232, 242, 254),
-                      buttoncolor: false,
-                    ),
-                    SizedBox(height: 22),
-                    PackageCard(
-                      packageicon: 'assets/packages/rainbow_cloud.png',
-                      title: 'Enterprise',
-                      lisence: 'Perpreptual License',
-                      packages: enterprise,
-                      buttoncolor: true,
-                    )
-                  ],
-                )
-        ],
+            SizedBox(
+              height: Responsive.isDesktop(context) ? 52.72 : 20,
+            ),
+            Responsive.isDesktop(context)
+                ? Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      PackageCard(
+                        packageicon: 'assets/packages/cloud.png',
+                        title: 'Express',
+                        lisence: 'SaaS',
+                        packages: express,
+                        buttoncolor: true,
+                        lastbox: false,
+                      ),
+                      PackageCard(
+                        packageicon: 'assets/packages/clouds.png',
+                        title: 'Standard',
+                        lisence: 'Subscriptions License',
+                        packages: standard,
+                        // backgroundcolor: Color.fromARGB(255, 232, 242, 254),
+                        buttoncolor: false,
+                        lastbox: true,
+                      ),
+                      PackageCard(
+                        packageicon: 'assets/packages/rainbow_cloud.png',
+                        title: 'Enterprise',
+                        lisence: 'Perpreptual License',
+                        packages: enterprise,
+                        buttoncolor: true,
+                        lastbox: false,
+                      )
+                    ],
+                  )
+                : Responsive.isTablet(context)
+                    ? Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              PackageCard(
+                                packageicon: 'assets/packages/cloud.png',
+                                title: 'Express',
+                                lisence: 'SaaS',
+                                packages: express,
+                                buttoncolor: true,
+                                lastbox: false,
+                              ),
+                              PackageCard(
+                                packageicon: 'assets/packages/clouds.png',
+                                title: 'Standard',
+                                lisence: 'Subscriptions License',
+                                packages: standard,
+                                // backgroundcolor: Color.fromARGB(255, 232, 242, 254),
+                                buttoncolor: false,
+                                lastbox: false,
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 22),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              PackageCard(
+                                packageicon:
+                                    'assets/packages/rainbow_cloud.png',
+                                title: 'Enterprise',
+                                lisence: 'Perpreptual License',
+                                packages: enterprise,
+                                buttoncolor: true,
+                                lastbox: false,
+                              ),
+                              SizedBox(
+                                width: 350,
+                              )
+                            ],
+                          )
+                        ],
+                      )
+                    : Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          PackageCard(
+                            packageicon: 'assets/packages/cloud.png',
+                            title: 'Express',
+                            lisence: 'SaaS',
+                            packages: express,
+                            buttoncolor: true,
+                            lastbox: false,
+                          ),
+                          SizedBox(height: 22),
+                          PackageCard(
+                            packageicon: 'assets/packages/clouds.png',
+                            title: 'Standard',
+                            lisence: 'Subscriptions License',
+                            packages: standard,
+                            // backgroundcolor: Color.fromARGB(255, 232, 242, 254),
+                            buttoncolor: false,
+                            lastbox: false,
+                          ),
+                          SizedBox(height: 22),
+                          PackageCard(
+                            packageicon: 'assets/packages/rainbow_cloud.png',
+                            title: 'Enterprise',
+                            lisence: 'Perpreptual License',
+                            packages: enterprise,
+                            buttoncolor: true,
+                            lastbox: false,
+                          )
+                        ],
+                      ),
+            SizedBox(
+              height: Responsive.isDesktop(context) ? 78 : 40,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -168,37 +242,51 @@ class PackageCard extends StatelessWidget {
       required this.lisence,
       required this.packages,
       this.backgroundcolor,
-      required this.buttoncolor});
+      required this.buttoncolor,
+      required this.lastbox});
   final String packageicon;
   final String title;
   final String lisence;
   final List<Package> packages;
   final Color? backgroundcolor;
   final bool buttoncolor;
+  final bool lastbox;
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: backgroundcolor ?? Color.fromARGB(255, 255, 255, 255),
+        color: backgroundcolor ?? Color.fromARGB(0, 255, 255, 255),
       ),
-      height: Responsive.isDesktop(context) ? 749 : 725,
-      width: Responsive.isDesktop(context) ? 460 : 350,
-      padding: EdgeInsets.all(20.0),
+      height: Responsive.isDesktop(context)
+          ? 749
+          : Responsive.isTablet(context)
+              ? 725
+              : 725,
+      width: Responsive.isDesktop(context)
+          ? 460
+          : Responsive.isTablet(context)
+              ? 350
+              : 350,
+      padding: EdgeInsets.all(5.0),
       child: Column(
         children: [
           Row(
             children: [
               SizedBox(
-                  height: Responsive.isDesktop(context) ? 45.28 : 40,
-                  width: Responsive.isDesktop(context) ? 66 : 50,
+                  height: !Responsive.isMobile(context) ? 45.28 : 40,
+                  width: !Responsive.isMobile(context) ? 66 : 50,
                   child: Image.asset(packageicon)),
               Container(
                   padding: EdgeInsets.all(10.0),
                   child: Text(
                     title,
                     style: GoogleFonts.ibmPlexSansThai(
-                        fontSize: Responsive.isDesktop(context) ? 32 : 24,
+                        fontSize: Responsive.isDesktop(context)
+                            ? 32
+                            : Responsive.isTablet(context)
+                                ? 28
+                                : 24,
                         fontWeight: FontWeight.w700),
                   )),
             ],
@@ -211,7 +299,7 @@ class PackageCard extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(height: 52),
+          SizedBox(height: 5),
           Transform.translate(
             offset: Offset(Responsive.isDesktop(context) ? -25.0 : -5, 0.0),
             child: SizedBox(
@@ -235,7 +323,7 @@ class PackageCard extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 )),
           ),
-          SizedBox(height: 22),
+          SizedBox(height: 10),
           buttoncolor
               ? SizedBox(
                   width: Responsive.isDesktop(context) ? 352 : 280,
@@ -255,9 +343,7 @@ class PackageCard extends StatelessWidget {
                       child: Text(
                         ' See more',
                         style: GoogleFonts.ibmPlexSansThai(
-                            fontSize: MediaQuery.of(context).size.width < 1000
-                                ? 22
-                                : 20,
+                            fontSize: Responsive.isDesktop(context) ? 22 : 18,
                             fontWeight: FontWeight.w600,
                             color: Colors.black),
                       )),
@@ -276,13 +362,13 @@ class PackageCard extends StatelessWidget {
                       child: Text(
                         ' See more',
                         style: GoogleFonts.ibmPlexSansThai(
-                            fontSize: MediaQuery.of(context).size.width < 1000
-                                ? 22
-                                : 20,
+                            fontSize: Responsive.isDesktop(context) ? 22 : 18,
                             fontWeight: FontWeight.w600),
                       )),
                 ),
-          SizedBox(height: Responsive.isDesktop(context) ? 30 : 60),
+          Responsive.isDesktop(context)
+              ? SizedBox(height: lastbox ? 98 : 70)
+              : SizedBox(height: 30),
         ],
       ),
     );
@@ -297,12 +383,11 @@ class Buildpackagetile extends StatelessWidget {
     return Column(
       children: [
         ListTile(
-          dense: true,
           leading: Transform.translate(
             offset: Offset(-10, 0),
             child: SizedBox(
-                width: Responsive.isDesktop(context) ? 20.83 : 16,
-                height: Responsive.isDesktop(context) ? 20.83 : 16,
+                width: Responsive.isDesktop(context) ? 20.83 : 18,
+                height: Responsive.isDesktop(context) ? 20.83 : 18,
                 child: Image(image: AssetImage("assets/packages/check.png"))),
           ),
           title: Transform.translate(
@@ -310,7 +395,7 @@ class Buildpackagetile extends StatelessWidget {
             child: Text(
               package.title,
               style: GoogleFonts.ibmPlexSansThai(
-                  fontSize: Responsive.isDesktop(context) ? 20 : 14,
+                  fontSize: Responsive.isDesktop(context) ? 20 : 18,
                   fontWeight: FontWeight.w400),
             ),
           ),
@@ -322,9 +407,10 @@ class Buildpackagetile extends StatelessWidget {
             return ListTile(
               // contentPadding: EdgeInsets.symmetric(horizontal: 0.0, vertical: -50.0),
               dense: true,
+              visualDensity: VisualDensity(vertical: -4.0),
               title: Text(package.children[index],
                   style: GoogleFonts.ibmPlexSansThai(
-                      fontSize: Responsive.isDesktop(context) ? 18 : 12,
+                      fontSize: Responsive.isDesktop(context) ? 18 : 14,
                       fontWeight: FontWeight.w400)),
               leading: Transform.translate(
                 offset: Offset(29, 0),

@@ -117,7 +117,7 @@ class _FAQState extends State<FAQ> {
 
   @override
   Widget build(BuildContext context) {
-    var consult =Container(
+    var consult = Container(
       child: Text(
         'พร้อมวางแผนให้ธุรกิจคุณปรึกษา',
         style: GoogleFonts.ibmPlexSansThai(
@@ -136,7 +136,7 @@ class _FAQState extends State<FAQ> {
       ),
     );
 
-    var describe =Container(
+    var describe = Container(
       child: Text(
         'ให้องค์กรของคุณ วางแผนและจัดการกับ DATA \n หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย',
         style: GoogleFonts.ibmPlexSansThai(
@@ -168,73 +168,73 @@ class _FAQState extends State<FAQ> {
 
     var groupofpic = Container(
       width: Responsive.isDesktop(context)
-                                  ? 500
-                                  : Responsive.isTablet(context)
-                                      ? 350
-                                      : 250,
+          ? 500
+          : Responsive.isTablet(context)
+              ? 350
+              : 250,
       height: Responsive.isDesktop(context)
-                                  ? 500
-                                  : Responsive.isTablet(context)
-                                      ? 350
-                                      : 250,
+          ? 550
+          : Responsive.isTablet(context)
+              ? 350
+              : 250,
       child: new Stack(
         children: <Widget>[
           new SizedBox(
             width: Responsive.isDesktop(context)
-                                  ? 150
-                                  : Responsive.isTablet(context)
-                                      ? 70
-                                      : 70,
-            height: MediaQuery.of(context).size.width > 1200
-                                  ? 150
-                                  : MediaQuery.of(context).size.width > 600
-                                      ? 70
-                                      : 70,
+                ? 500
+                : Responsive.isTablet(context)
+                    ? 70
+                    : 70,
+            height: Responsive.isDesktop(context)
+                ? 550
+                : Responsive.isTablet(context)
+                    ? 70
+                    : 70,
           ),
           new Positioned(
             width: Responsive.isDesktop(context)
-                                  ?450
-                                  : Responsive.isTablet(context)
-                                      ? 300
-                                      : 180,
+                ? 450
+                : Responsive.isTablet(context)
+                    ? 300
+                    : 180,
             height: Responsive.isDesktop(context)
-                                  ?450
-                                  : Responsive.isTablet(context)
-                                      ? 300
-                                      : 180,
+                ? 480
+                : Responsive.isTablet(context)
+                    ? 300
+                    : 180,
             top: Responsive.isDesktop(context)
-                                  ?40
-                                  : Responsive.isTablet(context)
-                                      ? 20
-                                      : 20,
-            left:Responsive.isDesktop(context)
-                                  ?90
-                                  : Responsive.isTablet(context)
-                                      ? 40
-                                      : 40,
+                ? 40
+                : Responsive.isTablet(context)
+                    ? 20
+                    : 20,
+            left: Responsive.isDesktop(context)
+                ? 40
+                : Responsive.isTablet(context)
+                    ? 40
+                    : 40,
             child: new Image.asset('/faq/faq-bg.png'),
           ),
           new Positioned(
-           width: Responsive.isDesktop(context)
-                                  ?450
-                                  : Responsive.isTablet(context)
-                                      ? 300
-                                      : 180,
+            width: Responsive.isDesktop(context)
+                ? 450
+                : Responsive.isTablet(context)
+                    ? 300
+                    : 180,
             height: Responsive.isDesktop(context)
-                                  ?450
-                                  : Responsive.isTablet(context)
-                                      ? 300
-                                      : 180,
+                ? 480
+                : Responsive.isTablet(context)
+                    ? 300
+                    : 180,
             top: Responsive.isDesktop(context)
-                                  ?20
-                                  : Responsive.isTablet(context)
-                                      ? 10
-                                      : 10,
+                ? 0
+                : Responsive.isTablet(context)
+                    ? 10
+                    : 10,
             left: Responsive.isDesktop(context)
-                                  ?40
-                                  : Responsive.isTablet(context)
-                                      ? 20
-                                      : 20,
+                ? 0
+                : Responsive.isTablet(context)
+                    ? 20
+                    : 20,
             child: new Image.asset('/faq/faq-pic.png'),
           ),
         ],
@@ -245,7 +245,7 @@ class _FAQState extends State<FAQ> {
       child: Text(
         'รวมคำถามที่พบบ่อย',
         style: GoogleFonts.ibmPlexSansThai(
-          fontSize: Responsive.isDesktop(context)? 32 : 20,
+          fontSize: Responsive.isDesktop(context) ? 32 : 20,
           fontWeight: FontWeight.w600,
           color: Color.fromARGB(255, 75, 195, 211),
         ),
@@ -270,13 +270,14 @@ class _FAQState extends State<FAQ> {
 
     return Center(
       child: Container(
-        width: 1400,
+        color: Color.fromARGB(255, 232, 242, 254),
+        width: 1440,
         child: Column(
           children: [
             SizedBox(
               height: 42,
             ),
-            _isLargeScreen()
+            Responsive.isDesktop(context)
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -356,7 +357,6 @@ class _FAQState extends State<FAQ> {
       ),
     );
   }
-
 
   Widget _buildPanel() {
     return MediaQuery(

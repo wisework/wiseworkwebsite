@@ -74,14 +74,16 @@ class FeaturesPage extends StatelessWidget {
         "routePath"),
   ];
 
-
   @override
   Widget build(BuildContext context) {
-    
-
     return Center(
       child: Container(
-        width: Responsive.isDesktop(context) ? 1200 : Responsive.isTablet(context) ? 900 : 500,
+        color: Color.fromARGB(255, 232, 242, 254),
+        width: Responsive.isDesktop(context)
+            ? 1440
+            : Responsive.isTablet(context)
+                ? 900
+                : 500,
         // color: Color.fromARGB(255, 228, 236, 248),
         margin: EdgeInsets.all(00.0),
         child: Padding(
@@ -98,10 +100,10 @@ class FeaturesPage extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                     color: Color.fromARGB(255, 24, 84, 110),
                     fontSize: Responsive.isDesktop(context)
-                                  ? 48
-                                  : Responsive.isTablet(context)
-                                      ? 35
-                                      : 25,
+                        ? 48
+                        : Responsive.isTablet(context)
+                            ? 35
+                            : 25,
                   ),
                 ),
                 SizedBox(
@@ -111,14 +113,12 @@ class FeaturesPage extends StatelessWidget {
                     shrinkWrap: true,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: Responsive.isDesktop(context)
-                                  ? 3
-                                  : Responsive.isTablet(context)
-                                      ? 2
-                                      : 1,
-                      crossAxisSpacing:
-                          Responsive.isDesktop(context)? 20 : 10,
-                      mainAxisSpacing:
-                          Responsive.isDesktop(context) ? 20 : 10,
+                          ? 3
+                          : Responsive.isTablet(context)
+                              ? 2
+                              : 1,
+                      crossAxisSpacing: Responsive.isDesktop(context) ? 20 : 10,
+                      mainAxisSpacing: Responsive.isDesktop(context) ? 20 : 10,
                     ),
                     itemCount: features.length,
                     itemBuilder: (BuildContext context, int index) {
@@ -166,7 +166,8 @@ class FeaturesPage extends StatelessWidget {
                                         '${features[index].title}',
                                         style: GoogleFonts.poppins(
                                             fontWeight: FontWeight.w500,
-                                            fontSize: Responsive.isDesktop(context)
+                                            fontSize: Responsive.isDesktop(
+                                                    context)
                                                 ? 24
                                                 : Responsive.isTablet(context)
                                                     ? 20
@@ -180,11 +181,12 @@ class FeaturesPage extends StatelessWidget {
                                         style: GoogleFonts.ibmPlexSansThai(
                                           color: Color.fromARGB(
                                               255, 102, 112, 133),
-                                          fontSize: Responsive.isDesktop(context)
-                                              ? 20
-                                              : Responsive.isTablet(context)
-                                                  ? 16
-                                                  : 15,
+                                          fontSize:
+                                              Responsive.isDesktop(context)
+                                                  ? 20
+                                                  : Responsive.isTablet(context)
+                                                      ? 16
+                                                      : 15,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -199,9 +201,13 @@ class FeaturesPage extends StatelessWidget {
                                                   Text(
                                                     'more ',
                                                     style: GoogleFonts.inter(
-                                                        fontSize: Responsive.isDesktop(context)
+                                                        fontSize: Responsive
+                                                                .isDesktop(
+                                                                    context)
                                                             ? 18
-                                                            : Responsive.isTablet(context)
+                                                            : Responsive
+                                                                    .isTablet(
+                                                                        context)
                                                                 ? 18
                                                                 : 12,
                                                         color: Color.fromARGB(
@@ -213,9 +219,11 @@ class FeaturesPage extends StatelessWidget {
                                                     Icons.arrow_forward_sharp,
                                                     color: Color.fromARGB(
                                                         255, 57, 129, 237),
-                                                    size: Responsive.isDesktop(context)
+                                                    size: Responsive.isDesktop(
+                                                            context)
                                                         ? 18
-                                                        : Responsive.isTablet(context)
+                                                        : Responsive.isTablet(
+                                                                context)
                                                             ? 18
                                                             : 12,
                                                   ),
