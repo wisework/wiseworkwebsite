@@ -122,6 +122,10 @@ flutter:
   - assets/footer/ig.png
   - assets/footer/yt.png
   - assets/footer/tiktok.png
+  - assets/footer/location.png
+  - assets/footer/mail.png
+  - assets/footer/tel.png
+
 
   - assets/carousel/crs.png
   

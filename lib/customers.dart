@@ -100,7 +100,7 @@ class CustomerPage extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      width: 980,
+                      width: 1440,
                       child: GridView.builder(
                           shrinkWrap: true,
                           gridDelegate:

@@ -285,24 +285,27 @@ class _FAQState extends State<FAQ> {
                         width: 700,
                         height: 1000,
                         color: Color.fromARGB(0, 204, 220, 57),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Column(
-                              children: [
-                                consult,
-                                hashtag,
-                              ],
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            button,
-                            SizedBox(
-                              height: 20,
-                            ),
-                            groupofpic,
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 50),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Column(
+                                children: [
+                                  consult,
+                                  hashtag,
+                                ],
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              button,
+                              SizedBox(
+                                height: 20,
+                              ),
+                              groupofpic,
+                            ],
+                          ),
                         ),
                       ),
                       Container(

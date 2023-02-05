@@ -1,8 +1,10 @@
+import 'dart:html';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:wiseintern/main.dart';
 
 class Footer extends StatefulWidget {
   Footer();
@@ -14,58 +16,61 @@ class Footer extends StatefulWidget {
 class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
-    var logo = Container(
-        height: 60, width: 160, child: new Image.asset('/footer/logo.png'));
-
     var address = Container(
-      height: 90,
-      width: 300,
-      child: Column(
-        children: [
-          Transform.translate(
-              offset: Offset(-170, 25),
-              child: Icon(
-                Icons.location_pin,
-                color: Colors.white,
-              )),
-          Text(
-            "7 Soi Lat Pla Khao 19, Chorakhe Bua Subdistrict, Lat Phrao District, Bangkok",
-            style: GoogleFonts.ibmPlexSansThai(
-              fontSize: 16,
-              fontWeight: FontWeight.w400,
-              color: Colors.white,
+      height: 65,
+      width: 292,
+      child: Text(
+        "7 Soi Lat Pla Khao 19, Chorakhe Bua Subdistrict, Lat Phrao District, Bangkok",
+        style: GoogleFonts.ibmPlexSansThai(
+          fontSize: 16,
+          fontWeight: FontWeight.w400,
+          color: Colors.white,
+        ),
+      ),
+    );
+
+    List<String> listLo = [
+      "/footer/location.png",
+      "/footer/mail.png",
+      "/footer/tel.png"
+    ];
+    var listImg = Container(
+      color: Color.fromARGB(0, 255, 193, 7),
+      height: 130,
+      width: 50,
+      child: ListView.builder(
+        shrinkWrap: true,
+        itemCount: listLo.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            dense: true,
+            title: Transform.translate(
+              offset: Offset(0, 2.5),
+              child: Image.asset(
+                listLo[index],
+              ),
             ),
-          ),
-        ],
+          );
+        },
       ),
     );
 
     var mail = Container(
-      height: 50,
+      height: 30,
       width: 200,
-      child: Column(
-        children: [
-          Transform.translate(
-              offset: Offset(-130, 25),
-              child: Icon(
-                Icons.mail_outline,
-                color: Colors.white,
-              )),
-          Text(
-            "admin@thewiseworks.com",
-            style: GoogleFonts.ibmPlexSansThai(
-              fontSize: 16,
-              fontWeight: FontWeight.w400,
-              color: Colors.white,
-            ),
-          ),
-        ],
+      child: Text(
+        "admin@thewiseworks.com",
+        style: GoogleFonts.ibmPlexSansThai(
+          fontSize: 16,
+          fontWeight: FontWeight.w400,
+          color: Colors.white,
+        ),
       ),
     );
 
     var tel = Container(
-      height: 25,
-      width: 300,
+      height: 30,
+      width: 200,
       child: Text(
         "02-103-4376",
         style: GoogleFonts.ibmPlexSansThai(
@@ -88,7 +93,7 @@ class _FooterState extends State<Footer> {
 
     var navbarlist = Container(
       color: Color.fromARGB(0, 255, 193, 7),
-      height: 122,
+      height: 200,
       width: 135,
       child: ListView.builder(
         shrinkWrap: true,
@@ -103,7 +108,7 @@ class _FooterState extends State<Footer> {
                 style: GoogleFonts.ibmPlexSansThai(
                     fontSize: 15,
                     fontWeight: FontWeight.w400,
-                    color: Colors.white),
+                    color: Color.fromARGB(255, 218, 218, 218)),
               ),
             ),
           );
@@ -111,44 +116,46 @@ class _FooterState extends State<Footer> {
       ),
     );
 
-    var connect = Container(
-      child: Text(
-        "Connect with Us",
-        style: GoogleFonts.ibmPlexSansThai(
-          fontSize: 18,
-          fontWeight: FontWeight.w700,
-          color: Colors.white,
-        ),
-      ),
-    );
+    // var connect = Container(
+    //   width: 365,
+    //   height: 30,
+    //   child: Text(
+    //     "Connect with Us",
+    //     style: GoogleFonts.ibmPlexSansThai(
+    //       fontSize: 18,
+    //       fontWeight: FontWeight.w700,
+    //       color: Colors.white,
+    //     ),
+    //   ),
+    // );
 
-    List<String> app = [
-      "/footer/fb.png",
-      "/footer/ig.png",
-      "/footer/yt.png",
-      "/footer/tiktok.png"
-    ];
+    // List<String> app = [
+    //   "/footer/fb.png",
+    //   "/footer/ig.png",
+    //   "/footer/yt.png",
+    //   "/footer/tiktok.png"
+    // ];
 
-    var appList = Container(
-      color: Color.fromARGB(0, 255, 193, 7),
-      height: 122,
-      width: 135,
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: app.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            dense: true,
-            title: Transform.translate(
-              offset: Offset(0, 2.5),
-              child: Image.asset(
-                app[index],
-              ),
-            ),
-          );
-        },
-      ),
-    );
+    // var appList = Container(
+    //   color: Color.fromARGB(0, 255, 193, 7),
+    //   height: 122,
+    //   width: 135,
+    //   child: ListView.builder(
+    //     shrinkWrap: true,
+    //     itemCount: app.length,
+    //     itemBuilder: (context, index) {
+    //       return ListTile(
+    //         dense: true,
+    //         title: Transform.translate(
+    //           offset: Offset(0, 2.5),
+    //           child: Image.asset(
+    //             app[index],
+    //           ),
+    //         ),
+    //       );
+    //     },
+    //   ),
+    // );
 
     var services = Container(
       child: Text(
@@ -172,7 +179,7 @@ class _FooterState extends State<Footer> {
     var svlist = Container(
       color: Color.fromARGB(0, 255, 193, 7),
       height: 200,
-      width: 258,
+      width: 270,
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: servicesList.length,
@@ -184,9 +191,10 @@ class _FooterState extends State<Footer> {
               child: Text(
                 servicesList[index],
                 style: GoogleFonts.ibmPlexSansThai(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white),
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                  color: Color.fromARGB(255, 218, 218, 218),
+                ),
               ),
             ),
           );
@@ -277,9 +285,19 @@ class _FooterState extends State<Footer> {
         ),
       ),
     );
+    var get = Container(
+      width: 356,
+      height: 21,
+      child: Text(
+        "Get latest updates and offers. Try It Today.",
+        style: GoogleFonts.ibmPlexSansThai(
+            fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white),
+      ),
+    );
 
     var line = Container(
-      height: 2,
+      width: 1316,
+      height: 1,
       color: Colors.white,
     );
 
@@ -300,93 +318,291 @@ class _FooterState extends State<Footer> {
               height: 40,
             ),
             _isLargeScreen()
-                ? Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Container(
-                        width: 450,
-                        child: Column(
+                ? Column(
+                    children: [
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Column(
-                              children: [
-                                logo,
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.only(top: 40, left: 50),
-                                  child: address,
-                                ),
-                                mail,
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 50),
-                                  child: tel,
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 250,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Column(
-                            children: [
-                              QLink,
-                              navbarlist,
-                              connect,
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 250,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Column(
-                            children: [
-                              services,
-                              svlist,
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Container(
-                        width: 450,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Column(
-                              children: [
-                                contact,
-                                form,
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Row(
+                            Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Container(
+                                width: 400,
+                                child: Column(
+                                  // mainAxisAlignment: MainAxisAlignment.start,
+                                  // crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    formEmail,
-                                    button,
+                                    Column(
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Image.asset("/footer/logo.png")
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 50),
+                                              child: Column(
+                                                children: [listImg],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 50),
+                                              child: Column(
+                                                children: [
+                                                  Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      address,
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      mail,
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.end,
+                                                    // crossAxisAlignment:
+                                                    //     CrossAxisAlignment.start,
+                                                    children: [
+                                                      tel,
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    )
                                   ],
                                 ),
+                              ),
+                            ),
+                            Container(
+                              width: 470,
+                              child: Column(
+                                // mainAxisAlignment: MainAxisAlignment.start,
+                                // crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          QLink,
+                                          navbarlist,
+                                        ],
+                                      ),
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          services,
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            children: [
+                                              svlist,
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 25,
+                                  ),
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Wrap(
+                                        spacing: 10.0,
+                                        children: [
+                                          Text(
+                                            "Connect with Us",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w700,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          Image.asset("/footer/fb.png"),
+                                          Image.asset("/footer/ig.png"),
+                                          Image.asset("/footer/yt.png"),
+                                          Image.asset("/footer/tiktok.png"),
+                                        ],
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Container(
+                                width: 431,
+                                child: Column(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  bottom: 20),
+                                              child: contact,
+                                            ),
+                                          ],
+                                        ),
+                                        form,
+                                        SizedBox(
+                                          height: 27,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 15),
+                                              child: formEmail,
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 15),
+                                              child: button,
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 22,
+                                        ),
+                                        Row(
+                                          children: [
+                                            get,
+                                          ],
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ]),
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20),
+                              child: line,
+                            )
+                          ]),
+                      Container(
+                        width: 1316,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 30),
+                          child: Column(children: [
+                            Row(
+                              children: [
+                                Container(
+                                  width: 400,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Wrap(
+                                        spacing: 10,
+                                        children: [
+                                          TextButton(
+                                              onPressed: () {},
+                                              child: Text(
+                                                "Provacy Policy",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        color: Colors.white,
+                                                        fontWeight:
+                                                            FontWeight.w400),
+                                              )),
+                                          TextButton(
+                                              onPressed: () {},
+                                              child: Text(
+                                                "Term of Services",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        color: Colors.white,
+                                                        fontWeight:
+                                                            FontWeight.w400),
+                                              )),
+                                          TextButton(
+                                              onPressed: () {},
+                                              child: Text(
+                                                "Cookie",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        color: Colors.white,
+                                                        fontWeight:
+                                                            FontWeight.w400),
+                                              ))
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: 470,
+                                ),
+                                Container(
+                                    width: 430,
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      children: [
+                                        Text(
+                                          "© Copyright 2022 Thewiseworks | All Right Reserved.",
+                                          style: GoogleFonts.ibmPlexSansThai(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w400),
+                                        )
+                                      ],
+                                    ))
                               ],
                             )
-                          ],
+                          ]),
                         ),
                       ),
-                    ),
-                  ])
+                    ],
+                  )
                 : Container(
                     child: Column(
                       children: [
-                        logo,
+                        line,
                       ],
                     ),
                   ),
