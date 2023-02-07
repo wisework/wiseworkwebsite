@@ -95,172 +95,389 @@ class _FeaturesPageState extends State<FeaturesPage> {
             child: Column(
               children: [
                 SizedBox(
-                  height: Responsive.isDesktop(context) ? 90 : 45,
+                  height: Responsive.isDesktop(context) ? 96 : 44,
                 ),
-                Text(
-                  'Key Features',
-                  style: GoogleFonts.ibmPlexSans(
-                    fontWeight: FontWeight.w700,
-                    color: Colors.white,
-                    fontSize: Responsive.isDesktop(context)
-                        ? 48
-                        : Responsive.isTablet(context)
-                            ? 35
-                            : 25,
+                Padding(
+                  padding: Responsive.isDesktop(context)
+                      ? EdgeInsets.only(bottom: 79)
+                      : EdgeInsets.only(bottom: 29),
+                  child: Text(
+                    'Key Features',
+                    style: GoogleFonts.ibmPlexSans(
+                      fontWeight: Responsive.isDesktop(context)
+                          ? FontWeight.w700
+                          : FontWeight.w600,
+                      color: Colors.white,
+                      fontSize: Responsive.isDesktop(context)
+                          ? 48
+                          : Responsive.isTablet(context)
+                              ? 35
+                              : 24,
+                    ),
                   ),
                 ),
-                SizedBox(
-                  height: 50,
-                ),
-                GridView.builder(
-                    shrinkWrap: true,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: Responsive.isDesktop(context)
-                          ? 3
-                          : Responsive.isTablet(context)
-                              ? 2
-                              : 1,
-                      crossAxisSpacing: Responsive.isDesktop(context) ? 20 : 10,
-                      mainAxisSpacing: Responsive.isDesktop(context) ? 20 : 10,
-                    ),
-                    itemCount: features.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        // decoration: BoxDecoration(
-                        //   borderRadius: BorderRadius.circular(20),
-                        //   color: Color.fromARGB(255, 178, 205, 244),
-                        // ),
-
-                        child: new Material(
-                          child: new InkWell(
-                            borderRadius: BorderRadius.circular(20),
-                            onTap: () {},
-                            onHover: (value) {
-                              setState(() {
-                                if (value) {
-                                  hoveredIndex = index;
-                                } else {
-                                  hoveredIndex = null;
-                                }
-                              });
-                            },
-                            hoverColor: Color.fromARGB(255, 228, 238, 250),
-                            child: new Container(
-                              width: Responsive.isDesktop(context)
-                                  ? 368
-                                  : Responsive.isTablet(context)
-                                      ? 200
-                                      : 100,
-                              height: Responsive.isDesktop(context)
-                                  ? 368
-                                  : Responsive.isTablet(context)
-                                      ? 200
-                                      : 100,
-                              child: Center(
-                                child: Container(
-                                  margin: EdgeInsets.all(15),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      SizedBox(
-                                          width: Responsive.isDesktop(context)
-                                              ? 100
-                                              : Responsive.isTablet(context)
-                                                  ? 70
-                                                  : 70,
-                                          height: Responsive.isDesktop(context)
-                                              ? 100
-                                              : Responsive.isTablet(context)
-                                                  ? 70
-                                                  : 70,
-                                          child: Image.asset(
-                                            'assets/${features[index].imageUrl}',
-                                          )),
-                                      Text(
-                                        '${features[index].title}',
-                                        style: GoogleFonts.poppins(
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: Responsive.isDesktop(
-                                                    context)
-                                                ? 24
-                                                : Responsive.isTablet(context)
-                                                    ? 20
-                                                    : 18,
-                                            color: hoveredIndex == index
-                                                ? Color.fromARGB(
-                                                    255, 57, 129, 237)
-                                                : Colors.white),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      Text(
-                                        '${features[index].description}',
-                                        style: GoogleFonts.ibmPlexSansThai(
-                                          color: hoveredIndex == index
-                                              ? Color.fromARGB(
-                                                  255, 57, 129, 237)
-                                              : Colors.white,
-                                          fontSize:
-                                              Responsive.isDesktop(context)
-                                                  ? 20
-                                                  : Responsive.isTablet(context)
-                                                      ? 16
-                                                      : 15,
-                                        ),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      Container(
-                                        child: Column(
-                                          children: [
-                                            TextButton(
-                                              onPressed: () {},
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                children: [
-                                                  Text(
-                                                    'more ',
-                                                    style: GoogleFonts.inter(
-                                                        fontSize: Responsive
-                                                                .isDesktop(
-                                                                    context)
-                                                            ? 18
-                                                            : Responsive
-                                                                    .isTablet(
-                                                                        context)
-                                                                ? 18
-                                                                : 12,
-                                                        color: Color.fromARGB(
-                                                            255, 57, 129, 237)),
-                                                  ), // <-- Text
-
-                                                  Icon(
-                                                    // <-- Icon
-                                                    Icons.arrow_forward_sharp,
-                                                    color: Color.fromARGB(
-                                                        255, 57, 129, 237),
-                                                    size: Responsive.isDesktop(
-                                                            context)
-                                                        ? 18
-                                                        : Responsive.isTablet(
-                                                                context)
-                                                            ? 18
-                                                            : 12,
+                Responsive.isDesktop(context)
+                    ? Container(
+                        child: GridView.builder(
+                            shrinkWrap: true,
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 3,
+                              crossAxisSpacing: 20,
+                              mainAxisSpacing: 20,
+                            ),
+                            itemCount: features.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+                                child: new Material(
+                                  child: new InkWell(
+                                    borderRadius: BorderRadius.circular(16),
+                                    onTap: () {},
+                                    onHover: (value) {
+                                      setState(() {
+                                        if (value) {
+                                          hoveredIndex = index;
+                                        } else {
+                                          hoveredIndex = null;
+                                        }
+                                      });
+                                    },
+                                    hoverColor:
+                                        Color.fromARGB(255, 228, 238, 250),
+                                    child: new Container(
+                                      width: 368,
+                                      height: 338,
+                                      child: Center(
+                                        child: Container(
+                                          // margin: EdgeInsets.all(15),
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 48,
+                                                left: 6,
+                                                right: 6,
+                                                bottom: 12),
+                                            child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: <Widget>[
+                                                SizedBox(
+                                                    width: 100,
+                                                    height: 100,
+                                                    child: Image.asset(
+                                                      'assets/${features[index].imageUrl}',
+                                                    )),
+                                                Text(
+                                                  '${features[index].title}',
+                                                  style: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      fontSize: 24,
+                                                      color: hoveredIndex ==
+                                                              index
+                                                          ? Color.fromARGB(
+                                                              255, 57, 129, 237)
+                                                          : Colors.white),
+                                                  textAlign: TextAlign.center,
+                                                ),
+                                                Text(
+                                                  '${features[index].description}',
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                    fontWeight: FontWeight.w400,
+                                                    color: hoveredIndex == index
+                                                        ? Color.fromARGB(
+                                                            255, 57, 129, 237)
+                                                        : Colors.white,
+                                                    fontSize: 20,
                                                   ),
-                                                ],
+                                                  textAlign: TextAlign.center,
+                                                ),
+                                                Container(
+                                                  child: Column(
+                                                    children: [
+                                                      TextButton(
+                                                        onPressed: () {},
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.min,
+                                                          children: [
+                                                            Text(
+                                                              'more ',
+                                                              style: GoogleFonts.inter(
+                                                                  fontSize: 18,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          57,
+                                                                          129,
+                                                                          237)),
+                                                            ), // <-- Text
+
+                                                            Icon(
+                                                              // <-- Icon
+                                                              Icons
+                                                                  .arrow_forward_sharp,
+                                                              color: Color
+                                                                  .fromARGB(
+                                                                      255,
+                                                                      57,
+                                                                      129,
+                                                                      237),
+                                                              size: 18,
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  color: Colors.transparent,
+                                ),
+                              );
+                            }),
+                      )
+                    : Responsive.isTablet(context)
+                        ? Container(
+                            child: GridView.builder(
+                                shrinkWrap: true,
+                                gridDelegate:
+                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                  crossAxisSpacing: 20,
+                                  mainAxisSpacing: 20,
+                                ),
+                                itemCount: features.length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return Container(
+                                    child: new Material(
+                                      child: new InkWell(
+                                        borderRadius: BorderRadius.circular(16),
+                                        onTap: () {},
+                                        onHover: (value) {
+                                          setState(() {
+                                            if (value) {
+                                              hoveredIndex = index;
+                                            } else {
+                                              hoveredIndex = null;
+                                            }
+                                          });
+                                        },
+                                        hoverColor:
+                                            Color.fromARGB(255, 228, 238, 250),
+                                        child: new Container(
+                                          width: 200,
+                                          height: 200,
+                                          child: Center(
+                                            child: Container(
+                                              // margin: EdgeInsets.all(15),
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 48,
+                                                    left: 6,
+                                                    right: 6,
+                                                    bottom: 12),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: <Widget>[
+                                                    SizedBox(
+                                                        width: 100,
+                                                        height: 100,
+                                                        child: Image.asset(
+                                                          'assets/${features[index].imageUrl}',
+                                                        )),
+                                                    Text(
+                                                      '${features[index].title}',
+                                                      style: GoogleFonts.poppins(
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          fontSize: 24,
+                                                          color: hoveredIndex ==
+                                                                  index
+                                                              ? Color.fromARGB(
+                                                                  255,
+                                                                  57,
+                                                                  129,
+                                                                  237)
+                                                              : Colors.white),
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                    ),
+                                                    Text(
+                                                      '${features[index].description}',
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        color: hoveredIndex ==
+                                                                index
+                                                            ? Color.fromARGB(
+                                                                255,
+                                                                57,
+                                                                129,
+                                                                237)
+                                                            : Colors.white,
+                                                        fontSize: 20,
+                                                      ),
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                    ),
+                                                    Container(
+                                                      child: Column(
+                                                        children: [
+                                                          TextButton(
+                                                            onPressed: () {},
+                                                            child: Row(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .min,
+                                                              children: [
+                                                                Text(
+                                                                  'more ',
+                                                                  style: GoogleFonts.inter(
+                                                                      fontSize:
+                                                                          18,
+                                                                      color: Color.fromARGB(
+                                                                          255,
+                                                                          57,
+                                                                          129,
+                                                                          237)),
+                                                                ), // <-- Text
+
+                                                                Icon(
+                                                                  // <-- Icon
+                                                                  Icons
+                                                                      .arrow_forward_sharp,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          57,
+                                                                          129,
+                                                                          237),
+                                                                  size: 18,
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
                                               ),
                                             ),
-                                          ],
+                                          ),
                                         ),
-                                      )
-                                    ],
-                                  ),
+                                      ),
+                                      color: Colors.transparent,
+                                    ),
+                                  );
+                                }),
+                          )
+                        : Container(
+                            child: GridView.builder(
+                                shrinkWrap: true,
+                                gridDelegate:
+                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 1,
+                                  crossAxisSpacing: 20,
+                                  mainAxisSpacing: 20,
                                 ),
-                              ),
-                            ),
-                          ),
-                          color: Colors.transparent,
-                        ),
-                      );
-                    }),
+                                itemCount: features.length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return Container(
+                                    child: new Material(
+                                      child: new InkWell(
+                                        borderRadius: BorderRadius.circular(16),
+                                        onTap: () {},
+                                        onHover: (value) {
+                                          setState(() {
+                                            if (value) {
+                                              hoveredIndex = index;
+                                            } else {
+                                              hoveredIndex = null;
+                                            }
+                                          });
+                                        },
+                                        hoverColor:
+                                            Color.fromARGB(255, 228, 238, 250),
+                                        child: new Container(
+                                          // width: 266,
+                                          // height: 189,
+                                          width: 100,
+                                          height: 100,
+                                          child: Center(
+                                            child: Container(
+                                              // margin: EdgeInsets.all(15),
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                    left: 6,
+                                                    right: 6,
+                                                    bottom: 12),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: <Widget>[
+                                                    SizedBox(
+                                                        width: 70,
+                                                        height: 70,
+                                                        child: Image.asset(
+                                                          'assets/${features[index].imageUrl}',
+                                                        )),
+                                                    Text(
+                                                      '${features[index].title}',
+                                                      style: GoogleFonts.poppins(
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          fontSize: 20,
+                                                          color: hoveredIndex ==
+                                                                  index
+                                                              ? Color.fromARGB(
+                                                                  255,
+                                                                  57,
+                                                                  129,
+                                                                  237)
+                                                              : Colors.white),
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                    ),
+                                                    Text(
+                                                      '${features[index].description}',
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        color: hoveredIndex ==
+                                                                index
+                                                            ? Color.fromARGB(
+                                                                255,
+                                                                57,
+                                                                129,
+                                                                237)
+                                                            : Colors.white,
+                                                        fontSize: 16,
+                                                      ),
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      color: Colors.transparent,
+                                    ),
+                                  );
+                                }))
               ],
             ),
           ),
