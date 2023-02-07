@@ -116,6 +116,7 @@ flutter:
 
   - assets/faq/faq-pic.png
   - assets/faq/faq-bg.png
+  - assets/faq/qa.png
 
   - assets/footer/logo.png
   - assets/footer/fb.png
@@ -126,6 +127,7 @@ flutter:
   - assets/footer/mail.png
   - assets/footer/tel.png
 
+  - assets/pdpa/pdpa.png
 
   - assets/carousel/crs.png
   

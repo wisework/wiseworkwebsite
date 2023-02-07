@@ -121,7 +121,7 @@ class _FAQState extends State<FAQ> {
       child: Text(
         'พร้อมวางแผนให้ธุรกิจคุณปรึกษา',
         style: GoogleFonts.ibmPlexSansThai(
-            color: Color.fromARGB(255, 24, 84, 110),
+            color: Colors.white,
             fontSize: Responsive.isDesktop(context) ? 20 : 15,
             fontWeight: FontWeight.w400),
       ),
@@ -130,7 +130,7 @@ class _FAQState extends State<FAQ> {
       child: Text(
         '#Teamwisework',
         style: GoogleFonts.ibmPlexSansThai(
-            color: Color.fromARGB(255, 24, 84, 110),
+            color: Colors.white,
             fontSize: Responsive.isDesktop(context) ? 36 : 25,
             fontWeight: FontWeight.w700),
       ),
@@ -140,7 +140,7 @@ class _FAQState extends State<FAQ> {
       child: Text(
         'ให้องค์กรของคุณ วางแผนและจัดการกับ DATA \n หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย',
         style: GoogleFonts.ibmPlexSansThai(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: Responsive.isDesktop(context) ? 18 : 13,
             fontWeight: FontWeight.w400),
       ),
@@ -258,7 +258,7 @@ class _FAQState extends State<FAQ> {
         style: GoogleFonts.ibmPlexSansThai(
           fontSize: Responsive.isDesktop(context) ? 48 : 25,
           fontWeight: FontWeight.w600,
-          color: Color.fromARGB(255, 24, 84, 110),
+          color: Color.fromARGB(255, 232, 242, 254),
         ),
       ),
     );
@@ -270,7 +270,7 @@ class _FAQState extends State<FAQ> {
 
     return Center(
       child: Container(
-        color: Color.fromARGB(255, 232, 242, 254),
+        color: Color.fromARGB(255, 5, 45, 97),
         width: 1440,
         child: Column(
           children: [
@@ -303,7 +303,15 @@ class _FAQState extends State<FAQ> {
                               SizedBox(
                                 height: 20,
                               ),
-                              groupofpic,
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 160, left: 73),
+                                child: Image.asset(
+                                  "/faq/qa.png",
+                                  height: 460,
+                                  width: 467,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -321,7 +329,7 @@ class _FAQState extends State<FAQ> {
                             Qen,
 
                             SizedBox(
-                              height: 50,
+                              height: 85,
                             ),
                             // listChoice,
                             _buildPanel(),
@@ -367,8 +375,9 @@ class _FAQState extends State<FAQ> {
       // decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
       child: ExpansionPanelList(
         animationDuration: Duration(seconds: 1),
-        dividerColor: Color.fromARGB(255, 228, 236, 248),
+        dividerColor: Color.fromARGB(255, 72, 108, 156),
         elevation: 0,
+        
         expansionCallback: (int index, bool isExpanded) {
           setState(() {
             items[index].isExpanded = !isExpanded;
@@ -379,6 +388,7 @@ class _FAQState extends State<FAQ> {
           return ExpansionPanel(
             backgroundColor: Color.fromARGB(0, 255, 255, 255),
             canTapOnHeader: true,
+            
             headerBuilder: (BuildContext context, bool isExpanded) {
               return ListTile(
                 // style: ListTileStyle.,
@@ -389,7 +399,7 @@ class _FAQState extends State<FAQ> {
                       fontSize:
                           MediaQuery.of(context).size.width > 1000 ? 20 : 15),
                 ),
-
+                // iconColor: Colors.amber,
                 // selectedColor: Colors.amber,
               );
             },
@@ -398,8 +408,8 @@ class _FAQState extends State<FAQ> {
                 title: Text(
                   item.description,
                   style: TextStyle(
-                      fontSize:
-                          MediaQuery.of(context).size.width > 1000 ? 20 : 15),
+                      fontSize: Responsive.isDesktop(context) ? 20 : 15,
+                      color: Colors.white),
                 ),
                 onTap: () {}),
             isExpanded: item.isExpanded,

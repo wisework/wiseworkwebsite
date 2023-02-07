@@ -12,12 +12,12 @@ class FeatureModel {
   FeatureModel(this.title, this.description, this.imageUrl, this.routePath);
 }
 
-// class FeaturesPage extends StatefulWidget {
-//   const FeaturesPage({Key? key}) : super(key: key);
+class FeaturesPage extends StatefulWidget {
+  const FeaturesPage({Key? key}) : super(key: key);
 
-//   @override
-//   State<FeaturesPage> createState() => _FeaturesPageState();
-// }
+  @override
+  State<FeaturesPage> createState() => _FeaturesPageState();
+}
 
 final List<String> listHome = <String>['h1', 'h2', 'h3', 'h4'];
 final List<String> listAbout = <String>['ab1', 'ab2', 'ab3', 'ab4'];
@@ -25,7 +25,8 @@ final List<String> listServices = <String>['sv1', 'sv2', 'sv3', 'sv4'];
 final List<String> listBlogs = <String>['b1', 'b2', 'b3', 'b4'];
 final List<String> listContact = <String>['ct1', 'ct2', 'ct3', 'ct4'];
 
-class FeaturesPage extends StatelessWidget {
+class _FeaturesPageState extends State<FeaturesPage> {
+  int? hoveredIndex;
   List<FeatureModel> features = [
     FeatureModel(
         "PD Management",
@@ -74,11 +75,13 @@ class FeaturesPage extends StatelessWidget {
         "routePath"),
   ];
 
+  bool _hover = false;
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        color: Color.fromARGB(255, 232, 242, 254),
+        color: Color.fromARGB(255, 5, 45, 97),
         width: Responsive.isDesktop(context)
             ? 1440
             : Responsive.isTablet(context)
@@ -98,7 +101,7 @@ class FeaturesPage extends StatelessWidget {
                   'Key Features',
                   style: GoogleFonts.ibmPlexSans(
                     fontWeight: FontWeight.w700,
-                    color: Color.fromARGB(255, 24, 84, 110),
+                    color: Colors.white,
                     fontSize: Responsive.isDesktop(context)
                         ? 48
                         : Responsive.isTablet(context)
@@ -127,10 +130,21 @@ class FeaturesPage extends StatelessWidget {
                         //   borderRadius: BorderRadius.circular(20),
                         //   color: Color.fromARGB(255, 178, 205, 244),
                         // ),
+
                         child: new Material(
                           child: new InkWell(
                             borderRadius: BorderRadius.circular(20),
                             onTap: () {},
+                            onHover: (value) {
+                              setState(() {
+                                if (value) {
+                                  hoveredIndex = index;
+                                } else {
+                                  hoveredIndex = null;
+                                }
+                              });
+                            },
+                            hoverColor: Color.fromARGB(255, 228, 238, 250),
                             child: new Container(
                               width: Responsive.isDesktop(context)
                                   ? 368
@@ -172,15 +186,19 @@ class FeaturesPage extends StatelessWidget {
                                                 : Responsive.isTablet(context)
                                                     ? 20
                                                     : 18,
-                                            color: Color.fromARGB(
-                                                255, 16, 24, 40)),
+                                            color: hoveredIndex == index
+                                                ? Color.fromARGB(
+                                                    255, 57, 129, 237)
+                                                : Colors.white),
                                         textAlign: TextAlign.center,
                                       ),
                                       Text(
                                         '${features[index].description}',
                                         style: GoogleFonts.ibmPlexSansThai(
-                                          color: Color.fromARGB(
-                                              255, 102, 112, 133),
+                                          color: hoveredIndex == index
+                                              ? Color.fromARGB(
+                                                  255, 57, 129, 237)
+                                              : Colors.white,
                                           fontSize:
                                               Responsive.isDesktop(context)
                                                   ? 20

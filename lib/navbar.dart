@@ -322,7 +322,6 @@ class _NavigationBarState extends State<NavBar> {
                     Icon(
                       Icons.language,
                       color: Colors.white,
-                      
                     ),
                     SizedBox(
                       width: 5,
