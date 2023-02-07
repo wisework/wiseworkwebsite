@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'navbar.dart';
-import 'responsive.dart';
+import '../navbar.dart';
+import '../responsive.dart';
 
 class FeatureModel {
   final String title;

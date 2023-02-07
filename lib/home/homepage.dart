@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'navbar.dart';
-import 'features.dart';
-import 'packagepage.dart';
-import 'responsive.dart';
+import '../navbar.dart';
+import 'package:wiseintern/home/features.dart';
+import 'package:wiseintern/home/packagepage.dart';
+import '../responsive.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'customers.dart';
-import 'story.dart';
-import 'menu_drawer.dart';
-import 'FAQ.dart';
-import 'footer.dart';
-import 'carousel.dart';
+import 'package:wiseintern/home/customers.dart';
+import 'package:wiseintern/home/story.dart';
+import '../menu_drawer.dart';
+import 'package:wiseintern/home/faq.dart';
+import 'package:wiseintern/home/footer.dart';
+import 'package:wiseintern/home/carousel.dart';
 
 class HomePage extends StatefulWidget {
   @override

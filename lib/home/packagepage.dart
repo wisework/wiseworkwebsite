@@ -2,7 +2,7 @@ import 'dart:html';
 import 'dart:ui';
 import 'package:flutter/foundation.dart';
 
-import 'responsive.dart';
+import '../responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:google_fonts/google_fonts.dart';

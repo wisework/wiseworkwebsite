@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:wiseintern/HomePage.dart';
-import 'package:wiseintern/features.dart';
-import 'package:wiseintern/packagepage.dart';
+import 'package:wiseintern/home/homepage.dart';
+import 'package:wiseintern/home/features.dart';
+import 'package:wiseintern/home/packagepage.dart';
 import 'navbar.dart';
-import 'customers.dart';
+import 'package:wiseintern/home/customers.dart';
 
 void main() {
   runApp(const MyApp());
