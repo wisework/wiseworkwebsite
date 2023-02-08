@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiseintern/home/pdpa.dart';
 import '../navbar.dart';
 import 'package:wiseintern/home/features.dart';
 import 'package:wiseintern/home/packagepage.dart';
@@ -44,7 +45,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          toolbarHeight: Responsive.isDesktop(context) ? 130 : 60,
+          toolbarHeight: Responsive.isDesktop(context) ? 80 : 60,
           automaticallyImplyLeading: !Responsive.isDesktop(context),
           iconTheme: IconThemeData(color: Colors.white),
           backgroundColor: Color.fromARGB(255, 52, 144, 206),
@@ -67,13 +68,14 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CarouselPage(),
-            StoryPage(),
-            FeaturesPage(),
-            PackagesPage(),
-            CustomerPage(),
-            FAQ(),
-            Footer()
+            // CarouselPage(),
+            // StoryPage(),
+            Pdpa(),
+            // FeaturesPage(),
+            // PackagesPage(),
+            // CustomerPage(),
+            // FAQ(),
+            // Footer()
           ],
         ),
       ),

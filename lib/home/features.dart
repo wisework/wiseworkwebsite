@@ -19,12 +19,6 @@ class FeaturesPage extends StatefulWidget {
   State<FeaturesPage> createState() => _FeaturesPageState();
 }
 
-final List<String> listHome = <String>['h1', 'h2', 'h3', 'h4'];
-final List<String> listAbout = <String>['ab1', 'ab2', 'ab3', 'ab4'];
-final List<String> listServices = <String>['sv1', 'sv2', 'sv3', 'sv4'];
-final List<String> listBlogs = <String>['b1', 'b2', 'b3', 'b4'];
-final List<String> listContact = <String>['ct1', 'ct2', 'ct3', 'ct4'];
-
 class _FeaturesPageState extends State<FeaturesPage> {
   int? hoveredIndex;
   List<FeatureModel> features = [

@@ -274,9 +274,6 @@ class _FAQState extends State<FAQ> {
         width: 1440,
         child: Column(
           children: [
-            SizedBox(
-              height: 42,
-            ),
             Responsive.isDesktop(context)
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -292,6 +289,9 @@ class _FAQState extends State<FAQ> {
                             children: [
                               Column(
                                 children: [
+                                  SizedBox(
+                                    height: 42,
+                                  ),
                                   consult,
                                   hashtag,
                                 ],
@@ -339,27 +339,65 @@ class _FAQState extends State<FAQ> {
                     ],
                   )
                 : Container(
+                    height: 286,
+                    width: 378,
                     color: Color.fromARGB(0, 204, 220, 57),
                     child: Column(
                       children: [
-                        consult,
-                        hashtag,
-                        SizedBox(
-                          height: 20,
+                        Stack(
+                          children: [
+                            new SizedBox(
+                              height: 286,
+                              width: 378,
+                            ),
+                            new Positioned(
+                                top: 0,
+                                right: 240,
+                                child: Container(
+                                  height: 286,
+                                  width: 286,
+                                  decoration: BoxDecoration(
+                                      color: Color.fromARGB(139, 68, 137, 255),
+                                      shape: BoxShape.circle),
+                                )),
+                            new Positioned(
+                              top: 45,
+                              left: 40,
+                              child: SizedBox(
+                                height: 40,
+                                width: 288,
+                                child: Text(
+                                  "พร้อมวางแผนธุรกิจให้คุณ!",
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 24,
+                                      color: Colors.white),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ),
+                            new Positioned(
+                              left: 40,
+                              top: 112,
+                              child: SizedBox(
+                                  height: 66,
+                                  width: 299,
+                                  child: Text(
+                                    "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork",
+                                    style: GoogleFonts.ibmPlexSansThai(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white),
+                                    textAlign: TextAlign.start,
+                                  )),
+                            ),
+                            new Positioned(
+                              top: 207,
+                              left: 100,
+                              child: button,
+                            )
+                          ],
                         ),
-                        button,
-                        SizedBox(
-                          height: 50,
-                        ),
-                        groupofpic,
-                        Qth,
-                        Qen,
-                        SizedBox(
-                          height: MediaQuery.of(context).size.width > 1000
-                              ? 50
-                              : 25,
-                        ),
-                        _buildPanel(),
                       ],
                     ),
                   )
@@ -377,7 +415,6 @@ class _FAQState extends State<FAQ> {
         animationDuration: Duration(seconds: 1),
         dividerColor: Color.fromARGB(255, 72, 108, 156),
         elevation: 0,
-        
         expansionCallback: (int index, bool isExpanded) {
           setState(() {
             items[index].isExpanded = !isExpanded;
@@ -388,7 +425,6 @@ class _FAQState extends State<FAQ> {
           return ExpansionPanel(
             backgroundColor: Color.fromARGB(0, 255, 255, 255),
             canTapOnHeader: true,
-            
             headerBuilder: (BuildContext context, bool isExpanded) {
               return ListTile(
                 // style: ListTileStyle.,
