@@ -3,8 +3,9 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:wiseintern/home/carousel.dart';
 import 'package:wiseintern/responsive.dart';
-import 'package:wiseintern/navbar.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 // import 'package:carousel_indicator/carousel_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -31,21 +32,247 @@ class _CustomerState extends State<CustomerPage> {
     List<Card> cards = [
       Card(
         child: Container(
-            width: 450,
-            height: 250,
-            color: Colors.white,
-            child: Text('Card 1')),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(10)),
+            width: Responsive.isTablet(context) ? 450 : 343,
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 14.02,
+                    ),
+                    child: SizedBox(
+                        width: 54.71,
+                        height: 61.15,
+                        child: Image.asset("/customer/Nutt.png")),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 192 : 244,
+                    height: Responsive.isTablet(context) ? 38 : 40,
+                    child: Text(
+                      "คุณณัฏฐ์ ณัฐนิธิการัตน์",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Color.fromARGB(255, 35, 34, 51)),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 182 : 244,
+                    height: Responsive.isTablet(context) ? 48 : 45,
+                    child: Text(
+                      "ประธานเจ้าหน้าที่บริหาร\nAdvice IT Infinite Co.,Ltd.",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 57, 128, 237)),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 374 : 316,
+                    height: Responsive.isTablet(context) ? 70 : 100,
+                    child: Text(
+                      Responsive.isTablet(context)
+                          ? "“เราตระหนักถึงความสำคัญการคุ้มครอง ข้อมูลส่วนบุคคล\nหนึ่งในรากฐานที่สร้างความสัมพันธ์ทางธุรกิจ\nและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”"
+                          : "“เราตระหนักถึงความสำคัญการคุ้มครอง\nข้อมูลส่วนบุคคล หนึ่งในรากฐาน\nที่สร้างความสัมพันธ์ทางธุรกิจ\nและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 35, 34, 51)),
+                      textAlign: TextAlign.center,
+                    ),
+                  )
+                ],
+              ),
+            )),
       ),
       Card(
         child: Container(
-            width: 450,
-            height: 250,
-            color: Colors.blueGrey,
-            child: Text('Card 2')),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(10)),
+            width: Responsive.isTablet(context) ? 450 : 343,
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 14.02,
+                    ),
+                    child: SizedBox(
+                        width: 54.71,
+                        height: 61.15,
+                        child: Image.asset("/customer/Jirayuth.png")),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 200 : 244,
+                    height: Responsive.isTablet(context) ? 30 : 40,
+                    child: Text(
+                      "คุณจิรายุส ทรัพย์ศรีโสภา",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Color.fromARGB(255, 35, 34, 51)),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 182 : 244,
+                    height: Responsive.isTablet(context) ? 30 : 30,
+                    child: Text(
+                      "Founder & Group CEO",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 57, 128, 237)),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 450 : 316,
+                    height: Responsive.isTablet(context) ? 70 : 170,
+                    // color: Colors.amber,
+                    child: Text(
+                      Responsive.isTablet(context)
+                          ? "BitKub ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคล\nของกลุ่มผู้ใช้งานดังนั้นเราจึงให้ความสำคัญอย่างมาก\nเกี่ยวกับ การปฏิบัติตามกฎหมาย PDPAโดยเรา\nเลือกใช้ระบบโมดูลที่มีCenterเข้ามาช่วยในการบริหาร\nจัดการข้อมูลคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม "
+                          : "BitKub ให้ความสำคัญกับการคุ้มครอง\nข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งานดังนั้น\nเราจึงให้ความสำคัญอย่างมากเกี่ยวกับ\nการปฏิบัติตามกฎหมาย PDPAโดยเรา\nเลือกใช้ระบบโมดูลที่มีCenterเข้ามา\nช่วยในการบริหารจัดการข้อมูล\nคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม ",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 35, 34, 51)),
+                      textAlign: TextAlign.center,
+                    ),
+                  )
+                ],
+              ),
+            )),
       ),
       Card(
         child: Container(
-            width: 450, height: 250, color: Colors.red, child: Text('Card 3')),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(10)),
+            width: Responsive.isTablet(context) ? 450 : 343,
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 14.02,
+                    ),
+                    child: SizedBox(
+                        width: 54.71,
+                        height: 61.15,
+                        child: Image.asset("/customer/Ann.png")),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 192 : 244,
+                    height: Responsive.isTablet(context) ? 30 : 40,
+                    child: Text(
+                      "ANN LUBIN",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Color.fromARGB(255, 35, 34, 51)),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 182 : 244,
+                    height: Responsive.isTablet(context) ? 30 : 30,
+                    child: Text(
+                      "Co-Funder",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 57, 128, 237)),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 374 : 316,
+                    height: Responsive.isTablet(context) ? 70 : 165,
+                    child: Text(
+                      Responsive.isTablet(context)
+                          ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้น\nเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ\nทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไป\nตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
+                          : "เรามองเห็นภาพกว้างของการทำ PDPA\nได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework \nเข้ามาให้คำแนะนำและวางแผนระบบ\nทำให้เรามั่นใจว่าการดำเนินการของ\nขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมาย\nกำหนดครอบคลุมทุกภาคธุรกิจ",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 35, 34, 51)),
+                      textAlign: TextAlign.center,
+                    ),
+                  )
+                ],
+              ),
+            )),
+      ),
+      Card(
+        child: Container(
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(10)),
+            width: Responsive.isTablet(context) ? 450 : 343,
+            // height: 250,
+
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 14.02,
+                    ),
+                    child: SizedBox(
+                        width: 54.71,
+                        height: 61.15,
+                        child: Image.asset("/customer/Amorn.png")),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 192 : 244,
+                    height: Responsive.isTablet(context) ? 30 : 40,
+                    child: Text(
+                      "คุณอมร ทองธิว",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Color.fromARGB(255, 35, 34, 51)),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 182 : 244,
+                    height: Responsive.isTablet(context) ? 30 : 30,
+                    child: Text(
+                      "กรรมการและรองกรรมการผู้จัดการ",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 57, 128, 237)),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container(
+                    width: Responsive.isTablet(context) ? 374 : 316,
+                    height: Responsive.isTablet(context) ? 70 : 165,
+                    // color: Colors.amber,
+                    child: Text(
+                      Responsive.isTablet(context)
+                          ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้น\nเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ\nทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไป\nตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
+                          : "เรามองเห็นภาพกว้างของการทำ PDPA\nได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework \nเข้ามาให้คำแนะนำและวางแผนระบบ\nทำให้เรามั่นใจว่าการดำเนินการของ\nขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมาย\nกำหนดครอบคลุมทุกภาคธุรกิจ",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 35, 34, 51)),
+                      textAlign: TextAlign.center,
+                    ),
+                  )
+                ],
+              ),
+            )),
       ),
     ];
 
@@ -1734,6 +1961,75 @@ class _CustomerState extends State<CustomerPage> {
                                       : TextAlign.start,
                                 ),
                               ),
+                              // Swiper(
+                              //   itemCount: 3,
+                              //   itemBuilder: (BuildContext context, int index) {
+                              //     return Container(
+                              //       decoration: BoxDecoration(
+                              //         borderRadius: BorderRadius.circular(10),
+                              //         color: Colors.white,
+                              //       ),
+                              //       child: Text("Card ${index + 1}"),
+                              //     );
+                              //   },
+                              //   itemWidth: 300,
+                              //   itemHeight: 200,
+                              //   layout: SwiperLayout.STACK,
+                              // ),
+                              Container(
+                                child: CarouselSlider(
+                                  options: CarouselOptions(
+                                    height: Responsive.isTablet(context)
+                                        ? 300
+                                        : 380,
+                                    autoPlay: true,
+                                    enlargeCenterPage: true,
+                                    onPageChanged: (index, reason) {
+                                      setState(() {
+                                        _current = index;
+                                        // print('Current Page: $_current');
+                                      });
+                                    },
+                                  ),
+                                  items: cards,
+                                ),
+                              ),
+
+                              Container(
+                                child: AnimatedSmoothIndicator(
+                                    activeIndex: _current,
+                                    count: 4,
+                                    effect: ScaleEffect(
+                                        activePaintStyle: PaintingStyle.stroke,
+                                        scale: 1.4,
+                                        activeStrokeWidth: 1.0,
+                                        dotWidth: 16,
+                                        dotHeight: 16,
+                                        dotColor: Color.fromARGB(
+                                            255, 255, 255, 255))),
+                              ),
+                              // Container(
+                              //   child: AnimatedSmoothIndicator(
+                              //     activeIndex: _current,
+                              //     count: 4,
+                              //     effect: CustomizableEffect(
+                              //       activeDotDecoration: DotDecoration(
+                              //         width: 16,
+                              //         height: 6,
+                              //         color: Color.fromARGB(255, 1, 41, 53),
+                              //         borderRadius: BorderRadius.circular(50),
+                              //       ),
+                              //       dotDecoration: DotDecoration(
+                              //         width: 10,
+                              //         height: 4,
+                              //         color: Colors.black12,
+                              //         borderRadius: BorderRadius.circular(50),
+                              //         verticalOffset: 0,
+                              //       ),
+                              //       spacing: 6.0,
+                              //     ),
+                              //   ),
+                              // ),
                               // Container(
                               //     width: 500,
                               //     height: 200,
@@ -1756,45 +2052,21 @@ class _CustomerState extends State<CustomerPage> {
                               //       },
                               //       // items: []
                               //     )),
-                              Container(
-                                width: 450,
-                                height: 250,
-                                child: CarouselSlider(
-                                  items: cards,
-                                  options: CarouselOptions(
-                                    height: 250,
-                                    enlargeCenterPage: true,
-                                    autoPlay: true,
-                                    aspectRatio: 16 / 9,
-                                    viewportFraction: 0.8,
-                                    onPageChanged: (index, reason) {
-                                      // Do something when the page changes
-                                    },
-                                  ),
-                                ),
-                              )
                               // Container(
+                              //   width: 450,
+                              //   height: 250,
                               //   child: CarouselSlider(
+                              //     items: cards,
                               //     options: CarouselOptions(
-                              //       height: 1000,
-                              //       autoPlay: false,
+                              //       height: 250,
+                              //       // enlargeCenterPage: true,
+                              //       autoPlay: true,
+                              //       aspectRatio: 16 / 9,
+                              //       viewportFraction: 0.8,
                               //       onPageChanged: (index, reason) {
-                              //         setState(() {
-                              //           _current = index;
-                              //           // print('Current Page: $_current');
-                              //         });
+                              //         // Do something when the page changes
                               //       },
                               //     ),
-                              //     items: [
-                              //       Container(
-                              //         width: 1000,
-                              //         color: Color.fromARGB(255, 250, 251, 252),
-                              //       ),
-                              //       Container(
-                              //         width: 1000,
-                              //         color: Color.fromARGB(255, 250, 251, 252),
-                              //       )
-                              //     ],
                               //   ),
                               // )
                             ],
