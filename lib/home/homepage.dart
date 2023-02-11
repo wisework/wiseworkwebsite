@@ -70,10 +70,10 @@ class _HomePageState extends State<HomePage> {
           children: [
             // CarouselPage(),
             // StoryPage(),
-            // Pdpa(),
+            Pdpa(),
             // FeaturesPage(),
             // PackagesPage(),
-            CustomerPage(),
+            // CustomerPage(),
             // FAQ(),
             // Footer()
           ],

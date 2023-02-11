@@ -243,7 +243,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                 shrinkWrap: true,
                                 gridDelegate:
                                     SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2,
+                                  crossAxisCount: 3,
                                   crossAxisSpacing: 20,
                                   mainAxisSpacing: 20,
                                 ),
@@ -266,33 +266,36 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                         hoverColor:
                                             Color.fromARGB(255, 228, 238, 250),
                                         child: new Container(
-                                          width: 200,
-                                          height: 200,
+                                          width: 244,
+                                          height: 244,
                                           child: Center(
                                             child: Container(
                                               // margin: EdgeInsets.all(15),
                                               child: Padding(
                                                 padding: const EdgeInsets.only(
-                                                    top: 48,
-                                                    left: 6,
-                                                    right: 6,
-                                                    bottom: 12),
+                                                  top: 15,
+                                                  left: 6,
+                                                  right: 6,
+                                                ),
                                                 child: Column(
                                                   mainAxisAlignment:
-                                                      MainAxisAlignment.center,
+                                                      MainAxisAlignment.start,
                                                   children: <Widget>[
                                                     SizedBox(
-                                                        width: 100,
-                                                        height: 100,
+                                                        width: 50,
+                                                        height: 50,
                                                         child: Image.asset(
                                                           'assets/${features[index].imageUrl}',
                                                         )),
+                                                    SizedBox(
+                                                      height: 24,
+                                                    ),
                                                     Text(
                                                       '${features[index].title}',
                                                       style: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FontWeight.w500,
-                                                          fontSize: 24,
+                                                          fontSize: 20,
                                                           color: hoveredIndex ==
                                                                   index
                                                               ? Color.fromARGB(
@@ -318,51 +321,11 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                                 129,
                                                                 237)
                                                             : Colors.white,
-                                                        fontSize: 20,
+                                                        fontSize: 16,
                                                       ),
                                                       textAlign:
                                                           TextAlign.center,
                                                     ),
-                                                    Container(
-                                                      child: Column(
-                                                        children: [
-                                                          TextButton(
-                                                            onPressed: () {},
-                                                            child: Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .min,
-                                                              children: [
-                                                                Text(
-                                                                  'more ',
-                                                                  style: GoogleFonts.inter(
-                                                                      fontSize:
-                                                                          18,
-                                                                      color: Color.fromARGB(
-                                                                          255,
-                                                                          57,
-                                                                          129,
-                                                                          237)),
-                                                                ), // <-- Text
-
-                                                                Icon(
-                                                                  // <-- Icon
-                                                                  Icons
-                                                                      .arrow_forward_sharp,
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          255,
-                                                                          57,
-                                                                          129,
-                                                                          237),
-                                                                  size: 18,
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    )
                                                   ],
                                                 ),
                                               ),

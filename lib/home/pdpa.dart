@@ -34,18 +34,19 @@ class _PdpaState extends State<Pdpa> {
         children: [
           Responsive.isDesktop(context)
               ? Container(
+                  // height: 10,
                   width: 1440,
+                  height: 1163,
                   color: Color.fromARGB(255, 232, 242, 254),
                   child: Container(
                     child: Center(
                       child: Container(
                         width: 1440,
-                        height: 1163,
                         child: Column(
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(
-                                  top: 67.9, bottom: 41.1),
+                                  left: 94.45, right: 96.55, top: 67.9),
                               child: SizedBox(
                                 height: 79,
                                 width: 1260,
@@ -59,57 +60,388 @@ class _PdpaState extends State<Pdpa> {
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              height: 138,
-                              width: 954,
-                              child: Text(
-                                'ผลิตภัณฑ์ที่ถูกคิดค้นและพัฒนาจาก ประสบการณ์ของทีมผู้ให้คำปรึกษามามากกว่า 50+ โครงการ พร้อมให้คำปรึกษา วางแผน และวางระบบตามกฎหมาย สำหรับองค์กรและธุรกิจต่างๆเติมเต็มให้ครบทั้ง People Process และ Technology มั่นใจได้ว่า เป็นไปตามที่กฎหมายกำหนด',
-                                style: GoogleFonts.ibmPlexSansThai(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 24,
-                                    color: Color.fromARGB(255, 31, 40, 79)),
-                                textAlign: TextAlign.center,
+                            Container(
+                              // height: 138,
+                              // width: 954,
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                          top: 41.1,
+                                          left: 248,
+                                        ),
+                                        child: Container(
+                                          height: 138,
+                                          width: 954,
+                                          child: Text(
+                                            "ผลิตภัณฑ์ที่ถูกคิดค้นและพัฒนาจาก ประสบการณ์ของทีมผู้ให้คำปรึกษามามากกว่า 50+ โครงการ พร้อมให้คำปรึกษา วางแผน และวางระบบตามกฎหมาย สำหรับองค์กรและธุรกิจต่างๆ\nเติมเต็มให้ครบทั้ง People Process และ Technology มั่นใจได้ว่า เป็นไปตามที่กฎหมายกำหนด",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 24,
+                                              color: Color.fromARGB(
+                                                  255, 31, 40, 79),
+                                            ),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 60, left: 242),
+                                            child: SizedBox(
+                                              height: 513.23,
+                                              width: 377,
+                                              child: Image.asset(
+                                                  "/pdpa/mobile.png"),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              left: 60,
+                                            ),
+                                            child: Container(
+                                              width: 558,
+                                              height: 168.49,
+                                              decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  color: Colors.white),
+                                              child: Column(
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Wrap(children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 30.64,
+                                                                  left: 29.97),
+                                                          child: SizedBox(
+                                                            height: 30.64,
+                                                            width: 28.54,
+                                                            child: Image.asset(
+                                                                "/pdpa/check.png"),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                            left: 25.69,
+                                                            top: 27.57,
+                                                          ),
+                                                          child: Container(
+                                                            height: 45.95,
+                                                            width: 311.11,
+                                                            // color: Colors.amber,
+                                                            child: Text(
+                                                              "PRIVACY PROTECTION",
+                                                              style: GoogleFonts.poppins(
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          35,
+                                                                          34,
+                                                                          51),
+                                                                  fontSize: 24,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600),
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .start,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ]),
+                                                    ],
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                      left: 32.69,
+                                                      top: 4.6,
+                                                    ),
+                                                    child: Container(
+                                                      width: 428.13,
+                                                      height: 75.06,
+                                                      // color: Colors.red,
+                                                      child: Text(
+                                                        "ถูกต้องตามพ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล ครบถ้วนทั้งองค์กร",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        108,
+                                                                        108,
+                                                                        114),
+                                                                fontSize: 24,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400),
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              left: 60,
+                                            ),
+                                            child: Container(
+                                              width: 558,
+                                              height: 168.49,
+                                              decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  color: Colors.white),
+                                              child: Column(
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Wrap(children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 30.64,
+                                                                  left: 29.97),
+                                                          child: SizedBox(
+                                                            height: 30.64,
+                                                            width: 28.54,
+                                                            child: Image.asset(
+                                                                "/pdpa/check.png"),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                            left: 25.69,
+                                                            top: 27.57,
+                                                          ),
+                                                          child: Container(
+                                                            height: 45.95,
+                                                            width: 311.11,
+                                                            // color: Colors.amber,
+                                                            child: Text(
+                                                              "SECURITY INTELLIGENCE",
+                                                              style: GoogleFonts.poppins(
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          35,
+                                                                          34,
+                                                                          51),
+                                                                  fontSize: 24,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600),
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .start,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ]),
+                                                    ],
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                      left: 32.69,
+                                                      top: 4.6,
+                                                    ),
+                                                    child: Container(
+                                                      width: 428.13,
+                                                      height: 75.06,
+                                                      // color: Colors.red,
+                                                      child: Text(
+                                                        "Features ใช้งานง่าย ครอบคลุมทั้งระบบ \nจัดเก็บ เผยแพร่ ประมวลผล และตรวจสอบ",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        108,
+                                                                        108,
+                                                                        114),
+                                                                fontSize: 24,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400),
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              left: 60,
+                                            ),
+                                            child: Container(
+                                              width: 558,
+                                              height: 168.49,
+                                              decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  color: Colors.white),
+                                              child: Column(
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Wrap(children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 30.64,
+                                                                  left: 29.97),
+                                                          child: SizedBox(
+                                                            height: 30.64,
+                                                            width: 28.54,
+                                                            child: Image.asset(
+                                                                "/pdpa/check.png"),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                            left: 25.69,
+                                                            top: 27.57,
+                                                          ),
+                                                          child: Container(
+                                                            height: 45.95,
+                                                            width: 311.11,
+                                                            // color: Colors.amber,
+                                                            child: Text(
+                                                              "BEST DESIGN SOLUTION",
+                                                              style: GoogleFonts.poppins(
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          35,
+                                                                          34,
+                                                                          51),
+                                                                  fontSize: 24,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600),
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .start,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ]),
+                                                    ],
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                      left: 32.69,
+                                                      top: 4.6,
+                                                    ),
+                                                    child: Container(
+                                                      width: 428.13,
+                                                      height: 75.06,
+                                                      // color: Colors.red,
+                                                      child: Text(
+                                                        "วางแผนให้คำปรึกษา เติมเต็มให้ครบทั้ง People, Process และ Technology",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        108,
+                                                                        108,
+                                                                        114),
+                                                                fontSize: 24,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400),
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  )
+                                ],
                               ),
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 40.3, bottom: 61),
-                              child: SizedBox(
-                                height: 629.7,
-                                width: 819,
-                                child: Image.asset("/pdpa/pdpa.png"),
+                              padding: const EdgeInsets.only(
+                                top: 83.33,
+                              ),
+                              child: Container(
+                                height: 48,
+                                width: 193,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor:
+                                        Color.fromARGB(255, 75, 195, 211),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(30.0)),
+                                  ),
+                                  child: Text(
+                                    'ดูรายละเอียด',
+                                    style: GoogleFonts.ibmPlexSansThai(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.white),
+                                  ),
+                                ),
                               ),
                             ),
-                            SizedBox(
-                              height: 48,
-                              width: 193,
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor:
-                                      Color.fromARGB(255, 75, 195, 211),
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(30.0)),
-                                ),
-                                child: Text(
-                                  'ดูรายละเอียด',
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.white),
-                                ),
-                              ),
-                            )
                           ],
                         ),
                       ),
                     ),
-                  ))
+                  ),
+                )
               : Responsive.isTablet(context)
                   ? Container(
                       // height: 10,
                       width: 770,
+                      height: 1000,
                       color: Color.fromARGB(255, 232, 242, 254),
                       child: Container(
                         child: Center(
@@ -496,6 +828,43 @@ class _PdpaState extends State<Pdpa> {
                                               ],
                                             ),
                                           ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 30.73, left: 280),
+                                              child: Container(
+                                                height: 27,
+                                                width: 145,
+                                                child: ElevatedButton(
+                                                  onPressed: () {},
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    backgroundColor:
+                                                        Color.fromARGB(
+                                                            255, 75, 195, 211),
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        30.0)),
+                                                  ),
+                                                  child: Text(
+                                                    'ดูรายละเอียด',
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            color:
+                                                                Colors.white),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
                                         )
                                       ],
                                     ),
@@ -754,6 +1123,32 @@ class _PdpaState extends State<Pdpa> {
                                         ),
                                       ),
                                     ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 31.73,
+                                  ),
+                                  child: Container(
+                                    height: 28.04,
+                                    width: 146,
+                                    child: ElevatedButton(
+                                      onPressed: () {},
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor:
+                                            Color.fromARGB(255, 75, 195, 211),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(30.0)),
+                                      ),
+                                      child: Text(
+                                        'ดูรายละเอียด',
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.white),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ],
