@@ -170,6 +170,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+  loop_page_view:
+    dependency: "direct main"
+    description:
+      name: loop_page_view
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.0"
   matcher:
     dependency: transitive
     description:
@@ -267,7 +274,11 @@ packages:
     source: sdk
     version: "0.0.99"
   smooth_page_indicator:
+<<<<<<< Updated upstream
     dependency: "direct dev"
+=======
+    dependency: "direct main"
+>>>>>>> Stashed changes
     description:
       name: smooth_page_indicator
       url: "https://pub.dartlang.org"
