@@ -134,7 +134,7 @@ class _CustomerState extends State<CustomerPage> {
                   ),
                   Container(
                     width: Responsive.isTablet(context) ? 450 : 316,
-                    height: Responsive.isTablet(context) ? 70 : 170,
+                    height: Responsive.isTablet(context) ? 120 : 170,
                     // color: Colors.amber,
                     child: Text(
                       Responsive.isTablet(context)
@@ -195,7 +195,7 @@ class _CustomerState extends State<CustomerPage> {
                   ),
                   Container(
                     width: Responsive.isTablet(context) ? 374 : 316,
-                    height: Responsive.isTablet(context) ? 70 : 165,
+                    height: Responsive.isTablet(context) ? 120 : 165,
                     child: Text(
                       Responsive.isTablet(context)
                           ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้น\nเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ\nทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไป\nตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
@@ -244,7 +244,7 @@ class _CustomerState extends State<CustomerPage> {
                     ),
                   ),
                   Container(
-                    width: Responsive.isTablet(context) ? 182 : 244,
+                    width: Responsive.isTablet(context) ? 250 : 244,
                     height: Responsive.isTablet(context) ? 30 : 30,
                     child: Text(
                       "กรรมการและรองกรรมการผู้จัดการ",
@@ -257,7 +257,7 @@ class _CustomerState extends State<CustomerPage> {
                   ),
                   Container(
                     width: Responsive.isTablet(context) ? 374 : 316,
-                    height: Responsive.isTablet(context) ? 70 : 165,
+                    height: Responsive.isTablet(context) ? 120 : 165,
                     // color: Colors.amber,
                     child: Text(
                       Responsive.isTablet(context)
