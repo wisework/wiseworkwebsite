@@ -138,10 +138,12 @@ class _FooterState extends State<Footer> {
                               ? 16
                               : 16,
                       fontWeight: FontWeight.w400,
-                      color: Color.fromARGB(255, 218, 218, 218)),
+                      color: Responsive.isDesktop(context)
+                          ? Color.fromARGB(255, 218, 218, 218)
+                          : Colors.white),
                 ),
               ),
-              SizedBox(height: 0.0),
+              SizedBox(height: Responsive.isTablet(context) ? 15 : 0.0),
             ],
           );
         },
@@ -227,8 +229,9 @@ class _FooterState extends State<Footer> {
       child: Text(
         "Contact Us",
         style: GoogleFonts.ibmPlexSansThai(
-          fontSize: Responsive.isDesktop(context) ? 18 : 14,
-          fontWeight: FontWeight.w700,
+          fontSize: Responsive.isDesktop(context) ? 18 : 20,
+          fontWeight:
+              Responsive.isDesktop(context) ? FontWeight.w700 : FontWeight.w600,
           color: Colors.white,
         ),
       ),
@@ -238,7 +241,7 @@ class _FooterState extends State<Footer> {
     final _EmailController = TextEditingController();
     FocusNode _focusNode = new FocusNode();
 
-    var form = Container(
+    var formtext = Container(
       width: Responsive.isDesktop(context)
           ? 407
           : Responsive.isTablet(context)
@@ -247,64 +250,14 @@ class _FooterState extends State<Footer> {
       height: Responsive.isDesktop(context)
           ? 48
           : Responsive.isTablet(context)
-              ? 32
-              : 50,
-      child: TextFormField(
-        // cursorWidth: 20.0,
-        decoration: InputDecoration(
-          filled: true,
-          hintText: 'Text Box',
-          hintStyle: GoogleFonts.ibmPlexSansThai(
-            color: Colors.blueGrey,
-            fontSize: 18,
-          ),
-          fillColor: Colors.white,
-          border: OutlineInputBorder(
-            borderRadius: Responsive.isDesktop(context)
-                ? BorderRadius.circular(32)
-                : Responsive.isTablet(context)
-                    ? BorderRadius.circular(10)
-                    : BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.white, width: 2.0),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: Responsive.isDesktop(context)
-                ? BorderRadius.circular(32)
-                : Responsive.isTablet(context)
-                    ? BorderRadius.circular(10)
-                    : BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.blue, width: 5.0),
-          ),
-        ),
-        focusNode: _focusNode,
-        onTap: () {
-          FocusScope.of(context).requestFocus(_focusNode);
-        },
-        cursorColor: Colors.white,
-        style: TextStyle(
-          color: Colors.blueGrey,
-          fontSize: Responsive.isDesktop(context) ? 18 : 18,
-        ),
-        controller: _nameController,
-      ),
-    );
-
-    var formEmail = Container(
-      width: Responsive.isDesktop(context)
-          ? 198.17
-          : Responsive.isTablet(context)
-              ? 186.1
-              : 287,
-      height: Responsive.isDesktop(context)
-          ? 45
-          : Responsive.isTablet(context)
-              ? 32.42
+              ? 35
               : 50,
       child: TextFormField(
         // cursorWidth: 10.0,
         decoration: InputDecoration(
           filled: true,
-          hintText: 'Enter Your Email',
+          hintText: 'Text Box',
+          contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 0),
           hintStyle: GoogleFonts.ibmPlexSansThai(
             color: Colors.blueGrey,
             fontSize: Responsive.isDesktop(context) ? 18 : 18,
@@ -324,16 +277,69 @@ class _FooterState extends State<Footer> {
                 : Responsive.isTablet(context)
                     ? BorderRadius.circular(10)
                     : BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.blue, width: 5.0),
+            borderSide: BorderSide(
+                color: Color.fromARGB(255, 75, 195, 213), width: 5.0),
           ),
         ),
         // focusNode: _focusNode,
         onTap: () {},
-        cursorColor: Colors.white,
+        cursorColor: Color.fromARGB(255, 75, 195, 213),
         style: TextStyle(
           color: Colors.blueGrey,
           fontSize: Responsive.isDesktop(context) ? 18 : 18,
         ),
+        // textAlign: TextAlign.end,
+        controller: _nameController,
+      ),
+    );
+    var formEmail = Container(
+      width: Responsive.isDesktop(context)
+          ? 198.17
+          : Responsive.isTablet(context)
+              ? 186.1
+              : 287,
+      height: Responsive.isDesktop(context)
+          ? 45
+          : Responsive.isTablet(context)
+              ? 32.42
+              : 50,
+      child: TextFormField(
+        // cursorWidth: 10.0,
+        decoration: InputDecoration(
+          filled: true,
+          hintText: 'Enter Your Email',
+          contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+          hintStyle: GoogleFonts.ibmPlexSansThai(
+            color: Colors.blueGrey,
+            fontSize: Responsive.isDesktop(context) ? 18 : 18,
+          ),
+          fillColor: Colors.white,
+          border: OutlineInputBorder(
+            borderRadius: Responsive.isDesktop(context)
+                ? BorderRadius.circular(32)
+                : Responsive.isTablet(context)
+                    ? BorderRadius.circular(10)
+                    : BorderRadius.circular(10),
+            borderSide: BorderSide(color: Colors.white, width: 2.0),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: Responsive.isDesktop(context)
+                ? BorderRadius.circular(32)
+                : Responsive.isTablet(context)
+                    ? BorderRadius.circular(10)
+                    : BorderRadius.circular(10),
+            borderSide: BorderSide(
+                color: Color.fromARGB(255, 75, 195, 213), width: 5.0),
+          ),
+        ),
+        // focusNode: _focusNode,
+        onTap: () {},
+        cursorColor: Color.fromARGB(255, 75, 195, 213),
+        style: TextStyle(
+          color: Colors.blueGrey,
+          fontSize: Responsive.isDesktop(context) ? 18 : 18,
+        ),
+        // textAlign: TextAlign.end,
         controller: _EmailController,
       ),
     );
@@ -550,7 +556,7 @@ class _FooterState extends State<Footer> {
                                           SizedBox(
                                             height: 10,
                                           ),
-                                          form,
+                                          formtext,
                                           SizedBox(
                                             height: 15,
                                           ),
@@ -753,7 +759,268 @@ class _FooterState extends State<Footer> {
                     ),
                   )
                 : Responsive.isTablet(context)
-                    ? Container()
+                    ? Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Container(
+                                width: 768,
+                                height: 671,
+                              ),
+                              Container(
+                                width: 768,
+                                height: 171,
+                                color: Color.fromARGB(255, 232, 242, 254),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 171),
+                                child: Container(
+                                  width: 768,
+                                  height: 500,
+                                  color: Color.fromARGB(255, 52, 145, 206),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 108, left: 39),
+                                            child: Container(
+                                              width: 123.39,
+                                              height: 48,
+                                              child: Image.asset(
+                                                  "/footer/logo.png"),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 145.61,
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 135),
+                                            child: QLink,
+                                          ),
+                                          SizedBox(
+                                            width: 87,
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 135),
+                                            child: contact,
+                                          )
+                                        ],
+                                      ),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 35, left: 40),
+                                            child: Container(
+                                              width: 213,
+                                              height: 97,
+                                              child: Text(
+                                                "The Wise Work Co.,Ltd.\n7 Soi Lat Pla Khao 19,\nChorakhe Bua Subdistrict,\nLat Phrao District, Bangkok",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        color: Colors.white),
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 10, left: 61),
+                                            child: Container(
+                                              width: 114,
+                                              // height: 200,
+                                              // color: Colors.amber,
+                                              child: navbarlist,
+                                            ),
+                                          ),
+                                          Column(
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 13, left: 87),
+                                                child: Container(
+                                                  width: 213,
+                                                  height: 48,
+                                                  child: Text(
+                                                    "Get latest updates and offers.\nTry It Today.",
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            color:
+                                                                Colors.white),
+                                                  ),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 32, left: 87),
+                                                child: formtext,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            top: 6.58,
+                                                            left: 87),
+                                                    child: formEmail,
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            top: 7.87,
+                                                            left: 3.76),
+                                                    child: Container(
+                                                      width: 31.34,
+                                                      height: 29.83,
+                                                      decoration: BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(3),
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              75,
+                                                              195,
+                                                              211)),
+                                                      child: InkWell(
+                                                        onTap: () {
+                                                          // do something when the button is tapped
+                                                        },
+                                                        child: Image.asset(
+                                                            '/footer/send.png'),
+                                                      ),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 27, left: 40, right: 40),
+                                        child: Container(
+                                          width: 688,
+                                          height: 2,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 27, left: 221, right: 161),
+                                        child: Container(
+                                          width: 389,
+                                          height: 24,
+                                          child: Text(
+                                            "©  Copyright 2022 Thewiseworks | All Right Reserved.",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                color: Colors.white),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 86, left: 40, right: 40),
+                                child: Container(
+                                  width: 688,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Color.fromARGB(255, 248, 248, 255),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 45, left: 30, bottom: 45),
+                                        child: Container(
+                                          width: 60,
+                                          height: 60,
+                                          child: Image.asset(
+                                            "/footer/email-icon.png",
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 63, left: 16, bottom: 63),
+                                        child: Container(
+                                          width: 183,
+                                          height: 24,
+                                          child: Text(
+                                            "info@thewiseworks.com",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color.fromARGB(
+                                                    255, 35, 34, 51)),
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 22, bottom: 22, left: 55),
+                                        child: Container(
+                                          width: 1,
+                                          height: 106,
+                                          color: Color.fromARGB(
+                                              255, 108, 108, 114),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 45, left: 60, bottom: 45),
+                                        child: Container(
+                                          width: 60,
+                                          height: 60,
+                                          child: Image.asset(
+                                            "/footer/call-icon.png",
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 63, left: 18, bottom: 63),
+                                        child: Container(
+                                          width: 183,
+                                          height: 24,
+                                          child: Text(
+                                            "02-103-4379",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color.fromARGB(
+                                                    255, 35, 34, 51)),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      )
                     : Column(
                         children: [
                           Stack(
@@ -811,7 +1078,7 @@ class _FooterState extends State<Footer> {
                                         Padding(
                                           padding: const EdgeInsets.only(
                                               top: 29, left: 19, right: 15),
-                                          child: form,
+                                          child: formtext,
                                         ),
                                         Row(
                                           children: [
