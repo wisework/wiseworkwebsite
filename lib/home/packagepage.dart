@@ -327,7 +327,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                           )
                         ],
                         options: CarouselOptions(
-                            enableInfiniteScroll: true,
+                            enableInfiniteScroll: false,
                             scrollPhysics: PageScrollPhysics(),
                             aspectRatio: Responsive.isTablet(context)
                                 ? 1 / 1.03
@@ -347,7 +347,6 @@ class _DestinationCarouselState extends State<PackagesPage> {
                                 }
                               });
                             }),
-                        carouselController: _controller,
                       ),
                       // SizedBox(height: 10),
                       Container(
