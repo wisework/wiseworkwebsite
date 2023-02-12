@@ -30,139 +30,91 @@ class _DestinationCarouselState extends State<PackagesPage> {
   Widget build(BuildContext context) {
     final express = [
       Package(
-        title: !Responsive.isMobile(context)
-            ? 'Support Module วัตถุประสงค์หลัก PDPA'
-            : 'Module วัตถุประสงค์หลัก PDPA',
-        children: [
-          "PD Management",
-          "DPIA & Risk Management",
-          "Cookies & Consent Management"
-        ],
-        position: false,
-      ),
+          title: !Responsive.isMobile(context)
+              ? 'Support Module วัตถุประสงค์หลัก PDPA'
+              : 'Module วัตถุประสงค์หลัก PDPA',
+          children: [
+            "PD Management",
+            "DPIA & Risk Management",
+            "Cookies & Consent Management"
+          ]),
+      Package(title: "Standard Support 8x5", children: []),
+      Package(title: "API สามารถ Export ได้เท่านั้น", children: []),
       Package(
-        title: "Standard Support 8x5",
-        children: [],
-        position: false,
-      ),
+          title: !Responsive.isMobile(context)
+              ? "Concurrent Users = 5, Storage 10 GB ~100,000  Data Subject  "
+              : "Concurrent Users = 5 \n Storage 10 GB \n~100,000  Data Subject  ",
+          children: []),
       Package(
-        title: "API สามารถ Export ได้เท่านั้น",
-        children: [],
-        position: false,
-      ),
-      Package(
-        title: !Responsive.isMobile(context)
-            ? "Concurrent Users = 5, Storage 10 GB ~100,000  Data Subject  "
-            : "Concurrent Users = 5 \n Storage 10 GB \n~100,000  Data Subject  ",
-        children: [],
-        position: false,
-      ),
-      Package(
-        title: Responsive.isDesktop(context)
-            ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูลส่วนบุคคล และข้อมูลส่วนอ่อนไหว จำนวนมาก"
-            : Responsive.isTablet(context)
-                ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูลส่วน\nบุคคล และข้อมูลส่วนอ่อนไหว จำนวนมาก"
-                : "เหมาะสำหรับองค์กรที่มีการเก็บรวบรวมข้อมูลจำนวนมาก",
-        children: [],
-        position: false,
-      ),
+          title: Responsive.isDesktop(context)
+              ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูลส่วนบุคคล และข้อมูลส่วนอ่อนไหว จำนวนมาก"
+              : Responsive.isTablet(context)
+                  ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูลส่วน\nบุคคล และข้อมูลส่วนอ่อนไหว จำนวนมาก"
+                  : "เหมาะสำหรับองค์กรที่มีการเก็บรวบรวมข้อมูลจำนวนมาก",
+          children: []),
     ];
     final standard = [
+      Package(title: "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA", children: []),
+      Package(title: "ติดตั้งได้ทั้ง On-Premise หรือ On-Cloud", children: []),
       Package(
-        title: "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA",
-        children: [],
-        position: Responsive.isDesktop(context) ? true : false,
-      ),
+          title: !Responsive.isMobile(context)
+              ? "พัฒนาเพิ่มเติมได้ตามความต้องการ"
+              : "พัฒนาเพิ่มเติมตามความต้องการ",
+          children: []),
+      Package(title: "Standard Support 8x5", children: []),
       Package(
-        title: "ติดตั้งได้ทั้ง On-Premise หรือ On-Cloud",
-        children: [],
-        position: Responsive.isDesktop(context) ? true : false,
-      ),
+          title: !Responsive.isMobile(context)
+              ? "มี API สำหรับ Import & Export ข้อมูล"
+              : "มี API สำหรับ Import & Export",
+          children: []),
       Package(
-        title: !Responsive.isMobile(context)
-            ? "พัฒนาเพิ่มเติมได้ตามความต้องการ"
-            : "พัฒนาเพิ่มเติมตามความต้องการ",
-        children: [],
-        position: Responsive.isDesktop(context) ? true : false,
-      ),
+          title: "องค์กรไม่ต้องการเชื่อมต่อกับระบบภายในเดิม ", children: []),
       Package(
-        title: "Standard Support 8x5",
-        children: [],
-        position: Responsive.isDesktop(context) ? true : false,
-      ),
-      Package(
-        title: !Responsive.isMobile(context)
-            ? "มี API สำหรับ Import & Export ข้อมูล"
-            : "มี API สำหรับ Import & Export",
-        children: [],
-        position: Responsive.isDesktop(context) ? true : false,
-      ),
-      Package(
-        title: "องค์กรไม่ต้องการเชื่อมต่อกับระบบภายในเดิม ",
-        children: [],
-        position: Responsive.isDesktop(context) ? true : false,
-      ),
-      Package(
-        title: !Responsive.isMobile(context)
-            ? "เหมาะสำหรับองค์กรขนาดใหญ่ ธุรกิจเฉพาะ ต้องการปรับแต่งให้เข้ากับการทำงาน"
-            : "เหมาะสำหรับองค์กรขนาดใหญ่ปรับแต่งให้เข้ากับการทำงาน",
-        children: [],
-        position: Responsive.isDesktop(context) ? true : false,
-      ),
+          title: !Responsive.isMobile(context)
+              ? "เหมาะสำหรับองค์กรขนาดใหญ่ ธุรกิจเฉพาะ ต้องการปรับแต่งให้เข้ากับการทำงาน"
+              : "เหมาะสำหรับองค์กรขนาดใหญ่ปรับแต่งให้เข้ากับการทำงาน",
+          children: []),
     ];
     final enterprise = [
       Package(
-        title: Responsive.isDesktop(context)
-            ? "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA พร้อมปรับแต่งและพัฒนาได้ตามต้องการ"
-            : Responsive.isTablet(context)
-                ? "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA\n พร้อมปรับแต่งและพัฒนาได้ตามต้องการ"
-                : "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA พร้อมปรับแต่งและพัฒนาได้ตามต้องการ",
-        children: [],
-        position: false,
-      ),
+          title: Responsive.isDesktop(context)
+              ? "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA พร้อมปรับแต่งและพัฒนาได้ตามต้องการ"
+              : Responsive.isTablet(context)
+                  ? "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA\n พร้อมปรับแต่งและพัฒนาได้ตามต้องการ"
+                  : "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA พร้อมปรับแต่งและพัฒนาได้ตามต้องการ",
+          children: []),
       Package(
-        title: !Responsive.isMobile(context)
-            ? "ติดตั้งได้ทั้ง On-Premise หรือ On-Cloud"
-            : "ติดตั้ง On-Premise/On-Cloud",
-        children: [],
-        position: false,
-      ),
+          title: !Responsive.isMobile(context)
+              ? "ติดตั้งได้ทั้ง On-Premise หรือ On-Cloud"
+              : "ติดตั้ง On-Premise/On-Cloud",
+          children: []),
       Package(
-        title: !Responsive.isMobile(context)
-            ? "รองรับการทำงานแบบ Multi-tenant"
-            : "รองรับการทำงาน Multi-tenant",
-        children: [],
-        position: false,
-      ),
+          title: !Responsive.isMobile(context)
+              ? "รองรับการทำงานแบบ Multi-tenant"
+              : "รองรับการทำงาน Multi-tenant",
+          children: []),
+      Package(title: "Premium Support 24X7", children: []),
       Package(
-        title: "Premium Support 24X7",
-        children: [],
-        position: false,
-      ),
+          title: !Responsive.isMobile(context)
+              ? "มี API สำหรับ Import & Export ข้อมูล "
+              : "มี API สำหรับ Import & Export",
+          children: []),
       Package(
-        title: !Responsive.isMobile(context)
-            ? "มี API สำหรับ Import & Export ข้อมูล "
-            : "มี API สำหรับ Import & Export",
-        children: [],
-        position: false,
-      ),
-      Package(
-        title: Responsive.isDesktop(context)
-            ? "เหมาะสำหรับองค์กรขนาดใหญ่ที่มีสาขา มีบริษัทในเครือ ต้องการ Security ที่สามารถควบคุมเองได้ทั้งหมด"
-            : Responsive.isTablet(context)
-                ? "เหมาะสำหรับองค์กรขนาดใหญ่ที่มีสาขา \nมีบริษัทในเครือ ต้องการ Security \nที่สามารถควบคุมเองได้ทั้งหมด"
-                : "เหมาะสำหรับองค์กรขนาดใหญ่ที่มีสาขา มีบริษัทในเครือ ต้องการ Security ที่ควบคุมเองได้ทั้งหมด",
-        children: [],
-        position: false,
-      ),
+          title: Responsive.isDesktop(context)
+              ? "เหมาะสำหรับองค์กรขนาดใหญ่ที่มีสาขา มีบริษัทในเครือ ต้องการ Security ที่สามารถควบคุมเองได้ทั้งหมด"
+              : Responsive.isTablet(context)
+                  ? "เหมาะสำหรับองค์กรขนาดใหญ่ที่มีสาขา \nมีบริษัทในเครือ ต้องการ Security \nที่สามารถควบคุมเองได้ทั้งหมด"
+                  : "เหมาะสำหรับองค์กรขนาดใหญ่ที่มีสาขา มีบริษัทในเครือ ต้องการ Security ที่ควบคุมเองได้ทั้งหมด",
+          children: []),
     ];
 
     final CarouselController _controller = CarouselController();
 
-    // List _isHovering = [false, false, false];
+    List _isHovering = [false, false, false];
     List _isSelected = [true, false, false];
 
     int _current = 0;
+    final controller = PageController(viewportFraction: 0.8, keepPage: true);
     return Center(
       child: Container(
         width: 1440,
@@ -247,7 +199,6 @@ class _DestinationCarouselState extends State<PackagesPage> {
             ),
             Responsive.isDesktop(context)
                 ? Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       PackageCard(
@@ -328,10 +279,13 @@ class _DestinationCarouselState extends State<PackagesPage> {
                         ],
                         options: CarouselOptions(
                             enableInfiniteScroll: false,
-                            scrollPhysics: PageScrollPhysics(),
-                            aspectRatio: Responsive.isTablet(context)
-                                ? 1 / 1.03
-                                : 1 / 1.60,
+                            scrollPhysics:
+                                //  Responsive.isMobile(context)
+                                //     ?
+                                PageScrollPhysics(),
+                            // : NeverScrollableScrollPhysics(),
+                            // enlargeCenterPage: true,
+                            aspectRatio: 296 / 470,
                             autoPlay: false,
                             viewportFraction:
                                 Responsive.isTablet(context) ? 0.67 : 0.82,
@@ -347,6 +301,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                                 }
                               });
                             }),
+                        carouselController: _controller,
                       ),
                       // SizedBox(height: 10),
                       Container(
@@ -365,7 +320,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                   ),
             SizedBox(
               height: Responsive.isDesktop(context)
-                  ? 94
+                  ? 78
                   : Responsive.isTablet(context)
                       ? 40
                       : 76,
@@ -431,11 +386,13 @@ class PackageCard extends StatelessWidget {
                   : BorderRadius.circular(20),
               color: backgroundcolor ?? Color.fromARGB(255, 255, 255, 255),
             ),
-            height: !Responsive.isMobile(context)
-                ? middlebox
-                    ? 719
-                    : 749
-                : 534,
+            height: Responsive.isDesktop(context)
+                ? 749
+                : Responsive.isTablet(context)
+                    ? middlebox
+                        ? 719
+                        : 750
+                    : 534,
             width: Responsive.isDesktop(context)
                 ? firstbox
                     ? 465
@@ -490,11 +447,6 @@ class PackageCard extends StatelessWidget {
                         child: Text(
                           title,
                           style: GoogleFonts.ibmPlexSansThai(
-                              color: Responsive.isDesktop(context)
-                                  ? middlebox
-                                      ? Colors.white
-                                      : Colors.black
-                                  : Colors.black,
                               fontSize: Responsive.isDesktop(context)
                                   ? 32
                                   : Responsive.isTablet(context)
@@ -505,7 +457,7 @@ class PackageCard extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: !Responsive.isMobile(context) ? 38 : 0,
+                  height: !Responsive.isMobile(context) ? 38 : 10,
                 ),
                 Expanded(
                   child: ListView.builder(
@@ -531,11 +483,7 @@ class PackageCard extends StatelessWidget {
                   child: SizedBox(
                     width: !Responsive.isMobile(context) ? 352 : 200,
                     child: DottedLine(
-                      dashColor: Responsive.isDesktop(context)
-                          ? middlebox
-                              ? Colors.white
-                              : Color.fromARGB(255, 169, 169, 170)
-                          : Color.fromARGB(255, 169, 169, 170),
+                      dashColor: Color.fromARGB(255, 169, 169, 170),
                       dashGapLength: 3,
                       dashLength: 5,
                     ),
@@ -559,11 +507,6 @@ class PackageCard extends StatelessWidget {
                       child: Text(
                         lisence,
                         style: GoogleFonts.ibmPlexSansThai(
-                            color: Responsive.isDesktop(context)
-                                ? middlebox
-                                    ? Colors.white
-                                    : Colors.black
-                                : Colors.black,
                             fontSize: !Responsive.isMobile(context) ? 28 : 16,
                             fontWeight: FontWeight.w700),
                       )),
@@ -684,9 +627,6 @@ class Buildpackagetile extends StatelessWidget {
             child: Text(
               package.title,
               style: GoogleFonts.ibmPlexSansThai(
-                  color: package.position
-                      ? Color.fromARGB(255, 255, 255, 255)
-                      : Colors.black,
                   fontSize: !Responsive.isMobile(context) ? 20 : 16,
                   fontWeight: FontWeight.w400),
             ),
@@ -714,7 +654,7 @@ class Buildpackagetile extends StatelessWidget {
               title: Transform.translate(
                 offset: Offset(
                     Responsive.isDesktop(context)
-                        ? 40
+                        ? 0
                         : Responsive.isTablet(context)
                             ? 40
                             : 15,
@@ -732,18 +672,18 @@ class Buildpackagetile extends StatelessWidget {
               leading: Transform.translate(
                 offset: Offset(
                     Responsive.isDesktop(context)
-                        ? 70
+                        ? 30
                         : Responsive.isTablet(context)
                             ? 70
                             : 40,
                     Responsive.isDesktop(context)
                         ? 0
                         : Responsive.isTablet(context)
-                            ? 0
+                            ? -2
                             : 0),
                 child: SizedBox(
-                    width: !Responsive.isMobile(context) ? 12 : 10,
-                    height: !Responsive.isMobile(context) ? 12 : 10,
+                    width: Responsive.isDesktop(context) ? 12 : 10,
+                    height: Responsive.isDesktop(context) ? 12 : 10,
                     child: Image(image: AssetImage("packages/record.png"))),
               ),
             );
