@@ -427,7 +427,7 @@ class _CustomerState extends State<CustomerPage> {
                           ? Stack(
                               children: [
                                 Container(
-                                  width: 700,
+                                  width: 768,
                                   height: 350,
                                   // color: Colors.purple,
                                   // color: Color.fromARGB(255, 250, 251, 252),
@@ -659,9 +659,8 @@ class _CustomerState extends State<CustomerPage> {
                                   ),
                                 ),
                                 new Positioned(
-                                  top: 290,
-                                  left:
-                                      Responsive.isTablet(context) ? 300 : 165,
+                                  top: 310,
+                                  left: 340,
                                   child: Container(
                                     child: AnimatedSmoothIndicator(
                                         activeIndex: _current,
