@@ -101,7 +101,7 @@ class _FooterState extends State<Footer> {
 
     var QLink = Container(
       width: 115.86,
-      height: 20,
+      height: 25,
       child: Text(
         'Quick Links',
         style: GoogleFonts.ibmPlexSansThai(
@@ -121,7 +121,7 @@ class _FooterState extends State<Footer> {
     var navbarlist = Container(
       color: Color.fromARGB(0, 255, 193, 7),
       height: 160,
-      width: 80,
+      width: Responsive.isDesktop(context) ? 80 : 150,
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: navbar.length,
@@ -154,7 +154,7 @@ class _FooterState extends State<Footer> {
 
     var services = Container(
       width: 115.86,
-      height: 20,
+      height: 25,
       child: Text(
         "Our Services",
         style: GoogleFonts.ibmPlexSansThai(
@@ -1126,12 +1126,19 @@ class _FooterState extends State<Footer> {
                                           padding: const EdgeInsets.only(
                                               top: 53, left: 28, right: 205),
                                           child: Container(
-                                            width: 142,
-                                            height: 215,
+                                            width: 150,
+                                            height: 220,
                                             child: Column(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
-                                              children: [QLink, navbarlist],
+                                              children: [
+                                                SizedBox(
+                                                    height: 30, child: QLink),
+                                                SizedBox(
+                                                  height: 10,
+                                                ),
+                                                navbarlist
+                                              ],
                                             ),
                                           ),
                                         ),
