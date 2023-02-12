@@ -53,15 +53,23 @@ class _FooterState extends State<Footer> {
 
     var list2 = Container(
         color: Color.fromARGB(0, 255, 193, 7),
-        height: Responsive.isDesktop(context) ? 130 : 100,
-        width: Responsive.isDesktop(context) ? 292 : 250,
+        height: Responsive.isDesktop(context)
+            ? 124
+            : Responsive.isTablet(context)
+                ? 213
+                : 301,
+        width: Responsive.isDesktop(context)
+            ? 291
+            : Responsive.isTablet(context)
+                ? 97
+                : 72,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               "7 Soi Lat Pla Khao 19, Chorakhe Bua Subdistrict, Lat Phrao District, Bangkok",
               style: GoogleFonts.ibmPlexSansThai(
-                fontSize: Responsive.isDesktop(context) ? 16 : 12,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: Colors.white,
               ),
@@ -72,7 +80,7 @@ class _FooterState extends State<Footer> {
             Text(
               "admin@thewiseworks.com",
               style: GoogleFonts.ibmPlexSansThai(
-                fontSize: Responsive.isDesktop(context) ? 16 : 12,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: Colors.white,
               ),
@@ -83,7 +91,7 @@ class _FooterState extends State<Footer> {
             Text(
               "02-103-4376",
               style: GoogleFonts.ibmPlexSansThai(
-                fontSize: Responsive.isDesktop(context) ? 16 : 12,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: Colors.white,
               ),
@@ -96,7 +104,11 @@ class _FooterState extends State<Footer> {
         'Quick Links',
         style: GoogleFonts.ibmPlexSansThai(
             color: Colors.white,
-            fontSize: Responsive.isDesktop(context) ? 18 : 14,
+            fontSize: Responsive.isDesktop(context)
+                ? 18
+                : Responsive.isTablet(context)
+                    ? 20
+                    : 25,
             fontWeight: FontWeight.w600),
       ),
     );
@@ -106,7 +118,7 @@ class _FooterState extends State<Footer> {
 
     var navbarlist = Container(
       color: Color.fromARGB(0, 255, 193, 7),
-      height: 150,
+      height: 160,
       width: 80,
       child: ListView.builder(
         shrinkWrap: true,
@@ -120,7 +132,11 @@ class _FooterState extends State<Footer> {
                 child: Text(
                   navbar[index],
                   style: GoogleFonts.ibmPlexSansThai(
-                      fontSize: Responsive.isDesktop(context) ? 15 : 12,
+                      fontSize: Responsive.isDesktop(context)
+                          ? 15
+                          : Responsive.isTablet(context)
+                              ? 16
+                              : 16,
                       fontWeight: FontWeight.w400,
                       color: Color.fromARGB(255, 218, 218, 218)),
                 ),
@@ -223,8 +239,16 @@ class _FooterState extends State<Footer> {
     FocusNode _focusNode = new FocusNode();
 
     var form = Container(
-      width: Responsive.isDesktop(context) ? 360 : 300,
-      height: Responsive.isDesktop(context) ? 48 : 40,
+      width: Responsive.isDesktop(context)
+          ? 407
+          : Responsive.isTablet(context)
+              ? 221
+              : 341,
+      height: Responsive.isDesktop(context)
+          ? 48
+          : Responsive.isTablet(context)
+              ? 32
+              : 50,
       child: TextFormField(
         // cursorWidth: 20.0,
         decoration: InputDecoration(
@@ -232,16 +256,24 @@ class _FooterState extends State<Footer> {
           hintText: 'Text Box',
           hintStyle: GoogleFonts.ibmPlexSansThai(
             color: Colors.blueGrey,
-            fontSize: Responsive.isDesktop(context) ? 18 : 12,
+            fontSize: 18,
           ),
           fillColor: Colors.white,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(50.0),
+            borderRadius: Responsive.isDesktop(context)
+                ? BorderRadius.circular(32)
+                : Responsive.isTablet(context)
+                    ? BorderRadius.circular(10)
+                    : BorderRadius.circular(10),
             borderSide: BorderSide(color: Colors.white, width: 2.0),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(50.0),
-            borderSide: BorderSide(color: Colors.pink, width: 5.0),
+            borderRadius: Responsive.isDesktop(context)
+                ? BorderRadius.circular(32)
+                : Responsive.isTablet(context)
+                    ? BorderRadius.circular(10)
+                    : BorderRadius.circular(10),
+            borderSide: BorderSide(color: Colors.blue, width: 5.0),
           ),
         ),
         focusNode: _focusNode,
@@ -251,15 +283,23 @@ class _FooterState extends State<Footer> {
         cursorColor: Colors.white,
         style: TextStyle(
           color: Colors.blueGrey,
-          fontSize: Responsive.isDesktop(context) ? 18 : 12,
+          fontSize: Responsive.isDesktop(context) ? 18 : 18,
         ),
         controller: _nameController,
       ),
     );
 
     var formEmail = Container(
-      width: Responsive.isDesktop(context) ? 170 : 145,
-      height: Responsive.isDesktop(context) ? 48 : 40,
+      width: Responsive.isDesktop(context)
+          ? 198.17
+          : Responsive.isTablet(context)
+              ? 186.1
+              : 287,
+      height: Responsive.isDesktop(context)
+          ? 45
+          : Responsive.isTablet(context)
+              ? 32.42
+              : 50,
       child: TextFormField(
         // cursorWidth: 10.0,
         decoration: InputDecoration(
@@ -267,40 +307,51 @@ class _FooterState extends State<Footer> {
           hintText: 'Enter Your Email',
           hintStyle: GoogleFonts.ibmPlexSansThai(
             color: Colors.blueGrey,
-            fontSize: Responsive.isDesktop(context) ? 18 : 12,
+            fontSize: Responsive.isDesktop(context) ? 18 : 18,
           ),
           fillColor: Colors.white,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(50.0),
+            borderRadius: Responsive.isDesktop(context)
+                ? BorderRadius.circular(32)
+                : Responsive.isTablet(context)
+                    ? BorderRadius.circular(10)
+                    : BorderRadius.circular(10),
             borderSide: BorderSide(color: Colors.white, width: 2.0),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(50.0),
-            borderSide: BorderSide(color: Colors.red, width: 5.0),
+            borderRadius: Responsive.isDesktop(context)
+                ? BorderRadius.circular(32)
+                : Responsive.isTablet(context)
+                    ? BorderRadius.circular(10)
+                    : BorderRadius.circular(10),
+            borderSide: BorderSide(color: Colors.blue, width: 5.0),
           ),
         ),
         // focusNode: _focusNode,
         onTap: () {},
         cursorColor: Colors.white,
-        style: TextStyle(color: Colors.blueGrey),
+        style: TextStyle(
+          color: Colors.blueGrey,
+          fontSize: Responsive.isDesktop(context) ? 18 : 18,
+        ),
         controller: _EmailController,
       ),
     );
 
     var button = SizedBox(
-      width: Responsive.isDesktop(context) ? 170 : 145,
-      height: Responsive.isDesktop(context) ? 48 : 40,
+      width: 192.2,
+      height: 48,
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
           backgroundColor: Color.fromARGB(255, 75, 195, 211),
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
         ),
         child: Text(
           'Send message',
           style: GoogleFonts.ibmPlexSansThai(
-            fontSize: Responsive.isDesktop(context) ? 19 : 12,
+            fontSize: 19,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -324,11 +375,6 @@ class _FooterState extends State<Footer> {
       color: Colors.white,
     );
 
-    // bool _isLargeScreen() {
-    //   final double screenWidth = MediaQuery.of(context).size.width;
-    //   return screenWidth > 1400;
-    // }
-
     return Center(
       child: Container(
         color: Color.fromARGB(255, 52, 144, 206),
@@ -346,7 +392,7 @@ class _FooterState extends State<Footer> {
             ),
             Responsive.isDesktop(context)
                 ? Container(
-                    width: 1200,
+                    width: 1440,
                     child: Column(
                       children: [
                         Padding(
@@ -486,7 +532,7 @@ class _FooterState extends State<Footer> {
                                   ),
                                 ),
                                 Container(
-                                  width: 380,
+                                  width: 450,
                                   // height: 230,
                                   child: Column(
                                     children: [
@@ -510,16 +556,14 @@ class _FooterState extends State<Footer> {
                                           ),
                                           Row(
                                             children: [
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    left: 15),
-                                                child: formEmail,
+                                              SizedBox(
+                                                width: 20,
                                               ),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    left: 15),
-                                                child: button,
+                                              formEmail,
+                                              SizedBox(
+                                                width: 15,
                                               ),
+                                              button,
                                             ],
                                           ),
                                           SizedBox(
@@ -709,182 +753,332 @@ class _FooterState extends State<Footer> {
                     ),
                   )
                 : Responsive.isTablet(context)
-                    ? Container(
-                        width: 600,
-                        child: Column(
-                          children: [
-                            Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Image.asset(
-                                    "/footer/logo.png",
-                                    height: 80,
-                                    width: 140,
-                                  )
-                                ]),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                listImg,
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                list2
-                              ],
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 25, right: 25),
-                              child: Row(
-                                // mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    width: 200,
-                                    height: 160,
-                                    // color: Colors.amber,
+                    ? Container()
+                    : Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Container(
+                                width: 375,
+                                height: 1318,
+                                color: Colors.amber,
+                              ),
+                              Container(
+                                width: 375,
+                                height: 223,
+                                color: Color.fromARGB(255, 232, 242, 254),
+                              ),
+                              new Positioned(
+                                  top: 223,
+                                  child: Container(
+                                    width: 375,
+                                    height: 1095,
+                                    color: Color.fromARGB(255, 52, 145, 206),
                                     child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
                                       children: [
-                                        QLink,
-                                        services,
-                                        Text(
-                                          'Connect with Us',
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w700,
-                                              color: Colors.white),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 209, right: 123, left: 31),
+                                          child: Container(
+                                            width: 221,
+                                            height: 38,
+                                            child: Text(
+                                              "Contact Us",
+                                              style: GoogleFonts.poppins(
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.w600,
+                                                  color: Colors.white),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                          ),
                                         ),
-                                        SizedBox(
-                                          height: 10,
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 11, left: 31, right: 23),
+                                          child: Container(
+                                            width: 320,
+                                            height: 24,
+                                            child: Text(
+                                              "Get latest updates and offers. Try It Today.",
+                                              style: GoogleFonts.poppins(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.white),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                          ),
                                         ),
-                                        Wrap(
-                                          spacing: 10,
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 29, left: 19, right: 15),
+                                          child: form,
+                                        ),
+                                        Row(
                                           children: [
-                                            Wrap(
-                                              spacing: 10.0,
-                                              children: [
-                                                Image.asset("/footer/fb.png"),
-                                                Image.asset("/footer/ig.png"),
-                                                Image.asset("/footer/yt.png"),
-                                                Image.asset(
-                                                    "/footer/tiktok.png"),
-                                              ],
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 29,
+                                                  left: 19,
+                                                  right: 5.8),
+                                              child: formEmail,
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 29),
+                                              child: Container(
+                                                width: 48.34,
+                                                height: 46,
+                                                decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            3),
+                                                    color: Color.fromARGB(
+                                                        255, 75, 195, 211)),
+                                                child: InkWell(
+                                                  onTap: () {
+                                                    // do something when the button is tapped
+                                                  },
+                                                  child: Image.asset(
+                                                      '/footer/send.png'),
+                                                ),
+                                              ),
                                             )
                                           ],
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 53, left: 28, right: 205),
+                                          child: Container(
+                                            width: 142,
+                                            height: 215,
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [QLink, navbarlist],
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 59,
+                                              left: 32.76,
+                                              right: 247.24),
+                                          child: Container(
+                                            width: 95,
+                                            height: 35,
+                                            child:
+                                                Image.asset("/footer/logo.png"),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 25,
+                                              left: 42.76,
+                                              right: 31.24),
+                                          child: Container(
+                                            width: 301,
+                                            height: 72,
+                                            child: Text(
+                                              "The Wise Work Co.,Ltd.\n7 Soi Lat Pla Khao 19, Chorakhe Bua\nSubdistrict, Lat Phrao District, Bangkok",
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      color: Colors.white),
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 33, left: 31, right: 68.24),
+                                          child: Container(
+                                              width: 275.76,
+                                              height: 25,
+                                              child: Row(
+                                                children: [
+                                                  Container(
+                                                    width: 25,
+                                                    height: 25,
+                                                    child: InkWell(
+                                                      onTap: () {
+                                                        // do something when the button is tapped
+                                                      },
+                                                      child: Image.asset(
+                                                          '/footer/fb.png'),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 28,
+                                                  ),
+                                                  Container(
+                                                    width: 2,
+                                                    height: 20,
+                                                    color: Colors.white,
+                                                  ),
+                                                  SizedBox(width: 29),
+                                                  Container(
+                                                    width: 25,
+                                                    height: 25,
+                                                    child: InkWell(
+                                                      onTap: () {
+                                                        // do something when the button is tapped
+                                                      },
+                                                      child: Image.asset(
+                                                          '/footer/ig.png'),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 28,
+                                                  ),
+                                                  Container(
+                                                    width: 2,
+                                                    height: 20,
+                                                    color: Colors.white,
+                                                  ),
+                                                  SizedBox(
+                                                    width: 29,
+                                                  ),
+                                                  Container(
+                                                    width: 25,
+                                                    height: 25,
+                                                    child: InkWell(
+                                                      onTap: () {
+                                                        // do something when the button is tapped
+                                                      },
+                                                      child: Image.asset(
+                                                          '/footer/yt.png'),
+                                                    ),
+                                                  ),
+                                                  SizedBox(width: 28),
+                                                  Container(
+                                                    width: 2,
+                                                    height: 20,
+                                                    color: Colors.white,
+                                                  ),
+                                                  SizedBox(width: 26.8),
+                                                  Container(
+                                                    width: 25,
+                                                    height: 25,
+                                                    child: InkWell(
+                                                      onTap: () {
+                                                        // do something when the button is tapped
+                                                      },
+                                                      child: Image.asset(
+                                                          '/footer/tiktok.png'),
+                                                    ),
+                                                  ),
+                                                ],
+                                              )),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 25, left: 16, right: 16),
+                                          child: Container(
+                                            width: 343,
+                                            height: 1,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 28, left: 26, right: 26),
+                                          child: Container(
+                                            width: 303,
+                                            height: 20,
+                                            child: Text(
+                                              "©  Copyright 2022 Thewiseworks | All Right Reserved.",
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      color: Colors.white),
+                                            ),
+                                          ),
                                         )
                                       ],
                                     ),
-                                  ),
-                                  Container(
-                                    width: 350,
-                                    height: 160,
-                                    child: Column(
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            contact,
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            form,
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            Wrap(
-                                              spacing: 10,
-                                              children: [formEmail, button],
-                                            ),
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            get
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                  height: 1,
-                                  width: 600,
-                                  color: Colors.white,
-                                )
-                              ],
-                            ),
-                            Row(
-                              // crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Wrap(
-                                  spacing: 10,
-                                  children: [
-                                    TextButton(
-                                        onPressed: () {},
-                                        child: Text(
-                                          "Privacy Policy",
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w400),
-                                        )),
-                                    TextButton(
-                                        onPressed: () {},
-                                        child: Text(
-                                          "Term of Services",
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w400),
-                                        )),
-                                    TextButton(
-                                        onPressed: () {},
-                                        child: Text(
-                                          "Cookie",
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w400),
-                                        ))
-                                  ],
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "© Copyright 2022 Thewiseworks | All Right Reserved.",
-                                  style: GoogleFonts.ibmPlexSansThai(
+                                  )),
+                              new Positioned(
+                                top: 74,
+                                left: 16,
+                                child: Container(
+                                  width: 342,
+                                  height: 310,
+                                  decoration: BoxDecoration(
                                       color: Colors.white,
-                                      fontWeight: FontWeight.w400),
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                      )
-                    : Container(
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "/footer/logo.png",
-                                  height: 70,
-                                  width: 70,
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 30),
+                                        child: Container(
+                                          width: 50,
+                                          height: 50,
+                                          child: Image.asset(
+                                              "/footer/email-icon.png"),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 20),
+                                        child: Container(
+                                          width: 228,
+                                          height: 30,
+                                          child: Text(
+                                            "info@thewiseworks.com",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color.fromARGB(
+                                                    255, 35, 34, 51)),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 20),
+                                        child: Container(
+                                          width: 117,
+                                          height: 3,
+                                          color:
+                                              Color.fromARGB(255, 35, 34, 51),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 30),
+                                        child: Container(
+                                          width: 50,
+                                          height: 50,
+                                          child: Image.asset(
+                                              "/footer/call-icon.png"),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 20),
+                                        child: Container(
+                                          width: 228,
+                                          height: 30,
+                                          child: Text(
+                                            "02-103-4379",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color.fromARGB(
+                                                    255, 35, 34, 51)),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ],
-                            )
-                          ],
-                        ),
+                              ),
+                            ],
+                          ),
+                        ],
                       )
           ],
         ),
