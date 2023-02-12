@@ -423,467 +423,567 @@ class _CustomerState extends State<CustomerPage> {
                                 );
                               }),
                         )
-                      : Stack(
-                          children: [
-                            Container(
-                              width: Responsive.isTablet(context) ? 700 : 375,
-                              height: 280,
-                              // color: Colors.purple,
-                              // color: Color.fromARGB(255, 250, 251, 252),
-                              child: Column(
-                                // mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  CarouselSlider(
-                                    options: CarouselOptions(
-                                      height: 280,
-                                      autoPlay: true,
-                                      onPageChanged: (index, reason) {
-                                        setState(() {
-                                          _current = index;
-                                          // print('Current Page: $_current');
-                                        });
-                                      },
-                                    ),
-                                    items: [
-                                      Responsive.isTablet(context)
-                                          ? Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Column(
-                                                  children: [
-                                                    Container(
+                      : Responsive.isTablet(context)
+                          ? Stack(
+                              children: [
+                                Container(
+                                  width: 700,
+                                  height: 350,
+                                  // color: Colors.purple,
+                                  // color: Color.fromARGB(255, 250, 251, 252),
+                                  child: Column(
+                                    // mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      CarouselSlider(
+                                          options: CarouselOptions(
+                                            enlargeCenterPage: false,
+                                            // viewportFraction: 0.5,
+                                            height: 350,
+                                            autoPlay: true,
+                                            onPageChanged: (index, reason) {
+                                              setState(() {
+                                                _current = index;
+                                                // print('Current Page: $_current');
+                                              });
+                                            },
+                                          ),
+                                          items: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(10.0),
+                                              child: GridView.count(
+                                                crossAxisSpacing: 10,
+                                                mainAxisSpacing: 10,
+                                                crossAxisCount: 4,
+                                                children:
+                                                    List.generate(8, (index) {
+                                                  final imageIndex = index;
+                                                  return Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            5.0),
+                                                    child: Container(
                                                       decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
+                                                        color: Color.fromARGB(
+                                                            255, 255, 255, 255),
+                                                        border: Border.all(
+                                                            color:
+                                                                Colors.black12),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 3,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      height: 150,
+                                                      width: 144,
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                .all(20),
+                                                                .all(20.0),
                                                         child: Image.asset(
-                                                            "/customer/advice.png"),
+                                                            customer[
+                                                                imageIndex]),
                                                       ),
                                                     ),
-                                                    SizedBox(
-                                                      height: 45,
-                                                    ),
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20),
-                                                        child: Image.asset(
-                                                            "/customer/ichitan.png"),
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                                SizedBox(
-                                                  width: 20,
-                                                ),
-                                                Column(
-                                                  children: [
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20),
-                                                        child: Image.asset(
-                                                            "/customer/daiichi.png"),
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 45,
-                                                    ),
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20),
-                                                        child: Image.asset(
-                                                            "/customer/click.png"),
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                                SizedBox(
-                                                  width: 20,
-                                                ),
-                                                Column(
-                                                  children: [
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20),
-                                                        child: Image.asset(
-                                                            "/customer/brr.png"),
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 45,
-                                                    ),
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20),
-                                                        child: Image.asset(
-                                                            "/customer/boonrawd.png"),
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                                SizedBox(
-                                                  width: 20,
-                                                ),
-                                                Column(
-                                                  children: [
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20),
-                                                        child: Image.asset(
-                                                            "/customer/bitkub.png"),
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 45,
-                                                    ),
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20),
-                                                        child: Image.asset(
-                                                            "/customer/bdms.png"),
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              ],
-                                            )
-                                          : Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Column(
-                                                  children: [
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20),
-                                                        child: Image.asset(
-                                                            "/customer/advice.png"),
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 45,
-                                                    ),
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20),
-                                                        child: Image.asset(
-                                                            "/customer/ichitan.png"),
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                                SizedBox(
-                                                  width: 20,
-                                                ),
-                                                Column(
-                                                  children: [
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20),
-                                                        child: Image.asset(
-                                                            "/customer/daiichi.png"),
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 45,
-                                                    ),
-                                                    Container(
-                                                      decoration: BoxDecoration(
-                                                          // color: Colors.amber,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          border: Border.all(
-                                                              color: Colors
-                                                                  .black12,
-                                                              width: 1)),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20),
-                                                        child: Image.asset(
-                                                            "/customer/click.png"),
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                                SizedBox(
-                                                  width: 20,
-                                                ),
-                                              ],
+                                                  );
+                                                }),
+                                              ),
                                             ),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Column(
-                                            children: [
-                                              Container(
-                                                decoration: BoxDecoration(
-                                                    // color: Colors.amber,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            5),
-                                                    border: Border.all(
-                                                        color: Colors.black12,
-                                                        width: 1)),
-                                                height: 100,
-                                                width: 100,
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(20),
-                                                  child: Image.asset(
-                                                      "/customer/brr.png"),
-                                                ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(10.0),
+                                              child: GridView.count(
+                                                crossAxisSpacing: 10,
+                                                mainAxisSpacing: 10,
+                                                crossAxisCount: 4,
+                                                children:
+                                                    List.generate(8, (index) {
+                                                  final imageIndex = index + 8;
+                                                  return Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            5.0),
+                                                    child: Container(
+                                                      decoration: BoxDecoration(
+                                                        color: Color.fromARGB(
+                                                            255, 255, 255, 255),
+                                                        border: Border.all(
+                                                            color:
+                                                                Colors.black12),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 3,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      height: 150,
+                                                      width: 144,
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(20.0),
+                                                        child: Image.asset(
+                                                            customer[
+                                                                imageIndex]),
+                                                      ),
+                                                    ),
+                                                  );
+                                                }),
                                               ),
-                                              SizedBox(
-                                                height: 45,
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(10.0),
+                                              child: GridView.count(
+                                                crossAxisSpacing: 10,
+                                                mainAxisSpacing: 10,
+                                                crossAxisCount: 4,
+                                                children:
+                                                    List.generate(8, (index) {
+                                                  final imageIndex = index + 16;
+                                                  return Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            5.0),
+                                                    child: Container(
+                                                      height: 150,
+                                                      width: 144,
+                                                      decoration: BoxDecoration(
+                                                        color: Color.fromARGB(
+                                                            255, 255, 255, 255),
+                                                        border: Border.all(
+                                                            color:
+                                                                Colors.black12),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 3,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(20.0),
+                                                        child: Image.asset(
+                                                            customer[
+                                                                imageIndex]),
+                                                      ),
+                                                    ),
+                                                  );
+                                                }),
                                               ),
-                                              Container(
-                                                decoration: BoxDecoration(
-                                                    // color: Colors.amber,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            5),
-                                                    border: Border.all(
-                                                        color: Colors.black12,
-                                                        width: 1)),
-                                                height: 100,
-                                                width: 100,
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(20),
-                                                  child: Image.asset(
-                                                      "/customer/boonrawd.png"),
-                                                ),
-                                              )
-                                            ],
-                                          ),
-                                          SizedBox(
-                                            width: 20,
-                                          ),
-                                          Column(
-                                            children: [
-                                              Container(
-                                                decoration: BoxDecoration(
-                                                    // color: Colors.amber,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            5),
-                                                    border: Border.all(
-                                                        color: Colors.black12,
-                                                        width: 1)),
-                                                height: 100,
-                                                width: 100,
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(20),
-                                                  child: Image.asset(
-                                                      "/customer/bitkub.png"),
-                                                ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(10.0),
+                                              child: GridView.count(
+                                                crossAxisSpacing: 10,
+                                                mainAxisSpacing: 10,
+                                                crossAxisCount: 4,
+                                                children:
+                                                    List.generate(2, (index) {
+                                                  final imageIndex = index + 24;
+                                                  return Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            5.0),
+                                                    child: Container(
+                                                      height: 150,
+                                                      width: 144,
+                                                      decoration: BoxDecoration(
+                                                        color: Color.fromARGB(
+                                                            255, 255, 255, 255),
+                                                        border: Border.all(
+                                                            color:
+                                                                Colors.black12),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 3,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(20.0),
+                                                        child: Image.asset(
+                                                            customer[
+                                                                imageIndex]),
+                                                      ),
+                                                    ),
+                                                  );
+                                                }),
                                               ),
-                                              SizedBox(
-                                                height: 45,
-                                              ),
-                                              Container(
-                                                decoration: BoxDecoration(
-                                                    // color: Colors.amber,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            5),
-                                                    border: Border.all(
-                                                        color: Colors.black12,
-                                                        width: 1)),
-                                                height: 100,
-                                                width: 100,
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(20),
-                                                  child: Image.asset(
-                                                      "/customer/bdms.png"),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
+                                            ),
+                                          ]),
                                     ],
                                   ),
-                                ],
-                              ),
-                            ),
-                            new Positioned(
-                              top: 260,
-                              left: Responsive.isTablet(context) ? 300 : 165,
-                              child: Container(
-                                child: AnimatedSmoothIndicator(
-                                  activeIndex: _current,
-                                  count: 4,
-                                  effect: CustomizableEffect(
-                                    activeDotDecoration: DotDecoration(
-                                      width: 16,
-                                      height: 6,
-                                      color: Color.fromARGB(255, 1, 41, 53),
-                                      borderRadius: BorderRadius.circular(50),
-                                    ),
-                                    dotDecoration: DotDecoration(
-                                      width: 10,
-                                      height: 4,
-                                      color: Colors.black12,
-                                      borderRadius: BorderRadius.circular(50),
-                                      verticalOffset: 0,
-                                    ),
-                                    spacing: 6.0,
+                                ),
+                                new Positioned(
+                                  top: 290,
+                                  left:
+                                      Responsive.isTablet(context) ? 300 : 165,
+                                  child: Container(
+                                    child: AnimatedSmoothIndicator(
+                                        activeIndex: _current,
+                                        count: 4,
+                                        effect: ScaleEffect(
+                                            activePaintStyle:
+                                                PaintingStyle.stroke,
+                                            scale: 1.4,
+                                            activeStrokeWidth: 1.0,
+                                            dotWidth: 16,
+                                            dotHeight: 16,
+                                            dotColor: Color.fromARGB(
+                                                255, 34, 15, 109))),
                                   ),
                                 ),
-                              ),
+                              ],
+                            )
+                          : Stack(
+                              children: [
+                                Container(
+                                  width: 375,
+                                  height: 350,
+                                  // color: Colors.purple,
+                                  // color: Color.fromARGB(255, 250, 251, 252),
+                                  child: Column(
+                                    // mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      CarouselSlider(
+                                          options: CarouselOptions(
+                                            enlargeCenterPage: false,
+                                            // viewportFraction: 0.5,
+                                            height: 350,
+                                            autoPlay: true,
+                                            onPageChanged: (index, reason) {
+                                              setState(() {
+                                                _current = index;
+                                                // print('Current Page: $_current');
+                                              });
+                                            },
+                                          ),
+                                          items: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(10.0),
+                                              child: GridView.count(
+                                                crossAxisSpacing: 10,
+                                                mainAxisSpacing: 10,
+                                                crossAxisCount: 3,
+                                                children:
+                                                    List.generate(6, (index) {
+                                                  final imageIndex = index;
+                                                  return Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            2.0),
+                                                    child: Container(
+                                                      decoration: BoxDecoration(
+                                                        color: Color.fromARGB(
+                                                            255, 255, 255, 255),
+                                                        border: Border.all(
+                                                            color:
+                                                                Colors.black12),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 3,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      height: 100,
+                                                      width: 100,
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(10.0),
+                                                        child: Image.asset(
+                                                            customer[
+                                                                imageIndex]),
+                                                      ),
+                                                    ),
+                                                  );
+                                                }),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(10.0),
+                                              child: GridView.count(
+                                                crossAxisSpacing: 10,
+                                                mainAxisSpacing: 10,
+                                                crossAxisCount: 3,
+                                                children:
+                                                    List.generate(6, (index) {
+                                                  final imageIndex = index + 6;
+                                                  return Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            2.0),
+                                                    child: Container(
+                                                      decoration: BoxDecoration(
+                                                        color: Color.fromARGB(
+                                                            255, 255, 255, 255),
+                                                        border: Border.all(
+                                                            color:
+                                                                Colors.black12),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 3,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      height: 100,
+                                                      width: 100,
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(10.0),
+                                                        child: Image.asset(
+                                                            customer[
+                                                                imageIndex]),
+                                                      ),
+                                                    ),
+                                                  );
+                                                }),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(10.0),
+                                              child: GridView.count(
+                                                crossAxisSpacing: 10,
+                                                mainAxisSpacing: 10,
+                                                crossAxisCount: 3,
+                                                children:
+                                                    List.generate(6, (index) {
+                                                  final imageIndex = index + 12;
+                                                  return Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            2.0),
+                                                    child: Container(
+                                                      height: 100,
+                                                      width: 100,
+                                                      decoration: BoxDecoration(
+                                                        color: Color.fromARGB(
+                                                            255, 255, 255, 255),
+                                                        border: Border.all(
+                                                            color:
+                                                                Colors.black12),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 3,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(10.0),
+                                                        child: Image.asset(
+                                                            customer[
+                                                                imageIndex]),
+                                                      ),
+                                                    ),
+                                                  );
+                                                }),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(10.0),
+                                              child: GridView.count(
+                                                crossAxisSpacing: 10,
+                                                mainAxisSpacing: 10,
+                                                crossAxisCount: 3,
+                                                children:
+                                                    List.generate(6, (index) {
+                                                  final imageIndex = index + 18;
+                                                  return Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            2.0),
+                                                    child: Container(
+                                                      height: 100,
+                                                      width: 100,
+                                                      decoration: BoxDecoration(
+                                                        color: Color.fromARGB(
+                                                            255, 255, 255, 255),
+                                                        border: Border.all(
+                                                            color:
+                                                                Colors.black12),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 3,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(10.0),
+                                                        child: Image.asset(
+                                                            customer[
+                                                                imageIndex]),
+                                                      ),
+                                                    ),
+                                                  );
+                                                }),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(10.0),
+                                              child: GridView.count(
+                                                crossAxisSpacing: 10,
+                                                mainAxisSpacing: 10,
+                                                crossAxisCount: 3,
+                                                children:
+                                                    List.generate(2, (index) {
+                                                  final imageIndex = index + 24;
+                                                  return Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            2.0),
+                                                    child: Container(
+                                                      height: 100,
+                                                      width: 100,
+                                                      decoration: BoxDecoration(
+                                                        color: Color.fromARGB(
+                                                            255, 255, 255, 255),
+                                                        border: Border.all(
+                                                            color:
+                                                                Colors.black12),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 3,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(10.0),
+                                                        child: Image.asset(
+                                                            customer[
+                                                                imageIndex]),
+                                                      ),
+                                                    ),
+                                                  );
+                                                }),
+                                              ),
+                                            ),
+                                          ]),
+                                    ],
+                                  ),
+                                ),
+                                new Positioned(
+                                  top: 220,
+                                  left: 130,
+                                  child: Container(
+                                    child: AnimatedSmoothIndicator(
+                                        activeIndex: _current,
+                                        count: 5,
+                                        effect: ScaleEffect(
+                                            activePaintStyle:
+                                                PaintingStyle.stroke,
+                                            scale: 1.4,
+                                            activeStrokeWidth: 1.0,
+                                            dotWidth: 16,
+                                            dotHeight: 16,
+                                            dotColor: Color.fromARGB(
+                                                255, 34, 15, 109))),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
                   Responsive.isDesktop(context)
                       ? Container(
                           height: 206,
