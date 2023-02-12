@@ -100,6 +100,8 @@ class _FooterState extends State<Footer> {
         ));
 
     var QLink = Container(
+      width: 115.86,
+      height: 20,
       child: Text(
         'Quick Links',
         style: GoogleFonts.ibmPlexSansThai(
@@ -151,6 +153,8 @@ class _FooterState extends State<Footer> {
     );
 
     var services = Container(
+      width: 115.86,
+      height: 20,
       child: Text(
         "Our Services",
         style: GoogleFonts.ibmPlexSansThai(
@@ -172,7 +176,7 @@ class _FooterState extends State<Footer> {
 
     var svlist = Container(
       color: Color.fromARGB(0, 255, 193, 7),
-      height: 150,
+      height: 160,
       width: Responsive.isDesktop(context) ? 200 : 180,
       child: ListView.builder(
         shrinkWrap: true,
@@ -191,7 +195,7 @@ class _FooterState extends State<Footer> {
                       color: Color.fromARGB(255, 218, 218, 218)),
                 ),
               ),
-              SizedBox(height: 0.0),
+              SizedBox(height: Responsive.isTablet(context) ? 15 : 0.0),
             ],
           );
         },
@@ -470,6 +474,9 @@ class _FooterState extends State<Footer> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               QLink,
+                                              SizedBox(
+                                                height: 15,
+                                              ),
                                               Wrap(
                                                 spacing: 10.0,
                                                 children: [
@@ -491,6 +498,9 @@ class _FooterState extends State<Footer> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               services,
+                                              SizedBox(
+                                                height: 15,
+                                              ),
                                               Wrap(
                                                 spacing: 10.0,
                                                 children: [
