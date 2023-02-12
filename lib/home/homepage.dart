@@ -72,8 +72,8 @@ class _HomePageState extends State<HomePage> {
             // StoryPage(),
             // Pdpa(),
             // FeaturesPage(),
-            // PackagesPage(),
-            CustomerPage(),
+            PackagesPage(),
+            // CustomerPage(),
             // FAQ(),
             // Footer()
           ],
