@@ -8,26 +8,10 @@ class StoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> storylist = [
-      Responsive.isDesktop(context)
-          ? "ประสบการณ์การพัฒนาระบบ และตรวจรับรองบริษัทจดทะเบียนฯ"
-          : Responsive.isTablet(context)
-              ? "ประสบการณ์การพัฒนาระบบ และตรวจรับรองบริษัทจดทะเบียนฯ"
-              : "ประสบการณ์การพัฒนาระบบ \nและตรวจรับรองบริษัทจดทะเบียนฯ",
-      Responsive.isDesktop(context)
-          ? "เชี่ยวชาญงานตรวจสอบ \nและลงนามรับรองตามกฎระเบียบของหน่วยงานกำกับดูแล"
-          : Responsive.isTablet(context)
-              ? "เชี่ยวชาญงานตรวจสอบ \nและลงนามรับรองตามกฎระเบียบของหน่วยงานกำกับดูแล"
-              : "เชี่ยวชาญงานตรวจสอบและลงนามรับรองตามกฎระเบียบของหน่วยงานกำกับดูแล",
-      Responsive.isDesktop(context)
-          ? "เชี่ยวชาญงานพัฒนาโปรแกรมระบบด้านความมั่นคงปลอดภัยสารสนเทศ"
-          : Responsive.isTablet(context)
-              ? "เชี่ยวชาญงานพัฒนาโปรแกรมระบบด้านความมั่นคงปลอดภัยสารสนเทศ"
-              : "เชี่ยวชาญงานพัฒนาโปรแกรมระบบ\nด้านความมั่นคงปลอดภัยสารสนเทศ",
-      Responsive.isDesktop(context)
-          ? "เชี่ยวชาญงานพัฒนาโปรแกรมตามกฎหมาย กฎระเบียบ \n และมาตรฐานสากล"
-          : Responsive.isTablet(context)
-              ? "เชี่ยวชาญงานพัฒนาโปรแกรมตามกฎหมาย กฎระเบียบ \nและมาตรฐานสากล"
-              : "เชี่ยวชาญงานพัฒนาโปรแกรม\nตามกฎหมาย กฎระเบียบ และมาตรฐานสากล",
+      "ประสบการณ์การพัฒนาระบบ และตรวจรับรองบริษัทจดทะเบียนฯ",
+      "เชี่ยวชาญงานตรวจสอบ \nและลงนามรับรองตามกฎระเบียบของหน่วยงานกำกับดูแล",
+      "เชี่ยวชาญงานพัฒนาโปรแกรมระบบด้านความมั่นคงปลอดภัยสารสนเทศ",
+      "เชี่ยวชาญงานพัฒนาโปรแกรมตามกฎหมาย กฎระเบียบ \n และมาตรฐานสากล",
     ];
     var groupofpic = Container(
       height: Responsive.isDesktop(context)
@@ -101,38 +85,42 @@ class StoryPage extends StatelessWidget {
     );
     var title = Container(
       color: Color.fromARGB(0, 0, 187, 212),
-      height: 65,
+      height: !Responsive.isMobile(context) ? 65 : 120,
       width: Responsive.isDesktop(context)
           ? 461
           : Responsive.isTablet(context)
               ? 360
-              : 300,
-      child: Text('wisework Story',
+              : 313,
+      child: Text(
+          !Responsive.isMobile(context) ? 'wisework Story' : 'wisework\nStory',
           style: GoogleFonts.ibmPlexSansThai(
+              height: 1.25,
               fontSize: Responsive.isDesktop(context)
                   ? 48
                   : Responsive.isTablet(context)
-                      ? 44
+                      ? 48
                       : 38,
               fontWeight: FontWeight.w700,
-              color: Color.fromARGB(255, 24, 84, 110))),
+              color: Color.fromARGB(255, 255, 255, 255))),
     );
     var aboutus = Container(
       color: Color.fromARGB(0, 255, 153, 0),
       height: Responsive.isDesktop(context)
           ? 156
           : Responsive.isTablet(context)
-              ? 80
-              : 80,
+              ? 100
+              : 158,
       width: Responsive.isDesktop(context)
           ? 726
           : Responsive.isTablet(context)
               ? 640
-              : 330,
+              : 313,
       child: Text(
         Responsive.isDesktop(context)
             ? '“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับกฎหมาย\n และกฎระเบียบจากหน่วยงานกำกับดูแล โดยทีมนักพัฒนา\n และผู้เชี่ยวชาญมากประสบการณ์"'
-            : '“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับกฎหมาย และกฎระเบียบจากหน่วยงานกำกับดูแล โดยทีมนักพัฒนาและผู้เชี่ยวชาญมากประสบการณ์"',
+            : Responsive.isTablet(context)
+                ? '“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับกฎหมาย\n และกฎระเบียบจากหน่วยงานกำกับดูแลโดย\nทีมนักพัฒนาและผู้เชี่ยวชาญมากประสบการณ์"'
+                : '“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับ\nกฎหมาย และกฎระเบียบจากหน่วยงาน\nกำกับดูแล โดยทีมนักพัฒนาและผู้เชี่ยวชาญ\nมากประสบการณ์"',
         style: GoogleFonts.ibmPlexSansThai(
             fontSize: Responsive.isDesktop(context)
                 ? 24
@@ -140,11 +128,11 @@ class StoryPage extends StatelessWidget {
                     ? 22
                     : 16,
             fontWeight: FontWeight.w400,
-            color: Color.fromARGB(255, 24, 84, 110)),
+            color: Color.fromARGB(255, 255, 255, 255)),
       ),
     );
     var aboutlist = Container(
-      color: Color.fromARGB(0, 255, 193, 7),
+      color: Color.fromARGB(0, 255, 255, 255),
       height: Responsive.isDesktop(context)
           ? 230
           : Responsive.isTablet(context)
@@ -184,6 +172,7 @@ class StoryPage extends StatelessWidget {
               child: Text(
                 storylist[index],
                 style: GoogleFonts.ibmPlexSansThai(
+                    color: Colors.white,
                     fontSize: Responsive.isDesktop(context)
                         ? 20
                         : Responsive.isTablet(context)
@@ -197,8 +186,8 @@ class StoryPage extends StatelessWidget {
       ),
     );
     var advice = SizedBox(
-      width: 192,
-      height: 48,
+      width: Responsive.isDesktop(context) ? 192 : 143,
+      height: Responsive.isDesktop(context) ? 48 : 28,
       child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
@@ -210,7 +199,7 @@ class StoryPage extends StatelessWidget {
           child: Text(
             'รับคำปรึกษา',
             style: GoogleFonts.ibmPlexSansThai(
-                fontSize: Responsive.isDesktop(context) ? 20 : 17,
+                fontSize: Responsive.isDesktop(context) ? 20 : 16,
                 fontWeight: FontWeight.w600),
           )),
     );
@@ -223,7 +212,7 @@ class StoryPage extends StatelessWidget {
     return Center(
       child: Container(
         width: 1440,
-        color: Colors.white,
+        color: Color.fromARGB(255, 5, 45, 97),
         child: Column(
           children: [
             SizedBox(
@@ -265,30 +254,64 @@ class StoryPage extends StatelessWidget {
                     // padding: const EdgeInsets.only(left: 0),
                     color: Color.fromARGB(0, 204, 220, 57),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        groupofpic,
-                        title,
-                        SizedBox(
-                          height: Responsive.isTablet(context) ? 10 : 0,
-                        ),
-                        aboutus,
-                        SizedBox(
-                          height: Responsive.isTablet(context) ? 10 : 5,
-                        ),
-                        Padding(
-                            padding: const EdgeInsets.only(left: 30),
-                            child: aboutlist),
-                        SizedBox(
-                          height: Responsive.isTablet(context) ? 20 : 5,
-                        ),
-                        Padding(
-                            padding: EdgeInsets.only(right: 0), child: advice)
+                        Responsive.isTablet(context)
+                            ? Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  title,
+                                  SizedBox(
+                                    height:
+                                        Responsive.isTablet(context) ? 39 : 0,
+                                  ),
+                                  aboutus,
+                                  SizedBox(
+                                    height:
+                                        Responsive.isTablet(context) ? 60 : 5,
+                                  ),
+                                  Padding(
+                                      padding: EdgeInsets.only(left: 5),
+                                      child: advice)
+                                ],
+                              )
+                            : Column(
+                                children: [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      title,
+                                      SizedBox(
+                                        height: Responsive.isTablet(context)
+                                            ? 39
+                                            : 0,
+                                      ),
+                                      aboutus,
+                                    ],
+                                  ),
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      SizedBox(
+                                        height: Responsive.isTablet(context)
+                                            ? 60
+                                            : 5,
+                                        width: 313,
+                                      ),
+                                      advice,
+                                    ],
+                                  )
+                                ],
+                              ),
                       ],
                     ),
                   ),
             SizedBox(
-              height: 50,
+              height: Responsive.isDesktop(context)
+                  ? 54
+                  : Responsive.isTablet(context)
+                      ? 71
+                      : 51,
             ),
           ],
         ),
