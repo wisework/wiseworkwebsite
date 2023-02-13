@@ -77,7 +77,7 @@ class _DestinationCarouselState extends State<StoryPage> {
       width: 768,
       decoration: BoxDecoration(
         image: DecorationImage(
-          opacity: 80,
+          // opacity: 80,
           image: AssetImage('assets/carousel/med_crs.png'),
           fit: BoxFit.fill,
         ),
@@ -188,71 +188,24 @@ class _DestinationCarouselState extends State<StoryPage> {
       "เชี่ยวชาญงานพัฒนาโปรแกรมตามกฎหมาย กฎระเบียบ \n และมาตรฐานสากล",
     ];
     var groupofpic = Container(
-      height: Responsive.isDesktop(context)
-          ? 400
-          : Responsive.isTablet(context)
-              ? 380
-              : 200,
-      width: Responsive.isDesktop(context)
-          ? 580
-          : Responsive.isTablet(context)
-              ? 580
-              : 290,
+      height: 380,
+      width: 720,
       // alignment: FractionalOffset.center,
       child: new Stack(
         //alignment:new Alignment(x, y)
         children: <Widget>[
           new SizedBox(
-            height: Responsive.isDesktop(context)
-                ? 370
-                : Responsive.isTablet(context)
-                    ? 370
-                    : 185,
-            width: Responsive.isDesktop(context)
-                ? 570
-                : Responsive.isTablet(context)
-                    ? 570
-                    : 285,
+            height: 380,
+            width: 720,
           ),
           new Positioned(
-            height: Responsive.isDesktop(context)
-                ? 348
-                : Responsive.isTablet(context)
-                    ? 348
-                    : 174,
-            width: Responsive.isDesktop(context)
-                ? 530
-                : Responsive.isTablet(context)
-                    ? 530
-                    : 265,
-            left: Responsive.isDesktop(context)
-                ? 40.0
-                : Responsive.isTablet(context)
-                    ? 40
-                    : 20.0,
+            height: 348,
+            width: 530,
             child: new Image(image: AssetImage("assets/story/storybg.png")),
           ),
           new Positioned(
-              height: Responsive.isDesktop(context)
-                  ? 327
-                  : Responsive.isTablet(context)
-                      ? 327
-                      : 163.5,
-              width: Responsive.isDesktop(context)
-                  ? 527
-                  : Responsive.isTablet(context)
-                      ? 527
-                      : 263.5,
-              right: Responsive.isDesktop(context)
-                  ? 50.0
-                  : Responsive.isTablet(context)
-                      ? 50
-                      : 25.0,
-              top: Responsive.isDesktop(context)
-                  ? 40.0
-                  : Responsive.isTablet(context)
-                      ? 40
-                      : 20.0,
+              height: 328,
+              width: 720,
               child: new Image(image: AssetImage("assets/story/storypic.png"))),
         ],
       ),
@@ -261,7 +214,7 @@ class _DestinationCarouselState extends State<StoryPage> {
       color: Color.fromARGB(0, 0, 187, 212),
       height: !Responsive.isMobile(context) ? 65 : 120,
       width: Responsive.isDesktop(context)
-          ? 461
+          ? 649
           : Responsive.isTablet(context)
               ? 360
               : 313,
@@ -281,7 +234,7 @@ class _DestinationCarouselState extends State<StoryPage> {
               ? 100
               : 158,
       width: Responsive.isDesktop(context)
-          ? 726
+          ? 649
           : Responsive.isTablet(context)
               ? 640
               : 313,
@@ -303,39 +256,21 @@ class _DestinationCarouselState extends State<StoryPage> {
     );
     var aboutlist = Container(
       color: Color.fromARGB(0, 255, 255, 255),
-      height: Responsive.isDesktop(context)
-          ? 230
-          : Responsive.isTablet(context)
-              ? 230
-              : 230,
-      width: Responsive.isDesktop(context)
-          ? 660
-          : Responsive.isTablet(context)
-              ? 660
-              : 340,
+      height: 230,
+      width: 621,
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: storylist.length,
         itemBuilder: (context, index) {
           return ListTile(
             dense: true,
+            visualDensity: VisualDensity.compact,
             leading: Transform.translate(
-              offset: Offset(
-                  Responsive.isDesktop(context)
-                      ? -10
-                      : Responsive.isTablet(context)
-                          ? -10
-                          : -10,
-                  Responsive.isDesktop(context)
-                      ? 0
-                      : Responsive.isTablet(context)
-                          ? 0
-                          : -3),
+              offset: Offset(-10, 0),
               child: SizedBox(
-                  width: Responsive.isDesktop(context) ? 12 : 10,
-                  height: Responsive.isDesktop(context) ? 12 : 10,
-                  child:
-                      Image(image: AssetImage("assets/packages/record.png"))),
+                  width: 12,
+                  height: 12,
+                  child: Image(image: AssetImage("assets/story/record.png"))),
             ),
             title: Transform.translate(
               offset: Offset(-40, 2.5),
@@ -544,7 +479,7 @@ class _DestinationCarouselState extends State<StoryPage> {
             ),
             Container(
               width: 1440,
-              color: Color.fromARGB(255, 5, 45, 97),
+              color: Color.fromARGB(82, 233, 255, 31),
               child: Column(
                 children: [
                   SizedBox(
@@ -556,8 +491,8 @@ class _DestinationCarouselState extends State<StoryPage> {
                   ),
                   Responsive.isDesktop(context)
                       ? Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          // crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          // crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Container(
                               color: Color.fromARGB(0, 204, 220, 57),
@@ -584,7 +519,14 @@ class _DestinationCarouselState extends State<StoryPage> {
                                 ],
                               ),
                             ),
-                            groupofpic
+                            Column(
+                              children: [
+                                SizedBox(
+                                  height: 90,
+                                ),
+                                groupofpic,
+                              ],
+                            )
                           ],
                         )
                       : Container(
