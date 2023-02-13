@@ -1589,26 +1589,6 @@ class _CustomerState extends State<CustomerPage> {
                                                                 padding:
                                                                     const EdgeInsets
                                                                             .only(
-                                                                        left:
-                                                                            380),
-                                                                child:
-                                                                    Container(
-                                                                  height: 160,
-                                                                  width: 165,
-                                                                  decoration: BoxDecoration(
-                                                                      color: Color.fromARGB(
-                                                                          255,
-                                                                          155,
-                                                                          192,
-                                                                          234),
-                                                                      shape: BoxShape
-                                                                          .circle),
-                                                                ),
-                                                              ),
-                                                              Padding(
-                                                                padding:
-                                                                    const EdgeInsets
-                                                                            .only(
                                                                         top:
                                                                             168,
                                                                         left:
@@ -1793,30 +1773,26 @@ class _CustomerState extends State<CustomerPage> {
                                                                       child:
                                                                           Column(
                                                                         children: [
-                                                                          Column(
+                                                                          Stack(
                                                                             children: [
-                                                                              Stack(
-                                                                                children: [
-                                                                                  SizedBox(width: 15.93, height: 14, child: Image.asset("/customer/comma.png")),
-                                                                                  Container(
-                                                                                    height: 128,
-                                                                                    width: 300,
-                                                                                    // color:Colors.amber,
-                                                                                    child: Column(
-                                                                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                                                                      children: [
-                                                                                        Padding(
-                                                                                          padding: const EdgeInsets.only(left: 32),
-                                                                                          child: Text(
-                                                                                            "เราตระหนักถึงความสำคัญการคุ้มครอง\nข้อมูลส่วนบุคคล หนึ่งในรากฐานที่สร้าง\nความสัมพันธ์ทางธุรกิจและสร้างความ\nน่าเชื่อถือที่ลูกค้ามีต่อเรา",
-                                                                                            style: GoogleFonts.poppins(fontSize: 16, color: Colors.black, fontWeight: FontWeight.w400, height: 1.5),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ],
+                                                                              SizedBox(width: 15.93, height: 14, child: Image.asset("/customer/comma.png")),
+                                                                              Container(
+                                                                                height: 128,
+                                                                                width: 300,
+                                                                                // color:Colors.amber,
+                                                                                child: Column(
+                                                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                  children: [
+                                                                                    Padding(
+                                                                                      padding: const EdgeInsets.only(left: 32),
+                                                                                      child: Text(
+                                                                                        "เราตระหนักถึงความสำคัญการคุ้มครอง\nข้อมูลส่วนบุคคล หนึ่งในรากฐานที่สร้าง\nความสัมพันธ์ทางธุรกิจและสร้างความ\nน่าเชื่อถือที่ลูกค้ามีต่อเรา",
+                                                                                        style: GoogleFonts.poppins(fontSize: 16, color: Colors.black, fontWeight: FontWeight.w400, height: 1.5),
+                                                                                      ),
                                                                                     ),
-                                                                                  )
-                                                                                ],
-                                                                              ),
+                                                                                  ],
+                                                                                ),
+                                                                              )
                                                                             ],
                                                                           ),
                                                                         ],
@@ -1882,10 +1858,361 @@ class _CustomerState extends State<CustomerPage> {
                                                 ),
                                               ),
                                               Container(
-                                                width: 1000,
-                                                color: Color.fromARGB(
-                                                    255, 250, 251, 252),
-                                              ),
+                                                  width: 1400,
+                                                  child: Container(
+                                                    margin: EdgeInsets.all(20),
+                                                    color: Color.fromARGB(
+                                                        255, 250, 251, 252),
+                                                    child: Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Row(
+                                                          children: [
+                                                            Column(
+                                                              children: [
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      top: 240,
+                                                                      left:
+                                                                          100),
+                                                                  child:
+                                                                      Container(
+                                                                    width: 495,
+                                                                    height: 286,
+                                                                    decoration: BoxDecoration(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(
+                                                                                16),
+                                                                        color: Colors
+                                                                            .white),
+                                                                    child:
+                                                                        Column(
+                                                                      crossAxisAlignment:
+                                                                          CrossAxisAlignment
+                                                                              .start,
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: const EdgeInsets.only(
+                                                                              top: 8,
+                                                                              left: 58,
+                                                                              right: 292),
+                                                                          child: SizedBox(
+                                                                              width: 145,
+                                                                              height: 82,
+                                                                              child: Image.asset("/customer/kyocera.png")),
+                                                                        ),
+                                                                        Row(
+                                                                          crossAxisAlignment:
+                                                                              CrossAxisAlignment.start,
+                                                                          children: [
+                                                                            Padding(
+                                                                              padding: const EdgeInsets.only(top: 15, left: 30),
+                                                                              child: SizedBox(width: 16, height: 15, child: Image.asset("/customer/comma.png")),
+                                                                            ),
+                                                                            Padding(
+                                                                              padding: const EdgeInsets.only(left: 20, top: 15),
+                                                                              child: Container(
+                                                                                width: 410,
+                                                                                height: 65,
+                                                                                child: Text(
+                                                                                  "การปฏิบัติตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล พันธกิจสำคัญ\nในการจัดการขั้นพื้นฐานภายใต้หลักการ “ลูกค้าสำคัญที่สุด”",
+                                                                                  style: GoogleFonts.ibmPlexSansThai(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
+                                                                                  textAlign: TextAlign.start,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ],
+                                                                        ),
+                                                                        Row(
+                                                                          children: [
+                                                                            Padding(
+                                                                              padding: const EdgeInsets.only(top: 10, left: 64),
+                                                                              child: SizedBox(width: 57, height: 57, child: Image.asset("customer/Nikhom.png")),
+                                                                            ),
+                                                                            Padding(
+                                                                              padding: const EdgeInsets.only(top: 10, left: 15),
+                                                                              child: Container(
+                                                                                width: 232,
+                                                                                height: 53.07,
+                                                                                child: Column(
+                                                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                  children: [
+                                                                                    SizedBox(
+                                                                                      width: 200,
+                                                                                      height: 28,
+                                                                                      child: Text(
+                                                                                        "คุณนิคม ธะนีวรรณ์",
+                                                                                        style: GoogleFonts.ibmPlexSansThai(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black),
+                                                                                        textAlign: TextAlign.start,
+                                                                                      ),
+                                                                                    ),
+                                                                                    SizedBox(
+                                                                                      width: 230,
+                                                                                      height: 25,
+                                                                                      child: Text(
+                                                                                        "ผู้จัดการฝ่ายเทคโนโลยีสารสนเทศ",
+                                                                                        style: GoogleFonts.ibmPlexSansThai(fontSize: 15, fontWeight: FontWeight.w500, color: Color.fromARGB(255, 87, 87, 87)),
+                                                                                        textAlign: TextAlign.start,
+                                                                                      ),
+                                                                                    )
+                                                                                  ],
+                                                                                ),
+                                                                              ),
+                                                                            )
+                                                                          ],
+                                                                        )
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                )
+                                                              ],
+                                                            ),
+                                                            Column(
+                                                              children: [
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      top: 20,
+                                                                      left: 30),
+                                                                  child:
+                                                                      Container(
+                                                                    width: 480,
+                                                                    height: 455,
+                                                                    decoration: BoxDecoration(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(
+                                                                                16),
+                                                                        color: Colors
+                                                                            .white),
+                                                                    child:
+                                                                        Column(
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: const EdgeInsets.only(
+                                                                              top: 8,
+                                                                              left: 58,
+                                                                              right: 292),
+                                                                          child: SizedBox(
+                                                                              width: 145,
+                                                                              height: 82,
+                                                                              child: Image.asset("/customer/brr.png")),
+                                                                        ),
+                                                                        Padding(
+                                                                          padding: const EdgeInsets.only(
+                                                                              left: 29,
+                                                                              top: 20),
+                                                                          child:
+                                                                              Container(
+                                                                            width:
+                                                                                450,
+                                                                            height:
+                                                                                230,
+                                                                            child:
+                                                                                Row(
+                                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                                              children: [
+                                                                                SizedBox(width: 15, height: 15, child: Image.asset("/customer/comma.png")),
+                                                                                SizedBox(
+                                                                                  width: 19,
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsets.only(top: 5),
+                                                                                  child: Text(
+                                                                                    "หลังจากที่ PDPA มีผลประกาศบังคับใช้ รูปแบบการทำงาน\nของเราเปลี่ยนไปอย่างมาก wisework ช่วยเข้ามาทำให้เรา\nหมดกังวลเรื่อง PDPA ไปเลย เราดำเนินการได้ครบทุกขั้นตอน\nและสร้างความเชื่อมั่นทางธุรกิจ ร่วมกับการทำงานด้าน\nความปลอดภัยทางไซเบอร์ ให้แก่ผู้มีส่วนได้ส่วนเสียทุกฝ่าย\nไม่ว่าจะเป็นลูกค้า พนักงาน หน่วยงานตรวจสอบ และนักลงทุน\nในเรื่องการคุ้มครอง ข้อมูลส่วนบุคคล และความเป็นส่วนตัว",
+                                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                                      fontSize: 16,
+                                                                                      fontWeight: FontWeight.w400,
+                                                                                      color: Colors.black,
+                                                                                    ),
+                                                                                    textAlign: TextAlign.start,
+                                                                                  ),
+                                                                                )
+                                                                              ],
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Row(
+                                                                          children: [
+                                                                            Padding(
+                                                                              padding: const EdgeInsets.only(top: 10, left: 64),
+                                                                              child: SizedBox(width: 57, height: 57, child: Image.asset("customer/Anan.png")),
+                                                                            ),
+                                                                            Padding(
+                                                                              padding: const EdgeInsets.only(top: 10, left: 15),
+                                                                              child: Container(
+                                                                                width: 232,
+                                                                                height: 53.07,
+                                                                                child: Column(
+                                                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                  children: [
+                                                                                    SizedBox(
+                                                                                      width: 200,
+                                                                                      height: 28,
+                                                                                      child: Text(
+                                                                                        "คุณอนันต์ ตั้งตรงเวชกิจ",
+                                                                                        style: GoogleFonts.ibmPlexSansThai(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black),
+                                                                                        textAlign: TextAlign.start,
+                                                                                      ),
+                                                                                    ),
+                                                                                    SizedBox(
+                                                                                      width: 230,
+                                                                                      height: 25,
+                                                                                      child: Text(
+                                                                                        "ประธานเจ้าหน้าที่บริหาร",
+                                                                                        style: GoogleFonts.ibmPlexSansThai(fontSize: 15, fontWeight: FontWeight.w500, color: Color.fromARGB(255, 87, 87, 87)),
+                                                                                        textAlign: TextAlign.start,
+                                                                                      ),
+                                                                                    )
+                                                                                  ],
+                                                                                ),
+                                                                              ),
+                                                                            )
+                                                                          ],
+                                                                        )
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                )
+                                                              ],
+                                                            )
+                                                          ],
+                                                        ),
+                                                        Row(
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .start,
+                                                          children: [
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                      .only(
+                                                                top: 30,
+                                                                left: 180,
+                                                              ),
+                                                              child: Container(
+                                                                width: 751,
+                                                                height: 265,
+                                                                decoration: BoxDecoration(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            16)),
+                                                                child: Column(
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              16,
+                                                                          left:
+                                                                              64),
+                                                                      child: SizedBox(
+                                                                          width:
+                                                                              48,
+                                                                          height:
+                                                                              66,
+                                                                          child:
+                                                                              Image.asset("/customer/tvo.png")),
+                                                                    ),
+                                                                    Row(
+                                                                      crossAxisAlignment:
+                                                                          CrossAxisAlignment
+                                                                              .start,
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: const EdgeInsets.only(
+                                                                              top: 15,
+                                                                              left: 30),
+                                                                          child: SizedBox(
+                                                                              width: 16,
+                                                                              height: 15,
+                                                                              child: Image.asset("/customer/comma.png")),
+                                                                        ),
+                                                                        Padding(
+                                                                          padding: const EdgeInsets.only(
+                                                                              left: 20,
+                                                                              top: 15),
+                                                                          child:
+                                                                              Container(
+                                                                            width:
+                                                                                660,
+                                                                            height:
+                                                                                65,
+                                                                            child:
+                                                                                Text(
+                                                                              "wisework ช่วยตอบโจทย์ทิศทางการดำเนินธุรกิจของเราภายใต้หลักธรรมาภิบาล เรามุ่งมั่นขับเคลื่อน\nการดำเนินงานที่เกี่ยวข้องกับ ESG ทุกมิติ และพร้อมรับมือกับการเปลี่ยนแปลงที่รวดเร็วได้อย่างมั่นใจ",
+                                                                              style: GoogleFonts.ibmPlexSansThai(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
+                                                                              textAlign: TextAlign.start,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                    Row(
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: const EdgeInsets.only(
+                                                                              top: 10,
+                                                                              left: 64),
+                                                                          child: SizedBox(
+                                                                              width: 57,
+                                                                              height: 57,
+                                                                              child: Image.asset("customer/Pachai.png")),
+                                                                        ),
+                                                                        Padding(
+                                                                          padding: const EdgeInsets.only(
+                                                                              top: 10,
+                                                                              left: 15),
+                                                                          child:
+                                                                              Container(
+                                                                            width:
+                                                                                232,
+                                                                            height:
+                                                                                53.07,
+                                                                            child:
+                                                                                Column(
+                                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                                              children: [
+                                                                                SizedBox(
+                                                                                  width: 200,
+                                                                                  height: 28,
+                                                                                  child: Text(
+                                                                                    "คุณพาชัย จันทร์พิทักษ",
+                                                                                    style: GoogleFonts.ibmPlexSansThai(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black),
+                                                                                    textAlign: TextAlign.start,
+                                                                                  ),
+                                                                                ),
+                                                                                SizedBox(
+                                                                                  width: 230,
+                                                                                  height: 25,
+                                                                                  child: Text(
+                                                                                    "ประธานเจ้าหน้าที่บริหาร",
+                                                                                    style: GoogleFonts.ibmPlexSansThai(fontSize: 15, fontWeight: FontWeight.w500, color: Color.fromARGB(255, 87, 87, 87)),
+                                                                                    textAlign: TextAlign.start,
+                                                                                  ),
+                                                                                )
+                                                                              ],
+                                                                            ),
+                                                                          ),
+                                                                        )
+                                                                      ],
+                                                                    )
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            )
+                                                          ],
+                                                        )
+                                                      ],
+                                                    ),
+                                                  )),
                                               Container(
                                                 width: 1000,
                                                 color: Color.fromARGB(
@@ -1901,28 +2228,17 @@ class _CustomerState extends State<CustomerPage> {
                                       left: 700,
                                       child: Container(
                                         child: AnimatedSmoothIndicator(
-                                          activeIndex: _current,
-                                          count: 3,
-                                          effect: CustomizableEffect(
-                                            activeDotDecoration: DotDecoration(
-                                              width: 16,
-                                              height: 6,
-                                              color: Color.fromARGB(
-                                                  255, 1, 41, 53),
-                                              borderRadius:
-                                                  BorderRadius.circular(50),
-                                            ),
-                                            dotDecoration: DotDecoration(
-                                              width: 10,
-                                              height: 4,
-                                              color: Colors.black12,
-                                              borderRadius:
-                                                  BorderRadius.circular(50),
-                                              verticalOffset: 0,
-                                            ),
-                                            spacing: 6.0,
-                                          ),
-                                        ),
+                                            activeIndex: _current,
+                                            count: 3,
+                                            effect: ScaleEffect(
+                                                activePaintStyle:
+                                                    PaintingStyle.stroke,
+                                                scale: 1.4,
+                                                activeStrokeWidth: 1.0,
+                                                dotWidth: 16,
+                                                dotHeight: 16,
+                                                dotColor: Color.fromARGB(
+                                                    255, 137, 141, 149))),
                                       ),
                                     ),
                                     new Positioned(
@@ -1968,6 +2284,17 @@ class _CustomerState extends State<CustomerPage> {
                                               ),
                                             ],
                                           ),
+                                        )),
+                                    new Positioned(
+                                        top: 1.5,
+                                        right: 13,
+                                        child: Container(
+                                          height: 180,
+                                          width: 185,
+                                          decoration: BoxDecoration(
+                                              color: Color.fromARGB(
+                                                  255, 175, 206, 241),
+                                              shape: BoxShape.circle),
                                         )),
                                   ],
                                 ),
