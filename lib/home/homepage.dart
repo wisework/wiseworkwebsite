@@ -11,7 +11,6 @@ import 'package:wiseintern/home/story.dart';
 import '../menu_drawer.dart';
 import 'package:wiseintern/home/faq.dart';
 import 'package:wiseintern/home/footer.dart';
-import 'package:wiseintern/home/carousel.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -26,7 +25,6 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     // Feature2(),
-    CarouselPage(),
     PackagesPage(),
     FeaturesPage(),
     CustomerPage(),
@@ -68,14 +66,13 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // CarouselPage(),
-            // StoryPage(),
+            StoryPage(),
             // Pdpa(),
             // FeaturesPage(),
-            // PackagesPage(),
-            CustomerPage(),
+            PackagesPage(),
+            // CustomerPage(),
             // FAQ(),
-            Footer()
+            // Footer()
           ],
         ),
       ),

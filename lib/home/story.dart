@@ -1,9 +1,183 @@
 import 'package:flutter/material.dart';
 import '../responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class StoryPage extends StatelessWidget {
-  const StoryPage({super.key});
+class StoryPage extends StatefulWidget {
+  @override
+  _DestinationCarouselState createState() => _DestinationCarouselState();
+}
+
+class _DestinationCarouselState extends State<StoryPage> {
+  final String imagePath = 'assets/carousel/';
+
+  final CarouselController _controller = CarouselController();
+
+  // List _isHovering = [false, false, false, false, false];
+  List _isSelected = [true, false, false, false, false];
+
+  int _current = 0;
+
+  final List<Widget> images = [
+    Container(
+      height: 551,
+      width: 1440,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 551,
+      width: 1440,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 551,
+      width: 1440,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 551,
+      width: 1440,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 551,
+      width: 1440,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+  ];
+  List<Widget> med_images = [
+    Container(
+      height: 554,
+      width: 768,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          opacity: 80,
+          image: AssetImage('assets/carousel/med_crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 554,
+      width: 768,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/med_crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 554,
+      width: 768,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/med_crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 554,
+      width: 768,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/med_crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 554,
+      width: 768,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/med_crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+  ];
+  List<Widget> min_images = [
+    Container(
+      height: 528,
+      width: 375,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/min_crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 528,
+      width: 375,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/min_crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 528,
+      width: 375,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/min_crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 528,
+      width: 375,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/min_crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+    Container(
+      height: 528,
+      width: 375,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/carousel/min_crs.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+  ];
+  final controller =
+      PageController(viewportFraction: 0.8, keepPage: true, initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
@@ -95,11 +269,7 @@ class StoryPage extends StatelessWidget {
           !Responsive.isMobile(context) ? 'wisework Story' : 'wisework\nStory',
           style: GoogleFonts.ibmPlexSansThai(
               height: 1.25,
-              fontSize: Responsive.isDesktop(context)
-                  ? 48
-                  : Responsive.isTablet(context)
-                      ? 48
-                      : 38,
+              fontSize: 48,
               fontWeight: FontWeight.w700,
               color: Color.fromARGB(255, 255, 255, 255))),
     );
@@ -211,70 +381,187 @@ class StoryPage extends StatelessWidget {
 
     return Center(
       child: Container(
-        width: 1440,
         color: Color.fromARGB(255, 5, 45, 97),
+        width: 1440,
         child: Column(
           children: [
-            SizedBox(
-              height: Responsive.isDesktop(context) ? 42 : 20,
-            ),
-            Responsive.isDesktop(context)
-                ? Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    // crossAxisAlignment: CrossAxisAlignment.center,
+            Container(
+              width: 1440,
+              color: Responsive.isDesktop(context)
+                  ? Color.fromARGB(255, 232, 242, 254)
+                  : Color.fromARGB(255, 5, 45, 97),
+              child: Column(
+                children: [
+                  SizedBox(height: Responsive.isDesktop(context) ? 83 : 0),
+                  Stack(
                     children: [
-                      Container(
-                        color: Color.fromARGB(0, 204, 220, 57),
-                        child: Column(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                title,
-                                SizedBox(
-                                  height: 14,
+                      Column(
+                        children: [
+                          CarouselSlider(
+                            items: Responsive.isDesktop(context)
+                                ? images
+                                : Responsive.isTablet(context)
+                                    ? med_images
+                                    : min_images,
+                            options: CarouselOptions(
+                                scrollPhysics: PageScrollPhysics(),
+                                //  NeverScrollableScrollPhysics(),
+                                // enlargeCenterPage: true,
+                                aspectRatio: Responsive.isDesktop(context)
+                                    ? 28 / 11
+                                    : Responsive.isTablet(context)
+                                        ? 768 / 554
+                                        : 375 / 538,
+                                autoPlay: true,
+                                viewportFraction: 1,
+                                onPageChanged: (index, reason) {
+                                  setState(() {
+                                    _current = index;
+                                  });
+                                }),
+                            // carouselController: _controller,
+                          ),
+                          SizedBox(
+                              height: Responsive.isDesktop(context) ? 164 : 40),
+                        ],
+                      ),
+                      Positioned(
+                        bottom: Responsive.isDesktop(context) ? 120 : 17,
+                        left: Responsive.isDesktop(context)
+                            ? 410
+                            : Responsive.isTablet(context)
+                                ? 266
+                                : 90,
+                        right: Responsive.isDesktop(context)
+                            ? 403
+                            : Responsive.isTablet(context)
+                                ? 266
+                                : 96,
+                        child: SizedBox(
+                          width: Responsive.isDesktop(context)
+                              ? 628
+                              : Responsive.isTablet(context)
+                                  ? 219
+                                  : 189,
+                          height: Responsive.isDesktop(context)
+                              ? 88
+                              : Responsive.isTablet(context)
+                                  ? 50
+                                  : 40,
+                          child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    Color.fromRGBO(75, 195, 211, 1),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(44.0),
                                 ),
-                                aboutus,
-                              ],
-                            ),
-                            aboutlist,
-                            SizedBox(
-                              height: 32,
-                            ),
-                            Padding(
-                                padding: EdgeInsets.only(right: 250),
-                                child: advice)
-                          ],
+                              ),
+                              child: Text(
+                                "Get A free Demo",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: Responsive.isDesktop(context)
+                                        ? 42
+                                        : Responsive.isTablet(context)
+                                            ? 20
+                                            : 16,
+                                    fontWeight: FontWeight.w500),
+                              )),
                         ),
                       ),
-                      groupofpic
+                      Positioned(
+                        bottom: Responsive.isDesktop(context)
+                            ? 61
+                            : Responsive.isTablet(context)
+                                ? 100
+                                : 70,
+                        left: Responsive.isDesktop(context)
+                            ? 681
+                            : Responsive.isTablet(context)
+                                ? 344
+                                : 148,
+                        right: Responsive.isDesktop(context)
+                            ? 672
+                            : Responsive.isTablet(context)
+                                ? 336
+                                : 139,
+                        child: Container(
+                          child: AnimatedSmoothIndicator(
+                            activeIndex: _current,
+                            count: 5,
+                            effect: CustomizableEffect(
+                              activeDotDecoration: DotDecoration(
+                                width: 16,
+                                height: 6,
+                                color: Responsive.isDesktop(context)
+                                    ? Color.fromARGB(255, 0, 0, 0)
+                                    : Colors.white,
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              dotDecoration: DotDecoration(
+                                width: 10,
+                                height: 4,
+                                color: Responsive.isDesktop(context)
+                                    ? Colors.grey
+                                    : Color.fromARGB(40, 255, 255, 255),
+                                borderRadius: BorderRadius.circular(50),
+                                verticalOffset: 0,
+                              ),
+                              spacing: 6.0,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
-                  )
-                : Container(
-                    // padding: const EdgeInsets.only(left: 0),
-                    color: Color.fromARGB(0, 204, 220, 57),
-                    child: Column(
-                      children: [
-                        Responsive.isTablet(context)
-                            ? Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  title,
-                                  SizedBox(
-                                    height:
-                                        Responsive.isTablet(context) ? 39 : 0,
-                                  ),
-                                  aboutus,
-                                  SizedBox(
-                                    height:
-                                        Responsive.isTablet(context) ? 60 : 5,
-                                  ),
-                                  Padding(
-                                      padding: EdgeInsets.only(left: 5),
-                                      child: advice)
-                                ],
-                              )
-                            : Column(
+                  ),
+                  // Container(
+                  //   child: AnimatedSmoothIndicator(
+                  //     activeIndex: _current,
+                  //     count: 5,
+                  //     effect: CustomizableEffect(
+                  //       activeDotDecoration: DotDecoration(
+                  //         width: 16,
+                  //         height: 6,
+                  //         color: Responsive.isDesktop(context)
+                  //             ? Color.fromARGB(255, 0, 0, 0)
+                  //             : Colors.white,
+                  //         borderRadius: BorderRadius.circular(50),
+                  //       ),
+                  //       dotDecoration: DotDecoration(
+                  //         width: 10,
+                  //         height: 4,
+                  //         color: Colors.grey,
+                  //         borderRadius: BorderRadius.circular(50),
+                  //         verticalOffset: 0,
+                  //       ),
+                  //       spacing: 6.0,
+                  //     ),
+                  //   ),
+                  // ),
+                  // SizedBox(height: 61),
+                ],
+              ),
+            ),
+            Container(
+              width: 1440,
+              color: Color.fromARGB(255, 5, 45, 97),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: Responsive.isDesktop(context)
+                        ? 42
+                        : Responsive.isTablet(context)
+                            ? 35
+                            : 80,
+                  ),
+                  Responsive.isDesktop(context)
+                      ? Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          // crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              color: Color.fromARGB(0, 204, 220, 57),
+                              child: Column(
                                 children: [
                                   Column(
                                     crossAxisAlignment:
@@ -282,36 +569,95 @@ class StoryPage extends StatelessWidget {
                                     children: [
                                       title,
                                       SizedBox(
-                                        height: Responsive.isTablet(context)
-                                            ? 39
-                                            : 0,
+                                        height: 14,
                                       ),
                                       aboutus,
                                     ],
                                   ),
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: [
-                                      SizedBox(
-                                        height: Responsive.isTablet(context)
-                                            ? 60
-                                            : 5,
-                                        width: 313,
-                                      ),
-                                      advice,
-                                    ],
-                                  )
+                                  aboutlist,
+                                  SizedBox(
+                                    height: 32,
+                                  ),
+                                  Padding(
+                                      padding: EdgeInsets.only(right: 250),
+                                      child: advice)
                                 ],
                               ),
-                      ],
-                    ),
+                            ),
+                            groupofpic
+                          ],
+                        )
+                      : Container(
+                          // padding: const EdgeInsets.only(left: 0),
+                          color: Color.fromARGB(0, 204, 220, 57),
+                          child: Column(
+                            children: [
+                              Responsive.isTablet(context)
+                                  ? Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        title,
+                                        SizedBox(
+                                          height: Responsive.isTablet(context)
+                                              ? 39
+                                              : 0,
+                                        ),
+                                        aboutus,
+                                        SizedBox(
+                                          height: Responsive.isTablet(context)
+                                              ? 60
+                                              : 5,
+                                        ),
+                                        Padding(
+                                            padding: EdgeInsets.only(left: 5),
+                                            child: advice)
+                                      ],
+                                    )
+                                  : Column(
+                                      children: [
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            title,
+                                            SizedBox(
+                                              height:
+                                                  Responsive.isTablet(context)
+                                                      ? 39
+                                                      : 0,
+                                            ),
+                                            aboutus,
+                                          ],
+                                        ),
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.end,
+                                          children: [
+                                            SizedBox(
+                                              height:
+                                                  Responsive.isTablet(context)
+                                                      ? 60
+                                                      : 5,
+                                              width: 313,
+                                            ),
+                                            advice,
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                            ],
+                          ),
+                        ),
+                  SizedBox(
+                    height: Responsive.isDesktop(context)
+                        ? 54
+                        : Responsive.isTablet(context)
+                            ? 71
+                            : 51,
                   ),
-            SizedBox(
-              height: Responsive.isDesktop(context)
-                  ? 54
-                  : Responsive.isTablet(context)
-                      ? 71
-                      : 51,
+                ],
+              ),
             ),
           ],
         ),
