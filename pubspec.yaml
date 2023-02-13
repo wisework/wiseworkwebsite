@@ -32,6 +32,7 @@ dependencies:
   # flutter_swiper : ^1.1.6
   flutter:
     sdk: flutter
+  smooth_page_indicator:
   
   loop_page_view: ^1.0.11
   # flutter_carousel_slider: ^2.3.0
@@ -133,6 +134,9 @@ flutter:
   - assets/pdpa/pdpa.png
 
   - assets/carousel/crs.png
+  - assets/carousel/med_crs.png
+  - assets/carousel/min_crs.png
+  
   
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
