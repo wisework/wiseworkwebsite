@@ -145,7 +145,12 @@ class _FooterState extends State<Footer> {
                           : Colors.white),
                 ),
               ),
-              SizedBox(height: Responsive.isTablet(context) ? 15 : 0.0),
+              SizedBox(
+                  height: Responsive.isDesktop(context)
+                      ? 0.0
+                      : Responsive.isTablet(context)
+                          ? 15
+                          : 10),
             ],
           );
         },
@@ -398,7 +403,7 @@ class _FooterState extends State<Footer> {
         child: Column(
           children: [
             SizedBox(
-              height: 40,
+              height: Responsive.isDesktop(context) ? 40 : 0,
             ),
             Responsive.isDesktop(context)
                 ? Container(
@@ -776,6 +781,7 @@ class _FooterState extends State<Footer> {
                               Container(
                                 width: 768,
                                 height: 671,
+                                // color: Colors.amber,
                               ),
                               Container(
                                 width: 768,
@@ -1210,17 +1216,22 @@ class _FooterState extends State<Footer> {
                                               top: 53, left: 28, right: 205),
                                           child: Container(
                                             width: 150,
-                                            height: 220,
+                                            height: 260,
                                             child: Column(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 SizedBox(
-                                                    height: 30, child: QLink),
+                                                    height: 35,
+                                                    width: 150,
+                                                    child: QLink),
                                                 SizedBox(
                                                   height: 10,
                                                 ),
-                                                navbarlist
+                                                SizedBox(
+                                                    width: 100,
+                                                    height: 210,
+                                                    child: navbarlist)
                                               ],
                                             ),
                                           ),

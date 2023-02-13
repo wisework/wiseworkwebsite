@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home/homepage.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 // import 'auth_dialog.dart';
 
 class MenuDrawer extends StatefulWidget {
@@ -14,91 +12,155 @@ class MenuDrawer extends StatefulWidget {
 }
 
 class Item {
-  // final int id;
-  final String title;
-  final String description;
+  String headerValue;
+  List<ChildItem> children;
   bool isExpanded;
+
   Item(
-    // this.id,
-    this.title,
-    this.description,
-    this.isExpanded,
-  );
+      {required this.headerValue,
+      required this.children,
+      this.isExpanded = false});
 }
 
-List<Item> items = [
-  Item(
-      // 1,
-      "Home",
-      "",
-      false),
-  Item(
-      // 2,
-      "About Us",
-      "description-2",
-      false),
-  Item(
-      // 3,
-      "Our Services",
-      "description-3",
-      false),
-  Item(
-      // 4,
-      "Blogs",
-      "description-4",
-      false),
-  Item(
-      // 5,
-      "Contact Us",
-      "description-5",
-      false),
-];
+class ChildItem {
+  String headerValue;
+  // String expandedValue;
+  // bool isExpanded;
+
+  ChildItem({
+    required this.headerValue,
+    // required this.expandedValue,
+    // this.isExpanded = false
+  });
+}
+
+// List<Item> generateItems(int numberOfItems) {
+//   return List.generate(numberOfItems, (int index) {
+//     if (index == 1) {
+//       return Item(
+//         headerValue: 'About Us',
+//         children: [
+//           ChildItem(
+//             headerValue: 'Our Story',
+//             expandedValue: 'About Us - Our Story Content',
+//           ),
+//           ChildItem(
+//             headerValue: 'Our Reward',
+//             expandedValue: 'About Us - Our Reward Content',
+//           ),
+//           ChildItem(
+//             headerValue: 'Our Customers',
+//             expandedValue: 'About Us - Our Customers',
+//           ),
+//         ],
+//       );
+//     } else {
+//       return Item(
+//         headerValue: 'Our Services',
+//         children: [
+//           ChildItem(
+//             headerValue: 'PDPA Management Platform',
+//             expandedValue: 'choice1',
+//           ),
+//           ChildItem(
+//             headerValue: 'Governance Assurance Suit',
+//             expandedValue: 'choice2',
+//           ),
+//         ],
+//       );
+//     }
+//   });
+// }
+
+// List<Item> items = [
+//   // Item(
+//   //     // 1,
+//   //     title: "Home",
+//   //     description: "",
+//   //     children:[],
+//   //     isExpanded: false),
+//   // Item(
+//   //     // 2,
+//   //     title: "About Us",
+//   //     children: ["Our Story", "Our Rewards", "Our Customers"],
+//   //     isExpanded: false),
+//   // Item(
+//   //     // 3,
+//   //     title: "Our Services",
+//   //     children: [
+//   //       "PDPA Management Platform",
+//   //       "Governance Assurance Suit",
+//   //       "Request Demo"
+//   //     ],
+//   //     isExpanded: false),
+//   // Item(
+//   //     // 4,
+//   //     title: "Home",
+//   //     description: "",
+//   //     children:[],
+//   //     isExpanded: false),
+//   // Item(
+//   //     // 5,
+//   //     title: "Home",
+//   //     description: "",
+//   //     children:[],
+//   //     isExpanded: false),
+// ];
 
 class _MenuDrawerState extends State<MenuDrawer> {
-  final List<String> listHome = <String>['Home', 'h1', 'h2', 'h3', 'h4'];
-  final List<String> listAbout = <String>[
-    'About Us',
-    'ab1',
-    'ab2',
-    'ab3',
-    'ab4'
-  ];
-  final List<String> listServices = <String>[
-    'Our Services',
-    'sv1',
-    'sv2',
-    'sv3',
-    'sv4'
-  ];
-  final List<String> listBlogs = <String>['Blogs', 'b1', 'b2', 'b3', 'b4'];
-  final List<String> listContact = <String>[
-    'Contacts',
-    'ct1',
-    'ct2',
-    'ct3',
-    'ct4'
-  ];
-
   String? HomeValue;
   String? AboutValue;
   String? ServicesValue;
   String? BlogsValue;
   String? ContactValue;
 
-  final List _isHovering = [
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
+  List<Item> _data = <Item>[
+    Item(
+        // 1,
+        headerValue: "Home",
+        children: [],
+        isExpanded: false),
+    Item(
+      // 2,
+      headerValue: "About Us",
+      children: [
+        ChildItem(
+          headerValue: 'Our Story',
+        ),
+        ChildItem(
+          headerValue: 'Our Reward',
+        ),
+        ChildItem(
+          headerValue: 'Our Customers',
+        ),
+      ],
+    ),
+    Item(
+        // 3,
+        headerValue: "Our Services",
+        children: [
+          ChildItem(
+            headerValue: 'PDPA Management Platform',
+            // expandedValue: '',
+          ),
+          ChildItem(
+            headerValue: 'Governance Assurance Suit',
+            // expandedValue: '',
+          ),
+        ],
+        isExpanded: false),
+    Item(
+        // 1,
+        headerValue: "Blogs",
+        children: [],
+        isExpanded: false),
+    Item(
+        // 1,
+        headerValue: "Contact Us",
+        children: [],
+        isExpanded: false),
   ];
 
-  bool _isProcessing = false;
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -111,7 +173,6 @@ class _MenuDrawerState extends State<MenuDrawer> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              
               Image.asset(
                 'logo.png',
                 height: 40,
@@ -120,7 +181,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
               SizedBox(
                 width: screenSize.width / 15,
               ),
-              _expandTog()
+              _buildPanel()
             ],
           ),
         ),
@@ -128,35 +189,143 @@ class _MenuDrawerState extends State<MenuDrawer> {
     );
   }
 
-  Widget _expandTog() {
+  // Widget _expandTog() {
+  //   return ExpansionPanelList(
+  //     animationDuration: Duration(seconds: 1),
+  //     dividerColor: Color.fromARGB(255, 228, 236, 248),
+  //     elevation: 0,
+  //     expansionCallback: (int index, bool isExpanded) {
+  //       setState(() {
+  //         items[index].isExpanded = !isExpanded;
+  //       });
+  //     },
+  //     children: items.map<ExpansionPanel>((Item item) {
+  //       return ExpansionPanel(
+  //         // backgroundColor: Color.fromARGB(255, 228, 236, 248),
+  //         canTapOnHeader: true,
+  //         headerBuilder: (BuildContext context, bool isExpanded) {
+  //           return ListTile(
+  //             title: Text(
+  //               item.title,
+  //               style: TextStyle(color: Color.fromARGB(255, 76, 179, 211)),
+  //             ),
+  //             // selectedColor: Colors.amber,
+  //           );
+  //         },
+  //         body: ListTile(
+  //             contentPadding: EdgeInsets.only(top: 5, bottom: 20, left: 20),
+  //             title: Text(item.description),
+  //             onTap: () {}),
+  //         isExpanded: item.isExpanded,
+  //       );
+  //     }).toList(),
+  //   );
+  // }
+
+  Widget _buildPanel() {
     return ExpansionPanelList(
-      animationDuration: Duration(seconds: 1),
-      dividerColor: Color.fromARGB(255, 228, 236, 248),
-      elevation: 0,
       expansionCallback: (int index, bool isExpanded) {
         setState(() {
-          items[index].isExpanded = !isExpanded;
+          _data[index].isExpanded = !isExpanded;
         });
       },
-      children: items.map<ExpansionPanel>((Item item) {
-        return ExpansionPanel(
-          // backgroundColor: Color.fromARGB(255, 228, 236, 248),
-          canTapOnHeader: true,
-          headerBuilder: (BuildContext context, bool isExpanded) {
-            return ListTile(
-              title: Text(
-                item.title,
-                style: TextStyle(color: Color.fromARGB(255, 76, 179, 211)),
-              ),
-              // selectedColor: Colors.amber,
-            );
-          },
-          body: ListTile(
-              contentPadding: EdgeInsets.only(top: 5, bottom: 20, left: 20),
-              title: Text(item.description),
-              onTap: () {}),
-          isExpanded: item.isExpanded,
-        );
+      elevation: 0,
+      children: _data.map<ExpansionPanel>((Item item) {
+        if (item.headerValue == 'Home') {
+          return ExpansionPanel(
+            headerBuilder: (BuildContext context, bool isExpanded) {
+              return Container(
+                child: ListTile(
+                  title: Text(
+                    item.headerValue,
+                    style: GoogleFonts.ibmPlexSansThai(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Color.fromARGB(255, 35, 34, 51)),
+                  ),
+                ),
+              );
+            },
+            body: Container(),
+            canTapOnHeader: false,
+            isExpanded: false,
+          );
+        } else if (item.headerValue == 'Blogs') {
+          return ExpansionPanel(
+            headerBuilder: (BuildContext context, bool isExpanded) {
+              return Container(
+                child: ListTile(
+                  title: Text(
+                    item.headerValue,
+                    style: GoogleFonts.ibmPlexSansThai(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Color.fromARGB(255, 35, 34, 51)),
+                  ),
+                ),
+              );
+            },
+            body: Container(),
+            canTapOnHeader: false,
+            isExpanded: false,
+          );
+        } else if (item.headerValue == 'Contact Us') {
+          return ExpansionPanel(
+            headerBuilder: (BuildContext context, bool isExpanded) {
+              return Container(
+                child: ListTile(
+                  title: Text(
+                    item.headerValue,
+                    style: GoogleFonts.ibmPlexSansThai(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Color.fromARGB(255, 35, 34, 51)),
+                  ),
+                ),
+              );
+            },
+            body: Container(),
+            canTapOnHeader: false,
+            isExpanded: false,
+          );
+        } else {
+          return ExpansionPanel(
+            headerBuilder: (BuildContext context, bool isExpanded) {
+              return ListTile(
+                title: Text(
+                  item.headerValue,
+                  style: GoogleFonts.ibmPlexSansThai(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: isExpanded
+                          ? Color.fromARGB(255, 52, 145, 206)
+                          : Color.fromARGB(255, 35, 34, 51)),
+                ),
+              );
+            },
+            body: item.children != null
+                ? Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: item.children.map<Widget>((ChildItem childItem) {
+                      return Padding(
+                        padding: EdgeInsets.only(left: 16.0),
+                        child: ListTile(
+                          title: Text(
+                            childItem.headerValue,
+                            style: GoogleFonts.ibmPlexSansThai(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: Color.fromARGB(255, 87, 87, 87)),
+                          ),
+                        ),
+                      );
+                    }).toList(),
+                  )
+                : Container(),
+            isExpanded: item.isExpanded,
+            canTapOnHeader: true,
+          );
+        }
       }).toList(),
     );
   }
