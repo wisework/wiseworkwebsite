@@ -826,29 +826,112 @@ class _FooterState extends State<Footer> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                top: 35, left: 40),
-                                            child: Container(
-                                              width: 213,
-                                              height: 97,
-                                              child: Text(
-                                                "The Wise Work Co.,Ltd.\n7 Soi Lat Pla Khao 19,\nChorakhe Bua Subdistrict,\nLat Phrao District, Bangkok",
-                                                style:
-                                                    GoogleFonts.ibmPlexSansThai(
-                                                        fontSize: 16,
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        color: Colors.white),
+                                          Column(children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 35, left: 40),
+                                              child: Container(
+                                                width: 213,
+                                                height: 97,
+                                                child: Text(
+                                                  "The Wise Work Co.,Ltd.\n7 Soi Lat Pla Khao 19,\nChorakhe Bua Subdistrict,\nLat Phrao District, Bangkok",
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          fontSize: 16,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          color: Colors.white),
+                                                ),
                                               ),
                                             ),
-                                          ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 38, left: 40),
+                                              child: Container(
+                                                width: 218,
+                                                height: 25,
+                                                child: Row(
+                                                  children: [
+                                                    Container(
+                                                        width: 25,
+                                                        height: 25,
+                                                        child: Image.asset(
+                                                          "/footer/fb.png",
+                                                        )),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              left: 18),
+                                                      child: Container(
+                                                        width: 1,
+                                                        height: 20,
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              left: 20),
+                                                      child: Container(
+                                                          width: 25,
+                                                          height: 25,
+                                                          child: Image.asset(
+                                                            "/footer/ig.png",
+                                                          )),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              left: 18),
+                                                      child: Container(
+                                                        width: 1,
+                                                        height: 20,
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              left: 20),
+                                                      child: Container(
+                                                          width: 25,
+                                                          height: 25,
+                                                          child: Image.asset(
+                                                            "/footer/yt.png",
+                                                          )),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              left: 18),
+                                                      child: Container(
+                                                        width: 1,
+                                                        height: 20,
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              left: 20),
+                                                      child: Container(
+                                                          width: 25,
+                                                          height: 25,
+                                                          child: Image.asset(
+                                                            "/footer/tiktok.png",
+                                                          )),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ]),
                                           Padding(
                                             padding: const EdgeInsets.only(
                                                 top: 10, left: 61),
                                             child: Container(
                                               width: 114,
-                                              // height: 200,
+                                              height: 220,
                                               // color: Colors.amber,
                                               child: navbarlist,
                                             ),
