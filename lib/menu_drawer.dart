@@ -11,180 +11,164 @@ class MenuDrawer extends StatefulWidget {
   _MenuDrawerState createState() => _MenuDrawerState();
 }
 
-class Item {
-  String headerValue;
-  List<ChildItem> children;
-  bool isExpanded;
-
-  Item(
-      {required this.headerValue,
-      required this.children,
-      this.isExpanded = false});
-}
-
-class ChildItem {
-  String headerValue;
-  // String expandedValue;
-  // bool isExpanded;
-
-  ChildItem({
-    required this.headerValue,
-    // required this.expandedValue,
-    // this.isExpanded = false
-  });
-}
-
-// List<Item> generateItems(int numberOfItems) {
-//   return List.generate(numberOfItems, (int index) {
-//     if (index == 1) {
-//       return Item(
-//         headerValue: 'About Us',
-//         children: [
-//           ChildItem(
-//             headerValue: 'Our Story',
-//             expandedValue: 'About Us - Our Story Content',
-//           ),
-//           ChildItem(
-//             headerValue: 'Our Reward',
-//             expandedValue: 'About Us - Our Reward Content',
-//           ),
-//           ChildItem(
-//             headerValue: 'Our Customers',
-//             expandedValue: 'About Us - Our Customers',
-//           ),
-//         ],
-//       );
-//     } else {
-//       return Item(
-//         headerValue: 'Our Services',
-//         children: [
-//           ChildItem(
-//             headerValue: 'PDPA Management Platform',
-//             expandedValue: 'choice1',
-//           ),
-//           ChildItem(
-//             headerValue: 'Governance Assurance Suit',
-//             expandedValue: 'choice2',
-//           ),
-//         ],
-//       );
-//     }
-//   });
-// }
-
-// List<Item> items = [
-//   // Item(
-//   //     // 1,
-//   //     title: "Home",
-//   //     description: "",
-//   //     children:[],
-//   //     isExpanded: false),
-//   // Item(
-//   //     // 2,
-//   //     title: "About Us",
-//   //     children: ["Our Story", "Our Rewards", "Our Customers"],
-//   //     isExpanded: false),
-//   // Item(
-//   //     // 3,
-//   //     title: "Our Services",
-//   //     children: [
-//   //       "PDPA Management Platform",
-//   //       "Governance Assurance Suit",
-//   //       "Request Demo"
-//   //     ],
-//   //     isExpanded: false),
-//   // Item(
-//   //     // 4,
-//   //     title: "Home",
-//   //     description: "",
-//   //     children:[],
-//   //     isExpanded: false),
-//   // Item(
-//   //     // 5,
-//   //     title: "Home",
-//   //     description: "",
-//   //     children:[],
-//   //     isExpanded: false),
-// ];
-
 class _MenuDrawerState extends State<MenuDrawer> {
-  String? HomeValue;
-  String? AboutValue;
-  String? ServicesValue;
-  String? BlogsValue;
-  String? ContactValue;
+  bool _showStory = false;
+  bool _showRewards = false;
+  bool _showCustomers = false;
 
-  List<Item> _data = <Item>[
-    Item(
-        // 1,
-        headerValue: "Home",
-        children: [],
-        isExpanded: false),
-    Item(
-      // 2,
-      headerValue: "About Us",
-      children: [
-        ChildItem(
-          headerValue: 'Our Story',
-        ),
-        ChildItem(
-          headerValue: 'Our Reward',
-        ),
-        ChildItem(
-          headerValue: 'Our Customers',
-        ),
-      ],
-    ),
-    Item(
-        // 3,
-        headerValue: "Our Services",
-        children: [
-          ChildItem(
-            headerValue: 'PDPA Management Platform',
-            // expandedValue: '',
-          ),
-          ChildItem(
-            headerValue: 'Governance Assurance Suit',
-            // expandedValue: '',
-          ),
-        ],
-        isExpanded: false),
-    Item(
-        // 1,
-        headerValue: "Blogs",
-        children: [],
-        isExpanded: false),
-    Item(
-        // 1,
-        headerValue: "Contact Us",
-        children: [],
-        isExpanded: false),
-  ];
+  bool _showPDPA = false;
+  bool _showGovernance = false;
+  bool _showRequest = false;
+
+  bool _isAboutExpanded = false;
+  bool _isServiceExpanded = false;
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
+    // var screenSize = MediaQuery.of(context).size;
     return Drawer(
-      child: Container(
-        color: Theme.of(context).bottomAppBarColor,
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Image.asset(
-                'logo.png',
-                height: 40,
-                width: 100,
-              ),
-              SizedBox(
-                width: screenSize.width / 15,
-              ),
-              _buildPanel()
-            ],
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          ListTile(
+            title: Text('Home',
+                style: GoogleFonts.ibmPlexSansThai(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Color.fromARGB(255, 35, 34, 51))),
+            onTap: () {
+              // handle tap on tile
+            },
           ),
-        ),
+          ListTile(
+            title: Text('About Us',
+                style: GoogleFonts.ibmPlexSansThai(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: _isAboutExpanded
+                        ? Color.fromARGB(255, 52, 145, 206)
+                        : Color.fromARGB(255, 35, 34, 51))),
+            trailing: Icon(Icons.expand_more),
+            onTap: () {
+              // toggle the boolean value for this item
+              setState(() {
+                _showStory = false;
+                _showRewards = false;
+                _showCustomers = !_showCustomers;
+                _isAboutExpanded = !_isAboutExpanded;
+              });
+            },
+          ),
+          if (_showCustomers)
+            Column(
+              children: <Widget>[
+                ListTile(
+                  title: Text('Our Story',
+                      style: GoogleFonts.ibmPlexSansThai(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 87, 87, 87))),
+                  onTap: () {
+                    // handle tap on tile
+                  },
+                ),
+                ListTile(
+                  title: Text('Our Rewards',
+                      style: GoogleFonts.ibmPlexSansThai(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 87, 87, 87))),
+                  onTap: () {
+                    // handle tap on tile
+                  },
+                ),
+                ListTile(
+                  title: Text('Our Customers',
+                      style: GoogleFonts.ibmPlexSansThai(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 87, 87, 87))),
+                  onTap: () {
+                    // handle tap on tile
+                  },
+                ),
+              ],
+            ),
+          ListTile(
+            title: Text('Our Services',
+                style: GoogleFonts.ibmPlexSansThai(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: _isServiceExpanded
+                        ? Color.fromARGB(255, 52, 145, 206)
+                        : Color.fromARGB(255, 35, 34, 51))),
+            trailing: Icon(Icons.expand_more),
+            onTap: () {
+              // toggle the boolean value for this item
+              setState(() {
+                _showPDPA = false;
+                _showGovernance = false;
+                _showRequest = !_showRequest;
+                _isServiceExpanded = !_isServiceExpanded;
+              });
+            },
+          ),
+          if (_showRequest)
+            Column(
+              children: <Widget>[
+                ListTile(
+                  title: Text('PDPA Management Platform',
+                      style: GoogleFonts.ibmPlexSansThai(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 87, 87, 87))),
+                  onTap: () {
+                    // handle tap on tile
+                  },
+                ),
+                ListTile(
+                  title: Text('Governance Assurance Suit',
+                      style: GoogleFonts.ibmPlexSansThai(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 87, 87, 87))),
+                  onTap: () {
+                    // handle tap on tile
+                  },
+                ),
+                ListTile(
+                  title: Text('Request Demo',
+                      style: GoogleFonts.ibmPlexSansThai(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 87, 87, 87))),
+                  onTap: () {
+                    // handle tap on tile
+                  },
+                ),
+              ],
+            ),
+          ListTile(
+            title: Text('Blogs',
+                style: GoogleFonts.ibmPlexSansThai(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Color.fromARGB(255, 35, 34, 51))),
+            onTap: () {
+              // handle tap on tile
+            },
+          ),
+          ListTile(
+            title: Text('Contact Us',
+                style: GoogleFonts.ibmPlexSansThai(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Color.fromARGB(255, 35, 34, 51))),
+            onTap: () {
+              // handle tap on tile
+            },
+          ),
+        ],
       ),
     );
   }
@@ -222,111 +206,111 @@ class _MenuDrawerState extends State<MenuDrawer> {
   //   );
   // }
 
-  Widget _buildPanel() {
-    return ExpansionPanelList(
-      expansionCallback: (int index, bool isExpanded) {
-        setState(() {
-          _data[index].isExpanded = !isExpanded;
-        });
-      },
-      elevation: 0,
-      children: _data.map<ExpansionPanel>((Item item) {
-        if (item.headerValue == 'Home') {
-          return ExpansionPanel(
-            headerBuilder: (BuildContext context, bool isExpanded) {
-              return Container(
-                child: ListTile(
-                  title: Text(
-                    item.headerValue,
-                    style: GoogleFonts.ibmPlexSansThai(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                        color: Color.fromARGB(255, 35, 34, 51)),
-                  ),
-                ),
-              );
-            },
-            body: Container(),
-            canTapOnHeader: false,
-            isExpanded: false,
-          );
-        } else if (item.headerValue == 'Blogs') {
-          return ExpansionPanel(
-            headerBuilder: (BuildContext context, bool isExpanded) {
-              return Container(
-                child: ListTile(
-                  title: Text(
-                    item.headerValue,
-                    style: GoogleFonts.ibmPlexSansThai(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                        color: Color.fromARGB(255, 35, 34, 51)),
-                  ),
-                ),
-              );
-            },
-            body: Container(),
-            canTapOnHeader: false,
-            isExpanded: false,
-          );
-        } else if (item.headerValue == 'Contact Us') {
-          return ExpansionPanel(
-            headerBuilder: (BuildContext context, bool isExpanded) {
-              return Container(
-                child: ListTile(
-                  title: Text(
-                    item.headerValue,
-                    style: GoogleFonts.ibmPlexSansThai(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                        color: Color.fromARGB(255, 35, 34, 51)),
-                  ),
-                ),
-              );
-            },
-            body: Container(),
-            canTapOnHeader: false,
-            isExpanded: false,
-          );
-        } else {
-          return ExpansionPanel(
-            headerBuilder: (BuildContext context, bool isExpanded) {
-              return ListTile(
-                title: Text(
-                  item.headerValue,
-                  style: GoogleFonts.ibmPlexSansThai(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                      color: isExpanded
-                          ? Color.fromARGB(255, 52, 145, 206)
-                          : Color.fromARGB(255, 35, 34, 51)),
-                ),
-              );
-            },
-            body: item.children != null
-                ? Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: item.children.map<Widget>((ChildItem childItem) {
-                      return Padding(
-                        padding: EdgeInsets.only(left: 16.0),
-                        child: ListTile(
-                          title: Text(
-                            childItem.headerValue,
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
-                                color: Color.fromARGB(255, 87, 87, 87)),
-                          ),
-                        ),
-                      );
-                    }).toList(),
-                  )
-                : Container(),
-            isExpanded: item.isExpanded,
-            canTapOnHeader: true,
-          );
-        }
-      }).toList(),
-    );
-  }
+  // Widget _buildPanel() {
+  //   return ExpansionPanelList(
+  //     expansionCallback: (int index, bool isExpanded) {
+  //       setState(() {
+  //         _data[index].isExpanded = !isExpanded;
+  //       });
+  //     },
+  //     elevation: 0,
+  //     children: _data.map<ExpansionPanel>((Item item) {
+  //       if (item.headerValue == 'Home') {
+  //         return ExpansionPanel(
+  //           headerBuilder: (BuildContext context, bool isExpanded) {
+  //             return Container(
+  //               child: ListTile(
+  //                 title: Text(
+  //                   item.headerValue,
+  //                   style: GoogleFonts.ibmPlexSansThai(
+  //                       fontSize: 20,
+  //                       fontWeight: FontWeight.w600,
+  //                       color: Color.fromARGB(255, 35, 34, 51)),
+  //                 ),
+  //               ),
+  //             );
+  //           },
+  //           body: Container(),
+  //           canTapOnHeader: false,
+  //           isExpanded: false,
+  //         );
+  //       } else if (item.headerValue == 'Blogs') {
+  //         return ExpansionPanel(
+  //           headerBuilder: (BuildContext context, bool isExpanded) {
+  //             return Container(
+  //               child: ListTile(
+  //                 title: Text(
+  //                   item.headerValue,
+  //                   style: GoogleFonts.ibmPlexSansThai(
+  //                       fontSize: 20,
+  //                       fontWeight: FontWeight.w600,
+  //                       color: Color.fromARGB(255, 35, 34, 51)),
+  //                 ),
+  //               ),
+  //             );
+  //           },
+  //           body: Container(),
+  //           canTapOnHeader: false,
+  //           isExpanded: false,
+  //         );
+  //       } else if (item.headerValue == 'Contact Us') {
+  //         return ExpansionPanel(
+  //           headerBuilder: (BuildContext context, bool isExpanded) {
+  //             return Container(
+  //               child: ListTile(
+  //                 title: Text(
+  //                   item.headerValue,
+  //                   style: GoogleFonts.ibmPlexSansThai(
+  //                       fontSize: 20,
+  //                       fontWeight: FontWeight.w600,
+  //                       color: Color.fromARGB(255, 35, 34, 51)),
+  //                 ),
+  //               ),
+  //             );
+  //           },
+  //           body: Container(),
+  //           canTapOnHeader: false,
+  //           isExpanded: false,
+  //         );
+  //       } else {
+  //         return ExpansionPanel(
+  //           headerBuilder: (BuildContext context, bool isExpanded) {
+  //             return ListTile(
+  //               title: Text(
+  //                 item.headerValue,
+  //                 style: GoogleFonts.ibmPlexSansThai(
+  //                     fontSize: 20,
+  //                     fontWeight: FontWeight.w600,
+  //                     color: isExpanded
+  //                         ? Color.fromARGB(255, 52, 145, 206)
+  //                         : Color.fromARGB(255, 35, 34, 51)),
+  //               ),
+  //             );
+  //           },
+  //           body: item.children != null
+  //               ? Column(
+  //                   crossAxisAlignment: CrossAxisAlignment.start,
+  //                   children: item.children.map<Widget>((ChildItem childItem) {
+  //                     return Padding(
+  //                       padding: EdgeInsets.only(left: 16.0),
+  //                       child: ListTile(
+  //                         title: Text(
+  //                           childItem.headerValue,
+  //                           style: GoogleFonts.ibmPlexSansThai(
+  //                               fontSize: 16,
+  //                               fontWeight: FontWeight.w400,
+  //                               color: Color.fromARGB(255, 87, 87, 87)),
+  //                         ),
+  //                       ),
+  //                     );
+  //                   }).toList(),
+  //                 )
+  //               : Container(),
+  //           isExpanded: item.isExpanded,
+  //           canTapOnHeader: true,
+  //         );
+  //       }
+  //     }).toList(),
+  //   );
+  // }
 }
