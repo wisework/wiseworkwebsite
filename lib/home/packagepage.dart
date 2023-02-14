@@ -56,7 +56,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
       ),
       Package(
         title: Responsive.isDesktop(context)
-            ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูลส่วนบุคคล และข้อมูลส่วนอ่อนไหว จำนวนมาก"
+            ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูล\nส่วนบุคคล และข้อมูลส่วนอ่อนไหว\nเป็นจำนวนมาก"
             : Responsive.isTablet(context)
                 ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูลส่วน\nบุคคล และข้อมูลส่วนอ่อนไหว จำนวนมาก"
                 : "เหมาะสำหรับองค์กรที่มีการเก็บรวบรวมข้อมูลจำนวนมาก",
@@ -70,13 +70,13 @@ class _DestinationCarouselState extends State<PackagesPage> {
         title: "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
-        dense: true,
+        dense: false,
       ),
       Package(
         title: "ติดตั้งได้ทั้ง On-Premise หรือ On-Cloud",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
-        dense: true,
+        dense: false,
       ),
       Package(
         title: !Responsive.isMobile(context)
@@ -84,13 +84,13 @@ class _DestinationCarouselState extends State<PackagesPage> {
             : "พัฒนาเพิ่มเติมตามความต้องการ",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
-        dense: true,
+        dense: false,
       ),
       Package(
         title: "Standard Support 8x5",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
-        dense: true,
+        dense: false,
       ),
       Package(
         title: !Responsive.isMobile(context)
@@ -98,13 +98,13 @@ class _DestinationCarouselState extends State<PackagesPage> {
             : "มี API สำหรับ Import & Export",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
-        dense: true,
+        dense: false,
       ),
       Package(
-        title: "องค์กรไม่ต้องการเชื่อมต่อกับระบบภายในเดิม ",
+        title: "องค์กรไม่ต้องการเชื่อมต่อกับระบบภายในเดิม",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
-        dense: true,
+        dense: false,
       ),
       Package(
         title: !Responsive.isMobile(context)
@@ -112,7 +112,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
             : "เหมาะสำหรับองค์กรขนาดใหญ่ปรับแต่งให้เข้ากับการทำงาน",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
-        dense: true,
+        dense: false,
       ),
     ];
     final enterprise = [
@@ -181,15 +181,15 @@ class _DestinationCarouselState extends State<PackagesPage> {
           children: [
             SizedBox(
               height: Responsive.isDesktop(context)
-                  ? 71.52
+                  ? 30
                   : Responsive.isTablet(context)
                       ? 37
-                      : 47,
+                      : 61,
             ),
             !Responsive.isMobile(context)
                 ? Container(
                     padding: const EdgeInsets.only(left: 15),
-                    height: Responsive.isDesktop(context) ? 140 : 125,
+                    height: Responsive.isDesktop(context) ? 123 : 125,
                     width: Responsive.isDesktop(context) ? 1440 : 1440,
                     child: Center(
                       child: RichText(
@@ -250,7 +250,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                     )),
             SizedBox(
               height: Responsive.isDesktop(context)
-                  ? 52.72
+                  ? 50
                   : Responsive.isTablet(context)
                       ? 40
                       : 45,
@@ -272,16 +272,11 @@ class _DestinationCarouselState extends State<PackagesPage> {
                       ),
                       SizedBox(width: 23),
                       PackageCard(
-                        packageicon: 'assets/packages/white_clouds.png',
+                        packageicon: 'assets/packages/clouds.png',
                         title: 'Standard',
                         lisence: 'Subscriptions License',
                         packages: standard,
-                        backgroundcolor: Color.fromARGB(
-                          255,
-                          5,
-                          45,
-                          97,
-                        ),
+                        // backgroundcolor: Color.fromARGB(255, 5, 45, 97),
                         buttoncolor: false,
                         firstbox: false,
                         middlebox: true,
@@ -376,7 +371,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                   ),
             SizedBox(
               height: Responsive.isDesktop(context)
-                  ? 94
+                  ? 70
                   : Responsive.isTablet(context)
                       ? 40
                       : 76,
@@ -421,38 +416,24 @@ class PackageCard extends StatelessWidget {
             decoration: BoxDecoration(
               boxShadow: <BoxShadow>[
                 BoxShadow(
-                    color: Responsive.isDesktop(context)
-                        ? Color.fromARGB(0, 255, 255, 255)
-                        : middlebox
-                            ? Color.fromARGB(59, 0, 0, 0)
-                            : Color.fromARGB(0, 255, 255, 255),
+                    color: middlebox
+                        ? Color.fromARGB(59, 0, 0, 0)
+                        : Color.fromARGB(0, 255, 255, 255),
                     blurRadius: 3.0,
                     offset: Offset(0.0, 4.0))
               ],
-              borderRadius: Responsive.isDesktop(context)
-                  ? firstbox
-                      ? BorderRadius.only(
-                          topRight: Radius.circular(20),
-                          bottomRight: Radius.circular(20))
-                      : lastbox
-                          ? BorderRadius.only(
-                              topLeft: Radius.circular(20),
-                              bottomLeft: Radius.circular(20))
-                          : BorderRadius.circular(20)
-                  : BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20),
               color: backgroundcolor ?? Color.fromARGB(255, 255, 255, 255),
             ),
             height: !Responsive.isMobile(context)
-                ? middlebox
-                    ? 719
-                    : 749
+                ? firstbox
+                    ? 793
+                    : middlebox
+                        ? 769
+                        : 796
                 : 534,
             width: Responsive.isDesktop(context)
-                ? firstbox
-                    ? 465
-                    : middlebox
-                        ? 477
-                        : 459
+                ? 438
                 : Responsive.isTablet(context)
                     ? 490
                     : 296,
@@ -465,7 +446,7 @@ class PackageCard extends StatelessWidget {
                           ? 33
                           : middlebox
                               ? 41
-                              : 48
+                              : 46
                       : 25,
                 ),
                 Row(
@@ -521,11 +502,11 @@ class PackageCard extends StatelessWidget {
                           child: Text(
                             title,
                             style: GoogleFonts.ibmPlexSansThai(
-                                color: Responsive.isDesktop(context)
-                                    ? middlebox
-                                        ? Colors.white
-                                        : Colors.black
-                                    : Colors.black,
+                                // color: Responsive.isDesktop(context)
+                                //     ? middlebox
+                                //         ? Colors.white
+                                //         : Colors.black
+                                // : Colors.black,
                                 fontSize: Responsive.isDesktop(context)
                                     ? 32
                                     : Responsive.isTablet(context)
@@ -538,7 +519,7 @@ class PackageCard extends StatelessWidget {
                 ),
                 SizedBox(
                   height: Responsive.isDesktop(context)
-                      ? 35
+                      ? 31
                       : Responsive.isTablet(context)
                           ? 38
                           : 0,
@@ -555,7 +536,7 @@ class PackageCard extends StatelessWidget {
                 Transform.translate(
                   offset: Offset(
                       Responsive.isDesktop(context)
-                          ? -25
+                          ? 0
                           : Responsive.isTablet(context)
                               ? -20
                               : -20,
@@ -567,11 +548,13 @@ class PackageCard extends StatelessWidget {
                   child: SizedBox(
                     width: !Responsive.isMobile(context) ? 352 : 200,
                     child: DottedLine(
-                      dashColor: Responsive.isDesktop(context)
-                          ? middlebox
-                              ? Colors.white
-                              : Color.fromARGB(255, 169, 169, 170)
-                          : Color.fromARGB(255, 169, 169, 170),
+                      dashColor:
+                          // Responsive.isDesktop(context)
+                          //     ? middlebox
+                          //         ? Colors.white
+                          //         : Color.fromARGB(255, 169, 169, 170)
+                          //     :
+                          Color.fromARGB(255, 169, 169, 170),
                       dashGapLength: 3,
                       dashLength: 5,
                     ),
@@ -595,16 +578,21 @@ class PackageCard extends StatelessWidget {
                       child: Text(
                         lisence,
                         style: GoogleFonts.ibmPlexSansThai(
-                            color: Responsive.isDesktop(context)
-                                ? middlebox
-                                    ? Colors.white
-                                    : Colors.black
-                                : Colors.black,
+                            // color: Responsive.isDesktop(context)
+                            //     ? middlebox
+                            //         ? Colors.white
+                            //         : Colors.black
+                            //     : Colors.black,
                             fontSize: !Responsive.isMobile(context) ? 28 : 16,
                             fontWeight: FontWeight.w700),
                       )),
                 ),
-                SizedBox(height: Responsive.isDesktop(context) ? 22 : 28),
+                SizedBox(
+                    height: Responsive.isDesktop(context)
+                        ? firstbox
+                            ? 19
+                            : 22
+                        : 28),
                 buttoncolor
                     ? SizedBox(
                         width: !Responsive.isMobile(context) ? 352 : 160.56,
@@ -650,7 +638,7 @@ class PackageCard extends StatelessWidget {
                             )),
                       ),
                 Responsive.isDesktop(context)
-                    ? SizedBox(height: middlebox ? 40 : 70)
+                    ? SizedBox(height: 70)
                     : Responsive.isTablet(context)
                         ? SizedBox(height: middlebox ? 40 : 70)
                         : SizedBox(height: 32),
@@ -679,14 +667,14 @@ class Buildpackagetile extends StatelessWidget {
                   : true,
           visualDensity: VisualDensity(
               horizontal: Responsive.isDesktop(context)
-                  ? 0
+                  ? -4
                   : Responsive.isTablet(context)
                       ? 0
                       : -4,
               vertical: Responsive.isDesktop(context)
                   ? package.dense
-                      ? -2.5
-                      : -4
+                      ? -1
+                      : -2
                   : Responsive.isTablet(context)
                       ? package.dense
                           ? -1
@@ -725,9 +713,9 @@ class Buildpackagetile extends StatelessWidget {
             child: Text(
               package.title,
               style: GoogleFonts.ibmPlexSansThai(
-                  color: package.position
-                      ? Color.fromARGB(255, 255, 255, 255)
-                      : Colors.black,
+                  // color: package.position
+                  //     ? Color.fromARGB(255, 255, 255, 255)
+                  //     : Colors.black,
                   fontSize: !Responsive.isMobile(context) ? 20 : 16,
                   fontWeight: FontWeight.w400),
             ),
