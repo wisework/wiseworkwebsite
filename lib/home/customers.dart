@@ -385,7 +385,7 @@ class _CustomerState extends State<CustomerPage> {
                               shrinkWrap: true,
                               gridDelegate:
                                   SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 5,
+                                crossAxisCount: 4,
                                 crossAxisSpacing: 20,
                                 mainAxisSpacing: 20,
                               ),
@@ -398,8 +398,8 @@ class _CustomerState extends State<CustomerPage> {
                                   // ),
                                   child: new Material(
                                     child: new Container(
-                                      width: 165,
-                                      height: 165,
+                                      width: 300,
+                                      height: 300,
                                       child: Center(
                                         child: Container(
                                           margin: EdgeInsets.all(15),
@@ -408,8 +408,8 @@ class _CustomerState extends State<CustomerPage> {
                                                 MainAxisAlignment.center,
                                             children: <Widget>[
                                               SizedBox(
-                                                width: 140,
-                                                height: 140,
+                                                width: 245,
+                                                height: 245,
                                                 child: Image.asset(
                                                     customer[index]),
                                               )
