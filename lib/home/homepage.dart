@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:wiseintern/home/pdpa.dart';
-import '../navbar.dart';
+import 'package:wiseintern/navbar.dart';
 import 'package:wiseintern/home/features.dart';
 import 'package:wiseintern/home/packagepage.dart';
-import '../responsive.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/home/customers.dart';
 import 'package:wiseintern/home/story.dart';
-import '../menu_drawer.dart';
-import 'package:wiseintern/home/faq.dart';
+import 'package:wiseintern/menu_drawer.dart';
 import 'package:wiseintern/home/footer.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,20 +14,21 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  late ScrollController _scrollController;
-  double _scrollPosition = 0;
-  double _opacity = 0;
+  // late ScrollController _scrollController;
+  // double _scrollPosition = 0;
+  // double _opacity = 0;
 
   int _currentIndex = 0;
-  final List<Widget> _children = [
-    // Feature2(),
-    PackagesPage(),
-    FeaturesPage(),
-    CustomerPage(),
-    StoryPage(),
-    Footer()
-    // other pages
-  ];
+  // final List<Widget> _children = [
+  //   // Feature2(),
+  //   CarouselPage(),
+  //   PackagesPage(),
+  //   FeaturesPage(),
+  // CustomerPage(),
+  //   StoryPage(),
+  //   Footer()
+  //   // other pages
+  // ];
 
   void onTabTapped(int index) {
     setState(() {
@@ -66,11 +63,11 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            StoryPage(),
+            // StoryPage(),
             // Pdpa(),
             // FeaturesPage(),
-            PackagesPage(),
-            // CustomerPage(),
+            // PackagesPage(),
+            CustomerPage(),
             // FAQ(),
             // Footer()
           ],

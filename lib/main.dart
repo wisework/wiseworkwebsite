@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wiseintern/home/homepage.dart';
+import 'package:wiseintern/about/aboutpage.dart';
 // import 'package:wiseintern/home/features.dart';
 // import 'package:wiseintern/home/packagepage.dart';
 // import 'navbar.dart';
@@ -16,7 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home:
+       AboutPage(),
+      //  HomePage()
 
       // theme: ThemeData(primarySwatch: Colors.deepPurple),
     );

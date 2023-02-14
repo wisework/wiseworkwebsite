@@ -11,6 +11,7 @@ import 'package:wiseintern/menu_drawer.dart';
 import 'package:wiseintern/about/banner.dart';
 import 'package:wiseintern/about/who.dart';
 import 'package:wiseintern/about/why.dart';
+import 'package:wiseintern/about/awards.dart';
 
 class AboutPage extends StatefulWidget {
   @override
@@ -18,7 +19,6 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
-
   int _currentIndex = 0;
 
   void onTabTapped(int index) {
@@ -53,11 +53,7 @@ class _AboutPageState extends State<AboutPage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // BannerPage(),
-            // WhoPage(),
-            WhyPage()
-          ],
+          children: [BannerPage(), WhoPage(), WhyPage(), AwardsPage()],
         ),
       ),
     );
