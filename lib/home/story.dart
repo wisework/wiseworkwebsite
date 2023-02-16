@@ -231,7 +231,7 @@ class _DestinationCarouselState extends State<StoryPage> {
       height: Responsive.isDesktop(context)
           ? 158
           : Responsive.isTablet(context)
-              ? 99
+              ? 85
               : 158,
       width: Responsive.isDesktop(context)
           ? 726
@@ -252,7 +252,7 @@ class _DestinationCarouselState extends State<StoryPage> {
     );
     var aboutlist = Container(
       color: Color.fromARGB(0, 255, 255, 255),
-      height: Responsive.isDesktop(context) ? 210 : 105,
+      height: Responsive.isDesktop(context) ? 210 : 130,
       width: Responsive.isDesktop(context) ? 726 : 621,
       child: ListView.builder(
         shrinkWrap: true,
@@ -601,7 +601,7 @@ class _DestinationCarouselState extends State<StoryPage> {
                                       SizedBox(
                                         height: Responsive.isTablet(context)
                                             ? 60
-                                            : 5,
+                                            : 1,
                                         width: Responsive.isTablet(context)
                                             ? 704
                                             : 313,

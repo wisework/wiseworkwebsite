@@ -24,7 +24,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
     final express = [
       Package(
         title: !Responsive.isMobile(context)
-            ? 'Support Module วัตถุประสงค์หลัก PDPA'
+            ? 'ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA'
             : 'Module วัตถุประสงค์หลัก PDPA',
         children: [
           "PD Management",
@@ -56,7 +56,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
       ),
       Package(
         title: Responsive.isDesktop(context)
-            ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูล\nส่วนบุคคล และข้อมูลส่วนอ่อนไหว\nเป็นจำนวนมาก"
+            ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูล\nส่วนบุคคล ข้อมูลส่วนอ่อนไหวจำนวนมาก"
             : Responsive.isTablet(context)
                 ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูลส่วน\nบุคคล และข้อมูลส่วนอ่อนไหว จำนวนมาก"
                 : "เหมาะสำหรับองค์กรที่มีการเก็บรวบรวมข้อมูลจำนวนมาก",
@@ -93,15 +93,17 @@ class _DestinationCarouselState extends State<PackagesPage> {
         dense: false,
       ),
       Package(
-        title: !Responsive.isMobile(context)
-            ? "มี API สำหรับ Import & Export ข้อมูล"
-            : "มี API สำหรับ Import & Export",
+        title: Responsive.isMobile(context)
+            ? "องค์กรไม่ต้องการเชื่อมต่อกับระบบภายในเดิม"
+            : "องค์กรไม่ต้องการเชื่อมต่อกับระบบภายใน\nเดิม",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
         dense: false,
       ),
       Package(
-        title: "องค์กรไม่ต้องการเชื่อมต่อกับระบบภายในเดิม",
+        title: !Responsive.isMobile(context)
+            ? "มี API สำหรับ Import & Export ข้อมูล"
+            : "มี API สำหรับ Import & Export",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
         dense: false,
@@ -135,15 +137,15 @@ class _DestinationCarouselState extends State<PackagesPage> {
         dense: true,
       ),
       Package(
-        title: !Responsive.isMobile(context)
-            ? "รองรับการทำงานแบบ Multi-tenant"
-            : "รองรับการทำงาน Multi-tenant",
+        title: "Premium Support 24X7",
         children: [],
         position: false,
         dense: true,
       ),
       Package(
-        title: "Premium Support 24X7",
+        title: !Responsive.isMobile(context)
+            ? "รองรับการทำงานแบบ Multi-tenant"
+            : "รองรับการทำงาน Multi-tenant",
         children: [],
         position: false,
         dense: true,
@@ -183,7 +185,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
               height: Responsive.isDesktop(context)
                   ? 30
                   : Responsive.isTablet(context)
-                      ? 37
+                      ? 111
                       : 61,
             ),
             !Responsive.isMobile(context)
@@ -250,10 +252,10 @@ class _DestinationCarouselState extends State<PackagesPage> {
                     )),
             SizedBox(
               height: Responsive.isDesktop(context)
-                  ? 50
+                  ? 33
                   : Responsive.isTablet(context)
-                      ? 40
-                      : 45,
+                      ? 22
+                      : 30,
             ),
             Responsive.isDesktop(context)
                 ? Row(
@@ -270,7 +272,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                         middlebox: false,
                         lastbox: false,
                       ),
-                      SizedBox(width: 23),
+                      SizedBox(width: 14),
                       PackageCard(
                         packageicon: 'assets/packages/clouds.png',
                         title: 'Standard',
@@ -282,7 +284,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                         middlebox: true,
                         lastbox: false,
                       ),
-                      SizedBox(width: 16),
+                      SizedBox(width: 14),
                       PackageCard(
                         packageicon: 'assets/packages/rainbow_cloud.png',
                         title: 'Enterprise',
@@ -335,11 +337,11 @@ class _DestinationCarouselState extends State<PackagesPage> {
                             enableInfiniteScroll: false,
                             scrollPhysics: PageScrollPhysics(),
                             aspectRatio: Responsive.isTablet(context)
-                                ? 1 / 1.07
+                                ? 1 / 1.1
                                 : 1 / 1.60,
                             autoPlay: false,
                             viewportFraction:
-                                Responsive.isTablet(context) ? 0.67 : 0.82,
+                                Responsive.isTablet(context) ? 0.625 : 0.82,
                             onPageChanged: (index, reason) {
                               setState(() {
                                 _current = index;
@@ -360,18 +362,22 @@ class _DestinationCarouselState extends State<PackagesPage> {
                             activeIndex: _current,
                             count: 3,
                             effect: ScaleEffect(
+                                spacing:
+                                    Responsive.isTablet(context) ? 32.4 : 18,
                                 activePaintStyle: PaintingStyle.stroke,
                                 scale: 1.3,
                                 activeStrokeWidth: 0.5,
-                                dotWidth: 16,
-                                dotHeight: 16,
+                                dotWidth:
+                                    Responsive.isTablet(context) ? 28.8 : 16,
+                                dotHeight:
+                                    Responsive.isTablet(context) ? 28.8 : 16,
                                 dotColor: Color.fromARGB(255, 5, 45, 97))),
                       ),
                     ],
                   ),
             SizedBox(
               height: Responsive.isDesktop(context)
-                  ? 70
+                  ? 65
                   : Responsive.isTablet(context)
                       ? 40
                       : 76,
@@ -410,15 +416,32 @@ class PackageCard extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          SizedBox(height: middlebox ? 0 : 28),
+          SizedBox(
+              height: Responsive.isDesktop(context)
+                  ? middlebox
+                      ? 0
+                      : 28
+                  : Responsive.isTablet(context)
+                      ? firstbox
+                          ? 74
+                          : middlebox
+                              ? 0
+                              : 75
+                      : middlebox
+                          ? 0
+                          : 28),
           Container(
             padding: const EdgeInsets.only(left: 0),
             decoration: BoxDecoration(
               boxShadow: <BoxShadow>[
                 BoxShadow(
-                    color: middlebox
+                    color: Responsive.isDesktop(context)
                         ? Color.fromARGB(59, 0, 0, 0)
-                        : Color.fromARGB(0, 255, 255, 255),
+                        : Responsive.isTablet(context)
+                            ? Color.fromARGB(59, 0, 0, 0)
+                            : middlebox
+                                ? Color.fromARGB(59, 0, 0, 0)
+                                : Color.fromARGB(0, 255, 255, 255),
                     blurRadius: 3.0,
                     offset: Offset(0.0, 4.0))
               ],
@@ -427,36 +450,28 @@ class PackageCard extends StatelessWidget {
             ),
             height: !Responsive.isMobile(context)
                 ? firstbox
-                    ? 793
+                    ? 759
                     : middlebox
-                        ? 769
-                        : 796
-                : 534,
+                        ? 756
+                        : 768
+                : middlebox
+                    ? 546
+                    : 537,
             width: Responsive.isDesktop(context)
-                ? 438
+                ? 461
                 : Responsive.isTablet(context)
-                    ? 490
+                    ? 461
                     : 296,
             // padding: EdgeInsets.all(5.0),
             child: Column(
               children: [
                 SizedBox(
-                  height: Responsive.isDesktop(context)
-                      ? firstbox
-                          ? 33
-                          : middlebox
-                              ? 41
-                              : 46
-                      : 25,
+                  height: Responsive.isMobile(context) ? 25 : 43,
                 ),
                 Row(
                   children: [
                     SizedBox(
-                      width: Responsive.isDesktop(context)
-                          ? middlebox
-                              ? 26
-                              : 27
-                          : 27,
+                      width: Responsive.isMobile(context) ? 27 : 17,
                     ),
                     Container(
                       height: 51,
@@ -484,21 +499,25 @@ class PackageCard extends StatelessWidget {
                                   : 50,
                           child: Image.asset(packageicon)),
                     ),
+                    SizedBox(
+                      width: Responsive.isMobile(context) ? 36 : 38,
+                    ),
                     Container(
                         height: 40,
                         padding: EdgeInsets.only(
                             left: Responsive.isDesktop(context)
                                 ? 0
                                 : Responsive.isTablet(context)
-                                    ? 15
-                                    : 36.0,
+                                    ? 0
+                                    : 0,
                             top: Responsive.isDesktop(context)
                                 ? 0
                                 : Responsive.isTablet(context)
                                     ? 0
-                                    : 10),
+                                    : 0),
                         child: Transform.translate(
-                          offset: Offset(10, 5),
+                          offset:
+                              Offset(0, Responsive.isMobile(context) ? 10 : -5),
                           child: Text(
                             title,
                             style: GoogleFonts.ibmPlexSansThai(
@@ -519,9 +538,17 @@ class PackageCard extends StatelessWidget {
                 ),
                 SizedBox(
                   height: Responsive.isDesktop(context)
-                      ? 31
+                      ? firstbox
+                          ? 23.5
+                          : middlebox
+                              ? 22.5
+                              : 32
                       : Responsive.isTablet(context)
-                          ? 38
+                          ? firstbox
+                              ? 23.5
+                              : middlebox
+                                  ? 22.5
+                                  : 32
                           : 0,
                 ),
                 Expanded(
@@ -536,9 +563,9 @@ class PackageCard extends StatelessWidget {
                 Transform.translate(
                   offset: Offset(
                       Responsive.isDesktop(context)
-                          ? 0
+                          ? -35
                           : Responsive.isTablet(context)
-                              ? -20
+                              ? -35
                               : -20,
                       Responsive.isDesktop(context)
                           ? 0
@@ -564,9 +591,9 @@ class PackageCard extends StatelessWidget {
                 Transform.translate(
                   offset: Offset(
                       Responsive.isDesktop(context)
-                          ? 60
+                          ? 18
                           : Responsive.isTablet(context)
-                              ? 75
+                              ? 18
                               : 50,
                       Responsive.isDesktop(context)
                           ? 0
@@ -592,11 +619,11 @@ class PackageCard extends StatelessWidget {
                         ? firstbox
                             ? 19
                             : 22
-                        : 28),
+                        : 11),
                 buttoncolor
                     ? SizedBox(
-                        width: !Responsive.isMobile(context) ? 352 : 160.56,
-                        height: !Responsive.isMobile(context) ? 64 : 28,
+                        width: !Responsive.isMobile(context) ? 321 : 193,
+                        height: !Responsive.isMobile(context) ? 61 : 48,
                         child: OutlinedButton(
                             onPressed: () {},
                             style: OutlinedButton.styleFrom(
@@ -613,14 +640,14 @@ class PackageCard extends StatelessWidget {
                               ' See more',
                               style: GoogleFonts.ibmPlexSansThai(
                                   fontSize:
-                                      !Responsive.isMobile(context) ? 22 : 16,
+                                      !Responsive.isMobile(context) ? 22 : 20,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.black),
                             )),
                       )
                     : SizedBox(
-                        width: !Responsive.isMobile(context) ? 367 : 160.56,
-                        height: !Responsive.isMobile(context) ? 64 : 28,
+                        width: !Responsive.isMobile(context) ? 321 : 193,
+                        height: !Responsive.isMobile(context) ? 61 : 48,
                         child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
@@ -633,7 +660,7 @@ class PackageCard extends StatelessWidget {
                               ' See more',
                               style: GoogleFonts.ibmPlexSansThai(
                                   fontSize:
-                                      !Responsive.isMobile(context) ? 22 : 16,
+                                      !Responsive.isMobile(context) ? 22 : 20,
                                   fontWeight: FontWeight.w600),
                             )),
                       ),
@@ -669,24 +696,20 @@ class Buildpackagetile extends StatelessWidget {
               horizontal: Responsive.isDesktop(context)
                   ? -4
                   : Responsive.isTablet(context)
-                      ? 0
+                      ? -4
                       : -4,
               vertical: Responsive.isDesktop(context)
-                  ? package.dense
-                      ? -1
-                      : -2
+                  ? -0.5
                   : Responsive.isTablet(context)
-                      ? package.dense
-                          ? -1
-                          : -4
+                      ? -0.5
                       : -4),
           horizontalTitleGap: 10,
           leading: Transform.translate(
             offset: Offset(
                 Responsive.isDesktop(context)
-                    ? 15
+                    ? 50
                     : Responsive.isTablet(context)
-                        ? 25
+                        ? 50
                         : 8,
                 Responsive.isDesktop(context)
                     ? 0
@@ -701,12 +724,12 @@ class Buildpackagetile extends StatelessWidget {
           title: Transform.translate(
             offset: Offset(
                 Responsive.isDesktop(context)
-                    ? 0
+                    ? 40
                     : Responsive.isTablet(context)
-                        ? 5
+                        ? 40
                         : -10,
                 Responsive.isDesktop(context)
-                    ? 2.5
+                    ? 0
                     : Responsive.isTablet(context)
                         ? 0
                         : 0),
@@ -740,9 +763,9 @@ class Buildpackagetile extends StatelessWidget {
               title: Transform.translate(
                 offset: Offset(
                     Responsive.isDesktop(context)
-                        ? 40
+                        ? 62.5
                         : Responsive.isTablet(context)
-                            ? 40
+                            ? 62.5
                             : 15,
                     Responsive.isDesktop(context)
                         ? 0
@@ -758,9 +781,9 @@ class Buildpackagetile extends StatelessWidget {
               leading: Transform.translate(
                 offset: Offset(
                     Responsive.isDesktop(context)
-                        ? 70
+                        ? 90
                         : Responsive.isTablet(context)
-                            ? 70
+                            ? 90
                             : 40,
                     Responsive.isDesktop(context)
                         ? 0
