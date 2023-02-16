@@ -592,7 +592,11 @@ class _FooterState extends State<Footer> {
                                           ),
                                           Row(
                                             children: [
-                                              get,
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    left: 30),
+                                                child: get,
+                                              ),
                                             ],
                                           )
                                         ],
