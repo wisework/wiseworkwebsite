@@ -6,7 +6,7 @@ import 'package:wiseintern/responsive.dart';
 // import 'package:wiseintern/home/customers.dart';
 // import 'package:wiseintern/home/story.dart';
 import 'package:wiseintern/menu_drawer.dart';
-// import 'package:wiseintern/home/footer.dart';
+import 'package:wiseintern/home/footer.dart';
 // import 'package:wiseintern/home/carousel.dart';
 import 'package:wiseintern/about/banner.dart';
 import 'package:wiseintern/about/who.dart';
@@ -59,7 +59,8 @@ class _AboutPageState extends State<AboutPage> {
             WhoPage(),
             WhyPage(),
             AwardsPage(),
-            AdvisePage()
+            AdvisePage(),
+            Footer()
           ],
         ),
       ),

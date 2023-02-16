@@ -604,7 +604,7 @@ class _FooterState extends State<Footer> {
                         ),
                         Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               line,
                               Column(children: [
@@ -613,7 +613,7 @@ class _FooterState extends State<Footer> {
                                     Column(
                                       children: [
                                         Container(
-                                          width: 1200,
+                                          width: 1400,
                                           height: 100,
                                           child: Column(
                                             mainAxisAlignment:
@@ -629,18 +629,23 @@ class _FooterState extends State<Footer> {
                                                         CrossAxisAlignment
                                                             .start,
                                                     children: [
-                                                      TextButton(
-                                                          onPressed: () {},
-                                                          child: Text(
-                                                            "Privacy Policy",
-                                                            style: GoogleFonts
-                                                                .ibmPlexSansThai(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400),
-                                                          )),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .only(left: 60),
+                                                        child: TextButton(
+                                                            onPressed: () {},
+                                                            child: Text(
+                                                              "Privacy Policy",
+                                                              style: GoogleFonts
+                                                                  .ibmPlexSansThai(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w400),
+                                                            )),
+                                                      ),
                                                       TextButton(
                                                           onPressed: () {},
                                                           child: Text(
@@ -668,7 +673,7 @@ class _FooterState extends State<Footer> {
                                                       Container(
                                                         // color: Colors.amber,
                                                         height: 20,
-                                                        width: 580,
+                                                        width: 700,
                                                       ),
                                                       Container(
                                                           // width: 400,
@@ -681,6 +686,8 @@ class _FooterState extends State<Footer> {
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w400),
+                                                        textAlign:
+                                                            TextAlign.end,
                                                       )),
                                                     ],
                                                   ),
