@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiseintern/home/pdpa.dart';
 import 'package:wiseintern/navbar.dart';
 import 'package:wiseintern/home/features.dart';
 import 'package:wiseintern/home/packagepage.dart';
@@ -64,10 +65,10 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // StoryPage(),
-            // Pdpa(),
+            Pdpa(),
             // FeaturesPage(),
             // PackagesPage(),
-            CustomerPage(),
+            // CustomerPage(),
             // FAQ(),
             // Footer()
           ],

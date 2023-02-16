@@ -1009,7 +1009,7 @@ class _CustomerState extends State<CustomerPage> {
                                       )),
                                   new Positioned(
                                     top: 33,
-                                    left: 212,
+                                    left: 316,
                                     child: Container(
                                       height: 80,
                                       width: 539.82,
@@ -1027,7 +1027,7 @@ class _CustomerState extends State<CustomerPage> {
                                   new Positioned(
                                       // top: 99.5,
                                       top: 110.5,
-                                      left: 213.36,
+                                      left: 316,
                                       child: Container(
                                         height: 66.5,
                                         width: 539.82,
@@ -1041,7 +1041,7 @@ class _CustomerState extends State<CustomerPage> {
                                         ),
                                       )),
                                   new Positioned(
-                                    left: 803.34,
+                                    left: 944,
                                     top: 79,
                                     child: SizedBox(
                                       width: 193,
@@ -1365,7 +1365,7 @@ class _CustomerState extends State<CustomerPage> {
                                         height: 550.85,
                                         width: 553.2,
                                         child:
-                                            Image.asset("/customer/team.png"),
+                                            Image.asset("/customer/phone.png"),
                                       ),
                                     ),
                                   ],

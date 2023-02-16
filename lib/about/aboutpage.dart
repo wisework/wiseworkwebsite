@@ -12,6 +12,7 @@ import 'package:wiseintern/about/banner.dart';
 import 'package:wiseintern/about/who.dart';
 import 'package:wiseintern/about/why.dart';
 import 'package:wiseintern/about/awards.dart';
+import 'package:wiseintern/about/advise.dart';
 
 class AboutPage extends StatefulWidget {
   @override
@@ -53,7 +54,13 @@ class _AboutPageState extends State<AboutPage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [BannerPage(), WhoPage(), WhyPage(), AwardsPage()],
+          children: [
+            BannerPage(),
+            WhoPage(),
+            WhyPage(),
+            AwardsPage(),
+            AdvisePage()
+          ],
         ),
       ),
     );

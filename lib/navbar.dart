@@ -12,43 +12,22 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavigationBarState extends State<NavBar> {
-  final List<String> listHome = <String>['Home', 'h1', 'h2', 'h3', 'h4'];
   final List<String> listAbout = <String>[
     'About Us',
-    'ab1',
-    'ab2',
-    'ab3',
-    'ab4'
+    'Our Story',
+    'Our Rew',
+    'Our Cus',
   ];
   final List<String> listServices = <String>[
     'Our Services',
-    'sv1',
-    'sv2',
-    'sv3',
-    'sv4'
+    'PDPA ',
+    'Governance ',
+    'Request Demo',
   ];
-  final List<String> listBlogs = <String>['Blogs', 'b1', 'b2', 'b3', 'b4'];
-  final List<String> listContact = <String>[
-    'Contacts',
-    'ct1',
-    'ct2',
-    'ct3',
-    'ct4'
-  ];
-
-  String? HomeValue;
   String? AboutValue;
   String? ServicesValue;
-  String? BlogsValue;
-  String? ContactValue;
 
   final List _isHovering = [
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
     false,
     false,
     false,
@@ -57,7 +36,7 @@ class _NavigationBarState extends State<NavBar> {
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
+    // var screenSize = MediaQuery.of(context).size;
 
     return Container(
       color: Color.fromARGB(255, 52, 144, 206),
@@ -121,8 +100,11 @@ class _NavigationBarState extends State<NavBar> {
                           value: item,
                           child: Text(
                             item,
-                            style: const TextStyle(
-                                fontSize: 16, color: Colors.white),
+                            style: GoogleFonts.ibmPlexSansThai(
+                                fontSize: 16,
+                                // color: Color.fromARGB(255, 52, 145, 206),
+                                color: Color.fromARGB(255, 87, 87, 87),
+                                fontWeight: FontWeight.w400),
                           ),
                         ))
                     .toList(),
@@ -133,8 +115,9 @@ class _NavigationBarState extends State<NavBar> {
                   });
                 },
                 dropdownDecoration: BoxDecoration(
-                    color: Color.fromARGB(255, 171, 204, 227),
-                    borderRadius: BorderRadius.circular(5)),
+                  color: Colors.white,
+                  // borderRadius: BorderRadius.circular(5)
+                ),
                 buttonHeight: 18,
                 buttonWidth: 100,
                 itemHeight: 40,
@@ -164,8 +147,11 @@ class _NavigationBarState extends State<NavBar> {
                           value: item,
                           child: Text(
                             item,
-                            style: const TextStyle(
-                                fontSize: 16, color: Colors.white),
+                            style: GoogleFonts.ibmPlexSansThai(
+                                fontSize: 16,
+                                // color: Color.fromARGB(255, 52, 145, 206),
+                                color: Color.fromARGB(255, 87, 87, 87),
+                                fontWeight: FontWeight.w400),
                           ),
                         ))
                     .toList(),
@@ -176,11 +162,12 @@ class _NavigationBarState extends State<NavBar> {
                   });
                 },
                 dropdownDecoration: BoxDecoration(
-                    color: Color.fromARGB(255, 171, 204, 227),
-                    borderRadius: BorderRadius.circular(5)),
+                  color: Colors.white,
+                  // borderRadius: BorderRadius.circular(5)
+                ),
                 buttonHeight: 18,
                 buttonWidth: 130,
-                itemHeight: 40,
+                itemHeight: 50,
               ),
             ),
             SizedBox(

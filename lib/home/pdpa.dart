@@ -95,7 +95,7 @@ class _PdpaState extends State<Pdpa> {
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.only(
-                                                top: 60, left: 242),
+                                                top: 60, left: 115),
                                             child: SizedBox(
                                               height: 513.23,
                                               width: 377,
@@ -109,7 +109,7 @@ class _PdpaState extends State<Pdpa> {
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.only(
-                                              left: 60,
+                                              left: 170,
                                             ),
                                             child: Container(
                                               width: 558,
@@ -207,7 +207,7 @@ class _PdpaState extends State<Pdpa> {
                                           ),
                                           Padding(
                                             padding: const EdgeInsets.only(
-                                              left: 60,
+                                              left: 170,
                                             ),
                                             child: Container(
                                               width: 558,
@@ -305,7 +305,7 @@ class _PdpaState extends State<Pdpa> {
                                           ),
                                           Padding(
                                             padding: const EdgeInsets.only(
-                                              left: 60,
+                                              left: 170,
                                             ),
                                             child: Container(
                                               width: 558,
