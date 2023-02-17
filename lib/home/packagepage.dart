@@ -19,6 +19,9 @@ class PackagesPage extends StatefulWidget {
 class _DestinationCarouselState extends State<PackagesPage> {
   final String imagePath = 'assets/carousel/';
 
+  CarouselController _controller = CarouselController();
+  int _current = 0;
+
   @override
   Widget build(BuildContext context) {
     final express = [
@@ -170,11 +173,10 @@ class _DestinationCarouselState extends State<PackagesPage> {
       ),
     ];
 
-    final CarouselController _controller = CarouselController();
-
+    // CarouselController _controller = CarouselController();
+    // int _current = 0;
     List _isSelected = [true, false, false];
 
-    int _current = 0;
     return Center(
       child: Container(
         width: 1440,
