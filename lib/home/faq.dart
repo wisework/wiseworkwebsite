@@ -286,63 +286,71 @@ class _FAQState extends State<FAQ> {
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(
-                        width: 700,
-                        height: 1000,
-                        color: Color.fromARGB(0, 204, 220, 57),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 50),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Column(
+                      Column(
+                        children: [
+                          Container(
+                            width: 700,
+                            height: 1000,
+                            color: Color.fromARGB(0, 204, 220, 57),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 50),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  SizedBox(
-                                    height: 42,
+                                  Column(
+                                    children: [
+                                      SizedBox(
+                                        height: 42,
+                                      ),
+                                      consult,
+                                      hashtag,
+                                    ],
                                   ),
-                                  consult,
-                                  hashtag,
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  button,
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 160, left: 73),
+                                    child: Image.asset(
+                                      "/faq/qa.png",
+                                      height: 460,
+                                      width: 467,
+                                    ),
+                                  ),
                                 ],
                               ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              button,
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 160, left: 73),
-                                child: Image.asset(
-                                  "/faq/qa.png",
-                                  height: 460,
-                                  width: 467,
-                                ),
-                              ),
-                            ],
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                      Container(
-                        width: 700,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Column(
+                      Column(
+                        children: [
+                          Container(
+                            width: 700,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Qth,
+                                Column(
+                                  children: [
+                                    Qth,
+                                  ],
+                                ),
+                                Qen,
+
+                                SizedBox(
+                                  height: 85,
+                                ),
+                                // listChoice,
+                                _buildPanel(),
                               ],
                             ),
-                            Qen,
-
-                            SizedBox(
-                              height: 85,
-                            ),
-                            // listChoice,
-                            _buildPanel(),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ],
                   )

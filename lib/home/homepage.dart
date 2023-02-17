@@ -8,6 +8,7 @@ import 'package:wiseintern/home/customers.dart';
 import 'package:wiseintern/home/story.dart';
 import 'package:wiseintern/menu_drawer.dart';
 import 'package:wiseintern/home/footer.dart';
+import 'package:wiseintern/home/faq.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -65,9 +66,9 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // StoryPage(),
-            Pdpa(),
+            // Pdpa(),
             // FeaturesPage(),
-            // PackagesPage(),
+            PackagesPage(),
             // CustomerPage(),
             // FAQ(),
             // Footer()

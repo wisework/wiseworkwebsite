@@ -441,7 +441,7 @@ class _PdpaState extends State<Pdpa> {
                   ? Container(
                       // height: 10,
                       width: 770,
-                      height: 1000,
+                      height: 900,
                       color: Color.fromARGB(255, 232, 242, 254),
                       child: Container(
                         child: Center(
@@ -470,7 +470,7 @@ class _PdpaState extends State<Pdpa> {
                                   padding: const EdgeInsets.only(
                                       left: 39, right: 40),
                                   child: Container(
-                                    height: 569,
+                                    height: 600,
                                     width: 689,
                                     child: Column(
                                       children: [
@@ -835,8 +835,8 @@ class _PdpaState extends State<Pdpa> {
                                               padding: const EdgeInsets.only(
                                                   top: 30.73, left: 280),
                                               child: Container(
-                                                height: 27,
-                                                width: 145,
+                                                height: 54,
+                                                width: 193,
                                                 child: ElevatedButton(
                                                   onPressed: () {},
                                                   style:
@@ -883,7 +883,7 @@ class _PdpaState extends State<Pdpa> {
                         child: Center(
                           child: Container(
                             width: 375,
-                            height: 1120,
+                            height: 1200,
                             // height: 8869,
                             child: Column(
                               children: [
@@ -1130,8 +1130,8 @@ class _PdpaState extends State<Pdpa> {
                                     top: 31.73,
                                   ),
                                   child: Container(
-                                    height: 28.04,
-                                    width: 146,
+                                    height: 48,
+                                    width: 193,
                                     child: ElevatedButton(
                                       onPressed: () {},
                                       style: ElevatedButton.styleFrom(
