@@ -33,10 +33,10 @@ class SingleProductPage extends StatelessWidget {
           // ),
           new Positioned(
             // left: 160,
-            right: 65,
-            top: 42,
+            right: 35,
+            top: 2,
             height: 630,
-            width: 630,
+            width: 650,
             child: new Image(image: AssetImage("assets/product/productbg.png")),
           ),
           new Positioned(
