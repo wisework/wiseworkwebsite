@@ -12,6 +12,7 @@ class SingleProductPage extends StatelessWidget {
       "เชี่ยวชาญงานพัฒนาโปรแกรมตามกฎหมาย กฎระเบียบ และมาตรฐานสากล",
     ];
     var groupofpic = Container(
+      color: Color.fromARGB(0, 255, 193, 7),
       height: 582,
       width: 815,
       // alignment: FractionalOffset.center,
@@ -19,31 +20,47 @@ class SingleProductPage extends StatelessWidget {
         //alignment:new Alignment(x, y)
         children: <Widget>[
           new SizedBox(
-            height: 380,
-            width: 720,
+            height: 582,
+            width: 815,
+          ),
+          // new Positioned(
+          //   top: 102,
+          //   left: 602,
+          //   height: 100,
+          //   width: 148,
+          //   child:
+          //       new Image(image: AssetImage("assets/product/productframe.png")),
+          // ),
+          new Positioned(
+            // left: 160,
+            right: 65,
+            top: 42,
+            height: 630,
+            width: 630,
+            child: new Image(image: AssetImage("assets/product/productbg.png")),
           ),
           new Positioned(
-            height: 348,
-            width: 530,
-            child: new Image(image: AssetImage("assets/story/storybg.png")),
+            left: 0,
+            bottom: 100,
+            height: 500,
+            width: 815,
+            child:
+                new Image(image: AssetImage("assets/product/productpic.png")),
           ),
-          new Positioned(
-              height: 328,
-              width: 720,
-              child: new Image(image: AssetImage("assets/story/storypic.png"))),
         ],
       ),
     );
     var title = Container(
       color: Color.fromARGB(0, 0, 187, 212),
-      height: 60,
+      height: 18,
       width: 444,
-      child: Text('PDPA MaNAGEMENT PLATFORM',
+      child: Text('PDPA MANAGEMENT PLATFORM',
           style: GoogleFonts.ibmPlexSansThai(
+              letterSpacing: 2,
               // height: 1.25,
-              fontSize: 50,
-              fontWeight: FontWeight.w700,
-              color: Color.fromARGB(255, 24, 84, 110))),
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              color: Color.fromARGB(255, 0, 112, 240))),
     );
     var productname = Container(
       color: Color.fromARGB(0, 0, 187, 212),
@@ -63,18 +80,18 @@ class SingleProductPage extends StatelessWidget {
       child: Text('Perpetual License',
           style: GoogleFonts.ibmPlexSansThai(
               // height: 1.25,
-              fontSize: 50,
-              fontWeight: FontWeight.w700,
-              color: Color.fromARGB(255, 24, 84, 110))),
+              fontSize: 24,
+              fontWeight: FontWeight.w500,
+              color: Color.fromARGB(255, 31, 40, 79))),
     );
     var aboutproduct = Container(
       color: Color.fromARGB(0, 255, 153, 0),
       height: 158,
-      width: 313,
+      width: 444,
       child: Text(
         'ระบบบริหารจัดการข้อมูลส่วนบุคคล PDPA \nเหมาะสำหรับองค์กรขนาดใหญ่ และบริษัทในเครือ\nควบคุมระบบทั้งหมดได้จากศูนย์กลาง \nครอบคลุมทุกฟังก์ชันการใช้งานเต็มรูปแบบ 11 \nModules และไม่มีข้อจำกัดในการเชื่อมต่อกับระบบอื่น',
         style: GoogleFonts.ibmPlexSansThai(
-            fontSize: Responsive.isDesktop(context) ? 24 : 18,
+            fontSize: 20,
             fontWeight: FontWeight.w400,
             color: Color.fromARGB(255, 0, 0, 0)),
       ),
@@ -158,13 +175,13 @@ class SingleProductPage extends StatelessWidget {
         color: Colors.white,
         width: 1440,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.end,
           children: [
             SizedBox(
               height: 22,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Column(
                   children: [
@@ -172,19 +189,26 @@ class SingleProductPage extends StatelessWidget {
                     productname,
                     productlicense,
                     aboutproduct,
+                    SizedBox(height: 32),
                     Row(
                       children: [
                         priceclick,
                         SizedBox(
                           width: 16,
                         ),
-                        democlick
+                        democlick,
+                        SizedBox(
+                          width: 42,
+                        ),
                       ],
                     )
                   ],
                 ),
                 groupofpic
               ],
+            ),
+            SizedBox(
+              height: 140,
             )
           ],
         ),
