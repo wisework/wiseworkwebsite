@@ -43,7 +43,7 @@ class _AwardsState extends State<AwardsPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 125, left: 72),
+                  padding: const EdgeInsets.only(top: 70, left: 72),
                   child: Container(
                     width: 887,
                     height: 110,
@@ -87,7 +87,7 @@ class _AwardsState extends State<AwardsPage> {
                             Container(
                                 // margin: const EdgeInsets.all(10),
                                 // height: 1000,
-                                width: 1400,
+                                width: 1440,
                                 // color: Colors.amber,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -98,13 +98,13 @@ class _AwardsState extends State<AwardsPage> {
                                       children: [
                                         Container(
                                           // color: Colors.lightBlue,
-                                          width: 360,
+                                          width: 390,
                                           height: 128,
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/iso27001.png")),
                                               Padding(
@@ -118,7 +118,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "ISO/IEC 27001",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,
@@ -151,14 +151,14 @@ class _AwardsState extends State<AwardsPage> {
                                           ),
                                         ),
                                         Container(
-                                          width: 350,
+                                          width: 370,
                                           height: 128,
                                           // color:Color.fromARGB(255, 7, 255, 32),
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/iso27017.png")),
                                               Padding(
@@ -172,7 +172,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "ISO/IEC 27017",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,
@@ -206,13 +206,13 @@ class _AwardsState extends State<AwardsPage> {
                                         ),
                                         Container(
                                           // color: Colors.indigo,
-                                          width: 300,
+                                          width: 310,
                                           height: 128,
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/coso.png")),
                                               Padding(
@@ -226,7 +226,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "COSO-ERM",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,
@@ -269,13 +269,13 @@ class _AwardsState extends State<AwardsPage> {
                                       children: [
                                         Container(
                                           // color: Colors.lightBlue,
-                                          width: 360,
+                                          width: 390,
                                           height: 128,
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/iso27701.png")),
                                               Padding(
@@ -289,7 +289,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "ISO/IEC 27701",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,
@@ -322,14 +322,14 @@ class _AwardsState extends State<AwardsPage> {
                                           ),
                                         ),
                                         Container(
-                                          width: 350,
+                                          width: 360,
                                           height: 128,
                                           // color:Color.fromARGB(255, 7, 255, 32),
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/iso27018.png")),
                                               Padding(
@@ -343,7 +343,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "ISO/IEC 27018",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,
@@ -377,13 +377,13 @@ class _AwardsState extends State<AwardsPage> {
                                         ),
                                         Container(
                                           // color: Colors.indigo,
-                                          width: 300,
+                                          width: 310,
                                           height: 128,
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/iso9001.png")),
                                               Padding(
@@ -397,7 +397,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "ISO/IEC 9001",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,
@@ -440,13 +440,13 @@ class _AwardsState extends State<AwardsPage> {
                                       children: [
                                         Container(
                                           // color: Colors.lightBlue,
-                                          width: 360,
+                                          width: 390,
                                           height: 128,
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/iso20000.png")),
                                               Padding(
@@ -460,7 +460,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "ISO/IEC 20000",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,
@@ -493,14 +493,14 @@ class _AwardsState extends State<AwardsPage> {
                                           ),
                                         ),
                                         Container(
-                                          width: 350,
+                                          width: 360,
                                           height: 128,
                                           // color:Color.fromARGB(255, 7, 255, 32),
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/iso22301.png")),
                                               Padding(
@@ -514,7 +514,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "ISO/IEC 22301",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,
@@ -548,13 +548,13 @@ class _AwardsState extends State<AwardsPage> {
                                         ),
                                         Container(
                                           // color: Colors.indigo,
-                                          width: 300,
+                                          width: 310,
                                           height: 128,
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/csa.png")),
                                               Padding(
@@ -568,7 +568,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "CSA",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,
@@ -611,13 +611,13 @@ class _AwardsState extends State<AwardsPage> {
                                       children: [
                                         Container(
                                           // color: Colors.lightBlue,
-                                          width: 360,
+                                          width: 390,
                                           height: 128,
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/iso31000.png")),
                                               Padding(
@@ -631,7 +631,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "ISO/IEC 31000",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,
@@ -664,14 +664,14 @@ class _AwardsState extends State<AwardsPage> {
                                           ),
                                         ),
                                         Container(
-                                          width: 350,
+                                          width: 360,
                                           height: 128,
                                           // color:Color.fromARGB(255, 7, 255, 32),
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/iso27005.png")),
                                               Padding(
@@ -685,7 +685,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "ISO/IEC 27005",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,
@@ -719,13 +719,13 @@ class _AwardsState extends State<AwardsPage> {
                                         ),
                                         Container(
                                           // color: Colors.indigo,
-                                          width: 300,
+                                          width: 310,
                                           height: 128,
                                           child: Row(
                                             children: [
                                               SizedBox(
-                                                  width: 70,
-                                                  height: 70,
+                                                  width: 80,
+                                                  height: 80,
                                                   child: Image.asset(
                                                       "/about/awards/cdpo.png")),
                                               Padding(
@@ -739,7 +739,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       "CDPO",
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
-                                                              fontSize: 20,
+                                                              fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w700,

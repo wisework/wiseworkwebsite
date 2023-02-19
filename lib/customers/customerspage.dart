@@ -1,36 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:wiseintern/home/pdpa.dart';
 import 'package:wiseintern/navbar.dart';
-import 'package:wiseintern/home/features.dart';
-import 'package:wiseintern/home/packagepage.dart';
 import 'package:wiseintern/responsive.dart';
-import 'package:wiseintern/home/customers.dart';
-import 'package:wiseintern/home/story.dart';
 import 'package:wiseintern/menu_drawer.dart';
 import 'package:wiseintern/home/footer.dart';
-import 'package:wiseintern/home/faq.dart';
+import 'package:wiseintern/customers/banner.dart';
+import 'package:wiseintern/customers/advise.dart';
 
-class HomePage extends StatefulWidget {
+class CustomerPage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _CustomerPageState createState() => _CustomerPageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  // late ScrollController _scrollController;
-  // double _scrollPosition = 0;
-  // double _opacity = 0;
-
+class _CustomerPageState extends State<CustomerPage> {
   int _currentIndex = 0;
-  // final List<Widget> _children = [
-  //   // Feature2(),
-  //   CarouselPage(),
-  //   PackagesPage(),
-  //   FeaturesPage(),
-  // CustomerPage(),
-  //   StoryPage(),
-  //   Footer()
-  //   // other pages
-  // ];
 
   void onTabTapped(int index) {
     setState(() {
@@ -64,15 +46,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // StoryPage(),
-            // Pdpa(),
-            // FeaturesPage(),
-            // PackagesPage(),
-            // CustomerPage(),
-            // FAQ(),
-            // Footer()
-          ],
+          children: [BannerPage(), Advise(), Footer()],
         ),
       ),
     );

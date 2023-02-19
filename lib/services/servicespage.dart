@@ -1,36 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:wiseintern/home/pdpa.dart';
 import 'package:wiseintern/navbar.dart';
-import 'package:wiseintern/home/features.dart';
-import 'package:wiseintern/home/packagepage.dart';
+
 import 'package:wiseintern/responsive.dart';
-import 'package:wiseintern/home/customers.dart';
-import 'package:wiseintern/home/story.dart';
+// import 'package:wiseintern/home/customers.dart';
+// import 'package:wiseintern/home/story.dart';
 import 'package:wiseintern/menu_drawer.dart';
 import 'package:wiseintern/home/footer.dart';
-import 'package:wiseintern/home/faq.dart';
+import 'package:wiseintern/services/banner.dart';
+import 'package:wiseintern/services/ourservices.dart';
+import 'package:wiseintern/home/features.dart';
+import 'package:wiseintern/home/packagepage.dart';
 
-class HomePage extends StatefulWidget {
+class ServicesPage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _ServicesPageState createState() => _ServicesPageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  // late ScrollController _scrollController;
-  // double _scrollPosition = 0;
-  // double _opacity = 0;
-
+class _ServicesPageState extends State<ServicesPage> {
   int _currentIndex = 0;
-  // final List<Widget> _children = [
-  //   // Feature2(),
-  //   CarouselPage(),
-  //   PackagesPage(),
-  //   FeaturesPage(),
-  // CustomerPage(),
-  //   StoryPage(),
-  //   Footer()
-  //   // other pages
-  // ];
 
   void onTabTapped(int index) {
     setState(() {
@@ -65,13 +52,11 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // StoryPage(),
-            // Pdpa(),
-            // FeaturesPage(),
-            // PackagesPage(),
-            // CustomerPage(),
-            // FAQ(),
-            // Footer()
+            BannerPage(),
+            OurservicesPage(),
+            FeaturesPage(),
+            PackagesPage(),
+            Footer()
           ],
         ),
       ),

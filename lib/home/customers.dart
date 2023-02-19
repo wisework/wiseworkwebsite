@@ -1,4 +1,4 @@
-import 'dart:html';
+
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,12 +16,12 @@ class CustomerModel {
   );
 }
 
-class CustomerPage extends StatefulWidget {
+class Customer extends StatefulWidget {
   @override
   _CustomerState createState() => _CustomerState();
 }
 
-class _CustomerState extends State<CustomerPage> {
+class _CustomerState extends State<Customer> {
   CarouselController _controller = CarouselController();
   // final controller =
   //     PageController(viewportFraction: 0.8, keepPage: true, initialPage: 0);

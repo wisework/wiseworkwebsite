@@ -18,112 +18,115 @@ class WhoPage extends StatelessWidget {
           Container(
             width: 1440,
             height: 655,
-            color: Color.fromARGB(255, 245, 245, 245),
+            color: Colors.white,
             child: Row(
               children: [
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 126),
-                      child: Container(
-                          width: 787.45,
+                Padding(
+                  padding: const EdgeInsets.only(top: 125),
+                  child: Column(
+                    children: [
+                      Container(
+                          width: 784.45,
                           height: 527,
-                          child: Image.asset("/about/who/computer.png")),
-                    )
-                  ],
+                          child: Image.asset("/about/who/computer.png"))
+                    ],
+                  ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        top: 124,
-                      ),
-                      child: Container(
-                        width: 486,
-                        height: 71,
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                text: 'WHO',
-                                style: GoogleFonts.ibmPlexSansThai(
-                                  fontSize: 48,
-                                  fontWeight: FontWeight.w700,
-                                  color: Color.fromARGB(255, 5, 45, 97),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          top: 124,
+                        ),
+                        child: Container(
+                          width: 486,
+                          height: 71,
+                          child: RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'WHO',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 48,
+                                    fontWeight: FontWeight.w700,
+                                    color: Color.fromARGB(255, 5, 45, 97),
+                                  ),
                                 ),
-                              ),
-                              TextSpan(
-                                text: ' WE',
-                                style: GoogleFonts.ibmPlexSansThai(
-                                  fontSize: 48,
-                                  fontWeight: FontWeight.w700,
-                                  color: Color.fromARGB(255, 75, 196, 213),
+                                TextSpan(
+                                  text: ' WE',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 48,
+                                    fontWeight: FontWeight.w700,
+                                    color: Color.fromARGB(255, 75, 196, 213),
+                                  ),
                                 ),
-                              ),
-                              TextSpan(
-                                text: ' ARE?',
-                                style: GoogleFonts.ibmPlexSansThai(
-                                  fontSize: 48,
-                                  fontWeight: FontWeight.w700,
-                                  color: Color.fromARGB(255, 5, 45, 97),
+                                TextSpan(
+                                  text: ' ARE?',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 48,
+                                    fontWeight: FontWeight.w700,
+                                    color: Color.fromARGB(255, 5, 45, 97),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 28),
-                      child: Container(
-                        width: 574,
-                        height: 151,
-                        child: Text(
-                          "“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับกฎหมาย\nและกฎระเบียบจากหน่วยงานกำกับดูแล โดยทีมนักพัฒนา\nและผู้เชี่ยวชาญมากประสบการณ์”",
-                          style: GoogleFonts.ibmPlexSansThai(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w400,
-                              color: Color.fromARGB(255, 5, 45, 97)),
-                          textAlign: TextAlign.start,
+                      Padding(
+                        padding: const EdgeInsets.only(top: 28),
+                        child: Container(
+                          width: 574,
+                          height: 151,
+                          child: Text(
+                            "“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับกฎหมาย\nและกฎระเบียบจากหน่วยงานกำกับดูแล โดยทีมนักพัฒนา\nและผู้เชี่ยวชาญมากประสบการณ์”",
+                            style: GoogleFonts.ibmPlexSansThai(
+                                fontSize: 24,
+                                fontWeight: FontWeight.w400,
+                                color: Color.fromARGB(255, 5, 45, 97)),
+                            textAlign: TextAlign.start,
+                          ),
                         ),
                       ),
-                    ),
-                    Container(
-                      width: 570,
-                      height: 188,
-                      child: Text.rich(TextSpan(children: [
-                        TextSpan(
-                            text:
-                                '\u2022 ประสบการณ์การพัฒนาระบบ และตรวจรับรองบริษัทจดทะเบียนฯ\n',
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black)),
-                        TextSpan(
-                            text:
-                                '\u2022 เชี่ยวชาญงานตรวจสอบ และลงนามรับรองตามกฎระเบียบของ\n   หน่วยงานกำกับดูแล\n',
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black)),
-                        TextSpan(
-                            text:
-                                '\u2022 เชี่ยวชาญงานพัฒนาโปรแกรมระบบด้านความมั่นคงปลอดภัยสารสนเทศ\n',
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black)),
-                        TextSpan(
-                            text:
-                                '\u2022 เชี่ยวชาญงานพัฒนาโปรแกรมตามกฎหมาย กฎระเบียบ และมาตรฐานสากล\n',
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black)),
-                      ])),
-                    )
-                  ],
+                      Container(
+                        width: 570,
+                        height: 188,
+                        child: Text.rich(TextSpan(children: [
+                          TextSpan(
+                              text:
+                                  '\u2022 ประสบการณ์การพัฒนาระบบ และตรวจรับรองบริษัทจดทะเบียนฯ\n',
+                              style: GoogleFonts.ibmPlexSansThai(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black)),
+                          TextSpan(
+                              text:
+                                  '\u2022 เชี่ยวชาญงานตรวจสอบ และลงนามรับรองตามกฎระเบียบของ\n   หน่วยงานกำกับดูแล\n',
+                              style: GoogleFonts.ibmPlexSansThai(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black)),
+                          TextSpan(
+                              text:
+                                  '\u2022 เชี่ยวชาญงานพัฒนาโปรแกรมระบบด้านความมั่นคงปลอดภัยสารสนเทศ\n',
+                              style: GoogleFonts.ibmPlexSansThai(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black)),
+                          TextSpan(
+                              text:
+                                  '\u2022 เชี่ยวชาญงานพัฒนาโปรแกรมตามกฎหมาย กฎระเบียบ และมาตรฐานสากล\n',
+                              style: GoogleFonts.ibmPlexSansThai(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black)),
+                        ])),
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
