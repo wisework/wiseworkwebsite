@@ -138,7 +138,9 @@ flutter:
   - assets/carousel/med_crs.png
   - assets/carousel/min_crs.png
   
-  
+  - assets/product/productbg.png
+  - assets/product/productpic.png
+  - assets/product/productframe.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

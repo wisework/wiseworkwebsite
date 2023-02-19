@@ -4,6 +4,7 @@ import 'package:wiseintern/home/homepage.dart';
 import 'package:wiseintern/about/aboutpage.dart';
 import 'package:wiseintern/customers/customerspage.dart';
 import 'package:wiseintern/services/servicespage.dart';
+import 'package:wiseintern/products/productspage.dart';
 // import 'package:wiseintern/home/features.dart';
 // import 'package:wiseintern/home/packagepage.dart';
 // import 'navbar.dart';
@@ -21,11 +22,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:
-      ServicesPage(),
-      // CustomerPage()
-      //  AboutPage(),
-      //  HomePage()
-
+          // ServicesPage(),
+          // CustomerPage()
+          //  AboutPage(),
+          //  HomePage(),
+          ProductPage(),
       // theme: ThemeData(primarySwatch: Colors.deepPurple),
     );
   }
