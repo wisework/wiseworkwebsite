@@ -70,8 +70,8 @@ class _HomePageState extends State<HomePage> {
             // StoryPage(),
             // Pdpa(),
             // FeaturesPage(),
+            Customer(),
             // PackagesPage(),
-            Customer()
             // FAQ(),
             // Footer()
           ],
