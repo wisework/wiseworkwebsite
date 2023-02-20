@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:wiseintern/about/who.dart';
 import 'package:wiseintern/navbar.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/menu_drawer.dart';
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/home/features.dart';
 import 'package:wiseintern/products/enterprise.dart';
+import 'package:wiseintern/products/whom.dart';
 
 class ProductPage extends StatefulWidget {
   @override
@@ -46,7 +48,12 @@ class _ProductPageState extends State<ProductPage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [SingleProductPage(), FeaturesPage(), Footer()],
+          children: [
+            SingleProductPage(),
+            FeaturesPage(),
+            SingleWhomPage(),
+            Footer()
+          ],
         ),
       ),
     );
