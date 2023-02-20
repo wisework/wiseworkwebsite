@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiseintern/customers/customerspage.dart';
 import 'package:wiseintern/home/pdpa.dart';
 import 'package:wiseintern/navbar.dart';
 import 'package:wiseintern/home/features.dart';
@@ -9,6 +10,7 @@ import 'package:wiseintern/home/story.dart';
 import 'package:wiseintern/menu_drawer.dart';
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/home/faq.dart';
+import 'package:wiseintern/model/customer_carousel.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -69,7 +71,7 @@ class _HomePageState extends State<HomePage> {
             // Pdpa(),
             // FeaturesPage(),
             // PackagesPage(),
-            // CustomerPage(),
+            Customer()
             // FAQ(),
             // Footer()
           ],
