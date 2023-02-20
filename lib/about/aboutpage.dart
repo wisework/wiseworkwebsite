@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wiseintern/navbar.dart';
-// import 'package:wiseintern/home/features.dart';
-// import 'package:wiseintern/home/packagepage.dart';
 import 'package:wiseintern/responsive.dart';
-// import 'package:wiseintern/home/customers.dart';
-// import 'package:wiseintern/home/story.dart';
 import 'package:wiseintern/menu_drawer.dart';
+
 import 'package:wiseintern/home/footer.dart';
-// import 'package:wiseintern/home/carousel.dart';
 import 'package:wiseintern/about/banner.dart';
 import 'package:wiseintern/about/who.dart';
 import 'package:wiseintern/about/why.dart';
@@ -56,8 +52,8 @@ class _AboutPageState extends State<AboutPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // BannerPage(),
-            WhoPage(),
-            // WhyPage(),
+            // WhoPage(),
+            WhyPage(),
             // AwardsPage(),
             // AdvisePage(),
             // Footer()
