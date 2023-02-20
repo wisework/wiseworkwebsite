@@ -51,8 +51,8 @@ class _ProductPageState extends State<ProductPage> {
           children: [
             SingleProductPage(),
             FeaturesPage(),
-            SingleWhomPage(),
-            Footer()
+            // SingleWhomPage(),
+            // Footer()
           ],
         ),
       ),

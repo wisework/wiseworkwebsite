@@ -2,15 +2,66 @@ import 'package:flutter/material.dart';
 import '../responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SingleProductPage extends StatelessWidget {
+class SingleProductPage extends StatefulWidget {
+  const SingleProductPage({Key? key}) : super(key: key);
+
+  @override
+  State<SingleProductPage> createState() => _SingleProductPageState();
+}
+
+class Model {
+  final String title;
+  final String description;
+  Model(this.title, this.description);
+}
+
+class _SingleProductPageState extends State<SingleProductPage> {
+  int? hoveredIndex;
+  List<Model> list = [
+    Model(
+      "Modules",
+      "Max (11 Modules)",
+    ),
+    Model(
+      "Concurrent User",
+      "Unlimited",
+    ),
+    Model(
+      "Storage",
+      "Unlimited",
+    ),
+    Model(
+      "Number of Data Subject",
+      "~ 10,000,000",
+    ),
+    Model(
+      "ครบถ้วนตามพรบ.ฯ",
+      "Support",
+    ),
+    Model(
+      "การติดตั้งระบบ",
+      "On Cloud/ On Premise",
+    ),
+    Model(
+      "พัฒนาเพิ่มเติมตามความต้องการ",
+      "Support",
+    ),
+    Model(
+      "รองรับการทำงานแบบ Multi-Tenant",
+      "Support",
+    ),
+    Model(
+      "Product Support",
+      "24x7 Premium Support",
+    ),
+    Model(
+      "API for Import&Export",
+      "Import & Export",
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    List<String> storylist = [
-      "ประสบการณ์การพัฒนาระบบ และตรวจรับรองบริษัทจดทะเบียนฯ",
-      "เชี่ยวชาญงานตรวจสอบ และลงนามรับรองตามกฎระเบียบของหน่วยงานกำกับดูแล",
-      "เชี่ยวชาญงานพัฒนาโปรแกรมระบบด้านความมั่นคงปลอดภัยสารสนเทศ",
-      "เชี่ยวชาญงานพัฒนาโปรแกรมตามกฎหมาย กฎระเบียบ และมาตรฐานสากล",
-    ];
     var groupofpic = Container(
       color: Color.fromARGB(0, 255, 193, 7),
       height: 582,
@@ -23,14 +74,7 @@ class SingleProductPage extends StatelessWidget {
             height: 582,
             width: 815,
           ),
-          // new Positioned(
-          //   top: 102,
-          //   left: 602,
-          //   height: 100,
-          //   width: 148,
-          //   child:
-          //       new Image(image: AssetImage("assets/product/productframe.png")),
-          // ),
+          new Image(image: AssetImage("assets/product/productframe.png")),
           new Positioned(
             // left: 160,
             right: 35,
@@ -96,40 +140,7 @@ class SingleProductPage extends StatelessWidget {
             color: Color.fromARGB(255, 0, 0, 0)),
       ),
     );
-    // var aboutlist = Container(
-    //   color: Color.fromARGB(0, 255, 255, 255),
-    //   height: Responsive.isDesktop(context) ? 210 : 130,
-    //   width: Responsive.isDesktop(context) ? 726 : 621,
-    //   child: ListView.builder(
-    //     shrinkWrap: true,
-    //     itemCount: storylist.length,
-    //     itemBuilder: (context, index) {
-    //       return ListTile(
-    //         minLeadingWidth: 0,
-    //         minVerticalPadding: 0,
-    //         dense: true,
-    //         visualDensity: VisualDensity(vertical: -4, horizontal: -4),
-    //         leading: Transform.translate(
-    //           offset: Offset(0, 0),
-    //           child: SizedBox(
-    //               width: Responsive.isDesktop(context) ? 8 : 5,
-    //               height: Responsive.isDesktop(context) ? 8 : 5,
-    //               child: Image(image: AssetImage("assets/story/record.png"))),
-    //         ),
-    //         title: Transform.translate(
-    //           offset: Offset(0, 0),
-    //           child: Text(
-    //             storylist[index],
-    //             style: GoogleFonts.ibmPlexSansThai(
-    //                 color: Colors.white,
-    //                 fontSize: Responsive.isDesktop(context) ? 20 : 16,
-    //                 fontWeight: FontWeight.w400),
-    //           ),
-    //         ),
-    //       );
-    //     },
-    //   ),
-    // );
+
     var priceclick = SizedBox(
       width: 192,
       height: 48,
@@ -164,11 +175,6 @@ class SingleProductPage extends StatelessWidget {
                 fontSize: 20, fontWeight: FontWeight.w500),
           )),
     );
-
-    // bool _isLargeScreen() {
-    //   final double screenWidth = MediaQuery.of(context).size.width;
-    //   return screenWidth > 1400;
-    // }
 
     return Center(
       child: Container(
@@ -208,7 +214,150 @@ class SingleProductPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 140,
+              height: 90,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 340),
+                  child: Column(
+                    children: [
+                      Container(
+                        // color: Colors.red,
+                        width: 500,
+                        child: ListView.builder(
+                            shrinkWrap: true,
+                            itemCount: list.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+                                child: new Material(
+                                  child: new InkWell(
+                                    onTap: () {},
+                                    onHover: (value) {
+                                      setState(() {
+                                        if (value) {
+                                          hoveredIndex = index;
+                                        } else {
+                                          hoveredIndex = null;
+                                        }
+                                      });
+                                    },
+                                    // hoverColor: Color.fromARGB(255, 228, 238, 250),
+                                    child: new Container(
+                                      // width: 500,
+                                      // height: 200,
+                                      child: Container(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Row(
+                                              children: [
+                                                SizedBox(
+                                                  width: 16,
+                                                  height: 16,
+                                                  child: Image.asset(
+                                                      "/product/choices.png"),
+                                                ),
+                                                SizedBox(
+                                                  width: 20,
+                                                ),
+                                                Text(
+                                                  '${list[index].title}',
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          fontSize: 24,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          color:
+                                                              hoveredIndex ==
+                                                                      index
+                                                                  ? Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          75,
+                                                                          196,
+                                                                          213)
+                                                                  : Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          23,
+                                                                          24,
+                                                                          26)),
+                                                ),
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  color: Colors.transparent,
+                                ),
+                              );
+                            }),
+                      ),
+                    ],
+                  ),
+                ),
+                Column(
+                  children: [
+                    Container(
+                      // color: Colors.red,
+                      width: 500,
+                      child: ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: list.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              child: new Material(
+                                child: new InkWell(
+                                  onTap: () {},
+                                  onHover: (value) {
+                                    setState(() {
+                                      if (value) {
+                                        hoveredIndex = index;
+                                      } else {
+                                        hoveredIndex = null;
+                                      }
+                                    });
+                                  },
+                                  // hoverColor: Color.fromARGB(255, 228, 238, 250),
+                                  child: new Container(
+                                    // width: 500,
+                                    // height: 200,
+                                    child: Container(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            '${list[index].description}',
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                              fontWeight: FontWeight.w400,
+                                              color: hoveredIndex == index
+                                                  ? Color.fromARGB(
+                                                      255, 75, 196, 213)
+                                                  : Color.fromARGB(
+                                                      255, 23, 24, 26),
+                                              fontSize: 24,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                color: Colors.transparent,
+                              ),
+                            );
+                          }),
+                    ),
+                  ],
+                )
+              ],
             )
           ],
         ),
