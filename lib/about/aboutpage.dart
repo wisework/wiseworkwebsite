@@ -56,11 +56,11 @@ class _AboutPageState extends State<AboutPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             BannerPage(),
-            WhoPage(),
-            WhyPage(),
-            AwardsPage(),
-            AdvisePage(),
-            Footer()
+            // WhoPage(),
+            // WhyPage(),
+            // AwardsPage(),
+            // AdvisePage(),
+            // Footer()
           ],
         ),
       ),
