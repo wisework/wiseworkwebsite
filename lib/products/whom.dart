@@ -26,8 +26,8 @@ class SingleWhomPage extends StatelessWidget {
               // letterSpacing: 2,
               // height: 1.25,
               fontSize: 48,
-              fontWeight: FontWeight.w500,
-              color: Color.fromARGB(255, 0, 112, 240))),
+              fontWeight: FontWeight.w700,
+              color: Color.fromARGB(255, 24, 84, 110))),
     );
     var whoselist = Container(
       color: Color.fromARGB(0, 255, 255, 255),
@@ -38,8 +38,9 @@ class SingleWhomPage extends StatelessWidget {
         itemCount: whomlist.length,
         itemBuilder: (context, index) {
           return ListTile(
-            // minLeadingWidth: 0,
-            // minVerticalPadding: 0,
+            horizontalTitleGap: 0,
+            minLeadingWidth: 0,
+            minVerticalPadding: 0,
             dense: true,
             visualDensity: VisualDensity(vertical: -4, horizontal: -4),
             leading: Transform.translate(
@@ -47,7 +48,7 @@ class SingleWhomPage extends StatelessWidget {
               child: SizedBox(
                   width: 25,
                   height: 25,
-                  child: Image(image: AssetImage("assets/package/check.png"))),
+                  child: Image(image: AssetImage("assets/packages/check.png"))),
             ),
             title: Transform.translate(
               offset: Offset(0, 0),
@@ -55,7 +56,7 @@ class SingleWhomPage extends StatelessWidget {
                 whomlist[index],
                 style: GoogleFonts.ibmPlexSansThai(
                     color: Color.fromARGB(255, 0, 0, 0),
-                    fontSize: Responsive.isDesktop(context) ? 20 : 16,
+                    fontSize: 24,
                     fontWeight: FontWeight.w400),
               ),
             ),
@@ -69,24 +70,26 @@ class SingleWhomPage extends StatelessWidget {
         color: Colors.white,
         width: 1440,
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.end,
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
               height: 22,
             ),
             Row(
-              // mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     title,
+                    SizedBox(
+                      height: 19,
+                    ),
                     whoselist,
                     SizedBox(height: 32),
                     Row(
                       children: [
-                        SizedBox(
-                          width: 16,
-                        ),
                         SizedBox(
                           width: 42,
                         ),
@@ -94,11 +97,18 @@ class SingleWhomPage extends StatelessWidget {
                     )
                   ],
                 ),
-                Container(
-                    height: 453,
-                    width: 506,
-                    child:
-                        Image(image: AssetImage("assets/product/whosepic.png")))
+                Column(
+                  children: [
+                    SizedBox(
+                      height: 112,
+                    ),
+                    Container(
+                        height: 453,
+                        width: 506,
+                        child: Image(
+                            image: AssetImage("assets/product/whosepic.png"))),
+                  ],
+                )
               ],
             ),
             SizedBox(

@@ -141,6 +141,7 @@ flutter:
   - assets/product/productbg.png
   - assets/product/productpic.png
   - assets/product/productframe.png
+  - assets/product/whosepic.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
