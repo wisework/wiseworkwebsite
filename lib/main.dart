@@ -22,11 +22,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:
-          // ServicesPage(),
-          // CustomerPage()
-          //  AboutPage(),
           //  HomePage(),
-          ProductPage(),
+           AboutPage(),
+          // CustomerPage()
+          // ServicesPage(),
+      // ProductPage(),
       // theme: ThemeData(primarySwatch: Colors.deepPurple),
     );
   }
