@@ -358,7 +358,10 @@ class _SingleProductPageState extends State<SingleProductPage> {
                   ],
                 )
               ],
-            )
+            ),
+            SizedBox(
+              height: 100,
+            ),
           ],
         ),
       ),
