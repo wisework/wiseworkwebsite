@@ -32,15 +32,15 @@ class SingleWhomPage extends StatelessWidget {
     var whoselist = Container(
       color: Color.fromARGB(0, 255, 255, 255),
       height: 486,
-      width: 700,
+      width: 740,
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: whomlist.length,
         itemBuilder: (context, index) {
           return ListTile(
-            horizontalTitleGap: 0,
-            minLeadingWidth: 0,
-            minVerticalPadding: 0,
+            // horizontalTitleGap: 0,
+            // minLeadingWidth: 0,
+            // minVerticalPadding: 0,
             dense: true,
             visualDensity: VisualDensity(vertical: -4, horizontal: -4),
             leading: Transform.translate(
@@ -74,7 +74,7 @@ class SingleWhomPage extends StatelessWidget {
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: 22,
+              height: 84,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -100,7 +100,7 @@ class SingleWhomPage extends StatelessWidget {
                 Column(
                   children: [
                     SizedBox(
-                      height: 112,
+                      height: 60,
                     ),
                     Container(
                         height: 453,
