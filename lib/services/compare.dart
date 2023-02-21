@@ -1,0 +1,75 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:wiseintern/responsive.dart';
+
+class Compare extends StatefulWidget {
+  @override
+  _CompareState createState() => _CompareState();
+}
+
+class _CompareState extends State<Compare> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 1440,
+        height: 242,
+        color: Color.fromARGB(255, 5, 45, 97),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 65),
+              child: Text(
+                "เปรียบเทียบ Package ต่างกันอย่างไร?",
+                style: GoogleFonts.ibmPlexSans(
+                    fontSize: 48,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "แนะนำแพ็กเกจที่เหมาะที่สุดสำหรับธุรกิจของคุณ",
+                  style: GoogleFonts.nunito(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w400,
+                      color: Color.fromARGB(255, 75, 196, 213)),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                SizedBox(
+                  width: 193,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 75, 195, 211),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0)),
+                    ),
+                    child: Text(
+                      'คลิกที่นี่',
+                      style: GoogleFonts.ibmPlexSansThai(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

@@ -8,6 +8,7 @@ import 'package:wiseintern/menu_drawer.dart';
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/services/banner.dart';
 import 'package:wiseintern/services/ourservices.dart';
+import 'package:wiseintern/services/compare.dart';
 import 'package:wiseintern/home/features.dart';
 import 'package:wiseintern/home/packagepage.dart';
 
@@ -56,6 +57,7 @@ class _ServicesPageState extends State<ServicesPage> {
             OurservicesPage(),
             FeaturesPage(),
             PackagesPage(),
+            Compare(),
             Footer()
           ],
         ),

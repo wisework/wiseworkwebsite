@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home:
           // HomePage(),
-          AboutPage(),
+          // AboutPage(),
       // CustomerPage()
-      // ServicesPage(),
+      ServicesPage(),
       // ProductPage(),
       // theme: ThemeData(primarySwatch: Colors.deepPurple),
     );
