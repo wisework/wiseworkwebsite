@@ -193,282 +193,318 @@ class WhyPage extends StatelessWidget {
               )
             : Responsive.isTablet(context)
                 ? Container(
-                    width: 768,
-                    height: 1530,
-                    child: Stack(
-                      children: [
-                        Container(
-                          width: 768,
-                          // height: 1630,
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                Colors.white,
-                                Color.fromARGB(255, 232, 242, 254)
-                              ])),
-                        ),
-                        new Positioned(
-                          top: 200,
-                          // right: 1148,
-                          child: Container(
-                            width: 296,
-                            height: 1539,
-                            // color: Colors.amber,
-                            child: Image.asset("/about/why/wisework.png"),
-                          ),
-                        ),
-                        new Positioned(
-                          top: 80,
-                          left: 100,
-                          child: Container(
-                            width: 449,
-                            // height: 130,
-                            child: Text(
-                              "WHY?",
-                              style: GoogleFonts.bebasNeue(
-                                  fontSize: 120,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 5, 45, 97)),
+                    width: 1440,
+                    // height: 1630,
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                          Colors.white,
+                          Color.fromARGB(255, 232, 242, 254)
+                        ])),
+                    child: Center(
+                      child: Container(
+                        width: 768,
+                        height: 1530,
+                        child: Stack(
+                          children: [
+                            Container(
+                              width: 768,
+                              // height: 1630,
+                              decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [
+                                    Colors.white,
+                                    Color.fromARGB(255, 232, 242, 254)
+                                  ])),
                             ),
-                          ),
-                        ),
-                        new Positioned(
-                          top: 180,
-                          left: 100,
-                          child: Container(
-                            width: 449,
-                            // height: 130,
-                            child: Text(
-                              "WISEWORK",
-                              style: GoogleFonts.bebasNeue(
-                                  fontSize: 120,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 5, 45, 97)),
+                            new Positioned(
+                              top: 200,
+                              // right: 1148,
+                              child: Container(
+                                width: 296,
+                                height: 1539,
+                                // color: Colors.amber,
+                                child: Image.asset("/about/why/wisework.png"),
+                              ),
                             ),
-                          ),
+                            new Positioned(
+                              top: 80,
+                              left: 100,
+                              child: Container(
+                                width: 449,
+                                // height: 130,
+                                child: Text(
+                                  "WHY?",
+                                  style: GoogleFonts.bebasNeue(
+                                      fontSize: 120,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 5, 45, 97)),
+                                ),
+                              ),
+                            ),
+                            new Positioned(
+                              top: 180,
+                              left: 100,
+                              child: Container(
+                                width: 449,
+                                // height: 130,
+                                child: Text(
+                                  "WISEWORK",
+                                  style: GoogleFonts.bebasNeue(
+                                      fontSize: 120,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 5, 45, 97)),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 350),
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 40),
+                                    child: Container(
+                                      width: 593,
+                                      // height: 76,
+                                      child: Text(
+                                        'เพราะอะไร ... ทำไมต้อง "เรา"',
+                                        style: GoogleFonts.inter(
+                                            fontSize: 36,
+                                            fontWeight: FontWeight.w500,
+                                            color:
+                                                Color.fromARGB(255, 5, 45, 97)),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 15, top: 80),
+                                    child: Container(
+                                        width: 616,
+                                        height: 193,
+                                        child: Image.asset(
+                                            "/about/why/successful.png")),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 50, left: 60),
+                                    child: Container(
+                                      width: 680,
+                                      // height: 450,
+                                      // color: Colors.red,
+                                      child: reasonsList,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 50, left: 20),
+                                    child: Container(
+                                      width: 600,
+                                      // height: 201,
+                                      child: Text(
+                                        "“เรายังคงมองไปข้างหน้าอย่างต่อเนื่องในการสร้างสรรค์บริการและผลิตภัณฑ์\nSoftware Solutions ที่พร้อมตอบโจทย์ให้ทุกองค์กร\nโดยบูรณาการทำข้อตกลงความร่วมมือทางวิชาการกับคณะวิศวกรรมศาสตร์\nมหาวิทยาลัยเกษตรศาสตร์ด้วยวิสัยทัศน์ที่เล็งเห็นถึงความสำคัญ\nในการพัฒนาระบบของเทคโนโลยีสารสนเทศ มุ่งเน้นการส่งเสริม สนับสนุน และพัฒนา\nพร้อมขับเคลื่อนให้เกิดนวัตกรรมใหม่ สำหรับอนาคต\nและมอบประสบการณ์แห่งความคิดสร้างสรรค์ให้กับธุรกิจต่อไป”",
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.black),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 350),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 40),
-                                child: Container(
-                                  width: 593,
-                                  // height: 76,
-                                  child: Text(
-                                    'เพราะอะไร ... ทำไมต้อง "เรา"',
-                                    style: GoogleFonts.inter(
-                                        fontSize: 36,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color.fromARGB(255, 5, 45, 97)),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 15, top: 80),
-                                child: Container(
-                                    width: 616,
-                                    height: 193,
-                                    child: Image.asset(
-                                        "/about/why/successful.png")),
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 50, left: 60),
-                                child: Container(
-                                  width: 680,
-                                  // height: 450,
-                                  // color: Colors.red,
-                                  child: reasonsList,
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 50, left: 20),
-                                child: Container(
-                                  width: 600,
-                                  // height: 201,
-                                  child: Text(
-                                    "“เรายังคงมองไปข้างหน้าอย่างต่อเนื่องในการสร้างสรรค์บริการและผลิตภัณฑ์\nSoftware Solutions ที่พร้อมตอบโจทย์ให้ทุกองค์กร\nโดยบูรณาการทำข้อตกลงความร่วมมือทางวิชาการกับคณะวิศวกรรมศาสตร์\nมหาวิทยาลัยเกษตรศาสตร์ด้วยวิสัยทัศน์ที่เล็งเห็นถึงความสำคัญ\nในการพัฒนาระบบของเทคโนโลยีสารสนเทศ มุ่งเน้นการส่งเสริม สนับสนุน และพัฒนา\nพร้อมขับเคลื่อนให้เกิดนวัตกรรมใหม่ สำหรับอนาคต\nและมอบประสบการณ์แห่งความคิดสร้างสรรค์ให้กับธุรกิจต่อไป”",
-                                    style: GoogleFonts.ibmPlexSansThai(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
+                      ),
                     ),
                   )
                 : Container(
-                    width: 375,
-                    height: 1530,
-                    child: Stack(
-                      children: [
-                        Container(
-                          width: 375,
-                          // height: 1630,
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                Colors.white,
-                                Color.fromARGB(255, 232, 242, 254)
-                              ])),
-                        ),
-                        new Positioned(
-                          top: 350,
-                          left: 50,
-                          // right: 1148,
-                          child: Container(
-                            width: 145,
-                            height: 1500,
-                            // color: Colors.amber,
-                            child: Image.asset("/about/why/wisework.png"),
-                          ),
-                        ),
-                        new Positioned(
-                          top: 80,
-                          left: 50,
-                          child: Container(
-                            width: 449,
-                            // height: 130,
-                            child: Text(
-                              "WHY?",
-                              style: GoogleFonts.bebasNeue(
-                                  fontSize: 64,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 5, 45, 97)),
+                    width: 1440,
+                    // height: 1630,
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                          Colors.white,
+                          Color.fromARGB(255, 232, 242, 254)
+                        ])),
+                    child: Center(
+                      child: Container(
+                        width: 375,
+                        height: 1530,
+                        child: Stack(
+                          children: [
+                            Container(
+                              width: 375,
+                              // height: 1630,
+                              decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [
+                                    Colors.white,
+                                    Color.fromARGB(255, 232, 242, 254)
+                                  ])),
                             ),
-                          ),
-                        ),
-                        new Positioned(
-                          top: 135,
-                          left: 50,
-                          child: Container(
-                            width: 449,
-                            // height: 130,
-                            child: Text(
-                              "WISEWORK",
-                              style: GoogleFonts.bebasNeue(
-                                  fontSize: 64,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromARGB(255, 5, 45, 97)),
+                            new Positioned(
+                              top: 350,
+                              left: 50,
+                              // right: 1148,
+                              child: Container(
+                                width: 145,
+                                height: 1500,
+                                // color: Colors.amber,
+                                child: Image.asset("/about/why/wisework.png"),
+                              ),
                             ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 230),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 50),
-                                child: Container(
-                                  width: 593,
-                                  // height: 76,
-                                  child: Text(
-                                    'เพราะอะไร ... ทำไมต้อง "เรา"',
-                                    style: GoogleFonts.inter(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color.fromARGB(255, 5, 45, 97)),
-                                  ),
+                            new Positioned(
+                              top: 80,
+                              left: 50,
+                              child: Container(
+                                width: 449,
+                                // height: 130,
+                                child: Text(
+                                  "WHY?",
+                                  style: GoogleFonts.bebasNeue(
+                                      fontSize: 64,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 5, 45, 97)),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 20),
-                                child: Container(
-                                    width: 275,
-                                    height: 247,
-                                    decoration: BoxDecoration(
-                                        color: Color.fromARGB(255, 5, 45, 97),
-                                        borderRadius:
-                                            BorderRadius.circular(16)),
-                                    child: Column(
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(top: 20),
-                                          child: Container(
-                                            height: 42,
-                                            // color: Colors.amber,
-                                            child: Text(
-                                              "50+",
+                            ),
+                            new Positioned(
+                              top: 135,
+                              left: 50,
+                              child: Container(
+                                width: 449,
+                                // height: 130,
+                                child: Text(
+                                  "WISEWORK",
+                                  style: GoogleFonts.bebasNeue(
+                                      fontSize: 64,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 5, 45, 97)),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 230),
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 50),
+                                    child: Container(
+                                      width: 593,
+                                      // height: 76,
+                                      child: Text(
+                                        'เพราะอะไร ... ทำไมต้อง "เรา"',
+                                        style: GoogleFonts.inter(
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.w500,
+                                            color:
+                                                Color.fromARGB(255, 5, 45, 97)),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 20),
+                                    child: Container(
+                                        width: 275,
+                                        height: 247,
+                                        decoration: BoxDecoration(
+                                            color:
+                                                Color.fromARGB(255, 5, 45, 97),
+                                            borderRadius:
+                                                BorderRadius.circular(16)),
+                                        child: Column(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 20),
+                                              child: Container(
+                                                height: 42,
+                                                // color: Colors.amber,
+                                                child: Text(
+                                                  "50+",
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          fontSize: 36,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              75,
+                                                              196,
+                                                              213)),
+                                                  textAlign: TextAlign.center,
+                                                ),
+                                              ),
+                                            ),
+                                            Text(
+                                              "Successful Projects",
                                               style:
                                                   GoogleFonts.ibmPlexSansThai(
-                                                      fontSize: 36,
+                                                      fontSize: 16,
                                                       fontWeight:
-                                                          FontWeight.w700,
+                                                          FontWeight.w600,
                                                       color: Color.fromARGB(
                                                           255, 75, 196, 213)),
                                               textAlign: TextAlign.center,
                                             ),
-                                          ),
-                                        ),
-                                        Text(
-                                          "Successful Projects",
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w600,
-                                              color: Color.fromARGB(
-                                                  255, 75, 196, 213)),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(top: 20),
-                                          child: Text(
-                                            "โครงการต่างๆ\nที่เราได้รับความไว้วางใจ\nเราพร้อมเติมเต็มสิ่งที่ดีที่สุด\nให้ธุรกิจของคุณ",
-                                            style: GoogleFonts.ibmPlexSans(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w400,
-                                                color: Colors.white),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                        )
-                                      ],
-                                    )),
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 50, left: 20),
-                                child: Container(
-                                  width: 360,
-                                  // height: 450,
-                                  // color: Colors.red,
-                                  child: reasonsList,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 50,
-                                ),
-                                child: Container(
-                                  width: 330,
-                                  // height: 201,
-                                  child: Text(
-                                    "“เรายังคงมองไปข้างหน้าอย่างต่อเนื่องในการสร้าง\nสรรค์บริการและผลิตภัณฑ์Software Solutions\nที่พร้อมตอบโจทย์ให้ทุกองค์กร โดยบูรณาการ\nทำข้อตกลงความร่วมมือทางวิชาการกับ\nคณะวิศวกรรมศาสตร์มหาวิทยาลัยเกษตรศาสตร์\nด้วยวิสัยทัศน์ที่เล็งเห็นถึงความสำคัญ\nในการพัฒนาระบบของเทคโนโลยีสารสนเทศ\nมุ่งเน้นการส่งเสริม สนับสนุน และพัฒนา\nพร้อมขับเคลื่อนให้เกิดนวัตกรรมใหม่\nสำหรับอนาคตและมอบประสบการณ์\nแห่งความคิดสร้างสรรค์ให้กับธุรกิจต่อไป”",
-                                    style: GoogleFonts.ibmPlexSansThai(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.black),
-                                    textAlign: TextAlign.center,
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 20),
+                                              child: Text(
+                                                "โครงการต่างๆ\nที่เราได้รับความไว้วางใจ\nเราพร้อมเติมเต็มสิ่งที่ดีที่สุด\nให้ธุรกิจของคุณ",
+                                                style: GoogleFonts.ibmPlexSans(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w400,
+                                                    color: Colors.white),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            )
+                                          ],
+                                        )),
                                   ),
-                                ),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 50, left: 20),
+                                    child: Container(
+                                      width: 360,
+                                      // height: 450,
+                                      // color: Colors.red,
+                                      child: reasonsList,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      top: 50,
+                                    ),
+                                    child: Container(
+                                      width: 330,
+                                      // height: 201,
+                                      child: Text(
+                                        "“เรายังคงมองไปข้างหน้าอย่างต่อเนื่องในการสร้าง\nสรรค์บริการและผลิตภัณฑ์Software Solutions\nที่พร้อมตอบโจทย์ให้ทุกองค์กร โดยบูรณาการ\nทำข้อตกลงความร่วมมือทางวิชาการกับ\nคณะวิศวกรรมศาสตร์มหาวิทยาลัยเกษตรศาสตร์\nด้วยวิสัยทัศน์ที่เล็งเห็นถึงความสำคัญ\nในการพัฒนาระบบของเทคโนโลยีสารสนเทศ\nมุ่งเน้นการส่งเสริม สนับสนุน และพัฒนา\nพร้อมขับเคลื่อนให้เกิดนวัตกรรมใหม่\nสำหรับอนาคตและมอบประสบการณ์\nแห่งความคิดสร้างสรรค์ให้กับธุรกิจต่อไป”",
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.black),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
                     ),
                   ));
   }
