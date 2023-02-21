@@ -392,7 +392,8 @@ class _FooterState extends State<Footer> {
 
     return Center(
       child: Container(
-        color: Color.fromARGB(255, 52, 144, 206),
+        // color: Color.fromARGB(255, 52, 144, 206),
+        width: double.infinity,
         // height: 447,
         // height: 700,
         // width: Responsive.isDesktop(context)
@@ -402,11 +403,12 @@ class _FooterState extends State<Footer> {
         //         : 500,
         child: Column(
           children: [
-            SizedBox(
-              height: Responsive.isDesktop(context) ? 40 : 0,
-            ),
+            // SizedBox(
+            //   height: Responsive.isDesktop(context) ? 40 : 0,
+            // ),
             Responsive.isDesktop(context)
                 ? Container(
+                    color: Color.fromARGB(255, 52, 144, 206),
                     width: 1440,
                     child: Column(
                       children: [
@@ -785,368 +787,470 @@ class _FooterState extends State<Footer> {
                     ),
                   )
                 : Responsive.isTablet(context)
-                    ? Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Container(
-                                width: 768,
-                                height: 671,
-                                // color: Colors.amber,
-                              ),
-                              Container(
-                                width: 768,
-                                height: 171,
-                                color: Color.fromARGB(255, 232, 242, 254),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 171),
-                                child: Container(
-                                  width: 768,
-                                  height: 500,
-                                  color: Color.fromARGB(255, 52, 145, 206),
+                    ? Center(
+                        // width: 1440,
+                        // color: Color.fromARGB(255, 232, 242, 254),
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Container(
+                                  width: 1440,
+                                  height: 671,
+                                  // color: Colors.amber,
+                                ),
+                                Container(
+                                  width: 1440,
+                                  height: 171,
+                                  color: Color.fromARGB(255, 232, 242, 254),
+                                ),
+                                new Positioned(
+                                  top: 171,
+                                  child: Container(
+                                    width: 1440,
+                                    height: 500,
+                                    color: Color.fromARGB(255, 52, 145, 206),
+                                  ),
+                                ),
+                                Center(
                                   child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
                                     children: [
-                                      Row(
+                                      Column(
                                         children: [
                                           Padding(
-                                            padding: const EdgeInsets.only(
-                                                top: 108, left: 39),
+                                            padding:
+                                                const EdgeInsets.only(top: 171),
                                             child: Container(
-                                              width: 123.39,
-                                              height: 48,
-                                              child: Image.asset(
-                                                  "/footer/logo.png"),
+                                              width: 768,
+                                              height: 500,
+                                              color: Color.fromARGB(
+                                                  255, 52, 145, 206),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                top: 108,
+                                                                left: 39),
+                                                        child: Container(
+                                                          width: 123.39,
+                                                          height: 48,
+                                                          child: Image.asset(
+                                                              "/footer/logo.png"),
+                                                        ),
+                                                      ),
+                                                      SizedBox(
+                                                        width: 145.61,
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .only(top: 135),
+                                                        child: QLink,
+                                                      ),
+                                                      SizedBox(
+                                                        width: 87,
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .only(top: 135),
+                                                        child: contact,
+                                                      )
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Column(children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 35,
+                                                                  left: 40),
+                                                          child: Container(
+                                                            width: 213,
+                                                            height: 97,
+                                                            child: Text(
+                                                              "The Wise Work Co.,Ltd.\n7 Soi Lat Pla Khao 19,\nChorakhe Bua Subdistrict,\nLat Phrao District, Bangkok",
+                                                              style: GoogleFonts.ibmPlexSansThai(
+                                                                  fontSize: 16,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                  color: Colors
+                                                                      .white),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 38,
+                                                                  left: 40),
+                                                          child: Container(
+                                                            width: 218,
+                                                            height: 25,
+                                                            child: Row(
+                                                              children: [
+                                                                Container(
+                                                                    width: 25,
+                                                                    height: 25,
+                                                                    child: Image
+                                                                        .asset(
+                                                                      "/footer/fb.png",
+                                                                    )),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 18),
+                                                                  child:
+                                                                      Container(
+                                                                    width: 1,
+                                                                    height: 20,
+                                                                    color: Colors
+                                                                        .white,
+                                                                  ),
+                                                                ),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 20),
+                                                                  child: Container(
+                                                                      width: 25,
+                                                                      height: 25,
+                                                                      child: Image.asset(
+                                                                        "/footer/ig.png",
+                                                                      )),
+                                                                ),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 18),
+                                                                  child:
+                                                                      Container(
+                                                                    width: 1,
+                                                                    height: 20,
+                                                                    color: Colors
+                                                                        .white,
+                                                                  ),
+                                                                ),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 20),
+                                                                  child: Container(
+                                                                      width: 25,
+                                                                      height: 25,
+                                                                      child: Image.asset(
+                                                                        "/footer/yt.png",
+                                                                      )),
+                                                                ),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 18),
+                                                                  child:
+                                                                      Container(
+                                                                    width: 1,
+                                                                    height: 20,
+                                                                    color: Colors
+                                                                        .white,
+                                                                  ),
+                                                                ),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 20),
+                                                                  child: Container(
+                                                                      width: 25,
+                                                                      height: 25,
+                                                                      child: Image.asset(
+                                                                        "/footer/tiktok.png",
+                                                                      )),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ]),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                top: 10,
+                                                                left: 61),
+                                                        child: Container(
+                                                          width: 114,
+                                                          height: 220,
+                                                          // color: Colors.amber,
+                                                          child: navbarlist,
+                                                        ),
+                                                      ),
+                                                      Column(
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    top: 13,
+                                                                    left: 87),
+                                                            child: Container(
+                                                              width: 213,
+                                                              height: 48,
+                                                              child: Text(
+                                                                "Get latest updates and offers.\nTry It Today.",
+                                                                style: GoogleFonts.ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        16,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    color: Colors
+                                                                        .white),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    top: 32,
+                                                                    left: 87),
+                                                            child: formtext,
+                                                          ),
+                                                          Row(
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            6.58,
+                                                                        left:
+                                                                            87),
+                                                                child:
+                                                                    formEmail,
+                                                              ),
+                                                              Padding(
+                                                                padding: const EdgeInsets
+                                                                        .only(
+                                                                    top: 7.87,
+                                                                    left: 3.76),
+                                                                child:
+                                                                    Container(
+                                                                  width: 31.34,
+                                                                  height: 29.83,
+                                                                  decoration: BoxDecoration(
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              3),
+                                                                      color: Color.fromARGB(
+                                                                          255,
+                                                                          75,
+                                                                          195,
+                                                                          211)),
+                                                                  child:
+                                                                      InkWell(
+                                                                    onTap: () {
+                                                                      // do something when the button is tapped
+                                                                    },
+                                                                    child: Image
+                                                                        .asset(
+                                                                            '/footer/send.png'),
+                                                                  ),
+                                                                ),
+                                                              )
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      )
+                                                    ],
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            top: 27,
+                                                            left: 40,
+                                                            right: 40),
+                                                    child: Container(
+                                                      width: 688,
+                                                      height: 2,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            top: 27,
+                                                            left: 221,
+                                                            right: 161),
+                                                    child: Container(
+                                                      width: 389,
+                                                      height: 24,
+                                                      child: Text(
+                                                        "©  Copyright 2022 Thewiseworks | All Right Reserved.",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                fontSize: 16,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400,
+                                                                color: Colors
+                                                                    .white),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
-                                          SizedBox(
-                                            width: 145.61,
-                                          ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(top: 135),
-                                            child: QLink,
-                                          ),
-                                          SizedBox(
-                                            width: 87,
-                                          ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(top: 135),
-                                            child: contact,
-                                          )
                                         ],
                                       ),
-                                      Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Column(children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  top: 35, left: 40),
-                                              child: Container(
-                                                width: 213,
-                                                height: 97,
-                                                child: Text(
-                                                  "The Wise Work Co.,Ltd.\n7 Soi Lat Pla Khao 19,\nChorakhe Bua Subdistrict,\nLat Phrao District, Bangkok",
-                                                  style: GoogleFonts
-                                                      .ibmPlexSansThai(
-                                                          fontSize: 16,
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                          color: Colors.white),
-                                                ),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  top: 38, left: 40),
-                                              child: Container(
-                                                width: 218,
-                                                height: 25,
-                                                child: Row(
-                                                  children: [
-                                                    Container(
-                                                        width: 25,
-                                                        height: 25,
-                                                        child: Image.asset(
-                                                          "/footer/fb.png",
-                                                        )),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 18),
-                                                      child: Container(
-                                                        width: 1,
-                                                        height: 20,
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 20),
-                                                      child: Container(
-                                                          width: 25,
-                                                          height: 25,
-                                                          child: Image.asset(
-                                                            "/footer/ig.png",
-                                                          )),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 18),
-                                                      child: Container(
-                                                        width: 1,
-                                                        height: 20,
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 20),
-                                                      child: Container(
-                                                          width: 25,
-                                                          height: 25,
-                                                          child: Image.asset(
-                                                            "/footer/yt.png",
-                                                          )),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 18),
-                                                      child: Container(
-                                                        width: 1,
-                                                        height: 20,
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 20),
-                                                      child: Container(
-                                                          width: 25,
-                                                          height: 25,
-                                                          child: Image.asset(
-                                                            "/footer/tiktok.png",
-                                                          )),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ]),
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                top: 10, left: 61),
-                                            child: Container(
-                                              width: 114,
-                                              height: 220,
-                                              // color: Colors.amber,
-                                              child: navbarlist,
-                                            ),
+                                    ],
+                                  ),
+                                ),
+                                Center(
+                                  child: Column(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 86, left: 40, right: 40),
+                                        child: Container(
+                                          width: 688,
+                                          height: 150,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(15),
+                                            color: Color.fromARGB(
+                                                255, 248, 248, 255),
                                           ),
-                                          Column(
+                                          child: Row(
                                             children: [
                                               Padding(
                                                 padding: const EdgeInsets.only(
-                                                    top: 13, left: 87),
+                                                    top: 45,
+                                                    left: 30,
+                                                    bottom: 45),
                                                 child: Container(
-                                                  width: 213,
-                                                  height: 48,
+                                                  width: 60,
+                                                  height: 60,
+                                                  child: Image.asset(
+                                                    "/footer/email-icon.png",
+                                                  ),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 63,
+                                                    left: 16,
+                                                    bottom: 63),
+                                                child: Container(
+                                                  width: 183,
+                                                  height: 24,
                                                   child: Text(
-                                                    "Get latest updates and offers.\nTry It Today.",
+                                                    "info@thewiseworks.com",
                                                     style: GoogleFonts
                                                         .ibmPlexSansThai(
                                                             fontSize: 16,
                                                             fontWeight:
-                                                                FontWeight.w400,
+                                                                FontWeight.w600,
                                                             color:
-                                                                Colors.white),
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    35,
+                                                                    34,
+                                                                    51)),
                                                   ),
                                                 ),
                                               ),
                                               Padding(
                                                 padding: const EdgeInsets.only(
-                                                    top: 32, left: 87),
-                                                child: formtext,
+                                                    top: 22,
+                                                    bottom: 22,
+                                                    left: 55),
+                                                child: Container(
+                                                  width: 1,
+                                                  height: 106,
+                                                  color: Color.fromARGB(
+                                                      255, 108, 108, 114),
+                                                ),
                                               ),
-                                              Row(
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            top: 6.58,
-                                                            left: 87),
-                                                    child: formEmail,
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 45,
+                                                    left: 60,
+                                                    bottom: 45),
+                                                child: Container(
+                                                  width: 60,
+                                                  height: 60,
+                                                  child: Image.asset(
+                                                    "/footer/call-icon.png",
                                                   ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            top: 7.87,
-                                                            left: 3.76),
-                                                    child: Container(
-                                                      width: 31.34,
-                                                      height: 29.83,
-                                                      decoration: BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(3),
-                                                          color: Color.fromARGB(
-                                                              255,
-                                                              75,
-                                                              195,
-                                                              211)),
-                                                      child: InkWell(
-                                                        onTap: () {
-                                                          // do something when the button is tapped
-                                                        },
-                                                        child: Image.asset(
-                                                            '/footer/send.png'),
-                                                      ),
-                                                    ),
-                                                  )
-                                                ],
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 63,
+                                                    left: 18,
+                                                    bottom: 63),
+                                                child: Container(
+                                                  width: 183,
+                                                  height: 24,
+                                                  child: Text(
+                                                    "02-103-4379",
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    35,
+                                                                    34,
+                                                                    51)),
+                                                  ),
+                                                ),
                                               ),
                                             ],
-                                          )
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 27, left: 40, right: 40),
-                                        child: Container(
-                                          width: 688,
-                                          height: 2,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 27, left: 221, right: 161),
-                                        child: Container(
-                                          width: 389,
-                                          height: 24,
-                                          child: Text(
-                                            "©  Copyright 2022 Thewiseworks | All Right Reserved.",
-                                            style: GoogleFonts.ibmPlexSansThai(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w400,
-                                                color: Colors.white),
                                           ),
                                         ),
                                       ),
                                     ],
                                   ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 86, left: 40, right: 40),
-                                child: Container(
-                                  width: 688,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15),
-                                    color: Color.fromARGB(255, 248, 248, 255),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 45, left: 30, bottom: 45),
-                                        child: Container(
-                                          width: 60,
-                                          height: 60,
-                                          child: Image.asset(
-                                            "/footer/email-icon.png",
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 63, left: 16, bottom: 63),
-                                        child: Container(
-                                          width: 183,
-                                          height: 24,
-                                          child: Text(
-                                            "info@thewiseworks.com",
-                                            style: GoogleFonts.ibmPlexSansThai(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w600,
-                                                color: Color.fromARGB(
-                                                    255, 35, 34, 51)),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 22, bottom: 22, left: 55),
-                                        child: Container(
-                                          width: 1,
-                                          height: 106,
-                                          color: Color.fromARGB(
-                                              255, 108, 108, 114),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 45, left: 60, bottom: 45),
-                                        child: Container(
-                                          width: 60,
-                                          height: 60,
-                                          child: Image.asset(
-                                            "/footer/call-icon.png",
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 63, left: 18, bottom: 63),
-                                        child: Container(
-                                          width: 183,
-                                          height: 24,
-                                          child: Text(
-                                            "02-103-4379",
-                                            style: GoogleFonts.ibmPlexSansThai(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w600,
-                                                color: Color.fromARGB(
-                                                    255, 35, 34, 51)),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       )
                     : Column(
                         children: [
                           Stack(
                             children: [
                               Container(
-                                width: 375,
+                                width: 1440,
                                 height: 1318,
-                                color: Colors.amber,
+                                color: Color.fromARGB(255, 52, 145, 206),
                               ),
                               Container(
-                                width: 375,
+                                width: 1440,
                                 height: 223,
                                 color: Color.fromARGB(255, 232, 242, 254),
                               ),
-                              new Positioned(
-                                  top: 223,
+                              Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 223),
                                   child: Container(
                                     width: 375,
                                     height: 1095,
@@ -1388,80 +1492,93 @@ class _FooterState extends State<Footer> {
                                         )
                                       ],
                                     ),
-                                  )),
-                              new Positioned(
-                                top: 74,
-                                left: 16,
-                                child: Container(
-                                  width: 342,
-                                  height: 310,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(10)),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 30),
-                                        child: Container(
-                                          width: 50,
-                                          height: 50,
-                                          child: Image.asset(
-                                              "/footer/email-icon.png"),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 20),
-                                        child: Container(
-                                          width: 228,
-                                          height: 30,
-                                          child: Text(
-                                            "info@thewiseworks.com",
-                                            style: GoogleFonts.ibmPlexSansThai(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.w600,
-                                                color: Color.fromARGB(
-                                                    255, 35, 34, 51)),
-                                            textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 74),
+                                  child: Container(
+                                    width: 342,
+                                    height: 310,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 30),
+                                          child: Container(
+                                            width: 50,
+                                            height: 50,
+                                            child: Image.asset(
+                                                "/footer/email-icon.png"),
                                           ),
                                         ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 20),
-                                        child: Container(
-                                          width: 117,
-                                          height: 3,
-                                          color:
-                                              Color.fromARGB(255, 35, 34, 51),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 30),
-                                        child: Container(
-                                          width: 50,
-                                          height: 50,
-                                          child: Image.asset(
-                                              "/footer/call-icon.png"),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 20),
-                                        child: Container(
-                                          width: 228,
-                                          height: 30,
-                                          child: Text(
-                                            "02-103-4379",
-                                            style: GoogleFonts.ibmPlexSansThai(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.w600,
-                                                color: Color.fromARGB(
-                                                    255, 35, 34, 51)),
-                                            textAlign: TextAlign.center,
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 20),
+                                          child: Container(
+                                            width: 228,
+                                            height: 30,
+                                            child: Text(
+                                              "info@thewiseworks.com",
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Color.fromARGB(
+                                                          255, 35, 34, 51)),
+                                              textAlign: TextAlign.center,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 20),
+                                          child: Container(
+                                            width: 117,
+                                            height: 3,
+                                            color:
+                                                Color.fromARGB(255, 35, 34, 51),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 30),
+                                          child: Container(
+                                            width: 50,
+                                            height: 50,
+                                            child: Image.asset(
+                                                "/footer/call-icon.png"),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 20),
+                                          child: Container(
+                                            width: 228,
+                                            height: 30,
+                                            child: Text(
+                                              "02-103-4379",
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Color.fromARGB(
+                                                          255, 35, 34, 51)),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
