@@ -395,11 +395,11 @@ class _FooterState extends State<Footer> {
         color: Color.fromARGB(255, 52, 144, 206),
         // height: 447,
         // height: 700,
-        width: Responsive.isDesktop(context)
-            ? 1440
-            : Responsive.isTablet(context)
-                ? 900
-                : 500,
+        // width: Responsive.isDesktop(context)
+        //     ? 1440
+        //     : Responsive.isTablet(context)
+        //         ? 900
+        //         : 500,
         child: Column(
           children: [
             SizedBox(

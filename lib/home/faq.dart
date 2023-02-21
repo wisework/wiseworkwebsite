@@ -279,7 +279,7 @@ class _FAQState extends State<FAQ> {
     return Center(
       child: Container(
         color: Color.fromARGB(255, 5, 45, 97),
-        width: 1440,
+        // width: 1440,
         child: Column(
           children: [
             Responsive.isDesktop(context)

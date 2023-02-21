@@ -615,7 +615,7 @@ class _AwardsState extends State<AwardsPage> {
             : Responsive.isTablet(context)
                 ? Container(
                     color: Colors.white,
-                    width: 750,
+                    width: 768,
                     child: Column(
                       children: [
                         Column(

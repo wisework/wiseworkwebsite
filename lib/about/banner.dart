@@ -23,22 +23,24 @@ class BannerPage extends StatelessWidget {
                     : 250,
             // color: Colors.amber,
           ),
-          Container(
-            width: Responsive.isDesktop(context)
-                ? 1440
-                : Responsive.isTablet(context)
-                    ? 768
-                    : 375,
-            height: Responsive.isDesktop(context)
-                ? 304
-                : Responsive.isTablet(context)
-                    ? 187
-                    : 250,
-            child: Image.asset(Responsive.isDesktop(context)
-                ? "/about/banner/bg-banner.png"
-                : Responsive.isTablet(context)
-                    ? "/about/banner/tablet.png"
-                    : "/about/banner/mobile.png"),
+          Center(
+            child: Container(
+              width: Responsive.isDesktop(context)
+                  ? 1440
+                  : Responsive.isTablet(context)
+                      ? 768
+                      : 375,
+              height: Responsive.isDesktop(context)
+                  ? 304
+                  : Responsive.isTablet(context)
+                      ? 187
+                      : 250,
+              child: Image.asset(Responsive.isDesktop(context)
+                  ? "/about/banner/bg-banner.png"
+                  : Responsive.isTablet(context)
+                      ? "/about/banner/tablet.png"
+                      : "/about/banner/mobile.png"),
+            ),
           ),
           Responsive.isMobile(context)
               ? Center(

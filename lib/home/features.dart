@@ -79,8 +79,8 @@ class _FeaturesPageState extends State<FeaturesPage> {
         width: Responsive.isDesktop(context)
             ? 1440
             : Responsive.isTablet(context)
-                ? 900
-                : 500,
+                ? 768
+                : 375,
         // color: Color.fromARGB(255, 228, 236, 248),
         margin: EdgeInsets.all(00.0),
         child: Padding(

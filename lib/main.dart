@@ -21,11 +21,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:
-          //  HomePage(),
-           AboutPage(),
-          // CustomerPage()
-          // ServicesPage(),
+      home: HomePage(),
+      //  AboutPage(),
+      // CustomerPage()
+      // ServicesPage(),
       // ProductPage(),
       // theme: ThemeData(primarySwatch: Colors.deepPurple),
     );
