@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import '../responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -321,15 +323,11 @@ class _DestinationCarouselState extends State<StoryPage> {
                       Positioned(
                         bottom: Responsive.isDesktop(context) ? 120 : 0,
                         left: Responsive.isDesktop(context)
-                            ? 410
-                            : Responsive.isTablet(context)
-                                ? 273
-                                : 76,
+                            ? (MediaQuery.of(context).size.width / 2) - 314
+                            : (MediaQuery.of(context).size.width / 2) - 111,
                         right: Responsive.isDesktop(context)
-                            ? 410
-                            : Responsive.isTablet(context)
-                                ? 273
-                                : 76,
+                            ? (MediaQuery.of(context).size.width / 2) - 314
+                            : (MediaQuery.of(context).size.width / 2) - 111,
                         child: SizedBox(
                           width: Responsive.isDesktop(context) ? 628 : 222,
                           height: Responsive.isDesktop(context) ? 88 : 50,
@@ -357,16 +355,8 @@ class _DestinationCarouselState extends State<StoryPage> {
                             : Responsive.isTablet(context)
                                 ? 100
                                 : 96,
-                        left: Responsive.isDesktop(context)
-                            ? 681
-                            : Responsive.isTablet(context)
-                                ? 340
-                                : 143,
-                        right: Responsive.isDesktop(context)
-                            ? 672
-                            : Responsive.isTablet(context)
-                                ? 340
-                                : 143,
+                        left: (MediaQuery.of(context).size.width / 2) - 44,
+                        right: (MediaQuery.of(context).size.width / 2) - 44,
                         child: Container(
                           child: AnimatedSmoothIndicator(
                             activeIndex: _current,
@@ -488,7 +478,9 @@ class _DestinationCarouselState extends State<StoryPage> {
                                         ),
                                   Column(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+                                        Responsive.isTablet(context)
+                                            ? CrossAxisAlignment.center
+                                            : CrossAxisAlignment.end,
                                     children: [
                                       SizedBox(
                                         height: Responsive.isTablet(context)
