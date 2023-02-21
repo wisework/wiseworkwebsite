@@ -21,8 +21,6 @@ class _DestinationCarouselState extends State<StoryPage> {
 
   final List<Widget> images = [
     Container(
-      height: 551,
-      width: 1440,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/crs.png'),
@@ -31,8 +29,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 551,
-      width: 1440,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/crs.png'),
@@ -41,8 +37,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 551,
-      width: 1440,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/crs.png'),
@@ -51,8 +45,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 551,
-      width: 1440,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/crs.png'),
@@ -61,8 +53,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 551,
-      width: 1440,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/crs.png'),
@@ -73,8 +63,6 @@ class _DestinationCarouselState extends State<StoryPage> {
   ];
   List<Widget> med_images = [
     Container(
-      height: 554,
-      width: 768,
       decoration: BoxDecoration(
         image: DecorationImage(
           // opacity: 80,
@@ -84,8 +72,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 554,
-      width: 768,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/med_crs.png'),
@@ -94,8 +80,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 554,
-      width: 768,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/med_crs.png'),
@@ -104,8 +88,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 554,
-      width: 768,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/med_crs.png'),
@@ -114,8 +96,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 554,
-      width: 768,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/med_crs.png'),
@@ -126,8 +106,6 @@ class _DestinationCarouselState extends State<StoryPage> {
   ];
   List<Widget> min_images = [
     Container(
-      height: 528,
-      width: 375,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/min_crs.png'),
@@ -136,8 +114,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 528,
-      width: 375,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/min_crs.png'),
@@ -146,8 +122,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 528,
-      width: 375,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/min_crs.png'),
@@ -156,8 +130,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 528,
-      width: 375,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/min_crs.png'),
@@ -166,8 +138,6 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     ),
     Container(
-      height: 528,
-      width: 375,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/carousel/min_crs.png'),
@@ -285,8 +255,8 @@ class _DestinationCarouselState extends State<StoryPage> {
       ),
     );
     var advice = SizedBox(
-      width: 192,
-      height: 48,
+      width: 193,
+      height: 47,
       child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
@@ -301,11 +271,6 @@ class _DestinationCarouselState extends State<StoryPage> {
                 fontSize: 20, fontWeight: FontWeight.w500),
           )),
     );
-
-    // bool _isLargeScreen() {
-    //   final double screenWidth = MediaQuery.of(context).size.width;
-    //   return screenWidth > 1400;
-    // }
 
     return Center(
       child: Container(
@@ -336,7 +301,7 @@ class _DestinationCarouselState extends State<StoryPage> {
                                 //  NeverScrollableScrollPhysics(),
                                 // enlargeCenterPage: true,
                                 aspectRatio: Responsive.isDesktop(context)
-                                    ? 28 / 11
+                                    ? 1448 / 551
                                     : Responsive.isTablet(context)
                                         ? 768 / 554
                                         : 375 / 538,
@@ -350,32 +315,24 @@ class _DestinationCarouselState extends State<StoryPage> {
                             // carouselController: _controller,
                           ),
                           SizedBox(
-                              height: Responsive.isDesktop(context) ? 164 : 40),
+                              height: Responsive.isDesktop(context) ? 164 : 25),
                         ],
                       ),
                       Positioned(
-                        bottom: Responsive.isDesktop(context) ? 120 : 17,
+                        bottom: Responsive.isDesktop(context) ? 120 : 0,
                         left: Responsive.isDesktop(context)
                             ? 410
                             : Responsive.isTablet(context)
-                                ? 266
-                                : 90,
+                                ? 273
+                                : 76,
                         right: Responsive.isDesktop(context)
-                            ? 403
+                            ? 410
                             : Responsive.isTablet(context)
-                                ? 266
-                                : 96,
+                                ? 273
+                                : 76,
                         child: SizedBox(
-                          width: Responsive.isDesktop(context)
-                              ? 628
-                              : Responsive.isTablet(context)
-                                  ? 219
-                                  : 189,
-                          height: Responsive.isDesktop(context)
-                              ? 88
-                              : Responsive.isTablet(context)
-                                  ? 50
-                                  : 40,
+                          width: Responsive.isDesktop(context) ? 628 : 222,
+                          height: Responsive.isDesktop(context) ? 88 : 50,
                           child: ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
@@ -388,11 +345,8 @@ class _DestinationCarouselState extends State<StoryPage> {
                               child: Text(
                                 "Get A free Demo",
                                 style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: Responsive.isDesktop(context)
-                                        ? 42
-                                        : Responsive.isTablet(context)
-                                            ? 20
-                                            : 16,
+                                    fontSize:
+                                        Responsive.isDesktop(context) ? 42 : 20,
                                     fontWeight: FontWeight.w500),
                               )),
                         ),
@@ -402,17 +356,17 @@ class _DestinationCarouselState extends State<StoryPage> {
                             ? 61
                             : Responsive.isTablet(context)
                                 ? 100
-                                : 70,
+                                : 96,
                         left: Responsive.isDesktop(context)
                             ? 681
                             : Responsive.isTablet(context)
-                                ? 344
-                                : 148,
+                                ? 340
+                                : 143,
                         right: Responsive.isDesktop(context)
                             ? 672
                             : Responsive.isTablet(context)
-                                ? 336
-                                : 139,
+                                ? 340
+                                : 143,
                         child: Container(
                           child: AnimatedSmoothIndicator(
                             activeIndex: _current,
@@ -442,31 +396,6 @@ class _DestinationCarouselState extends State<StoryPage> {
                       ),
                     ],
                   ),
-                  // Container(
-                  //   child: AnimatedSmoothIndicator(
-                  //     activeIndex: _current,
-                  //     count: 5,
-                  //     effect: CustomizableEffect(
-                  //       activeDotDecoration: DotDecoration(
-                  //         width: 16,
-                  //         height: 6,
-                  //         color: Responsive.isDesktop(context)
-                  //             ? Color.fromARGB(255, 0, 0, 0)
-                  //             : Colors.white,
-                  //         borderRadius: BorderRadius.circular(50),
-                  //       ),
-                  //       dotDecoration: DotDecoration(
-                  //         width: 10,
-                  //         height: 4,
-                  //         color: Colors.grey,
-                  //         borderRadius: BorderRadius.circular(50),
-                  //         verticalOffset: 0,
-                  //       ),
-                  //       spacing: 6.0,
-                  //     ),
-                  //   ),
-                  // ),
-                  // SizedBox(height: 61),
                 ],
               ),
             ),
@@ -479,8 +408,8 @@ class _DestinationCarouselState extends State<StoryPage> {
                     height: Responsive.isDesktop(context)
                         ? 78
                         : Responsive.isTablet(context)
-                            ? 89
-                            : 80,
+                            ? 83
+                            : 39,
                   ),
                   Responsive.isDesktop(context)
                       ? Row(
@@ -531,51 +460,13 @@ class _DestinationCarouselState extends State<StoryPage> {
                             ]),
                           ],
                         )
-                      // ? Row(
-                      //     mainAxisAlignment: MainAxisAlignment.end,
-                      //     // crossAxisAlignment: CrossAxisAlignment.end,
-                      //     children: [
-                      //       Container(
-                      //         color: Color.fromARGB(0, 204, 220, 57),
-                      //         child: Column(
-                      //           children: [
-                      //             Column(
-                      //               crossAxisAlignment:
-                      //                   CrossAxisAlignment.start,
-                      //               children: [
-                      //                 title,
-                      //                 SizedBox(
-                      //                   height: 14,
-                      //                 ),
-                      //                 aboutus,
-                      //               ],
-                      //             ),
-                      //             aboutlist,
-                      //             SizedBox(
-                      //               height: 32,
-                      //             ),
-                      //             Padding(
-                      //                 padding: EdgeInsets.only(right: 250),
-                      //                 child: advice)
-                      //           ],
-                      //         ),
-                      //       ),
-                      //       Column(
-                      //         children: [
-                      //           SizedBox(
-                      //             height: 90,
-                      //           ),
-                      //           groupofpic,
-                      //         ],
-                      //       )
-                      //     ],
-                      //   )
                       : Container(
                           // padding: const EdgeInsets.only(left: 0),
                           color: Color.fromARGB(0, 204, 220, 57),
                           child: Column(
                             children: [
                               Column(
+                                // mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Column(
                                     crossAxisAlignment:
@@ -585,7 +476,7 @@ class _DestinationCarouselState extends State<StoryPage> {
                                       SizedBox(
                                         height: Responsive.isTablet(context)
                                             ? 12
-                                            : 60,
+                                            : 32,
                                       ),
                                       aboutus,
                                     ],
@@ -593,10 +484,11 @@ class _DestinationCarouselState extends State<StoryPage> {
                                   Responsive.isTablet(context)
                                       ? aboutlist
                                       : SizedBox(
-                                          height: 0,
+                                          height: 32,
                                         ),
                                   Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
                                       SizedBox(
                                         height: Responsive.isTablet(context)
@@ -619,7 +511,7 @@ class _DestinationCarouselState extends State<StoryPage> {
                         ? 81
                         : Responsive.isTablet(context)
                             ? 71
-                            : 42,
+                            : 64,
                   ),
                 ],
               ),
