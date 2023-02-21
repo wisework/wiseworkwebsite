@@ -88,25 +88,38 @@ flutter:
   - assets/packages/record.png
 
   - assets/customer/nia.png
+  - assets/customer/Nikhom.png
+  - assets/customer/Nutt.png
   - assets/customer/viriya.png
+  - assets/customer/viriya-logo.png
   - assets/customer/royalTH.png
   - assets/customer/bitkub.png
+  - assets/customer/black-check.png
   - assets/customer/bdms.png
   - assets/customer/boonrawd.png
   - assets/customer/brr.png
   - assets/customer/pat.png
+  - assets/customer/process.png
   - assets/customer/advice.png
+  - assets/customer/advice-logo.png
+  - assets/customer/Amorn.png
+  - assets/customer/Anan.png
+  - assets/customer/Ann.png
   - assets/customer/ichitan.png
   - assets/customer/singha.png
   - assets/customer/click.png
+  - assets/customer/comma.png
   - assets/customer/p-pat.png
+  - assets/customer/Pachai.png
   - assets/customer/rise-consulting.png
   - assets/customer/meng.png
+  - assets/customer/mobiles.png
   - assets/customer/singha-beer.png
   - assets/customer/daiichi.png
   - assets/customer/kdn.png
   - assets/customer/national-economic.png
   - assets/customer/intrarat.png
+  - assets/customer/Jirayuth.png
   - assets/customer/singha-park.png
   - assets/customer/muzik.png
   - assets/customer/santafe.png
@@ -114,6 +127,11 @@ flutter:
   - assets/customer/sbp.png
   - assets/customer/win.png
   - assets/customer/team.png
+  - assets/customer/kyocera.png
+  - assets/customer/laptop.png
+  - assets/customer/lotus.png
+  - assets/customer/tvo.png
+  - assets/customer/tvo-th.png
 
   - assets/story/storypic.png
   - assets/story/storybg.png
