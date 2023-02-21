@@ -23,7 +23,7 @@ class _Advise extends State<Advise> {
         "โลตัส แมทเทรส บริษัทเครื่องนอนชั้นนำคุณภาพสูง\nรายใหญ่ระดับโลก ก่อตั้งตั้งแต่ปี 1980 "),
     RealStory("customer/viriya.png", "วิริยะประกันภัย จำกัด (มหาชน)",
         "บริษัทประกันวินาศภัยอันดับหนึ่งของไทย\nครองใจยาวนานกว่า 69 ปี"),
-    RealStory("customer/tvo.png", "Thai Vegetable Oil",
+    RealStory("customer/tvo-th.png", "Thai Vegetable Oil",
         "ผู้ประกอบการอุตสาหกรรมเกษตร จัดจำหน่ายสินค้า\nทั้งตลาดในประเทศ และต่างประเทศ"),
     RealStory("customer/brr.png", "น้ำตาลบุรีรัมย์ จำกัด (มหาชน) ",
         "โรงงานน้ำตาลบุรีรัมย์ เป็นหนึ่งในบรรดาผู้บุกเบิก\nอุตสาหกรรมน้ำตาลของภาคตะวันออกเฉียงเหนือ"),
@@ -68,17 +68,24 @@ class _Advise extends State<Advise> {
                                 // margin: EdgeInsets.all(15),
                                 child: Padding(
                                   padding: const EdgeInsets.only(
-                                      top: 48, left: 6, right: 6, bottom: 12),
+                                    top: 10,
+                                    left: 6,
+                                    right: 6,
+                                  ),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
-                                      SizedBox(
-                                          width: 150,
-                                          height: 150,
+                                      Container(
+                                          width: 180,
+                                          height: 180,
+                                          // color: Colors.amber,
                                           child: Image.asset(
                                             '${stories[index].img}',
-                                            // fit: BoxFit.fill,
+                                            fit: BoxFit.fitWidth,
                                           )),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
                                       Text(
                                         '${stories[index].brand}',
                                         style: GoogleFonts.ibmPlexSansThai(
