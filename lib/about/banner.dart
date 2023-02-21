@@ -126,7 +126,8 @@ class BannerPage extends StatelessWidget {
                     )
                   : Center(
                       child: Stack(
-                        children: [Center(
+                        children: [
+                          Center(
                             child: Container(
                               width: 375,
                               height: 344,

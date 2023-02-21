@@ -23,6 +23,49 @@ class _AwardsState extends State<AwardsPage> {
 
   @override
   Widget build(BuildContext context) {
+    List awards = [
+      "/about/awards/iso27001.png",
+      "/about/awards/iso27017.png",
+      "/about/awards/coso.png",
+      "/about/awards/iso27701.png",
+      "/about/awards/iso27018.png",
+      "/about/awards/iso9001.png",
+      "/about/awards/iso20000.png",
+      "/about/awards/iso22301.png",
+      "/about/awards/csa.png",
+      "/about/awards/iso31000.png",
+      "/about/awards/iso27005.png",
+      "/about/awards/cdpo.png",
+    ];
+    List name = [
+      "ISO/IEC 27001",
+      "ISO/IEC 27017",
+      "COSO-ERM",
+      "ISO/IEC 27701",
+      "ISO/IEC 27018",
+      "ISO/IEC 9001",
+      "ISO/IEC 20000",
+      "ISO/IEC 22301",
+      "CSA",
+      "ISO/IEC 31000",
+      "ISO/IEC 27005",
+      "CDPO",
+    ];
+    List description = [
+      "Information Security\nManagement System:ISMS",
+      "Information technology",
+      "Enterprise Risk\nManagement",
+      "Privacy Information\nManagement System:PIMS",
+      "Security techniques",
+      "Quality Management System",
+      "Lead Auditor (Information\nTechnology Service Management)",
+      "Business Continuity\nManagement",
+      "The Cloud Security Alliance",
+      "Risk Management",
+      "Information Security\nRisk Management",
+      "Certified of Data Protection\nOfficer",
+    ];
+
     return Center(
         child: Responsive.isDesktop(context)
             ? Container(
@@ -844,7 +887,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 textAlign: TextAlign.start,
                                               ),
                                               Text(
-                                                "IPrivacy Information\nManagement System:PIMS",
+                                                "Privacy Information\nManagement System:PIMS",
                                                 style: GoogleFonts.ibmPlexSans(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w400,
@@ -1264,6 +1307,711 @@ class _AwardsState extends State<AwardsPage> {
                       ),
                     ),
                   )
-                : Container());
+                : Container(
+                    color: Colors.white,
+                    width: 1440,
+                    child: Center(
+                      child: Container(
+                        color: Colors.white,
+                        width: 368,
+                        child: Column(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 52, left: 15),
+                                  child: Container(
+                                    width: 305,
+                                    // height: 150,
+                                    // color: Colors.amber,
+                                    child: Text(
+                                      "Awards&\nAchievement",
+                                      style: GoogleFonts.ibmPlexSans(
+                                          fontSize: 36,
+                                          fontWeight: FontWeight.w700,
+                                          color:
+                                              Color.fromARGB(255, 5, 45, 97)),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 20, left: 15),
+                                  child: Container(
+                                    width: 336,
+                                    // height: 110,
+                                    // color: Colors.amber,
+                                    child: Text(
+                                      "การันตีความเชี่ยวชาญด้วยทีมที่ปรึกษาด้านกฎหมาย\nและนักพัฒนามากประสบการณ์ที่ผ่านการฝึกอบรม\nและได้รับรองมาตรฐานระดับสากล",
+                                      style: GoogleFonts.ibmPlexSansThai(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                Center(
+                                  child: Stack(
+                                    children: [
+                                      Container(
+                                        width: 368,
+                                        height: 450,
+                                        // color: Colors.red,
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            SizedBox(
+                                              height: 30,
+                                            ),
+                                            CarouselSlider(
+                                              carouselController: _controller,
+                                              options: CarouselOptions(
+                                                viewportFraction: (213.0 / 347),
+                                                height: 347,
+                                                // enlargeCenterPage: true,
+                                                autoPlay: true,
+                                                onPageChanged: (index, reason) {
+                                                  setState(() {
+                                                    _current = index;
+                                                    // print('Current Page: $_current');
+                                                  });
+                                                },
+                                              ),
+                                              items: [
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(8.0),
+                                                  child: Container(
+                                                    // margin: EdgeInsets.all(0),
+                                                    width: 213,
+                                                    height: 347,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        border: Border.all(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            width: 1),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 2,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ]),
+                                                    child: Column(
+                                                      children: [
+                                                        SizedBox(
+                                                            width: 128,
+                                                            height: 128,
+                                                            child: Image.asset(
+                                                                "about/awards/iso27017.png")),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "ISO/IEC 27001",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        20,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            75,
+                                                                            196,
+                                                                            213)),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "Information Security\nManagement System:ISMS",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        16,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            108,
+                                                                            108,
+                                                                            114)),
+                                                            textAlign: TextAlign
+                                                                .center,
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(8.0),
+                                                  child: Container(
+                                                    width: 213,
+                                                    height: 347,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        border: Border.all(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            width: 1),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 2,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ]),
+                                                    child: Column(
+                                                      children: [
+                                                        SizedBox(
+                                                            width: 128,
+                                                            height: 128,
+                                                            child: Image.asset(
+                                                                "about/awards/iso27017.png")),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "ISO/IEC 27017",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        20,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            75,
+                                                                            196,
+                                                                            213)),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "Information technology",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        16,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            108,
+                                                                            108,
+                                                                            114)),
+                                                            textAlign: TextAlign
+                                                                .center,
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(8.0),
+                                                  child: Container(
+                                                    width: 213,
+                                                    height: 347,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        border: Border.all(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            width: 1),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 2,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ]),
+                                                    child: Column(
+                                                      children: [
+                                                        SizedBox(
+                                                            width: 128,
+                                                            height: 128,
+                                                            child: Image.asset(
+                                                                "about/awards/coso.png")),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "COSO-ERM",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        20,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            75,
+                                                                            196,
+                                                                            213)),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "Enterprise Risk\nManagement",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        16,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            108,
+                                                                            108,
+                                                                            114)),
+                                                            textAlign: TextAlign
+                                                                .center,
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(8.0),
+                                                  child: Container(
+                                                    width: 213,
+                                                    height: 347,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        border: Border.all(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            width: 1),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 2,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ]),
+                                                    child: Column(
+                                                      children: [
+                                                        SizedBox(
+                                                            width: 128,
+                                                            height: 128,
+                                                            child: Image.asset(
+                                                                "about/awards/iso27701.png")),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "ISO/IEC 27701",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        20,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            75,
+                                                                            196,
+                                                                            213)),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "Privacy Information\nManagement System:PIMS",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        16,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            108,
+                                                                            108,
+                                                                            114)),
+                                                            textAlign: TextAlign
+                                                                .center,
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(8.0),
+                                                  child: Container(
+                                                    width: 213,
+                                                    height: 347,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        border: Border.all(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            width: 1),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 2,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ]),
+                                                    child: Column(
+                                                      children: [
+                                                        SizedBox(
+                                                            width: 128,
+                                                            height: 128,
+                                                            child: Image.asset(
+                                                                "about/awards/iso27018.png")),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "ISO/IEC 27018",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        20,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            75,
+                                                                            196,
+                                                                            213)),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "Security techniques",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        16,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            108,
+                                                                            108,
+                                                                            114)),
+                                                            textAlign: TextAlign
+                                                                .center,
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(8.0),
+                                                  child: Container(
+                                                    width: 213,
+                                                    height: 347,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        border: Border.all(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            width: 1),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 2,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ]),
+                                                    child: Column(
+                                                      children: [
+                                                        SizedBox(
+                                                            width: 128,
+                                                            height: 128,
+                                                            child: Image.asset(
+                                                                "about/awards/iso9001.png")),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "ISO/IEC 9001",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        20,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            75,
+                                                                            196,
+                                                                            213)),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "Quality Management\nSystem",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        16,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            108,
+                                                                            108,
+                                                                            114)),
+                                                            textAlign: TextAlign
+                                                                .center,
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(8.0),
+                                                  child: Container(
+                                                    width: 213,
+                                                    height: 347,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        border: Border.all(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            width: 1),
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.grey
+                                                                .withOpacity(
+                                                                    0.3),
+                                                            spreadRadius: 1,
+                                                            blurRadius: 2,
+                                                            offset: Offset(0,
+                                                                3), // changes position of shadow
+                                                          ),
+                                                        ]),
+                                                    child: Column(
+                                                      children: [
+                                                        SizedBox(
+                                                            width: 128,
+                                                            height: 128,
+                                                            child: Image.asset(
+                                                                "about/awards/iso20000.png")),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "ISO/IEC 20000",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        20,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            75,
+                                                                            196,
+                                                                            213)),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20),
+                                                          child: Text(
+                                                            "Lead Auditor (Information Technology\nService Management)",
+                                                            style: GoogleFonts
+                                                                .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        16,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            108,
+                                                                            108,
+                                                                            114)),
+                                                            textAlign: TextAlign
+                                                                .center,
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      new Positioned(
+                                        top: 380,
+                                        left: 100,
+                                        child: Center(
+                                          child: Container(
+                                            child: AnimatedSmoothIndicator(
+                                                activeIndex: _current,
+                                                count: 7,
+                                                effect: ScaleEffect(
+                                                    activePaintStyle:
+                                                        PaintingStyle.stroke,
+                                                    scale: 1.4,
+                                                    activeStrokeWidth: 1.0,
+                                                    dotWidth: 16,
+                                                    dotHeight: 16,
+                                                    dotColor: Color.fromARGB(
+                                                        255, 137, 141, 149))),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ));
   }
 }
