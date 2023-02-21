@@ -309,1157 +309,827 @@ class _CustomerState extends State<Customer> {
 
     return Center(
       child: Container(
-        width: Responsive.isDesktop(context)
-            ? 1440
-            : Responsive.isTablet(context)
-                ? 767
-                : 375,
+        width: 1440,
         color: Colors.white,
-        margin: EdgeInsets.all(00.0),
         child: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                height: Responsive.isDesktop(context) ? 108 : 69,
-              ),
-              Text(
-                'ลูกค้าคนสำคัญของเรา',
-                style: GoogleFonts.nunito(
-                  fontWeight: FontWeight.w700,
-                  color: Color.fromARGB(255, 5, 45, 97),
-                  fontSize: Responsive.isDesktop(context)
-                      ? 48
-                      : Responsive.isTablet(context)
-                          ? 36
-                          : 24,
-                ),
-              ),
-              SizedBox(
-                height: Responsive.isDesktop(context) ? 16 : 27,
-              ),
-              Column(
+          child: Container(
+            // width: Responsive.isDesktop(context)
+            //     ? 1440
+            //     : Responsive.isTablet(context)
+            //         ? 767
+            //         : 375,
+            margin: EdgeInsets.all(00.0),
+            child: Center(
+              child: Column(
                 children: [
-                  Container(
-                    width: Responsive.isDesktop(context)
-                        ? 652
-                        : Responsive.isTablet(context)
-                            ? 652
-                            : 329,
-                    height: Responsive.isDesktop(context)
-                        ? 60
-                        : Responsive.isTablet(context)
-                            ? 92
-                            : 98,
-                    child: Text(
-                      Responsive.isDesktop(context)
-                          ? 'ด้วยประสบการณ์ Software Solutions ครบวงจร เราได้รับความไว้วางใจ\nให้ดูแลธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน ตลอดจนธุรกิจขนาดเล็ก หรือ SME '
+                  SizedBox(
+                    height: Responsive.isDesktop(context) ? 108 : 69,
+                  ),
+                  Text(
+                    'ลูกค้าคนสำคัญของเรา',
+                    style: GoogleFonts.nunito(
+                      fontWeight: FontWeight.w700,
+                      color: Color.fromARGB(255, 5, 45, 97),
+                      fontSize: Responsive.isDesktop(context)
+                          ? 48
                           : Responsive.isTablet(context)
-                              ? 'ด้วยประสบการณ์ Software Solutions ครบวงจร เราได้รับความไว้วางใจให้ดูแลธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน ตลอดจนธุรกิจขนาดเล็ก หรือ SME '
-                              : 'ด้วยประสบการณ์ Software Solutions ครบวงจร\nเราได้รับความไว้วางใจให้ดูแล\nธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน\nตลอดจนธุรกิจขนาดเล็ก หรือ SME ',
-                      style: GoogleFonts.ibmPlexSansThai(
-                        fontWeight: FontWeight.w400,
-                        color: Color.fromARGB(255, 108, 108, 114),
-                        fontSize: Responsive.isDesktop(context)
-                            ? 20
-                            : Responsive.isTablet(context)
-                                ? 20
-                                : 16,
-                      ),
-                      textAlign: Responsive.isMobile(context)
-                          ? TextAlign.start
-                          : TextAlign.center,
+                              ? 36
+                              : 24,
                     ),
                   ),
-                ],
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              Column(
-                children: [
-                  Responsive.isDesktop(context)
-                      ? Container(
-                          width: 1440,
-                          child: GridView.builder(
-                              shrinkWrap: true,
-                              gridDelegate:
-                                  SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 4,
-                                crossAxisSpacing: 20,
-                                mainAxisSpacing: 20,
-                              ),
-                              itemCount: customer.length,
-                              itemBuilder: (BuildContext context, int index) {
-                                return Container(
-                                  // decoration: BoxDecoration(
-                                  //   borderRadius: BorderRadius.circular(20),
-                                  //   color: Color.fromARGB(255, 178, 205, 244),
-                                  // ),
-                                  child: new Material(
-                                    child: new Container(
-                                      width: 300,
-                                      height: 300,
-                                      child: Center(
-                                        child: Container(
-                                          margin: EdgeInsets.all(15),
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: <Widget>[
-                                              SizedBox(
-                                                width: 245,
-                                                height: 245,
-                                                child: Image.asset(
-                                                    customer[index]),
-                                              )
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    color: Colors.transparent,
-                                  ),
-                                );
-                              }),
-                        )
-                      : Responsive.isTablet(context)
-                          ? Stack(
-                              children: [
-                                Container(
-                                  width: 768,
-                                  height: 350,
-                                  // color: Colors.purple,
-                                  // color: Color.fromARGB(255, 250, 251, 252),
-                                  child: Column(
-                                    // mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      CarouselSlider(
-                                          options: CarouselOptions(
-                                            enlargeCenterPage: false,
-                                            // viewportFraction: 0.5,
-                                            height: 350,
-                                            autoPlay: true,
-                                            onPageChanged: (index, reason) {
-                                              setState(() {
-                                                _current = index;
-                                                // print('Current Page: $_current');
-                                              });
-                                            },
-                                          ),
-                                          items: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(10.0),
-                                              child: GridView.count(
-                                                crossAxisSpacing: 10,
-                                                mainAxisSpacing: 10,
-                                                crossAxisCount: 4,
-                                                children:
-                                                    List.generate(8, (index) {
-                                                  final imageIndex = index;
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsets.all(
-                                                            5.0),
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                        color: Color.fromARGB(
-                                                            255, 255, 255, 255),
-                                                        border: Border.all(
-                                                            color:
-                                                                Colors.black12),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(10),
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            color: Colors.grey
-                                                                .withOpacity(
-                                                                    0.3),
-                                                            spreadRadius: 1,
-                                                            blurRadius: 3,
-                                                            offset: Offset(0,
-                                                                3), // changes position of shadow
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      height: 150,
-                                                      width: 144,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20.0),
-                                                        child: Image.asset(
-                                                            customer[
-                                                                imageIndex]),
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(10.0),
-                                              child: GridView.count(
-                                                crossAxisSpacing: 10,
-                                                mainAxisSpacing: 10,
-                                                crossAxisCount: 4,
-                                                children:
-                                                    List.generate(8, (index) {
-                                                  final imageIndex = index + 8;
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsets.all(
-                                                            5.0),
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                        color: Color.fromARGB(
-                                                            255, 255, 255, 255),
-                                                        border: Border.all(
-                                                            color:
-                                                                Colors.black12),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(10),
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            color: Colors.grey
-                                                                .withOpacity(
-                                                                    0.3),
-                                                            spreadRadius: 1,
-                                                            blurRadius: 3,
-                                                            offset: Offset(0,
-                                                                3), // changes position of shadow
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      height: 150,
-                                                      width: 144,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20.0),
-                                                        child: Image.asset(
-                                                            customer[
-                                                                imageIndex]),
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(10.0),
-                                              child: GridView.count(
-                                                crossAxisSpacing: 10,
-                                                mainAxisSpacing: 10,
-                                                crossAxisCount: 4,
-                                                children:
-                                                    List.generate(8, (index) {
-                                                  final imageIndex = index + 16;
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsets.all(
-                                                            5.0),
-                                                    child: Container(
-                                                      height: 150,
-                                                      width: 144,
-                                                      decoration: BoxDecoration(
-                                                        color: Color.fromARGB(
-                                                            255, 255, 255, 255),
-                                                        border: Border.all(
-                                                            color:
-                                                                Colors.black12),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(10),
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            color: Colors.grey
-                                                                .withOpacity(
-                                                                    0.3),
-                                                            spreadRadius: 1,
-                                                            blurRadius: 3,
-                                                            offset: Offset(0,
-                                                                3), // changes position of shadow
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20.0),
-                                                        child: Image.asset(
-                                                            customer[
-                                                                imageIndex]),
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(10.0),
-                                              child: GridView.count(
-                                                crossAxisSpacing: 10,
-                                                mainAxisSpacing: 10,
-                                                crossAxisCount: 4,
-                                                children:
-                                                    List.generate(2, (index) {
-                                                  final imageIndex = index + 24;
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsets.all(
-                                                            5.0),
-                                                    child: Container(
-                                                      height: 150,
-                                                      width: 144,
-                                                      decoration: BoxDecoration(
-                                                        color: Color.fromARGB(
-                                                            255, 255, 255, 255),
-                                                        border: Border.all(
-                                                            color:
-                                                                Colors.black12),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(10),
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            color: Colors.grey
-                                                                .withOpacity(
-                                                                    0.3),
-                                                            spreadRadius: 1,
-                                                            blurRadius: 3,
-                                                            offset: Offset(0,
-                                                                3), // changes position of shadow
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(20.0),
-                                                        child: Image.asset(
-                                                            customer[
-                                                                imageIndex]),
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
-                                              ),
-                                            ),
-                                          ]),
-                                    ],
-                                  ),
-                                ),
-                                new Positioned(
-                                  top: 310,
-                                  left: 340,
-                                  child: Container(
-                                    child: AnimatedSmoothIndicator(
-                                        activeIndex: _current,
-                                        count: 4,
-                                        effect: ScaleEffect(
-                                            activePaintStyle:
-                                                PaintingStyle.stroke,
-                                            scale: 1.4,
-                                            activeStrokeWidth: 1.0,
-                                            dotWidth: 16,
-                                            dotHeight: 16,
-                                            dotColor: Color.fromARGB(
-                                                255, 34, 15, 109))),
-                                  ),
-                                ),
-                              ],
-                            )
-                          : Stack(
-                              children: [
-                                Container(
-                                  width: 375,
-                                  height: 350,
-                                  // color: Colors.purple,
-                                  // color: Color.fromARGB(255, 250, 251, 252),
-                                  child: Column(
-                                    // mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      CarouselSlider(
-                                          options: CarouselOptions(
-                                            enlargeCenterPage: false,
-                                            // viewportFraction: 0.5,
-                                            height: 350,
-                                            autoPlay: true,
-                                            onPageChanged: (index, reason) {
-                                              setState(() {
-                                                _current = index;
-                                                // print('Current Page: $_current');
-                                              });
-                                            },
-                                          ),
-                                          items: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(10.0),
-                                              child: GridView.count(
-                                                crossAxisSpacing: 10,
-                                                mainAxisSpacing: 10,
-                                                crossAxisCount: 3,
-                                                children:
-                                                    List.generate(6, (index) {
-                                                  final imageIndex = index;
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsets.all(
-                                                            2.0),
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                        color: Color.fromARGB(
-                                                            255, 255, 255, 255),
-                                                        border: Border.all(
-                                                            color:
-                                                                Colors.black12),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(10),
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            color: Colors.grey
-                                                                .withOpacity(
-                                                                    0.3),
-                                                            spreadRadius: 1,
-                                                            blurRadius: 3,
-                                                            offset: Offset(0,
-                                                                3), // changes position of shadow
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(10.0),
-                                                        child: Image.asset(
-                                                            customer[
-                                                                imageIndex]),
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(10.0),
-                                              child: GridView.count(
-                                                crossAxisSpacing: 10,
-                                                mainAxisSpacing: 10,
-                                                crossAxisCount: 3,
-                                                children:
-                                                    List.generate(6, (index) {
-                                                  final imageIndex = index + 6;
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsets.all(
-                                                            2.0),
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                        color: Color.fromARGB(
-                                                            255, 255, 255, 255),
-                                                        border: Border.all(
-                                                            color:
-                                                                Colors.black12),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(10),
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            color: Colors.grey
-                                                                .withOpacity(
-                                                                    0.3),
-                                                            spreadRadius: 1,
-                                                            blurRadius: 3,
-                                                            offset: Offset(0,
-                                                                3), // changes position of shadow
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      height: 100,
-                                                      width: 100,
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(10.0),
-                                                        child: Image.asset(
-                                                            customer[
-                                                                imageIndex]),
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(10.0),
-                                              child: GridView.count(
-                                                crossAxisSpacing: 10,
-                                                mainAxisSpacing: 10,
-                                                crossAxisCount: 3,
-                                                children:
-                                                    List.generate(6, (index) {
-                                                  final imageIndex = index + 12;
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsets.all(
-                                                            2.0),
-                                                    child: Container(
-                                                      height: 100,
-                                                      width: 100,
-                                                      decoration: BoxDecoration(
-                                                        color: Color.fromARGB(
-                                                            255, 255, 255, 255),
-                                                        border: Border.all(
-                                                            color:
-                                                                Colors.black12),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(10),
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            color: Colors.grey
-                                                                .withOpacity(
-                                                                    0.3),
-                                                            spreadRadius: 1,
-                                                            blurRadius: 3,
-                                                            offset: Offset(0,
-                                                                3), // changes position of shadow
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(10.0),
-                                                        child: Image.asset(
-                                                            customer[
-                                                                imageIndex]),
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(10.0),
-                                              child: GridView.count(
-                                                crossAxisSpacing: 10,
-                                                mainAxisSpacing: 10,
-                                                crossAxisCount: 3,
-                                                children:
-                                                    List.generate(6, (index) {
-                                                  final imageIndex = index + 18;
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsets.all(
-                                                            2.0),
-                                                    child: Container(
-                                                      height: 100,
-                                                      width: 100,
-                                                      decoration: BoxDecoration(
-                                                        color: Color.fromARGB(
-                                                            255, 255, 255, 255),
-                                                        border: Border.all(
-                                                            color:
-                                                                Colors.black12),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(10),
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            color: Colors.grey
-                                                                .withOpacity(
-                                                                    0.3),
-                                                            spreadRadius: 1,
-                                                            blurRadius: 3,
-                                                            offset: Offset(0,
-                                                                3), // changes position of shadow
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(10.0),
-                                                        child: Image.asset(
-                                                            customer[
-                                                                imageIndex]),
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(10.0),
-                                              child: GridView.count(
-                                                crossAxisSpacing: 10,
-                                                mainAxisSpacing: 10,
-                                                crossAxisCount: 3,
-                                                children:
-                                                    List.generate(2, (index) {
-                                                  final imageIndex = index + 24;
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsets.all(
-                                                            2.0),
-                                                    child: Container(
-                                                      height: 100,
-                                                      width: 100,
-                                                      decoration: BoxDecoration(
-                                                        color: Color.fromARGB(
-                                                            255, 255, 255, 255),
-                                                        border: Border.all(
-                                                            color:
-                                                                Colors.black12),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(10),
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            color: Colors.grey
-                                                                .withOpacity(
-                                                                    0.3),
-                                                            spreadRadius: 1,
-                                                            blurRadius: 3,
-                                                            offset: Offset(0,
-                                                                3), // changes position of shadow
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(10.0),
-                                                        child: Image.asset(
-                                                            customer[
-                                                                imageIndex]),
-                                                      ),
-                                                    ),
-                                                  );
-                                                }),
-                                              ),
-                                            ),
-                                          ]),
-                                    ],
-                                  ),
-                                ),
-                                new Positioned(
-                                  top: 220,
-                                  left: 130,
-                                  child: Container(
-                                    child: AnimatedSmoothIndicator(
-                                        activeIndex: _current,
-                                        count: 5,
-                                        effect: ScaleEffect(
-                                            activePaintStyle:
-                                                PaintingStyle.stroke,
-                                            scale: 1.4,
-                                            activeStrokeWidth: 1.0,
-                                            dotWidth: 16,
-                                            dotHeight: 16,
-                                            dotColor: Color.fromARGB(
-                                                255, 34, 15, 109))),
-                                  ),
-                                ),
-                              ],
-                            ),
-                  Responsive.isDesktop(context)
-                      ? Container(
-                          height: 206,
-                          width: 1440,
-                          color: Color.fromARGB(255, 5, 45, 97),
-                          child: Column(
-                            children: [
-                              Stack(
-                                children: [
-                                  new SizedBox(
-                                    height: 206,
-                                    width: 1440,
-                                  ),
-                                  new Positioned(
-                                      top: 0,
-                                      right: 1350,
-                                      child: Container(
-                                        height: 205,
-                                        width: 205,
-                                        decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                                90, 68, 137, 255),
-                                            shape: BoxShape.circle),
-                                      )),
-                                  new Positioned(
-                                    top: 33,
-                                    left: 316,
-                                    child: Container(
-                                      height: 80,
-                                      width: 539.82,
-                                      // color: Colors.pink,
-                                      child: Text(
-                                        "พร้อมวางแผนธุรกิจให้คุณ!",
-                                        style: GoogleFonts.ibmPlexSansThai(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 48,
-                                            color: Colors.white),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ),
-                                  ),
-                                  new Positioned(
-                                      // top: 99.5,
-                                      top: 110.5,
-                                      left: 316,
-                                      child: Container(
-                                        height: 66.5,
-                                        width: 539.82,
-                                        // color: Colors.red,
-                                        child: Text(
-                                          "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork",
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w400,
-                                              color: Colors.white),
-                                        ),
-                                      )),
-                                  new Positioned(
-                                    left: 944,
-                                    top: 79,
-                                    child: SizedBox(
-                                      width: 193,
-                                      height: 48,
-                                      child: ElevatedButton(
-                                        onPressed: () {},
-                                        style: ElevatedButton.styleFrom(
-                                          backgroundColor:
-                                              Color.fromARGB(255, 75, 195, 211),
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(30.0)),
-                                        ),
-                                        child: Text(
-                                          'ติดต่อเรา',
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w600,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ],
+                  SizedBox(
+                    height: Responsive.isDesktop(context) ? 16 : 27,
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        width: Responsive.isDesktop(context)
+                            ? 652
+                            : Responsive.isTablet(context)
+                                ? 652
+                                : 329,
+                        height: Responsive.isDesktop(context)
+                            ? 60
+                            : Responsive.isTablet(context)
+                                ? 92
+                                : 98,
+                        child: Text(
+                          Responsive.isDesktop(context)
+                              ? 'ด้วยประสบการณ์ Software Solutions ครบวงจร เราได้รับความไว้วางใจ\nให้ดูแลธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน ตลอดจนธุรกิจขนาดเล็ก หรือ SME '
+                              : Responsive.isTablet(context)
+                                  ? 'ด้วยประสบการณ์ Software Solutions ครบวงจร เราได้รับความไว้วางใจให้ดูแลธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน ตลอดจนธุรกิจขนาดเล็ก หรือ SME '
+                                  : 'ด้วยประสบการณ์ Software Solutions ครบวงจร\nเราได้รับความไว้วางใจให้ดูแล\nธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน\nตลอดจนธุรกิจขนาดเล็ก หรือ SME ',
+                          style: GoogleFonts.ibmPlexSansThai(
+                            fontWeight: FontWeight.w400,
+                            color: Color.fromARGB(255, 108, 108, 114),
+                            fontSize: Responsive.isDesktop(context)
+                                ? 20
+                                : Responsive.isTablet(context)
+                                    ? 20
+                                    : 16,
                           ),
-                        )
-                      : Container(
-                          height: Responsive.isTablet(context) ? 360 : 286,
-                          width: Responsive.isTablet(context) ? 767 : 378,
-                          color: Color.fromARGB(255, 5, 45, 97),
-                          child: Column(
-                            children: [
-                              Stack(
-                                children: [
-                                  new SizedBox(
-                                    height: Responsive.isTablet(context)
-                                        ? 360
-                                        : 286,
-                                    width: Responsive.isTablet(context)
-                                        ? 767
-                                        : 378,
-                                  ),
-                                  new Positioned(
-                                      top: 0,
-                                      right: Responsive.isTablet(context)
-                                          ? 600
-                                          : 260,
-                                      child: Container(
-                                        height: Responsive.isTablet(context)
-                                            ? 360
-                                            : 285,
-                                        width: Responsive.isTablet(context)
-                                            ? 353
-                                            : 285,
-                                        decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                                90, 68, 137, 255),
-                                            shape: BoxShape.circle),
-                                      )),
-                                  new Positioned(
-                                    top: 68,
-                                    left:
-                                        Responsive.isTablet(context) ? 180 : 57,
-                                    child: Container(
-                                      height: 48,
-                                      width: 409,
-                                      // color: Colors.pink,
-                                      child: Text(
-                                        "พร้อมวางแผนธุรกิจให้คุณ!",
-                                        style: GoogleFonts.ibmPlexSansThai(
-                                            fontWeight:
-                                                Responsive.isTablet(context)
-                                                    ? FontWeight.w700
-                                                    : FontWeight.w600,
-                                            fontSize:
-                                                Responsive.isTablet(context)
-                                                    ? 36
-                                                    : 24,
-                                            color: Colors.white),
-                                        textAlign: Responsive.isTablet(context)
-                                            ? TextAlign.center
-                                            : TextAlign.start,
-                                      ),
-                                    ),
-                                  ),
-                                  new Positioned(
-                                      // top: 99.5,
-                                      top: Responsive.isTablet(context)
-                                          ? 148
-                                          : 112,
-                                      left: Responsive.isTablet(context)
-                                          ? 78
-                                          : 58,
-                                      child: Container(
-                                        height: Responsive.isTablet(context)
-                                            ? 70
-                                            : 66,
-                                        width: Responsive.isTablet(context)
-                                            ? 627
-                                            : 299,
-                                        // color: Colors.red,
-                                        child: Text(
-                                          Responsive.isTablet(context)
-                                              ? "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork"
-                                              : "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA\nหัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย\nปรึกษาเรา #TeamWiseWork",
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              fontSize:
-                                                  Responsive.isTablet(context)
-                                                      ? 20
-                                                      : 14,
-                                              fontWeight: FontWeight.w400,
-                                              color: Colors.white),
-                                          textAlign:
-                                              Responsive.isTablet(context)
-                                                  ? TextAlign.center
-                                                  : TextAlign.start,
-                                        ),
-                                      )),
-                                  new Positioned(
-                                    left: Responsive.isTablet(context)
-                                        ? 292
-                                        : 117,
-                                    top: Responsive.isTablet(context)
-                                        ? 242
-                                        : 207,
-                                    child: SizedBox(
-                                      width: Responsive.isTablet(context)
-                                          ? 182
-                                          : 146,
-                                      height: Responsive.isTablet(context)
-                                          ? 35
-                                          : 28.04,
-                                      child: ElevatedButton(
-                                        onPressed: () {},
-                                        style: ElevatedButton.styleFrom(
-                                          backgroundColor:
-                                              Color.fromARGB(255, 75, 195, 211),
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(30.0)),
-                                        ),
-                                        child: Text(
-                                          'ติดต่อเรา',
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w600,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
+                          textAlign: Responsive.isMobile(context)
+                              ? TextAlign.start
+                              : TextAlign.center,
                         ),
-                  Responsive.isDesktop(context)
-                      ? Padding(
-                          padding: const EdgeInsets.only(top: 51),
-                          child: Container(
-                            height: 650,
-                            width: 1440,
-                            // color: Colors.green,
-                            child: Stack(
-                              children: [
-                                Container(
-                                  width: 1440,
-                                  height: 670,
-                                ),
-                                Row(
-                                  children: [
-                                    Column(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 100, left: 124.74),
-                                          child: Container(
-                                            // height: 670,
-                                            width: 583.78,
-                                            // color: Colors.amber,
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  height: 70,
-                                                  width: 500,
-                                                  // color: Colors.white,
-                                                  child: Text(
-                                                    "ลูกค้าคนสำคัญของเรา",
-                                                    style: GoogleFonts
-                                                        .ibmPlexSansThai(
-                                                            fontSize: 48,
-                                                            fontWeight:
-                                                                FontWeight.w700,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    24,
-                                                                    84,
-                                                                    110)),
-                                                    textAlign: TextAlign.start,
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  height: 10,
-                                                ),
-                                                Container(
-                                                  height: 160,
-                                                  width: 519,
-                                                  // color: Colors.black,
-                                                  child: Text(
-                                                    "จากประสบการณ์ของทีมผู้ให้คำปรึกษามามากกว่า 50+ โครงการ ทีมงานผู้เชี่ยวชาญที่พร้อมให้คำปรึกษา วางแผน และวางระบบ ตามกฎหมาย สำหรับองค์กรและธุรกิจต่างๆ  ดูแลอย่างใกล้ชิด ตลอดการใช้งาน ตั้งแต่เริ่มต้นจนเสร็จสิ้นกระบวนการ",
-                                                    style: GoogleFonts
-                                                        .ibmPlexSansThai(
-                                                            fontSize: 20,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    87,
-                                                                    87,
-                                                                    87)),
-                                                    textAlign: TextAlign.start,
-                                                  ),
-                                                ),
-                                                Container(
-                                                  height: 60,
-                                                  width: 519,
-                                                  child: Text(
-                                                    "พร้อมให้คำปรึกษาแนะนำเพื่อสิ่งที่ดีที่สุดสำหรับธุรกิจคุณ \nปรึกษาเรา #Teamwisework",
-                                                    style: GoogleFonts
-                                                        .ibmPlexSansThai(
-                                                      fontSize: 20,
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                      color: Color.fromARGB(
-                                                          255, 75, 195, 211),
-                                                    ),
-                                                    textAlign: TextAlign.start,
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  height: 68.27,
-                                                ),
-                                                Row(
-                                                  children: [
-                                                    Wrap(children: [
-                                                      SizedBox(
-                                                        width: 191.67,
-                                                        height: 56.7,
-                                                        child: ElevatedButton(
-                                                          onPressed: () {},
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    75,
-                                                                    195,
-                                                                    211),
-                                                            shape: RoundedRectangleBorder(
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            30.0)),
-                                                          ),
-                                                          child: Text(
-                                                            'รับคำปรึกษา',
-                                                            style: GoogleFonts
-                                                                .ibmPlexSansThai(
-                                                                    fontSize:
-                                                                        20,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w600,
-                                                                    color: Colors
-                                                                        .white),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      SizedBox(
-                                                        width: 66.45,
-                                                      ),
-                                                      SizedBox(
-                                                        width: 191.67,
-                                                        height: 56.7,
-                                                        child: ElevatedButton(
-                                                          onPressed: () {},
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    231,
-                                                                    251,
-                                                                    253),
-                                                            shape: RoundedRectangleBorder(
-                                                                side: BorderSide(
-                                                                    color: Color
-                                                                        .fromARGB(
-                                                                            255,
-                                                                            75,
-                                                                            195,
-                                                                            211),
-                                                                    width: 2.0),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            30.0)),
-                                                          ),
-                                                          child: Text(
-                                                            'ลูกค้าของเรา',
-                                                            style: GoogleFonts
-                                                                .ibmPlexSansThai(
-                                                                    fontSize:
-                                                                        20,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w600,
-                                                                    color: Colors
-                                                                        .black),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ]),
-                                                  ],
-                                                ),
-                                              ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  Column(
+                    children: [
+                      Responsive.isDesktop(context)
+                          ? Container(
+                              width: 1440,
+                              child: GridView.builder(
+                                  shrinkWrap: true,
+                                  gridDelegate:
+                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 4,
+                                    crossAxisSpacing: 20,
+                                    mainAxisSpacing: 20,
+                                  ),
+                                  itemCount: customer.length,
+                                  itemBuilder:
+                                      (BuildContext context, int index) {
+                                    return Container(
+                                      // decoration: BoxDecoration(
+                                      //   borderRadius: BorderRadius.circular(20),
+                                      //   color: Color.fromARGB(255, 178, 205, 244),
+                                      // ),
+                                      child: new Material(
+                                        child: new Container(
+                                          width: 300,
+                                          height: 300,
+                                          child: Center(
+                                            child: Container(
+                                              margin: EdgeInsets.all(15),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: <Widget>[
+                                                  SizedBox(
+                                                    width: 245,
+                                                    height: 245,
+                                                    child: Image.asset(
+                                                        customer[index]),
+                                                  )
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ],
+                                        color: Colors.transparent,
+                                      ),
+                                    );
+                                  }),
+                            )
+                          : Responsive.isTablet(context)
+                              ? Stack(
+                                  children: [
+                                    Container(
+                                      width: 768,
+                                      height: 350,
+                                      // color: Colors.purple,
+                                      // color: Color.fromARGB(255, 250, 251, 252),
+                                      child: Column(
+                                        // mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          CarouselSlider(
+                                              options: CarouselOptions(
+                                                enlargeCenterPage: false,
+                                                // viewportFraction: 0.5,
+                                                height: 350,
+                                                autoPlay: true,
+                                                onPageChanged: (index, reason) {
+                                                  setState(() {
+                                                    _current = index;
+                                                    // print('Current Page: $_current');
+                                                  });
+                                                },
+                                              ),
+                                              items: [
+                                                Padding(
+                                                  padding: const EdgeInsets.all(
+                                                      10.0),
+                                                  child: GridView.count(
+                                                    crossAxisSpacing: 10,
+                                                    mainAxisSpacing: 10,
+                                                    crossAxisCount: 4,
+                                                    children: List.generate(8,
+                                                        (index) {
+                                                      final imageIndex = index;
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(5.0),
+                                                        child: Container(
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    255),
+                                                            border: Border.all(
+                                                                color: Colors
+                                                                    .black12),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .withOpacity(
+                                                                        0.3),
+                                                                spreadRadius: 1,
+                                                                blurRadius: 3,
+                                                                offset: Offset(
+                                                                    0,
+                                                                    3), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          height: 150,
+                                                          width: 144,
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(20.0),
+                                                            child: Image.asset(
+                                                                customer[
+                                                                    imageIndex]),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsets.all(
+                                                      10.0),
+                                                  child: GridView.count(
+                                                    crossAxisSpacing: 10,
+                                                    mainAxisSpacing: 10,
+                                                    crossAxisCount: 4,
+                                                    children: List.generate(8,
+                                                        (index) {
+                                                      final imageIndex =
+                                                          index + 8;
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(5.0),
+                                                        child: Container(
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    255),
+                                                            border: Border.all(
+                                                                color: Colors
+                                                                    .black12),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .withOpacity(
+                                                                        0.3),
+                                                                spreadRadius: 1,
+                                                                blurRadius: 3,
+                                                                offset: Offset(
+                                                                    0,
+                                                                    3), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          height: 150,
+                                                          width: 144,
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(20.0),
+                                                            child: Image.asset(
+                                                                customer[
+                                                                    imageIndex]),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsets.all(
+                                                      10.0),
+                                                  child: GridView.count(
+                                                    crossAxisSpacing: 10,
+                                                    mainAxisSpacing: 10,
+                                                    crossAxisCount: 4,
+                                                    children: List.generate(8,
+                                                        (index) {
+                                                      final imageIndex =
+                                                          index + 16;
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(5.0),
+                                                        child: Container(
+                                                          height: 150,
+                                                          width: 144,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    255),
+                                                            border: Border.all(
+                                                                color: Colors
+                                                                    .black12),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .withOpacity(
+                                                                        0.3),
+                                                                spreadRadius: 1,
+                                                                blurRadius: 3,
+                                                                offset: Offset(
+                                                                    0,
+                                                                    3), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(20.0),
+                                                            child: Image.asset(
+                                                                customer[
+                                                                    imageIndex]),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsets.all(
+                                                      10.0),
+                                                  child: GridView.count(
+                                                    crossAxisSpacing: 10,
+                                                    mainAxisSpacing: 10,
+                                                    crossAxisCount: 4,
+                                                    children: List.generate(2,
+                                                        (index) {
+                                                      final imageIndex =
+                                                          index + 24;
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(5.0),
+                                                        child: Container(
+                                                          height: 150,
+                                                          width: 144,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    255),
+                                                            border: Border.all(
+                                                                color: Colors
+                                                                    .black12),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .withOpacity(
+                                                                        0.3),
+                                                                spreadRadius: 1,
+                                                                blurRadius: 3,
+                                                                offset: Offset(
+                                                                    0,
+                                                                    3), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(20.0),
+                                                            child: Image.asset(
+                                                                customer[
+                                                                    imageIndex]),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }),
+                                                  ),
+                                                ),
+                                              ]),
+                                        ],
+                                      ),
+                                    ),
+                                    new Positioned(
+                                      top: 310,
+                                      left: 340,
+                                      child: Container(
+                                        child: AnimatedSmoothIndicator(
+                                            activeIndex: _current,
+                                            count: 4,
+                                            effect: ScaleEffect(
+                                                activePaintStyle:
+                                                    PaintingStyle.stroke,
+                                                scale: 1.4,
+                                                activeStrokeWidth: 1.0,
+                                                dotWidth: 16,
+                                                dotHeight: 16,
+                                                dotColor: Color.fromARGB(
+                                                    255, 34, 15, 109))),
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : Stack(
+                                  children: [
+                                    Container(
+                                      width: 375,
+                                      height: 350,
+                                      // color: Colors.purple,
+                                      // color: Color.fromARGB(255, 250, 251, 252),
+                                      child: Column(
+                                        // mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          CarouselSlider(
+                                              options: CarouselOptions(
+                                                enlargeCenterPage: false,
+                                                // viewportFraction: 0.5,
+                                                height: 350,
+                                                autoPlay: true,
+                                                onPageChanged: (index, reason) {
+                                                  setState(() {
+                                                    _current = index;
+                                                    // print('Current Page: $_current');
+                                                  });
+                                                },
+                                              ),
+                                              items: [
+                                                Padding(
+                                                  padding: const EdgeInsets.all(
+                                                      10.0),
+                                                  child: GridView.count(
+                                                    crossAxisSpacing: 10,
+                                                    mainAxisSpacing: 10,
+                                                    crossAxisCount: 3,
+                                                    children: List.generate(6,
+                                                        (index) {
+                                                      final imageIndex = index;
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(2.0),
+                                                        child: Container(
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    255),
+                                                            border: Border.all(
+                                                                color: Colors
+                                                                    .black12),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .withOpacity(
+                                                                        0.3),
+                                                                spreadRadius: 1,
+                                                                blurRadius: 3,
+                                                                offset: Offset(
+                                                                    0,
+                                                                    3), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          height: 100,
+                                                          width: 100,
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(10.0),
+                                                            child: Image.asset(
+                                                                customer[
+                                                                    imageIndex]),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsets.all(
+                                                      10.0),
+                                                  child: GridView.count(
+                                                    crossAxisSpacing: 10,
+                                                    mainAxisSpacing: 10,
+                                                    crossAxisCount: 3,
+                                                    children: List.generate(6,
+                                                        (index) {
+                                                      final imageIndex =
+                                                          index + 6;
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(2.0),
+                                                        child: Container(
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    255),
+                                                            border: Border.all(
+                                                                color: Colors
+                                                                    .black12),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .withOpacity(
+                                                                        0.3),
+                                                                spreadRadius: 1,
+                                                                blurRadius: 3,
+                                                                offset: Offset(
+                                                                    0,
+                                                                    3), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          height: 100,
+                                                          width: 100,
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(10.0),
+                                                            child: Image.asset(
+                                                                customer[
+                                                                    imageIndex]),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsets.all(
+                                                      10.0),
+                                                  child: GridView.count(
+                                                    crossAxisSpacing: 10,
+                                                    mainAxisSpacing: 10,
+                                                    crossAxisCount: 3,
+                                                    children: List.generate(6,
+                                                        (index) {
+                                                      final imageIndex =
+                                                          index + 12;
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(2.0),
+                                                        child: Container(
+                                                          height: 100,
+                                                          width: 100,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    255),
+                                                            border: Border.all(
+                                                                color: Colors
+                                                                    .black12),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .withOpacity(
+                                                                        0.3),
+                                                                spreadRadius: 1,
+                                                                blurRadius: 3,
+                                                                offset: Offset(
+                                                                    0,
+                                                                    3), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(10.0),
+                                                            child: Image.asset(
+                                                                customer[
+                                                                    imageIndex]),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsets.all(
+                                                      10.0),
+                                                  child: GridView.count(
+                                                    crossAxisSpacing: 10,
+                                                    mainAxisSpacing: 10,
+                                                    crossAxisCount: 3,
+                                                    children: List.generate(6,
+                                                        (index) {
+                                                      final imageIndex =
+                                                          index + 18;
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(2.0),
+                                                        child: Container(
+                                                          height: 100,
+                                                          width: 100,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    255),
+                                                            border: Border.all(
+                                                                color: Colors
+                                                                    .black12),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .withOpacity(
+                                                                        0.3),
+                                                                spreadRadius: 1,
+                                                                blurRadius: 3,
+                                                                offset: Offset(
+                                                                    0,
+                                                                    3), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(10.0),
+                                                            child: Image.asset(
+                                                                customer[
+                                                                    imageIndex]),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsets.all(
+                                                      10.0),
+                                                  child: GridView.count(
+                                                    crossAxisSpacing: 10,
+                                                    mainAxisSpacing: 10,
+                                                    crossAxisCount: 3,
+                                                    children: List.generate(2,
+                                                        (index) {
+                                                      final imageIndex =
+                                                          index + 24;
+                                                      return Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(2.0),
+                                                        child: Container(
+                                                          height: 100,
+                                                          width: 100,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    255),
+                                                            border: Border.all(
+                                                                color: Colors
+                                                                    .black12),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .withOpacity(
+                                                                        0.3),
+                                                                spreadRadius: 1,
+                                                                blurRadius: 3,
+                                                                offset: Offset(
+                                                                    0,
+                                                                    3), // changes position of shadow
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(10.0),
+                                                            child: Image.asset(
+                                                                customer[
+                                                                    imageIndex]),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }),
+                                                  ),
+                                                ),
+                                              ]),
+                                        ],
+                                      ),
+                                    ),
+                                    new Positioned(
+                                      top: 220,
+                                      left: 130,
+                                      child: Container(
+                                        child: AnimatedSmoothIndicator(
+                                            activeIndex: _current,
+                                            count: 5,
+                                            effect: ScaleEffect(
+                                                activePaintStyle:
+                                                    PaintingStyle.stroke,
+                                                scale: 1.4,
+                                                activeStrokeWidth: 1.0,
+                                                dotWidth: 16,
+                                                dotHeight: 16,
+                                                dotColor: Color.fromARGB(
+                                                    255, 34, 15, 109))),
+                                      ),
                                     ),
                                   ],
                                 ),
-                                new Positioned(
-                                  left: 700,
-                                  child: Container(
-                                      width: 650,
-                                      // color: Colors.pink,
-                                      child:
-                                          Image.asset("/customer/mobiles.png")),
-                                ),
-                              ],
-                            ),
-                          ),
-                        )
-                      : Responsive.isTablet(context)
-                          ? Column(
-                              children: [
-                                Container(
-                                  width: 768,
-                                  // height: 784,
-                                  child: Container(
-                                      width: 692,
-                                      height: 676,
-                                      child:
-                                          Image.asset("customer/mobiles.png")),
-                                ),
-                                Container(
-                                  width: 500,
-                                  // color: Colors.amber,
-                                  child: Text(
-                                    "ลูกค้าคนสำคัญของเรา",
-                                    style: GoogleFonts.ibmPlexSansThai(
-                                        fontSize: 48,
-                                        fontWeight: FontWeight.w700,
-                                        color:
-                                            Color.fromARGB(255, 24, 84, 110)),
-                                    textAlign: TextAlign.start,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 30),
-                                  child: Container(
-                                    width: 519,
-                                    // color: Colors.amber,
-                                    child: Text(
-                                      "จากประสบการณ์ของทีมผู้ให้คำปรึกษามามากกว่า 50+ โครงการ ทีมงานผู้เชี่ยวชาญที่พร้อมให้คำปรึกษา วางแผน และวางระบบ ตามกฎหมาย สำหรับองค์กรและธุรกิจต่างๆ  ดูแลอย่างใกล้ชิด ตลอดการใช้งาน ตั้งแต่เริ่มต้นจนเสร็จสิ้นกระบวนการ",
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w400,
-                                          color:
-                                              Color.fromARGB(255, 87, 87, 87)),
-                                      textAlign: TextAlign.start,
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 30),
-                                  child: Container(
-                                    width: 519,
-                                    // color: Colors.amber,
-                                    child: Text(
-                                      "พร้อมให้คำปรึกษาแนะนำเพื่อสิ่งที่ดีที่สุดสำหรับธุรกิจคุณ\nปรึกษาเรา #Teamwisework",
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w400,
-                                          color: Color.fromARGB(
-                                              255, 75, 195, 211)),
-                                      textAlign: TextAlign.start,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 50,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 180),
-                                  child: Row(
+                      Responsive.isDesktop(context)
+                          ? Container(
+                              height: 206,
+                              width: 1440,
+                              color: Color.fromARGB(255, 5, 45, 97),
+                              child: Column(
+                                children: [
+                                  Stack(
                                     children: [
-                                      Wrap(children: [
-                                        SizedBox(
-                                          width: 191.67,
-                                          height: 56.7,
+                                      new SizedBox(
+                                        height: 206,
+                                        width: 1440,
+                                      ),
+                                      new Positioned(
+                                          top: 0,
+                                          right: 1350,
+                                          child: Container(
+                                            height: 205,
+                                            width: 205,
+                                            decoration: BoxDecoration(
+                                                color: Color.fromARGB(
+                                                    90, 68, 137, 255),
+                                                shape: BoxShape.circle),
+                                          )),
+                                      new Positioned(
+                                        top: 33,
+                                        left: 316,
+                                        child: Container(
+                                          height: 80,
+                                          width: 539.82,
+                                          // color: Colors.pink,
+                                          child: Text(
+                                            "พร้อมวางแผนธุรกิจให้คุณ!",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontWeight: FontWeight.w600,
+                                                fontSize: 48,
+                                                color: Colors.white),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      ),
+                                      new Positioned(
+                                          // top: 99.5,
+                                          top: 110.5,
+                                          left: 316,
+                                          child: Container(
+                                            height: 66.5,
+                                            width: 539.82,
+                                            // color: Colors.red,
+                                            child: Text(
+                                              "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork",
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      color: Colors.white),
+                                            ),
+                                          )),
+                                      new Positioned(
+                                        left: 944,
+                                        top: 79,
+                                        child: SizedBox(
+                                          width: 193,
+                                          height: 48,
                                           child: ElevatedButton(
                                             onPressed: () {},
                                             style: ElevatedButton.styleFrom(
@@ -1471,7 +1141,7 @@ class _CustomerState extends State<Customer> {
                                                           30.0)),
                                             ),
                                             child: Text(
-                                              'รับคำปรึกษา',
+                                              'ติดต่อเรา',
                                               style:
                                                   GoogleFonts.ibmPlexSansThai(
                                                       fontSize: 20,
@@ -1481,427 +1151,940 @@ class _CustomerState extends State<Customer> {
                                             ),
                                           ),
                                         ),
-                                        SizedBox(
-                                          width: 66.45,
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )
+                          : Container(
+                              height: Responsive.isTablet(context) ? 360 : 286,
+                              width: Responsive.isTablet(context) ? 767 : 378,
+                              color: Color.fromARGB(255, 5, 45, 97),
+                              child: Column(
+                                children: [
+                                  Stack(
+                                    children: [
+                                      new SizedBox(
+                                        height: Responsive.isTablet(context)
+                                            ? 360
+                                            : 286,
+                                        width: Responsive.isTablet(context)
+                                            ? 767
+                                            : 378,
+                                      ),
+                                      new Positioned(
+                                          top: 0,
+                                          right: Responsive.isTablet(context)
+                                              ? 600
+                                              : 260,
+                                          child: Container(
+                                            height: Responsive.isTablet(context)
+                                                ? 360
+                                                : 285,
+                                            width: Responsive.isTablet(context)
+                                                ? 353
+                                                : 285,
+                                            decoration: BoxDecoration(
+                                                color: Color.fromARGB(
+                                                    90, 68, 137, 255),
+                                                shape: BoxShape.circle),
+                                          )),
+                                      new Positioned(
+                                        top: 68,
+                                        left: Responsive.isTablet(context)
+                                            ? 180
+                                            : 57,
+                                        child: Container(
+                                          height: 48,
+                                          width: 409,
+                                          // color: Colors.pink,
+                                          child: Text(
+                                            "พร้อมวางแผนธุรกิจให้คุณ!",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontWeight:
+                                                    Responsive.isTablet(context)
+                                                        ? FontWeight.w700
+                                                        : FontWeight.w600,
+                                                fontSize:
+                                                    Responsive.isTablet(context)
+                                                        ? 36
+                                                        : 24,
+                                                color: Colors.white),
+                                            textAlign:
+                                                Responsive.isTablet(context)
+                                                    ? TextAlign.center
+                                                    : TextAlign.start,
+                                          ),
                                         ),
-                                        SizedBox(
-                                          width: 191.67,
-                                          height: 56.7,
+                                      ),
+                                      new Positioned(
+                                          // top: 99.5,
+                                          top: Responsive.isTablet(context)
+                                              ? 148
+                                              : 112,
+                                          left: Responsive.isTablet(context)
+                                              ? 78
+                                              : 58,
+                                          child: Container(
+                                            height: Responsive.isTablet(context)
+                                                ? 70
+                                                : 66,
+                                            width: Responsive.isTablet(context)
+                                                ? 627
+                                                : 299,
+                                            // color: Colors.red,
+                                            child: Text(
+                                              Responsive.isTablet(context)
+                                                  ? "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork"
+                                                  : "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA\nหัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย\nปรึกษาเรา #TeamWiseWork",
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize:
+                                                          Responsive.isTablet(
+                                                                  context)
+                                                              ? 20
+                                                              : 14,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      color: Colors.white),
+                                              textAlign:
+                                                  Responsive.isTablet(context)
+                                                      ? TextAlign.center
+                                                      : TextAlign.start,
+                                            ),
+                                          )),
+                                      new Positioned(
+                                        left: Responsive.isTablet(context)
+                                            ? 292
+                                            : 117,
+                                        top: Responsive.isTablet(context)
+                                            ? 242
+                                            : 207,
+                                        child: SizedBox(
+                                          width: Responsive.isTablet(context)
+                                              ? 182
+                                              : 146,
+                                          height: Responsive.isTablet(context)
+                                              ? 35
+                                              : 28.04,
                                           child: ElevatedButton(
                                             onPressed: () {},
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor: Color.fromARGB(
-                                                  255, 231, 251, 253),
+                                                  255, 75, 195, 211),
                                               shape: RoundedRectangleBorder(
-                                                  side: BorderSide(
-                                                      color: Color.fromARGB(
-                                                          255, 75, 195, 211),
-                                                      width: 2.0),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           30.0)),
                                             ),
                                             child: Text(
-                                              'ลูกค้าของเรา',
+                                              'ติดต่อเรา',
                                               style:
                                                   GoogleFonts.ibmPlexSansThai(
-                                                      fontSize: 20,
+                                                      fontSize: 16,
                                                       fontWeight:
                                                           FontWeight.w600,
-                                                      color: Colors.black),
+                                                      color: Colors.white),
                                             ),
                                           ),
                                         ),
-                                      ]),
+                                      )
                                     ],
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 50,
-                                ),
-                              ],
-                            )
-                          : Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 25),
-                                  child: Container(
-                                    width: 327,
-                                    height: 318,
-                                    child: Image.asset("/customer/mobiles.png"),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Container(
-                                  width: 250,
-                                  // color: Colors.amber,
-                                  child: Text(
-                                    "ลูกค้าคนสำคัญของเรา",
-                                    style: GoogleFonts.ibmPlexSansThai(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.w700,
-                                        color:
-                                            Color.fromARGB(255, 24, 84, 110)),
-                                    textAlign: TextAlign.start,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 20),
-                                  child: Container(
-                                    width: 313,
-                                    // color: Colors.amber,
-                                    child: Text(
-                                      "จากประสบการณ์ของทีมผู้ให้คำปรึกษามามาก\nกว่า 50+ โครงการ ทีมงานผู้เชี่ยวชาญที่พร้อม\nให้คำปรึกษา วางแผน และวางระบบ ตามกฎหมาย\nสำหรับองค์กรและธุรกิจต่างๆ  ดูแลอย่างใกล้ชิด\nตลอดการใช้งาน ตั้งแต่เริ่มต้นจนเสร็จสิ้น\nกระบวนการ",
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
-                                          color:
-                                              Color.fromARGB(255, 87, 87, 87)),
-                                      textAlign: TextAlign.start,
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 20),
-                                  child: Container(
-                                    width: 313,
-                                    // color: Colors.amber,
-                                    child: Text(
-                                      "พร้อมให้คำปรึกษาแนะนำเพื่อสิ่งที่ดีที่สุดสำหรับ\nธุรกิจคุณปรึกษาเรา #Teamwisework",
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
-                                          color: Color.fromARGB(
-                                              255, 75, 195, 211)),
-                                      textAlign: TextAlign.start,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 50,
-                                ),
-                                SizedBox(
-                                  width: 191.67,
-                                  height: 48,
-                                  child: ElevatedButton(
-                                    onPressed: () {},
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor:
-                                          Color.fromARGB(255, 75, 195, 211),
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(30.0)),
-                                    ),
-                                    child: Text(
-                                      'รับคำปรึกษา',
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 30,
-                                ),
-                                SizedBox(
-                                  width: 191.67,
-                                  height: 48,
-                                  child: ElevatedButton(
-                                    onPressed: () {},
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor:
-                                          Color.fromARGB(255, 231, 251, 253),
-                                      shape: RoundedRectangleBorder(
-                                          side: BorderSide(
-                                              color: Color.fromARGB(
-                                                  255, 75, 195, 211),
-                                              width: 2.0),
-                                          borderRadius:
-                                              BorderRadius.circular(30.0)),
-                                    ),
-                                    child: Text(
-                                      'ลูกค้าของเรา',
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.black),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 50,
-                                ),
-                              ],
-                            ),
-                  Responsive.isDesktop(context)
-                      ? Stack(
-                          children: [
-                            Row(
-                              children: [CustomerCarousel()],
-                            ),
-                            new Positioned(
-                              top: 500,
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(50.0),
-                                    child: Container(
-                                      width: 59,
-                                      height: 61,
-                                      decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.transparent,
-                                          border: Border.all(
-                                              color: Color.fromARGB(
-                                                  255, 74, 195, 212))),
-                                      child: IconButton(
-                                        icon: Icon(Icons.keyboard_arrow_left,
-                                            size: 32,
-                                            color: Color.fromARGB(
-                                                255, 77, 193, 216)),
-                                        onPressed: () {
-                                          _controller.previousPage(
-                                            duration:
-                                                Duration(milliseconds: 300),
-                                            curve: Curves.ease,
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 1115,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(50.0),
-                                    child: Container(
-                                      width: 59,
-                                      height: 61,
-                                      decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.transparent,
-                                          border: Border.all(
-                                              color: Color.fromARGB(
-                                                  255, 74, 195, 212))),
-                                      child: IconButton(
-                                        icon: Icon(Icons.keyboard_arrow_right,
-                                            size: 32,
-                                            color: Color.fromARGB(
-                                                255, 77, 193, 216)),
-                                        onPressed: () {
-                                          _controller.nextPage(
-                                            duration:
-                                                Duration(milliseconds: 300),
-                                            curve: Curves.ease,
-                                          );
-                                        },
-                                      ),
-                                    ),
                                   ),
                                 ],
                               ),
                             ),
-                          ],
-                        )
-                      : Container(
-                          width: Responsive.isTablet(context) ? 767 : 375,
-                          height: Responsive.isTablet(context) ? 749 : 648,
-                          color: Color.fromARGB(255, 5, 45, 97),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: Responsive.isTablet(context) ? 767 : 375,
-                                height:
-                                    Responsive.isTablet(context) ? 250 : 120,
-                                // color: Color.fromARGB(255, 190, 208, 232),
+                      Responsive.isDesktop(context)
+                          ? Padding(
+                              padding: const EdgeInsets.only(top: 51),
+                              child: Container(
+                                height: 650,
+                                width: 1440,
+                                // color: Colors.green,
                                 child: Stack(
                                   children: [
-                                    new Positioned(
-                                      top:
-                                          Responsive.isTablet(context) ? 25 : 5,
-                                      right: Responsive.isTablet(context)
-                                          ? 661
-                                          : 309,
-                                      child: SizedBox(
-                                          width: Responsive.isTablet(context)
-                                              ? 120
-                                              : 86,
-                                          height: Responsive.isTablet(context)
-                                              ? 101
-                                              : 72,
-                                          child: Opacity(
-                                            opacity: 0.5,
-                                            child: Image.asset(
-                                                "/customer/comma.png"),
-                                          )),
+                                    Container(
+                                      width: 1440,
+                                      height: 670,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 100, left: 124.74),
+                                              child: Container(
+                                                // height: 670,
+                                                width: 583.78,
+                                                // color: Colors.amber,
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Container(
+                                                      height: 70,
+                                                      width: 500,
+                                                      // color: Colors.white,
+                                                      child: Text(
+                                                        "ลูกค้าคนสำคัญของเรา",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                fontSize: 48,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w700,
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        24,
+                                                                        84,
+                                                                        110)),
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 10,
+                                                    ),
+                                                    Container(
+                                                      height: 160,
+                                                      width: 519,
+                                                      // color: Colors.black,
+                                                      child: Text(
+                                                        "จากประสบการณ์ของทีมผู้ให้คำปรึกษามามากกว่า 50+ โครงการ ทีมงานผู้เชี่ยวชาญที่พร้อมให้คำปรึกษา วางแผน และวางระบบ ตามกฎหมาย สำหรับองค์กรและธุรกิจต่างๆ  ดูแลอย่างใกล้ชิด ตลอดการใช้งาน ตั้งแต่เริ่มต้นจนเสร็จสิ้นกระบวนการ",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                fontSize: 20,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400,
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        87,
+                                                                        87,
+                                                                        87)),
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      height: 60,
+                                                      width: 519,
+                                                      child: Text(
+                                                        "พร้อมให้คำปรึกษาแนะนำเพื่อสิ่งที่ดีที่สุดสำหรับธุรกิจคุณ \nปรึกษาเรา #Teamwisework",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                          fontSize: 20,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              75,
+                                                              195,
+                                                              211),
+                                                        ),
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 68.27,
+                                                    ),
+                                                    Row(
+                                                      children: [
+                                                        Wrap(children: [
+                                                          SizedBox(
+                                                            width: 191.67,
+                                                            height: 56.7,
+                                                            child:
+                                                                ElevatedButton(
+                                                              onPressed: () {},
+                                                              style:
+                                                                  ElevatedButton
+                                                                      .styleFrom(
+                                                                backgroundColor:
+                                                                    Color.fromARGB(
+                                                                        255,
+                                                                        75,
+                                                                        195,
+                                                                        211),
+                                                                shape: RoundedRectangleBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            30.0)),
+                                                              ),
+                                                              child: Text(
+                                                                'รับคำปรึกษา',
+                                                                style: GoogleFonts.ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        20,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                    color: Colors
+                                                                        .white),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          SizedBox(
+                                                            width: 66.45,
+                                                          ),
+                                                          SizedBox(
+                                                            width: 191.67,
+                                                            height: 56.7,
+                                                            child:
+                                                                ElevatedButton(
+                                                              onPressed: () {},
+                                                              style:
+                                                                  ElevatedButton
+                                                                      .styleFrom(
+                                                                backgroundColor:
+                                                                    Color.fromARGB(
+                                                                        255,
+                                                                        231,
+                                                                        251,
+                                                                        253),
+                                                                shape: RoundedRectangleBorder(
+                                                                    side: BorderSide(
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            75,
+                                                                            195,
+                                                                            211),
+                                                                        width:
+                                                                            2.0),
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            30.0)),
+                                                              ),
+                                                              child: Text(
+                                                                'ลูกค้าของเรา',
+                                                                style: GoogleFonts.ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        20,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                    color: Colors
+                                                                        .black),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ]),
+                                                      ],
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
                                     ),
                                     new Positioned(
-                                        top: Responsive.isTablet(context)
-                                            ? 126
-                                            : 50,
-                                        left: Responsive.isTablet(context)
-                                            ? 218
-                                            : 77,
-                                        child: Container(
-                                          width: Responsive.isTablet(context)
-                                              ? 317
-                                              : 211,
-                                          height: Responsive.isTablet(context)
-                                              ? 100
-                                              : 75,
-                                          // color: Colors.amber,
-                                          child: Text(
-                                            "Real Stories from Real Customers",
-                                            style: GoogleFonts.poppins(
-                                                fontSize:
-                                                    Responsive.isTablet(context)
-                                                        ? 36
-                                                        : 24,
-                                                fontWeight: FontWeight.w600,
-                                                color: Colors.white),
-                                          ),
-                                        ))
+                                      left: 700,
+                                      child: Container(
+                                          width: 650,
+                                          // color: Colors.pink,
+                                          child: Image.asset(
+                                              "/customer/mobiles.png")),
+                                    ),
                                   ],
                                 ),
                               ),
-                              Container(
-                                width: Responsive.isTablet(context) ? 450 : 305,
-                                height: 70,
-                                child: Text(
-                                  Responsive.isTablet(context)
-                                      ? "Why wisework? แบ่งปันประสบการณ์จริงจากลูกค้าคนสำคัญ"
-                                      : "Why wisework? \nแบ่งปันประสบการณ์จริงจากลูกค้าคนสำคัญ",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.white,
-                                  ),
-                                  textAlign: Responsive.isTablet(context)
-                                      ? TextAlign.center
-                                      : TextAlign.start,
-                                ),
-                              ),
-                              // Swiper(
-                              //   itemCount: 3,
-                              //   itemBuilder: (BuildContext context, int index) {
-                              //     return Container(
-                              //       decoration: BoxDecoration(
-                              //         borderRadius: BorderRadius.circular(10),
-                              //         color: Colors.white,
-                              //       ),
-                              //       child: Text("Card ${index + 1}"),
-                              //     );
-                              //   },
-                              //   itemWidth: 300,
-                              //   itemHeight: 200,
-                              //   layout: SwiperLayout.STACK,
-                              // ),
-                              Container(
-                                child: CarouselSlider(
-                                  options: CarouselOptions(
-                                    height: Responsive.isTablet(context)
-                                        ? 300
-                                        : 380,
-                                    autoPlay: true,
-                                    enlargeCenterPage: true,
-                                    onPageChanged: (index, reason) {
-                                      setState(() {
-                                        _current = index;
-                                        // print('Current Page: $_current');
-                                      });
-                                    },
-                                  ),
-                                  items: cards,
-                                ),
-                              ),
+                            )
+                          : Responsive.isTablet(context)
+                              ? Center(
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        width: 768,
 
-                              Container(
-                                child: AnimatedSmoothIndicator(
-                                    activeIndex: _current,
-                                    count: 4,
-                                    effect: ScaleEffect(
-                                        activePaintStyle: PaintingStyle.stroke,
-                                        scale: 1.4,
-                                        activeStrokeWidth: 1.0,
-                                        dotWidth: 16,
-                                        dotHeight: 16,
-                                        dotColor: Color.fromARGB(
-                                            255, 255, 255, 255))),
-                              ),
-                              // Container(
-                              //   child: AnimatedSmoothIndicator(
-                              //     activeIndex: _current,
-                              //     count: 4,
-                              //     effect: CustomizableEffect(
-                              //       activeDotDecoration: DotDecoration(
-                              //         width: 16,
-                              //         height: 6,
-                              //         color: Color.fromARGB(255, 1, 41, 53),
-                              //         borderRadius: BorderRadius.circular(50),
-                              //       ),
-                              //       dotDecoration: DotDecoration(
-                              //         width: 10,
-                              //         height: 4,
-                              //         color: Colors.black12,
-                              //         borderRadius: BorderRadius.circular(50),
-                              //         verticalOffset: 0,
-                              //       ),
-                              //       spacing: 6.0,
-                              //     ),
-                              //   ),
-                              // ),
-                              // Container(
-                              //     width: 500,
-                              //     height: 200,
-                              //     // color: Colors.amber,
-                              //     child: CarouselSlider.builder(
-                              //       itemCount: cards.length,
-                              //       options: CarouselOptions(
-                              //         aspectRatio: 2.0,
-                              //         enlargeCenterPage: true,
-                              //         autoPlay: true,
-                              //       ),
-                              //       itemBuilder: (ctx, index, realIdx) {
-                              //         return Container(
-                              //           child: Container(
-                              //             height: 50,
-                              //             width: 500,
-                              //             color: Colors.blue,
-                              //           ),
-                              //         );
-                              //       },
-                              //       // items: []
-                              //     )),
-                              // Container(
-                              //   width: 450,
-                              //   height: 250,
-                              //   child: CarouselSlider(
-                              //     items: cards,
-                              //     options: CarouselOptions(
-                              //       height: 250,
-                              //       // enlargeCenterPage: true,
-                              //       autoPlay: true,
-                              //       aspectRatio: 16 / 9,
-                              //       viewportFraction: 0.8,
-                              //       onPageChanged: (index, reason) {
-                              //         // Do something when the page changes
-                              //       },
-                              //     ),
-                              //   ),
-                              // )
-                            ],
-                          ),
-                        )
+                                        // height: 784,
+                                        child: Container(
+                                            width: 692,
+                                            height: 676,
+                                            child: Image.asset(
+                                                "customer/mobiles.png")),
+                                      ),
+                                      Container(
+                                        width: 500,
+                                        // color: Colors.amber,
+                                        child: Text(
+                                          "ลูกค้าคนสำคัญของเรา",
+                                          style: GoogleFonts.ibmPlexSansThai(
+                                              fontSize: 48,
+                                              fontWeight: FontWeight.w700,
+                                              color: Color.fromARGB(
+                                                  255, 24, 84, 110)),
+                                          textAlign: TextAlign.start,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 30),
+                                        child: Container(
+                                          width: 519,
+                                          // color: Colors.amber,
+                                          child: Text(
+                                            "จากประสบการณ์ของทีมผู้ให้คำปรึกษามามากกว่า 50+ โครงการ ทีมงานผู้เชี่ยวชาญที่พร้อมให้คำปรึกษา วางแผน และวางระบบ ตามกฎหมาย สำหรับองค์กรและธุรกิจต่างๆ  ดูแลอย่างใกล้ชิด ตลอดการใช้งาน ตั้งแต่เริ่มต้นจนเสร็จสิ้นกระบวนการ",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w400,
+                                                color: Color.fromARGB(
+                                                    255, 87, 87, 87)),
+                                            textAlign: TextAlign.start,
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 30),
+                                        child: Container(
+                                          width: 519,
+                                          // color: Colors.amber,
+                                          child: Text(
+                                            "พร้อมให้คำปรึกษาแนะนำเพื่อสิ่งที่ดีที่สุดสำหรับธุรกิจคุณ\nปรึกษาเรา #Teamwisework",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w400,
+                                                color: Color.fromARGB(
+                                                    255, 75, 195, 211)),
+                                            textAlign: TextAlign.start,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 50,
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 300),
+                                        child: Container(
+                                          width: 768,
+                                          child: Row(
+                                            children: [
+                                              Wrap(children: [
+                                                SizedBox(
+                                                  width: 191.67,
+                                                  height: 56.7,
+                                                  child: ElevatedButton(
+                                                    onPressed: () {},
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          Color.fromARGB(255,
+                                                              75, 195, 211),
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          30.0)),
+                                                    ),
+                                                    child: Text(
+                                                      'รับคำปรึกษา',
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                              fontSize: 20,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
+                                                              color:
+                                                                  Colors.white),
+                                                    ),
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  width: 66.45,
+                                                ),
+                                                SizedBox(
+                                                  width: 191.67,
+                                                  height: 56.7,
+                                                  child: ElevatedButton(
+                                                    onPressed: () {},
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          Color.fromARGB(255,
+                                                              231, 251, 253),
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                              side: BorderSide(
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          75,
+                                                                          195,
+                                                                          211),
+                                                                  width: 2.0),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          30.0)),
+                                                    ),
+                                                    child: Text(
+                                                      'ลูกค้าของเรา',
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                              fontSize: 20,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
+                                                              color:
+                                                                  Colors.black),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ]),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 50,
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              : Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 25),
+                                      child: Container(
+                                        width: 327,
+                                        height: 318,
+                                        child: Image.asset(
+                                            "/customer/mobiles.png"),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    Container(
+                                      width: 250,
+                                      // color: Colors.amber,
+                                      child: Text(
+                                        "ลูกค้าคนสำคัญของเรา",
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.w700,
+                                            color: Color.fromARGB(
+                                                255, 24, 84, 110)),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 20),
+                                      child: Container(
+                                        width: 313,
+                                        // color: Colors.amber,
+                                        child: Text(
+                                          "จากประสบการณ์ของทีมผู้ให้คำปรึกษามามาก\nกว่า 50+ โครงการ ทีมงานผู้เชี่ยวชาญที่พร้อม\nให้คำปรึกษา วางแผน และวางระบบ ตามกฎหมาย\nสำหรับองค์กรและธุรกิจต่างๆ  ดูแลอย่างใกล้ชิด\nตลอดการใช้งาน ตั้งแต่เริ่มต้นจนเสร็จสิ้น\nกระบวนการ",
+                                          style: GoogleFonts.ibmPlexSansThai(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w400,
+                                              color: Color.fromARGB(
+                                                  255, 87, 87, 87)),
+                                          textAlign: TextAlign.start,
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 20),
+                                      child: Container(
+                                        width: 313,
+                                        // color: Colors.amber,
+                                        child: Text(
+                                          "พร้อมให้คำปรึกษาแนะนำเพื่อสิ่งที่ดีที่สุดสำหรับ\nธุรกิจคุณปรึกษาเรา #Teamwisework",
+                                          style: GoogleFonts.ibmPlexSansThai(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w400,
+                                              color: Color.fromARGB(
+                                                  255, 75, 195, 211)),
+                                          textAlign: TextAlign.start,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 50,
+                                    ),
+                                    SizedBox(
+                                      width: 191.67,
+                                      height: 48,
+                                      child: ElevatedButton(
+                                        onPressed: () {},
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor:
+                                              Color.fromARGB(255, 75, 195, 211),
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(30.0)),
+                                        ),
+                                        child: Text(
+                                          'รับคำปรึกษา',
+                                          style: GoogleFonts.ibmPlexSansThai(
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 30,
+                                    ),
+                                    SizedBox(
+                                      width: 191.67,
+                                      height: 48,
+                                      child: ElevatedButton(
+                                        onPressed: () {},
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: Color.fromARGB(
+                                              255, 231, 251, 253),
+                                          shape: RoundedRectangleBorder(
+                                              side: BorderSide(
+                                                  color: Color.fromARGB(
+                                                      255, 75, 195, 211),
+                                                  width: 2.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(30.0)),
+                                        ),
+                                        child: Text(
+                                          'ลูกค้าของเรา',
+                                          style: GoogleFonts.ibmPlexSansThai(
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 50,
+                                    ),
+                                  ],
+                                ),
+                      Responsive.isDesktop(context)
+                          ? Stack(
+                              children: [
+                                Row(
+                                  children: [CustomerCarousel()],
+                                ),
+                                new Positioned(
+                                  top: 500,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(50.0),
+                                        child: Container(
+                                          width: 59,
+                                          height: 61,
+                                          decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Colors.transparent,
+                                              border: Border.all(
+                                                  color: Color.fromARGB(
+                                                      255, 74, 195, 212))),
+                                          child: IconButton(
+                                            icon: Icon(
+                                                Icons.keyboard_arrow_left,
+                                                size: 32,
+                                                color: Color.fromARGB(
+                                                    255, 77, 193, 216)),
+                                            onPressed: () {
+                                              _controller.previousPage(
+                                                duration:
+                                                    Duration(milliseconds: 300),
+                                                curve: Curves.ease,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 1115,
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(50.0),
+                                        child: Container(
+                                          width: 59,
+                                          height: 61,
+                                          decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Colors.transparent,
+                                              border: Border.all(
+                                                  color: Color.fromARGB(
+                                                      255, 74, 195, 212))),
+                                          child: IconButton(
+                                            icon: Icon(
+                                                Icons.keyboard_arrow_right,
+                                                size: 32,
+                                                color: Color.fromARGB(
+                                                    255, 77, 193, 216)),
+                                            onPressed: () {
+                                              _controller.nextPage(
+                                                duration:
+                                                    Duration(milliseconds: 300),
+                                                curve: Curves.ease,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            )
+                          : Stack(
+                              children: [
+                                Container(
+                                  width: 1440,
+                                  child: Container(
+                                    width: Responsive.isTablet(context)
+                                        ? 767
+                                        : 375,
+                                    height: Responsive.isTablet(context)
+                                        ? 749
+                                        : 648,
+                                    color: Color.fromARGB(255, 5, 45, 97),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: Responsive.isTablet(context)
+                                              ? 767
+                                              : 375,
+                                          height: Responsive.isTablet(context)
+                                              ? 250
+                                              : 120,
+                                          // color: Color.fromARGB(255, 190, 208, 232),
+                                          child: Stack(
+                                            children: [
+                                              // new Positioned(
+                                              //   top: Responsive.isTablet(context)
+                                              //       ? 25
+                                              //       : 5,
+                                              //   right: Responsive.isTablet(context)
+                                              //       ? 661
+                                              //       : 309,
+                                              //   child: SizedBox(
+                                              //       width:
+                                              //           Responsive.isTablet(context)
+                                              //               ? 120
+                                              //               : 86,
+                                              //       height:
+                                              //           Responsive.isTablet(context)
+                                              //               ? 101
+                                              //               : 72,
+                                              //       child: Opacity(
+                                              //         opacity: 0.5,
+                                              //         child: Image.asset(
+                                              //             "/customer/comma.png"),
+                                              //       )),
+                                              // ),
+                                              new Positioned(
+                                                  top: Responsive.isTablet(
+                                                          context)
+                                                      ? 126
+                                                      : 50,
+                                                  left: Responsive.isTablet(
+                                                          context)
+                                                      ? 218
+                                                      : 77,
+                                                  child: Container(
+                                                    width: Responsive.isTablet(
+                                                            context)
+                                                        ? 317
+                                                        : 211,
+                                                    height: Responsive.isTablet(
+                                                            context)
+                                                        ? 100
+                                                        : 75,
+                                                    // color: Colors.amber,
+                                                    child: Text(
+                                                      "Real Stories from Real Customers",
+                                                      style: GoogleFonts.poppins(
+                                                          fontSize: Responsive
+                                                                  .isTablet(
+                                                                      context)
+                                                              ? 36
+                                                              : 24,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          color: Colors.white),
+                                                    ),
+                                                  ))
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          width: Responsive.isTablet(context)
+                                              ? 450
+                                              : 305,
+                                          height: 70,
+                                          child: Text(
+                                            Responsive.isTablet(context)
+                                                ? "Why wisework? แบ่งปันประสบการณ์จริงจากลูกค้าคนสำคัญ"
+                                                : "Why wisework? \nแบ่งปันประสบการณ์จริงจากลูกค้าคนสำคัญ",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w400,
+                                              color: Colors.white,
+                                            ),
+                                            textAlign:
+                                                Responsive.isTablet(context)
+                                                    ? TextAlign.center
+                                                    : TextAlign.start,
+                                          ),
+                                        ),
+                                        // Swiper(
+                                        //   itemCount: 3,
+                                        //   itemBuilder: (BuildContext context, int index) {
+                                        //     return Container(
+                                        //       decoration: BoxDecoration(
+                                        //         borderRadius: BorderRadius.circular(10),
+                                        //         color: Colors.white,
+                                        //       ),
+                                        //       child: Text("Card ${index + 1}"),
+                                        //     );
+                                        //   },
+                                        //   itemWidth: 300,
+                                        //   itemHeight: 200,
+                                        //   layout: SwiperLayout.STACK,
+                                        // ),
+                                        Container(
+                                          width: Responsive.isTablet(context)
+                                              ? 700
+                                              : 375,
+                                          child: CarouselSlider(
+                                            options: CarouselOptions(
+                                              height:
+                                                  Responsive.isTablet(context)
+                                                      ? 300
+                                                      : 380,
+                                              autoPlay: true,
+                                              enlargeCenterPage: true,
+                                              onPageChanged: (index, reason) {
+                                                setState(() {
+                                                  _current = index;
+                                                  // print('Current Page: $_current');
+                                                });
+                                              },
+                                            ),
+                                            items: cards,
+                                          ),
+                                        ),
+
+                                        Container(
+                                          child: AnimatedSmoothIndicator(
+                                              activeIndex: _current,
+                                              count: 4,
+                                              effect: ScaleEffect(
+                                                  activePaintStyle:
+                                                      PaintingStyle.stroke,
+                                                  scale: 1.4,
+                                                  activeStrokeWidth: 1.0,
+                                                  dotWidth: 16,
+                                                  dotHeight: 16,
+                                                  dotColor: Color.fromARGB(
+                                                      255, 255, 255, 255))),
+                                        ),
+                                        // Container(
+                                        //   child: AnimatedSmoothIndicator(
+                                        //     activeIndex: _current,
+                                        //     count: 4,
+                                        //     effect: CustomizableEffect(
+                                        //       activeDotDecoration: DotDecoration(
+                                        //         width: 16,
+                                        //         height: 6,
+                                        //         color: Color.fromARGB(255, 1, 41, 53),
+                                        //         borderRadius: BorderRadius.circular(50),
+                                        //       ),
+                                        //       dotDecoration: DotDecoration(
+                                        //         width: 10,
+                                        //         height: 4,
+                                        //         color: Colors.black12,
+                                        //         borderRadius: BorderRadius.circular(50),
+                                        //         verticalOffset: 0,
+                                        //       ),
+                                        //       spacing: 6.0,
+                                        //     ),
+                                        //   ),
+                                        // ),
+                                        // Container(
+                                        //     width: 500,
+                                        //     height: 200,
+                                        //     // color: Colors.amber,
+                                        //     child: CarouselSlider.builder(
+                                        //       itemCount: cards.length,
+                                        //       options: CarouselOptions(
+                                        //         aspectRatio: 2.0,
+                                        //         enlargeCenterPage: true,
+                                        //         autoPlay: true,
+                                        //       ),
+                                        //       itemBuilder: (ctx, index, realIdx) {
+                                        //         return Container(
+                                        //           child: Container(
+                                        //             height: 50,
+                                        //             width: 500,
+                                        //             color: Colors.blue,
+                                        //           ),
+                                        //         );
+                                        //       },
+                                        //       // items: []
+                                        //     )),
+                                        // Container(
+                                        //   width: 450,
+                                        //   height: 250,
+                                        //   child: CarouselSlider(
+                                        //     items: cards,
+                                        //     options: CarouselOptions(
+                                        //       height: 250,
+                                        //       // enlargeCenterPage: true,
+                                        //       autoPlay: true,
+                                        //       aspectRatio: 16 / 9,
+                                        //       viewportFraction: 0.8,
+                                        //       onPageChanged: (index, reason) {
+                                        //         // Do something when the page changes
+                                        //       },
+                                        //     ),
+                                        //   ),
+                                        // )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                new Positioned(
+                                  top: Responsive.isTablet(context) ? 25 : 5,
+                                  right:
+                                      Responsive.isTablet(context) ? 661 : 309,
+                                  child: SizedBox(
+                                      width: Responsive.isTablet(context)
+                                          ? 120
+                                          : 86,
+                                      height: Responsive.isTablet(context)
+                                          ? 101
+                                          : 72,
+                                      child: Opacity(
+                                        opacity: 0.5,
+                                        child:
+                                            Image.asset("/customer/comma.png"),
+                                      )),
+                                ),
+                              ],
+                            )
+                    ],
+                  ),
                 ],
               ),
-            ],
+            ),
           ),
         ),
       ),
