@@ -354,93 +354,143 @@ class _FAQState extends State<FAQ> {
                       ),
                     ],
                   )
-                : Container(
-                    height: Responsive.isTablet(context) ? 448 : 400,
-                    width: Responsive.isTablet(context) ? 768 : 375,
-                    color: Color.fromARGB(0, 204, 220, 57),
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            new SizedBox(
-                              height: Responsive.isTablet(context) ? 448 : 400,
-                              width: Responsive.isTablet(context) ? 768 : 375,
-                            ),
-                            new Positioned(
-                                right: Responsive.isTablet(context) ? 455 : 135,
-                                child: Container(
-                                  height:
-                                      Responsive.isTablet(context) ? 500 : 400,
-                                  width:
-                                      Responsive.isTablet(context) ? 500 : 375,
-                                  child: Image.asset("/faq/Union.png"),
+                : Stack(
+                    children: [
+                      Container(
+                        height: Responsive.isTablet(context) ? 448 : 400,
+                        width: 1440,
+                        color: Color.fromARGB(0, 204, 220, 57),
+                      ),
+                      new Positioned(
+                          top: Responsive.isTablet(context) ? 0 : 5,
+                          bottom: Responsive.isTablet(context) ? 10 : 5,
+                          right: Responsive.isTablet(context) ? 670 : 300,
+                          child: Container(
+                            width: Responsive.isTablet(context) ? 290 : 200,
+                            height: 390,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.transparent,
+                                border: Border.all(
+                                  color: Color.fromARGB(62, 57, 129, 237),
+                                  width: Responsive.isTablet(context) ? 30 : 20,
                                 )),
-                            new Positioned(
-                              top: Responsive.isTablet(context) ? 91 : 67,
-                              left: Responsive.isTablet(context) ? 230 : 71,
-                              child: SizedBox(
-                                height: 48,
-                                width: Responsive.isTablet(context) ? 357 : 233,
-                                child: Text(
-                                  "พร้อมวางแผนให้ธุรกิจคุณ ปรึกษา",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: Responsive.isTablet(context)
-                                          ? 24
-                                          : 16,
-                                      color: Colors.white),
-                                  textAlign: TextAlign.center,
-                                ),
+                          )),
+                      new Positioned(
+                          top: Responsive.isTablet(context) ? 0 : 5,
+                          bottom: Responsive.isTablet(context) ? 10 : 5,
+                          right: Responsive.isTablet(context) ? 600 : 250,
+                          child: Container(
+                            width: Responsive.isTablet(context) ? 430 : 300,
+                            height: 500,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.transparent,
+                                border: Border.all(
+                                  color: Color.fromARGB(62, 57, 129, 237),
+                                  width: Responsive.isTablet(context) ? 30 : 20,
+                                )),
+                          )),
+                      Center(
+                        child: Container(
+                          child: Column(
+                            children: [
+                              Stack(
+                                children: [
+                                  new SizedBox(
+                                    height: Responsive.isTablet(context)
+                                        ? 448
+                                        : 400,
+                                    width: Responsive.isTablet(context)
+                                        ? 768
+                                        : 375,
+                                  ),
+                                  new Positioned(
+                                    top: Responsive.isTablet(context) ? 91 : 67,
+                                    left:
+                                        Responsive.isTablet(context) ? 230 : 71,
+                                    child: SizedBox(
+                                      height: 48,
+                                      width: Responsive.isTablet(context)
+                                          ? 357
+                                          : 233,
+                                      child: Text(
+                                        "พร้อมวางแผนให้ธุรกิจคุณ ปรึกษา",
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                            fontWeight: FontWeight.w400,
+                                            fontSize:
+                                                Responsive.isTablet(context)
+                                                    ? 24
+                                                    : 16,
+                                            color: Colors.white),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ),
+                                  new Positioned(
+                                    left:
+                                        Responsive.isTablet(context) ? 240 : 47,
+                                    top: Responsive.isTablet(context)
+                                        ? 130
+                                        : 108,
+                                    child: SizedBox(
+                                        height: Responsive.isTablet(context)
+                                            ? 48
+                                            : 32,
+                                        width: 281,
+                                        child: Text(
+                                          "#Teamwisework",
+                                          style: GoogleFonts.ibmPlexSansThai(
+                                              fontSize:
+                                                  Responsive.isTablet(context)
+                                                      ? 36
+                                                      : 25,
+                                              fontWeight: FontWeight.w700,
+                                              color: Colors.white),
+                                          textAlign: TextAlign.center,
+                                        )),
+                                  ),
+                                  new Positioned(
+                                    left:
+                                        Responsive.isTablet(context) ? 245 : 38,
+                                    top: Responsive.isTablet(context)
+                                        ? 210
+                                        : 171,
+                                    child: SizedBox(
+                                        height: Responsive.isTablet(context)
+                                            ? 48
+                                            : 100,
+                                        width: Responsive.isTablet(context)
+                                            ? 422
+                                            : 320,
+                                        child: Text(
+                                          Responsive.isTablet(context)
+                                              ? "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA\nหัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย"
+                                              : "ให้องค์กรของคุณ วางแผนและจัดการกับ \nDATAหัวใจสำคัญของธุรกิจ\nได้ถูกต้องตามกฎหมาย",
+                                          style: GoogleFonts.ibmPlexSansThai(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w400,
+                                              color: Colors.white),
+                                          textAlign:
+                                              Responsive.isTablet(context)
+                                                  ? TextAlign.start
+                                                  : TextAlign.center,
+                                        )),
+                                  ),
+                                  new Positioned(
+                                    top: 294,
+                                    left: Responsive.isTablet(context)
+                                        ? 230
+                                        : 114,
+                                    child: button,
+                                  )
+                                ],
                               ),
-                            ),
-                            new Positioned(
-                              left: Responsive.isTablet(context) ? 240 : 47,
-                              top: Responsive.isTablet(context) ? 130 : 108,
-                              child: SizedBox(
-                                  height:
-                                      Responsive.isTablet(context) ? 48 : 32,
-                                  width: 281,
-                                  child: Text(
-                                    "#Teamwisework",
-                                    style: GoogleFonts.ibmPlexSansThai(
-                                        fontSize: Responsive.isTablet(context)
-                                            ? 36
-                                            : 25,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.white),
-                                    textAlign: TextAlign.center,
-                                  )),
-                            ),
-                            new Positioned(
-                              left: Responsive.isTablet(context) ? 245 : 38,
-                              top: Responsive.isTablet(context) ? 210 : 171,
-                              child: SizedBox(
-                                  height:
-                                      Responsive.isTablet(context) ? 48 : 100,
-                                  width:
-                                      Responsive.isTablet(context) ? 422 : 320,
-                                  child: Text(
-                                    Responsive.isTablet(context)
-                                        ? "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA\nหัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย"
-                                        : "ให้องค์กรของคุณ วางแผนและจัดการกับ \nDATAหัวใจสำคัญของธุรกิจ\nได้ถูกต้องตามกฎหมาย",
-                                    style: GoogleFonts.ibmPlexSansThai(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.white),
-                                    textAlign: Responsive.isTablet(context)
-                                        ? TextAlign.start
-                                        : TextAlign.center,
-                                  )),
-                            ),
-                            new Positioned(
-                              top: 294,
-                              left: Responsive.isTablet(context) ? 230 : 114,
-                              child: button,
-                            )
-                          ],
+                            ],
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   )
           ],
         ),

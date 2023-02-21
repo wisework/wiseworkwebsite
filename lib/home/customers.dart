@@ -1500,6 +1500,9 @@ class _CustomerState extends State<Customer> {
                               ? Center(
                                   child: Column(
                                     children: [
+                                      SizedBox(
+                                        height: 40,
+                                      ),
                                       Container(
                                         width: 768,
 
@@ -1654,7 +1657,7 @@ class _CustomerState extends State<Customer> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.only(top: 25),
+                                      padding: const EdgeInsets.only(top: 40),
                                       child: Container(
                                         width: 327,
                                         height: 318,
