@@ -302,61 +302,64 @@ class _DestinationCarouselState extends State<PackagesPage> {
                 : Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CarouselSlider(
-                        items: [
-                          PackageCard(
-                            packageicon: 'assets/packages/cloud.png',
-                            title: 'Express',
-                            lisence: 'SaaS',
-                            packages: express,
-                            buttoncolor: true,
-                            firstbox: true,
-                            middlebox: false,
-                            lastbox: false,
-                          ),
-                          PackageCard(
-                            packageicon: 'assets/packages/clouds.png',
-                            title: 'Standard',
-                            lisence: 'Subscriptions License',
-                            packages: standard,
-                            buttoncolor: false,
-                            firstbox: false,
-                            middlebox: true,
-                            lastbox: false,
-                          ),
-                          PackageCard(
-                            packageicon: 'assets/packages/rainbow_cloud.png',
-                            title: 'Enterprise',
-                            lisence: 'Perpreptual License',
-                            packages: enterprise,
-                            buttoncolor: true,
-                            firstbox: false,
-                            middlebox: false,
-                            lastbox: true,
-                          )
-                        ],
-                        options: CarouselOptions(
-                            enableInfiniteScroll: false,
-                            scrollPhysics: PageScrollPhysics(),
-                            aspectRatio: Responsive.isTablet(context)
-                                ? 1 / 1.1
-                                : 1 / 1.60,
-                            autoPlay: false,
-                            viewportFraction:
-                                Responsive.isTablet(context) ? 0.625 : 0.82,
-                            onPageChanged: (index, reason) {
-                              setState(() {
-                                _current = index;
-                                // for (int i = 0; i < index; i++) {
-                                //   if (i == index) {
-                                //     _isSelected[i] = true;
-                                //   } else {
-                                //     _isSelected[i] = false;
-                                //   }
-                                // }
-                              });
-                            }),
-                        carouselController: _controller,
+                      Container(
+                        height: Responsive.isTablet(context) ? 845 : 565,
+                        child: CarouselSlider(
+                          items: [
+                            PackageCard(
+                              packageicon: 'assets/packages/cloud.png',
+                              title: 'Express',
+                              lisence: 'SaaS',
+                              packages: express,
+                              buttoncolor: true,
+                              firstbox: true,
+                              middlebox: false,
+                              lastbox: false,
+                            ),
+                            PackageCard(
+                              packageicon: 'assets/packages/clouds.png',
+                              title: 'Standard',
+                              lisence: 'Subscriptions License',
+                              packages: standard,
+                              buttoncolor: false,
+                              firstbox: false,
+                              middlebox: true,
+                              lastbox: false,
+                            ),
+                            PackageCard(
+                              packageicon: 'assets/packages/rainbow_cloud.png',
+                              title: 'Enterprise',
+                              lisence: 'Perpreptual License',
+                              packages: enterprise,
+                              buttoncolor: true,
+                              firstbox: false,
+                              middlebox: false,
+                              lastbox: true,
+                            )
+                          ],
+                          options: CarouselOptions(
+                              enableInfiniteScroll: false,
+                              scrollPhysics: PageScrollPhysics(),
+                              aspectRatio: Responsive.isTablet(context)
+                                  ? 1 / 1.1
+                                  : 1 / 1.60,
+                              autoPlay: false,
+                              viewportFraction:
+                                  Responsive.isTablet(context) ? 0.625 : 0.875,
+                              onPageChanged: (index, reason) {
+                                setState(() {
+                                  _current = index;
+                                  // for (int i = 0; i < index; i++) {
+                                  //   if (i == index) {
+                                  //     _isSelected[i] = true;
+                                  //   } else {
+                                  //     _isSelected[i] = false;
+                                  //   }
+                                  // }
+                                });
+                              }),
+                          carouselController: _controller,
+                        ),
                       ),
                       // SizedBox(height: 10),
                       Container(
