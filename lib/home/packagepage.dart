@@ -172,6 +172,38 @@ class _DestinationCarouselState extends State<PackagesPage> {
         dense: true,
       ),
     ];
+    final List<Widget> _carouselItems = [
+      PackageCard(
+        packageicon: 'assets/packages/cloud.png',
+        title: 'Express',
+        lisence: 'SaaS',
+        packages: express,
+        buttoncolor: true,
+        firstbox: true,
+        middlebox: false,
+        lastbox: false,
+      ),
+      PackageCard(
+        packageicon: 'assets/packages/clouds.png',
+        title: 'Standard',
+        lisence: 'Subscriptions License',
+        packages: standard,
+        buttoncolor: false,
+        firstbox: false,
+        middlebox: true,
+        lastbox: false,
+      ),
+      PackageCard(
+        packageicon: 'assets/packages/rainbow_cloud.png',
+        title: 'Enterprise',
+        lisence: 'Perpreptual License',
+        packages: enterprise,
+        buttoncolor: true,
+        firstbox: false,
+        middlebox: false,
+        lastbox: true,
+      )
+    ];
 
     // CarouselController _controller = CarouselController();
     // int _current = 0;
@@ -254,7 +286,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                     )),
             SizedBox(
               height: Responsive.isDesktop(context)
-                  ? 33
+                  ? 107
                   : Responsive.isTablet(context)
                       ? 22
                       : 30,
@@ -264,105 +296,107 @@ class _DestinationCarouselState extends State<PackagesPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      PackageCard(
-                        packageicon: 'assets/packages/cloud.png',
-                        title: 'Express',
-                        lisence: 'SaaS',
-                        packages: express,
-                        buttoncolor: true,
-                        firstbox: true,
-                        middlebox: false,
-                        lastbox: false,
+                      HoverOffsetContainer(
+                        defaultOffset: 0,
+                        hoverOffset: -74,
+                        child: PackageCard(
+                          packageicon: 'assets/packages/cloud.png',
+                          title: 'Express',
+                          lisence: 'SaaS',
+                          packages: express,
+                          buttoncolor: true,
+                          firstbox: true,
+                          middlebox: false,
+                          lastbox: false,
+                        ),
                       ),
                       SizedBox(width: 14),
-                      PackageCard(
-                        packageicon: 'assets/packages/clouds.png',
-                        title: 'Standard',
-                        lisence: 'Subscriptions License',
-                        packages: standard,
-                        // backgroundcolor: Color.fromARGB(255, 5, 45, 97),
-                        buttoncolor: false,
-                        firstbox: false,
-                        middlebox: true,
-                        lastbox: false,
+                      HoverOffsetContainer(
+                        defaultOffset: 0,
+                        hoverOffset: -74,
+                        child: PackageCard(
+                          packageicon: 'assets/packages/clouds.png',
+                          title: 'Standard',
+                          lisence: 'Subscriptions License',
+                          packages: standard,
+                          // backgroundcolor: Color.fromARGB(255, 5, 45, 97),
+                          buttoncolor: false,
+                          firstbox: false,
+                          middlebox: true,
+                          lastbox: false,
+                        ),
                       ),
                       SizedBox(width: 14),
-                      PackageCard(
-                        packageicon: 'assets/packages/rainbow_cloud.png',
-                        title: 'Enterprise',
-                        lisence: 'Perpreptual License',
-                        packages: enterprise,
-                        buttoncolor: true,
-                        firstbox: false,
-                        middlebox: false,
-                        lastbox: true,
+                      HoverOffsetContainer(
+                        defaultOffset: 0,
+                        hoverOffset: -74,
+                        child: PackageCard(
+                          packageicon: 'assets/packages/rainbow_cloud.png',
+                          title: 'Enterprise',
+                          lisence: 'Perpreptual License',
+                          packages: enterprise,
+                          buttoncolor: true,
+                          firstbox: false,
+                          middlebox: false,
+                          lastbox: true,
+                        ),
                       )
                     ],
                   )
-                : Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: Responsive.isTablet(context) ? 845 : 565,
-                        child: CarouselSlider(
-                          items: [
-                            PackageCard(
-                              packageicon: 'assets/packages/cloud.png',
-                              title: 'Express',
-                              lisence: 'SaaS',
-                              packages: express,
-                              buttoncolor: true,
-                              firstbox: true,
-                              middlebox: false,
-                              lastbox: false,
-                            ),
-                            PackageCard(
-                              packageicon: 'assets/packages/clouds.png',
-                              title: 'Standard',
-                              lisence: 'Subscriptions License',
-                              packages: standard,
-                              buttoncolor: false,
-                              firstbox: false,
-                              middlebox: true,
-                              lastbox: false,
-                            ),
-                            PackageCard(
-                              packageicon: 'assets/packages/rainbow_cloud.png',
-                              title: 'Enterprise',
-                              lisence: 'Perpreptual License',
-                              packages: enterprise,
-                              buttoncolor: true,
-                              firstbox: false,
-                              middlebox: false,
-                              lastbox: true,
-                            )
-                          ],
-                          options: CarouselOptions(
-                              enableInfiniteScroll: false,
-                              scrollPhysics: PageScrollPhysics(),
-                              aspectRatio: Responsive.isTablet(context)
-                                  ? 1 / 1.1
-                                  : 1 / 1.60,
-                              autoPlay: false,
-                              viewportFraction:
-                                  Responsive.isTablet(context) ? 0.625 : 0.875,
-                              onPageChanged: (index, reason) {
-                                setState(() {
-                                  _current = index;
-                                  // for (int i = 0; i < index; i++) {
-                                  //   if (i == index) {
-                                  //     _isSelected[i] = true;
-                                  //   } else {
-                                  //     _isSelected[i] = false;
-                                  //   }
-                                  // }
-                                });
-                              }),
-                          carouselController: _controller,
+                : Stack(children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          // height: Responsive.isTablet(context) ? 845 : 565,
+                          child: CarouselSlider.builder(
+                            itemCount: _carouselItems.length,
+                            itemBuilder: (BuildContext context, int index,
+                                int realIndex) {
+                              return Transform.translate(
+                                  offset: _current == index
+                                      ? Offset(0, 0)
+                                      : Offset(
+                                          0,
+                                          Responsive.isTablet(context)
+                                              ? 74
+                                              : 24),
+                                  child: _carouselItems[index]);
+                            },
+                            options: CarouselOptions(
+                                pageSnapping: false,
+                                enableInfiniteScroll: false,
+                                scrollPhysics: PageScrollPhysics(),
+                                autoPlay: false,
+                                height:
+                                    Responsive.isTablet(context) ? 845 : 575,
+                                viewportFraction: Responsive.isTablet(context)
+                                    ? 0.635
+                                    : 0.825,
+                                onPageChanged: (index, reason) {
+                                  setState(() {
+                                    _current = index;
+                                  });
+                                }),
+                            carouselController: _controller,
+                          ),
                         ),
-                      ),
-                      // SizedBox(height: 10),
-                      Container(
+                        SizedBox(
+                          height: Responsive.isDesktop(context)
+                              ? 0
+                              : Responsive.isTablet(context)
+                                  ? 166
+                                  : 117,
+                        ),
+                        // SizedBox(height: 10),
+                      ],
+                    ),
+                    Positioned(
+                      bottom: Responsive.isTablet(context) ? 161 : 64,
+                      left: Responsive.isTablet(context)
+                          ? (MediaQuery.of(context).size.width / 2) - 77.4
+                          : (MediaQuery.of(context).size.width / 2) - 43,
+                      child: Container(
                         child: AnimatedSmoothIndicator(
                             activeIndex: _current,
                             count: 3,
@@ -378,14 +412,14 @@ class _DestinationCarouselState extends State<PackagesPage> {
                                     Responsive.isTablet(context) ? 28.8 : 16,
                                 dotColor: Color.fromARGB(255, 5, 45, 97))),
                       ),
-                    ],
-                  ),
+                    ),
+                  ]),
             SizedBox(
               height: Responsive.isDesktop(context)
                   ? 65
                   : Responsive.isTablet(context)
-                      ? 40
-                      : 76,
+                      ? 0
+                      : 0,
             ),
           ],
         ),
@@ -425,16 +459,16 @@ class PackageCard extends StatelessWidget {
               height: Responsive.isDesktop(context)
                   ? middlebox
                       ? 0
-                      : 28
+                      : 0
                   : Responsive.isTablet(context)
                       ? firstbox
-                          ? 74
+                          ? 0
                           : middlebox
                               ? 0
-                              : 75
+                              : 0
                       : middlebox
                           ? 0
-                          : 28),
+                          : 0),
           Container(
             padding: const EdgeInsets.only(left: 0),
             decoration: BoxDecoration(
@@ -669,15 +703,50 @@ class PackageCard extends StatelessWidget {
                                   fontWeight: FontWeight.w600),
                             )),
                       ),
-                Responsive.isDesktop(context)
-                    ? SizedBox(height: 70)
-                    : Responsive.isTablet(context)
-                        ? SizedBox(height: middlebox ? 40 : 70)
-                        : SizedBox(height: 32),
+                SizedBox(height: 32),
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class HoverOffsetContainer extends StatefulWidget {
+  final Widget child;
+  final double defaultOffset;
+  final double hoverOffset;
+
+  HoverOffsetContainer({
+    required this.child,
+    required this.defaultOffset,
+    required this.hoverOffset,
+  });
+
+  @override
+  _HoverOffsetContainerState createState() => _HoverOffsetContainerState();
+}
+
+class _HoverOffsetContainerState extends State<HoverOffsetContainer> {
+  double _offset = 0.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (_) {
+        setState(() {
+          _offset = widget.hoverOffset;
+        });
+      },
+      onExit: (_) {
+        setState(() {
+          _offset = widget.defaultOffset;
+        });
+      },
+      child: Transform.translate(
+        offset: Offset(0, _offset),
+        child: widget.child,
       ),
     );
   }
@@ -704,9 +773,9 @@ class Buildpackagetile extends StatelessWidget {
                       ? -4
                       : -4,
               vertical: Responsive.isDesktop(context)
-                  ? -0.5
+                  ? 1
                   : Responsive.isTablet(context)
-                      ? -0.5
+                      ? 1
                       : -4),
           horizontalTitleGap: 10,
           leading: Transform.translate(
