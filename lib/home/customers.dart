@@ -276,32 +276,32 @@ class _CustomerState extends State<Customer> {
     ];
 
     List customer = [
-      'customer/nia.png',
+      'customer/tvo.png',
       'customer/viriya.png',
-      'customer/royalTH.png',
-      'customer/bitkub.png',
-      'customer/bdms.png',
-      'customer/boonrawd.png',
-      'customer/brr.png',
-      'customer/pat.png',
+      'customer/kyocera.png',
       'customer/advice.png',
-      'customer/ichitan.png',
-      'customer/singha.png',
-      'customer/click.png',
       'customer/p-pat.png',
-      'customer/rise-consulting.png',
-      'customer/meng.png',
-      'customer/singha-beer.png',
-      'customer/daiichi.png',
-      'customer/kdn.png',
-      'customer/national-economic.png',
-      'customer/intrarat.png',
-      'customer/singha-park.png',
-      'customer/muzik.png',
-      'customer/santafe.png',
-      'customer/ku.png',
-      'customer/sbp.png',
-      'customer/win.png',
+      'customer/lotus.png',
+      'customer/brr.png',
+      'customer/bitkub.png',
+      // 'customer/advice.png',
+      // 'customer/ichitan.png',
+      // 'customer/singha.png',
+      // 'customer/click.png',
+      // 'customer/p-pat.png',
+      // 'customer/rise-consulting.png',
+      // 'customer/meng.png',
+      // 'customer/singha-beer.png',
+      // 'customer/daiichi.png',
+      // 'customer/kdn.png',
+      // 'customer/national-economic.png',
+      // 'customer/intrarat.png',
+      // 'customer/singha-park.png',
+      // 'customer/muzik.png',
+      // 'customer/santafe.png',
+      // 'customer/ku.png',
+      // 'customer/sbp.png',
+      // 'customer/win.png',
     ];
     var screenSize = MediaQuery.of(context).size;
 
@@ -381,689 +381,203 @@ class _CustomerState extends State<Customer> {
                   Column(
                     children: [
                       Responsive.isDesktop(context)
-                          ? Container(
-                              width: 1440,
-                              child: GridView.builder(
-                                  shrinkWrap: true,
-                                  gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 4,
-                                    crossAxisSpacing: 20,
-                                    mainAxisSpacing: 20,
-                                  ),
-                                  itemCount: customer.length,
-                                  itemBuilder:
-                                      (BuildContext context, int index) {
-                                    return Container(
-                                      // decoration: BoxDecoration(
-                                      //   borderRadius: BorderRadius.circular(20),
-                                      //   color: Color.fromARGB(255, 178, 205, 244),
-                                      // ),
-                                      child: new Material(
-                                        child: new Container(
-                                          width: 300,
-                                          height: 300,
-                                          child: Center(
-                                            child: Container(
-                                              margin: EdgeInsets.all(15),
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: <Widget>[
-                                                  SizedBox(
-                                                    width: 245,
-                                                    height: 245,
-                                                    child: Image.asset(
-                                                        customer[index]),
-                                                  )
-                                                ],
+                          ? Column(
+                              children: [
+                                Container(
+                                  width: 1440,
+                                  // color: Colors.amber,
+                                  child: GridView.builder(
+                                      shrinkWrap: true,
+                                      gridDelegate:
+                                          SliverGridDelegateWithFixedCrossAxisCount(
+                                        crossAxisCount: 4,
+                                        crossAxisSpacing: 20,
+                                        mainAxisSpacing: 20,
+                                      ),
+                                      itemCount: customer.length,
+                                      itemBuilder:
+                                          (BuildContext context, int index) {
+                                        return Container(
+                                          // decoration: BoxDecoration(
+                                          //   borderRadius: BorderRadius.circular(20),
+                                          //   color: Color.fromARGB(255, 178, 205, 244),
+                                          // ),
+                                          child: new Material(
+                                            child: new Container(
+                                              width: 200,
+                                              height: 200,
+                                              child: Center(
+                                                child: Container(
+                                                  margin: EdgeInsets.all(15),
+                                                  child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    children: <Widget>[
+                                                      SizedBox(
+                                                        width: 145,
+                                                        height: 145,
+                                                        child: Image.asset(
+                                                            customer[index]),
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
                                               ),
                                             ),
+                                            color: Colors.transparent,
                                           ),
-                                        ),
-                                        color: Colors.transparent,
-                                      ),
-                                    );
-                                  }),
+                                        );
+                                      }),
+                                ),
+                                SizedBox(
+                                  height: 40,
+                                )
+                              ],
                             )
                           : Responsive.isTablet(context)
-                              ? Stack(
-                                  children: [
-                                    Container(
-                                      width: 768,
-                                      height: 350,
-                                      // color: Colors.purple,
-                                      // color: Color.fromARGB(255, 250, 251, 252),
-                                      child: Column(
-                                        // mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          CarouselSlider(
-                                              options: CarouselOptions(
-                                                enlargeCenterPage: false,
-                                                // viewportFraction: 0.5,
-                                                height: 350,
-                                                autoPlay: true,
-                                                onPageChanged: (index, reason) {
-                                                  setState(() {
-                                                    _current = index;
-                                                    // print('Current Page: $_current');
-                                                  });
-                                                },
-                                              ),
-                                              items: [
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      10.0),
-                                                  child: GridView.count(
-                                                    crossAxisSpacing: 10,
-                                                    mainAxisSpacing: 10,
-                                                    crossAxisCount: 4,
-                                                    children: List.generate(8,
-                                                        (index) {
-                                                      final imageIndex = index;
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(5.0),
-                                                        child: Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    255,
-                                                                    255,
-                                                                    255),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .black12),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        10),
-                                                            boxShadow: [
-                                                              BoxShadow(
-                                                                color: Colors
-                                                                    .grey
-                                                                    .withOpacity(
-                                                                        0.3),
-                                                                spreadRadius: 1,
-                                                                blurRadius: 3,
-                                                                offset: Offset(
-                                                                    0,
-                                                                    3), // changes position of shadow
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          height: 150,
-                                                          width: 144,
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(20.0),
-                                                            child: Image.asset(
-                                                                customer[
-                                                                    imageIndex]),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      10.0),
-                                                  child: GridView.count(
-                                                    crossAxisSpacing: 10,
-                                                    mainAxisSpacing: 10,
-                                                    crossAxisCount: 4,
-                                                    children: List.generate(8,
-                                                        (index) {
-                                                      final imageIndex =
-                                                          index + 8;
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(5.0),
-                                                        child: Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    255,
-                                                                    255,
-                                                                    255),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .black12),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        10),
-                                                            boxShadow: [
-                                                              BoxShadow(
-                                                                color: Colors
-                                                                    .grey
-                                                                    .withOpacity(
-                                                                        0.3),
-                                                                spreadRadius: 1,
-                                                                blurRadius: 3,
-                                                                offset: Offset(
-                                                                    0,
-                                                                    3), // changes position of shadow
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          height: 150,
-                                                          width: 144,
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(20.0),
-                                                            child: Image.asset(
-                                                                customer[
-                                                                    imageIndex]),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      10.0),
-                                                  child: GridView.count(
-                                                    crossAxisSpacing: 10,
-                                                    mainAxisSpacing: 10,
-                                                    crossAxisCount: 4,
-                                                    children: List.generate(8,
-                                                        (index) {
-                                                      final imageIndex =
-                                                          index + 16;
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(5.0),
-                                                        child: Container(
-                                                          height: 150,
-                                                          width: 144,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    255,
-                                                                    255,
-                                                                    255),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .black12),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        10),
-                                                            boxShadow: [
-                                                              BoxShadow(
-                                                                color: Colors
-                                                                    .grey
-                                                                    .withOpacity(
-                                                                        0.3),
-                                                                spreadRadius: 1,
-                                                                blurRadius: 3,
-                                                                offset: Offset(
-                                                                    0,
-                                                                    3), // changes position of shadow
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(20.0),
-                                                            child: Image.asset(
-                                                                customer[
-                                                                    imageIndex]),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      10.0),
-                                                  child: GridView.count(
-                                                    crossAxisSpacing: 10,
-                                                    mainAxisSpacing: 10,
-                                                    crossAxisCount: 4,
-                                                    children: List.generate(2,
-                                                        (index) {
-                                                      final imageIndex =
-                                                          index + 24;
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(5.0),
-                                                        child: Container(
-                                                          height: 150,
-                                                          width: 144,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    255,
-                                                                    255,
-                                                                    255),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .black12),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        10),
-                                                            boxShadow: [
-                                                              BoxShadow(
-                                                                color: Colors
-                                                                    .grey
-                                                                    .withOpacity(
-                                                                        0.3),
-                                                                spreadRadius: 1,
-                                                                blurRadius: 3,
-                                                                offset: Offset(
-                                                                    0,
-                                                                    3), // changes position of shadow
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(20.0),
-                                                            child: Image.asset(
-                                                                customer[
-                                                                    imageIndex]),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }),
-                                                  ),
-                                                ),
-                                              ]),
-                                        ],
-                                      ),
-                                    ),
-                                    new Positioned(
-                                      top: 310,
-                                      left: 340,
+                              ? Container(
+                                  width: 768,
+                                  child: Center(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(30),
                                       child: Container(
-                                        child: AnimatedSmoothIndicator(
-                                            activeIndex: _current,
-                                            count: 4,
-                                            effect: ScaleEffect(
-                                                activePaintStyle:
-                                                    PaintingStyle.stroke,
-                                                scale: 1.4,
-                                                activeStrokeWidth: 1.0,
-                                                dotWidth: 16,
-                                                dotHeight: 16,
-                                                dotColor: Color.fromARGB(
-                                                    255, 34, 15, 109))),
+                                        width: 768,
+                                        child: GridView.builder(
+                                            shrinkWrap: true,
+                                            gridDelegate:
+                                                SliverGridDelegateWithFixedCrossAxisCount(
+                                              crossAxisCount: 4,
+                                              crossAxisSpacing: 20,
+                                              mainAxisSpacing: 20,
+                                            ),
+                                            itemCount: customer.length,
+                                            itemBuilder: (BuildContext context,
+                                                int index) {
+                                              return Container(
+                                                // decoration: BoxDecoration(
+                                                //   borderRadius: BorderRadius.circular(20),
+                                                //   color: Color.fromARGB(255, 178, 205, 244),
+                                                // ),
+                                                child: new Material(
+                                                  child: new Container(
+                                                    decoration: BoxDecoration(
+                                                      color: Color.fromARGB(
+                                                          255, 255, 255, 255),
+                                                      border: Border.all(
+                                                          color:
+                                                              Colors.black12),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10),
+                                                      boxShadow: [
+                                                        BoxShadow(
+                                                          color: Colors.grey
+                                                              .withOpacity(0.3),
+                                                          spreadRadius: 1,
+                                                          blurRadius: 3,
+                                                          offset: Offset(0,
+                                                              3), // changes position of shadow
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    width: 150,
+                                                    height: 150,
+                                                    child: Center(
+                                                      child: Container(
+                                                        margin:
+                                                            EdgeInsets.all(15),
+                                                        child: Column(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: <Widget>[
+                                                            SizedBox(
+                                                              width: 100,
+                                                              height: 100,
+                                                              child: Image.asset(
+                                                                  customer[
+                                                                      index]),
+                                                            )
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  color: Colors.transparent,
+                                                ),
+                                              );
+                                            }),
                                       ),
                                     ),
-                                  ],
+                                  ),
                                 )
-                              : Stack(
-                                  children: [
-                                    Container(
-                                      width: 375,
-                                      height: 350,
-                                      // color: Colors.purple,
-                                      // color: Color.fromARGB(255, 250, 251, 252),
-                                      child: Column(
-                                        // mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          CarouselSlider(
-                                              options: CarouselOptions(
-                                                enlargeCenterPage: false,
-                                                // viewportFraction: 0.5,
-                                                height: 350,
-                                                autoPlay: true,
-                                                onPageChanged: (index, reason) {
-                                                  setState(() {
-                                                    _current = index;
-                                                    // print('Current Page: $_current');
-                                                  });
-                                                },
+                              : Padding(
+                                  padding: const EdgeInsets.all(30),
+                                  child: Container(
+                                    width: 368,
+                                    child: GridView.builder(
+                                        shrinkWrap: true,
+                                        gridDelegate:
+                                            SliverGridDelegateWithFixedCrossAxisCount(
+                                          crossAxisCount: 3,
+                                          crossAxisSpacing: 20,
+                                          mainAxisSpacing: 20,
+                                        ),
+                                        itemCount: customer.length,
+                                        itemBuilder:
+                                            (BuildContext context, int index) {
+                                          return Container(
+                                            // decoration: BoxDecoration(
+                                            //   borderRadius: BorderRadius.circular(20),
+                                            //   color: Color.fromARGB(255, 178, 205, 244),
+                                            // ),
+                                            child: new Material(
+                                              child: new Container(
+                                                decoration: BoxDecoration(
+                                                  color: Color.fromARGB(
+                                                      255, 255, 255, 255),
+                                                  border: Border.all(
+                                                      color: Colors.black12),
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.grey
+                                                          .withOpacity(0.3),
+                                                      spreadRadius: 1,
+                                                      blurRadius: 3,
+                                                      offset: Offset(0,
+                                                          3), // changes position of shadow
+                                                    ),
+                                                  ],
+                                                ),
+                                                width: 100,
+                                                height: 100,
+                                                child: Center(
+                                                  child: Container(
+                                                    // margin: EdgeInsets.all(15),
+                                                    child: Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: <Widget>[
+                                                        SizedBox(
+                                                          width: 60,
+                                                          height: 60,
+                                                          child: Image.asset(
+                                                              customer[index]),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
                                               ),
-                                              items: [
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      10.0),
-                                                  child: GridView.count(
-                                                    crossAxisSpacing: 10,
-                                                    mainAxisSpacing: 10,
-                                                    crossAxisCount: 3,
-                                                    children: List.generate(6,
-                                                        (index) {
-                                                      final imageIndex = index;
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(2.0),
-                                                        child: Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    255,
-                                                                    255,
-                                                                    255),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .black12),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        10),
-                                                            boxShadow: [
-                                                              BoxShadow(
-                                                                color: Colors
-                                                                    .grey
-                                                                    .withOpacity(
-                                                                        0.3),
-                                                                spreadRadius: 1,
-                                                                blurRadius: 3,
-                                                                offset: Offset(
-                                                                    0,
-                                                                    3), // changes position of shadow
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          height: 100,
-                                                          width: 100,
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(10.0),
-                                                            child: Image.asset(
-                                                                customer[
-                                                                    imageIndex]),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      10.0),
-                                                  child: GridView.count(
-                                                    crossAxisSpacing: 10,
-                                                    mainAxisSpacing: 10,
-                                                    crossAxisCount: 3,
-                                                    children: List.generate(6,
-                                                        (index) {
-                                                      final imageIndex =
-                                                          index + 6;
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(2.0),
-                                                        child: Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    255,
-                                                                    255,
-                                                                    255),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .black12),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        10),
-                                                            boxShadow: [
-                                                              BoxShadow(
-                                                                color: Colors
-                                                                    .grey
-                                                                    .withOpacity(
-                                                                        0.3),
-                                                                spreadRadius: 1,
-                                                                blurRadius: 3,
-                                                                offset: Offset(
-                                                                    0,
-                                                                    3), // changes position of shadow
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          height: 100,
-                                                          width: 100,
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(10.0),
-                                                            child: Image.asset(
-                                                                customer[
-                                                                    imageIndex]),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      10.0),
-                                                  child: GridView.count(
-                                                    crossAxisSpacing: 10,
-                                                    mainAxisSpacing: 10,
-                                                    crossAxisCount: 3,
-                                                    children: List.generate(6,
-                                                        (index) {
-                                                      final imageIndex =
-                                                          index + 12;
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(2.0),
-                                                        child: Container(
-                                                          height: 100,
-                                                          width: 100,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    255,
-                                                                    255,
-                                                                    255),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .black12),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        10),
-                                                            boxShadow: [
-                                                              BoxShadow(
-                                                                color: Colors
-                                                                    .grey
-                                                                    .withOpacity(
-                                                                        0.3),
-                                                                spreadRadius: 1,
-                                                                blurRadius: 3,
-                                                                offset: Offset(
-                                                                    0,
-                                                                    3), // changes position of shadow
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(10.0),
-                                                            child: Image.asset(
-                                                                customer[
-                                                                    imageIndex]),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      10.0),
-                                                  child: GridView.count(
-                                                    crossAxisSpacing: 10,
-                                                    mainAxisSpacing: 10,
-                                                    crossAxisCount: 3,
-                                                    children: List.generate(6,
-                                                        (index) {
-                                                      final imageIndex =
-                                                          index + 18;
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(2.0),
-                                                        child: Container(
-                                                          height: 100,
-                                                          width: 100,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    255,
-                                                                    255,
-                                                                    255),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .black12),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        10),
-                                                            boxShadow: [
-                                                              BoxShadow(
-                                                                color: Colors
-                                                                    .grey
-                                                                    .withOpacity(
-                                                                        0.3),
-                                                                spreadRadius: 1,
-                                                                blurRadius: 3,
-                                                                offset: Offset(
-                                                                    0,
-                                                                    3), // changes position of shadow
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(10.0),
-                                                            child: Image.asset(
-                                                                customer[
-                                                                    imageIndex]),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      10.0),
-                                                  child: GridView.count(
-                                                    crossAxisSpacing: 10,
-                                                    mainAxisSpacing: 10,
-                                                    crossAxisCount: 3,
-                                                    children: List.generate(2,
-                                                        (index) {
-                                                      final imageIndex =
-                                                          index + 24;
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(2.0),
-                                                        child: Container(
-                                                          height: 100,
-                                                          width: 100,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    255,
-                                                                    255,
-                                                                    255),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .black12),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        10),
-                                                            boxShadow: [
-                                                              BoxShadow(
-                                                                color: Colors
-                                                                    .grey
-                                                                    .withOpacity(
-                                                                        0.3),
-                                                                spreadRadius: 1,
-                                                                blurRadius: 3,
-                                                                offset: Offset(
-                                                                    0,
-                                                                    3), // changes position of shadow
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(10.0),
-                                                            child: Image.asset(
-                                                                customer[
-                                                                    imageIndex]),
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }),
-                                                  ),
-                                                ),
-                                              ]),
-                                        ],
-                                      ),
-                                    ),
-                                    new Positioned(
-                                      top: 220,
-                                      left: 130,
-                                      child: Container(
-                                        child: AnimatedSmoothIndicator(
-                                            activeIndex: _current,
-                                            count: 5,
-                                            effect: ScaleEffect(
-                                                activePaintStyle:
-                                                    PaintingStyle.stroke,
-                                                scale: 1.4,
-                                                activeStrokeWidth: 1.0,
-                                                dotWidth: 16,
-                                                dotHeight: 16,
-                                                dotColor: Color.fromARGB(
-                                                    255, 34, 15, 109))),
-                                      ),
-                                    ),
-                                  ],
+                                              color: Colors.transparent,
+                                            ),
+                                          );
+                                        }),
+                                  ),
                                 ),
                       Responsive.isDesktop(context)
                           ? Container(
@@ -1158,141 +672,158 @@ class _CustomerState extends State<Customer> {
                               ),
                             )
                           : Container(
-                              height: Responsive.isTablet(context) ? 360 : 286,
-                              width: Responsive.isTablet(context) ? 767 : 378,
+                              width: 1440,
                               color: Color.fromARGB(255, 5, 45, 97),
-                              child: Column(
-                                children: [
-                                  Stack(
+                              child: Center(
+                                child: Container(
+                                  height:
+                                      Responsive.isTablet(context) ? 360 : 286,
+                                  width:
+                                      Responsive.isTablet(context) ? 767 : 378,
+                                  child: Column(
                                     children: [
-                                      new SizedBox(
-                                        height: Responsive.isTablet(context)
-                                            ? 360
-                                            : 286,
-                                        width: Responsive.isTablet(context)
-                                            ? 767
-                                            : 378,
-                                      ),
-                                      new Positioned(
-                                          top: 0,
-                                          right: Responsive.isTablet(context)
-                                              ? 600
-                                              : 260,
-                                          child: Container(
+                                      Stack(
+                                        children: [
+                                          new SizedBox(
                                             height: Responsive.isTablet(context)
                                                 ? 360
-                                                : 285,
-                                            width: Responsive.isTablet(context)
-                                                ? 353
-                                                : 285,
-                                            decoration: BoxDecoration(
-                                                color: Color.fromARGB(
-                                                    90, 68, 137, 255),
-                                                shape: BoxShape.circle),
-                                          )),
-                                      new Positioned(
-                                        top: 68,
-                                        left: Responsive.isTablet(context)
-                                            ? 180
-                                            : 57,
-                                        child: Container(
-                                          height: 48,
-                                          width: 409,
-                                          // color: Colors.pink,
-                                          child: Text(
-                                            "พร้อมวางแผนธุรกิจให้คุณ!",
-                                            style: GoogleFonts.ibmPlexSansThai(
-                                                fontWeight:
-                                                    Responsive.isTablet(context)
-                                                        ? FontWeight.w700
-                                                        : FontWeight.w600,
-                                                fontSize:
-                                                    Responsive.isTablet(context)
-                                                        ? 36
-                                                        : 24,
-                                                color: Colors.white),
-                                            textAlign:
-                                                Responsive.isTablet(context)
-                                                    ? TextAlign.center
-                                                    : TextAlign.start,
+                                                : 286,
+                                            width: 1440,
                                           ),
-                                        ),
-                                      ),
-                                      new Positioned(
-                                          // top: 99.5,
-                                          top: Responsive.isTablet(context)
-                                              ? 148
-                                              : 112,
-                                          left: Responsive.isTablet(context)
-                                              ? 78
-                                              : 58,
-                                          child: Container(
-                                            height: Responsive.isTablet(context)
-                                                ? 70
-                                                : 66,
-                                            width: Responsive.isTablet(context)
-                                                ? 627
-                                                : 299,
-                                            // color: Colors.red,
-                                            child: Text(
-                                              Responsive.isTablet(context)
-                                                  ? "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork"
-                                                  : "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA\nหัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย\nปรึกษาเรา #TeamWiseWork",
-                                              style:
-                                                  GoogleFonts.ibmPlexSansThai(
-                                                      fontSize:
-                                                          Responsive.isTablet(
-                                                                  context)
+                                          new Positioned(
+                                              top: 0,
+                                              right:
+                                                  Responsive.isTablet(context)
+                                                      ? 600
+                                                      : 260,
+                                              child: Container(
+                                                height:
+                                                    Responsive.isTablet(context)
+                                                        ? 360
+                                                        : 285,
+                                                width:
+                                                    Responsive.isTablet(context)
+                                                        ? 353
+                                                        : 285,
+                                                decoration: BoxDecoration(
+                                                    color: Color.fromARGB(
+                                                        90, 68, 137, 255),
+                                                    shape: BoxShape.circle),
+                                              )),
+                                          new Positioned(
+                                            top: 68,
+                                            left: Responsive.isTablet(context)
+                                                ? 180
+                                                : 57,
+                                            child: Container(
+                                              height: 48,
+                                              width: 409,
+                                              // color: Colors.pink,
+                                              child: Text(
+                                                "พร้อมวางแผนธุรกิจให้คุณ!",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontWeight: Responsive
+                                                                .isTablet(
+                                                                    context)
+                                                            ? FontWeight.w700
+                                                            : FontWeight.w600,
+                                                        fontSize:
+                                                            Responsive.isTablet(
+                                                                    context)
+                                                                ? 36
+                                                                : 24,
+                                                        color: Colors.white),
+                                                textAlign:
+                                                    Responsive.isTablet(context)
+                                                        ? TextAlign.center
+                                                        : TextAlign.start,
+                                              ),
+                                            ),
+                                          ),
+                                          new Positioned(
+                                              // top: 99.5,
+                                              top: Responsive.isTablet(context)
+                                                  ? 148
+                                                  : 112,
+                                              left: Responsive.isTablet(context)
+                                                  ? 78
+                                                  : 58,
+                                              child: Container(
+                                                height:
+                                                    Responsive.isTablet(context)
+                                                        ? 70
+                                                        : 66,
+                                                width:
+                                                    Responsive.isTablet(context)
+                                                        ? 627
+                                                        : 299,
+                                                // color: Colors.red,
+                                                child: Text(
+                                                  Responsive.isTablet(context)
+                                                      ? "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork"
+                                                      : "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA\nหัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย\nปรึกษาเรา #TeamWiseWork",
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          fontSize: Responsive
+                                                                  .isTablet(
+                                                                      context)
                                                               ? 20
                                                               : 14,
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                      color: Colors.white),
-                                              textAlign:
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          color: Colors.white),
+                                                  textAlign:
+                                                      Responsive.isTablet(
+                                                              context)
+                                                          ? TextAlign.center
+                                                          : TextAlign.start,
+                                                ),
+                                              )),
+                                          new Positioned(
+                                            left: Responsive.isTablet(context)
+                                                ? 292
+                                                : 117,
+                                            top: Responsive.isTablet(context)
+                                                ? 242
+                                                : 207,
+                                            child: SizedBox(
+                                              width:
                                                   Responsive.isTablet(context)
-                                                      ? TextAlign.center
-                                                      : TextAlign.start,
+                                                      ? 182
+                                                      : 146,
+                                              height:
+                                                  Responsive.isTablet(context)
+                                                      ? 35
+                                                      : 28.04,
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: ElevatedButton.styleFrom(
+                                                  backgroundColor:
+                                                      Color.fromARGB(
+                                                          255, 75, 195, 211),
+                                                  shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              30.0)),
+                                                ),
+                                                child: Text(
+                                                  'ติดต่อเรา',
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          fontSize: 16,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          color: Colors.white),
+                                                ),
+                                              ),
                                             ),
-                                          )),
-                                      new Positioned(
-                                        left: Responsive.isTablet(context)
-                                            ? 292
-                                            : 117,
-                                        top: Responsive.isTablet(context)
-                                            ? 242
-                                            : 207,
-                                        child: SizedBox(
-                                          width: Responsive.isTablet(context)
-                                              ? 182
-                                              : 146,
-                                          height: Responsive.isTablet(context)
-                                              ? 35
-                                              : 28.04,
-                                          child: ElevatedButton(
-                                            onPressed: () {},
-                                            style: ElevatedButton.styleFrom(
-                                              backgroundColor: Color.fromARGB(
-                                                  255, 75, 195, 211),
-                                              shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          30.0)),
-                                            ),
-                                            child: Text(
-                                              'ติดต่อเรา',
-                                              style:
-                                                  GoogleFonts.ibmPlexSansThai(
-                                                      fontSize: 16,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      color: Colors.white),
-                                            ),
-                                          ),
-                                        ),
-                                      )
+                                          )
+                                        ],
+                                      ),
                                     ],
                                   ),
-                                ],
+                                ),
                               ),
                             ),
                       Responsive.isDesktop(context)
@@ -1870,28 +1401,6 @@ class _CustomerState extends State<Customer> {
                                           // color: Color.fromARGB(255, 190, 208, 232),
                                           child: Stack(
                                             children: [
-                                              // new Positioned(
-                                              //   top: Responsive.isTablet(context)
-                                              //       ? 25
-                                              //       : 5,
-                                              //   right: Responsive.isTablet(context)
-                                              //       ? 661
-                                              //       : 309,
-                                              //   child: SizedBox(
-                                              //       width:
-                                              //           Responsive.isTablet(context)
-                                              //               ? 120
-                                              //               : 86,
-                                              //       height:
-                                              //           Responsive.isTablet(context)
-                                              //               ? 101
-                                              //               : 72,
-                                              //       child: Opacity(
-                                              //         opacity: 0.5,
-                                              //         child: Image.asset(
-                                              //             "/customer/comma.png"),
-                                              //       )),
-                                              // ),
                                               new Positioned(
                                                   top: Responsive.isTablet(
                                                           context)
@@ -1947,30 +1456,17 @@ class _CustomerState extends State<Customer> {
                                                     : TextAlign.start,
                                           ),
                                         ),
-                                        // Swiper(
-                                        //   itemCount: 3,
-                                        //   itemBuilder: (BuildContext context, int index) {
-                                        //     return Container(
-                                        //       decoration: BoxDecoration(
-                                        //         borderRadius: BorderRadius.circular(10),
-                                        //         color: Colors.white,
-                                        //       ),
-                                        //       child: Text("Card ${index + 1}"),
-                                        //     );
-                                        //   },
-                                        //   itemWidth: 300,
-                                        //   itemHeight: 200,
-                                        //   layout: SwiperLayout.STACK,
-                                        // ),
                                         Container(
-                                          width: Responsive.isTablet(context)
-                                              ? 700
-                                              : 375,
+                                          width: 1440,
                                           child: CarouselSlider(
                                             options: CarouselOptions(
+                                              viewportFraction:
+                                                  Responsive.isTablet(context)
+                                                      ? (330 / 600)
+                                                      : 0.67,
                                               height:
                                                   Responsive.isTablet(context)
-                                                      ? 300
+                                                      ? 330
                                                       : 380,
                                               autoPlay: true,
                                               enlargeCenterPage: true,
