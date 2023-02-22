@@ -344,6 +344,31 @@ class _DestinationCarouselState extends State<PackagesPage> {
                     ],
                   )
                 : Stack(children: [
+                    Container(
+                      height: Responsive.isTablet(context) ? 1008 : 680,
+                    ),
+                    Positioned(
+                      bottom: Responsive.isTablet(context) ? 161 : 64,
+                      left: Responsive.isTablet(context)
+                          ? (MediaQuery.of(context).size.width / 2) - 77.4
+                          : (MediaQuery.of(context).size.width / 2) - 43,
+                      child: Container(
+                        child: AnimatedSmoothIndicator(
+                            activeIndex: _current,
+                            count: 3,
+                            effect: ScaleEffect(
+                                spacing:
+                                    Responsive.isTablet(context) ? 32.4 : 18,
+                                activePaintStyle: PaintingStyle.stroke,
+                                scale: 1.3,
+                                activeStrokeWidth: 0.5,
+                                dotWidth:
+                                    Responsive.isTablet(context) ? 28.8 : 16,
+                                dotHeight:
+                                    Responsive.isTablet(context) ? 28.8 : 16,
+                                dotColor: Color.fromARGB(255, 5, 45, 97))),
+                      ),
+                    ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -381,37 +406,15 @@ class _DestinationCarouselState extends State<PackagesPage> {
                             carouselController: _controller,
                           ),
                         ),
-                        SizedBox(
-                          height: Responsive.isDesktop(context)
-                              ? 0
-                              : Responsive.isTablet(context)
-                                  ? 166
-                                  : 117,
-                        ),
+                        // SizedBox(
+                        //   height: Responsive.isDesktop(context)
+                        //       ? 0
+                        //       : Responsive.isTablet(context)
+                        //           ? 166
+                        //           : 117,
+                        // ),
                         // SizedBox(height: 10),
                       ],
-                    ),
-                    Positioned(
-                      bottom: Responsive.isTablet(context) ? 161 : 64,
-                      left: Responsive.isTablet(context)
-                          ? (MediaQuery.of(context).size.width / 2) - 77.4
-                          : (MediaQuery.of(context).size.width / 2) - 43,
-                      child: Container(
-                        child: AnimatedSmoothIndicator(
-                            activeIndex: _current,
-                            count: 3,
-                            effect: ScaleEffect(
-                                spacing:
-                                    Responsive.isTablet(context) ? 32.4 : 18,
-                                activePaintStyle: PaintingStyle.stroke,
-                                scale: 1.3,
-                                activeStrokeWidth: 0.5,
-                                dotWidth:
-                                    Responsive.isTablet(context) ? 28.8 : 16,
-                                dotHeight:
-                                    Responsive.isTablet(context) ? 28.8 : 16,
-                                dotColor: Color.fromARGB(255, 5, 45, 97))),
-                      ),
                     ),
                   ]),
             SizedBox(
