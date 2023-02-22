@@ -323,13 +323,13 @@ class _DestinationCarouselState extends State<StoryPage> {
                       Positioned(
                         bottom: Responsive.isDesktop(context) ? 120 : 0,
                         left: Responsive.isDesktop(context)
-                            ? (MediaQuery.of(context).size.width / 2) - 314
+                            ? 412
                             : (MediaQuery.of(context).size.width / 2) - 111,
                         right: Responsive.isDesktop(context)
-                            ? (MediaQuery.of(context).size.width / 2) - 314
+                            ? 412
                             : (MediaQuery.of(context).size.width / 2) - 111,
                         child: SizedBox(
-                          width: Responsive.isDesktop(context) ? 628 : 222,
+                          width: Responsive.isDesktop(context) ? 613 : 222,
                           height: Responsive.isDesktop(context) ? 88 : 50,
                           child: ElevatedButton(
                               onPressed: () {},
@@ -355,8 +355,12 @@ class _DestinationCarouselState extends State<StoryPage> {
                             : Responsive.isTablet(context)
                                 ? 100
                                 : 96,
-                        left: (MediaQuery.of(context).size.width / 2) - 44,
-                        right: (MediaQuery.of(context).size.width / 2) - 44,
+                        left: Responsive.isDesktop(context)
+                            ? 675
+                            : (MediaQuery.of(context).size.width / 2) - 44,
+                        right: Responsive.isDesktop(context)
+                            ? 675
+                            : (MediaQuery.of(context).size.width / 2) - 44,
                         child: Container(
                           child: AnimatedSmoothIndicator(
                             activeIndex: _current,
