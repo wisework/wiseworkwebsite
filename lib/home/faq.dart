@@ -151,12 +151,12 @@ class _FAQState extends State<FAQ> {
           ? 190
           : Responsive.isTablet(context)
               ? 193
-              : 146,
+              : 193,
       height: Responsive.isDesktop(context)
           ? 48
           : Responsive.isTablet(context)
               ? 50
-              : 28.04,
+              : 46,
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
@@ -166,9 +166,9 @@ class _FAQState extends State<FAQ> {
         ),
         child: Text(
           'รับคำปรึกษา',
-          style: GoogleFonts.ibmPlexSansThai(
-            fontSize: Responsive.isDesktop(context) ? 20 : 14,
-            fontWeight: FontWeight.w600,
+          style: GoogleFonts.ibmPlexSans(
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
           ),
         ),
       ),
@@ -361,36 +361,27 @@ class _FAQState extends State<FAQ> {
                         width: 1440,
                         color: Color.fromARGB(0, 204, 220, 57),
                       ),
-                      new Positioned(
-                          top: Responsive.isTablet(context) ? 0 : 5,
-                          bottom: Responsive.isTablet(context) ? 10 : 5,
-                          right: Responsive.isTablet(context) ? 670 : 300,
-                          child: Container(
-                            width: Responsive.isTablet(context) ? 290 : 200,
-                            height: 390,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.transparent,
-                                border: Border.all(
-                                  color: Color.fromARGB(62, 57, 129, 237),
-                                  width: Responsive.isTablet(context) ? 30 : 20,
-                                )),
-                          )),
-                      new Positioned(
-                          top: Responsive.isTablet(context) ? 0 : 5,
-                          bottom: Responsive.isTablet(context) ? 10 : 5,
-                          right: Responsive.isTablet(context) ? 600 : 250,
-                          child: Container(
-                            width: Responsive.isTablet(context) ? 430 : 300,
-                            height: 500,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.transparent,
-                                border: Border.all(
-                                  color: Color.fromARGB(62, 57, 129, 237),
-                                  width: Responsive.isTablet(context) ? 30 : 20,
-                                )),
-                          )),
+                      Responsive.isTablet(context)
+                          ? Container(
+                              width: 230,
+                              height: 448,
+                              // color: Color.fromARGB(255, 15, 3, 3),
+                              child: new Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Container(
+                                    width: 230,
+                                    height: 448,
+                                    child: Image.asset(
+                                      "customer/Union.png",
+                                      fit: BoxFit.fitHeight,
+                                    ),
+                                  )),
+                            )
+                          : Container(
+                              width: 290,
+                              height: 390,
+                            ),
                       Center(
                         child: Container(
                           child: Column(
@@ -481,7 +472,7 @@ class _FAQState extends State<FAQ> {
                                     top: 294,
                                     left: Responsive.isTablet(context)
                                         ? 230
-                                        : 114,
+                                        : 100,
                                     child: button,
                                   )
                                 ],

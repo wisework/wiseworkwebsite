@@ -18,21 +18,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // late ScrollController _scrollController;
-  // double _scrollPosition = 0;
-  // double _opacity = 0;
-
   int _currentIndex = 0;
-  // final List<Widget> _children = [
-  //   // Feature2(),
-  //   CarouselPage(),
-  //   PackagesPage(),
-  //   FeaturesPage(),
-  // CustomerPage(),
-  //   StoryPage(),
-  //   Footer()
-  //   // other pages
-  // ];
 
   void onTabTapped(int index) {
     setState(() {

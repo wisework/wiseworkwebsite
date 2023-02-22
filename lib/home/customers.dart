@@ -671,160 +671,205 @@ class _CustomerState extends State<Customer> {
                                 ],
                               ),
                             )
-                          : Container(
-                              width: 1440,
-                              color: Color.fromARGB(255, 5, 45, 97),
-                              child: Center(
-                                child: Container(
-                                  height:
-                                      Responsive.isTablet(context) ? 360 : 286,
-                                  width:
-                                      Responsive.isTablet(context) ? 767 : 378,
-                                  child: Column(
-                                    children: [
-                                      Stack(
+                          : Stack(
+                              children: [
+                                Container(
+                                  width: 1440,
+                                  color: Color.fromARGB(255, 5, 45, 97),
+                                  child: Center(
+                                    child: Container(
+                                      height: Responsive.isTablet(context)
+                                          ? 360
+                                          : 286,
+                                      width: Responsive.isTablet(context)
+                                          ? 767
+                                          : 378,
+                                      child: Column(
                                         children: [
-                                          new SizedBox(
-                                            height: Responsive.isTablet(context)
-                                                ? 360
-                                                : 286,
-                                            width: 1440,
-                                          ),
-                                          new Positioned(
-                                              top: 0,
-                                              right:
-                                                  Responsive.isTablet(context)
-                                                      ? 600
-                                                      : 260,
-                                              child: Container(
+                                          Stack(
+                                            children: [
+                                              new SizedBox(
                                                 height:
                                                     Responsive.isTablet(context)
                                                         ? 360
-                                                        : 285,
-                                                width:
+                                                        : 286,
+                                                width: 1440,
+                                              ),
+                                              // new Positioned(
+                                              //     top: 0,
+                                              //     right:
+                                              //         Responsive.isTablet(context)
+                                              //             ? 600
+                                              //             : 260,
+                                              //     child: Container(
+                                              //       height:
+                                              //           Responsive.isTablet(context)
+                                              //               ? 360
+                                              //               : 285,
+                                              //       width:
+                                              //           Responsive.isTablet(context)
+                                              //               ? 353
+                                              //               : 285,
+                                              //       decoration: BoxDecoration(
+                                              //           color: Color.fromARGB(
+                                              //               90, 68, 137, 255),
+                                              //           shape: BoxShape.circle),
+                                              //     )),
+                                              new Positioned(
+                                                top: 68,
+                                                left:
                                                     Responsive.isTablet(context)
-                                                        ? 353
-                                                        : 285,
-                                                decoration: BoxDecoration(
-                                                    color: Color.fromARGB(
-                                                        90, 68, 137, 255),
-                                                    shape: BoxShape.circle),
-                                              )),
-                                          new Positioned(
-                                            top: 68,
-                                            left: Responsive.isTablet(context)
-                                                ? 180
-                                                : 57,
-                                            child: Container(
-                                              height: 48,
-                                              width: 409,
-                                              // color: Colors.pink,
-                                              child: Text(
-                                                "พร้อมวางแผนธุรกิจให้คุณ!",
-                                                style:
-                                                    GoogleFonts.ibmPlexSansThai(
-                                                        fontWeight: Responsive
-                                                                .isTablet(
-                                                                    context)
-                                                            ? FontWeight.w700
-                                                            : FontWeight.w600,
-                                                        fontSize:
-                                                            Responsive.isTablet(
-                                                                    context)
+                                                        ? 180
+                                                        : 57,
+                                                child: Container(
+                                                  height: 48,
+                                                  width: 409,
+                                                  // color: Colors.pink,
+                                                  child: Text(
+                                                    "พร้อมวางแผนธุรกิจให้คุณ!",
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontWeight: Responsive
+                                                                    .isTablet(
+                                                                        context)
+                                                                ? FontWeight
+                                                                    .w700
+                                                                : FontWeight
+                                                                    .w600,
+                                                            fontSize: Responsive
+                                                                    .isTablet(
+                                                                        context)
                                                                 ? 36
                                                                 : 24,
-                                                        color: Colors.white),
-                                                textAlign:
-                                                    Responsive.isTablet(context)
-                                                        ? TextAlign.center
-                                                        : TextAlign.start,
+                                                            color:
+                                                                Colors.white),
+                                                    textAlign:
+                                                        Responsive.isTablet(
+                                                                context)
+                                                            ? TextAlign.center
+                                                            : TextAlign.start,
+                                                  ),
+                                                ),
                                               ),
-                                            ),
-                                          ),
-                                          new Positioned(
-                                              // top: 99.5,
-                                              top: Responsive.isTablet(context)
-                                                  ? 148
-                                                  : 112,
-                                              left: Responsive.isTablet(context)
-                                                  ? 78
-                                                  : 58,
-                                              child: Container(
-                                                height:
-                                                    Responsive.isTablet(context)
+                                              new Positioned(
+                                                  // top: 99.5,
+                                                  top: Responsive.isTablet(
+                                                          context)
+                                                      ? 148
+                                                      : 112,
+                                                  left: Responsive.isTablet(
+                                                          context)
+                                                      ? 78
+                                                      : 58,
+                                                  child: Container(
+                                                    height: Responsive.isTablet(
+                                                            context)
                                                         ? 70
                                                         : 66,
-                                                width:
-                                                    Responsive.isTablet(context)
+                                                    width: Responsive.isTablet(
+                                                            context)
                                                         ? 627
                                                         : 299,
-                                                // color: Colors.red,
-                                                child: Text(
-                                                  Responsive.isTablet(context)
-                                                      ? "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork"
-                                                      : "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA\nหัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย\nปรึกษาเรา #TeamWiseWork",
-                                                  style: GoogleFonts
-                                                      .ibmPlexSansThai(
-                                                          fontSize: Responsive
-                                                                  .isTablet(
-                                                                      context)
-                                                              ? 20
-                                                              : 14,
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                          color: Colors.white),
-                                                  textAlign:
+                                                    // color: Colors.red,
+                                                    child: Text(
                                                       Responsive.isTablet(
                                                               context)
-                                                          ? TextAlign.center
-                                                          : TextAlign.start,
-                                                ),
-                                              )),
-                                          new Positioned(
-                                            left: Responsive.isTablet(context)
-                                                ? 292
-                                                : 117,
-                                            top: Responsive.isTablet(context)
-                                                ? 242
-                                                : 207,
-                                            child: SizedBox(
-                                              width:
-                                                  Responsive.isTablet(context)
+                                                          ? "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork"
+                                                          : "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA\nหัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย\nปรึกษาเรา #TeamWiseWork",
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                              fontSize: Responsive
+                                                                      .isTablet(
+                                                                          context)
+                                                                  ? 20
+                                                                  : 14,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
+                                                              color:
+                                                                  Colors.white),
+                                                      textAlign:
+                                                          Responsive.isTablet(
+                                                                  context)
+                                                              ? TextAlign.center
+                                                              : TextAlign.start,
+                                                    ),
+                                                  )),
+                                              new Positioned(
+                                                left:
+                                                    Responsive.isTablet(context)
+                                                        ? 292
+                                                        : 117,
+                                                top:
+                                                    Responsive.isTablet(context)
+                                                        ? 242
+                                                        : 207,
+                                                child: SizedBox(
+                                                  width: Responsive.isTablet(
+                                                          context)
                                                       ? 182
                                                       : 146,
-                                              height:
-                                                  Responsive.isTablet(context)
+                                                  height: Responsive.isTablet(
+                                                          context)
                                                       ? 35
                                                       : 28.04,
-                                              child: ElevatedButton(
-                                                onPressed: () {},
-                                                style: ElevatedButton.styleFrom(
-                                                  backgroundColor:
-                                                      Color.fromARGB(
-                                                          255, 75, 195, 211),
-                                                  shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              30.0)),
+                                                  child: ElevatedButton(
+                                                    onPressed: () {},
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          Color.fromARGB(255,
+                                                              75, 195, 211),
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          30.0)),
+                                                    ),
+                                                    child: Text(
+                                                      'ติดต่อเรา',
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                              fontSize: 16,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
+                                                              color:
+                                                                  Colors.white),
+                                                    ),
+                                                  ),
                                                 ),
-                                                child: Text(
-                                                  'ติดต่อเรา',
-                                                  style: GoogleFonts
-                                                      .ibmPlexSansThai(
-                                                          fontSize: 16,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          color: Colors.white),
-                                                ),
-                                              ),
-                                            ),
-                                          )
+                                              )
+                                            ],
+                                          ),
                                         ],
                                       ),
-                                    ],
+                                    ),
                                   ),
                                 ),
-                              ),
+                                Container(
+                                  // width: 1440,
+                                  child: new Positioned(
+                                    top: 0,
+                                    left: 0,
+                                    // right: 1,
+                                    child: Container(
+                                      height: Responsive.isTablet(context)
+                                          ? 360
+                                          : 285,
+                                      width: Responsive.isTablet(context)
+                                          ? 175
+                                          : 140,
+                                      // color: Colors.white,
+                                      child: Image.asset(
+                                        "customer/half.png",
+                                        fit: BoxFit.fitHeight,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                       Responsive.isDesktop(context)
                           ? Padding(
@@ -1462,11 +1507,11 @@ class _CustomerState extends State<Customer> {
                                             options: CarouselOptions(
                                               viewportFraction:
                                                   Responsive.isTablet(context)
-                                                      ? (330 / 600)
+                                                      ? (350 / 600)
                                                       : 0.67,
                                               height:
                                                   Responsive.isTablet(context)
-                                                      ? 330
+                                                      ? 350
                                                       : 380,
                                               autoPlay: true,
                                               enlargeCenterPage: true,
@@ -1480,7 +1525,9 @@ class _CustomerState extends State<Customer> {
                                             items: cards,
                                           ),
                                         ),
-
+                                        SizedBox(
+                                          height: 25,
+                                        ),
                                         Container(
                                           child: AnimatedSmoothIndicator(
                                               activeIndex: _current,
@@ -1495,73 +1542,12 @@ class _CustomerState extends State<Customer> {
                                                   dotColor: Color.fromARGB(
                                                       255, 255, 255, 255))),
                                         ),
-                                        // Container(
-                                        //   child: AnimatedSmoothIndicator(
-                                        //     activeIndex: _current,
-                                        //     count: 4,
-                                        //     effect: CustomizableEffect(
-                                        //       activeDotDecoration: DotDecoration(
-                                        //         width: 16,
-                                        //         height: 6,
-                                        //         color: Color.fromARGB(255, 1, 41, 53),
-                                        //         borderRadius: BorderRadius.circular(50),
-                                        //       ),
-                                        //       dotDecoration: DotDecoration(
-                                        //         width: 10,
-                                        //         height: 4,
-                                        //         color: Colors.black12,
-                                        //         borderRadius: BorderRadius.circular(50),
-                                        //         verticalOffset: 0,
-                                        //       ),
-                                        //       spacing: 6.0,
-                                        //     ),
-                                        //   ),
-                                        // ),
-                                        // Container(
-                                        //     width: 500,
-                                        //     height: 200,
-                                        //     // color: Colors.amber,
-                                        //     child: CarouselSlider.builder(
-                                        //       itemCount: cards.length,
-                                        //       options: CarouselOptions(
-                                        //         aspectRatio: 2.0,
-                                        //         enlargeCenterPage: true,
-                                        //         autoPlay: true,
-                                        //       ),
-                                        //       itemBuilder: (ctx, index, realIdx) {
-                                        //         return Container(
-                                        //           child: Container(
-                                        //             height: 50,
-                                        //             width: 500,
-                                        //             color: Colors.blue,
-                                        //           ),
-                                        //         );
-                                        //       },
-                                        //       // items: []
-                                        //     )),
-                                        // Container(
-                                        //   width: 450,
-                                        //   height: 250,
-                                        //   child: CarouselSlider(
-                                        //     items: cards,
-                                        //     options: CarouselOptions(
-                                        //       height: 250,
-                                        //       // enlargeCenterPage: true,
-                                        //       autoPlay: true,
-                                        //       aspectRatio: 16 / 9,
-                                        //       viewportFraction: 0.8,
-                                        //       onPageChanged: (index, reason) {
-                                        //         // Do something when the page changes
-                                        //       },
-                                        //     ),
-                                        //   ),
-                                        // )
                                       ],
                                     ),
                                   ),
                                 ),
                                 new Positioned(
-                                  top: Responsive.isTablet(context) ? 25 : 5,
+                                  top: Responsive.isTablet(context) ? 25 : 15,
                                   right:
                                       Responsive.isTablet(context) ? 661 : 309,
                                   child: SizedBox(
