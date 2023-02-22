@@ -221,16 +221,16 @@ class WhyPage extends StatelessWidget {
                                     Color.fromARGB(255, 232, 242, 254)
                                   ])),
                             ),
-                            new Positioned(
-                              top: 200,
-                              // right: 1148,
-                              child: Container(
-                                width: 296,
-                                height: 1539,
-                                // color: Colors.amber,
-                                child: Image.asset("/about/why/wisework.png"),
-                              ),
-                            ),
+                            // new Positioned(
+                            //   top: 200,
+                            //   // right: 1148,
+                            //   child: Container(
+                            //     width: 296,
+                            //     height: 1539,
+                            //     // color: Colors.amber,
+                            //     child: Image.asset("/about/why/wisework.png"),
+                            //   ),
+                            // ),
                             new Positioned(
                               top: 80,
                               left: 100,
@@ -352,17 +352,17 @@ class WhyPage extends StatelessWidget {
                                     Color.fromARGB(255, 232, 242, 254)
                                   ])),
                             ),
-                            new Positioned(
-                              top: 350,
-                              left: 50,
-                              // right: 1148,
-                              child: Container(
-                                width: 145,
-                                height: 1500,
-                                // color: Colors.amber,
-                                child: Image.asset("/about/why/wisework.png"),
-                              ),
-                            ),
+                            // new Positioned(
+                            //   top: 350,
+                            //   left: 50,
+                            //   // right: 1148,
+                            //   child: Container(
+                            //     width: 145,
+                            //     height: 1500,
+                            //     // color: Colors.amber,
+                            //     child: Image.asset("/about/why/wisework.png"),
+                            //   ),
+                            // ),
                             new Positioned(
                               top: 80,
                               left: 50,
