@@ -884,6 +884,18 @@ class _CustomerState extends State<Customer> {
                                       width: 1440,
                                       height: 670,
                                     ),
+                                    new Positioned(
+                                      top: 20,
+                                      left: 100,
+                                      child: Container(
+                                        width: 50,
+                                        height: 50,
+                                        decoration: BoxDecoration(
+                                            color: Color.fromARGB(
+                                                255, 52, 145, 206),
+                                            shape: BoxShape.circle),
+                                      ),
+                                    ),
                                     Row(
                                       children: [
                                         Column(

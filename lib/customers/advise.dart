@@ -120,116 +120,164 @@ class _Advise extends State<Advise> {
           Padding(
             padding: const EdgeInsets.only(top: 51),
             child: Container(
+              height: 650,
               width: 1440,
-              height: 750,
               // color: Colors.green,
-              child: Row(
+              child: Stack(
                 children: [
-                  Column(
+                  Container(
+                    width: 1440,
+                    height: 670,
+                  ),
+                  new Positioned(
+                    top: 20,
+                    left: 100,
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 52, 145, 206),
+                          shape: BoxShape.circle),
+                    ),
+                  ),
+                  Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 150, left: 124.74),
-                        child: Container(
-                          height: 600,
-                          width: 583.78,
-                          // color: Colors.amber,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 500,
-                                // color: Colors.white,
-                                child: Text(
-                                  "ลูกค้าคนสำคัญของเรา",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 48,
-                                      fontWeight: FontWeight.w700,
-                                      color: Color.fromARGB(255, 5, 45, 97)),
-                                  textAlign: TextAlign.start,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                height: 160,
-                                width: 519,
-                                // color: Colors.black,
-                                child: Text(
-                                  "จากประสบการณ์ของทีมผู้ให้คำปรึกษามามากกว่า 50+ โครงการ ทีมงานผู้เชี่ยวชาญที่พร้อมให้คำปรึกษา วางแผน และวางระบบ ตามกฎหมาย สำหรับองค์กรและธุรกิจต่างๆ  ดูแลอย่างใกล้ชิด ตลอดการใช้งาน ตั้งแต่เริ่มต้นจนเสร็จสิ้นกระบวนการ",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w400,
-                                      color: Colors.black),
-                                  textAlign: TextAlign.start,
-                                ),
-                              ),
-                              Container(
-                                height: 60,
-                                width: 519,
-                                child: Text(
-                                  "พร้อมให้คำปรึกษาแนะนำเพื่อสิ่งที่ดีที่สุดสำหรับธุรกิจคุณ \nปรึกษาเรา #Teamwisework",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color.fromARGB(255, 75, 195, 211),
-                                  ),
-                                  textAlign: TextAlign.start,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 68.27,
-                              ),
-                              Row(
+                      Column(
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(top: 100, left: 124.74),
+                            child: Container(
+                              // height: 670,
+                              width: 583.78,
+                              // color: Colors.amber,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Wrap(children: [
-                                    SizedBox(
-                                      width: 191.67,
-                                      height: 56.7,
-                                      child: ElevatedButton(
-                                        onPressed: () {},
-                                        style: ElevatedButton.styleFrom(
-                                          backgroundColor:
-                                              Color.fromARGB(255, 75, 195, 211),
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(30.0)),
-                                        ),
-                                        child: Text(
-                                          'รับคำปรึกษา',
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w600,
-                                              color: Colors.white),
-                                        ),
+                                  Container(
+                                    height: 70,
+                                    width: 500,
+                                    // color: Colors.white,
+                                    child: Text(
+                                      "ลูกค้าคนสำคัญของเรา",
+                                      style: GoogleFonts.ibmPlexSansThai(
+                                          fontSize: 48,
+                                          fontWeight: FontWeight.w700,
+                                          color:
+                                              Color.fromARGB(255, 24, 84, 110)),
+                                      textAlign: TextAlign.start,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    height: 160,
+                                    width: 519,
+                                    // color: Colors.black,
+                                    child: Text(
+                                      "จากประสบการณ์ของทีมผู้ให้คำปรึกษามามากกว่า 50+ โครงการ ทีมงานผู้เชี่ยวชาญที่พร้อมให้คำปรึกษา วางแผน และวางระบบ ตามกฎหมาย สำหรับองค์กรและธุรกิจต่างๆ  ดูแลอย่างใกล้ชิด ตลอดการใช้งาน ตั้งแต่เริ่มต้นจนเสร็จสิ้นกระบวนการ",
+                                      style: GoogleFonts.ibmPlexSansThai(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w400,
+                                          color:
+                                              Color.fromARGB(255, 87, 87, 87)),
+                                      textAlign: TextAlign.start,
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 60,
+                                    width: 519,
+                                    child: Text(
+                                      "พร้อมให้คำปรึกษาแนะนำเพื่อสิ่งที่ดีที่สุดสำหรับธุรกิจคุณ \nปรึกษาเรา #Teamwisework",
+                                      style: GoogleFonts.ibmPlexSansThai(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w400,
+                                        color:
+                                            Color.fromARGB(255, 75, 195, 211),
                                       ),
+                                      textAlign: TextAlign.start,
                                     ),
-                                    SizedBox(
-                                      width: 66.45,
-                                    ),
-                                  ]),
+                                  ),
+                                  SizedBox(
+                                    height: 68.27,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Wrap(children: [
+                                        SizedBox(
+                                          width: 191.67,
+                                          height: 56.7,
+                                          child: ElevatedButton(
+                                            onPressed: () {},
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor: Color.fromARGB(
+                                                  255, 75, 195, 211),
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          30.0)),
+                                            ),
+                                            child: Text(
+                                              'รับคำปรึกษา',
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.white),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 66.45,
+                                        ),
+                                        SizedBox(
+                                          width: 191.67,
+                                          height: 56.7,
+                                          child: ElevatedButton(
+                                            onPressed: () {},
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor: Color.fromARGB(
+                                                  255, 231, 251, 253),
+                                              shape: RoundedRectangleBorder(
+                                                  side: BorderSide(
+                                                      color: Color.fromARGB(
+                                                          255, 75, 195, 211),
+                                                      width: 2.0),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          30.0)),
+                                            ),
+                                            child: Text(
+                                              'ลูกค้าของเรา',
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.black),
+                                            ),
+                                          ),
+                                        ),
+                                      ]),
+                                    ],
+                                  ),
                                 ],
                               ),
-                            ],
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     ],
                   ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding:
-                            const EdgeInsets.only(top: 100.03, left: 37.92),
-                        child: Container(
-                          height: 550.85,
-                          width: 553.2,
-                          child: Image.asset("/customer/team.png"),
-                        ),
-                      ),
-                    ],
-                  )
+                  new Positioned(
+                    left: 700,
+                    child: Container(
+                        width: 650,
+                        // color: Colors.pink,
+                        child: Image.asset("/customer/team.png")),
+                  ),
                 ],
               ),
             ),

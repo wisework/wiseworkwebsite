@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: 
       // HomePage(),
-      AboutPage(),
-      // CustomerPage()
+      // AboutPage(),
+      CustomerPage()
       // ServicesPage(),
       // ProductPage(),
       // theme: ThemeData(primarySwatch: Colors.deepPurple),
