@@ -53,9 +53,9 @@ class _AboutPageState extends State<AboutPage> {
           children: [
             // BannerPage(),
             // WhoPage(),
-            WhyPage(),
+            // WhyPage(),
             // AwardsPage(),
-            // AdvisePage(),
+            AdvisePage(),
             // Footer()
           ],
         ),

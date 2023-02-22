@@ -23,70 +23,41 @@ class _AdviseState extends State<AdvisePage> {
                       height: 556,
                       color: Color.fromARGB(255, 5, 45, 97),
                     ),
+                    Container(
+                      width: 290,
+                      height: 180,
+                      // color: Colors.black,
+                      child: new Positioned(
+                          top: 0,
+                          child: Container(
+                            // width: Responsive.isTablet(context) ? 100 : 200,
+                            // height: 390,
+                            child: Image.asset(
+                              "/customer/top.png",
+                              fit: BoxFit.fitWidth,
+                            ),
+                          )),
+                    ),
                     new Positioned(
-                        bottom: 480,
-                        child: Container(
-                          width: 390,
-                          height: 390,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.transparent,
-                              border: Border.all(
-                                  color: Color.fromARGB(62, 57, 129, 237),
-                                  width: 35)),
-                        )),
-                    new Positioned(
-                        bottom: 420,
-                        right: 980,
-                        child: Container(
-                          width: 525,
-                          height: 525,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.transparent,
-                              border: Border.all(
-                                  color: Color.fromARGB(62, 57, 129, 237),
-                                  width: 35)),
-                        )),
-                    new Positioned(
-                        bottom: 360,
-                        right: 910,
-                        child: Container(
-                          width: 663,
-                          height: 663,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.transparent,
-                              border: Border.all(
-                                  color: Color.fromARGB(62, 57, 129, 237),
-                                  width: 35)),
-                        )),
-                    new Positioned(
-                        bottom: 100,
-                        left: 1380,
-                        child: Container(
-                          width: 390,
-                          height: 390,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.transparent,
-                              border: Border.all(
-                                  color: Color.fromARGB(62, 57, 129, 237),
-                                  width: 35)),
-                        )),
-                    new Positioned(
-                        bottom: 40,
-                        left: 1310,
-                        child: Container(
-                          width: 525,
-                          height: 525,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.transparent,
-                              border: Border.all(
-                                  color: Color.fromARGB(62, 57, 129, 237),
-                                  width: 35)),
-                        )),
+                      top: 50,
+                      right: 0,
+                      child: Container(
+                        width: 180,
+                        height: 500,
+                        // color: Color.fromARGB(255, 12, 6, 121),
+                        child: new Positioned(
+                            top: 50,
+                            right: 0,
+                            child: Container(
+                              // width: Responsive.isTablet(context) ? 100 : 200,
+                              // height: 390,
+                              child: Image.asset(
+                                "/customer/right.png",
+                                fit: BoxFit.fitHeight,
+                              ),
+                            )),
+                      ),
+                    ),
                     new Positioned(
                       top: 166.5,
                       left: 118,
@@ -157,36 +128,22 @@ class _AdviseState extends State<AdvisePage> {
                       height: Responsive.isTablet(context) ? 385 : 265,
                       color: Color.fromARGB(255, 5, 45, 97),
                     ),
-                    new Positioned(
-                        top: Responsive.isTablet(context) ? 0 : 5,
-                        bottom: Responsive.isTablet(context) ? 10 : 5,
-                        right: Responsive.isTablet(context) ? 680 : 300,
-                        child: Container(
-                          width: Responsive.isTablet(context) ? 290 : 200,
-                          height: 390,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.transparent,
-                              border: Border.all(
-                                color: Color.fromARGB(62, 57, 129, 237),
-                                width: Responsive.isTablet(context) ? 30 : 20,
-                              )),
-                        )),
-                    new Positioned(
-                        top: Responsive.isTablet(context) ? 0 : 5,
-                        bottom: Responsive.isTablet(context) ? 10 : 5,
-                        right: Responsive.isTablet(context) ? 600 : 250,
-                        child: Container(
-                          width: Responsive.isTablet(context) ? 430 : 300,
-                          height: 500,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.transparent,
-                              border: Border.all(
-                                color: Color.fromARGB(62, 57, 129, 237),
-                                width: Responsive.isTablet(context) ? 30 : 20,
-                              )),
-                        )),
+                    Container(
+                      width: Responsive.isTablet(context) ? 290 : 200,
+                      height: Responsive.isTablet(context) ? 385 : 265,
+                      // color: Colors.black,
+                      child: new Positioned(
+                          top: 0,
+                          right: 0,
+                          child: Container(
+                            // width: Responsive.isTablet(context) ? 100 : 200,
+                            // height: 390,
+                            child: Image.asset(
+                              "/customer/Union.png",
+                              fit: BoxFit.fitWidth,
+                            ),
+                          )),
+                    ),
                     Container(
                       child: Center(
                         child: Container(
