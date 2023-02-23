@@ -51,12 +51,12 @@ class _AboutPageState extends State<AboutPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // BannerPage(),
-            // WhoPage(),
-            // WhyPage(),
-            // AwardsPage(),
+            BannerPage(),
+            WhoPage(),
+            WhyPage(),
+            AwardsPage(),
             AdvisePage(),
-            // Footer()
+            Footer()
           ],
         ),
       ),

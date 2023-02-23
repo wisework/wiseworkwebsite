@@ -72,17 +72,20 @@ class _CustomerState extends State<Customer> {
                     ),
                   ),
                   Container(
-                    width: Responsive.isTablet(context) ? 374 : 316,
-                    height: Responsive.isTablet(context) ? 70 : 100,
-                    child: Text(
-                      Responsive.isTablet(context)
-                          ? "“เราตระหนักถึงความสำคัญการคุ้มครอง ข้อมูลส่วนบุคคล\nหนึ่งในรากฐานที่สร้างความสัมพันธ์ทางธุรกิจ\nและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”"
-                          : "“เราตระหนักถึงความสำคัญการคุ้มครอง\nข้อมูลส่วนบุคคล หนึ่งในรากฐาน\nที่สร้างความสัมพันธ์ทางธุรกิจ\nและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”",
-                      style: GoogleFonts.josefinSans(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: Color.fromARGB(255, 35, 34, 51)),
-                      textAlign: TextAlign.center,
+                    width: Responsive.isTablet(context) ? 374 : 330,
+                    // height: Responsive.isTablet(context) ? 70 : 100,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        Responsive.isTablet(context)
+                            ? "“เราตระหนักถึงความสำคัญการคุ้มครอง ข้อมูลส่วนบุคคลหนึ่งในรากฐานที่สร้างความสัมพันธ์ทางธุรกิจและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”"
+                            : "“เราตระหนักถึงความสำคัญการคุ้มครองข้อมูลส่วนบุคคล หนึ่งในรากฐานที่สร้างความสัมพันธ์ทางธุรกิจและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”",
+                        style: GoogleFonts.josefinSans(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            color: Color.fromARGB(255, 35, 34, 51)),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   )
                 ],
@@ -131,19 +134,22 @@ class _CustomerState extends State<Customer> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 450 : 316,
-                    height: Responsive.isTablet(context) ? 120 : 170,
-                    // color: Colors.amber,
-                    child: Text(
-                      Responsive.isTablet(context)
-                          ? "BitKub ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคล\nของกลุ่มผู้ใช้งานดังนั้นเราจึงให้ความสำคัญอย่างมาก\nเกี่ยวกับ การปฏิบัติตามกฎหมาย PDPAโดยเรา\nเลือกใช้ระบบโมดูลที่มีCenterเข้ามาช่วยในการบริหาร\nจัดการข้อมูลคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม "
-                          : "BitKub ให้ความสำคัญกับการคุ้มครอง\nข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งานดังนั้น\nเราจึงให้ความสำคัญอย่างมากเกี่ยวกับ\nการปฏิบัติตามกฎหมาย PDPAโดยเรา\nเลือกใช้ระบบโมดูลที่มีCenterเข้ามา\nช่วยในการบริหารจัดการข้อมูล\nคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม ",
-                      style: GoogleFonts.josefinSans(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: Color.fromARGB(255, 35, 34, 51)),
-                      textAlign: TextAlign.center,
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Container(
+                      width: Responsive.isTablet(context) ? 380 : 350,
+                      // height: Responsive.isTablet(context) ? 120 : 170,
+                      // color: Colors.amber,
+                      child: Text(
+                        Responsive.isTablet(context)
+                            ? "BitKub ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งานดังนั้นเราจึงให้ความสำคัญอย่างมากเกี่ยวกับ การปฏิบัติตามกฎหมาย PDPAโดยเราเลือกใช้ระบบโมดูลที่มีCenterเข้ามาช่วยในการบริหารจัดการข้อมูลคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม "
+                            : "BitKub ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งานดังนั้นเราจึงให้ความสำคัญอย่างมากเกี่ยวกับการปฏิบัติตามกฎหมาย PDPAโดยเราเลือกใช้ระบบโมดูลที่มีCenterเข้ามาช่วยในการบริหารจัดการข้อมูลคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม ",
+                        style: GoogleFonts.josefinSans(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            color: Color.fromARGB(255, 35, 34, 51)),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   )
                 ],
@@ -192,18 +198,21 @@ class _CustomerState extends State<Customer> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 374 : 316,
-                    height: Responsive.isTablet(context) ? 120 : 165,
-                    child: Text(
-                      Responsive.isTablet(context)
-                          ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้น\nเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ\nทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไป\nตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
-                          : "เรามองเห็นภาพกว้างของการทำ PDPA\nได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework \nเข้ามาให้คำแนะนำและวางแผนระบบ\nทำให้เรามั่นใจว่าการดำเนินการของ\nขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมาย\nกำหนดครอบคลุมทุกภาคธุรกิจ",
-                      style: GoogleFonts.josefinSans(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: Color.fromARGB(255, 35, 34, 51)),
-                      textAlign: TextAlign.center,
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Container(
+                      width: Responsive.isTablet(context) ? 374 : 350,
+                      // height: Responsive.isTablet(context) ? 120 : 165,
+                      child: Text(
+                        Responsive.isTablet(context)
+                            ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
+                            : "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนดครอบคลุมทุกภาคธุรกิจ",
+                        style: GoogleFonts.josefinSans(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            color: Color.fromARGB(255, 35, 34, 51)),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   )
                 ],
@@ -254,19 +263,22 @@ class _CustomerState extends State<Customer> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 374 : 316,
-                    height: Responsive.isTablet(context) ? 120 : 165,
-                    // color: Colors.amber,
-                    child: Text(
-                      Responsive.isTablet(context)
-                          ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้น\nเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ\nทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไป\nตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
-                          : "เรามองเห็นภาพกว้างของการทำ PDPA\nได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework \nเข้ามาให้คำแนะนำและวางแผนระบบ\nทำให้เรามั่นใจว่าการดำเนินการของ\nขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมาย\nกำหนดครอบคลุมทุกภาคธุรกิจ",
-                      style: GoogleFonts.josefinSans(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: Color.fromARGB(255, 35, 34, 51)),
-                      textAlign: TextAlign.center,
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Container(
+                      width: Responsive.isTablet(context) ? 374 : 350,
+                      // height: Responsive.isTablet(context) ? 120 : 165,
+                      // color: Colors.amber,
+                      child: Text(
+                        Responsive.isTablet(context)
+                            ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
+                            : "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนดครอบคลุมทุกภาคธุรกิจ",
+                        style: GoogleFonts.josefinSans(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            color: Color.fromARGB(255, 35, 34, 51)),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   )
                 ],
@@ -1440,9 +1452,9 @@ class _CustomerState extends State<Customer> {
                                     width: Responsive.isTablet(context)
                                         ? 767
                                         : 375,
-                                    height: Responsive.isTablet(context)
-                                        ? 749
-                                        : 648,
+                                    // height: Responsive.isTablet(context)
+                                    //     ? 749
+                                    //     : 648,
                                     color: Color.fromARGB(255, 5, 45, 97),
                                     child: Column(
                                       crossAxisAlignment:
@@ -1520,11 +1532,11 @@ class _CustomerState extends State<Customer> {
                                               viewportFraction:
                                                   Responsive.isTablet(context)
                                                       ? (350 / 600)
-                                                      : 0.67,
+                                                      : 0.76,
                                               height:
                                                   Responsive.isTablet(context)
                                                       ? 350
-                                                      : 380,
+                                                      : 430,
                                               autoPlay: true,
                                               enlargeCenterPage: true,
                                               onPageChanged: (index, reason) {
