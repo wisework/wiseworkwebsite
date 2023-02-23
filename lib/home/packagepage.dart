@@ -51,8 +51,8 @@ class _DestinationCarouselState extends State<PackagesPage> {
       ),
       Package(
         title: !Responsive.isMobile(context)
-            ? "Concurrent Users = 5, Storage 10 GB ~100,000  Data Subject  "
-            : "Concurrent Users = 5 \n Storage 10 GB \n~100,000  Data Subject  ",
+            ? "Concurrent Users = 5, Storage 10 GB ~100,000  Data Subject"
+            : "Concurrent Users = 5 \nStorage 10 GB \n~100,000  Data Subject",
         children: [],
         position: false,
         dense: false,
@@ -62,7 +62,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
             ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูล\nส่วนบุคคล ข้อมูลส่วนอ่อนไหวจำนวนมาก"
             : Responsive.isTablet(context)
                 ? "เหมาะสำหรับองค์กรที่เก็บรวบรวมข้อมูลส่วน\nบุคคล และข้อมูลส่วนอ่อนไหว จำนวนมาก"
-                : "เหมาะสำหรับองค์กรที่มีการเก็บรวบรวมข้อมูลจำนวนมาก",
+                : "เหมาะสำหรับองค์กรที่มีการเก็บ\nรวบรวมข้อมูลจำนวนมาก",
         children: [],
         position: false,
         dense: false,
@@ -70,7 +70,9 @@ class _DestinationCarouselState extends State<PackagesPage> {
     ];
     final standard = [
       Package(
-        title: "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA",
+        title: !Responsive.isMobile(context)
+            ? "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA"
+            : "ใช้งานระบบได้ครบถ้วนสมบูรณ์\nตาม PDPA",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
         dense: false,
@@ -97,7 +99,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
       ),
       Package(
         title: Responsive.isMobile(context)
-            ? "องค์กรไม่ต้องการเชื่อมต่อกับระบบภายในเดิม"
+            ? "องค์กรไม่ต้องการเชื่อมต่อกับ\nระบบภายในเดิม"
             : "องค์กรไม่ต้องการเชื่อมต่อกับระบบภายใน\nเดิม",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
@@ -114,7 +116,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
       Package(
         title: !Responsive.isMobile(context)
             ? "เหมาะสำหรับองค์กรขนาดใหญ่ ธุรกิจเฉพาะ ต้องการปรับแต่งให้เข้ากับการทำงาน"
-            : "เหมาะสำหรับองค์กรขนาดใหญ่ปรับแต่งให้เข้ากับการทำงาน",
+            : "เหมาะสำหรับองค์กรขนาดใหญ่\nปรับแต่งให้เข้ากับการทำงาน",
         children: [],
         position: Responsive.isDesktop(context) ? true : false,
         dense: false,
@@ -126,7 +128,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
             ? "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA พร้อมปรับแต่งและพัฒนาได้ตามต้องการ"
             : Responsive.isTablet(context)
                 ? "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA\n พร้อมปรับแต่งและพัฒนาได้ตามต้องการ"
-                : "ใช้งานระบบได้ครบถ้วนสมบูรณ์ตาม PDPA พร้อมปรับแต่งและพัฒนาได้ตามต้องการ",
+                : "ใช้งานระบบได้ครบถ้วนสมบูรณ์\nตาม PDPA พร้อมปรับแต่งและ\nพัฒนาได้ตามต้องการ",
         children: [],
         position: false,
         dense: true,
@@ -166,7 +168,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
             ? "เหมาะสำหรับองค์กรขนาดใหญ่ที่มีสาขา\n มีบริษัทในเครือ ต้องการ Security\n ที่สามารถควบคุมเองได้ทั้งหมด"
             : Responsive.isTablet(context)
                 ? "เหมาะสำหรับองค์กรขนาดใหญ่ที่มีสาขา \nมีบริษัทในเครือ ต้องการ Security \nที่สามารถควบคุมเองได้ทั้งหมด"
-                : "เหมาะสำหรับองค์กรขนาดใหญ่ที่มีสาขา มีบริษัทในเครือ ต้องการ Security ที่ควบคุมเองได้ทั้งหมด",
+                : "เหมาะสำหรับองค์กรขนาดใหญ่ที่\nมีสาขา มีบริษัทในเครือ ต้องการ\nSecurity ที่ควบคุมเองได้ทั้งหมด",
         children: [],
         position: false,
         dense: true,
@@ -219,7 +221,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
               height: Responsive.isDesktop(context)
                   ? 30
                   : Responsive.isTablet(context)
-                      ? 111
+                      ? 38
                       : 61,
             ),
             !Responsive.isMobile(context)
@@ -396,8 +398,14 @@ class _DestinationCarouselState extends State<PackagesPage> {
                                 height:
                                     Responsive.isTablet(context) ? 845 : 575,
                                 viewportFraction: Responsive.isTablet(context)
-                                    ? 0.635
-                                    : 0.825,
+                                    ? 0.625 -
+                                        ((MediaQuery.of(context).size.width -
+                                                768) *
+                                            0.00035)
+                                    : 0.83 -
+                                        ((MediaQuery.of(context).size.width -
+                                                375) *
+                                            0.001),
                                 onPageChanged: (index, reason) {
                                   setState(() {
                                     _current = index;
@@ -706,7 +714,7 @@ class PackageCard extends StatelessWidget {
                                   fontWeight: FontWeight.w600),
                             )),
                       ),
-                SizedBox(height: 32),
+                SizedBox(height: Responsive.isMobile(context) ? 23 : 32),
               ],
             ),
           ),
