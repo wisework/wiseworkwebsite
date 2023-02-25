@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/customers/customerspage.dart';
+import 'package:wiseintern/home/homepage.dart';
+import 'package:wiseintern/about/aboutpage.dart';
 
 class NavBar extends StatefulWidget {
   // final double opacity;
@@ -12,6 +14,12 @@ class NavBar extends StatefulWidget {
   _NavigationBarState createState() => _NavigationBarState();
 }
 
+class FeatureModel {
+  final String title;
+  final String? routePath;
+  FeatureModel(this.title, this.routePath);
+}
+
 class _NavigationBarState extends State<NavBar> {
   final List<String> listAbout = <String>[
     'About Us',
@@ -19,6 +27,10 @@ class _NavigationBarState extends State<NavBar> {
     'Our Rew',
     'Our Cus',
   ];
+
+  String? _selectedItem;
+  bool _selected = false;
+
   final List<String> listServices = <String>[
     'Our Services',
     'PDPA ',
@@ -27,6 +39,10 @@ class _NavigationBarState extends State<NavBar> {
   ];
   String? AboutValue;
   String? ServicesValue;
+
+  List<FeatureModel> features = [
+    FeatureModel("About Us", "/about/aboutpage.dart"),
+  ];
 
   final List _isHovering = [
     false,
@@ -74,7 +90,12 @@ class _NavigationBarState extends State<NavBar> {
                     color: Colors.white,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
               ),
             ),
             SizedBox(
@@ -96,32 +117,69 @@ class _NavigationBarState extends State<NavBar> {
                     color: Colors.white,
                   ),
                 ),
-                items: listAbout
-                    .map((item) => DropdownMenuItem<String>(
-                          value: item,
-                          child: Text(
-                            item,
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 16,
-                                // color: Color.fromARGB(255, 52, 145, 206),
-                                color: Color.fromARGB(255, 87, 87, 87),
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ))
-                    .toList(),
                 value: AboutValue,
+                items: [
+                  DropdownMenuItem(
+                    value: 'about us',
+                    child: Text(
+                      'About Us',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
+                      ),
+                    ),
+                  ),
+                  DropdownMenuItem(
+                    value: 'awards',
+                    child: Text(
+                      'Our Rewards',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
+                      ),
+                    ),
+                  ),
+                  DropdownMenuItem(
+                    value: 'customer',
+                    child: Text(
+                      'Customer',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
+                      ),
+                    ),
+                  ),
+                ],
                 onChanged: (value) {
                   setState(() {
+                    _selectedItem = value.toString();
                     AboutValue = value as String;
                   });
+
+                  // Navigate to customer page when customer item is selected
+                  if (_selectedItem == 'customer') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CustomerPage()),
+                    );
+                  } else if (_selectedItem == 'about us') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AboutPage()),
+                    );
+                  } else if (_selectedItem == 'awards') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AboutPage()),
+                    );
+                  }
                 },
-                dropdownDecoration: BoxDecoration(
-                  color: Colors.white,
-                  // borderRadius: BorderRadius.circular(5)
-                ),
-                buttonHeight: 18,
-                buttonWidth: 100,
-                itemHeight: 40,
               ),
             ),
             SizedBox(
@@ -195,9 +253,7 @@ class _NavigationBarState extends State<NavBar> {
                   color: Colors.white,
                 ),
               ),
-              onPressed: () {
-               
-              },
+              onPressed: () {},
             ),
             SizedBox(
               width: 42,
