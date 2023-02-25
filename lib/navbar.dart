@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wiseintern/customers/customerspage.dart';
 
 class NavBar extends StatefulWidget {
   // final double opacity;
@@ -194,7 +195,9 @@ class _NavigationBarState extends State<NavBar> {
                   color: Colors.white,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+               
+              },
             ),
             SizedBox(
               width: 42,

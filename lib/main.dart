@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: 
-      // HomePage(),
+      HomePage(),
       // AboutPage(),
-      CustomerPage()
+      // CustomerPage()
       // ServicesPage(),
       // ProductPage(),
       // theme: ThemeData(primarySwatch: Colors.deepPurple),

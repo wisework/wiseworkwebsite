@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wiseintern/home/homepage.dart';
+import 'package:wiseintern/about/aboutpage.dart';
+import 'package:wiseintern/services/servicespage.dart';
+
 // import 'auth_dialog.dart';
 
 class MenuDrawer extends StatefulWidget {
@@ -37,7 +41,10 @@ class _MenuDrawerState extends State<MenuDrawer> {
                     fontWeight: FontWeight.w600,
                     color: Color.fromARGB(255, 35, 34, 51))),
             onTap: () {
-              // handle tap on tile
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
             },
           ),
           ListTile(
@@ -69,7 +76,10 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
                   onTap: () {
-                    // handle tap on tile
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AboutPage()),
+                    );
                   },
                 ),
                 ListTile(
@@ -79,7 +89,10 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
                   onTap: () {
-                    // handle tap on tile
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AboutPage()),
+                    );
                   },
                 ),
                 ListTile(
@@ -89,7 +102,10 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
                   onTap: () {
-                    // handle tap on tile
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AboutPage()),
+                    );
                   },
                 ),
               ],
@@ -123,7 +139,10 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
                   onTap: () {
-                    // handle tap on tile
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ServicesPage()),
+                    );
                   },
                 ),
                 ListTile(
@@ -133,7 +152,10 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
                   onTap: () {
-                    // handle tap on tile
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ServicesPage()),
+                    );
                   },
                 ),
                 ListTile(
@@ -143,7 +165,10 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
                   onTap: () {
-                    // handle tap on tile
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ServicesPage()),
+                    );
                   },
                 ),
               ],

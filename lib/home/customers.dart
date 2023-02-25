@@ -1536,7 +1536,7 @@ class _CustomerState extends State<Customer> {
                                               height:
                                                   Responsive.isTablet(context)
                                                       ? 350
-                                                      : 430,
+                                                      : 400,
                                               autoPlay: true,
                                               enlargeCenterPage: true,
                                               onPageChanged: (index, reason) {
