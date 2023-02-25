@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/customers/customerspage.dart';
 import 'package:wiseintern/home/homepage.dart';
 import 'package:wiseintern/about/aboutpage.dart';
+import 'package:wiseintern/services/servicespage.dart';
 
 class NavBar extends StatefulWidget {
   // final double opacity;
@@ -183,7 +184,7 @@ class _NavigationBarState extends State<NavBar> {
               ),
             ),
             SizedBox(
-              width: 40,
+              width: 10,
             ),
             DropdownButtonHideUnderline(
               child: DropdownButton2(
@@ -195,42 +196,80 @@ class _NavigationBarState extends State<NavBar> {
                   ),
                 ),
                 icon: Transform.translate(
-                  offset: Offset(-12, -2),
+                  offset: Offset(-50, -2),
                   child: Icon(
                     Icons.expand_more_outlined,
                     color: Colors.white,
                   ),
                 ),
-                items: listServices
-                    .map((item) => DropdownMenuItem<String>(
-                          value: item,
-                          child: Text(
-                            item,
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 16,
-                                // color: Color.fromARGB(255, 52, 145, 206),
-                                color: Color.fromARGB(255, 87, 87, 87),
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ))
-                    .toList(),
+                items: [
+                  DropdownMenuItem(
+                    value: 'services',
+                    child: Text(
+                      'Our Services',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
+                      ),
+                    ),
+                  ),
+                  DropdownMenuItem(
+                    value: 'pdpa',
+                    child: Text(
+                      'PDPA Governance',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
+                      ),
+                    ),
+                  ),
+                  DropdownMenuItem(
+                    value: 'request',
+                    child: Text(
+                      'Request',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
+                      ),
+                    ),
+                  ),
+                ],
                 value: ServicesValue,
                 onChanged: (value) {
                   setState(() {
+                    _selectedItem = value.toString();
                     ServicesValue = value as String;
                   });
+
+                  if (_selectedItem == 'services') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ServicesPage()),
+                    );
+                  } else if (_selectedItem == 'pdpa') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AboutPage()),
+                    );
+                  }
                 },
                 dropdownDecoration: BoxDecoration(
                   color: Colors.white,
                   // borderRadius: BorderRadius.circular(5)
                 ),
-                buttonHeight: 18,
-                buttonWidth: 130,
-                itemHeight: 50,
+                // buttonHeight: 18,
+                // buttonWidth: 170,
+                // itemHeight: 50,
               ),
             ),
             SizedBox(
-              width: 40,
+              width: 10,
             ),
             TextButton(
               child: Text(
