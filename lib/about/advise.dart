@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
+import 'package:wiseintern/products/productspage.dart';
 
 class AdvisePage extends StatefulWidget {
   @override
@@ -101,7 +102,13 @@ class _AdviseState extends State<AdvisePage> {
                         width: 193,
                         height: 40,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ProductPage()),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color.fromARGB(255, 75, 195, 211),
                             shape: RoundedRectangleBorder(

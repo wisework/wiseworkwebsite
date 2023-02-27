@@ -99,9 +99,9 @@ class _NavigationBarState extends State<NavBar> {
                 },
               ),
             ),
-            SizedBox(
-              width: 40,
-            ),
+            // SizedBox(
+            //   width: 40,
+            // ),
             DropdownButtonHideUnderline(
               child: DropdownButton2(
                 hint: Text(
@@ -121,9 +121,9 @@ class _NavigationBarState extends State<NavBar> {
                 value: AboutValue,
                 items: [
                   DropdownMenuItem(
-                    value: 'about us',
+                    value: 'our story',
                     child: Text(
-                      'About Us',
+                      'Our Story',
                       style: TextStyle(
                         fontSize: 16,
                         color: _selected
@@ -133,7 +133,7 @@ class _NavigationBarState extends State<NavBar> {
                     ),
                   ),
                   DropdownMenuItem(
-                    value: 'awards',
+                    value: 'our rewards',
                     child: Text(
                       'Our Rewards',
                       style: TextStyle(
@@ -147,7 +147,7 @@ class _NavigationBarState extends State<NavBar> {
                   DropdownMenuItem(
                     value: 'customer',
                     child: Text(
-                      'Customer',
+                      'Our Customers',
                       style: TextStyle(
                         fontSize: 16,
                         color: _selected
@@ -169,12 +169,12 @@ class _NavigationBarState extends State<NavBar> {
                       context,
                       MaterialPageRoute(builder: (context) => CustomerPage()),
                     );
-                  } else if (_selectedItem == 'about us') {
+                  } else if (_selectedItem == 'our story') {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => AboutPage()),
                     );
-                  } else if (_selectedItem == 'awards') {
+                  } else if (_selectedItem == 'our rewards') {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => AboutPage()),
@@ -183,9 +183,9 @@ class _NavigationBarState extends State<NavBar> {
                 },
               ),
             ),
-            SizedBox(
-              width: 10,
-            ),
+            // SizedBox(
+            //   width: 10,
+            // ),
             DropdownButtonHideUnderline(
               child: DropdownButton2(
                 hint: Text(
@@ -204,9 +204,9 @@ class _NavigationBarState extends State<NavBar> {
                 ),
                 items: [
                   DropdownMenuItem(
-                    value: 'services',
+                    value: 'pdpa',
                     child: Text(
-                      'Our Services',
+                      'PDPA Management\nPlatform',
                       style: TextStyle(
                         fontSize: 16,
                         color: _selected
@@ -216,9 +216,9 @@ class _NavigationBarState extends State<NavBar> {
                     ),
                   ),
                   DropdownMenuItem(
-                    value: 'pdpa',
+                    value: 'governance',
                     child: Text(
-                      'PDPA Governance',
+                      'Governance Assurance\nSuit',
                       style: TextStyle(
                         fontSize: 16,
                         color: _selected
@@ -230,7 +230,7 @@ class _NavigationBarState extends State<NavBar> {
                   DropdownMenuItem(
                     value: 'request',
                     child: Text(
-                      'Request',
+                      'Request Demo',
                       style: TextStyle(
                         fontSize: 16,
                         color: _selected
@@ -247,15 +247,15 @@ class _NavigationBarState extends State<NavBar> {
                     ServicesValue = value as String;
                   });
 
-                  if (_selectedItem == 'services') {
+                  if (_selectedItem == 'pdpa') {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => ServicesPage()),
                     );
-                  } else if (_selectedItem == 'pdpa') {
+                  } else if (_selectedItem == 'governance') {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => AboutPage()),
+                      MaterialPageRoute(builder: (context) => ServicesPage()),
                     );
                   }
                 },
@@ -268,9 +268,9 @@ class _NavigationBarState extends State<NavBar> {
                 // itemHeight: 50,
               ),
             ),
-            SizedBox(
-              width: 10,
-            ),
+            // SizedBox(
+            //   width: 10,
+            // ),
             TextButton(
               child: Text(
                 "Blogs",
@@ -281,9 +281,9 @@ class _NavigationBarState extends State<NavBar> {
               ),
               onPressed: () {},
             ),
-            SizedBox(
-              width: 27,
-            ),
+            // SizedBox(
+            //   width: 27,
+            // ),
             TextButton(
               child: Text(
                 "Contact Us",
@@ -294,9 +294,9 @@ class _NavigationBarState extends State<NavBar> {
               ),
               onPressed: () {},
             ),
-            SizedBox(
-              width: 42,
-            ),
+            // SizedBox(
+            //   width: 42,
+            // ),
             Container(
               width: 103,
               height: 38,

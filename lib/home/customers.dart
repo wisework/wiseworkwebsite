@@ -295,7 +295,7 @@ class _CustomerState extends State<Customer> {
       'customer/p-pat.png',
       'customer/lotus.png',
       'customer/brr.png',
-      'customer/bitkub.png',
+      // 'customer/bitkub.png',
       // 'customer/advice.png',
       // 'customer/ichitan.png',
       // 'customer/singha.png',

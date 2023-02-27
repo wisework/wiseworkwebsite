@@ -10,6 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/model/package.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:wiseintern/products/productspage.dart';
 
 class PackagesPage extends StatefulWidget {
   @override
@@ -675,7 +676,13 @@ class PackageCard extends StatelessWidget {
                         width: !Responsive.isMobile(context) ? 321 : 193,
                         height: !Responsive.isMobile(context) ? 61 : 48,
                         child: OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ProductPage()),
+                              );
+                            },
                             style: OutlinedButton.styleFrom(
                               side: BorderSide(
                                 width: 1.0,
