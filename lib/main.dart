@@ -21,15 +21,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home:
-            // HomePage(),
-            // AboutPage(),
-            // CustomerPage()
-            // ServicesPage(),
-            // ProductPage(),
-            Pdmanagement()
-        // theme: ThemeData(primarySwatch: Colors.deepPurple),
-        );
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+      // AboutPage(),
+      // CustomerPage()
+      // ServicesPage(),
+      // ProductPage(),
+      // Pdmanagement()
+      // theme: ThemeData(primarySwatch: Colors.deepPurple),
+    );
   }
 }

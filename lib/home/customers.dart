@@ -1376,72 +1376,72 @@ class _CustomerState extends State<Customer> {
                                 Row(
                                   children: [CustomerCarousel()],
                                 ),
-                                new Positioned(
-                                  top: 500,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(50.0),
-                                        child: Container(
-                                          width: 59,
-                                          height: 61,
-                                          decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                              color: Colors.transparent,
-                                              border: Border.all(
-                                                  color: Color.fromARGB(
-                                                      255, 74, 195, 212))),
-                                          child: IconButton(
-                                            icon: Icon(
-                                                Icons.keyboard_arrow_left,
-                                                size: 32,
-                                                color: Color.fromARGB(
-                                                    255, 77, 193, 216)),
-                                            onPressed: () {
-                                              _controller.previousPage(
-                                                duration:
-                                                    Duration(milliseconds: 300),
-                                                curve: Curves.ease,
-                                              );
-                                            },
-                                          ),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 1115,
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(50.0),
-                                        child: Container(
-                                          width: 59,
-                                          height: 61,
-                                          decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                              color: Colors.transparent,
-                                              border: Border.all(
-                                                  color: Color.fromARGB(
-                                                      255, 74, 195, 212))),
-                                          child: IconButton(
-                                            icon: Icon(
-                                                Icons.keyboard_arrow_right,
-                                                size: 32,
-                                                color: Color.fromARGB(
-                                                    255, 77, 193, 216)),
-                                            onPressed: () {
-                                              _controller.nextPage(
-                                                duration:
-                                                    Duration(milliseconds: 300),
-                                                curve: Curves.ease,
-                                              );
-                                            },
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                                // new Positioned(
+                                //   top: 500,
+                                //   child: Row(
+                                //     mainAxisAlignment:
+                                //         MainAxisAlignment.spaceBetween,
+                                //     children: [
+                                //       Padding(
+                                //         padding: const EdgeInsets.all(50.0),
+                                //         child: Container(
+                                //           width: 59,
+                                //           height: 61,
+                                //           decoration: BoxDecoration(
+                                //               shape: BoxShape.circle,
+                                //               color: Colors.transparent,
+                                //               border: Border.all(
+                                //                   color: Color.fromARGB(
+                                //                       255, 74, 195, 212))),
+                                //           child: IconButton(
+                                //             icon: Icon(
+                                //                 Icons.keyboard_arrow_left,
+                                //                 size: 32,
+                                //                 color: Color.fromARGB(
+                                //                     255, 77, 193, 216)),
+                                //             onPressed: () {
+                                //               _controller.previousPage(
+                                //                 duration:
+                                //                     Duration(milliseconds: 300),
+                                //                 curve: Curves.ease,
+                                //               );
+                                //             },
+                                //           ),
+                                //         ),
+                                //       ),
+                                //       SizedBox(
+                                //         width: 1115,
+                                //       ),
+                                //       Padding(
+                                //         padding: const EdgeInsets.all(50.0),
+                                //         child: Container(
+                                //           width: 59,
+                                //           height: 61,
+                                //           decoration: BoxDecoration(
+                                //               shape: BoxShape.circle,
+                                //               color: Colors.transparent,
+                                //               border: Border.all(
+                                //                   color: Color.fromARGB(
+                                //                       255, 74, 195, 212))),
+                                //           child: IconButton(
+                                //             icon: Icon(
+                                //                 Icons.keyboard_arrow_right,
+                                //                 size: 32,
+                                //                 color: Color.fromARGB(
+                                //                     255, 77, 193, 216)),
+                                //             onPressed: () {
+                                //               _controller.nextPage(
+                                //                 duration:
+                                //                     Duration(milliseconds: 300),
+                                //                 curve: Curves.ease,
+                                //               );
+                                //             },
+                                //           ),
+                                //         ),
+                                //       ),
+                                //     ],
+                                //   ),
+                                // ),
                               ],
                             )
                           : Stack(
