@@ -25,7 +25,7 @@ class _DestinationCarouselState extends State<StoryPage> {
     Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/carousel/crs.png'),
+          image: AssetImage('assets/carousel/med_crs.png'),
           fit: BoxFit.fill,
         ),
       ),
@@ -33,7 +33,7 @@ class _DestinationCarouselState extends State<StoryPage> {
     Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/carousel/crs.png'),
+          image: AssetImage('assets/carousel/med_crs.png'),
           fit: BoxFit.fill,
         ),
       ),
@@ -41,7 +41,7 @@ class _DestinationCarouselState extends State<StoryPage> {
     Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/carousel/crs.png'),
+          image: AssetImage('assets/carousel/med_crs.png'),
           fit: BoxFit.fill,
         ),
       ),
@@ -49,7 +49,7 @@ class _DestinationCarouselState extends State<StoryPage> {
     Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/carousel/crs.png'),
+          image: AssetImage('assets/carousel/med_crs.png'),
           fit: BoxFit.fill,
         ),
       ),
@@ -57,7 +57,7 @@ class _DestinationCarouselState extends State<StoryPage> {
     Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/carousel/crs.png'),
+          image: AssetImage('assets/carousel/med_crs.png'),
           fit: BoxFit.fill,
         ),
       ),
@@ -287,7 +287,7 @@ class _DestinationCarouselState extends State<StoryPage> {
                   : Color.fromARGB(255, 5, 45, 97),
               child: Column(
                 children: [
-                  SizedBox(height: Responsive.isDesktop(context) ? 83 : 0),
+                  // SizedBox(height: Responsive.isDesktop(context) ? 83 : 0),
                   Stack(
                     children: [
                       Column(
@@ -303,7 +303,7 @@ class _DestinationCarouselState extends State<StoryPage> {
                                 //  NeverScrollableScrollPhysics(),
                                 // enlargeCenterPage: true,
                                 aspectRatio: Responsive.isDesktop(context)
-                                    ? 1448 / 551
+                                    ? 1440 / 1039
                                     : Responsive.isTablet(context)
                                         ? 768 / 554
                                         : 375 / 538,
@@ -317,11 +317,11 @@ class _DestinationCarouselState extends State<StoryPage> {
                             // carouselController: _controller,
                           ),
                           SizedBox(
-                              height: Responsive.isDesktop(context) ? 164 : 25),
+                              height: Responsive.isDesktop(context) ? 0 : 25),
                         ],
                       ),
                       Positioned(
-                        bottom: Responsive.isDesktop(context) ? 120 : 0,
+                        bottom: Responsive.isDesktop(context) ? 164 : 0,
                         left: Responsive.isDesktop(context)
                             ? 412
                             : (MediaQuery.of(context).size.width / 2) - 111,
@@ -369,17 +369,21 @@ class _DestinationCarouselState extends State<StoryPage> {
                               activeDotDecoration: DotDecoration(
                                 width: 16,
                                 height: 6,
-                                color: Responsive.isDesktop(context)
-                                    ? Color.fromARGB(255, 0, 0, 0)
-                                    : Colors.white,
+                                color:
+                                    //  Responsive.isDesktop(context)
+                                    //     ? Color.fromARGB(255, 0, 0, 0)
+                                    //     :
+                                    Colors.white,
                                 borderRadius: BorderRadius.circular(50),
                               ),
                               dotDecoration: DotDecoration(
                                 width: 10,
                                 height: 4,
-                                color: Responsive.isDesktop(context)
-                                    ? Colors.grey
-                                    : Color.fromARGB(40, 255, 255, 255),
+                                color:
+                                    //  Responsive.isDesktop(context)
+                                    //     ? Colors.grey
+                                    //     :
+                                    Color.fromARGB(40, 255, 255, 255),
                                 borderRadius: BorderRadius.circular(50),
                                 verticalOffset: 0,
                               ),
@@ -400,7 +404,7 @@ class _DestinationCarouselState extends State<StoryPage> {
                 children: [
                   SizedBox(
                     height: Responsive.isDesktop(context)
-                        ? 78
+                        ? 112
                         : Responsive.isTablet(context)
                             ? 83
                             : 39,
@@ -408,11 +412,12 @@ class _DestinationCarouselState extends State<StoryPage> {
                   Responsive.isDesktop(context)
                       ? Row(
                           children: [
-                            SizedBox(width: 80),
+                            SizedBox(
+                                width: Responsive.isDesktop(context) ? 36 : 80),
                             Stack(children: <Widget>[
                               new SizedBox(
                                 height: 507,
-                                width: 1360,
+                                width: 1404,
                               ),
                               new Positioned(
                                   child: Container(
@@ -429,14 +434,14 @@ class _DestinationCarouselState extends State<StoryPage> {
                                     ),
                                     aboutlist,
                                     Transform.translate(
-                                        offset: Offset(150.0, 0.0),
+                                        offset: Offset(250.0, -30.0),
                                         child: advice)
                                   ],
                                 ),
                               )),
                               new Positioned(
                                 top: 34,
-                                left: 790,
+                                left: 834,
                                 height: 330,
                                 width: 501,
                                 child: new Image(
@@ -445,7 +450,7 @@ class _DestinationCarouselState extends State<StoryPage> {
                               ),
                               new Positioned(
                                   top: 101,
-                                  left: 672,
+                                  left: 716,
                                   height: 313,
                                   width: 687,
                                   child: new Image(
