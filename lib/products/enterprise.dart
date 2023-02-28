@@ -74,7 +74,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
             height: 582,
             width: 815,
           ),
-          new Image(image: AssetImage("assets/product/productframe.png")),
+          // new Image(image: AssetImage("assets/product/productframe.png")),
           new Positioned(
             // left: 160,
             right: 35,

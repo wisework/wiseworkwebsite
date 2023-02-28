@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 import '../responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hovering/hovering.dart';
+
+class PackageModel {
+  final String title;
+  final String lisence;
+  final String imageUrl;
+  final String? routePath;
+  PackageModel(this.title, this.lisence, this.imageUrl, this.routePath);
+}
 
 class SingleWhomPage extends StatelessWidget {
   @override
@@ -64,6 +73,26 @@ class SingleWhomPage extends StatelessWidget {
         },
       ),
     );
+    var relate = Container(
+      color: Color.fromARGB(0, 0, 187, 212),
+      height: 48,
+      width: 1087,
+      child: Text('Related Package ดูรายละเอียดแพ็กเกจอื่น',
+          style: GoogleFonts.ibmPlexSansThai(
+              // letterSpacing: 2,
+              // height: 1.25,
+              fontSize: 24,
+              fontWeight: FontWeight.w500,
+              color: Color.fromARGB(255, 24, 84, 110))),
+    );
+    List<PackageModel> features = [
+      PackageModel(
+          "Express Package", "(SaaS)", "packages/cloud.png", "routePath"),
+      PackageModel("Standard Package", "(Subscription License)",
+          "packages/clouds.png", "routePath"),
+      PackageModel("Enterprise Package", "(Perpeptual License)",
+          "packages/rainbow_cloud.png", "routePath"),
+    ];
 
     return Center(
       child: Container(
@@ -112,7 +141,37 @@ class SingleWhomPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 140,
+              height: 94,
+            ),
+            Container(
+              height: 342,
+              width: 1140,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  relate,
+                  SizedBox(
+                    height: 38,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Hover Container Demo', textScaleFactor: 1.5),
+                      HoverContainer(
+                        width: 200,
+                        height: 200,
+                        hoverHeight: 220,
+                        hoverWidth: 220,
+                        color: Colors.red,
+                        hoverColor: Colors.green,
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 60,
             )
           ],
         ),
