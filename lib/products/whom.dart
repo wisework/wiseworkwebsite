@@ -153,18 +153,130 @@ class SingleWhomPage extends StatelessWidget {
                   SizedBox(
                     height: 38,
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Hover Container Demo', textScaleFactor: 1.5),
                       HoverContainer(
-                        width: 200,
-                        height: 200,
-                        hoverHeight: 220,
-                        hoverWidth: 220,
-                        color: Colors.red,
-                        hoverColor: Colors.green,
-                      )
+                        padding: const EdgeInsets.only(top: 27, left: 40),
+                        width: 363,
+                        height: 256,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            border: Border.all(
+                                color: Color.fromARGB(255, 225, 232, 240))),
+                        hoverDecoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Color.fromARGB(255, 241, 251, 252),
+                            border: Border.all(
+                                color: Color.fromARGB(255, 75, 195, 211))),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                  height: 60,
+                                  width: 60,
+                                  child: Image.asset("packages/cloud.png")),
+                              SizedBox(height: 24),
+                              Text('Express Package',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500)),
+                              Text('(SaaS)',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w400)),
+                              SizedBox(height: 16),
+                              Text('Read more >',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      color: Color.fromARGB(255, 75, 196, 213),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600))
+                            ]),
+                      ),
+                      SizedBox(
+                        width: 25,
+                      ),
+                      HoverContainer(
+                        padding: const EdgeInsets.only(top: 40, left: 40),
+                        width: 363,
+                        height: 256,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            border: Border.all(
+                                color: Color.fromARGB(255, 225, 232, 240))),
+                        hoverDecoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Color.fromARGB(255, 241, 251, 252),
+                            border: Border.all(
+                                color: Color.fromARGB(255, 75, 195, 211))),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                  height: 45,
+                                  width: 75,
+                                  child: Image.asset("packages/clouds.png")),
+                              SizedBox(height: 24),
+                              Text('Standard Package',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500)),
+                              Text('(Subscription License)',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w400)),
+                              SizedBox(height: 16),
+                              Text('Read more >',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      color: Color.fromARGB(255, 75, 196, 213),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600))
+                            ]),
+                      ),
+                      SizedBox(
+                        width: 25,
+                      ),
+                      HoverContainer(
+                        padding: const EdgeInsets.only(top: 40, left: 40),
+                        width: 363,
+                        height: 256,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            border: Border.all(
+                                color: Color.fromARGB(255, 225, 232, 240))),
+                        hoverDecoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Color.fromARGB(255, 241, 251, 252),
+                            border: Border.all(
+                                color: Color.fromARGB(255, 75, 195, 211))),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                  height: 47,
+                                  width: 80,
+                                  child: Image.asset(
+                                      "packages/rainbow_cloud.png")),
+                              SizedBox(height: 24),
+                              Text('Enterprise Package',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500)),
+                              Text('(Perpeptual License)',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w400)),
+                              SizedBox(height: 16),
+                              Text('Read more >',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      color: Color.fromARGB(255, 75, 196, 213),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600))
+                            ]),
+                      ),
                     ],
                   ),
                 ],
