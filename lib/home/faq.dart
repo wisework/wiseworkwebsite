@@ -83,6 +83,129 @@ List<Item> items = [
       false),
 ];
 
+// List<ExpansionPanel> _data = [
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool? isExpanded) {
+//       return ListTile(
+//         title: Text('PDPA คืออะไร?'),
+//       );
+//     },
+//     body: Text(
+//       "PDPA (Personal Data Protection Act, B.E. 2562 (2019)) หรือ พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ.2562 มีผลบังคับใช้อย่างเป็นทางการเมื่อ 1 มิ.ย. 2565 เหตุผลในการประกาศใช้ PDPA เนื่องมาจากเทคโนโลยีก้าวหน้าขึ้น ช่องทางสื่อสารต่างๆมีหลากหลายขึ้น ทำให้การละเมิดสิทธิความเป็นส่วนตัวของข้อมูลส่วนบุคคลทำได้ง่ายขึ้นและหลายครั้งก็นำมาซึ่งความเดือดร้อนรำคาญหรือสร้างความเสียหายให้แก่เจ้าของข้อมูล ตลอดจนสามารถส่งผลต่อเศรษฐกิจโดยรวมของประเทศได้ด้วย จึงต้องมีกฎหมายว่าด้วยการคุ้มครองข้อมูลส่วนบุคคลขึ้นเพื่อกำหนดหลักเกณฑ์ กลไก หรือมาตรการกำกับดูแลเกี่ยวกับการให้ความคุ้มครองข้อมูลส่วนบุคคลที่รวมถึงการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลขึ้น",
+//     ),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text('ธุรกิจอะไรบ้างที่ต้องปฏิบัติตาม PDPA?'),
+//       );
+//     },
+//     body: Text('description-2'),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text("บทลงโทษของ PDPA เป็นอย่างไร?"),
+//       );
+//     },
+//     body: Text('description-3'),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text("ต้องการทำ PDPA จะเริ่มต้นอย่างไร?"),
+//       );
+//     },
+//     body: Text('description-4'),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text("wisework สามารถให้คำปรึกษาเรื่อง PDPA ได้ไหม?"),
+//       );
+//     },
+//     body: Text('description-5'),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text(
+//             "wisework มีมาตรฐานอะไรบ้างในการควบคุม กระบวนการบริหารความเสี่ยง?"),
+//       );
+//     },
+//     body: Text('description-6'),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text("wisework มี solutions อะไรให้ใช้งานบ้าง?"),
+//       );
+//     },
+//     body: Text('description-7'),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text("wisework ติดตั้งบนระบบ ERP รูปแบบใด?"),
+//       );
+//     },
+//     body: Text('description-8'),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text("wisework สามารถเชื่อมต่อกับ software ภายในองค์กรได้ไหม?"),
+//       );
+//     },
+//     body: Text('description-9'),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text("wisework ช่วยประเมินความเสี่ยงได้อย่างไร แบบใด?"),
+//       );
+//     },
+//     body: Text('description-10'),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text("wisework จะช่วย support การบริหารจัดการได้ไหม?"),
+//       );
+//     },
+//     body: Text('description-11'),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text("wisework จะช่วย support การบริหารจัดการได้ไหม?"),
+//       );
+//     },
+//     body: Text('description-12'),
+//     isExpanded: false,
+//   ),
+//   ExpansionPanel(
+//     headerBuilder: (BuildContext context, bool isExpanded) {
+//       return ListTile(
+//         title: Text("สนใจผลิตภัณฑ์ wisework ขอทดลองใช้งานได้อย่างไร?"),
+//       );
+//     },
+//     body: Text('description-13'),
+//     isExpanded: false,
+//   ),
+// ];
+
 class FAQ extends StatefulWidget {
   // final double opacity;
 
@@ -93,6 +216,7 @@ class FAQ extends StatefulWidget {
 }
 
 class _FAQState extends State<FAQ> {
+  bool _showCustomers = false;
   // const Faq({super.key});
   int _selectedIndex = 0;
 
@@ -283,74 +407,145 @@ class _FAQState extends State<FAQ> {
         child: Column(
           children: [
             Responsive.isDesktop(context)
-                ? Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                ? Stack(
                     children: [
-                      Column(
-                        children: [
-                          Container(
-                            width: 700,
-                            height: 1000,
-                            color: Color.fromARGB(0, 204, 220, 57),
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 50),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Column(
-                                    children: [
-                                      SizedBox(
-                                        height: 42,
-                                      ),
-                                      consult,
-                                      hashtag,
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  button,
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 160, left: 73),
-                                    child: Image.asset(
-                                      "/faq/qa.png",
-                                      height: 460,
-                                      width: 467,
+                      new Positioned(
+                        top: 750,
+                        child: Container(
+                            // color: Colors.black,
+                            height: 700,
+                            child: Image.asset(
+                              "/faq/Union.png",
+                              fit: BoxFit.fitHeight,
+                            )),
+                      ),
+                      new Positioned(
+                        left: 1325,
+                        child: Container(
+                          width: 205,
+                          height: 205,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color.fromARGB(108, 0, 112, 240)),
+                        ),
+                      ),
+                      Container(
+                        height: 1450,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Column(
+                              children: [
+                                Container(
+                                  width: 700,
+                                  // height: 1493,
+                                  color: Color.fromARGB(0, 204, 220, 57),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 50),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 100, left: 91),
+                                              child: Text(
+                                                'พร้อมวางแผนให้ธุรกิจคุณปรึกษา',
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        color: Colors.white,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.w400),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 91),
+                                              child: Text(
+                                                '#Teamwisework',
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        color: Colors.white,
+                                                        fontSize: 36,
+                                                        fontWeight:
+                                                            FontWeight.w700),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 20, left: 91),
+                                          child: button,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 160, left: 73),
+                                          child: Image.asset(
+                                            "/faq/qa.png",
+                                            height: 460,
+                                            width: 467,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            width: 700,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Column(
-                                  children: [
-                                    Qth,
-                                  ],
                                 ),
-                                Qen,
-
-                                SizedBox(
-                                  height: 85,
-                                ),
-                                // listChoice,
-                                _buildPanel(),
                               ],
                             ),
-                          ),
-                        ],
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: 700,
+                                  // height: 1000,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 90),
+                                            child: Text(
+                                              'รวมคำถามที่พบบ่อย',
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 32,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color.fromARGB(
+                                                    255, 75, 195, 211),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Text(
+                                        'Frequently Asked Questions',
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                          fontSize: 48,
+                                          fontWeight: FontWeight.w600,
+                                          color: Color.fromARGB(
+                                              255, 232, 242, 254),
+                                        ),
+                                      ),
+
+                                      SizedBox(
+                                        height: 85,
+                                      ),
+                                      // listChoice,
+                                      _buildPanel()
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   )
@@ -513,9 +708,10 @@ class _FAQState extends State<FAQ> {
                 title: Text(
                   item.title,
                   style: TextStyle(
-                      color: Color.fromARGB(255, 75, 195, 211),
-                      fontSize:
-                          MediaQuery.of(context).size.width > 1000 ? 20 : 15),
+                      color: isExpanded
+                          ? Color.fromARGB(255, 75, 195, 211)
+                          : Colors.white,
+                      fontSize: Responsive.isDesktop(context) ? 20 : 15),
                 ),
                 // iconColor: Colors.amber,
                 // selectedColor: Colors.amber,
