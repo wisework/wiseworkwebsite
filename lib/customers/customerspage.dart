@@ -7,12 +7,12 @@ import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/customers/banner.dart';
 import 'package:wiseintern/customers/advise.dart';
 
-class AboutPage extends StatefulWidget {
+class CustomerPage extends StatefulWidget {
   @override
-  _AboutPageState createState() => _AboutPageState();
+  _CustomerPageState createState() => _CustomerPageState();
 }
 
-class _AboutPageState extends State<AboutPage> {
+class _CustomerPageState extends State<CustomerPage> {
   int _currentIndex = 0;
 
   void onTabTapped(int index) {
@@ -48,10 +48,10 @@ class _AboutPageState extends State<AboutPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Banner(),
-            
-            Footer()
-          ],
+            BannerCus(), 
+            Advise(),
+
+            Footer()],
         ),
       ),
     );

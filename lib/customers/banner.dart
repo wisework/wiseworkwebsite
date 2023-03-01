@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 
-class Banner extends StatelessWidget {
-  const Banner({super.key});
+class BannerCus extends StatelessWidget {
+  const BannerCus({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class Banner extends StatelessWidget {
                               height: 110,
                               // color: Colors.amber,
                               child: Text(
-                                "About Us",
+                                "Our Customers",
                                 style: GoogleFonts.ibmPlexSansThai(
                                     fontSize: 96,
                                     fontWeight: FontWeight.w600,
@@ -60,7 +60,7 @@ class Banner extends StatelessWidget {
                             // height: Responsive.isDesktop(context) ? 65 : 60,
                             // color: Colors.amber,
                             child: Text(
-                              "“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับกฎหมาย และกฎระเบียบจากหน่วยงานกำกับดูแล\nโดยทีมนักพัฒนา และผู้เชี่ยวชาญมากประสบการณ์”",
+                              "จากประสบการณ์ของทีมผู้ให้คำปรึกษามากกว่า 50+ โครงการ\nที่ได้รับความไว้วางใจให้ดูแลธุรกิจทั้งหน่วยงานองค์ภาครัฐ และองค์กรเอกชน ",
                               style: GoogleFonts.ibmPlexSans(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w500,
