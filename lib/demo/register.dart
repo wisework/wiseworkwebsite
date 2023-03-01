@@ -1014,6 +1014,78 @@ class _Register extends State<Register> {
                                                         color: Color.fromARGB(
                                                             255, 232, 242, 254),
                                                         width: 1)),
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              top: 29,
+                                                              left: 15),
+                                                      child: Text(
+                                                        "โมดูลผลิตภัณฑ์",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                fontSize: 20,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                                color: Colors
+                                                                    .black),
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              top: 18,
+                                                              left: 15),
+                                                      child: Container(
+                                                        width: 310,
+                                                        decoration: BoxDecoration(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    75,
+                                                                    195,
+                                                                    211),
+                                                            border: Border.all(
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        52,
+                                                                        145,
+                                                                        206),
+                                                                width: 1)),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              top: 18,
+                                                              left: 15),
+                                                      child: Text(
+                                                        "CMC (Consent Management)\nPDM (Personal Data Management)\nDSR (Data Subject Right Management)",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSans(
+                                                                fontSize: 18,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400,
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        130,
+                                                                        130,
+                                                                        130)),
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
                                               ),
                                             )
                                           ],
