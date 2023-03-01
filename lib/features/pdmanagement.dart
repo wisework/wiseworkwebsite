@@ -208,6 +208,10 @@ class _CheckState extends State<Check> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Container(
+                                        height: 28,
+                                        color: hoveredIndex == index
+                                            ? Color.fromARGB(255, 5, 45, 97)
+                                            : Color.fromARGB(255, 5, 45, 97),
                                         child: ListTile(
                                           minLeadingWidth: 0,
                                           minVerticalPadding: 0,
@@ -243,8 +247,11 @@ class _CheckState extends State<Check> {
                                           ),
                                         ),
                                       ),
-                                      SizedBox(
-                                        height: 15,
+                                      Container(
+                                        height: 30,
+                                        color: hoveredIndex == index
+                                            ? Color.fromARGB(255, 5, 45, 97)
+                                            : Color.fromARGB(255, 5, 45, 97),
                                       )
                                     ],
                                   ),
