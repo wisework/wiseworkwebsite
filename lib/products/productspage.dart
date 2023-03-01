@@ -7,6 +7,7 @@ import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/home/features.dart';
 import 'package:wiseintern/products/enterprise.dart';
 import 'package:wiseintern/products/whom.dart';
+import 'package:wiseintern/services/compare.dart';
 
 class ProductPage extends StatefulWidget {
   @override
@@ -52,6 +53,7 @@ class _ProductPageState extends State<ProductPage> {
             SingleProductPage(),
             FeaturesPage(),
             SingleWhomPage(),
+            Compare(),
             Footer()
           ],
         ),

@@ -47,7 +47,7 @@ class SingleWhomPage extends StatelessWidget {
         itemCount: whomlist.length,
         itemBuilder: (context, index) {
           return ListTile(
-            // horizontalTitleGap: 0,
+            horizontalTitleGap: 0,
             // minLeadingWidth: 0,
             // minVerticalPadding: 0,
             dense: true,
