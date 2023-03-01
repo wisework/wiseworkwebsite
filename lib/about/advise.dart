@@ -231,6 +231,7 @@ class _AdviseState extends State<AdvisePage> {
                     ),
                   ],
                 ),
-              ));
+              )
+              );
   }
 }

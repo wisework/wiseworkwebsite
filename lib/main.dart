@@ -25,14 +25,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home:
-            HomePage(),
+            // HomePage(),
             // AboutPage(),
-            // CustomerPage()
-            // ServicesPage(),
-            // ProductPage(),
-            // Pdmanagement(),
-            // ContactPage(),
-            // FaqPage()
+            CustomerPage()
+        // ServicesPage(),
+        // ProductPage(),
+        // Pdmanagement(),
+        // ContactPage(),
+        // FaqPage()
         // theme: ThemeData(primarySwatch: Colors.deepPurple),
         );
   }

@@ -5,7 +5,7 @@ import 'package:wiseintern/menu_drawer.dart';
 
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/customers/banner.dart';
-import 'package:wiseintern/customers/advise.dart';
+import 'package:wiseintern/home/customers.dart';
 
 class CustomerPage extends StatefulWidget {
   @override
@@ -49,8 +49,8 @@ class _CustomerPageState extends State<CustomerPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             BannerCus(), 
-            Advise(),
-
+            // Advise(),
+            Customer(),
             Footer()],
         ),
       ),

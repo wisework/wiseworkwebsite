@@ -99,7 +99,7 @@ class BannerCus extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 50),
                                   child: Text(
-                                    "About Us",
+                                    "Our Customers",
                                     style: GoogleFonts.ibmPlexSans(
                                         fontSize: 48,
                                         fontWeight: FontWeight.w600,
@@ -110,7 +110,7 @@ class BannerCus extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 20),
                                   child: Text(
-                                    "“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับกฎหมาย และกฎระเบียบจากหน่วยงานกำกับดูแล\nโดยทีมนักพัฒนาและผู้เชี่ยวชาญมากประสบการณ์”",
+                                    "จากประสบการณ์ของทีมผู้ให้คำปรึกษามากกว่า 50+ โครงการ\nที่ได้รับความไว้วางใจให้ดูแลธุรกิจทั้งหน่วยงานองค์ภาครัฐ และองค์กรเอกชน ",
                                     style: GoogleFonts.ibmPlexSansThai(
                                         fontSize: 20,
                                         fontWeight: FontWeight.w500,
@@ -160,7 +160,7 @@ class BannerCus extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 30),
                                   child: Text(
-                                    "จากประสบการณ์ของทีมผู้ให้คำปรึกษามากกว่า 50+ โครงการ\nที่ได้รับความไว้วางใจให้ดูแลธุรกิจทั้งหน่วยงานองค์ภาครัฐ และองค์กรเอกชน ",
+                                    "จากประสบการณ์ของทีมผู้ให้คำปรึกษา\nมากกว่า 50+ โครงการที่ได้รับความไว้วางใจ\nให้ดูแลธุรกิจทั้งหน่วยงานองค์ภาครัฐ และองค์กรเอกชน ",
                                     style: GoogleFonts.ibmPlexSansThai(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,

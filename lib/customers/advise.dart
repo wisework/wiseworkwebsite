@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/model/customer_carousel.dart';
@@ -44,81 +44,141 @@ class _Advise extends State<Advise> {
     return Center(
       child: Column(
         children: [
-          Container(
-            width: 1440,
-            color: Color.fromARGB(255, 232, 242, 254),
-            child: Padding(
-              padding: const EdgeInsets.all(60),
-              child: Container(
-                child: GridView.builder(
-                    shrinkWrap: true,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        crossAxisSpacing: 20,
-                        mainAxisSpacing: 20,
-                        childAspectRatio: 405 / 390),
-                    itemCount: stories.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        child: new Material(
-                          child: new Container(
-                            width: 405,
-                            height: 390,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Center(
-                              child: Container(
-                                // margin: EdgeInsets.all(15),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 48, left: 6, right: 6, bottom: 12),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      SizedBox(
-                                          width: 150,
-                                          height: 150,
-                                          child: Image.asset(
-                                            '${stories[index].img}',
-                                            // fit: BoxFit.fill,
-                                          )),
-                                      Text(
-                                        '${stories[index].brand}',
-                                        style: GoogleFonts.ibmPlexSansThai(
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 30,
-                                            color: Color.fromARGB(
-                                                255, 33, 31, 37)),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      Text(
-                                        '${stories[index].story}',
-                                        style: GoogleFonts.ibmPlexSansThai(
-                                          fontWeight: FontWeight.w400,
-                                          color:
-                                              Color.fromARGB(255, 61, 58, 65),
-                                          fontSize: 16,
+          Responsive.isDesktop(context)
+              ? Container(
+                  width: 1440,
+                  color: Color.fromARGB(255, 232, 242, 254),
+                  child: Padding(
+                    padding: const EdgeInsets.all(60),
+                    child: Container(
+                      child: GridView.builder(
+                          shrinkWrap: true,
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 3,
+                                  crossAxisSpacing: 20,
+                                  mainAxisSpacing: 20,
+                                  childAspectRatio: 405 / 390),
+                          itemCount: stories.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              child: new Material(
+                                child: new Container(
+                                  width: 405,
+                                  height: 390,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: Center(
+                                    child: Container(
+                                      // margin: EdgeInsets.all(15),
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 48,
+                                            left: 6,
+                                            right: 6,
+                                            bottom: 12),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            SizedBox(
+                                                width: 150,
+                                                height: 150,
+                                                child: Image.asset(
+                                                  '${stories[index].img}',
+                                                  // fit: BoxFit.fill,
+                                                )),
+                                            Text(
+                                              '${stories[index].brand}',
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                      fontSize: 30,
+                                                      color: Color.fromARGB(
+                                                          255, 33, 31, 37)),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            Text(
+                                              '${stories[index].story}',
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                fontWeight: FontWeight.w400,
+                                                color: Color.fromARGB(
+                                                    255, 61, 58, 65),
+                                                fontSize: 16,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          ],
                                         ),
-                                        textAlign: TextAlign.center,
                                       ),
-                                    ],
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ),
+                            );
+                          }),
+                    ),
+                  ),
+                )
+              : Responsive.isTablet(context)
+                  ? Container(
+                      width: 1440,
+                      color: Color.fromARGB(255, 232, 242, 254),
+                      child: Padding(
+                        padding: const EdgeInsets.all(60),
+                        child: Container(
+                          child: GridView.builder(
+                              shrinkWrap: true,
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                      crossAxisCount: 3,
+                                      crossAxisSpacing: 20,
+                                      mainAxisSpacing: 20,
+                                      childAspectRatio: 405 / 390),
+                              itemCount: stories.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return Container(
+                                  child: new Material(
+                                    child: new Container(
+                                      width: 192,
+                                      height: 192,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(10)),
+                                      child: Center(
+                                        child: Container(
+                                          // margin: EdgeInsets.all(15),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: <Widget>[
+                                              SizedBox(
+                                                  width: 100,
+                                                  height: 100,
+                                                  child: Image.asset(
+                                                    '${stories[index].img}',
+                                                    // fit: BoxFit.fill,
+                                                  )),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              }),
                         ),
-                      );
-                    }),
-              ),
-            ),
-          ),
-
-           Padding(
+                      ),
+                    )
+                  : Container(),
+          Padding(
             padding: const EdgeInsets.only(top: 51),
             child: Container(
-               width: 1440,
+              width: 1440,
               height: 750,
               // color: Colors.green,
               child: Row(
@@ -210,7 +270,7 @@ class _Advise extends State<Advise> {
                                 ],
                               ),
                             ],
-                             ),
+                          ),
                         ),
                       ),
                     ],
@@ -233,89 +293,275 @@ class _Advise extends State<Advise> {
             ),
           ),
           CustomerCarousel(),
-          Container(
-            height: 206,
-            width: 1440,
-            color: Color.fromARGB(255, 5, 45, 97),
-            child: Column(
-              children: [
-                Stack(
-                  children: [
-                    new SizedBox(
-                      height: 206,
-                      width: 1440,
-                    ),
-                    new Positioned(
-                        top: 0,
-                        right: 1350,
-                        child: Container(
-                          height: 205,
-                          width: 205,
-                          decoration: BoxDecoration(
-                              color: Color.fromARGB(90, 68, 137, 255),
-                              shape: BoxShape.circle),
-                        )),
-                    new Positioned(
-                      top: 33,
-                      left: 316,
-                      child: Container(
-                        height: 80,
-                        width: 539.82,
-                        // color: Colors.pink,
-                        child: Text(
-                          "พร้อมวางแผนธุรกิจให้คุณ!",
-                          style: GoogleFonts.ibmPlexSansThai(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 48,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
-                        ),
+          Responsive.isDesktop(context)
+              ? Container(
+                  height: 206,
+                  width: 1440,
+                  color: Color.fromARGB(255, 5, 45, 97),
+                  child: Column(
+                    children: [
+                      Stack(
+                        children: [
+                          new SizedBox(
+                            height: 206,
+                            width: 1440,
+                          ),
+                          new Positioned(
+                              top: 0,
+                              right: 1350,
+                              child: Container(
+                                height: 205,
+                                width: 205,
+                                decoration: BoxDecoration(
+                                    color: Color.fromARGB(90, 68, 137, 255),
+                                    shape: BoxShape.circle),
+                              )),
+                          new Positioned(
+                            top: 33,
+                            left: 316,
+                            child: Container(
+                              height: 80,
+                              width: 539.82,
+                              // color: Colors.pink,
+                              child: Text(
+                                "พร้อมวางแผนธุรกิจให้คุณ!",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 48,
+                                    color: Colors.white),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          new Positioned(
+                              // top: 99.5,
+                              top: 110.5,
+                              left: 316,
+                              child: Container(
+                                height: 66.5,
+                                width: 539.82,
+                                // color: Colors.red,
+                                child: Text(
+                                  "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork",
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white),
+                                ),
+                              )),
+                          new Positioned(
+                            left: 944,
+                            top: 79,
+                            child: SizedBox(
+                              width: 193,
+                              height: 48,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 75, 195, 211),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(30.0)),
+                                ),
+                                child: Text(
+                                  'ติดต่อเรา',
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
                       ),
-                    ),
-                    new Positioned(
-                        // top: 99.5,
-                        top: 110.5,
-                        left: 316,
-                        child: Container(
-                          height: 66.5,
-                          width: 539.82,
-                          // color: Colors.red,
-                          child: Text(
-                            "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork",
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white),
+                    ],
+                  ),
+                )
+              : Responsive.isTablet(context)
+                  ? Center(
+                      child: Stack(
+                        children: [
+                          Container(
+                            width: 1440,
+                            height: 385,
+                            color: Color.fromARGB(255, 5, 45, 97),
                           ),
-                        )),
-                    new Positioned(
-                      left: 944,
-                      top: 79,
-                      child: SizedBox(
-                        width: 193,
-                        height: 48,
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color.fromARGB(255, 75, 195, 211),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30.0)),
+                          new Positioned(
+                              top: 0,
+                              left: 0,
+                              child: Container(
+                                // width: Responsive.isTablet(context) ? 100 : 200,
+                                // width: 50,
+                                height: 385,
+                                // color: Colors.black,
+                                child: Image.asset(
+                                  "/customer/half.png",
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              )),
+                          Container(
+                            child: Center(
+                              child: Container(
+                                width: 768,
+                                height: 385,
+                                child: Stack(
+                                  children: [
+                                    // Container(
+                                    //   width: Responsive.isTablet(context) ? 768 : 375,
+                                    //   height:
+                                    //       Responsive.isTablet(context) ? 385 : 265,
+                                    //   color: Color.fromARGB(255, 5, 45, 97),
+                                    // ),
+                                    new Positioned(
+                                      top: 73,
+                                      left: 77,
+                                      child: Container(
+                                        height: 150,
+                                        width: 627,
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              width: 540,
+                                              // height: Responsive.isTablet(context) ? 45 : 40,
+                                              // color: Colors.amber,
+                                              child: Text(
+                                                "พร้อมวางแผนให้ธุรกิจคุณ!",
+                                                style: GoogleFonts.ibmPlexSans(
+                                                    color: Colors.white,
+                                                    fontSize:
+                                                        Responsive.isTablet(
+                                                                context)
+                                                            ? 36
+                                                            : 24,
+                                                    fontWeight:
+                                                        FontWeight.w600),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 30),
+                                              child: Text(
+                                                "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ\nได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize:
+                                                            Responsive.isTablet(
+                                                                    context)
+                                                                ? 20
+                                                                : 14,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        color: Colors.white),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+
+                                    new Positioned(
+                                      top: 242,
+                                      left: 280,
+                                      child: SizedBox(
+                                        width: 193,
+                                        height: 46,
+                                        child: ElevatedButton(
+                                          onPressed: () {},
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor: Color.fromARGB(
+                                                255, 75, 195, 211),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        30.0)),
+                                          ),
+                                          child: Text(
+                                            'ติดต่อเรา',
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.white),
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
                           ),
-                          child: Text(
-                            'ติดต่อเรา',
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
-                                color: Colors.white),
-                          ),
+                        ],
+                      ),
+                    )
+                  : Center(
+                      child: Container(
+                        width: 1440,
+                        height: 374,
+                        color: Color.fromARGB(255, 5, 45, 97),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 60),
+                              child: Text(
+                                "พร้อมวางแผนให้ธุรกิจคุณ ปรึกษา",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            Text(
+                              "#Teamwisework",
+                              style: GoogleFonts.poppins(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.white),
+                              textAlign: TextAlign.center,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 34),
+                              child: Text(
+                                "ให้องค์กรของคุณ วางแผนและจัดการกับ\nDATA หัวใจสำคัญของธุรกิจ\nได้ถูกต้องตามกฎหมาย",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 34),
+                              child: SizedBox(
+                                width: 193,
+                                height: 46,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor:
+                                        Color.fromARGB(255, 75, 195, 211),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(30.0)),
+                                  ),
+                                  child: Text(
+                                    'ติดต่อเรา',
+                                    style: GoogleFonts.ibmPlexSansThai(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     )
-                  ],
-                ),
-              ],
-            ),
-          ),
         ],
       ),
     );
