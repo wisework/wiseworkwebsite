@@ -220,7 +220,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 340),
+                  padding: const EdgeInsets.only(left: 180),
                   child: Column(
                     children: [
                       Container(
@@ -248,6 +248,11 @@ class _SingleProductPageState extends State<SingleProductPage> {
                                       // width: 500,
                                       // height: 200,
                                       child: Container(
+                                        height: 56,
+                                        color: hoveredIndex == index
+                                            ? Color.fromARGB(255, 255, 255, 255)
+                                            : Color.fromARGB(
+                                                255, 255, 255, 255),
                                         child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
@@ -257,11 +262,13 @@ class _SingleProductPageState extends State<SingleProductPage> {
                                                 SizedBox(
                                                   width: 16,
                                                   height: 16,
-                                                  child: Image.asset(
-                                                      "/product/choices.png"),
+                                                  child: Image.asset(hoveredIndex ==
+                                                          index
+                                                      ? "/product/select.png"
+                                                      : "/product/choices.png"),
                                                 ),
                                                 SizedBox(
-                                                  width: 20,
+                                                  width: 24,
                                                 ),
                                                 Text(
                                                   '${list[index].title}',
@@ -305,7 +312,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                   children: [
                     Container(
                       // color: Colors.red,
-                      width: 500,
+                      width: 450,
                       child: ListView.builder(
                           shrinkWrap: true,
                           itemCount: list.length,
@@ -328,6 +335,10 @@ class _SingleProductPageState extends State<SingleProductPage> {
                                     // width: 500,
                                     // height: 200,
                                     child: Container(
+                                      height: 56,
+                                      color: hoveredIndex == index
+                                          ? Color.fromARGB(255, 255, 255, 255)
+                                          : Color.fromARGB(255, 255, 255, 255),
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -360,7 +371,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
               ],
             ),
             SizedBox(
-              height: 100,
+              height: 102,
             ),
           ],
         ),
