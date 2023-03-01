@@ -364,17 +364,91 @@ class _QuestionsState extends State<Questions> {
                                             ],
                                           ),
                                         ),
-                                        
                                       ],
                                     ),
                                   ),
                                 ],
                               ),
                             )
-                          : Container(
-                              width: 290,
-                              height: 390,
-                            ),
+                          : Center(
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    width: 1440,
+                                    height: 1758,
+                                  ),
+                                  new Positioned(
+                                    top: 750,
+                                    left: 0,
+                                    child: Container(
+                                        // color: Colors.black,
+                                        width: 250,
+                                        height: 700,
+                                        child: Image.asset(
+                                          "/faq/Union.png",
+                                          fit: BoxFit.fitWidth,
+                                        )),
+                                  ),
+                                  Center(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          width: 375,
+                                          height: 1758,
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Column(
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            top: 86),
+                                                    child: Text(
+                                                      'รวมคำถามที่พบบ่อย',
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        color: Color.fromARGB(
+                                                            255, 75, 195, 211),
+                                                      ),
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Text(
+                                                'Frequently Asked\nQuestions',
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                  fontSize: 24,
+                                                  fontWeight: FontWeight.w600,
+                                                  color: Color.fromARGB(
+                                                      255, 232, 242, 254),
+                                                ),
+                                                textAlign: TextAlign.start,
+                                              ),
+
+                                              SizedBox(
+                                                height: 60,
+                                              ),
+                                              // listChoice,
+                                              _buildPanel()
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
                     ],
                   )
           ],
@@ -401,19 +475,48 @@ class _QuestionsState extends State<Questions> {
           return ExpansionPanel(
             backgroundColor: Color.fromARGB(0, 255, 255, 255),
             canTapOnHeader: true,
+            hasIcon: false,
             headerBuilder: (BuildContext context, bool isExpanded) {
-              return ListTile(
-                // style: ListTileStyle.,
-                title: Text(
-                  item.title,
-                  style: TextStyle(
-                      color: isExpanded
-                          ? Color.fromARGB(255, 75, 195, 211)
-                          : Colors.white,
-                      fontSize: Responsive.isDesktop(context) ? 20 : 20),
-                ),
-                // iconColor: Colors.amber,
-                // selectedColor: Colors.amber,
+              return Wrap(
+                children: [
+                  ListTile(
+                    // style: ListTileStyle.,
+                    title: Text(
+                      item.title,
+                      style: TextStyle(
+                          color: isExpanded
+                              ? Color.fromARGB(255, 75, 195, 211)
+                              : Colors.white,
+                          fontSize: Responsive.isDesktop(context)
+                              ? 20
+                              : Responsive.isTablet(context)
+                                  ? 20
+                                  : 16),
+                    ),
+                    // selectedColor: Colors.amber,
+                  ),
+                  Container(
+                    width: 10,
+                    height: 10,
+                    child: Transform.translate(
+                      offset: Offset(
+                          Responsive.isDesktop(context)
+                              ? 1000
+                              : Responsive.isTablet(context)
+                                  ? 670
+                                  : 350,
+                          -30),
+                      child: Icon(
+                        isExpanded
+                            ? Icons.keyboard_arrow_up
+                            : Icons.expand_more_outlined,
+                        color:isExpanded
+                              ? Color.fromARGB(255, 75, 195, 211)
+                              : Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               );
             },
             body: ListTile(
@@ -421,7 +524,11 @@ class _QuestionsState extends State<Questions> {
                 title: Text(
                   item.description,
                   style: TextStyle(
-                      fontSize: Responsive.isDesktop(context) ? 20 : 18,
+                      fontSize: Responsive.isDesktop(context)
+                          ? 20
+                          : Responsive.isTablet(context)
+                              ? 18
+                              : 14,
                       color: Colors.white),
                 ),
                 onTap: () {}),

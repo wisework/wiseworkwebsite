@@ -295,9 +295,9 @@ class _NavigationBarState extends State<NavBar> {
               ),
               onPressed: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ContactPage()),
-                  );
+                  context,
+                  MaterialPageRoute(builder: (context) => ContactPage()),
+                );
               },
             ),
             // SizedBox(

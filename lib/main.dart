@@ -23,17 +23,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home:
-            // HomePage(),
-            // AboutPage(),
-            CustomerPage()
-        // ServicesPage(),
-        // ProductPage(),
-        // Pdmanagement(),
-        // ContactPage(),
-        // FaqPage()
-        // theme: ThemeData(primarySwatch: Colors.deepPurple),
-        );
+      debugShowCheckedModeBanner: false,
+      home:
+          // HomePage(),
+          // AboutPage(),
+          // CustomerPage(),
+          // ServicesPage(),
+          // ProductPage(),
+          // Pdmanagement(),
+          // ContactPage(),
+          FaqPage(),
+      // theme: ThemeData(primarySwatch: Colors.deepPurple),
+      // routes: {
+      //   '/': (context) => HomePage(),
+      //   '/about': (context) => AboutPage(),
+      //   '/customers': (context) => CustomerPage(),
+      //   '/services': (context) => ServicesPage(),
+      //   '/product': (context) => ProductPage(),
+      //   '/pdmanagement': (context) => Pdmanagement(),
+      //   '/contact': (context) => ContactPage(),
+      //   '/faq': (context) => FaqPage(),
+      // },
+      initialRoute: '/',
+    );
   }
 }

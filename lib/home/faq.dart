@@ -702,19 +702,45 @@ class _FAQState extends State<FAQ> {
           return ExpansionPanel(
             backgroundColor: Color.fromARGB(0, 255, 255, 255),
             canTapOnHeader: true,
+            hasIcon: false,
             headerBuilder: (BuildContext context, bool isExpanded) {
-              return ListTile(
-                // style: ListTileStyle.,
-                title: Text(
-                  item.title,
-                  style: TextStyle(
-                      color: isExpanded
-                          ? Color.fromARGB(255, 75, 195, 211)
-                          : Colors.white,
-                      fontSize: Responsive.isDesktop(context) ? 20 : 15),
-                ),
-                // iconColor: Colors.amber,
-                // selectedColor: Colors.amber,
+              return Wrap(
+                children: [
+                  ListTile(
+                    // style: ListTileStyle.,
+                    title: Text(
+                      item.title,
+                      style: TextStyle(
+                          color: isExpanded
+                              ? Color.fromARGB(255, 75, 195, 211)
+                              : Colors.white,
+                          fontSize: Responsive.isDesktop(context) ? 20 : 15),
+                    ),
+                    // iconColor: Colors.amber,
+                    // selectedColor: Colors.amber,
+                  ),
+                  Container(
+                    width: 10,
+                    height: 10,
+                    child: Transform.translate(
+                      offset: Offset(
+                          Responsive.isDesktop(context)
+                              ? 680
+                              : Responsive.isTablet(context)
+                                  ? 670
+                                  : 350,
+                          -30),
+                      child: Icon(
+                        isExpanded
+                            ? Icons.keyboard_arrow_up
+                            : Icons.expand_more_outlined,
+                        color: isExpanded
+                            ? Color.fromARGB(255, 75, 195, 211)
+                            : Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               );
             },
             body: ListTile(
