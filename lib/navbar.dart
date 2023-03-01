@@ -5,6 +5,7 @@ import 'package:wiseintern/customers/customerspage.dart';
 import 'package:wiseintern/home/homepage.dart';
 import 'package:wiseintern/about/aboutpage.dart';
 import 'package:wiseintern/services/servicespage.dart';
+import 'package:wiseintern/contact/contactpage.dart';
 
 class NavBar extends StatefulWidget {
   // final double opacity;
@@ -292,7 +293,12 @@ class _NavigationBarState extends State<NavBar> {
                   color: Colors.white,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ContactPage()),
+                  );
+              },
             ),
             // SizedBox(
             //   width: 42,

@@ -6,6 +6,8 @@ import 'package:wiseintern/customers/customerspage.dart';
 import 'package:wiseintern/services/servicespage.dart';
 import 'package:wiseintern/products/productspage.dart';
 import 'package:wiseintern/features/pdmanagement.dart';
+import 'package:wiseintern/contact/contactpage.dart';
+import 'package:wiseintern/faq/faqpage.dart';
 // import 'package:wiseintern/home/features.dart';
 // import 'package:wiseintern/home/packagepage.dart';
 // import 'navbar.dart';
@@ -21,15 +23,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:
-          // HomePage(),
-          // AboutPage(),
-          // CustomerPage()
-          // ServicesPage(),
-          ProductPage(),
-      // Pdmanagement()
-      // theme: ThemeData(primarySwatch: Colors.deepPurple),
-    );
+        debugShowCheckedModeBanner: false,
+        home:
+            HomePage(),
+            // AboutPage(),
+            // CustomerPage()
+            // ServicesPage(),
+            // ProductPage(),
+            // Pdmanagement(),
+            // ContactPage(),
+            // FaqPage()
+        // theme: ThemeData(primarySwatch: Colors.deepPurple),
+        );
   }
 }

@@ -543,10 +543,22 @@ class _FooterState extends State<Footer> {
                                               SizedBox(
                                                 width: 10,
                                               ),
-                                              Image.asset("/footer/fb.png"),
-                                              Image.asset("/footer/ig.png"),
-                                              Image.asset("/footer/yt.png"),
-                                              Image.asset("/footer/tiktok.png"),
+                                              InkWell(
+                                                  onTap: () {},
+                                                  child: Image.asset(
+                                                      "/footer/fb.png")),
+                                              InkWell(
+                                                  onTap: () {},
+                                                  child: Image.asset(
+                                                      "/footer/ig.png")),
+                                              InkWell(
+                                                  onTap: () {},
+                                                  child: Image.asset(
+                                                      "/footer/yt.png")),
+                                              InkWell(
+                                                  onTap: () {},
+                                                  child: Image.asset(
+                                                      "/footer/tiktok.png")),
                                             ],
                                           )
                                         ],
@@ -902,34 +914,13 @@ class _FooterState extends State<Footer> {
                                                             height: 25,
                                                             child: Row(
                                                               children: [
-                                                                Container(
-                                                                    width: 25,
-                                                                    height: 25,
-                                                                    child: Image
-                                                                        .asset(
-                                                                      "/footer/fb.png",
-                                                                    )),
-                                                                Padding(
-                                                                  padding: const EdgeInsets
-                                                                          .only(
-                                                                      left: 18),
-                                                                  child:
-                                                                      Container(
-                                                                    width: 1,
-                                                                    height: 20,
-                                                                    color: Colors
-                                                                        .white,
-                                                                  ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: const EdgeInsets
-                                                                          .only(
-                                                                      left: 20),
+                                                                InkWell(
+                                                                  onTap: () {},
                                                                   child: Container(
                                                                       width: 25,
                                                                       height: 25,
                                                                       child: Image.asset(
-                                                                        "/footer/ig.png",
+                                                                        "/footer/fb.png",
                                                                       )),
                                                                 ),
                                                                 Padding(
@@ -948,12 +939,17 @@ class _FooterState extends State<Footer> {
                                                                   padding: const EdgeInsets
                                                                           .only(
                                                                       left: 20),
-                                                                  child: Container(
-                                                                      width: 25,
-                                                                      height: 25,
-                                                                      child: Image.asset(
-                                                                        "/footer/yt.png",
-                                                                      )),
+                                                                  child:
+                                                                      InkWell(
+                                                                    onTap:
+                                                                        () {},
+                                                                    child: Container(
+                                                                        width: 25,
+                                                                        height: 25,
+                                                                        child: Image.asset(
+                                                                          "/footer/ig.png",
+                                                                        )),
+                                                                  ),
                                                                 ),
                                                                 Padding(
                                                                   padding: const EdgeInsets
@@ -971,12 +967,45 @@ class _FooterState extends State<Footer> {
                                                                   padding: const EdgeInsets
                                                                           .only(
                                                                       left: 20),
-                                                                  child: Container(
-                                                                      width: 25,
-                                                                      height: 25,
-                                                                      child: Image.asset(
-                                                                        "/footer/tiktok.png",
-                                                                      )),
+                                                                  child:
+                                                                      InkWell(
+                                                                    onTap:
+                                                                        () {},
+                                                                    child: Container(
+                                                                        width: 25,
+                                                                        height: 25,
+                                                                        child: Image.asset(
+                                                                          "/footer/yt.png",
+                                                                        )),
+                                                                  ),
+                                                                ),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 18),
+                                                                  child:
+                                                                      Container(
+                                                                    width: 1,
+                                                                    height: 20,
+                                                                    color: Colors
+                                                                        .white,
+                                                                  ),
+                                                                ),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 20),
+                                                                  child:
+                                                                      InkWell(
+                                                                    onTap:
+                                                                        () {},
+                                                                    child: Container(
+                                                                        width: 25,
+                                                                        height: 25,
+                                                                        child: Image.asset(
+                                                                          "/footer/tiktok.png",
+                                                                        )),
+                                                                  ),
                                                                 ),
                                                               ],
                                                             ),
