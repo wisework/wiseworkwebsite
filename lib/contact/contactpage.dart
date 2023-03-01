@@ -4,15 +4,15 @@ import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/menu_drawer.dart';
 
 import 'package:wiseintern/home/footer.dart';
-import 'package:wiseintern/customers/banner.dart';
-import 'package:wiseintern/customers/advise.dart';
+import 'package:wiseintern/contact/banner.dart';
+import 'package:wiseintern/contact/address.dart';
 
-class AboutPage extends StatefulWidget {
+class ContactPage extends StatefulWidget {
   @override
-  _AboutPageState createState() => _AboutPageState();
+  _ContactPageState createState() => _ContactPageState();
 }
 
-class _AboutPageState extends State<AboutPage> {
+class _ContactPageState extends State<ContactPage> {
   int _currentIndex = 0;
 
   void onTabTapped(int index) {
@@ -47,11 +47,7 @@ class _AboutPageState extends State<AboutPage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Banner(),
-            
-            Footer()
-          ],
+          children: [BannerPage(), Address(), Footer()],
         ),
       ),
     );

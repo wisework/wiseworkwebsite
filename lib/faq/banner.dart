@@ -42,7 +42,7 @@ class BannerPage extends StatelessWidget {
                               height: 110,
                               // color: Colors.amber,
                               child: Text(
-                                "About Us",
+                                "คำถามที่พบบ่อย",
                                 style: GoogleFonts.ibmPlexSansThai(
                                     fontSize: 96,
                                     fontWeight: FontWeight.w600,
@@ -60,7 +60,7 @@ class BannerPage extends StatelessWidget {
                             // height: Responsive.isDesktop(context) ? 65 : 60,
                             // color: Colors.amber,
                             child: Text(
-                              "“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับกฎหมาย และกฎระเบียบจากหน่วยงานกำกับดูแล\nโดยทีมนักพัฒนา และผู้เชี่ยวชาญมากประสบการณ์”",
+                              "Frequently Asked Questions",
                               style: GoogleFonts.ibmPlexSans(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w500,
@@ -97,9 +97,9 @@ class BannerPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 50),
+                                  padding: const EdgeInsets.only(top: 100),
                                   child: Text(
-                                    "About Us",
+                                    "คำถามที่พบบ่อย",
                                     style: GoogleFonts.ibmPlexSans(
                                         fontSize: 48,
                                         fontWeight: FontWeight.w600,
@@ -110,7 +110,7 @@ class BannerPage extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 20),
                                   child: Text(
-                                    "“เรา คือ ผู้ให้บริการและคำปรึกษาเกี่ยวกับกฎหมาย และกฎระเบียบจากหน่วยงานกำกับดูแล\nโดยทีมนักพัฒนาและผู้เชี่ยวชาญมากประสบการณ์”",
+                                    "Frequently Asked Questions",
                                     style: GoogleFonts.ibmPlexSansThai(
                                         fontSize: 20,
                                         fontWeight: FontWeight.w500,
@@ -147,9 +147,9 @@ class BannerPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 50),
+                                  padding: const EdgeInsets.only(top: 100),
                                   child: Text(
-                                    "About Us",
+                                    "คำถามที่พบบ่อย",
                                     style: GoogleFonts.ibmPlexSans(
                                         fontSize: 48,
                                         fontWeight: FontWeight.w600,
@@ -160,7 +160,7 @@ class BannerPage extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 30),
                                   child: Text(
-                                    "“เรา คือ ผู้ให้บริการและคำปรึกษา\nเกี่ยวกับกฎหมาย และกฎระเบียบ\nจากหน่วยงานกำกับดูแล โดยทีมนักพัฒนา\nและผู้เชี่ยวชาญมากประสบการณ์”",
+                                    "Frequently Asked Questions",
                                     style: GoogleFonts.ibmPlexSansThai(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
