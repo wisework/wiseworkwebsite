@@ -1083,17 +1083,152 @@ class _Register extends State<Register> {
                                                         textAlign:
                                                             TextAlign.start,
                                                       ),
-                                                    )
+                                                    ),
                                                   ],
                                                 ),
                                               ),
-                                            )
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 36),
+                                              child: Center(
+                                                child: SizedBox(
+                                                  width: 377,
+                                                  height: 88,
+                                                  child: ElevatedButton(
+                                                    onPressed: () {},
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          Color.fromARGB(255,
+                                                              57, 128, 237),
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          44.0)),
+                                                    ),
+                                                    child: Text(
+                                                      'ถัดไป',
+                                                      style: GoogleFonts
+                                                          .ibmPlexSans(
+                                                              fontSize: 42,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                              color:
+                                                                  Colors.white),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 25),
+                                              child: Center(
+                                                child: Text(
+                                                  "หรือ",
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          fontSize: 32,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              130,
+                                                              130,
+                                                              130)),
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 25),
+                                              child: Center(
+                                                child: SizedBox(
+                                                  width: 571,
+                                                  height: 91,
+                                                  child: ElevatedButton(
+                                                    onPressed: () {},
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      elevation: 4,
+                                                      backgroundColor:
+                                                          Colors.white,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          44.0)),
+                                                    ),
+                                                    child: Wrap(
+                                                      children: [
+                                                        SizedBox(
+                                                            width: 71,
+                                                            height: 59,
+                                                            child: Image.asset(
+                                                                "/demo/google.png")),
+                                                        SizedBox(
+                                                          width: 438,
+                                                          child: Text(
+                                                            'สมัครใช้งานด้วย Google',
+                                                            style: GoogleFonts
+                                                                .ibmPlexSans(
+                                                                    fontSize:
+                                                                        40,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    color: Colors
+                                                                        .black),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
                                           ],
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
-                                )
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 48,
+                                  ),
+                                  child: Center(
+                                    child: Wrap(
+                                      children: [
+                                        Text(
+                                          'หากคุณมีบัญชีอยู่แล้ว?',
+                                          style: GoogleFonts.ibmPlexSansThai(
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        TextButton(
+                                            onPressed: () {},
+                                            child: Text(
+                                              ' เข้าสู่ระบบ',
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w500,
+                                                color: Color.fromARGB(
+                                                    255, 52, 145, 206),
+                                              ),
+                                            ))
+                                      ],
+                                    ),
+                                  ),
+                                ),
                               ],
                             )
                           ],
