@@ -600,7 +600,114 @@ class _Address extends State<Address> {
               ],
             ),
           ),
-          
+          Container(
+            width: 1440,
+            height: 906,
+            child: Stack(
+              children: [
+                Container(
+                  width: 1440,
+                  height: 906,
+                  color: Colors.white,
+                ),
+                Container(
+                  width: 1440,
+                  height: 906,
+                  child: Image.asset("/contact/map.png"),
+                ),
+                new Positioned(
+                  top: 80,
+                  child: Container(
+                    width: 440,
+                    height: 146,
+                    color: Color.fromARGB(255, 52, 145, 206),
+                    child: Wrap(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 27, top: 15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "The wisework.co.,Ltd.",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white),
+                                textAlign: TextAlign.start,
+                              ),
+                              Text(
+                                "7 Soi Lat Pla Khao 19, Chorakhe Bua\nSubdistrict, Lat Phrao District, Bangkok ",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.white,
+                                ),
+                                textAlign: TextAlign.start,
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 33),
+                          child: SizedBox(
+                            width: 62,
+                            height: 62,
+                            child: Image.asset("/contact/route.png"),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                new Positioned(
+                  top: 239,
+                  child: SizedBox(
+                    width: 439,
+                    height: 74,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.horizontal(
+                                left: Radius.zero, right: Radius.circular(20))),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Wrap(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 75),
+                                child: Container(
+                                  // color: Colors.amber,
+                                  width: 31.61,
+                                  height: 28.33,
+                                  child: Image.asset("/contact/plane.png"),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 30),
+                                child: Text(
+                                  "Get Direction",
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
