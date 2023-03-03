@@ -1234,6 +1234,197 @@ class _Register extends State<Register> {
                           ],
                         ),
                       ),
+                      Container(
+                        width: 1440,
+                        height: 1578,
+                        color: Color.fromARGB(255, 245, 245, 245),
+                        child: Center(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Padding(
+                                  padding: const EdgeInsets.only(top: 104),
+                                  child: Column(
+                                    children: [
+                                      Text("ได้รับความไว้วางใจ",
+                                          style: GoogleFonts.inter(
+                                              color: Color.fromARGB(
+                                                  255, 52, 145, 206),
+                                              fontSize: 48,
+                                              fontWeight: FontWeight.w700)),
+                                      Text("จากองค์กรทั่วประเทศ",
+                                          style: GoogleFonts.inter(
+                                              color: Colors.black,
+                                              fontSize: 48,
+                                              fontWeight: FontWeight.w700)),
+                                    ],
+                                  )),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 60),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 379,
+                                      height: 314,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Colors.white),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 39),
+                                            child: SizedBox(
+                                              width: 100,
+                                              height: 100,
+                                              child:
+                                                  Image.asset("/demo/team.png"),
+                                            ),
+                                          ),
+                                          Text(
+                                            "80+",
+                                            style: GoogleFonts.inter(
+                                                fontSize: 36,
+                                                fontWeight: FontWeight.w700,
+                                                color: Color.fromARGB(
+                                                    255, 52, 145, 206)),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 20),
+                                            child: Text(
+                                              "ธุรกิจ และองค์กรต่างๆ ที่เราได้รับความไว้วางใจ\nให้ wisework ดูแลมากกว่า 80 โครงการ",
+                                              style: GoogleFonts.inter(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: Color.fromARGB(
+                                                      255, 0, 0, 0)),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 31, right: 31),
+                                      child: Container(
+                                        width: 379,
+                                        height: 314,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            color: Colors.white),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 39),
+                                              child: SizedBox(
+                                                width: 100,
+                                                height: 100,
+                                                child: Image.asset(
+                                                    "/demo/colab.png"),
+                                              ),
+                                            ),
+                                            Text(
+                                              "10 ปี",
+                                              style: GoogleFonts.inter(
+                                                  fontSize: 36,
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Color.fromARGB(
+                                                      255, 52, 145, 206)),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 20),
+                                              child: Text(
+                                                "ทีมงานมากประสบการณ์ และเชี่ยวชาญ\nในวงการ Cyber Security กว่า 10 ปี",
+                                                style: GoogleFonts.inter(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: Color.fromARGB(
+                                                        255, 0, 0, 0)),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      width: 379,
+                                      height: 314,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Colors.white),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 39),
+                                            child: SizedBox(
+                                              width: 100,
+                                              height: 100,
+                                              child:
+                                                  Image.asset("/demo/goal.png"),
+                                            ),
+                                          ),
+                                          Text(
+                                            "24 ชั่วโมง",
+                                            style: GoogleFonts.inter(
+                                                fontSize: 36,
+                                                fontWeight: FontWeight.w700,
+                                                color: Color.fromARGB(
+                                                    255, 52, 145, 206)),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 20),
+                                            child: Text(
+                                              "บริการดูแลระดับ Premium Support\nโดยทีมงานในประเทศไทยตลอด 24 ชั่วโมง",
+                                              style: GoogleFonts.inter(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: Color.fromARGB(
+                                                      255, 0, 0, 0)),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 130),
+                                child: Container(
+                                  width: 1170,
+                                  height: 760,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Colors.white),
+                                  child: SizedBox(
+                                      width: 1161,
+                                      height: 751,
+                                      child:
+                                          Image.asset("/demo/dashboard.png")),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 ),
