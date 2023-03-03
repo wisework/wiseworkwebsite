@@ -5,6 +5,7 @@ import 'package:wiseintern/about/aboutpage.dart';
 import 'package:wiseintern/customers/customerspage.dart';
 import 'package:wiseintern/services/servicespage.dart';
 import 'package:wiseintern/products/productspage.dart';
+import 'package:wiseintern/producttable/producttablepage.dart';
 import 'package:wiseintern/features/pdmanagement.dart';
 import 'package:wiseintern/contact/contactpage.dart';
 import 'package:wiseintern/faq/faqpage.dart';
@@ -31,10 +32,11 @@ class MyApp extends StatelessWidget {
           // CustomerPage(),
           // ServicesPage(),
           // ProductPage(),
-          // Pdmanagement(),
-          // ContactPage(),
-          // FaqPage(),
-          DemoPage(),
+          ProductTablePage(),
+      // Pdmanagement(),
+      // ContactPage(),
+      // FaqPage(),
+      // DemoPage(),
       // theme: ThemeData(primarySwatch: Colors.deepPurple),
       // routes: {
       //   '/': (context) => HomePage(),
