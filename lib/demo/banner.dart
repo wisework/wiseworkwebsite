@@ -130,13 +130,13 @@ class BannerPage extends StatelessWidget {
                           Center(
                             child: Container(
                               width: 375,
-                              height: 344,
+                              height: 300,
                               // color: Colors.indigo,
                             ),
                           ),
                           Container(
                             width: 1440,
-                            height: 344,
+                            height: 300,
                             child: Image.asset(
                               "/about/banner/banner.png",
                               fit: BoxFit.fill,
@@ -151,7 +151,7 @@ class BannerPage extends StatelessWidget {
                                   child: Text(
                                     "ทดลองใช้งานฟรี",
                                     style: GoogleFonts.ibmPlexSans(
-                                        fontSize: 48,
+                                        fontSize: 40,
                                         fontWeight: FontWeight.w600,
                                         color: Colors.white),
                                     textAlign: TextAlign.center,

@@ -3459,10 +3459,10 @@ class _Register extends State<Register> {
                                                   carouselController:
                                                       _controller,
                                                   options: CarouselOptions(
-                                                    // viewportFraction: 0.5,
+                                                    viewportFraction: 0.87,
                                                     height: 260,
                                                     // enlargeCenterPage: true,
-                                                    autoPlay: false,
+                                                    autoPlay: true,
                                                     onPageChanged:
                                                         (index, reason) {
                                                       setState(() {
