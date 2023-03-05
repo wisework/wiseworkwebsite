@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wiseintern/navbar.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/menu_drawer.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/demo/banner.dart';
@@ -34,14 +35,38 @@ class _DemoPageState extends State<DemoPage> {
           title: !Responsive.isDesktop(context)
               ? Padding(
                   padding: const EdgeInsets.all(20),
-                  child: SizedBox(
-                    height: 60,
-                    width: 100,
-                    child: Image.asset(
-                      'logo.png',
-                    ),
-                  ),
-                )
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        width: 100,
+                        child: Image.asset(
+                          'logo.png',
+                        ),
+                      ),
+                      // SizedBox(
+                      //   width: 195,
+                      //   height: 50,
+                      //   child: ElevatedButton(
+                      //     onPressed: () {},
+                      //     style: ElevatedButton.styleFrom(
+                      //       backgroundColor:
+                      //           Color.fromARGB(255, 232, 242, 254),
+                      //       side: BorderSide(width: 3, color: Colors.blue),
+                      //       shape: RoundedRectangleBorder(
+                      //           borderRadius: BorderRadius.circular(30.0)),
+                      //     ),
+                      //     child: Text(
+                      //       'ทดลองใช้ฟรี',
+                      //       style: GoogleFonts.ibmPlexSansThai(
+                      //           color: Color.fromARGB(255, 57, 128, 237),
+                      //           fontSize: 20,
+                      //           fontWeight: FontWeight.w600),
+                      //     ),
+                      //   ),
+                      // ),
+                    ],
+                  ))
               : NavBar()),
       drawer: MenuDrawer(),
       body: SingleChildScrollView(

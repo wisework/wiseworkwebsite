@@ -300,67 +300,89 @@ class _NavigationBarState extends State<NavBar> {
                 );
               },
             ),
-            // SizedBox(
-            //   width: 42,
-            // ),
-            Container(
-              width: 103,
-              height: 38,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: TextButton(
-                onPressed: () {
-                  // Perform some action
-                },
-                child: Text(
-                  'Search',
-                  style: GoogleFonts.ibmPlexSansThai(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600),
-                ),
-                // Changes the background color
-              ),
+            SizedBox(
+              width: 42,
             ),
             SizedBox(
-              width: 29,
-            ),
-            Container(
-              width: 90,
-              height: 38,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 2),
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: TextButton(
-                onPressed: () {
-                  // Perform some action
-                },
-
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.language,
-                      color: Colors.white,
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text(
-                      'TH',
-                      style: GoogleFonts.ibmPlexSansThai(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600),
-                    ),
-                  ],
+              width: 195,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 232, 242, 254),
+                  side: BorderSide(width: 3, color: Colors.blue),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0)),
                 ),
-                // Changes the background color
+                child: Text(
+                  'ทดลองใช้ฟรี',
+                  style: GoogleFonts.ibmPlexSansThai(
+                      color: Color.fromARGB(255, 57, 128, 237),
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600),
+                ),
               ),
             ),
+            // Container(
+            //   width: 195,
+            //   height: 50,
+            //   decoration: BoxDecoration(
+            //       color: Color.fromARGB(255, 232, 242, 254),
+            //       borderRadius: BorderRadius.circular(30),
+            //       border: Border.all(
+            //           color: Color.fromARGB(255, 57, 128, 237), width: 3)),
+            //   child: TextButton(
+            //     onPressed: () {
+            //       // Perform some action
+            //     },
+            //     child: Text(
+            //       'ทดลองใช้ฟรี',
+            //       style: GoogleFonts.ibmPlexSansThai(
+            //           color: Color.fromARGB(255, 57, 128, 237),
+            //           fontSize: 20,
+            //           fontWeight: FontWeight.w600),
+            //     ),
+            //     // Changes the background color
+            //   ),
+            // ),
+
+            // SizedBox(
+            //   width: 29,
+            // ),
+            // Container(
+            //   width: 90,
+            //   height: 38,
+            //   decoration: BoxDecoration(
+            //     border: Border.all(color: Colors.white, width: 2),
+            //     borderRadius: BorderRadius.circular(30),
+            //   ),
+            //   child: TextButton(
+            //     onPressed: () {
+            //       // Perform some action
+            //     },
+
+            //     child: Row(
+            //       mainAxisAlignment: MainAxisAlignment.center,
+            //       children: [
+            //         Icon(
+            //           Icons.language,
+            //           color: Colors.white,
+            //         ),
+            //         SizedBox(
+            //           width: 5,
+            //         ),
+            //         Text(
+            //           'TH',
+            //           style: GoogleFonts.ibmPlexSansThai(
+            //               color: Colors.white,
+            //               fontSize: 16,
+            //               fontWeight: FontWeight.w600),
+            //         ),
+            //       ],
+            //     ),
+            //     // Changes the background color
+            //   ),
+            // ),
           ],
         )),
       ),
