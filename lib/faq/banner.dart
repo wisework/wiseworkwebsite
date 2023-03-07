@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 
-class BannerPage extends StatelessWidget {
-  const BannerPage({super.key});
+class BannerPage extends StatefulWidget {
+  @override
+  _BannerState createState() => _BannerState();
+}
+
+class _BannerState extends State<BannerPage> {
+  String _searchQuery = '';
 
   @override
   Widget build(BuildContext context) {
@@ -17,163 +22,385 @@ class BannerPage extends StatelessWidget {
                     Center(
                       child: Container(
                         width: 1440,
-                        height: 304,
-                        // color: Colors.indigo,
+                        height: 341,
+                        color: Color.fromARGB(255, 232, 242, 254),
                       ),
                     ),
-                    Center(
-                      child: Container(
-                        width: 1440,
-                        height: 304,
-                        child: Image.asset(
-                          "/about/banner/banner.png",
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                    Center(
-                      child: Column(
+                    new Positioned(
+                      top: 53,
+                      left: 150,
+                      child: Wrap(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(
-                                top: 40, left: 224, right: 224),
+                            padding: const EdgeInsets.only(top: 10),
                             child: Container(
-                              width: 984,
-                              height: 110,
+                              width: 60,
+                              height: 5,
+                              decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 57, 128, 237),
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 57, 128, 237),
+                                      width: 5)),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Container(
                               // color: Colors.amber,
+                              height: 20,
                               child: Text(
-                                "คำถามที่พบบ่อย",
-                                style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 96,
+                                "FAQ",
+                                style: GoogleFonts.poppins(
                                     fontWeight: FontWeight.w600,
-                                    color: Colors.white),
-                                textAlign: TextAlign.center,
+                                    fontSize: 16,
+                                    color: Color.fromARGB(255, 57, 128, 237)),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          Container(
-                            width: 750,
-                            // width: 806.91,
-                            // height: Responsive.isDesktop(context) ? 65 : 60,
-                            // color: Colors.amber,
-                            child: Text(
-                              "Frequently Asked Questions",
-                              style: GoogleFonts.ibmPlexSans(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                    new Positioned(
+                      top: 35,
+                      left: 350,
+                      child: Container(
+                        width: 270,
+                        height: 270,
+                        child: Image.asset("/faq/qa.png"),
+                      ),
+                    ),
+                    new Positioned(
+                      left: 700,
+                      top: 85,
+                      child: Center(
+                        child: Column(
+                          children: [
+                            Text(
+                              "FAQs",
+                              style: GoogleFonts.inter(
+                                  fontSize: 11.77,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color.fromARGB(255, 83, 104, 106)),
+                            ),
+                            Text(
+                              "Ask us anything",
+                              style: GoogleFonts.inter(
+                                  fontSize: 48,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color.fromARGB(255, 5, 45, 97)),
                               textAlign: TextAlign.center,
                             ),
-                          ),
-                        ],
+                            Text(
+                              "มีข้อสงสัยหรือต้องการปรึกษาเกี่ยวกับ wisework เรายินดีให้คำแนะนำ",
+                              style: GoogleFonts.inter(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromARGB(255, 5, 45, 97)),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 35),
+                              child: SearchBox(
+                                onChanged: (query) {
+                                  setState(() {
+                                    _searchQuery = query;
+                                  });
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
                 )
               : Responsive.isTablet(context)
-                  ? Center(
-                      child: Stack(
-                        children: [
-                          Center(
-                            child: Container(
-                              width: 768,
-                              height: 305,
-                              // color: Colors.indigo,
-                            ),
-                          ),
-                          Container(
-                            width: 1440,
-                            height: 305,
-                            child: Image.asset(
-                              "/about/banner/banner.png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                          Center(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                  ? Container(
+                      width: 1440,
+                      color: Color.fromARGB(255, 232, 242, 254),
+                      child: Center(
+                        child: Container(
+                          width: 768,
+                          child: Center(
+                            child: Stack(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 100),
-                                  child: Text(
-                                    "คำถามที่พบบ่อย",
-                                    style: GoogleFonts.ibmPlexSans(
-                                        fontSize: 48,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.white),
-                                    textAlign: TextAlign.center,
+                                Center(
+                                  child: Container(
+                                    width: 768,
+                                    height: 569,
+                                    color: Color.fromARGB(255, 232, 242, 254),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 20),
-                                  child: Text(
-                                    "Frequently Asked Questions",
-                                    style: GoogleFonts.ibmPlexSansThai(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.white),
-                                    textAlign: TextAlign.center,
+                                  padding:
+                                      const EdgeInsets.only(top: 65, left: 40),
+                                  child: Wrap(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 10),
+                                        child: Container(
+                                          width: 60,
+                                          height: 5,
+                                          decoration: BoxDecoration(
+                                              color: Color.fromARGB(
+                                                  255, 57, 128, 237),
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                              border: Border.all(
+                                                  color: Color.fromARGB(
+                                                      255, 57, 128, 237),
+                                                  width: 5)),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 10),
+                                        child: Container(
+                                          // color: Colors.amber,
+                                          height: 20,
+                                          child: Text(
+                                            "FAQ",
+                                            style: GoogleFonts.poppins(
+                                                fontWeight: FontWeight.w600,
+                                                fontSize: 16,
+                                                color: Color.fromARGB(
+                                                    255, 57, 128, 237)),
+                                          ),
+                                        ),
+                                      )
+                                    ],
                                   ),
-                                )
+                                ),
+                                Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(top: 35),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        SizedBox(
+                                            width: 270,
+                                            height: 270,
+                                            child: Image.asset("/faq/qa.png")),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 50),
+                                          child: Text(
+                                            "FAQs",
+                                            style: GoogleFonts.inter(
+                                                fontSize: 11.77,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color.fromARGB(
+                                                    255, 83, 104, 106)),
+                                          ),
+                                        ),
+                                        Text(
+                                          "Ask us anything",
+                                          style: GoogleFonts.inter(
+                                              fontSize: 48,
+                                              fontWeight: FontWeight.w600,
+                                              color: Color.fromARGB(
+                                                  255, 5, 45, 97)),
+                                        ),
+                                        Text(
+                                          "มีข้อสงสัยหรือต้องการปรึกษาเกี่ยวกับ wisework เรายินดีให้คำแนะนำ",
+                                          style: GoogleFonts.inter(
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.w400,
+                                              color: Color.fromARGB(
+                                                  255, 5, 45, 97)),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 30),
+                                          child: SearchBox(
+                                            onChanged: (query) {
+                                              setState(() {
+                                                _searchQuery = query;
+                                              });
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
-                        ],
+                        ),
                       ),
                     )
-                  : Center(
-                      child: Stack(
-                        children: [
-                          Center(
-                            child: Container(
-                              width: 375,
-                              height: 344,
-                              // color: Colors.indigo,
-                            ),
-                          ),
-                          Container(
-                            width: 1440,
-                            height: 344,
-                            child: Image.asset(
-                              "/about/banner/banner.png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                          Center(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                  : Container(
+                      width: 1440,
+                      color: Color.fromARGB(255, 232, 242, 254),
+                      child: Center(
+                        child: Container(
+                          width: 375,
+                          child: Center(
+                            child: Stack(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 100),
-                                  child: Text(
-                                    "คำถามที่พบบ่อย",
-                                    style: GoogleFonts.ibmPlexSans(
-                                        fontSize: 48,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.white),
-                                    textAlign: TextAlign.center,
+                                Center(
+                                  child: Container(
+                                    width: 375,
+                                    height: 665,
+                                    // color: Colors.indigo,
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 30),
-                                  child: Text(
-                                    "Frequently Asked Questions",
-                                    style: GoogleFonts.ibmPlexSansThai(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.white),
-                                    textAlign: TextAlign.center,
+                                  padding: const EdgeInsets.only(
+                                    top: 47,
                                   ),
-                                )
+                                  child: Wrap(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 10),
+                                        child: Container(
+                                          width: 60,
+                                          height: 5,
+                                          decoration: BoxDecoration(
+                                              color: Color.fromARGB(
+                                                  255, 57, 128, 237),
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                              border: Border.all(
+                                                  color: Color.fromARGB(
+                                                      255, 57, 128, 237),
+                                                  width: 5)),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 10),
+                                        child: Container(
+                                          // color: Colors.amber,
+                                          height: 20,
+                                          child: Text(
+                                            "FAQ",
+                                            style: GoogleFonts.poppins(
+                                                fontWeight: FontWeight.w600,
+                                                fontSize: 16,
+                                                color: Color.fromARGB(
+                                                    255, 57, 128, 237)),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Center(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(top: 109),
+                                        child: SizedBox(
+                                            width: 270,
+                                            height: 270,
+                                            child: Image.asset("/faq/qa.png")),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 50),
+                                        child: Text(
+                                          "FAQs",
+                                          style: GoogleFonts.inter(
+                                              fontSize: 11.77,
+                                              fontWeight: FontWeight.w600,
+                                              color: Color.fromARGB(
+                                                  255, 83, 104, 106)),
+                                        ),
+                                      ),
+                                      Text(
+                                        "Ask us anything",
+                                        style: GoogleFonts.inter(
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.w600,
+                                            color:
+                                                Color.fromARGB(255, 5, 45, 97)),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 17),
+                                        child: Text(
+                                          "มีข้อสงสัยหรือต้องการปรึกษาเกี่ยวกับ\nwisework เรายินดีให้คำแนะนำ",
+                                          style: GoogleFonts.inter(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w400,
+                                              color: Color.fromARGB(
+                                                  255, 5, 45, 97)),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 30),
+                                        child: SearchBox(
+                                          onChanged: (query) {
+                                            setState(() {
+                                              _searchQuery = query;
+                                            });
+                                          },
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
                           ),
-                        ],
+                        ),
                       ),
                     )),
+    );
+  }
+}
+
+class SearchBox extends StatefulWidget {
+  final ValueChanged<String> onChanged;
+
+  const SearchBox({Key? key, required this.onChanged}) : super(key: key);
+
+  @override
+  _SearchBoxState createState() => _SearchBoxState();
+}
+
+class _SearchBoxState extends State<SearchBox> {
+  final TextEditingController _controller = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: Responsive.isDesktop(context)
+          ? 531
+          : Responsive.isTablet(context)
+              ? 531
+              : 236,
+      height: Responsive.isDesktop(context)
+          ? 50
+          : Responsive.isTablet(context)
+              ? 36
+              : 36,
+      child: TextField(
+        controller: _controller,
+        cursorColor: Colors.blueAccent,
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.only(top: 2),
+          hoverColor: Colors.white,
+          filled: true,
+          fillColor: Colors.white,
+          hintText: 'Search here',
+          hintStyle: GoogleFonts.inter(
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+              color: Color.fromARGB(255, 183, 197, 204)),
+          prefixIcon: Icon(Icons.search),
+          border: OutlineInputBorder(
+            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
+        onChanged: widget.onChanged,
+      ),
     );
   }
 }

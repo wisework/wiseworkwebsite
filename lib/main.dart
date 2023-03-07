@@ -29,12 +29,12 @@ class MyApp extends StatelessWidget {
       home:
           // HomePage(),
           // AboutPage(),
-          CustomerPage(),
+          // CustomerPage(),
           // ServicesPage(),
           // ProductPage(),
           // Pdmanagement(),
           // ContactPage(),
-      // FaqPage(),
+      FaqPage(),
       // DemoPage(),
       // theme: ThemeData(primarySwatch: Colors.deepPurple),
       // routes: {
