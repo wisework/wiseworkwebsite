@@ -5,7 +5,6 @@ import 'package:wiseintern/menu_drawer.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:wiseintern/home/footer.dart';
-import 'package:wiseintern/demo/banner.dart';
 import 'package:wiseintern/demo/register.dart';
 
 class DemoPage extends StatefulWidget {
@@ -72,7 +71,7 @@ class _DemoPageState extends State<DemoPage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [BannerPage(), Register(), Footer()],
+          children: [Register(), Footer()],
         ),
       ),
     );

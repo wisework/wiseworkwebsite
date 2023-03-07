@@ -4,7 +4,6 @@ import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/menu_drawer.dart';
 
 import 'package:wiseintern/home/footer.dart';
-import 'package:wiseintern/contact/banner.dart';
 import 'package:wiseintern/contact/address.dart';
 
 class ContactPage extends StatefulWidget {
@@ -47,7 +46,9 @@ class _ContactPageState extends State<ContactPage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [BannerPage(), Address(), Footer()],
+          children: [
+          Address(), 
+          Footer()],
         ),
       ),
     );

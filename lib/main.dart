@@ -33,9 +33,9 @@ class MyApp extends StatelessWidget {
           // ServicesPage(),
           // ProductPage(),
           // Pdmanagement(),
-          // ContactPage(),
+          ContactPage(),
       // FaqPage(),
-      DemoPage(),
+      // DemoPage(),
       // theme: ThemeData(primarySwatch: Colors.deepPurple),
       // routes: {
       //   '/': (context) => HomePage(),
