@@ -29,11 +29,11 @@ class MyApp extends StatelessWidget {
       home:
           // HomePage(),
           // AboutPage(),
-          // CustomerPage(),
+          CustomerPage(),
           // ServicesPage(),
           // ProductPage(),
           // Pdmanagement(),
-          ContactPage(),
+          // ContactPage(),
       // FaqPage(),
       // DemoPage(),
       // theme: ThemeData(primarySwatch: Colors.deepPurple),

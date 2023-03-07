@@ -360,22 +360,107 @@ class _CustomerState extends State<Customer> {
             margin: EdgeInsets.all(00.0),
             child: Center(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  Responsive.isDesktop(context)
+                      ? Padding(
+                          padding: const EdgeInsets.only(top: 68, right: 1000),
+                          child: Wrap(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Container(
+                                  width: 60,
+                                  height: 5,
+                                  decoration: BoxDecoration(
+                                      color: Color.fromARGB(255, 57, 128, 237),
+                                      borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(
+                                          color:
+                                              Color.fromARGB(255, 57, 128, 237),
+                                          width: 5)),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20),
+                                child: Container(
+                                  // color: Colors.amber,
+                                  height: 20,
+                                  child: Text(
+                                    "Get A Free Demo",
+                                    style: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 16,
+                                        color:
+                                            Color.fromARGB(255, 57, 128, 237)),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      : Responsive.isTablet(context)
+                          ? Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 50, right: 450),
+                              child: Wrap(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 10),
+                                    child: Container(
+                                      width: 60,
+                                      height: 5,
+                                      decoration: BoxDecoration(
+                                          color:
+                                              Color.fromARGB(255, 57, 128, 237),
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          border: Border.all(
+                                              color: Color.fromARGB(
+                                                  255, 57, 128, 237),
+                                              width: 5)),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 20),
+                                    child: Container(
+                                      // color: Colors.amber,
+                                      height: 20,
+                                      child: Text(
+                                        "Get A Free Demo",
+                                        style: GoogleFonts.poppins(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 16,
+                                            color: Color.fromARGB(
+                                                255, 57, 128, 237)),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          : Container(),
                   SizedBox(
-                    height: Responsive.isDesktop(context) ? 108 : 69,
+                    height: Responsive.isDesktop(context) ? 35 : 48,
                   ),
-                  Text(
-                    'ลูกค้าคนสำคัญของเรา',
-                    style: GoogleFonts.nunito(
-                      fontWeight: FontWeight.w700,
-                      color: Color.fromARGB(255, 5, 45, 97),
-                      fontSize: Responsive.isDesktop(context)
-                          ? 48
-                          : Responsive.isTablet(context)
-                              ? 36
-                              : 24,
-                    ),
-                  ),
+                  Responsive.isMobile(context)
+                      ? Padding(
+                          padding: const EdgeInsets.only(right: 120),
+                          child: Text('ลูกค้าคนสำคัญของเรา',
+                              style: GoogleFonts.nunito(
+                                fontWeight: FontWeight.w700,
+                                color: Color.fromARGB(255, 5, 45, 97),
+                                fontSize: 24,
+                              )),
+                        )
+                      : Text(
+                          'ลูกค้าคนสำคัญของเรา',
+                          style: GoogleFonts.nunito(
+                            fontWeight: FontWeight.w700,
+                            color: Color.fromARGB(255, 5, 45, 97),
+                            fontSize: Responsive.isDesktop(context) ? 48 : 36,
+                          ),
+                        ),
                   SizedBox(
                     height: Responsive.isDesktop(context) ? 16 : 27,
                   ),
@@ -407,9 +492,11 @@ class _CustomerState extends State<Customer> {
                                     ? 20
                                     : 16,
                           ),
-                          textAlign: Responsive.isMobile(context)
-                              ? TextAlign.start
-                              : TextAlign.center,
+                          textAlign: Responsive.isDesktop(context)
+                              ? TextAlign.center
+                              : Responsive.isTablet(context)
+                                  ? TextAlign.center
+                                  : TextAlign.start,
                         ),
                       ),
                     ],

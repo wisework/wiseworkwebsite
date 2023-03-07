@@ -21,16 +21,16 @@ class BannerCus extends StatelessWidget {
                         // color: Colors.indigo,
                       ),
                     ),
-                    Center(
-                      child: Container(
-                        width: 1440,
-                        height: 304,
-                        child: Image.asset(
-                          "/about/banner/banner.png",
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
+                    // Center(
+                    //   child: Container(
+                    //     width: 1440,
+                    //     height: 304,
+                    //     child: Image.asset(
+                    //       "/about/banner/banner.png",
+                    //       fit: BoxFit.fill,
+                    //     ),
+                    //   ),
+                    // ),
                     Center(
                       child: Column(
                         children: [
@@ -42,11 +42,11 @@ class BannerCus extends StatelessWidget {
                               height: 110,
                               // color: Colors.amber,
                               child: Text(
-                                "Our Customers",
-                                style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 96,
+                                "ลูกค้าคนสำคัญของเรา",
+                                style: GoogleFonts.josefinSans(
+                                    fontSize: 48,
                                     fontWeight: FontWeight.w600,
-                                    color: Colors.white),
+                                    color: Color.fromARGB(255, 5, 45, 97)),
                                 textAlign: TextAlign.center,
                               ),
                             ),
@@ -60,11 +60,11 @@ class BannerCus extends StatelessWidget {
                             // height: Responsive.isDesktop(context) ? 65 : 60,
                             // color: Colors.amber,
                             child: Text(
-                              "จากประสบการณ์ของทีมผู้ให้คำปรึกษามากกว่า 50+ โครงการ\nที่ได้รับความไว้วางใจให้ดูแลธุรกิจทั้งหน่วยงานองค์ภาครัฐ และองค์กรเอกชน ",
+                              "ด้วยประสบการณ์ Software Solutions ครบวงจร เราได้รับความไว้วางใจให้ดูแล\nธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน ตลอดจนธุรกิจขนาดเล็ก หรือ SME",
                               style: GoogleFonts.ibmPlexSans(
                                   fontSize: 20,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white),
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromARGB(255, 108, 108, 114)),
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -84,14 +84,14 @@ class BannerCus extends StatelessWidget {
                               // color: Colors.indigo,
                             ),
                           ),
-                          Container(
-                            width: 1440,
-                            height: 305,
-                            child: Image.asset(
-                              "/about/banner/banner.png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
+                          // Container(
+                          //   width: 1440,
+                          //   height: 305,
+                          //   child: Image.asset(
+                          //     "/about/banner/banner.png",
+                          //     fit: BoxFit.fill,
+                          //   ),
+                          // ),
                           Center(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -99,22 +99,23 @@ class BannerCus extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 50),
                                   child: Text(
-                                    "Our Customers",
-                                    style: GoogleFonts.ibmPlexSans(
-                                        fontSize: 48,
+                                    "ลูกค้าคนสำคัญของเรา",
+                                    style: GoogleFonts.josefinSans(
+                                        fontSize: 36,
                                         fontWeight: FontWeight.w600,
-                                        color: Colors.white),
+                                        color: Color.fromARGB(255, 5, 45, 97)),
                                     textAlign: TextAlign.center,
                                   ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 20),
                                   child: Text(
-                                    "จากประสบการณ์ของทีมผู้ให้คำปรึกษามากกว่า 50+ โครงการ\nที่ได้รับความไว้วางใจให้ดูแลธุรกิจทั้งหน่วยงานองค์ภาครัฐ และองค์กรเอกชน ",
+                                    "ด้วยประสบการณ์ Software Solutions ครบวงจร เราได้รับความไว้วางใจให้ดูแล\nธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน ตลอดจนธุรกิจขนาดเล็ก หรือ SME  ",
                                     style: GoogleFonts.ibmPlexSansThai(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.white),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400,
+                                        color:
+                                            Color.fromARGB(255, 108, 108, 114)),
                                     textAlign: TextAlign.center,
                                   ),
                                 )
@@ -134,14 +135,14 @@ class BannerCus extends StatelessWidget {
                               // color: Colors.indigo,
                             ),
                           ),
-                          Container(
-                            width: 1440,
-                            height: 344,
-                            child: Image.asset(
-                              "/about/banner/banner.png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
+                          // Container(
+                          //   width: 1440,
+                          //   height: 344,
+                          //   child: Image.asset(
+                          //     "/about/banner/banner.png",
+                          //     fit: BoxFit.fill,
+                          //   ),
+                          // ),
                           Center(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -149,22 +150,23 @@ class BannerCus extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 50),
                                   child: Text(
-                                    "Our Customers",
-                                    style: GoogleFonts.ibmPlexSans(
-                                        fontSize: 48,
+                                    "ลูกค้าคนสำคัญของเรา",
+                                    style: GoogleFonts.josefinSans(
+                                        fontSize: 24,
                                         fontWeight: FontWeight.w600,
-                                        color: Colors.white),
+                                        color: Color.fromARGB(255, 5, 45, 97)),
                                     textAlign: TextAlign.center,
                                   ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 30),
                                   child: Text(
-                                    "จากประสบการณ์ของทีมผู้ให้คำปรึกษา\nมากกว่า 50+ โครงการที่ได้รับความไว้วางใจ\nให้ดูแลธุรกิจทั้งหน่วยงานองค์ภาครัฐ และองค์กรเอกชน ",
+                                    "ด้วยประสบการณ์ Software Solutions ครบวงจร\nเราได้รับความไว้วางใจให้ดูแล\nธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน\nตลอดจนธุรกิจขนาดเล็ก หรือ SME",
                                     style: GoogleFonts.ibmPlexSansThai(
                                         fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.white),
+                                        fontWeight: FontWeight.w400,
+                                        color:
+                                            Color.fromARGB(255, 108, 108, 114)),
                                     textAlign: TextAlign.center,
                                   ),
                                 )

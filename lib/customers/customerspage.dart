@@ -48,10 +48,11 @@ class _CustomerPageState extends State<CustomerPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            BannerCus(), 
+            // BannerCus(),
             // Advise(),
             Customer(),
-            Footer()],
+            Footer()
+          ],
         ),
       ),
     );

@@ -665,7 +665,7 @@ class _Address extends State<Address> {
                                                       ),
                                                     ),
                                                     child: Text(
-                                                      'Call us now',
+                                                      'โทรเลย',
                                                       style: GoogleFonts
                                                           .ibmPlexSans(
                                                               fontSize: 16,
