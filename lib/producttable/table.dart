@@ -905,24 +905,26 @@ class _CompareTableState extends State<CompareTable> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 44, right: 44),
-                          child: Container(
+                          child: SizedBox(
                             width: 218,
                             height: 64,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                width: 2.0,
-                                color: Color.fromARGB(255, 75, 195, 211),
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              style: OutlinedButton.styleFrom(
+                                side: BorderSide(
+                                  width: 2.0,
+                                  color: Color.fromARGB(255, 75, 195, 211),
+                                ),
+                                backgroundColor:
+                                    Color.fromARGB(199, 243, 246, 249),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
                               ),
-                              color: Color.fromARGB(199, 243, 246,
-                                  249), // set the background color
-                              borderRadius: BorderRadius.circular(
-                                  30), // set the border radius
-                            ),
-                            child: Center(
                               child: Text(
                                 'Buy Now',
                                 style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 22,
+                                    fontSize: 20,
                                     fontWeight: FontWeight.w600,
                                     color: Color.fromARGB(255, 0, 0, 0)),
                               ),
@@ -931,20 +933,22 @@ class _CompareTableState extends State<CompareTable> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 22, right: 22),
-                          child: Container(
+                          child: SizedBox(
                             width: 218,
                             height: 64,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                width: 2.0,
-                                color: Color.fromARGB(255, 75, 195, 211),
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              style: OutlinedButton.styleFrom(
+                                side: BorderSide(
+                                  width: 2.0,
+                                  color: Color.fromARGB(255, 75, 195, 211),
+                                ),
+                                backgroundColor:
+                                    Color.fromARGB(199, 243, 246, 249),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
                               ),
-                              color: Color.fromARGB(199, 243, 246,
-                                  249), // set the background color
-                              borderRadius: BorderRadius.circular(
-                                  30), // set the border radius
-                            ),
-                            child: Center(
                               child: Text(
                                 'Buy Now',
                                 style: GoogleFonts.ibmPlexSansThai(
@@ -957,20 +961,22 @@ class _CompareTableState extends State<CompareTable> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 44, right: 44),
-                          child: Container(
+                          child: SizedBox(
                             width: 218,
                             height: 64,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                width: 2.0,
-                                color: Color.fromARGB(255, 75, 195, 211),
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              style: OutlinedButton.styleFrom(
+                                side: BorderSide(
+                                  width: 2.0,
+                                  color: Color.fromARGB(255, 75, 195, 211),
+                                ),
+                                backgroundColor:
+                                    Color.fromARGB(199, 243, 246, 249),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
                               ),
-                              color: Color.fromARGB(199, 243, 246,
-                                  249), // set the background color
-                              borderRadius: BorderRadius.circular(
-                                  30), // set the border radius
-                            ),
-                            child: Center(
                               child: Text(
                                 'Buy Now',
                                 style: GoogleFonts.ibmPlexSansThai(
