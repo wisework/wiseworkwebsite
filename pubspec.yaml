@@ -88,6 +88,7 @@ flutter:
   - assets/packages/rainbow_cloud.png
   - assets/packages/record.png
   - assets/packages/lock.png
+  - assets/packages/cross.png
 
   - assets/customer/nia.png
   - assets/customer/Nikhom.png
