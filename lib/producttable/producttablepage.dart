@@ -4,6 +4,7 @@ import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/menu_drawer.dart';
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/producttable/compare.dart';
+import 'package:wiseintern/producttable/table.dart';
 import 'package:wiseintern/home/faq.dart';
 
 class ProductTablePage extends StatefulWidget {
@@ -46,7 +47,7 @@ class _ProductTablePageState extends State<ProductTablePage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [Compare(), FAQ(), Footer()],
+          children: [Compare(), CompareTable(), FAQ(), Footer()],
         ),
       ),
     );
