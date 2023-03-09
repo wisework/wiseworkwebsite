@@ -89,7 +89,6 @@ flutter:
   - assets/packages/record.png
   - assets/packages/lock.png
   - assets/packages/cross.png
-  - assets/packages/check.svg
 
   - assets/customer/nia.png
   - assets/customer/Nikhom.png
