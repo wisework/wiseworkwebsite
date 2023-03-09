@@ -454,7 +454,7 @@ class _CompareTableState extends State<CompareTable> {
                                 ), // set the border radius
                               ),
                               child: Transform.translate(
-                                offset: Offset(-10, 0),
+                                offset: Offset(-10, 3),
                                 child: Text(
                                   textAlign: TextAlign.center,
                                   'Express',
@@ -475,17 +475,20 @@ class _CompareTableState extends State<CompareTable> {
                               255, 75, 195, 211), // set the background color
                           // set the border radius
 
-                          child: Text(
-                            textAlign: TextAlign.center,
-                            'Standard',
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 32,
-                                fontWeight: FontWeight.w600,
-                                color: Color.fromARGB(255, 0, 0, 0)),
+                          child: Transform.translate(
+                            offset: Offset(0, 3),
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              'Standard',
+                              style: GoogleFonts.ibmPlexSansThai(
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color.fromARGB(255, 0, 0, 0)),
+                            ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(right: 20),
+                          padding: const EdgeInsets.only(right: 20, bottom: 5),
                           child: Transform.translate(
                             offset: Offset(-2, 0),
                             child: Container(
@@ -500,7 +503,7 @@ class _CompareTableState extends State<CompareTable> {
                                 ), // set the border radius
                               ),
                               child: Transform.translate(
-                                offset: Offset(10, 0),
+                                offset: Offset(10, 3),
                                 child: Text(
                                   textAlign: TextAlign.center,
                                   'Enterprise',
