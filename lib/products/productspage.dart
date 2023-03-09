@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wiseintern/about/who.dart';
 import 'package:wiseintern/navbar.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/menu_drawer.dart';

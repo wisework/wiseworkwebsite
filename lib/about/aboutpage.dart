@@ -4,7 +4,6 @@ import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/menu_drawer.dart';
 
 import 'package:wiseintern/home/footer.dart';
-import 'package:wiseintern/about/banner.dart';
 import 'package:wiseintern/about/who.dart';
 import 'package:wiseintern/about/why.dart';
 import 'package:wiseintern/about/awards.dart';

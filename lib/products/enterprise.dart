@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SingleProductPage extends StatefulWidget {

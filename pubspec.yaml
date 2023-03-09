@@ -33,6 +33,7 @@ dependencies:
   flutter:
     sdk: flutter
   smooth_page_indicator:
+  go_router: ^6.2.0
   
   loop_page_view: ^1.0.11
   google_maps_flutter: ^2.2.4

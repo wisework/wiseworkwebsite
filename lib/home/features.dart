@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../navbar.dart';
 import '../responsive.dart';
 import 'package:wiseintern/features/pdmanagement.dart';
+import 'package:go_router/go_router.dart';
 
 class FeatureModel {
   final String title;
@@ -28,7 +29,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
         "PD Management",
         "จัดการบันทึกรายการข้อมูลส่วนบุคคลและการไหลของข้อมูล (Data Flow)",
         "features/folder.png",
-        "pdmanagementpage"),
+        "pdmanagement"),
     FeatureModel(
         "DPIA & Risk Management",
         "การบริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล",
@@ -226,14 +227,10 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                             textAlign: TextAlign
                                                                 .center,
                                                           ),
-                                                          GestureDetector(
-                                                            onTap: () {
-                                                              _navigateToPage(
-                                                                  context,
-                                                                  features[
-                                                                          index]
-                                                                      .page);
-                                                            },
+                                                          TextButton(
+                                                            onPressed: () =>
+                                                                context.go(
+                                                                    '/${features[index].page}'),
                                                             child: GridTile(
                                                                 child: Row(
                                                               mainAxisAlignment:
@@ -266,6 +263,46 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                               ],
                                                             )),
                                                           ),
+                                                          // GestureDetector(
+                                                          //   onTap: () {
+                                                          //     _navigateToPage(
+                                                          //         context,
+                                                          //         features[
+                                                          //                 index]
+                                                          //             .page);
+                                                          //   },
+                                                          //   child: GridTile(
+                                                          //       child: Row(
+                                                          //     mainAxisAlignment:
+                                                          //         MainAxisAlignment
+                                                          //             .center,
+                                                          //     children: [
+                                                          //       Text(
+                                                          //         "more",
+                                                          //         style: GoogleFonts.inter(
+                                                          //             fontSize:
+                                                          //                 18,
+                                                          //             color: Color.fromARGB(
+                                                          //                 255,
+                                                          //                 57,
+                                                          //                 129,
+                                                          //                 237)),
+                                                          //       ),
+                                                          //       Icon(
+                                                          //         // <-- Icon
+                                                          //         Icons
+                                                          //             .arrow_forward_sharp,
+                                                          //         color: Color
+                                                          //             .fromARGB(
+                                                          //                 255,
+                                                          //                 57,
+                                                          //                 129,
+                                                          //                 237),
+                                                          //         size: 18,
+                                                          //       ),
+                                                          //     ],
+                                                          //   )),
+                                                          // ),
                                                         ],
                                                       ),
                                                     ),

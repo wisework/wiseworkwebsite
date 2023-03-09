@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:wiseintern/home/homepage.dart';
-import 'package:wiseintern/about/aboutpage.dart';
-import 'package:wiseintern/services/servicespage.dart';
+import 'package:go_router/go_router.dart';
 
 // import 'auth_dialog.dart';
 
@@ -40,12 +38,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
                     color: Color.fromARGB(255, 35, 34, 51))),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HomePage()),
-              );
-            },
+            onTap: () => context.go('/'),
           ),
           ListTile(
             title: Text('About Us',
@@ -75,12 +68,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AboutPage()),
-                    );
-                  },
+                  onTap: () => context.go('/story'),
                 ),
                 ListTile(
                   title: Text('Our Rewards',
@@ -88,12 +76,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AboutPage()),
-                    );
-                  },
+                  onTap: () => context.go('/story'),
                 ),
                 ListTile(
                   title: Text('Our Customers',
@@ -101,12 +84,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AboutPage()),
-                    );
-                  },
+                  onTap: () => context.go('/customers'),
                 ),
               ],
             ),
@@ -138,12 +116,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ServicesPage()),
-                    );
-                  },
+                  onTap: () => context.go('/services'),
                 ),
                 ListTile(
                   title: Text('Governance Assurance Suit',
@@ -151,12 +124,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ServicesPage()),
-                    );
-                  },
+                  onTap: () => context.go('/services'),
                 ),
                 ListTile(
                   title: Text('Request Demo',
@@ -164,12 +132,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ServicesPage()),
-                    );
-                  },
+                  onTap: () => context.go('/demo'),
                 ),
               ],
             ),
@@ -189,9 +152,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
                     color: Color.fromARGB(255, 35, 34, 51))),
-            onTap: () {
-              // handle tap on tile
-            },
+            onTap: () => context.go('/contact'),
           ),
         ],
       ),

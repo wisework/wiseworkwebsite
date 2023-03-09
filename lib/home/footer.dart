@@ -1,11 +1,5 @@
-import 'dart:html';
-import 'dart:math';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:wiseintern/main.dart';
 import '../responsive.dart';
 
 class Footer extends StatefulWidget {
@@ -18,11 +12,11 @@ class Footer extends StatefulWidget {
 class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
-    List<String> listLo = [
-      "/footer/location.png",
-      "/footer/mail.png",
-      "/footer/tel.png"
-    ];
+    // List<String> listLo = [
+    //   "/footer/location.png",
+    //   "/footer/mail.png",
+    //   "/footer/tel.png"
+    // ];
     var listImg = Container(
         // color: Color.fromARGB(255, 195, 152, 22),
         height: Responsive.isDesktop(context)
@@ -177,7 +171,7 @@ class _FooterState extends State<Footer> {
       "Key Partners",
       "Join Our Amazing Team"
     ];
-    String? servicesValue;
+    // String? servicesValue;
 
     var svlist = Container(
       color: Color.fromARGB(0, 255, 193, 7),
@@ -248,7 +242,6 @@ class _FooterState extends State<Footer> {
 
     final _nameController = TextEditingController();
     final _EmailController = TextEditingController();
-    FocusNode _focusNode = new FocusNode();
 
     var formtext = Container(
       width: Responsive.isDesktop(context)
@@ -413,7 +406,7 @@ class _FooterState extends State<Footer> {
                     child: Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.all(40.0),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -639,22 +632,38 @@ class _FooterState extends State<Footer> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              Wrap(
-                                                spacing: 10,
-                                                children: [
-                                                  Row(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .only(left: 60),
-                                                        child: TextButton(
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 10),
+                                                child: Wrap(
+                                                  spacing: 10,
+                                                  children: [
+                                                    Row(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  left: 60),
+                                                          child: TextButton(
+                                                              onPressed: () {},
+                                                              child: Text(
+                                                                "Privacy Policy",
+                                                                style: GoogleFonts.ibmPlexSansThai(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400),
+                                                              )),
+                                                        ),
+                                                        TextButton(
                                                             onPressed: () {},
                                                             child: Text(
-                                                              "Privacy Policy",
+                                                              "Term of Services",
                                                               style: GoogleFonts
                                                                   .ibmPlexSansThai(
                                                                       color: Colors
@@ -663,53 +672,41 @@ class _FooterState extends State<Footer> {
                                                                           FontWeight
                                                                               .w400),
                                                             )),
-                                                      ),
-                                                      TextButton(
-                                                          onPressed: () {},
-                                                          child: Text(
-                                                            "Term of Services",
-                                                            style: GoogleFonts
-                                                                .ibmPlexSansThai(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400),
-                                                          )),
-                                                      TextButton(
-                                                          onPressed: () {},
-                                                          child: Text(
-                                                            "Cookie",
-                                                            style: GoogleFonts
-                                                                .ibmPlexSansThai(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400),
-                                                          )),
-                                                      Container(
-                                                        // color: Colors.amber,
-                                                        height: 20,
-                                                        width: 700,
-                                                      ),
-                                                      Container(
-                                                          // width: 400,
-                                                          child: Text(
-                                                        "© Copyright 2022 Thewiseworks | All Right Reserved.",
-                                                        style: GoogleFonts
-                                                            .ibmPlexSansThai(
-                                                                color: Colors
-                                                                    .white,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400),
-                                                        textAlign:
-                                                            TextAlign.end,
-                                                      )),
-                                                    ],
-                                                  ),
-                                                ],
+                                                        TextButton(
+                                                            onPressed: () {},
+                                                            child: Text(
+                                                              "Cookie",
+                                                              style: GoogleFonts
+                                                                  .ibmPlexSansThai(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w400),
+                                                            )),
+                                                        Container(
+                                                          // color: Colors.amber,
+                                                          height: 20,
+                                                          width: 700,
+                                                        ),
+                                                        Container(
+                                                            // width: 400,
+                                                            child: Text(
+                                                          "© Copyright 2022 Thewiseworks | All Right Reserved.",
+                                                          style: GoogleFonts
+                                                              .ibmPlexSansThai(
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400),
+                                                          textAlign:
+                                                              TextAlign.end,
+                                                        )),
+                                                      ],
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
                                             ],
                                           ),

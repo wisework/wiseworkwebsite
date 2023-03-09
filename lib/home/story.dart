@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 import '../responsive.dart';
@@ -14,10 +13,10 @@ class StoryPage extends StatefulWidget {
 class _DestinationCarouselState extends State<StoryPage> {
   final String imagePath = 'assets/carousel/';
 
-  final CarouselController _controller = CarouselController();
+  // final CarouselController _controller = CarouselController();
 
   // List _isHovering = [false, false, false, false, false];
-  List _isSelected = [true, false, false, false, false];
+  // List _isSelected = [true, false, false, false, false];
 
   int _current = 0;
 

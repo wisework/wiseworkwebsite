@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:wiseintern/customers/customerspage.dart';
-import 'package:wiseintern/home/homepage.dart';
-import 'package:wiseintern/about/aboutpage.dart';
-import 'package:wiseintern/services/servicespage.dart';
-import 'package:wiseintern/contact/contactpage.dart';
 
 class NavBar extends StatefulWidget {
   // final double opacity;
@@ -46,12 +43,12 @@ class _NavigationBarState extends State<NavBar> {
     FeatureModel("About Us", "/about/aboutpage.dart"),
   ];
 
-  final List _isHovering = [
-    false,
-    false,
-    false,
-    false,
-  ];
+  // final List _isHovering = [
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -71,8 +68,8 @@ class _NavigationBarState extends State<NavBar> {
             Padding(
               padding: const EdgeInsets.only(top: 9, bottom: 13, left: 91),
               child: SizedBox(
-                height: 58,
-                width: 157,
+                height: 45,
+                width: 120,
                 child: Image.asset(
                   'logo.png',
                 ),
@@ -92,12 +89,7 @@ class _NavigationBarState extends State<NavBar> {
                     color: Colors.white,
                   ),
                 ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
-                  );
-                },
+                onPressed: () => context.go('/'),
               ),
             ),
             // SizedBox(
@@ -122,65 +114,52 @@ class _NavigationBarState extends State<NavBar> {
                 value: AboutValue,
                 items: [
                   DropdownMenuItem(
-                    value: 'our story',
-                    child: Text(
-                      'Our Story',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: _selected
-                            ? Colors.white
-                            : Color.fromARGB(255, 52, 144, 206),
-                      ),
-                    ),
-                  ),
+                      value: 'our story',
+                      child: TextButton(
+                        onPressed: () => context.go('/story'),
+                        child: Text(
+                          'Our Story',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: _selected
+                                ? Colors.white
+                                : Color.fromARGB(255, 52, 144, 206),
+                          ),
+                        ),
+                      )),
                   DropdownMenuItem(
-                    value: 'our rewards',
-                    child: Text(
-                      'Our Rewards',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: _selected
-                            ? Colors.white
-                            : Color.fromARGB(255, 52, 144, 206),
-                      ),
-                    ),
-                  ),
+                      value: 'our rewards',
+                      child: TextButton(
+                        onPressed: () => context.go('/story'),
+                        child: Text(
+                          'Our Rewards',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: _selected
+                                ? Colors.white
+                                : Color.fromARGB(255, 52, 144, 206),
+                          ),
+                        ),
+                      )),
                   DropdownMenuItem(
-                    value: 'customer',
-                    child: Text(
-                      'Our Customers',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: _selected
-                            ? Colors.white
-                            : Color.fromARGB(255, 52, 144, 206),
-                      ),
-                    ),
-                  ),
+                      value: 'customer',
+                      child: TextButton(
+                          onPressed: () => context.go('/customers'),
+                          child: Text(
+                            'Our Customers',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: _selected
+                                  ? Colors.white
+                                  : Color.fromARGB(255, 52, 144, 206),
+                            ),
+                          ))),
                 ],
                 onChanged: (value) {
                   setState(() {
                     _selectedItem = value.toString();
                     AboutValue = value as String;
                   });
-
-                  // Navigate to customer page when customer item is selected
-                  if (_selectedItem == 'customer') {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => CustomerPage()),
-                    );
-                  } else if (_selectedItem == 'our story') {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AboutPage()),
-                    );
-                  } else if (_selectedItem == 'our rewards') {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AboutPage()),
-                    );
-                  }
                 },
               ),
             ),
@@ -205,41 +184,47 @@ class _NavigationBarState extends State<NavBar> {
                 ),
                 items: [
                   DropdownMenuItem(
-                    value: 'pdpa',
-                    child: Text(
-                      'PDPA Management\nPlatform',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: _selected
-                            ? Colors.white
-                            : Color.fromARGB(255, 52, 144, 206),
-                      ),
-                    ),
-                  ),
+                      value: 'pdpa',
+                      child: TextButton(
+                        onPressed: () => context.go('/services'),
+                        child: Text(
+                          'PDPA Management\nPlatform',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: _selected
+                                ? Colors.white
+                                : Color.fromARGB(255, 52, 144, 206),
+                          ),
+                        ),
+                      )),
                   DropdownMenuItem(
-                    value: 'governance',
-                    child: Text(
-                      'Governance Assurance\nSuit',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: _selected
-                            ? Colors.white
-                            : Color.fromARGB(255, 52, 144, 206),
-                      ),
-                    ),
-                  ),
+                      value: 'governance',
+                      child: TextButton(
+                        onPressed: () => context.go('/services'),
+                        child: Text(
+                          'Governance Assurance\nSuit',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: _selected
+                                ? Colors.white
+                                : Color.fromARGB(255, 52, 144, 206),
+                          ),
+                        ),
+                      )),
                   DropdownMenuItem(
-                    value: 'request',
-                    child: Text(
-                      'Request Demo',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: _selected
-                            ? Colors.white
-                            : Color.fromARGB(255, 52, 144, 206),
-                      ),
-                    ),
-                  ),
+                      value: 'request',
+                      child: TextButton(
+                        onPressed: () => context.go('/demo'),
+                        child: Text(
+                          'Request Demo',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: _selected
+                                ? Colors.white
+                                : Color.fromARGB(255, 52, 144, 206),
+                          ),
+                        ),
+                      )),
                 ],
                 value: ServicesValue,
                 onChanged: (value) {
@@ -247,18 +232,6 @@ class _NavigationBarState extends State<NavBar> {
                     _selectedItem = value.toString();
                     ServicesValue = value as String;
                   });
-
-                  if (_selectedItem == 'pdpa') {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ServicesPage()),
-                    );
-                  } else if (_selectedItem == 'governance') {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ServicesPage()),
-                    );
-                  }
                 },
                 dropdownDecoration: BoxDecoration(
                   color: Colors.white,
@@ -293,12 +266,7 @@ class _NavigationBarState extends State<NavBar> {
                   color: Colors.white,
                 ),
               ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ContactPage()),
-                );
-              },
+              onPressed: () => context.go('/contact'),
             ),
             SizedBox(
               width: 42,
@@ -307,7 +275,7 @@ class _NavigationBarState extends State<NavBar> {
               width: 195,
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => context.go('/demo'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color.fromARGB(255, 232, 242, 254),
                   side: BorderSide(width: 3, color: Colors.blue),

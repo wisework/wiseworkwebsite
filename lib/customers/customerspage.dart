@@ -49,7 +49,6 @@ class _CustomerPageState extends State<CustomerPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             BannerCus(),
-            // Advise(),
             Customer(),
             Footer()
           ],
