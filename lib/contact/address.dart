@@ -626,7 +626,7 @@ class _Address extends State<Address> {
                                                   width: 25,
                                                   height: 25,
                                                   child: Image.asset(
-                                                      "/contact/phone.png")),
+                                                      "assets/contact/phone.png")),
                                               SizedBox(
                                                 width: 16,
                                               ),
@@ -690,7 +690,7 @@ class _Address extends State<Address> {
                                                   width: 25,
                                                   height: 25,
                                                   child: Image.asset(
-                                                      "/contact/mail.png")),
+                                                      "assets/contact/mail.png")),
                                               SizedBox(
                                                 width: 16,
                                               ),
@@ -737,7 +737,7 @@ class _Address extends State<Address> {
                                                   width: 45,
                                                   height: 45,
                                                   child: Image.asset(
-                                                      "/contact/facebook.png"),
+                                                      "assets/contact/facebook.png"),
                                                 ),
                                               ),
                                               Padding(
@@ -749,7 +749,7 @@ class _Address extends State<Address> {
                                                     width: 45,
                                                     height: 45,
                                                     child: Image.asset(
-                                                        "/contact/instagram.png"),
+                                                        "assets/contact/instagram.png"),
                                                   ),
                                                 ),
                                               ),
@@ -762,7 +762,7 @@ class _Address extends State<Address> {
                                                     width: 45,
                                                     height: 45,
                                                     child: Image.asset(
-                                                        "/contact/youtube.png"),
+                                                        "assets/contact/youtube.png"),
                                                   ),
                                                 ),
                                               ),
@@ -775,7 +775,7 @@ class _Address extends State<Address> {
                                                     width: 45,
                                                     height: 45,
                                                     child: Image.asset(
-                                                        "/contact/tiktok.png"),
+                                                        "assets/contact/tiktok.png"),
                                                   ),
                                                 ),
                                               ),
@@ -804,7 +804,7 @@ class _Address extends State<Address> {
                             Container(
                               width: 1440,
                               height: 906,
-                              child: Image.asset("/contact/map.png"),
+                              child: Image.asset("assets/contact/map.png"),
                             ),
                             new Positioned(
                               top: 80,
@@ -847,7 +847,7 @@ class _Address extends State<Address> {
                                         width: 62,
                                         height: 62,
                                         child:
-                                            Image.asset("/contact/route.png"),
+                                            Image.asset("assets/contact/route.png"),
                                       ),
                                     )
                                   ],
@@ -881,7 +881,7 @@ class _Address extends State<Address> {
                                               width: 31.61,
                                               height: 28.33,
                                               child: Image.asset(
-                                                  "/contact/plane.png"),
+                                                  "assets/contact/plane.png"),
                                             ),
                                           ),
                                           Padding(
@@ -2031,14 +2031,14 @@ class _Address extends State<Address> {
                                             width: 1440,
                                             height: 758,
                                             child: Image.asset(
-                                              "/contact/map.png",
+                                              "assets/contact/map.png",
                                               fit: BoxFit.fitHeight,
                                             ),
                                           )
                                         : Container(
                                             height: 423,
                                             child: Image.asset(
-                                              "/contact/map.png",
+                                              "assets/contact/map.png",
                                               fit: BoxFit.fitHeight,
                                             ),
                                           ),
@@ -2097,7 +2097,7 @@ class _Address extends State<Address> {
                                                       width: 62,
                                                       height: 62,
                                                       child: Image.asset(
-                                                          "/contact/route.png"),
+                                                          "assets/contact/route.png"),
                                                     ),
                                                   )
                                                 ],
@@ -2139,7 +2139,7 @@ class _Address extends State<Address> {
                                                       width: 40,
                                                       height: 40,
                                                       child: Image.asset(
-                                                          "/contact/route.png"),
+                                                          "assets/contact/route.png"),
                                                     ),
                                                   )
                                                 ],
@@ -2180,7 +2180,7 @@ class _Address extends State<Address> {
                                                             width: 31.61,
                                                             height: 28.33,
                                                             child: Image.asset(
-                                                                "/contact/plane.png"),
+                                                                "assets/contact/plane.png"),
                                                           ),
                                                         ),
                                                         Padding(
@@ -2241,7 +2241,7 @@ class _Address extends State<Address> {
                                                             width: 31.61,
                                                             height: 28.33,
                                                             child: Image.asset(
-                                                                "/contact/plane.png"),
+                                                                "assets/contact/plane.png"),
                                                           ),
                                                         ),
                                                         Padding(

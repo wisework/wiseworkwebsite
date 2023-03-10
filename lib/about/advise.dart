@@ -28,16 +28,10 @@ class _AdviseState extends State<AdvisePage> {
                       width: 290,
                       height: 180,
                       // color: Colors.black,
-                      child: new Positioned(
-                          top: 0,
-                          child: Container(
-                            // width: Responsive.isTablet(context) ? 100 : 200,
-                            // height: 390,
-                            child: Image.asset(
-                              "/customer/top.png",
-                              fit: BoxFit.fitWidth,
-                            ),
-                          )),
+                      child: Image.asset(
+                        "assets/about/who/top.png",
+                        fit: BoxFit.fitWidth,
+                      ),
                     ),
                     new Positioned(
                       top: 50,
@@ -46,17 +40,10 @@ class _AdviseState extends State<AdvisePage> {
                         width: 180,
                         height: 500,
                         // color: Color.fromARGB(255, 12, 6, 121),
-                        child: new Positioned(
-                            top: 50,
-                            right: 0,
-                            child: Container(
-                              // width: Responsive.isTablet(context) ? 100 : 200,
-                              // height: 390,
-                              child: Image.asset(
-                                "/customer/right.png",
-                                fit: BoxFit.fitHeight,
-                              ),
-                            )),
+                        child: Image.asset(
+                          "assets/about/who/right.png",
+                          fit: BoxFit.fitHeight,
+                        ),
                       ),
                     ),
                     new Positioned(
@@ -93,7 +80,7 @@ class _AdviseState extends State<AdvisePage> {
                       child: SizedBox(
                           width: 506,
                           height: 435,
-                          child: Image.asset("/about/advise/comp.png")),
+                          child: Image.asset("assets/about/advise/comp.png")),
                     ),
                     new Positioned(
                       top: 375,
@@ -139,17 +126,10 @@ class _AdviseState extends State<AdvisePage> {
                       width: Responsive.isTablet(context) ? 290 : 200,
                       height: Responsive.isTablet(context) ? 385 : 265,
                       // color: Colors.black,
-                      child: new Positioned(
-                          top: 0,
-                          right: 0,
-                          child: Container(
-                            // width: Responsive.isTablet(context) ? 100 : 200,
-                            // height: 390,
-                            child: Image.asset(
-                              "/customer/Union.png",
-                              fit: BoxFit.fitWidth,
-                            ),
-                          )),
+                      child: Image.asset(
+                        "assets/about/who/union.png",
+                        fit: BoxFit.fitWidth,
+                      ),
                     ),
                     Container(
                       child: Center(
@@ -231,7 +211,6 @@ class _AdviseState extends State<AdvisePage> {
                     ),
                   ],
                 ),
-              )
-              );
+              ));
   }
 }

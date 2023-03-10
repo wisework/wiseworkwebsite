@@ -37,8 +37,7 @@ class _OurservicesPageState extends State<OurservicesPage> {
                     child: SizedBox(
                         width: 19,
                         height: 13,
-                        child: Image(
-                            image: AssetImage("customer/black-check.png"))),
+                        child: Image.asset("assets/customer/black-check.png")),
                   ),
                   title: Transform.translate(
                     offset: Offset(0, 0),
@@ -120,7 +119,7 @@ class _OurservicesPageState extends State<OurservicesPage> {
                               width: 729,
                               height: 543,
                               // color: Colors.indigo,
-                              child: Image.asset("/customer/laptop.png")),
+                              child: Image.asset("assets/customer/laptop.png")),
                         )
                       ],
                     )
@@ -164,7 +163,7 @@ class _OurservicesPageState extends State<OurservicesPage> {
                 child: Container(
                     width: 705,
                     height: 705,
-                    child: Image.asset("/customer/process.png")),
+                    child: Image.asset("assets/customer/process.png")),
               ),
             ],
           )

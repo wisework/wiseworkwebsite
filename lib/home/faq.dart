@@ -298,81 +298,6 @@ class _FAQState extends State<FAQ> {
       ),
     );
 
-    var groupofpic = Container(
-      width: Responsive.isDesktop(context)
-          ? 500
-          : Responsive.isTablet(context)
-              ? 350
-              : 250,
-      height: Responsive.isDesktop(context)
-          ? 550
-          : Responsive.isTablet(context)
-              ? 350
-              : 250,
-      child: new Stack(
-        children: <Widget>[
-          new SizedBox(
-            width: Responsive.isDesktop(context)
-                ? 500
-                : Responsive.isTablet(context)
-                    ? 70
-                    : 70,
-            height: Responsive.isDesktop(context)
-                ? 550
-                : Responsive.isTablet(context)
-                    ? 70
-                    : 70,
-          ),
-          new Positioned(
-            width: Responsive.isDesktop(context)
-                ? 450
-                : Responsive.isTablet(context)
-                    ? 300
-                    : 180,
-            height: Responsive.isDesktop(context)
-                ? 480
-                : Responsive.isTablet(context)
-                    ? 300
-                    : 180,
-            top: Responsive.isDesktop(context)
-                ? 40
-                : Responsive.isTablet(context)
-                    ? 20
-                    : 20,
-            left: Responsive.isDesktop(context)
-                ? 40
-                : Responsive.isTablet(context)
-                    ? 40
-                    : 40,
-            child: new Image.asset('/faq/faq-bg.png'),
-          ),
-          new Positioned(
-            width: Responsive.isDesktop(context)
-                ? 450
-                : Responsive.isTablet(context)
-                    ? 300
-                    : 180,
-            height: Responsive.isDesktop(context)
-                ? 480
-                : Responsive.isTablet(context)
-                    ? 300
-                    : 180,
-            top: Responsive.isDesktop(context)
-                ? 0
-                : Responsive.isTablet(context)
-                    ? 10
-                    : 10,
-            left: Responsive.isDesktop(context)
-                ? 0
-                : Responsive.isTablet(context)
-                    ? 20
-                    : 20,
-            child: new Image.asset('/faq/faq-pic.png'),
-          ),
-        ],
-      ),
-    );
-
     var Qth = Container(
       child: Text(
         'รวมคำถามที่พบบ่อย',
@@ -410,16 +335,6 @@ class _FAQState extends State<FAQ> {
                 ? Stack(
                     children: [
                       new Positioned(
-                        top: 750,
-                        child: Container(
-                            // color: Colors.black,
-                            height: 700,
-                            child: Image.asset(
-                              "/faq/Union.png",
-                              fit: BoxFit.fitHeight,
-                            )),
-                      ),
-                      new Positioned(
                         left: 1325,
                         child: Container(
                           width: 205,
@@ -428,6 +343,16 @@ class _FAQState extends State<FAQ> {
                               shape: BoxShape.circle,
                               color: Color.fromARGB(108, 0, 112, 240)),
                         ),
+                      ),
+                      new Positioned(
+                        top: 750,
+                        child: Container(
+                            // color: Colors.black,
+                            height: 700,
+                            child: Image.asset(
+                              "assets/faq/Union.png",
+                              fit: BoxFit.fitHeight,
+                            )),
                       ),
                       Container(
                         height: 1450,
@@ -485,7 +410,7 @@ class _FAQState extends State<FAQ> {
                                           padding: const EdgeInsets.only(
                                               top: 160, left: 73),
                                           child: Image.asset(
-                                            "/faq/qa.png",
+                                            "assets/faq/qa.png",
                                             height: 460,
                                             width: 467,
                                           ),
@@ -557,21 +482,16 @@ class _FAQState extends State<FAQ> {
                         color: Color.fromARGB(0, 204, 220, 57),
                       ),
                       Responsive.isTablet(context)
-                          ? Container(
-                              width: 230,
-                              height: 448,
-                              // color: Color.fromARGB(255, 15, 3, 3),
-                              child: new Positioned(
-                                  top: 0,
-                                  right: 0,
-                                  child: Container(
-                                    width: 230,
-                                    height: 448,
-                                    child: Image.asset(
-                                      "customer/Union.png",
-                                      fit: BoxFit.fitHeight,
-                                    ),
-                                  )),
+                          ? new Positioned(
+                              left: 0,
+                              child: Container(
+                                width: 230,
+                                height: 448,
+                                child: Image.asset(
+                                  "assets/faq/Union.png",
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
                             )
                           : Container(
                               width: 290,
@@ -702,7 +622,7 @@ class _FAQState extends State<FAQ> {
           return ExpansionPanel(
             backgroundColor: Color.fromARGB(0, 255, 255, 255),
             canTapOnHeader: true,
-            hasIcon: false,
+            // hasIcon: false,
             headerBuilder: (BuildContext context, bool isExpanded) {
               return Wrap(
                 children: [

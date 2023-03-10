@@ -20,7 +20,7 @@ class BannerPage extends StatelessWidget {
             child: Container(
               width: 1440,
               height: 304,
-              child: Image.asset("/about/banner/bg-banner.png"),
+              child: Image.asset("assets/about/banner/bg-banner.png"),
             ),
           ),
           Column(

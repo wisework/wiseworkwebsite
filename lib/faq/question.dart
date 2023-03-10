@@ -309,7 +309,7 @@ class _QuestionsState extends State<Questions> {
                                         width: 250,
                                         height: 700,
                                         child: Image.asset(
-                                          "/faq/Union.png",
+                                          "assets/faq/Union.png",
                                           fit: BoxFit.fitWidth,
                                         )),
                                   ),
@@ -475,7 +475,7 @@ class _QuestionsState extends State<Questions> {
           return ExpansionPanel(
             backgroundColor: Color.fromARGB(0, 255, 255, 255),
             canTapOnHeader: true,
-            hasIcon: false,
+            // hasIcon: false,
             headerBuilder: (BuildContext context, bool isExpanded) {
               return Wrap(
                 children: [

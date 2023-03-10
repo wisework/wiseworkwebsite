@@ -86,12 +86,12 @@ class SingleWhomPage extends StatelessWidget {
               color: Color.fromARGB(255, 24, 84, 110))),
     );
     List<PackageModel> features = [
-      PackageModel(
-          "Express Package", "(SaaS)", "packages/cloud.png", "routePath"),
+      PackageModel("Express Package", "(SaaS)", "assets/packages/cloud.png",
+          "routePath"),
       PackageModel("Standard Package", "(Subscription License)",
-          "packages/clouds.png", "routePath"),
+          "assets/packages/clouds.png", "routePath"),
       PackageModel("Enterprise Package", "(Perpeptual License)",
-          "packages/rainbow_cloud.png", "routePath"),
+          "assets/packages/rainbow_cloud.png", "routePath"),
     ];
 
     return Center(
@@ -176,7 +176,8 @@ class SingleWhomPage extends StatelessWidget {
                               SizedBox(
                                   height: 60,
                                   width: 60,
-                                  child: Image.asset("packages/cloud.png")),
+                                  child:
+                                      Image.asset("assets/packages/cloud.png")),
                               SizedBox(height: 24),
                               Text('Express Package',
                                   style: GoogleFonts.ibmPlexSansThai(
@@ -217,7 +218,8 @@ class SingleWhomPage extends StatelessWidget {
                               SizedBox(
                                   height: 45,
                                   width: 75,
-                                  child: Image.asset("packages/clouds.png")),
+                                  child: Image.asset(
+                                      "assets/packages/clouds.png")),
                               SizedBox(height: 24),
                               Text('Standard Package',
                                   style: GoogleFonts.ibmPlexSansThai(
@@ -259,7 +261,7 @@ class SingleWhomPage extends StatelessWidget {
                                   height: 47,
                                   width: 80,
                                   child: Image.asset(
-                                      "packages/rainbow_cloud.png")),
+                                      "assets/packages/rainbow_cloud.png")),
                               SizedBox(height: 24),
                               Text('Enterprise Package',
                                   style: GoogleFonts.ibmPlexSansThai(

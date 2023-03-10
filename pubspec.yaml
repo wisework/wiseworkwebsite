@@ -80,6 +80,10 @@ flutter:
   - assets/features/risk.png
   - assets/features/system.png
   - assets/logo.png
+  - assets/features/ex1.png
+  - assets/features/pdcard.png
+  - assets/features/blue-check.png
+  - assets/features/white-check.png
   
   - assets/packages/check.png
   - assets/packages/cloud.png
@@ -135,6 +139,9 @@ flutter:
   - assets/customer/lotus.png
   - assets/customer/tvo.png
   - assets/customer/tvo-th.png
+  - assets/customer/top.png
+  - assets/customer/right.png
+  - assets/customer/union.png
 
   - assets/story/storypic.png
   - assets/story/storybg.png
@@ -143,6 +150,7 @@ flutter:
   - assets/faq/faq-pic.png
   - assets/faq/faq-bg.png
   - assets/faq/qa.png
+  - assets/faq/Union.png
 
   - assets/footer/logo.png
   - assets/footer/fb.png
@@ -152,17 +160,76 @@ flutter:
   - assets/footer/location.png
   - assets/footer/mail.png
   - assets/footer/tel.png
+  - assets/footer/email-icon.png
+  - assets/footer/call-icon.png
 
   - assets/pdpa/pdpa.png
+  - assets/pdpa/check.png
+  - assets/pdpa/mobile.png
+  - assets/pdpa/phone.png
+
+  - assets/contact/phone.png
+  - assets/contact/mail.png
+  - assets/contact/facebook.png
+  - assets/contact/instagram.png
+  - assets/contact/youtube.png
+  - assets/contact/tiktok.png
+  - assets/contact/map.png
+  - assets/contact/route.png
+  - assets/contact/plane.png
+
 
   - assets/carousel/crs.png
   - assets/carousel/med_crs.png
   - assets/carousel/min_crs.png
-  
+
+  - assets/about/who/computer.png
+  - assets/about/who/diagram.png
+  - assets/about/who/comp.png
+  - assets/about/who/right.png
+  - assets/about/who/top.png
+  - assets/about/who/union.png
+
+  - assets/demo/dot.png
+  - assets/demo/colab.png
+  - assets/demo/dashboard.png
+  - assets/demo/goal.png
+  - assets/demo/google.png
+  - assets/demo/pic1.png
+  - assets/demo/pic2.png
+  - assets/demo/pic3.png
+  - assets/demo/team.png
+
+  - assets/about/why/wisework.png
+  - assets/about/why/successful.png
+  - assets/about/why/check.png
+
+  - assets/about/banner/banner.png
+  - assets/about/banner/bg-banner.png
+  - assets/about/banner/mobile.png
+  - assets/about/banner/tablet.png
+
+  - assets/about/advise/comp.png
+
+  - assets/about/awards/cdpo.png
+  - assets/about/awards/coso.png
+  - assets/about/awards/csa.png
+  - assets/about/awards/iso9001.png
+  - assets/about/awards/iso20000.png
+  - assets/about/awards/iso22301.png
+  - assets/about/awards/iso27001.png
+  - assets/about/awards/iso27005.png
+  - assets/about/awards/iso27017.png
+  - assets/about/awards/iso27018.png
+  - assets/about/awards/iso27701.png
+  - assets/about/awards/iso31000.png
+
   - assets/product/productbg.png
   - assets/product/productpic.png
   - assets/product/productframe.png
   - assets/product/whosepic.png
+  - assets/product/select.png
+  - assets/product/choices.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

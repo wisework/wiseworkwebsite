@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+// import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -108,7 +108,7 @@ class _Register extends State<Register> {
                                             width: 100,
                                             // height: 103,
                                             child:
-                                                Image.asset("/demo/dot.png")),
+                                                Image.asset("assets/demo/dot.png")),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -233,7 +233,7 @@ class _Register extends State<Register> {
                                                               width: 523,
                                                               height: 425,
                                                               child: Image.asset(
-                                                                  "/demo/pic1.png")),
+                                                                  "assets/demo/pic1.png")),
                                                           new Positioned(
                                                             top: 169,
                                                             left: 14,
@@ -259,7 +259,7 @@ class _Register extends State<Register> {
                                                               width: 523,
                                                               height: 425,
                                                               child: Image.asset(
-                                                                  "/demo/pic2.png")),
+                                                                  "assets/demo/pic2.png")),
                                                           new Positioned(
                                                             top: 195,
                                                             left: 120,
@@ -285,7 +285,7 @@ class _Register extends State<Register> {
                                                               width: 523,
                                                               height: 425,
                                                               child: Image.asset(
-                                                                  "/demo/pic3.png")),
+                                                                  "assets/demo/pic3.png")),
                                                           new Positioned(
                                                             top: 187,
                                                             left: 236,
@@ -1221,7 +1221,7 @@ class _Register extends State<Register> {
                                                             width: 71,
                                                             height: 59,
                                                             child: Image.asset(
-                                                                "/demo/google.png")),
+                                                                "assets/demo/google.png")),
                                                         SizedBox(
                                                           width: 438,
                                                           child: Text(
@@ -1333,7 +1333,7 @@ class _Register extends State<Register> {
                                               width: 100,
                                               height: 100,
                                               child:
-                                                  Image.asset("/demo/team.png"),
+                                                  Image.asset("assets/demo/team.png"),
                                             ),
                                           ),
                                           Text(
@@ -1381,7 +1381,7 @@ class _Register extends State<Register> {
                                                 width: 100,
                                                 height: 100,
                                                 child: Image.asset(
-                                                    "/demo/colab.png"),
+                                                    "assets/demo/colab.png"),
                                               ),
                                             ),
                                             Text(
@@ -1427,7 +1427,7 @@ class _Register extends State<Register> {
                                               width: 100,
                                               height: 100,
                                               child:
-                                                  Image.asset("/demo/goal.png"),
+                                                  Image.asset("assets/demo/goal.png"),
                                             ),
                                           ),
                                           Text(
@@ -1469,7 +1469,7 @@ class _Register extends State<Register> {
                                       width: 1161,
                                       height: 751,
                                       child:
-                                          Image.asset("/demo/dashboard.png")),
+                                          Image.asset("assets/demo/dashboard.png")),
                                 ),
                               )
                             ],
@@ -3087,7 +3087,7 @@ class _Register extends State<Register> {
                                                                 ? 59
                                                                 : 37,
                                                             child: Image.asset(
-                                                                "/demo/google.png")),
+                                                                "assets/demo/google.png")),
                                                         SizedBox(
                                                           width: Responsive
                                                                   .isTablet(
@@ -3188,7 +3188,7 @@ class _Register extends State<Register> {
                                               width: 70,
                                               // height: 103,
                                               child:
-                                                  Image.asset("/demo/dot.png")),
+                                                  Image.asset("assets/demo/dot.png")),
                                         )
                                       : SizedBox(),
                                   Responsive.isTablet(context)
@@ -3469,7 +3469,7 @@ class _Register extends State<Register> {
                                                             width: 523,
                                                             height: 425,
                                                             child: Image.asset(
-                                                                "/demo/pic1.png")),
+                                                                "assets/demo/pic1.png")),
                                                         new Positioned(
                                                           top: 169,
                                                           left: 14,
@@ -3496,7 +3496,7 @@ class _Register extends State<Register> {
                                                             width: 523,
                                                             height: 425,
                                                             child: Image.asset(
-                                                                "/demo/pic2.png")),
+                                                                "assets/demo/pic2.png")),
                                                         new Positioned(
                                                           top: 195,
                                                           left: 120,
@@ -3523,7 +3523,7 @@ class _Register extends State<Register> {
                                                             width: 523,
                                                             height: 425,
                                                             child: Image.asset(
-                                                                "/demo/pic3.png")),
+                                                                "assets/demo/pic3.png")),
                                                         new Positioned(
                                                           top: 187,
                                                           left: 236,
@@ -3584,7 +3584,7 @@ class _Register extends State<Register> {
                                                             width: 320,
                                                             height: 260,
                                                             child: Image.asset(
-                                                                "/demo/pic1.png")),
+                                                                "assets/demo/pic1.png")),
                                                         new Positioned(
                                                           top: 120,
                                                           left: 20,
@@ -3611,7 +3611,7 @@ class _Register extends State<Register> {
                                                             width: 320,
                                                             height: 260,
                                                             child: Image.asset(
-                                                                "/demo/pic2.png")),
+                                                                "assets/demo/pic2.png")),
                                                         new Positioned(
                                                           top: 130,
                                                           left: 50,
@@ -3638,7 +3638,7 @@ class _Register extends State<Register> {
                                                             width: 320,
                                                             height: 260,
                                                             child: Image.asset(
-                                                                "/demo/pic3.png")),
+                                                                "assets/demo/pic3.png")),
                                                         new Positioned(
                                                           top: 120,
                                                           left: 100,
@@ -3761,7 +3761,7 @@ class _Register extends State<Register> {
                                                     width: 100,
                                                     height: 100,
                                                     child: Image.asset(
-                                                        "/demo/team.png"),
+                                                        "assets/demo/team.png"),
                                                   ),
                                                 ),
                                                 Text(
@@ -3829,7 +3829,7 @@ class _Register extends State<Register> {
                                                       width: 100,
                                                       height: 100,
                                                       child: Image.asset(
-                                                          "/demo/colab.png"),
+                                                          "assets/demo/colab.png"),
                                                     ),
                                                   ),
                                                   Text(
@@ -3894,7 +3894,7 @@ class _Register extends State<Register> {
                                                     width: 100,
                                                     height: 100,
                                                     child: Image.asset(
-                                                        "/demo/goal.png"),
+                                                        "assets/demo/goal.png"),
                                                   ),
                                                 ),
                                                 Text(
@@ -3954,7 +3954,7 @@ class _Register extends State<Register> {
                                             width: 335,
                                             height: 240,
                                             child: Image.asset(
-                                                "/demo/dashboard.png")),
+                                                "assets/demo/dashboard.png")),
                                       ),
                                     )
                                   ],

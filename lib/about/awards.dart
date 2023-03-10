@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class AwardsPage extends StatefulWidget {
   @override
@@ -23,49 +22,6 @@ class _AwardsState extends State<AwardsPage> {
 
   @override
   Widget build(BuildContext context) {
-    List awards = [
-      "/about/awards/iso27001.png",
-      "/about/awards/iso27017.png",
-      "/about/awards/coso.png",
-      "/about/awards/iso27701.png",
-      "/about/awards/iso27018.png",
-      "/about/awards/iso9001.png",
-      "/about/awards/iso20000.png",
-      "/about/awards/iso22301.png",
-      "/about/awards/csa.png",
-      "/about/awards/iso31000.png",
-      "/about/awards/iso27005.png",
-      "/about/awards/cdpo.png",
-    ];
-    List name = [
-      "ISO/IEC 27001",
-      "ISO/IEC 27017",
-      "COSO-ERM",
-      "ISO/IEC 27701",
-      "ISO/IEC 27018",
-      "ISO/IEC 9001",
-      "ISO/IEC 20000",
-      "ISO/IEC 22301",
-      "CSA",
-      "ISO/IEC 31000",
-      "ISO/IEC 27005",
-      "CDPO",
-    ];
-    List description = [
-      "Information Security\nManagement System:ISMS",
-      "Information technology",
-      "Enterprise Risk\nManagement",
-      "Privacy Information\nManagement System:PIMS",
-      "Security techniques",
-      "Quality Management System",
-      "Lead Auditor (Information\nTechnology Service Management)",
-      "Business Continuity\nManagement",
-      "The Cloud Security Alliance",
-      "Risk Management",
-      "Information Security\nRisk Management",
-      "Certified of Data Protection\nOfficer",
-    ];
-
     return Center(
         child: Responsive.isDesktop(context)
             ? Container(
@@ -128,7 +84,7 @@ class _AwardsState extends State<AwardsPage> {
                                     width: 100,
                                     height: 100,
                                     child: Image.asset(
-                                        "/about/awards/iso27001.png")),
+                                        "assets/about/awards/iso27001.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -169,7 +125,7 @@ class _AwardsState extends State<AwardsPage> {
                                     width: 100,
                                     height: 100,
                                     child: Image.asset(
-                                        "/about/awards/iso27017.png")),
+                                        "assets/about/awards/iso27017.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -209,8 +165,8 @@ class _AwardsState extends State<AwardsPage> {
                                 SizedBox(
                                     width: 100,
                                     height: 100,
-                                    child:
-                                        Image.asset("/about/awards/coso.png")),
+                                    child: Image.asset(
+                                        "assets/about/awards/coso.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -262,7 +218,7 @@ class _AwardsState extends State<AwardsPage> {
                                     width: 100,
                                     height: 100,
                                     child: Image.asset(
-                                        "/about/awards/iso27701.png")),
+                                        "assets/about/awards/iso27701.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -303,7 +259,7 @@ class _AwardsState extends State<AwardsPage> {
                                     width: 100,
                                     height: 100,
                                     child: Image.asset(
-                                        "/about/awards/iso27018.png")),
+                                        "assets/about/awards/iso27018.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -344,7 +300,7 @@ class _AwardsState extends State<AwardsPage> {
                                     width: 100,
                                     height: 100,
                                     child: Image.asset(
-                                        "/about/awards/iso9001.png")),
+                                        "assets/about/awards/iso9001.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -396,7 +352,7 @@ class _AwardsState extends State<AwardsPage> {
                                     width: 100,
                                     height: 100,
                                     child: Image.asset(
-                                        "/about/awards/iso20000.png")),
+                                        "assets/about/awards/iso20000.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -437,7 +393,7 @@ class _AwardsState extends State<AwardsPage> {
                                     width: 100,
                                     height: 100,
                                     child: Image.asset(
-                                        "/about/awards/iso22301.png")),
+                                        "assets/about/awards/iso22301.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -477,8 +433,8 @@ class _AwardsState extends State<AwardsPage> {
                                 SizedBox(
                                     width: 100,
                                     height: 100,
-                                    child:
-                                        Image.asset("/about/awards/csa.png")),
+                                    child: Image.asset(
+                                        "assets/about/awards/csa.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -530,7 +486,7 @@ class _AwardsState extends State<AwardsPage> {
                                     width: 100,
                                     height: 100,
                                     child: Image.asset(
-                                        "/about/awards/iso31000.png")),
+                                        "assets/about/awards/iso31000.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -571,7 +527,7 @@ class _AwardsState extends State<AwardsPage> {
                                     width: 100,
                                     height: 100,
                                     child: Image.asset(
-                                        "/about/awards/iso27005.png")),
+                                        "assets/about/awards/iso27005.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -614,8 +570,8 @@ class _AwardsState extends State<AwardsPage> {
                                 SizedBox(
                                     width: 100,
                                     height: 100,
-                                    child:
-                                        Image.asset("/about/awards/cdpo.png")),
+                                    child: Image.asset(
+                                        "assets/about/awards/cdpo.png")),
                                 Padding(
                                   padding:
                                       const EdgeInsets.only(top: 25, left: 10),
@@ -721,7 +677,7 @@ class _AwardsState extends State<AwardsPage> {
                                               width: 100,
                                               height: 100,
                                               child: Image.asset(
-                                                  "/about/awards/iso27001.png")),
+                                                  "assets/about/awards/iso27001.png")),
                                           Padding(
                                             padding: const EdgeInsets.only(
                                                 top: 25, left: 10),
@@ -770,7 +726,7 @@ class _AwardsState extends State<AwardsPage> {
                                             width: 100,
                                             height: 100,
                                             child: Image.asset(
-                                                "/about/awards/iso27017.png")),
+                                                "assets/about/awards/iso27017.png")),
                                         Padding(
                                           padding: const EdgeInsets.only(
                                               top: 25, left: 10),
@@ -820,7 +776,7 @@ class _AwardsState extends State<AwardsPage> {
                                               width: 100,
                                               height: 100,
                                               child: Image.asset(
-                                                  "/about/awards/coso.png")),
+                                                  "assets/about/awards/coso.png")),
                                           Padding(
                                             padding: const EdgeInsets.only(
                                                 top: 25, left: 10),
@@ -869,7 +825,7 @@ class _AwardsState extends State<AwardsPage> {
                                             width: 100,
                                             height: 100,
                                             child: Image.asset(
-                                                "/about/awards/iso27701.png")),
+                                                "assets/about/awards/iso27701.png")),
                                         Padding(
                                           padding: const EdgeInsets.only(
                                               top: 25, left: 10),
@@ -919,7 +875,7 @@ class _AwardsState extends State<AwardsPage> {
                                               width: 100,
                                               height: 100,
                                               child: Image.asset(
-                                                  "/about/awards/iso27018.png")),
+                                                  "assets/about/awards/iso27018.png")),
                                           Padding(
                                             padding: const EdgeInsets.only(
                                                 top: 25, left: 10),
@@ -968,7 +924,7 @@ class _AwardsState extends State<AwardsPage> {
                                             width: 100,
                                             height: 100,
                                             child: Image.asset(
-                                                "/about/awards/iso9001.png")),
+                                                "assets/about/awards/iso9001.png")),
                                         Padding(
                                           padding: const EdgeInsets.only(
                                               top: 25, left: 10),
@@ -1018,7 +974,7 @@ class _AwardsState extends State<AwardsPage> {
                                               width: 100,
                                               height: 100,
                                               child: Image.asset(
-                                                  "/about/awards/iso20000.png")),
+                                                  "assets/about/awards/iso20000.png")),
                                           Padding(
                                             padding: const EdgeInsets.only(
                                                 top: 25, left: 10),
@@ -1067,7 +1023,7 @@ class _AwardsState extends State<AwardsPage> {
                                             width: 100,
                                             height: 100,
                                             child: Image.asset(
-                                                "/about/awards/iso22301.png")),
+                                                "assets/about/awards/iso22301.png")),
                                         Padding(
                                           padding: const EdgeInsets.only(
                                               top: 25, left: 10),
@@ -1117,7 +1073,7 @@ class _AwardsState extends State<AwardsPage> {
                                               width: 100,
                                               height: 100,
                                               child: Image.asset(
-                                                  "/about/awards/csa.png")),
+                                                  "assets/about/awards/csa.png")),
                                           Padding(
                                             padding: const EdgeInsets.only(
                                                 top: 25, left: 10),
@@ -1166,7 +1122,7 @@ class _AwardsState extends State<AwardsPage> {
                                             width: 100,
                                             height: 100,
                                             child: Image.asset(
-                                                "/about/awards/iso31000.png")),
+                                                "assets/about/awards/iso31000.png")),
                                         Padding(
                                           padding: const EdgeInsets.only(
                                               top: 25, left: 10),
@@ -1216,7 +1172,7 @@ class _AwardsState extends State<AwardsPage> {
                                               width: 100,
                                               height: 100,
                                               child: Image.asset(
-                                                  "/about/awards/iso27005.png")),
+                                                  "assets/about/awards/iso27005.png")),
                                           Padding(
                                             padding: const EdgeInsets.only(
                                                 top: 25, left: 10),
@@ -1265,7 +1221,7 @@ class _AwardsState extends State<AwardsPage> {
                                             width: 100,
                                             height: 100,
                                             child: Image.asset(
-                                                "/about/awards/cdpo.png")),
+                                                "assets/about/awards/cdpo.png")),
                                         Padding(
                                           padding: const EdgeInsets.only(
                                               top: 25, left: 10),
@@ -1423,7 +1379,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       width: 128,
                                                       height: 128,
                                                       child: Image.asset(
-                                                          "about/awards/iso27017.png")),
+                                                          "assets/about/awards/iso27017.png")),
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
@@ -1499,7 +1455,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       width: 128,
                                                       height: 128,
                                                       child: Image.asset(
-                                                          "about/awards/iso27017.png")),
+                                                          "assets/about/awards/iso27017.png")),
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
@@ -1575,7 +1531,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       width: 128,
                                                       height: 128,
                                                       child: Image.asset(
-                                                          "about/awards/coso.png")),
+                                                          "assets/about/awards/coso.png")),
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
@@ -1651,7 +1607,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       width: 128,
                                                       height: 128,
                                                       child: Image.asset(
-                                                          "about/awards/iso27701.png")),
+                                                          "assets/about/awards/iso27701.png")),
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
@@ -1727,7 +1683,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       width: 128,
                                                       height: 128,
                                                       child: Image.asset(
-                                                          "about/awards/iso27018.png")),
+                                                          "assets/about/awards/iso27018.png")),
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
@@ -1803,7 +1759,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       width: 128,
                                                       height: 128,
                                                       child: Image.asset(
-                                                          "about/awards/iso9001.png")),
+                                                          "assets/about/awards/iso9001.png")),
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
@@ -1879,7 +1835,7 @@ class _AwardsState extends State<AwardsPage> {
                                                       width: 128,
                                                       height: 128,
                                                       child: Image.asset(
-                                                          "about/awards/iso20000.png")),
+                                                          "assets/about/awards/iso20000.png")),
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(

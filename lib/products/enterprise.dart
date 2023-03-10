@@ -263,8 +263,8 @@ class _SingleProductPageState extends State<SingleProductPage> {
                                                   height: 16,
                                                   child: Image.asset(hoveredIndex ==
                                                           index
-                                                      ? "/product/select.png"
-                                                      : "/product/choices.png"),
+                                                      ? "assets/product/select.png"
+                                                      : "assets/product/choices.png"),
                                                 ),
                                                 SizedBox(
                                                   width: 24,

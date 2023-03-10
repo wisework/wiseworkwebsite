@@ -134,7 +134,7 @@ class PD extends StatelessWidget {
                       child: SizedBox(
                           width: 540,
                           height: 540,
-                          child: Image.asset("/features/pdcard.png")),
+                          child: Image.asset("assets/features/pdcard.png")),
                     )
                   ],
                 )
@@ -226,8 +226,8 @@ class _CheckState extends State<Check> {
                                                 child: Image(
                                                     image: AssetImage(hoveredIndex ==
                                                             index
-                                                        ? "/features/blue-check.png"
-                                                        : "/features/white-check.png"))),
+                                                        ? "assets/features/blue-check.png"
+                                                        : "assets/features/white-check.png"))),
                                           ),
                                           title: Transform.translate(
                                             offset: Offset(0, 0),
@@ -313,7 +313,7 @@ class _ExampleState extends State<Example> {
                     items: [
                       Container(
                         width: 1000,
-                        child: Image.asset("/features/ex1.png"),
+                        child: Image.asset("assets/features/ex1.png"),
                       )
                     ],
                   ),

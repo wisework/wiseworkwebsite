@@ -99,7 +99,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                         width:
                                                                             166,
                                                                         child: Image.asset(
-                                                                            "/customer/bitkub.png")),
+                                                                            "assets/customer/bitkub.png")),
                                                                   ),
                                                                   Padding(
                                                                     padding: const EdgeInsets
@@ -120,7 +120,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                             children: [
                                                                               Stack(
                                                                                 children: [
-                                                                                  SizedBox(width: 15.93, height: 14, child: Image.asset("/customer/comma.png")),
+                                                                                  SizedBox(width: 15.93, height: 14, child: Image.asset("assets/customer/comma.png")),
                                                                                   Container(
                                                                                     height: 300,
                                                                                     width: 286,
@@ -156,7 +156,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                             child: SizedBox(
                                                                                 width: 54.77,
                                                                                 height: 57.16,
-                                                                                child: Image.asset("/customer/Jirayuth.png")),
+                                                                                child: Image.asset("assets/customer/Jirayuth.png")),
                                                                           ),
                                                                           SizedBox(
                                                                             width:
@@ -245,7 +245,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                             width:
                                                                                 197.59,
                                                                             child:
-                                                                                Image.asset("/customer/viriya-logo.png")),
+                                                                                Image.asset("assets/customer/viriya-logo.png")),
                                                                       ),
                                                                       Padding(
                                                                         padding: const EdgeInsets.only(
@@ -267,7 +267,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                                 children: [
                                                                                   Stack(
                                                                                     children: [
-                                                                                      SizedBox(width: 15.93, height: 14, child: Image.asset("/customer/comma.png")),
+                                                                                      SizedBox(width: 15.93, height: 14, child: Image.asset("assets/customer/comma.png")),
                                                                                       Container(
                                                                                         height: 128,
                                                                                         width: 400,
@@ -299,7 +299,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                             children: [
                                                                               Padding(
                                                                                 padding: const EdgeInsets.only(left: 39.92, top: 16.28),
-                                                                                child: SizedBox(width: 54.77, height: 57.16, child: Image.asset("/customer/Amorn.png")),
+                                                                                child: SizedBox(width: 54.77, height: 57.16, child: Image.asset("assets/customer/Amorn.png")),
                                                                               ),
                                                                               SizedBox(
                                                                                 width: 9.1,
@@ -376,7 +376,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                         width:
                                                                             135,
                                                                         child: Image.asset(
-                                                                            "/customer/advice-logo.png")),
+                                                                            "assets/customer/advice-logo.png")),
                                                                   ),
                                                                   Padding(
                                                                     padding: const EdgeInsets
@@ -397,7 +397,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                         children: [
                                                                           Stack(
                                                                             children: [
-                                                                              SizedBox(width: 15.93, height: 14, child: Image.asset("/customer/comma.png")),
+                                                                              SizedBox(width: 15.93, height: 14, child: Image.asset("assets/customer/comma.png")),
                                                                               Container(
                                                                                 height: 128,
                                                                                 width: 300,
@@ -431,7 +431,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                             child: SizedBox(
                                                                                 width: 54.77,
                                                                                 height: 57.16,
-                                                                                child: Image.asset("/customer/Nutt.png")),
+                                                                                child: Image.asset("assets/customer/Nutt.png")),
                                                                           ),
                                                                           SizedBox(
                                                                             width:
@@ -524,7 +524,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                           child: SizedBox(
                                                                               width: 145,
                                                                               height: 82,
-                                                                              child: Image.asset("/customer/kyocera.png")),
+                                                                              child: Image.asset("assets/customer/kyocera.png")),
                                                                         ),
                                                                         Row(
                                                                           crossAxisAlignment:
@@ -532,7 +532,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                           children: [
                                                                             Padding(
                                                                               padding: const EdgeInsets.only(top: 15, left: 30),
-                                                                              child: SizedBox(width: 16, height: 15, child: Image.asset("/customer/comma.png")),
+                                                                              child: SizedBox(width: 16, height: 15, child: Image.asset("assets/customer/comma.png")),
                                                                             ),
                                                                             Padding(
                                                                               padding: const EdgeInsets.only(left: 20, top: 15),
@@ -552,7 +552,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                           children: [
                                                                             Padding(
                                                                               padding: const EdgeInsets.only(top: 10, left: 64),
-                                                                              child: SizedBox(width: 57, height: 57, child: Image.asset("customer/Nikhom.png")),
+                                                                              child: SizedBox(width: 57, height: 57, child: Image.asset("assets/customer/Nikhom.png")),
                                                                             ),
                                                                             Padding(
                                                                               padding: const EdgeInsets.only(top: 10, left: 15),
@@ -620,7 +620,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                           child: SizedBox(
                                                                               width: 145,
                                                                               height: 82,
-                                                                              child: Image.asset("/customer/brr.png")),
+                                                                              child: Image.asset("assets/customer/brr.png")),
                                                                         ),
                                                                         Padding(
                                                                           padding: const EdgeInsets.only(
@@ -636,7 +636,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                                 Row(
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
-                                                                                SizedBox(width: 15, height: 15, child: Image.asset("/customer/comma.png")),
+                                                                                SizedBox(width: 15, height: 15, child: Image.asset("assets/customer/comma.png")),
                                                                                 SizedBox(
                                                                                   width: 19,
                                                                                 ),
@@ -660,7 +660,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                           children: [
                                                                             Padding(
                                                                               padding: const EdgeInsets.only(top: 10, left: 64),
-                                                                              child: SizedBox(width: 57, height: 57, child: Image.asset("customer/Anan.png")),
+                                                                              child: SizedBox(width: 57, height: 57, child: Image.asset("assets/customer/Anan.png")),
                                                                             ),
                                                                             Padding(
                                                                               padding: const EdgeInsets.only(top: 10, left: 15),
@@ -741,7 +741,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                           height:
                                                                               66,
                                                                           child:
-                                                                              Image.asset("/customer/tvo.png")),
+                                                                              Image.asset("assets/customer/tvo.png")),
                                                                     ),
                                                                     Row(
                                                                       crossAxisAlignment:
@@ -755,7 +755,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                           child: SizedBox(
                                                                               width: 16,
                                                                               height: 15,
-                                                                              child: Image.asset("/customer/comma.png")),
+                                                                              child: Image.asset("assets/customer/comma.png")),
                                                                         ),
                                                                         Padding(
                                                                           padding: const EdgeInsets.only(
@@ -786,7 +786,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                                           child: SizedBox(
                                                                               width: 57,
                                                                               height: 57,
-                                                                              child: Image.asset("customer/Pachai.png")),
+                                                                              child: Image.asset("assets/customer/Pachai.png")),
                                                                         ),
                                                                         Padding(
                                                                           padding: const EdgeInsets.only(
@@ -943,7 +943,7 @@ class _CustomerCarouselState extends State<CustomerCarousel>{
                                                   height: 120,
                                                   width: 142,
                                                   child: Image.asset(
-                                                      "/customer/comma.png"),
+                                                      "assets/customer/comma.png"),
                                                 ),
                                               ),
                                               new Positioned(

@@ -1,7 +1,7 @@
-import 'dart:html';
-import 'dart:ui';
-import 'package:flutter/foundation.dart';
-import 'package:wiseintern/home/carousel.dart';
+// import 'dart:html';
+// import 'dart:ui';
+// import 'package:flutter/foundation.dart';
+// import 'package:wiseintern/home/carousel.dart';
 
 import '../responsive.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/model/package.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:wiseintern/products/productspage.dart';
+import 'package:go_router/go_router.dart';
 
 class PackagesPage extends StatefulWidget {
   @override
@@ -177,7 +177,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
     ];
     final List<Widget> _carouselItems = [
       PackageCard(
-        packageicon: 'assets/packages/cloud.png',
+        packageicon: 'packages/cloud.png',
         title: 'Express',
         lisence: 'SaaS',
         packages: express,
@@ -187,7 +187,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
         lastbox: false,
       ),
       PackageCard(
-        packageicon: 'assets/packages/clouds.png',
+        packageicon: 'packages/clouds.png',
         title: 'Standard',
         lisence: 'Subscriptions License',
         packages: standard,
@@ -197,7 +197,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
         lastbox: false,
       ),
       PackageCard(
-        packageicon: 'assets/packages/rainbow_cloud.png',
+        packageicon: 'packages/rainbow_cloud.png',
         title: 'Enterprise',
         lisence: 'Perpreptual License',
         packages: enterprise,
@@ -303,7 +303,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                         defaultOffset: 0,
                         hoverOffset: -74,
                         child: PackageCard(
-                          packageicon: 'assets/packages/cloud.png',
+                          packageicon: 'packages/cloud.png',
                           title: 'Express',
                           lisence: 'SaaS',
                           packages: express,
@@ -318,7 +318,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                         defaultOffset: 0,
                         hoverOffset: -74,
                         child: PackageCard(
-                          packageicon: 'assets/packages/clouds.png',
+                          packageicon: 'packages/clouds.png',
                           title: 'Standard',
                           lisence: 'Subscriptions License',
                           packages: standard,
@@ -334,7 +334,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                         defaultOffset: 0,
                         hoverOffset: -74,
                         child: PackageCard(
-                          packageicon: 'assets/packages/rainbow_cloud.png',
+                          packageicon: 'packages/rainbow_cloud.png',
                           title: 'Enterprise',
                           lisence: 'Perpreptual License',
                           packages: enterprise,
@@ -548,7 +548,7 @@ class PackageCard extends StatelessWidget {
                               : Responsive.isTablet(context)
                                   ? 40
                                   : 50,
-                          child: Image.asset(packageicon)),
+                          child: Image.asset("assets/$packageicon")),
                     ),
                     SizedBox(
                       width: Responsive.isMobile(context) ? 36 : 38,
@@ -676,13 +676,7 @@ class PackageCard extends StatelessWidget {
                         width: !Responsive.isMobile(context) ? 321 : 193,
                         height: !Responsive.isMobile(context) ? 61 : 48,
                         child: OutlinedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ProductPage()),
-                              );
-                            },
+                            onPressed: () => context.go('/product'),
                             style: OutlinedButton.styleFrom(
                               side: BorderSide(
                                 width: 1.0,
@@ -811,7 +805,7 @@ class Buildpackagetile extends StatelessWidget {
             child: SizedBox(
                 width: !Responsive.isMobile(context) ? 20.83 : 12.5,
                 height: !Responsive.isMobile(context) ? 20.83 : 12.5,
-                child: Image(image: AssetImage("assets/packages/check.png"))),
+                child: Image.asset("assets/packages/check.png")),
           ),
           title: Transform.translate(
             offset: Offset(

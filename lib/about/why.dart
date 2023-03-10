@@ -104,7 +104,7 @@ class WhyPage extends StatelessWidget {
                         width: 312,
                         height: 1058,
                         // color: Colors.amber,
-                        child: Image.asset("/about/why/wisework.png"),
+                        child: Image.asset("assets/about/why/wisework.png"),
                       ),
                     ),
                     new Positioned(
@@ -143,7 +143,7 @@ class WhyPage extends StatelessWidget {
                       child: Container(
                           width: 704.61,
                           height: 220,
-                          child: Image.asset("/about/why/successful.png")),
+                          child: Image.asset("assets/about/why/successful.png")),
                     ),
                     new Positioned(
                       top: 350,
@@ -287,7 +287,7 @@ class WhyPage extends StatelessWidget {
                                         width: 616,
                                         height: 193,
                                         child: Image.asset(
-                                            "/about/why/successful.png")),
+                                            "assets/about/why/successful.png")),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(

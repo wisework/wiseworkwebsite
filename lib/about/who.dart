@@ -30,7 +30,7 @@ class WhoPage extends StatelessWidget {
                                       width: 784.45,
                                       height: 527,
                                       child: Image.asset(
-                                          "/about/who/computer.png")),
+                                          "assets/about/who/computer.png")),
                                 ),
                                 Padding(
                                   padding:
@@ -186,7 +186,7 @@ class WhoPage extends StatelessWidget {
                                 child: SizedBox(
                                   width: 70,
                                   height: 102,
-                                  child: Image.asset("/demo/dot.png"),
+                                  child: Image.asset("assets/demo/dot.png"),
                                 ),
                               ),
                             ],
@@ -256,7 +256,7 @@ class WhoPage extends StatelessWidget {
                               child: Container(
                                   width: 672,
                                   height: 500,
-                                  child: Image.asset("/about/who/diagram.png")),
+                                  child: Image.asset("assets/about/who/diagram.png")),
                             ),
                             Row(
                               children: [
@@ -336,7 +336,7 @@ class WhoPage extends StatelessWidget {
                                     width: 784.45,
                                     height: 527,
                                     child:
-                                        Image.asset("/about/who/computer.png"))
+                                        Image.asset("assets/about/who/computer.png"))
                               ],
                             ),
                           ),
@@ -493,7 +493,7 @@ class WhoPage extends StatelessWidget {
                                           width: 627,
                                           height: 447,
                                           child: Image.asset(
-                                              "/about/who/diagram.png")),
+                                              "assets/about/who/diagram.png")),
                                     ),
                                     Row(
                                       children: [
@@ -571,7 +571,7 @@ class WhoPage extends StatelessWidget {
                         child: SizedBox(
                           width: 70,
                           height: 102,
-                          child: Image.asset("/demo/dot.png"),
+                          child: Image.asset("assets/demo/dot.png"),
                         ),
                       ),
                       Padding(
@@ -623,7 +623,7 @@ class WhoPage extends StatelessWidget {
                             child: Container(
                                 width: 347,
                                 height: 233,
-                                child: Image.asset("/about/who/computer.png")),
+                                child: Image.asset("assets/about/who/computer.png")),
                           ),
                           new Positioned(
                             top: 32,
@@ -631,7 +631,7 @@ class WhoPage extends StatelessWidget {
                             child: SizedBox(
                               width: 70,
                               height: 102,
-                              child: Image.asset("/demo/dot.png"),
+                              child: Image.asset("assets/demo/dot.png"),
                             ),
                           ),
                         ],
@@ -790,7 +790,7 @@ class WhoPage extends StatelessWidget {
                                       width: 371,
                                       height: 264,
                                       child: Image.asset(
-                                          "/about/who/diagram.png")),
+                                          "assets/about/who/diagram.png")),
                                 ),
                                 Padding(
                                   padding:

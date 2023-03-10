@@ -34,21 +34,21 @@ class _CustomerState extends State<Customer> {
   int _current = 0;
 
   List<RealStory> stories = [
-    RealStory("customer/bitkub.png", "Bitkub Online",
+    RealStory("assets/customer/bitkub.png", "Bitkub Online",
         "บริษัท บิทคับ แคปปิตอล กรุ๊ป โฮลดิ้งส์ จำกัด\nให้บริการเกี่ยวกับเทคโนโลยีบล็อกเชน"),
-    RealStory("customer/lotus.png", "Lotus Mattress",
+    RealStory("assets/customer/lotus.png", "Lotus Mattress",
         "โลตัส แมทเทรส บริษัทเครื่องนอนชั้นนำคุณภาพสูง\nรายใหญ่ระดับโลก ก่อตั้งตั้งแต่ปี 1980 "),
-    RealStory("customer/viriya.png", "วิริยะประกันภัย จำกัด (มหาชน)",
+    RealStory("assets/customer/viriya.png", "วิริยะประกันภัย จำกัด (มหาชน)",
         "บริษัทประกันวินาศภัยอันดับหนึ่งของไทย\nครองใจยาวนานกว่า 69 ปี"),
-    RealStory("customer/tvo.png", "Thai Vegetable Oil",
+    RealStory("assets/customer/tvo.png", "Thai Vegetable Oil",
         "ผู้ประกอบการอุตสาหกรรมเกษตร จัดจำหน่ายสินค้า\nทั้งตลาดในประเทศ และต่างประเทศ"),
-    RealStory("customer/brr.png", "น้ำตาลบุรีรัมย์ จำกัด (มหาชน) ",
+    RealStory("assets/customer/brr.png", "น้ำตาลบุรีรัมย์ จำกัด (มหาชน) ",
         "โรงงานน้ำตาลบุรีรัมย์ เป็นหนึ่งในบรรดาผู้บุกเบิก\nอุตสาหกรรมน้ำตาลของภาคตะวันออกเฉียงเหนือ"),
-    RealStory("customer/kyocera.png", "Kyocera (Thailand)",
+    RealStory("assets/customer/kyocera.png", "Kyocera (Thailand)",
         "ผู้ผลิตชั้นนำระดับสากล\nด้านอุปกรณ์อิเล็กทรอนิกส์จากประเทศญี่ปุ่น"),
-    RealStory("customer/advice.png", "Advice IT Infinite",
+    RealStory("assets/customer/advice.png", "Advice IT Infinite",
         "ผู้นำด้านการจัดจำหน่ายสินค้าไอที สมาร์ทโฟน\nจำหน่ายทั่วประเทศไทย และสปป.ลาว กว่า 333 สาขา"),
-    RealStory("customer/p-pat.png", "โรงพยาบาล ป.แพทย์",
+    RealStory("assets/customer/p-pat.png", "โรงพยาบาล ป.แพทย์",
         "บริษัท บิทคับ แคปปิตอล กรุ๊ป โฮลดิ้งส์ จำกัด\nให้บริการเกี่ยวกับเทคโนโลยีบล็อกเชน "),
   ];
 
@@ -71,7 +71,7 @@ class _CustomerState extends State<Customer> {
                     child: SizedBox(
                         width: 54.71,
                         height: 61.15,
-                        child: Image.asset("/customer/Nutt.png")),
+                        child: Image.asset("assets/customer/Nutt.png")),
                   ),
                   Container(
                     width: Responsive.isTablet(context) ? 192 : 244,
@@ -134,7 +134,7 @@ class _CustomerState extends State<Customer> {
                     child: SizedBox(
                         width: 54.71,
                         height: 61.15,
-                        child: Image.asset("/customer/Jirayuth.png")),
+                        child: Image.asset("assets/customer/Jirayuth.png")),
                   ),
                   Container(
                     width: Responsive.isTablet(context) ? 200 : 244,
@@ -198,7 +198,7 @@ class _CustomerState extends State<Customer> {
                     child: SizedBox(
                         width: 54.71,
                         height: 61.15,
-                        child: Image.asset("/customer/Ann.png")),
+                        child: Image.asset("assets/customer/Ann.png")),
                   ),
                   Container(
                     width: Responsive.isTablet(context) ? 192 : 244,
@@ -263,7 +263,7 @@ class _CustomerState extends State<Customer> {
                     child: SizedBox(
                         width: 54.71,
                         height: 61.15,
-                        child: Image.asset("/customer/Amorn.png")),
+                        child: Image.asset("assets/customer/Amorn.png")),
                   ),
                   Container(
                     width: Responsive.isTablet(context) ? 192 : 244,
@@ -313,35 +313,6 @@ class _CustomerState extends State<Customer> {
       ),
     ];
 
-    List customer = [
-      'customer/bitkub.png',
-      'customer/lotus.png',
-      'customer/viriya.png',
-      'customer/tvo.png',
-      'customer/brr.png',
-      'customer/kyocera.png',
-      'customer/advice.png',
-      'customer/p-pat.png',
-      // 'customer/advice.png',
-
-      // 'customer/ichitan.png',
-      // 'customer/singha.png',
-      // 'customer/click.png',
-      // 'customer/p-pat.png',
-      // 'customer/rise-consulting.png',
-      // 'customer/meng.png',
-      // 'customer/singha-beer.png',
-      // 'customer/daiichi.png',
-      // 'customer/kdn.png',
-      // 'customer/national-economic.png',
-      // 'customer/intrarat.png',
-      // 'customer/singha-park.png',
-      // 'customer/muzik.png',
-      // 'customer/santafe.png',
-      // 'customer/ku.png',
-      // 'customer/sbp.png',
-      // 'customer/win.png',
-    ];
     var screenSize = MediaQuery.of(context).size;
 
     // }
@@ -362,7 +333,6 @@ class _CustomerState extends State<Customer> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  
                   SizedBox(
                     height: Responsive.isDesktop(context) ? 35 : 48,
                   ),
@@ -541,7 +511,7 @@ class _CustomerState extends State<Customer> {
                                               crossAxisSpacing: 20,
                                               mainAxisSpacing: 20,
                                             ),
-                                            itemCount: customer.length,
+                                            itemCount: stories.length,
                                             itemBuilder: (BuildContext context,
                                                 int index) {
                                               return Container(
@@ -586,8 +556,8 @@ class _CustomerState extends State<Customer> {
                                                               width: 100,
                                                               height: 100,
                                                               child: Image.asset(
-                                                                  customer[
-                                                                      index]),
+                                                                  stories[index]
+                                                                      .img),
                                                             )
                                                           ],
                                                         ),
@@ -614,7 +584,7 @@ class _CustomerState extends State<Customer> {
                                           crossAxisSpacing: 20,
                                           mainAxisSpacing: 20,
                                         ),
-                                        itemCount: customer.length,
+                                        itemCount: stories.length,
                                         itemBuilder:
                                             (BuildContext context, int index) {
                                           return Container(
@@ -656,7 +626,8 @@ class _CustomerState extends State<Customer> {
                                                           width: 60,
                                                           height: 60,
                                                           child: Image.asset(
-                                                              customer[index]),
+                                                              stories[index]
+                                                                  .img),
                                                         )
                                                       ],
                                                     ),
@@ -876,7 +847,7 @@ class _CustomerState extends State<Customer> {
                                           width: 650,
                                           // color: Colors.pink,
                                           child: Image.asset(
-                                              "/customer/mobiles.png")),
+                                              "assets/customer/mobiles.png")),
                                     ),
                                   ],
                                 ),
@@ -899,7 +870,7 @@ class _CustomerState extends State<Customer> {
                                               width: 692,
                                               height: 676,
                                               child: Image.asset(
-                                                  "customer/mobiles.png")),
+                                                  "assets/customer/mobiles.png")),
                                         ),
                                         Container(
                                           width: 500,
@@ -1028,7 +999,7 @@ class _CustomerState extends State<Customer> {
                                         width: 327,
                                         height: 318,
                                         child: Image.asset(
-                                            "/customer/mobiles.png"),
+                                            "assets/customer/mobiles.png"),
                                       ),
                                     ),
                                     SizedBox(

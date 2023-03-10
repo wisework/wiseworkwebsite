@@ -104,7 +104,9 @@ class _PdpaState extends State<Pdpa> {
                                                 height: 513.23,
                                                 width: 377,
                                                 child: Image.asset(
-                                                    "/pdpa/mobile.png"),
+                                                  "assets/pdpa/mobile.png",
+                                                  fit: BoxFit.contain,
+                                                ),
                                               ),
                                             )
                                           ],
@@ -139,7 +141,7 @@ class _PdpaState extends State<Pdpa> {
                                                               height: 30.64,
                                                               width: 28.54,
                                                               child: Image.asset(
-                                                                  "/pdpa/check.png"),
+                                                                  "assets/pdpa/check.png"),
                                                             ),
                                                           ),
                                                           Padding(
@@ -240,7 +242,7 @@ class _PdpaState extends State<Pdpa> {
                                                               height: 30.64,
                                                               width: 28.54,
                                                               child: Image.asset(
-                                                                  "/pdpa/check.png"),
+                                                                  "assets/pdpa/check.png"),
                                                             ),
                                                           ),
                                                           Padding(
@@ -341,7 +343,7 @@ class _PdpaState extends State<Pdpa> {
                                                               height: 30.64,
                                                               width: 28.54,
                                                               child: Image.asset(
-                                                                  "/pdpa/check.png"),
+                                                                  "assets/pdpa/check.png"),
                                                             ),
                                                           ),
                                                           Padding(
@@ -525,7 +527,7 @@ class _PdpaState extends State<Pdpa> {
                                                       height: 359,
                                                       width: 238,
                                                       child: Image.asset(
-                                                          "/pdpa/mobile.png"),
+                                                          "assets/pdpa/mobile.png"),
                                                     ),
                                                   )
                                                 ],
@@ -561,7 +563,7 @@ class _PdpaState extends State<Pdpa> {
                                                                     width: 24,
                                                                     child: Image
                                                                         .asset(
-                                                                            "/pdpa/check.png"),
+                                                                            "assets/pdpa/check.png"),
                                                                   ),
                                                                 ),
                                                                 Padding(
@@ -663,7 +665,7 @@ class _PdpaState extends State<Pdpa> {
                                                                     width: 24,
                                                                     child: Image
                                                                         .asset(
-                                                                            "/pdpa/check.png"),
+                                                                            "assets/pdpa/check.png"),
                                                                   ),
                                                                 ),
                                                                 Padding(
@@ -765,7 +767,7 @@ class _PdpaState extends State<Pdpa> {
                                                                     width: 24,
                                                                     child: Image
                                                                         .asset(
-                                                                            "/pdpa/check.png"),
+                                                                            "assets/pdpa/check.png"),
                                                                   ),
                                                                 ),
                                                                 Padding(
@@ -937,7 +939,8 @@ class _PdpaState extends State<Pdpa> {
                                     child: SizedBox(
                                       height: 359,
                                       width: 238,
-                                      child: Image.asset("/pdpa/mobile.png"),
+                                      child:
+                                          Image.asset("assets/pdpa/mobile.png"),
                                     ),
                                   ),
                                   Container(
@@ -958,7 +961,7 @@ class _PdpaState extends State<Pdpa> {
                                                   height: 24,
                                                   width: 24,
                                                   child: Image.asset(
-                                                      "/pdpa/check.png"),
+                                                      "assets/pdpa/check.png"),
                                                 ),
                                               ),
                                               Padding(
@@ -1029,7 +1032,7 @@ class _PdpaState extends State<Pdpa> {
                                                   height: 24,
                                                   width: 24,
                                                   child: Image.asset(
-                                                      "/pdpa/check.png"),
+                                                      "assets/pdpa/check.png"),
                                                 ),
                                               ),
                                               Padding(
@@ -1100,7 +1103,7 @@ class _PdpaState extends State<Pdpa> {
                                                   height: 24,
                                                   width: 24,
                                                   child: Image.asset(
-                                                      "/pdpa/check.png"),
+                                                      "assets/pdpa/check.png"),
                                                 ),
                                               ),
                                               Padding(

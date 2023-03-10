@@ -58,8 +58,7 @@ class _NavigationBarState extends State<NavBar> {
       color: Color.fromARGB(255, 52, 144, 206),
       child: Padding(
         padding: EdgeInsets.all(20),
-        child: Expanded(
-            child: Row(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             // SizedBox(
@@ -71,7 +70,7 @@ class _NavigationBarState extends State<NavBar> {
                 height: 45,
                 width: 120,
                 child: Image.asset(
-                  'logo.png',
+                  'assets/logo.png',
                 ),
               ),
             ),
@@ -352,7 +351,7 @@ class _NavigationBarState extends State<NavBar> {
             //   ),
             // ),
           ],
-        )),
+        ),
       ),
     );
   }

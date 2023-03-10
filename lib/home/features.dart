@@ -38,10 +38,10 @@ class _FeaturesPageState extends State<FeaturesPage> {
     FeatureModel(
         "Cookie Consent",
         "การขอความยินยอมจากเจ้าของข้อมูลและการบริหารจัดการคุกกี้",
-        "features/Cookie.png",
+        "features/cookie.png",
         "routePath"),
     FeatureModel("Consent Management", "การบริหารจัดการให้ความยินยอม",
-        "features/Consent.png", "routePath"),
+        "features/consent.png", "routePath"),
     FeatureModel(
         "Data Subject Right Management",
         "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูล",
@@ -54,7 +54,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
     FeatureModel(
         "Policy&Notices Management",
         "บริหารการสื่อสารนโยบายและประกาศความเป็นส่วนตัว",
-        "features/Policy.png",
+        "features/policy.png",
         "routePath"),
     FeatureModel("Data Discover", "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
         "features/discovery.png", "routePath"),

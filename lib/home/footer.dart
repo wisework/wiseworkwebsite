@@ -28,19 +28,19 @@ class _FooterState extends State<Footer> {
         child: Column(
           children: [
             Image.asset(
-              "/footer/location.png",
+              "assets/footer/location.png",
             ),
             SizedBox(
               height: Responsive.isDesktop(context) ? 35 : 15,
             ),
             Image.asset(
-              "/footer/mail.png",
+              "assets/footer/mail.png",
             ),
             SizedBox(
               height: Responsive.isDesktop(context) ? 20 : 10,
             ),
             Image.asset(
-              "/footer/tel.png",
+              "assets/footer/tel.png",
             ),
           ],
         ));
@@ -422,7 +422,8 @@ class _FooterState extends State<Footer> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.start,
                                             children: [
-                                              Image.asset("/footer/logo.png")
+                                              Image.asset(
+                                                  "assets/footer/logo.png")
                                             ],
                                           ),
                                           Row(
@@ -539,19 +540,19 @@ class _FooterState extends State<Footer> {
                                               InkWell(
                                                   onTap: () {},
                                                   child: Image.asset(
-                                                      "/footer/fb.png")),
+                                                      "assets/footer/fb.png")),
                                               InkWell(
                                                   onTap: () {},
                                                   child: Image.asset(
-                                                      "/footer/ig.png")),
+                                                      "assets/footer/ig.png")),
                                               InkWell(
                                                   onTap: () {},
                                                   child: Image.asset(
-                                                      "/footer/yt.png")),
+                                                      "assets/footer/yt.png")),
                                               InkWell(
                                                   onTap: () {},
                                                   child: Image.asset(
-                                                      "/footer/tiktok.png")),
+                                                      "assets/footer/tiktok.png")),
                                             ],
                                           )
                                         ],
@@ -850,7 +851,7 @@ class _FooterState extends State<Footer> {
                                                           width: 123.39,
                                                           height: 48,
                                                           child: Image.asset(
-                                                              "/footer/logo.png"),
+                                                              "assets/footer/logo.png"),
                                                         ),
                                                       ),
                                                       SizedBox(
@@ -917,7 +918,7 @@ class _FooterState extends State<Footer> {
                                                                       width: 25,
                                                                       height: 25,
                                                                       child: Image.asset(
-                                                                        "/footer/fb.png",
+                                                                        "assets/footer/fb.png",
                                                                       )),
                                                                 ),
                                                                 Padding(
@@ -944,7 +945,7 @@ class _FooterState extends State<Footer> {
                                                                         width: 25,
                                                                         height: 25,
                                                                         child: Image.asset(
-                                                                          "/footer/ig.png",
+                                                                          "assets/footer/ig.png",
                                                                         )),
                                                                   ),
                                                                 ),
@@ -972,7 +973,7 @@ class _FooterState extends State<Footer> {
                                                                         width: 25,
                                                                         height: 25,
                                                                         child: Image.asset(
-                                                                          "/footer/yt.png",
+                                                                          "assets/footer/yt.png",
                                                                         )),
                                                                   ),
                                                                 ),
@@ -1000,7 +1001,7 @@ class _FooterState extends State<Footer> {
                                                                         width: 25,
                                                                         height: 25,
                                                                         child: Image.asset(
-                                                                          "/footer/tiktok.png",
+                                                                          "assets/footer/tiktok.png",
                                                                         )),
                                                                   ),
                                                                 ),
@@ -1171,7 +1172,7 @@ class _FooterState extends State<Footer> {
                                                   width: 60,
                                                   height: 60,
                                                   child: Image.asset(
-                                                    "/footer/email-icon.png",
+                                                    "assets/footer/email-icon.png",
                                                   ),
                                                 ),
                                               ),
@@ -1220,7 +1221,7 @@ class _FooterState extends State<Footer> {
                                                   width: 60,
                                                   height: 60,
                                                   child: Image.asset(
-                                                    "/footer/call-icon.png",
+                                                    "assets/footer/call-icon.png",
                                                   ),
                                                 ),
                                               ),
@@ -1346,7 +1347,7 @@ class _FooterState extends State<Footer> {
                                                     // do something when the button is tapped
                                                   },
                                                   child: Image.asset(
-                                                      '/footer/send.png'),
+                                                      'assets/footer/send.png'),
                                                 ),
                                               ),
                                             )
@@ -1385,8 +1386,8 @@ class _FooterState extends State<Footer> {
                                           child: Container(
                                             width: 95,
                                             height: 35,
-                                            child:
-                                                Image.asset("/footer/logo.png"),
+                                            child: Image.asset(
+                                                "assets/footer/logo.png"),
                                           ),
                                         ),
                                         Padding(
@@ -1424,7 +1425,7 @@ class _FooterState extends State<Footer> {
                                                         // do something when the button is tapped
                                                       },
                                                       child: Image.asset(
-                                                          '/footer/fb.png'),
+                                                          'assets/footer/fb.png'),
                                                     ),
                                                   ),
                                                   SizedBox(
@@ -1444,7 +1445,7 @@ class _FooterState extends State<Footer> {
                                                         // do something when the button is tapped
                                                       },
                                                       child: Image.asset(
-                                                          '/footer/ig.png'),
+                                                          'assets/footer/ig.png'),
                                                     ),
                                                   ),
                                                   SizedBox(
@@ -1466,7 +1467,7 @@ class _FooterState extends State<Footer> {
                                                         // do something when the button is tapped
                                                       },
                                                       child: Image.asset(
-                                                          '/footer/yt.png'),
+                                                          'assets/footer/yt.png'),
                                                     ),
                                                   ),
                                                   SizedBox(width: 28),
@@ -1484,7 +1485,7 @@ class _FooterState extends State<Footer> {
                                                         // do something when the button is tapped
                                                       },
                                                       child: Image.asset(
-                                                          '/footer/tiktok.png'),
+                                                          'assets/footer/tiktok.png'),
                                                     ),
                                                   ),
                                                 ],
@@ -1542,7 +1543,7 @@ class _FooterState extends State<Footer> {
                                             width: 50,
                                             height: 50,
                                             child: Image.asset(
-                                                "/footer/email-icon.png"),
+                                                "assets/footer/email-icon.png"),
                                           ),
                                         ),
                                         Padding(
@@ -1581,7 +1582,7 @@ class _FooterState extends State<Footer> {
                                             width: 50,
                                             height: 50,
                                             child: Image.asset(
-                                                "/footer/call-icon.png"),
+                                                "assets/footer/call-icon.png"),
                                           ),
                                         ),
                                         Padding(
