@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
-import 'package:wiseintern/customers/customerspage.dart';
 import 'package:wiseintern/home/pdpa.dart';
 import 'package:wiseintern/navbar.dart';
 import 'package:wiseintern/home/features.dart';
@@ -12,7 +10,6 @@ import 'package:wiseintern/home/story.dart';
 import 'package:wiseintern/menu_drawer.dart';
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/home/faq.dart';
-import 'package:wiseintern/model/customer_carousel.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -20,13 +17,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _currentIndex = 0;
+  // int _currentIndex = 0;
 
-  void onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
+  // void onTabTapped(int index) {
+  //   setState(() {
+  //     _currentIndex = index;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {

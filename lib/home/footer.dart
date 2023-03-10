@@ -110,7 +110,6 @@ class _FooterState extends State<Footer> {
     );
 
     List<String> navbar = ["Home", "About Us", "Our reward", "Blogs", "FAQ"];
-    String? NavbarValue;
 
     var navbarlist = Container(
       color: Color.fromARGB(0, 255, 193, 7),
@@ -201,32 +200,32 @@ class _FooterState extends State<Footer> {
       ),
     );
 
-    List<String> appList = [
-      "/footer/fb.png",
-      "/footer/ig.png",
-      "/footer/yt.png",
-      "/footer/tiktok.png",
-    ];
+    // List<String> appList = [
+    //   "/footer/fb.png",
+    //   "/footer/ig.png",
+    //   "/footer/yt.png",
+    //   "/footer/tiktok.png",
+    // ];
 
-    var app = Container(
-      color: Color.fromARGB(0, 255, 193, 7),
-      height: 150,
-      width: 50,
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: appList.length,
-        itemBuilder: (context, index) {
-          return Column(
-            // mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(child: Image.asset(appList[index])),
-              SizedBox(height: 5.0),
-            ],
-          );
-        },
-      ),
-    );
+    // var app = Container(
+    //   color: Color.fromARGB(0, 255, 193, 7),
+    //   height: 150,
+    //   width: 50,
+    //   child: ListView.builder(
+    //     shrinkWrap: true,
+    //     itemCount: appList.length,
+    //     itemBuilder: (context, index) {
+    //       return Column(
+    //         // mainAxisAlignment: MainAxisAlignment.start,
+    //         crossAxisAlignment: CrossAxisAlignment.start,
+    //         children: [
+    //           Container(child: Image.asset(appList[index])),
+    //           SizedBox(height: 5.0),
+    //         ],
+    //       );
+    //     },
+    //   ),
+    // );
 
     var contact = Container(
       child: Text(

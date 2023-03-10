@@ -43,12 +43,7 @@ class _NavigationBarState extends State<NavBar> {
     FeatureModel("About Us", "/about/aboutpage.dart"),
   ];
 
-  // final List _isHovering = [
-  //   false,
-  //   false,
-  //   false,
-  //   false,
-  // ];
+  bool _isExpanded = false;
 
   @override
   Widget build(BuildContext context) {
@@ -58,19 +53,17 @@ class _NavigationBarState extends State<NavBar> {
       color: Color.fromARGB(255, 52, 144, 206),
       child: Padding(
         padding: EdgeInsets.all(20),
-        child: Row(
+        child: Expanded(
+            child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            // SizedBox(
-            //   width: screenSize.width / 4,
-            // ),
             Padding(
               padding: const EdgeInsets.only(top: 9, bottom: 13, left: 91),
               child: SizedBox(
                 height: 45,
                 width: 120,
                 child: Image.asset(
-                  'assets/logo.png',
+                  'logo.png',
                 ),
               ),
             ),
@@ -91,68 +84,65 @@ class _NavigationBarState extends State<NavBar> {
                 onPressed: () => context.go('/'),
               ),
             ),
-            // SizedBox(
-            //   width: 40,
-            // ),
+            
             DropdownButtonHideUnderline(
               child: DropdownButton2(
-                hint: Text(
-                  'About Us',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.white,
+                hint: Transform.translate(
+                  offset: Offset(0, 1),
+                  child: Text(
+                    'About Us',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 icon: Transform.translate(
-                  offset: Offset(-12, -2),
+                  offset: Offset(0, 0),
                   child: Icon(
                     Icons.expand_more_outlined,
                     color: Colors.white,
                   ),
                 ),
                 value: AboutValue,
+                
                 items: [
                   DropdownMenuItem(
                       value: 'our story',
-                      child: TextButton(
-                        onPressed: () => context.go('/story'),
-                        child: Text(
-                          'Our Story',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: _selected
-                                ? Colors.white
-                                : Color.fromARGB(255, 52, 144, 206),
-                          ),
+                      onTap:  () => context.go('/story'),
+                      child: Text(
+                        'Our Story',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: _selected
+                              ? Colors.white
+                              : Color.fromARGB(255, 52, 144, 206),
                         ),
                       )),
                   DropdownMenuItem(
                       value: 'our rewards',
-                      child: TextButton(
-                        onPressed: () => context.go('/story'),
-                        child: Text(
-                          'Our Rewards',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: _selected
-                                ? Colors.white
-                                : Color.fromARGB(255, 52, 144, 206),
-                          ),
+                      onTap: () => context.go('/story'),
+                      child: Text(
+                        'Our Rewards',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: _selected
+                              ? Colors.white
+                              : Color.fromARGB(255, 52, 144, 206),
                         ),
                       )),
                   DropdownMenuItem(
                       value: 'customer',
-                      child: TextButton(
-                          onPressed: () => context.go('/customers'),
-                          child: Text(
-                            'Our Customers',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: _selected
-                                  ? Colors.white
-                                  : Color.fromARGB(255, 52, 144, 206),
-                            ),
-                          ))),
+                      onTap: () => context.go('/customers'),
+                      child: Text(
+                        'Our Customers',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: _selected
+                              ? Colors.white
+                              : Color.fromARGB(255, 52, 144, 206),
+                        ),
+                      )),
                 ],
                 onChanged: (value) {
                   setState(() {
@@ -162,9 +152,8 @@ class _NavigationBarState extends State<NavBar> {
                 },
               ),
             ),
-            // SizedBox(
-            //   width: 10,
-            // ),
+            
+            
             DropdownButtonHideUnderline(
               child: DropdownButton2(
                 hint: Text(
@@ -175,7 +164,7 @@ class _NavigationBarState extends State<NavBar> {
                   ),
                 ),
                 icon: Transform.translate(
-                  offset: Offset(-50, -2),
+                  offset: Offset(0, 0),
                   child: Icon(
                     Icons.expand_more_outlined,
                     color: Colors.white,
@@ -184,44 +173,38 @@ class _NavigationBarState extends State<NavBar> {
                 items: [
                   DropdownMenuItem(
                       value: 'pdpa',
-                      child: TextButton(
-                        onPressed: () => context.go('/services'),
-                        child: Text(
-                          'PDPA Management\nPlatform',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: _selected
-                                ? Colors.white
-                                : Color.fromARGB(255, 52, 144, 206),
-                          ),
+                      onTap: () => context.go('/services'),
+                      child: Text(
+                        'PDPA Management\nPlatform',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: _selected
+                              ? Colors.white
+                              : Color.fromARGB(255, 52, 144, 206),
                         ),
                       )),
                   DropdownMenuItem(
                       value: 'governance',
-                      child: TextButton(
-                        onPressed: () => context.go('/services'),
-                        child: Text(
-                          'Governance Assurance\nSuit',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: _selected
-                                ? Colors.white
-                                : Color.fromARGB(255, 52, 144, 206),
-                          ),
+                      onTap: () => context.go('/services'),
+                      child: Text(
+                        'Governance\nAssurance Suit',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: _selected
+                              ? Colors.white
+                              : Color.fromARGB(255, 52, 144, 206),
                         ),
                       )),
                   DropdownMenuItem(
                       value: 'request',
-                      child: TextButton(
-                        onPressed: () => context.go('/demo'),
-                        child: Text(
-                          'Request Demo',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: _selected
-                                ? Colors.white
-                                : Color.fromARGB(255, 52, 144, 206),
-                          ),
+                      onTap: () => context.go('/demo'),
+                      child: Text(
+                        'Request Demo',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: _selected
+                              ? Colors.white
+                              : Color.fromARGB(255, 52, 144, 206),
                         ),
                       )),
                 ],
@@ -232,18 +215,16 @@ class _NavigationBarState extends State<NavBar> {
                     ServicesValue = value as String;
                   });
                 },
-                dropdownDecoration: BoxDecoration(
-                  color: Colors.white,
-                  // borderRadius: BorderRadius.circular(5)
-                ),
+                // dropdownDecoration: BoxDecoration(
+                //   color: Colors.white,
+                //   borderRadius: BorderRadius.circular(5)
+                // ),
                 // buttonHeight: 18,
                 // buttonWidth: 170,
                 // itemHeight: 50,
               ),
             ),
-            // SizedBox(
-            //   width: 10,
-            // ),
+            
             TextButton(
               child: Text(
                 "Blogs",
@@ -254,9 +235,6 @@ class _NavigationBarState extends State<NavBar> {
               ),
               onPressed: () {},
             ),
-            // SizedBox(
-            //   width: 27,
-            // ),
             TextButton(
               child: Text(
                 "Contact Us",
@@ -290,68 +268,8 @@ class _NavigationBarState extends State<NavBar> {
                 ),
               ),
             ),
-            // Container(
-            //   width: 195,
-            //   height: 50,
-            //   decoration: BoxDecoration(
-            //       color: Color.fromARGB(255, 232, 242, 254),
-            //       borderRadius: BorderRadius.circular(30),
-            //       border: Border.all(
-            //           color: Color.fromARGB(255, 57, 128, 237), width: 3)),
-            //   child: TextButton(
-            //     onPressed: () {
-            //       // Perform some action
-            //     },
-            //     child: Text(
-            //       'ทดลองใช้ฟรี',
-            //       style: GoogleFonts.ibmPlexSansThai(
-            //           color: Color.fromARGB(255, 57, 128, 237),
-            //           fontSize: 20,
-            //           fontWeight: FontWeight.w600),
-            //     ),
-            //     // Changes the background color
-            //   ),
-            // ),
-
-            // SizedBox(
-            //   width: 29,
-            // ),
-            // Container(
-            //   width: 90,
-            //   height: 38,
-            //   decoration: BoxDecoration(
-            //     border: Border.all(color: Colors.white, width: 2),
-            //     borderRadius: BorderRadius.circular(30),
-            //   ),
-            //   child: TextButton(
-            //     onPressed: () {
-            //       // Perform some action
-            //     },
-
-            //     child: Row(
-            //       mainAxisAlignment: MainAxisAlignment.center,
-            //       children: [
-            //         Icon(
-            //           Icons.language,
-            //           color: Colors.white,
-            //         ),
-            //         SizedBox(
-            //           width: 5,
-            //         ),
-            //         Text(
-            //           'TH',
-            //           style: GoogleFonts.ibmPlexSansThai(
-            //               color: Colors.white,
-            //               fontSize: 16,
-            //               fontWeight: FontWeight.w600),
-            //         ),
-            //       ],
-            //     ),
-            //     // Changes the background color
-            //   ),
-            // ),
           ],
-        ),
+        )),
       ),
     );
   }

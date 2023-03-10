@@ -210,7 +210,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
 
     // CarouselController _controller = CarouselController();
     // int _current = 0;
-    List _isSelected = [true, false, false];
+    // List _isSelected = [true, false, false];
 
     return Center(
       child: Container(

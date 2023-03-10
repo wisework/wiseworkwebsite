@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/home/features.dart';
 import 'package:wiseintern/home/footer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Pdmanagement extends StatefulWidget {
   @override
@@ -14,13 +13,13 @@ class Pdmanagement extends StatefulWidget {
 }
 
 class _PdmanagementPageState extends State<Pdmanagement> {
-  int _currentIndex = 0;
+  // int _currentIndex = 0;
 
-  void onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
+  // void onTabTapped(int index) {
+  //   setState(() {
+  //     _currentIndex = index;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {

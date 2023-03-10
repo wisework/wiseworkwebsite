@@ -1,7 +1,7 @@
-import 'dart:html';
-import 'package:dotted_line/dotted_line.dart';
+
+// import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
-import '../responsive.dart';
+// import 'package:wiseintern/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CompareTable extends StatefulWidget {

@@ -94,190 +94,19 @@ class Questions extends StatefulWidget {
 }
 
 class _QuestionsState extends State<Questions> {
-  bool _showCustomers = false;
+  // bool _showCustomers = false;
   // const Faq({super.key});
-  int _selectedIndex = 0;
+  // int _selectedIndex = 0;
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
-  final List _isHovering = [
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ];
+  // void _onItemTapped(int index) {
+  //   setState(() {
+  //     _selectedIndex = index;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
-    var consult = Container(
-      child: Text(
-        'พร้อมวางแผนให้ธุรกิจคุณปรึกษา',
-        style: GoogleFonts.ibmPlexSansThai(
-            color: Colors.white,
-            fontSize: Responsive.isDesktop(context) ? 20 : 15,
-            fontWeight: FontWeight.w400),
-      ),
-    );
-    var hashtag = Container(
-      child: Text(
-        '#Teamwisework',
-        style: GoogleFonts.ibmPlexSansThai(
-            color: Colors.white,
-            fontSize: Responsive.isDesktop(context) ? 36 : 25,
-            fontWeight: FontWeight.w700),
-      ),
-    );
-
-    var describe = Container(
-      child: Text(
-        'ให้องค์กรของคุณ วางแผนและจัดการกับ DATA \n หัวใจสำคัญของธุรกิจ ได้ถูกต้องตามกฎหมาย',
-        style: GoogleFonts.ibmPlexSansThai(
-            color: Colors.white,
-            fontSize: Responsive.isDesktop(context) ? 18 : 13,
-            fontWeight: FontWeight.w400),
-      ),
-    );
-
-    var button = SizedBox(
-      width: Responsive.isDesktop(context)
-          ? 190
-          : Responsive.isTablet(context)
-              ? 193
-              : 193,
-      height: Responsive.isDesktop(context)
-          ? 48
-          : Responsive.isTablet(context)
-              ? 50
-              : 46,
-      child: ElevatedButton(
-        onPressed: () {},
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Color.fromARGB(255, 75, 195, 211),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-        ),
-        child: Text(
-          'รับคำปรึกษา',
-          style: GoogleFonts.ibmPlexSans(
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-    );
-
-    var groupofpic = Container(
-      width: Responsive.isDesktop(context)
-          ? 500
-          : Responsive.isTablet(context)
-              ? 350
-              : 250,
-      height: Responsive.isDesktop(context)
-          ? 550
-          : Responsive.isTablet(context)
-              ? 350
-              : 250,
-      child: new Stack(
-        children: <Widget>[
-          new SizedBox(
-            width: Responsive.isDesktop(context)
-                ? 500
-                : Responsive.isTablet(context)
-                    ? 70
-                    : 70,
-            height: Responsive.isDesktop(context)
-                ? 550
-                : Responsive.isTablet(context)
-                    ? 70
-                    : 70,
-          ),
-          new Positioned(
-            width: Responsive.isDesktop(context)
-                ? 450
-                : Responsive.isTablet(context)
-                    ? 300
-                    : 180,
-            height: Responsive.isDesktop(context)
-                ? 480
-                : Responsive.isTablet(context)
-                    ? 300
-                    : 180,
-            top: Responsive.isDesktop(context)
-                ? 40
-                : Responsive.isTablet(context)
-                    ? 20
-                    : 20,
-            left: Responsive.isDesktop(context)
-                ? 40
-                : Responsive.isTablet(context)
-                    ? 40
-                    : 40,
-            child: new Image.asset('/faq/faq-bg.png'),
-          ),
-          new Positioned(
-            width: Responsive.isDesktop(context)
-                ? 450
-                : Responsive.isTablet(context)
-                    ? 300
-                    : 180,
-            height: Responsive.isDesktop(context)
-                ? 480
-                : Responsive.isTablet(context)
-                    ? 300
-                    : 180,
-            top: Responsive.isDesktop(context)
-                ? 0
-                : Responsive.isTablet(context)
-                    ? 10
-                    : 10,
-            left: Responsive.isDesktop(context)
-                ? 0
-                : Responsive.isTablet(context)
-                    ? 20
-                    : 20,
-            child: new Image.asset('/faq/faq-pic.png'),
-          ),
-        ],
-      ),
-    );
-
-    var Qth = Container(
-      child: Text(
-        'รวมคำถามที่พบบ่อย',
-        style: GoogleFonts.ibmPlexSansThai(
-          fontSize: Responsive.isDesktop(context) ? 32 : 20,
-          fontWeight: FontWeight.w600,
-          color: Color.fromARGB(255, 75, 195, 211),
-        ),
-      ),
-    );
-
-    var Qen = Container(
-      child: Text(
-        'Frequently Asked Questions',
-        style: GoogleFonts.ibmPlexSansThai(
-          fontSize: Responsive.isDesktop(context) ? 48 : 25,
-          fontWeight: FontWeight.w600,
-          color: Color.fromARGB(255, 232, 242, 254),
-        ),
-      ),
-    );
-
-    bool _isLargeScreen() {
-      final double screenWidth = MediaQuery.of(context).size.width;
-      return screenWidth > 1400;
-    }
-
+    
     return Center(
       child: Container(
         color: Color.fromARGB(255, 5, 45, 97),

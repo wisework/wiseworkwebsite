@@ -158,29 +158,30 @@ class _DestinationCarouselState extends State<StoryPage> {
       "เชี่ยวชาญงานพัฒนาโปรแกรมระบบด้านความมั่นคงปลอดภัยสารสนเทศ",
       "เชี่ยวชาญงานพัฒนาโปรแกรมตามกฎหมาย กฎระเบียบ และมาตรฐานสากล",
     ];
-    var groupofpic = Container(
-      height: 380,
-      width: 720,
-      // alignment: FractionalOffset.center,
-      child: new Stack(
-        //alignment:new Alignment(x, y)
-        children: <Widget>[
-          new SizedBox(
-            height: 380,
-            width: 720,
-          ),
-          new Positioned(
-            height: 348,
-            width: 530,
-            child: new Image(image: AssetImage("assets/story/storybg.png")),
-          ),
-          new Positioned(
-              height: 328,
-              width: 720,
-              child: new Image(image: AssetImage("assets/story/storypic.png"))),
-        ],
-      ),
-    );
+    // var groupofpic = Container(
+    //   height: 380,
+    //   width: 720,
+    //   // alignment: FractionalOffset.center,
+    //   child: new Stack(
+    //     //alignment:new Alignment(x, y)
+    //     children: <Widget>[
+    //       new SizedBox(
+    //         height: 380,
+    //         width: 720,
+    //       ),
+    //       new Positioned(
+    //         height: 348,
+    //         width: 530,
+    //         child: new Image(image: AssetImage("assets/story/storybg.png")),
+    //       ),
+    //       new Positioned(
+    //           height: 328,
+    //           width: 720,
+    //           child: new Image(image: AssetImage("assets/story/storypic.png"))),
+    //     ],
+    //   ),
+    // );
+   
     var title = Container(
       color: Color.fromARGB(0, 0, 187, 212),
       height: !Responsive.isMobile(context) ? 62 : 120,

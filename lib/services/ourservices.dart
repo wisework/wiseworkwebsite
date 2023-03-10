@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:wiseintern/responsive.dart';
+// import 'package:wiseintern/responsive.dart';
 
 class OurservicesPage extends StatefulWidget {
   @override

@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/model/customer_carousel.dart';
 
 class Advise extends StatefulWidget {

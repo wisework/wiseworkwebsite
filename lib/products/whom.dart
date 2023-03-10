@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../responsive.dart';
+import 'package:wiseintern/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hovering/hovering.dart';
 

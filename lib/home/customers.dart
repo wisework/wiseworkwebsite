@@ -28,7 +28,7 @@ class Customer extends StatefulWidget {
 }
 
 class _CustomerState extends State<Customer> {
-  CarouselController _controller = CarouselController();
+  // CarouselController _controller = CarouselController();
   // final controller =
   //     PageController(viewportFraction: 0.8, keepPage: true, initialPage: 0);
   int _current = 0;

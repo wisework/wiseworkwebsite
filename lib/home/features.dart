@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../navbar.dart';
-import '../responsive.dart';
-import 'package:wiseintern/features/pdmanagement.dart';
+import 'package:wiseintern/responsive.dart';
 import 'package:go_router/go_router.dart';
 
 class FeatureModel {
@@ -72,18 +69,8 @@ class _FeaturesPageState extends State<FeaturesPage> {
         "routePath"),
   ];
 
-  bool _hover = false;
+  // bool _hover = false;
 
-  void _navigateToPage(BuildContext context, String page) {
-    switch (page) {
-      case "pdmanagementpage":
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Pdmanagement()),
-        );
-        break;
-    }
-  }
 
   @override
   Widget build(BuildContext context) {

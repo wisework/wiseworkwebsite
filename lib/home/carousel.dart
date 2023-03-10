@@ -12,10 +12,7 @@ class CarouselPage extends StatefulWidget {
 class _DestinationCarouselState extends State<CarouselPage> {
   final String imagePath = 'assets/carousel/';
 
-  final CarouselController _controller = CarouselController();
-
-  // List _isHovering = [false, false, false, false, false];
-  List _isSelected = [true, false, false, false, false];
+  // final CarouselController _controller = CarouselController();
 
   int _current = 0;
 
