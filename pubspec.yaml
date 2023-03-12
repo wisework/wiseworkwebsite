@@ -162,6 +162,7 @@ flutter:
   - assets/footer/tel.png
   - assets/footer/email-icon.png
   - assets/footer/call-icon.png
+  - assets/footer/send.png
 
   - assets/pdpa/pdpa.png
   - assets/pdpa/check.png

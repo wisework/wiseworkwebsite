@@ -43,32 +43,32 @@ class _NavigationBarState extends State<NavBar> {
     FeatureModel("About Us", "/about/aboutpage.dart"),
   ];
 
-  bool _isExpanded = false;
+  // bool _isExpanded = false;
 
   @override
   Widget build(BuildContext context) {
     // var screenSize = MediaQuery.of(context).size;
 
-    return Container(
-      color: Color.fromARGB(255, 52, 144, 206),
-      child: Padding(
-        padding: EdgeInsets.all(20),
-        child: Expanded(
-            child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 9, bottom: 13, left: 91),
+    return Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+      Padding(
+              padding: const EdgeInsets.only(top: 9, bottom: 13, left: 200),
               child: SizedBox(
                 height: 45,
                 width: 120,
-                child: Image.asset(
-                  'logo.png',
+                child: GestureDetector(
+                  onTap:() => context.go('/') ,
+                  child: Image.asset(
+                    'assets/logo.png',
+                  ),
                 ),
               ),
             ),
+            
             SizedBox(
-              width: 281,
+              width: 200,
             ),
             SizedBox(
               height: 18,
@@ -86,76 +86,80 @@ class _NavigationBarState extends State<NavBar> {
             ),
             
             DropdownButtonHideUnderline(
-              child: DropdownButton2(
-                hint: Transform.translate(
-                  offset: Offset(0, 1),
-                  child: Text(
-                    'About Us',
-                    style: TextStyle(
-                      fontSize: 16,
+              child: SizedBox(
+                width: 170,
+                child: DropdownButton2(
+                  focusColor: Color.fromARGB(255, 52, 144, 206),
+                  hint: Transform.translate(
+                    offset: Offset(0, 1),
+                    child: Text(
+                      'About Us',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  icon: Transform.translate(
+                    offset: Offset(0, 0),
+                    child: Icon(
+                      Icons.expand_more_outlined,
                       color: Colors.white,
                     ),
                   ),
+                  value: AboutValue,
+                  
+                  items: [
+                    DropdownMenuItem(
+                        value: 'our story',
+                        onTap:  () => context.go('/story'),
+                        child: Text(
+                          'Our Story',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: _selected
+                                ? Colors.white
+                                : Color.fromARGB(255, 52, 144, 206),
+                          ),
+                        )),
+                    DropdownMenuItem(
+                        value: 'our rewards',
+                        onTap: () => context.go('/story'),
+                        child: Text(
+                          'Our Rewards',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: _selected
+                                ? Colors.white
+                                : Color.fromARGB(255, 52, 144, 206),
+                          ),
+                        )),
+                    DropdownMenuItem(
+                        value: 'customer',
+                        onTap: () => context.go('/customers'),
+                        child: Text(
+                          'Our Customers',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: _selected
+                                ? Colors.white
+                                : Color.fromARGB(255, 52, 144, 206),
+                          ),
+                        )),
+                  ],
+                  onChanged: (value) {
+                    setState(() {
+                      // _selectedItem = value.toString();
+                      // AboutValue = value as String;
+                    });
+                  },
                 ),
-                icon: Transform.translate(
-                  offset: Offset(0, 0),
-                  child: Icon(
-                    Icons.expand_more_outlined,
-                    color: Colors.white,
-                  ),
-                ),
-                value: AboutValue,
-                
-                items: [
-                  DropdownMenuItem(
-                      value: 'our story',
-                      onTap:  () => context.go('/story'),
-                      child: Text(
-                        'Our Story',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: _selected
-                              ? Colors.white
-                              : Color.fromARGB(255, 52, 144, 206),
-                        ),
-                      )),
-                  DropdownMenuItem(
-                      value: 'our rewards',
-                      onTap: () => context.go('/story'),
-                      child: Text(
-                        'Our Rewards',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: _selected
-                              ? Colors.white
-                              : Color.fromARGB(255, 52, 144, 206),
-                        ),
-                      )),
-                  DropdownMenuItem(
-                      value: 'customer',
-                      onTap: () => context.go('/customers'),
-                      child: Text(
-                        'Our Customers',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: _selected
-                              ? Colors.white
-                              : Color.fromARGB(255, 52, 144, 206),
-                        ),
-                      )),
-                ],
-                onChanged: (value) {
-                  setState(() {
-                    _selectedItem = value.toString();
-                    AboutValue = value as String;
-                  });
-                },
               ),
             ),
             
-            
             DropdownButtonHideUnderline(
               child: DropdownButton2(
+                focusColor: Color.fromARGB(255, 52, 144, 206),
                 hint: Text(
                   'Our Services',
                   style: TextStyle(
@@ -211,8 +215,8 @@ class _NavigationBarState extends State<NavBar> {
                 value: ServicesValue,
                 onChanged: (value) {
                   setState(() {
-                    _selectedItem = value.toString();
-                    ServicesValue = value as String;
+                    // _selectedItem = value.toString();
+                    // ServicesValue = value as String;
                   });
                 },
                 // dropdownDecoration: BoxDecoration(
@@ -235,6 +239,7 @@ class _NavigationBarState extends State<NavBar> {
               ),
               onPressed: () {},
             ),
+            
             TextButton(
               child: Text(
                 "Contact Us",
@@ -245,6 +250,7 @@ class _NavigationBarState extends State<NavBar> {
               ),
               onPressed: () => context.go('/contact'),
             ),
+            
             SizedBox(
               width: 42,
             ),
@@ -268,8 +274,8 @@ class _NavigationBarState extends State<NavBar> {
                 ),
               ),
             ),
-          ],
-        )),
+          
+        ],
       ),
     );
   }

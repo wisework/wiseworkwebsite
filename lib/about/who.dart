@@ -616,25 +616,28 @@ class WhoPage extends StatelessWidget {
                   child: Column(
                     // crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Stack(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 100),
-                            child: Container(
-                                width: 347,
-                                height: 233,
-                                child: Image.asset("assets/about/who/computer.png")),
-                          ),
-                          new Positioned(
-                            top: 32,
-                            right: 0,
-                            child: SizedBox(
-                              width: 70,
-                              height: 102,
-                              child: Image.asset("assets/demo/dot.png"),
+                      Container(
+                        width:368 ,
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 100),
+                              child: Container(
+                                  width: 347,
+                                  height: 233,
+                                  child: Image.asset("assets/about/who/computer.png")),
                             ),
-                          ),
-                        ],
+                            new Positioned(
+                              top: 32,
+                              right: 0,
+                              child: SizedBox(
+                                width: 70,
+                                height: 102,
+                                child: Image.asset("assets/demo/dot.png"),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 15, left: 25),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wiseintern/navbar.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/menu_drawer.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/demo/register.dart';
@@ -38,8 +39,11 @@ class _DemoPageState extends State<DemoPage> {
                       SizedBox(
                         height: 60,
                         width: 100,
-                        child: Image.asset(
-                          'logo.png',
+                        child: GestureDetector(
+                          onTap: () => context.go('/'),
+                          child: Image.asset(
+                            'assets/logo.png',
+                          ),
                         ),
                       ),
                       // SizedBox(

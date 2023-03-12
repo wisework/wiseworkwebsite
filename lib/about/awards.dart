@@ -1405,7 +1405,7 @@ class _AwardsState extends State<AwardsPage> {
                                                         const EdgeInsets.only(
                                                             top: 20),
                                                     child: Text(
-                                                      "Information Security\nManagement System:ISMS",
+                                                      "Information Security\nManagement\nSystem:ISMS",
                                                       style: GoogleFonts
                                                           .ibmPlexSansThai(
                                                               fontSize: 16,
@@ -1633,7 +1633,7 @@ class _AwardsState extends State<AwardsPage> {
                                                         const EdgeInsets.only(
                                                             top: 20),
                                                     child: Text(
-                                                      "Privacy Information\nManagement System:PIMS",
+                                                      "Privacy Information\nManagement\nSystem:PIMS",
                                                       style: GoogleFonts
                                                           .ibmPlexSansThai(
                                                               fontSize: 16,

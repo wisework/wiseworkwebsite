@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+// import 'package:dropdown_button2/dropdown_button2.dart';
+// import 'package:google_fonts/google_fonts.dart';
+import 'package:wiseintern/navbar.dart';
 
 import 'package:wiseintern/home/pdpa.dart';
-import 'package:wiseintern/navbar.dart';
 import 'package:wiseintern/home/features.dart';
 import 'package:wiseintern/home/packagepage.dart';
 import 'package:wiseintern/responsive.dart';
@@ -24,6 +27,24 @@ class _HomePageState extends State<HomePage> {
   //     _currentIndex = index;
   //   });
   // }
+  final List<String> listAbout = <String>[
+    'About Us',
+    'Our Story',
+    'Our Rew',
+    'Our Cus',
+  ];
+
+  String? _selectedItem;
+  bool _selected = false;
+
+  final List<String> listServices = <String>[
+    'Our Services',
+    'PDPA ',
+    'Governance ',
+    'Request Demo',
+  ];
+  String? AboutValue;
+  String? ServicesValue;
 
   @override
   Widget build(BuildContext context) {
@@ -35,18 +56,38 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Color.fromARGB(255, 52, 144, 206),
           elevation: 0,
           centerTitle: true,
+          // actions: [
+          // Responsive.isDesktop(context)
+          // ?NavBar()
+          // :Padding(
+          //         padding: const EdgeInsets.all(20),
+          //         child: SizedBox(
+          //           height: 60,
+          //           width: 100,
+          //           child: Image.asset(
+          //             'logo.png',
+          //           ),
+          //         ),
+          //       ),
+          // ],
           title: !Responsive.isDesktop(context)
               ? Padding(
                   padding: const EdgeInsets.all(20),
                   child: SizedBox(
                     height: 60,
                     width: 100,
-                    child: Image.asset(
-                      'logo.png',
+                    child: GestureDetector(
+                      onTap: () => context.go('/'),
+                      child: Image.asset(
+                        'assets/logo.png',
+                      ),
                     ),
                   ),
                 )
-              : NavBar()),
+              : 
+              // Container()
+              NavBar()
+              ),
       drawer: MenuDrawer(),
       body: SingleChildScrollView(
         child: Column(

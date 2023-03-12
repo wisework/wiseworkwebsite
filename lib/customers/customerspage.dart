@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wiseintern/navbar.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/menu_drawer.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/customers/banner.dart';
@@ -13,13 +14,13 @@ class CustomerPage extends StatefulWidget {
 }
 
 class _CustomerPageState extends State<CustomerPage> {
-  int _currentIndex = 0;
+  // int _currentIndex = 0;
 
-  void onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
+  // void onTabTapped(int index) {
+  //   setState(() {
+  //     _currentIndex = index;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +38,11 @@ class _CustomerPageState extends State<CustomerPage> {
                   child: SizedBox(
                     height: 60,
                     width: 100,
-                    child: Image.asset(
-                      'logo.png',
+                    child: GestureDetector(
+                      onTap: () => context.go('/'),
+                      child: Image.asset(
+                        'assets/logo.png',
+                      ),
                     ),
                   ),
                 )
