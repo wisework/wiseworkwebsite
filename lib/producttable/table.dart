@@ -1,7 +1,7 @@
-
-// import 'package:dotted_line/dotted_line.dart';
+import 'dart:html';
+import 'dart:math';
 import 'package:flutter/material.dart';
-// import 'package:wiseintern/responsive.dart';
+import '../responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CompareTable extends StatefulWidget {
@@ -11,380 +11,194 @@ class CompareTable extends StatefulWidget {
   State<CompareTable> createState() => _CompareTableState();
 }
 
-class Model {
-  final String title;
-  final String children;
-  // final bool position;
-  // final bool dense;
-  Model({
-    required this.title,
-    required this.children,
-    // required this.position,
-    // required this.dense,
+class EXModel {
+  final String details;
+  final String detailsch;
+  final String express;
+  final String standard;
+  final String enterprise;
+  EXModel({
+    required this.details,
+    required this.detailsch,
+    required this.express,
+    required this.standard,
+    required this.enterprise,
   });
 
-  Model copyWith({
-    String? title,
-    String? children,
-    /*bool? position, bool? dense*/
+  EXModel copyWith({
+    String? details,
+    String? detailsch,
+    String? express,
+    String? standard,
+    String? enterprise,
   }) {
-    return Model(
-      title: title ?? this.title,
-      children: children ?? this.children,
-      //   position: position ?? this.position,
-      //   dense: dense ?? this.dense,
+    return EXModel(
+      details: details ?? this.details,
+      detailsch: detailsch ?? this.detailsch,
+      express: express ?? this.express,
+      standard: standard ?? this.standard,
+      enterprise: enterprise ?? this.enterprise,
     );
   }
 }
 
 class _CompareTableState extends State<CompareTable> {
-  int? hoveredIndex;
-
   @override
   Widget build(BuildContext context) {
-    final details = [
-      Model(
-        title: 'Modules',
-        children: "Support Modules",
-      ),
-      Model(
-        title: "PD Management",
-        children: "จัดการบันทึกรายการข้อมูลส่วนบุคคล และการไหลของข้อมูล",
-      ),
-      Model(
-        title: "DPIA & Risk Management",
-        children: "บริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล",
-      ),
-      Model(
-        title: "Cookies Consent",
-        children: "การขอความยินยอมจากเจ้าของข้อมูล และการบริหารจัดการคุ้กกี้",
-      ),
-      Model(
-        title: "Consent Management",
-        children: "การบริหารจัดการการให้ความยินยอม",
-      ),
-      Model(
-        title: 'DATA Subject Right Management',
-        children: "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูลส่วนบุคคล",
-      ),
-      Model(
-        title: "DATA Breach",
-        children: "บริหารกรณีเกิดข้อมูลรั่วไหล",
-      ),
-      Model(
-        title: "Audit & Gap Management",
-        children: "บริหารงานตรวจสอบ และการทำ GAP Analysis",
-      ),
-      Model(
-        title: "Policy & Notices Management",
-        children: "บริหารการสื่อสารนโยบาย และประกาศความเป็นส่วนตัว",
-      ),
-      Model(
-        title: "Data Discover",
-        children: "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
-      ),
-      Model(
-        title: 'Executive Support System',
-        children: "บริหารงานและจัดการรายงานสำหรับผู้บริหาร",
-      ),
-      Model(
-        title: "Legitimate Interest Assessment",
-        children: "การประเมินการนำฐานกฎหมายมาใช้",
-      ),
-      Model(
-        title: "Concurrent User",
-        children: "จำนวนผู้เข้าใช้งานระบบร่วมกัน",
-      ),
-      Model(
-        title: "Storage",
-        children: "พื้นที่จัดเก็บข้อมูล",
-      ),
-      Model(
-        title: "Number of DATA Subjectt",
-        children: "จำนวนการจัดเก็บ-จัดส่งข้อมูลส่วนบุคคล",
-      ),
-      Model(
-        title: 'ดำเนินการตามพรบ. คุ้มครองข้อมูลส่วนบุคคล',
-        children: " \n",
-      ),
-      Model(
-        title: "On Cloud  / On-Premise",
-        children: "ระบบการติดตั้ง",
-      ),
-      Model(
-        title: "Custom Software Development",
-        children: "พัฒนาเพิ่มเติมตามความต้องการ",
-      ),
-      Model(
-        title: "Multi-Tenant",
-        children: "รองรับการทำงานแบบ Multi-Tenant",
-      ),
-      Model(
-        title: "Product Support",
-        children: "การซัพพอร์ตผลิตภัณฑ์",
-      ),
-      Model(
-        title: 'API for Import & Export',
-        children: "ระบบการเชื่อมต่อข้อมูล",
-      ),
-    ];
-    final express = [
-      Model(
-        title: 'Basic Modules',
-        children: "(4 Modules)",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Lock",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Lock",
-        children: "",
-      ),
-      Model(
-        title: "Lock",
-        children: "",
-      ),
-      Model(
-        title: "Lock",
-        children: "",
-      ),
-      Model(
-        title: "Lock",
-        children: "",
-      ),
-      Model(
-        title: "Lock",
-        children: "",
-      ),
-      Model(
-        title: "Lock",
-        children: "",
-      ),
-      Model(
-        title: "5",
-        children: "",
-      ),
-      Model(
-        title: "10 GB",
-        children: "",
-      ),
-      Model(
-        title: "~ 100,000",
-        children: "",
-      ),
-      Model(
-        title:
-            "มาตรา 19, มาตรา 20, มาตรา 21, มาตรา 23,\nมาตรา 26, มาตรา 30, มาตรา 37, มาตรา 39,\nมาตรา 41, มาตรา 42",
-        children: "",
-      ),
-      Model(
-        title: "On Cloud",
-        children: "",
-      ),
-      Model(
-        title: "Cross",
-        children: "",
-      ),
-      Model(
-        title: "Cross",
-        children: "",
-      ),
-      Model(
-        title: "8x5",
-        children: "",
-      ),
-      Model(
-        title: 'Export Only',
-        children: "",
-      ),
-    ];
-    final standard = [
-      Model(
-        title: 'Max Modules',
-        children: "(11 Modules)",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "10",
-        children: "",
-      ),
-      Model(
-        title: "100 GB",
-        children: "",
-      ),
-      Model(
-        title: "~ 1,000,000",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "\n",
-      ),
-      Model(
-        title: "On Cloud/On-Premise",
-        children: "",
-      ),
-      Model(
-        title: "Cross",
-        children: "",
-      ),
-      Model(
-        title: "Cross",
-        children: "",
-      ),
-      Model(
-        title: "8x5",
-        children: "",
-      ),
-      Model(
-        title: 'Import & Export',
-        children: "",
-      ),
-    ];
-    final enterprise = [
-      Model(
-        title: 'Max Modules',
-        children: "(11 Modules)",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Unlimited",
-        children: "",
-      ),
-      Model(
-        title: "Unlimited",
-        children: "",
-      ),
-      Model(
-        title: "~ 10,000,000",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "\n",
-      ),
-      Model(
-        title: "On Cloud/On-Premise",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "Check",
-        children: "",
-      ),
-      Model(
-        title: "24x7",
-        children: "",
-      ),
-      Model(
-        title: 'Import & Export',
-        children: "",
+    final List<EXModel> table = [
+      // EXModel(
+      //   details: '',
+      //   detailsch: "",
+      //   express: "(SaaS)",
+      //   standard: "(Subscriptions License)",
+      //   enterprise: "(Perpetual License)",
+      // ),
+      EXModel(
+        details: 'PD Management',
+        detailsch: "จัดการบันทึกรายการข้อมูลส่วนบุคคล และการไหลของข้อมูล",
+        express: "Check",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'DPIA & Risk Management',
+        detailsch: "บริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล",
+        express: "Lock",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'Cookies Consent',
+        detailsch: "การขอความยินยอมจากเจ้าของข้อมูล และการบริหารจัดการคุ้กกี้",
+        express: "Check",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'Consent Management',
+        detailsch: "การบริหารจัดการการให้ความยินยอม",
+        express: "Check",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'DATA Subject Right Management',
+        detailsch: "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูลส่วนบุคคล",
+        express: "Check",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'DATA Breach',
+        detailsch: "บริหารกรณีเกิดข้อมูลรั่วไหล",
+        express: "Lock",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'Audit & Gap Management',
+        detailsch: "บริหารงานตรวจสอบ และการทำ GAP Analysis",
+        express: "Lock",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'Policy & Notices Management',
+        detailsch: "บริหารการสื่อสารนโยบาย และประกาศความเป็นส่วนตัว",
+        express: "Lock",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'Data Discover',
+        detailsch: "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
+        express: "Lock",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'Executive Support System',
+        detailsch: "บริหารงานและจัดการรายงานสำหรับผู้บริหาร",
+        express: "Lock",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'Legitimate Interest Assessment',
+        detailsch: "การประเมินการนำฐานกฎหมายมาใช้",
+        express: "Lock",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'Concurrent User',
+        detailsch: "จำนวนผู้เข้าใช้งานระบบร่วมกัน",
+        express: "5",
+        standard: "10",
+        enterprise: "Unlimited",
+      ),
+      EXModel(
+        details: 'Storage',
+        detailsch: "พื้นที่จัดเก็บข้อมูล",
+        express: "10GB",
+        standard: "100GB",
+        enterprise: "Unlimited",
+      ),
+      EXModel(
+        details: 'Number of DATA Subject',
+        detailsch: "จำนวนการจัดเก็บ-จัดส่งข้อมูลส่วนบุคคล",
+        express: "~100,000",
+        standard: "~ 1,000,000",
+        enterprise: "~ 10,000,000",
+      ),
+      EXModel(
+        details: 'ครบถ้วนตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล',
+        detailsch: "Personal Data Protection Act",
+        express: "มาตรา 19, 20, 21, 23,\n26, 30, 37, 39, 41, 42",
+        standard: "Check",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'On Cloud  / On-Premise',
+        detailsch: "ระบบการติดตั้ง",
+        express: "On Cloud",
+        standard: "On Cloud/On-Premise",
+        enterprise: "On Cloud/On-Premise",
+      ),
+      EXModel(
+        details: 'Custom Software Development',
+        detailsch: "พัฒนาเพิ่มเติมตามความต้องการ",
+        express: "Cross",
+        standard: "Cross",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'Multi-Tenant',
+        detailsch: "รองรับการทำงานแบบ Multi-Tenant",
+        express: "Cross",
+        standard: "Cross",
+        enterprise: "Check",
+      ),
+      EXModel(
+        details: 'Product Support',
+        detailsch: "การซัพพอร์ตผลิตภัณฑ์",
+        express: "8x5",
+        standard: "8x5",
+        enterprise: "24x7",
+      ),
+      EXModel(
+        details: 'API for Import & Export',
+        detailsch: "ระบบการเชื่อมต่อข้อมูล",
+        express: "Export Only",
+        standard: "Import & Export",
+        enterprise: "Import & Export",
+      ),
+      EXModel(
+        details: '',
+        detailsch: "",
+        express: "Buy Now",
+        standard: "Buy Now",
+        enterprise: "Buy Now",
       ),
     ];
     return Center(
@@ -398,22 +212,24 @@ class _CompareTableState extends State<CompareTable> {
               height: 64,
             ),
             Container(
-              width: 1323,
-              height: 2040,
+              width: 1328,
+              height: 2313,
               child: Expanded(
                 child: Table(
                   columnWidths: {
-                    0: FlexColumnWidth(48),
-                    1: FlexColumnWidth(30),
-                    2: FlexColumnWidth(25),
-                    3: FlexColumnWidth(30),
+                    0: FlexColumnWidth(50),
+                    1: FlexColumnWidth(26),
+                    2: FlexColumnWidth(26),
+                    3: FlexColumnWidth(26),
                   },
                   // border: TableBorder.all(),
                   children: [
                     TableRow(
+                      decoration:
+                          BoxDecoration(color: Color.fromARGB(0, 255, 193, 7)),
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 90),
+                          padding: const EdgeInsets.only(right: 68),
                           child: Container(
                             width: 412,
                             height: 61,
@@ -439,79 +255,70 @@ class _CompareTableState extends State<CompareTable> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 20),
-                          child: Transform.translate(
-                            offset: Offset(2, 0),
-                            child: Container(
-                              width: 263,
-                              height: 61,
-                              decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 75, 195,
-                                    211), // set the background color
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(30),
-                                  bottomLeft: Radius.circular(30),
-                                ), // set the border radius
-                              ),
-                              child: Transform.translate(
-                                offset: Offset(-10, 3),
-                                child: Text(
-                                  textAlign: TextAlign.center,
-                                  'Express',
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 32,
-                                      fontWeight: FontWeight.w600,
-                                      color: Color.fromARGB(255, 0, 0, 0)),
-                                ),
-                              ),
+                          padding: EdgeInsets.symmetric(horizontal: 13.5),
+                          child: Container(
+                            width: 250,
+                            height: 62,
+                            decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 75, 195,
+                                  211), // set the background color
+                              borderRadius: BorderRadius.circular(
+                                  30), // set the border radius
                             ),
-                          ),
-                        ),
-                        Container(
-                          width: 263,
-                          height: 61,
-
-                          color: Color.fromARGB(
-                              255, 75, 195, 211), // set the background color
-                          // set the border radius
-
-                          child: Transform.translate(
-                            offset: Offset(0, 3),
-                            child: Text(
-                              textAlign: TextAlign.center,
-                              'Standard',
-                              style: GoogleFonts.ibmPlexSansThai(
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.w600,
-                                  color: Color.fromARGB(255, 0, 0, 0)),
+                            child: Center(
+                              child: Text(
+                                textAlign: TextAlign.center,
+                                'Express',
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color.fromARGB(255, 255, 255, 255)),
+                              ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(right: 20, bottom: 5),
-                          child: Transform.translate(
-                            offset: Offset(-2, 0),
-                            child: Container(
-                              width: 263,
-                              height: 61,
-                              decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 75, 195,
-                                    211), // set the background color
-                                borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(30),
-                                  bottomRight: Radius.circular(30),
-                                ), // set the border radius
+                          padding: EdgeInsets.symmetric(horizontal: 13.5),
+                          child: Container(
+                            width: 250,
+                            height: 62,
+                            decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 105, 173,
+                                  221), // set the background color
+                              borderRadius: BorderRadius.circular(
+                                  30), // set the border radius
+                            ),
+                            child: Center(
+                              child: Text(
+                                textAlign: TextAlign.center,
+                                'Standard',
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color.fromARGB(255, 255, 255, 255)),
                               ),
-                              child: Transform.translate(
-                                offset: Offset(10, 3),
-                                child: Text(
-                                  textAlign: TextAlign.center,
-                                  'Enterprise',
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 32,
-                                      fontWeight: FontWeight.w600,
-                                      color: Color.fromARGB(255, 0, 0, 0)),
-                                ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 13.5),
+                          child: Container(
+                            width: 250,
+                            height: 62,
+                            decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 140, 140,
+                                  207), // set the background color
+                              borderRadius: BorderRadius.circular(
+                                  30), // set the border radius
+                            ),
+                            child: Center(
+                              child: Text(
+                                textAlign: TextAlign.center,
+                                'Enterprise',
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color.fromARGB(255, 255, 255, 255)),
                               ),
                             ),
                           ),
@@ -519,40 +326,38 @@ class _CompareTableState extends State<CompareTable> {
                       ],
                     ),
                     TableRow(
-                      decoration: BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(
-                            width: 1.0,
-                            color: Color.fromARGB(255, 225, 232, 240),
-                          ),
-                        ),
-                      ),
                       children: [
                         SizedBox(
                           width: 500,
-                          height: 44,
+                          height: 71,
                         ),
-                        Center(
+                        Padding(
+                          padding: const EdgeInsets.only(top: 18, bottom: 36),
                           child: Text(
                             '(SaaS)',
+                            textAlign: TextAlign.center,
                             style: GoogleFonts.ibmPlexSansThai(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
                                 color: Color.fromARGB(255, 31, 31, 31)),
                           ),
                         ),
-                        Center(
+                        Padding(
+                          padding: const EdgeInsets.only(top: 18),
                           child: Text(
                             '(Subscriptions License)',
+                            textAlign: TextAlign.center,
                             style: GoogleFonts.ibmPlexSansThai(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
                                 color: Color.fromARGB(255, 31, 31, 31)),
                           ),
                         ),
-                        Center(
+                        Padding(
+                          padding: const EdgeInsets.only(top: 18),
                           child: Text(
                             '(Perpeptual License)',
+                            textAlign: TextAlign.center,
                             style: GoogleFonts.ibmPlexSansThai(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
@@ -561,443 +366,405 @@ class _CompareTableState extends State<CompareTable> {
                         ),
                       ],
                     ),
-                    TableRow(
-                      children: [
-                        SizedBox(
-                          width: 500,
-                          height: 1800,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            itemCount: details.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              return ListTile(
-                                horizontalTitleGap: 1,
-                                // minLeadingWidth: 30,
-                                minVerticalPadding: 10,
-                                dense: true,
-                                visualDensity:
-                                    VisualDensity(horizontal: -4, vertical: -4),
-                                title: Transform.translate(
-                                  offset: Offset(0, 0),
-                                  child: Text(
-                                    '${details[index].title}',
-                                    style: GoogleFonts.ibmPlexSansThai(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                ),
-                                subtitle: Transform.translate(
-                                  offset: Offset(0, 0),
-                                  child: Text(
-                                    '${details[index].children}',
-                                    style: GoogleFonts.ibmPlexSansThai(
-                                        letterSpacing: -0.5,
-                                        color: Colors.black,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
+                    ...List.generate(table.length, (int index) {
+                      return TableRow(
+                        decoration: BoxDecoration(
+                          // border: Border.all(width: 1),
+                          color:
+                              index % 2 == 0 ? Colors.white : Colors.grey[100],
                         ),
-                        SizedBox(
-                          width: 500,
-                          height: 1800,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            itemCount: details.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              Widget title = express[index].title == 'Lock'
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 5),
+                            child: Container(
+                              width: 495,
+                              height: index % 2 == 0 ? 100 : 93,
+                              // borderRadius: index == table.length - 1
+                              //     ? BorderRadius.only(
+                              //         bottomLeft: Radius.circular(20),
+                              //         bottomRight: Radius.circular(20))
+                              //     : null,
+
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    height: 30,
+                                    width: 458,
+                                    child: Text(table[index].details,
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w600,
+                                        )),
+                                  ),
+                                  Container(
+                                    height: 30,
+                                    width: 458,
+                                    child: Text(table[index].detailsch,
+                                        textAlign: TextAlign.start,
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w400,
+                                        )),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          TableCell(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 5.0, right: 5),
+                              child: table[index].express == 'Lock'
                                   ? Transform.translate(
-                                      offset: Offset(0, 25),
+                                      offset:
+                                          Offset(0, index % 2 == 0 ? 27.5 : 25),
                                       child: SizedBox(
-                                        height: 33,
-                                        width: 28,
+                                        height: 40,
+                                        width: 30,
                                         child: Image(
                                             fit: BoxFit.fitHeight,
                                             image: AssetImage(
                                                 "packages/lock.png")),
                                       ),
                                     )
-                                  : express[index].title == 'Check'
+                                  : table[index].express == 'Check'
                                       ? Transform.translate(
-                                          offset: Offset(0, 25),
+                                          offset: Offset(
+                                              0, index % 2 == 0 ? 30 : 27.5),
                                           child: SizedBox(
-                                            height: 33,
-                                            width: 33,
+                                            height: 40,
+                                            width: 40,
                                             child: Image(
                                                 fit: BoxFit.fitHeight,
                                                 image: AssetImage(
                                                     "packages/check.png")),
                                           ),
                                         )
-                                      : express[index].title == 'Cross'
+                                      : table[index].express == 'Cross'
                                           ? Transform.translate(
-                                              offset: Offset(0, 25),
+                                              offset: Offset(0,
+                                                  index % 2 == 0 ? 30 : 27.5),
                                               child: SizedBox(
-                                                height: 33,
-                                                width: 33,
+                                                height: 40,
+                                                width: 40,
                                                 child: Image(
                                                     fit: BoxFit.fitHeight,
                                                     image: AssetImage(
                                                         "packages/cross.png")),
                                               ),
                                             )
-                                          : Transform.translate(
-                                              offset: Offset(0, 0),
-                                              child: Center(
-                                                child: Text(
-                                                  textAlign: TextAlign.center,
-                                                  '${express[index].title}',
-                                                  style: GoogleFonts
-                                                      .ibmPlexSansThai(
-                                                          color: index == 20
-                                                              ? Color.fromARGB(
-                                                                  255,
-                                                                  255,
-                                                                  3,
-                                                                  3)
-                                                              : Colors.black,
-                                                          wordSpacing: 0,
-                                                          letterSpacing:
-                                                              index == 15
-                                                                  ? -1
-                                                                  : 0,
-                                                          fontSize: index == 15
-                                                              ? 16
-                                                              : 20,
-                                                          fontWeight: index ==
-                                                                  15
-                                                              ? FontWeight.w400
-                                                              : FontWeight
-                                                                  .w700),
+                                          : table[index].express == 'Buy Now'
+                                              ? Container(
+                                                  height: 148,
+                                                  child: Center(
+                                                    child: SizedBox(
+                                                      width: 220,
+                                                      height: 63,
+                                                      child: OutlinedButton(
+                                                        onPressed: () {},
+                                                        style: OutlinedButton
+                                                            .styleFrom(
+                                                          side: BorderSide(
+                                                            width: 2.0,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    75,
+                                                                    195,
+                                                                    211),
+                                                          ),
+                                                          backgroundColor:
+                                                              Color.fromARGB(
+                                                                  199,
+                                                                  243,
+                                                                  246,
+                                                                  249),
+                                                          shape:
+                                                              RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        30.0),
+                                                          ),
+                                                        ),
+                                                        child: Text(
+                                                          'Buy Now',
+                                                          style: GoogleFonts
+                                                              .ibmPlexSansThai(
+                                                                  fontSize: 24,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          0,
+                                                                          0,
+                                                                          0)),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                )
+                                              : Transform.translate(
+                                                  offset: Offset(0,
+                                                      index == 14 ? 22.5 : 30),
+                                                  child: Text(
+                                                    '${table[index].express}',
+                                                    textAlign: TextAlign.center,
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            color: Colors.black,
+                                                            fontSize:
+                                                                index == 14
+                                                                    ? 16
+                                                                    : 20,
+                                                            fontWeight:
+                                                                index == 14
+                                                                    ? FontWeight
+                                                                        .w400
+                                                                    : FontWeight
+                                                                        .w700),
+                                                  ),
                                                 ),
-                                              ),
-                                            );
-
-                              return ListTile(
-                                horizontalTitleGap: 1,
-                                // minLeadingWidth: 30,
-                                minVerticalPadding: 10,
-                                dense: true,
-                                visualDensity:
-                                    VisualDensity(horizontal: -4, vertical: -4),
-                                title: title,
-                                subtitle: Transform.translate(
-                                  offset: Offset(0, 0),
-                                  child: Center(
-                                    child: Text(
-                                      '${express[index].children}',
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                          color: Colors.black,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                  ),
-                                ),
-                              );
-                            },
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 500,
-                          height: 1800,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            itemCount: standard.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              Widget title = standard[index].title == 'Lock'
+                          TableCell(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 5.0, right: 5),
+                              child: table[index].standard == 'Lock'
                                   ? Transform.translate(
-                                      offset: Offset(0, 25),
+                                      offset:
+                                          Offset(0, index % 2 == 0 ? 27.5 : 25),
                                       child: SizedBox(
-                                        height: 33,
-                                        width: 28,
+                                        height: 40,
+                                        width: 30,
                                         child: Image(
                                             fit: BoxFit.fitHeight,
                                             image: AssetImage(
                                                 "packages/lock.png")),
                                       ),
                                     )
-                                  : standard[index].title == 'Check'
+                                  : table[index].standard == 'Check'
                                       ? Transform.translate(
-                                          offset:
-                                              Offset(0, index == 15 ? 15 : 25),
+                                          offset: Offset(
+                                              0, index % 2 == 0 ? 30 : 27.5),
                                           child: SizedBox(
-                                            height: 33,
-                                            width: 33,
+                                            height: 40,
+                                            width: 40,
                                             child: Image(
                                                 fit: BoxFit.fitHeight,
                                                 image: AssetImage(
                                                     "packages/check.png")),
                                           ),
                                         )
-                                      : standard[index].title == 'Cross'
+                                      : table[index].standard == 'Cross'
                                           ? Transform.translate(
-                                              offset: Offset(0, 25),
+                                              offset: Offset(0,
+                                                  index % 2 == 0 ? 30 : 27.5),
                                               child: SizedBox(
-                                                height: 33,
-                                                width: 33,
+                                                height: 40,
+                                                width: 40,
                                                 child: Image(
                                                     fit: BoxFit.fitHeight,
                                                     image: AssetImage(
                                                         "packages/cross.png")),
                                               ),
                                             )
-                                          : Transform.translate(
-                                              offset: Offset(0, 0),
-                                              child: Center(
-                                                child: Text(
-                                                  '${standard[index].title}',
-                                                  style: GoogleFonts
-                                                      .ibmPlexSansThai(
-                                                          color: index == 20
-                                                              ? Color.fromARGB(
-                                                                  255,
-                                                                  75,
-                                                                  196,
-                                                                  213)
-                                                              : Colors.black,
-                                                          fontSize: index == 15
-                                                              ? 16
-                                                              : 20,
-                                                          fontWeight: index ==
-                                                                  15
-                                                              ? FontWeight.w400
-                                                              : FontWeight
-                                                                  .w700),
+                                          : table[index].standard == 'Buy Now'
+                                              ? Container(
+                                                  height: 148,
+                                                  child: Center(
+                                                    child: SizedBox(
+                                                      width: 220,
+                                                      height: 63,
+                                                      child: OutlinedButton(
+                                                        onPressed: () {},
+                                                        style: OutlinedButton
+                                                            .styleFrom(
+                                                          side: BorderSide(
+                                                            width: 2.0,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    75,
+                                                                    195,
+                                                                    211),
+                                                          ),
+                                                          backgroundColor:
+                                                              Color.fromARGB(
+                                                                  199,
+                                                                  243,
+                                                                  246,
+                                                                  249),
+                                                          shape:
+                                                              RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        30.0),
+                                                          ),
+                                                        ),
+                                                        child: Text(
+                                                          'Buy Now',
+                                                          style: GoogleFonts
+                                                              .ibmPlexSansThai(
+                                                                  fontSize: 24,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          0,
+                                                                          0,
+                                                                          0)),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                )
+                                              : Transform.translate(
+                                                  offset: Offset(0, 30),
+                                                  child: Text(
+                                                    '${table[index].standard}',
+                                                    textAlign: TextAlign.center,
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            color: Colors.black,
+                                                            fontSize: 20,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w700),
+                                                  ),
                                                 ),
-                                              ),
-                                            );
-
-                              return ListTile(
-                                horizontalTitleGap: 1,
-                                // minLeadingWidth: 30,
-                                minVerticalPadding: 10,
-                                dense: true,
-                                visualDensity:
-                                    VisualDensity(horizontal: -4, vertical: -4),
-                                title: title,
-                                subtitle: Transform.translate(
-                                  offset: Offset(0, 0),
-                                  child: Center(
-                                    child: Text(
-                                      '${standard[index].children}',
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                          height: index == 15 ? 2 : 0,
-                                          color: Colors.black,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                  ),
-                                ),
-                              );
-                            },
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 500,
-                          height: 1800,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            itemCount: enterprise.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              Widget title = enterprise[index].title == 'Lock'
+                          TableCell(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 5.0, right: 5),
+                              child: table[index].enterprise == 'Lock'
                                   ? Transform.translate(
-                                      offset: Offset(0, 25),
+                                      offset:
+                                          Offset(0, index % 2 == 0 ? 27.5 : 25),
                                       child: SizedBox(
-                                        height: 33,
-                                        width: 28,
+                                        height: 40,
+                                        width: 30,
                                         child: Image(
                                             fit: BoxFit.fitHeight,
                                             image: AssetImage(
                                                 "packages/lock.png")),
                                       ),
                                     )
-                                  : enterprise[index].title == 'Check'
+                                  : table[index].enterprise == 'Check'
                                       ? Transform.translate(
-                                          offset:
-                                              Offset(0, index == 15 ? 15 : 25),
+                                          offset: Offset(
+                                              0, index % 2 == 0 ? 30 : 27.5),
                                           child: SizedBox(
-                                            height: 33,
-                                            width: 33,
+                                            height: 40,
+                                            width: 40,
                                             child: Image(
                                                 fit: BoxFit.fitHeight,
                                                 image: AssetImage(
                                                     "packages/check.png")),
                                           ),
                                         )
-                                      : enterprise[index].title == 'Cross'
+                                      : table[index].enterprise == 'Cross'
                                           ? Transform.translate(
-                                              offset: Offset(0, 25),
+                                              offset: Offset(0,
+                                                  index % 2 == 0 ? 30 : 27.5),
                                               child: SizedBox(
-                                                height: 33,
-                                                width: 33,
+                                                height: 40,
+                                                width: 40,
                                                 child: Image(
                                                     fit: BoxFit.fitHeight,
                                                     image: AssetImage(
                                                         "packages/cross.png")),
                                               ),
                                             )
-                                          : Transform.translate(
-                                              offset: Offset(0, 0),
-                                              child: Center(
-                                                child: Text(
-                                                  '${enterprise[index].title}',
-                                                  style: GoogleFonts
-                                                      .ibmPlexSansThai(
-                                                          color: index == 20
-                                                              ? Color.fromARGB(
-                                                                  255,
-                                                                  75,
-                                                                  196,
-                                                                  213)
-                                                              : Colors.black,
-                                                          fontSize: index == 15
-                                                              ? 16
-                                                              : 20,
-                                                          fontWeight: index ==
-                                                                  15
-                                                              ? FontWeight.w400
-                                                              : FontWeight
-                                                                  .w700),
+                                          : table[index].enterprise == 'Buy Now'
+                                              ? Container(
+                                                  height: 148,
+                                                  child: Center(
+                                                    child: SizedBox(
+                                                      width: 220,
+                                                      height: 63,
+                                                      child: OutlinedButton(
+                                                        onPressed: () {},
+                                                        style: OutlinedButton
+                                                            .styleFrom(
+                                                          side: BorderSide(
+                                                            width: 2.0,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    75,
+                                                                    195,
+                                                                    211),
+                                                          ),
+                                                          backgroundColor:
+                                                              Color.fromARGB(
+                                                                  199,
+                                                                  243,
+                                                                  246,
+                                                                  249),
+                                                          shape:
+                                                              RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        30.0),
+                                                          ),
+                                                        ),
+                                                        child: Text(
+                                                          'Buy Now',
+                                                          style: GoogleFonts
+                                                              .ibmPlexSansThai(
+                                                                  fontSize: 24,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          0,
+                                                                          0,
+                                                                          0)),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                )
+                                              : Transform.translate(
+                                                  offset: Offset(0, 30),
+                                                  child: Text(
+                                                    '${table[index].express}',
+                                                    textAlign: TextAlign.center,
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            color: Colors.black,
+                                                            fontSize: 20,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w700),
+                                                  ),
                                                 ),
-                                              ),
-                                            );
-
-                              return ListTile(
-                                horizontalTitleGap: 1,
-                                // minLeadingWidth: 30,
-                                minVerticalPadding: 10,
-                                dense: true,
-                                visualDensity:
-                                    VisualDensity(horizontal: -4, vertical: -4),
-                                title: title,
-                                subtitle: Transform.translate(
-                                  offset: Offset(0, 0),
-                                  child: Center(
-                                    child: Text(
-                                      '${enterprise[index].children}',
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                          height: index == 15 ? 2 : 0,
-                                          color: Colors.black,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-                    TableRow(
-                      decoration: BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(
-                            width: 1.0,
-                            color: Color.fromARGB(255, 225, 232, 240),
-                          ),
-                        ),
-                      ),
-                      children: [
-                        SizedBox(
-                          width: 500,
-                          height: 130,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 44, right: 44),
-                          child: SizedBox(
-                            width: 218,
-                            height: 64,
-                            child: OutlinedButton(
-                              onPressed: () {},
-                              style: OutlinedButton.styleFrom(
-                                side: BorderSide(
-                                  width: 2.0,
-                                  color: Color.fromARGB(255, 75, 195, 211),
-                                ),
-                                backgroundColor:
-                                    Color.fromARGB(199, 243, 246, 249),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0),
-                                ),
-                              ),
-                              child: Text(
-                                'Buy Now',
-                                style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color.fromARGB(255, 0, 0, 0)),
-                              ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 22, right: 22),
-                          child: SizedBox(
-                            width: 218,
-                            height: 64,
-                            child: OutlinedButton(
-                              onPressed: () {},
-                              style: OutlinedButton.styleFrom(
-                                side: BorderSide(
-                                  width: 2.0,
-                                  color: Color.fromARGB(255, 75, 195, 211),
-                                ),
-                                backgroundColor:
-                                    Color.fromARGB(199, 243, 246, 249),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0),
-                                ),
-                              ),
-                              child: Text(
-                                'Buy Now',
-                                style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color.fromARGB(255, 0, 0, 0)),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 44, right: 44),
-                          child: SizedBox(
-                            width: 218,
-                            height: 64,
-                            child: OutlinedButton(
-                              onPressed: () {},
-                              style: OutlinedButton.styleFrom(
-                                side: BorderSide(
-                                  width: 2.0,
-                                  color: Color.fromARGB(255, 75, 195, 211),
-                                ),
-                                backgroundColor:
-                                    Color.fromARGB(199, 243, 246, 249),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0),
-                                ),
-                              ),
-                              child: Text(
-                                'Buy Now',
-                                style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color.fromARGB(255, 0, 0, 0)),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                        ],
+                      );
+                    }),
                   ],
                 ),
               ),
             ),
             Container(
-              height: 196,
+              height: 216,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
@@ -1009,9 +776,10 @@ class _CompareTableState extends State<CompareTable> {
                 ),
               ),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: 49,
+                    height: 63,
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -1075,9 +843,6 @@ class _CompareTableState extends State<CompareTable> {
                             )),
                       ),
                     ],
-                  ),
-                  SizedBox(
-                    height: 70,
                   ),
                 ],
               ),

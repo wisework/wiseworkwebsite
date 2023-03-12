@@ -10,6 +10,7 @@ import 'package:wiseintern/features/pdmanagement.dart';
 import 'package:wiseintern/contact/contactpage.dart';
 import 'package:wiseintern/faq/faqpage.dart';
 import 'package:wiseintern/demo/demopage.dart';
+import 'package:wiseintern/producttable/producttablepage.dart';
 // import 'package:wiseintern/home/features.dart';
 // import 'package:wiseintern/home/packagepage.dart';
 // import 'navbar.dart';
@@ -24,56 +25,55 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return  HomePage();
+        return HomePage();
       },
       routes: <RouteBase>[
         GoRoute(
           path: 'story',
           builder: (BuildContext context, GoRouterState state) {
-            return  AboutPage();
+            return AboutPage();
           },
         ),
         GoRoute(
           path: 'customers',
           builder: (BuildContext context, GoRouterState state) {
-            return  CustomerPage();
+            return CustomerPage();
           },
         ),
         GoRoute(
           path: 'services',
           builder: (BuildContext context, GoRouterState state) {
-            return  ServicesPage();
+            return ServicesPage();
           },
         ),
         GoRoute(
           path: 'product',
           builder: (BuildContext context, GoRouterState state) {
-            return  ProductPage();
+            return ProductPage();
           },
         ),
         GoRoute(
           path: 'pdmanagement',
           builder: (BuildContext context, GoRouterState state) {
-            return  Pdmanagement();
+            return Pdmanagement();
           },
         ),
-        
         GoRoute(
           path: 'contact',
           builder: (BuildContext context, GoRouterState state) {
-            return  ContactPage();
+            return ContactPage();
           },
         ),
         GoRoute(
           path: 'faq',
           builder: (BuildContext context, GoRouterState state) {
-            return  FaqPage();
+            return FaqPage();
           },
         ),
         GoRoute(
           path: 'demo',
           builder: (BuildContext context, GoRouterState state) {
-            return  DemoPage();
+            return DemoPage();
           },
         ),
       ],
@@ -89,7 +89,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: _router,
-
     );
   }
 }
