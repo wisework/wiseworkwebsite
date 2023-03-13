@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "3c4d9009905b76a1fee288f4b9b7f95e",
+  "assets/AssetManifest.json": "614b16944bb9c361d61cf3717ecd013c",
 "assets/assets/about/advise/comp.png": "986e2e67a34c36bcbdccd7fc763637a3",
 "assets/assets/about/awards/cdpo.png": "8654c7aa2a3b1839d616c85c586bdf9f",
 "assets/assets/about/awards/coso.png": "cda85e3f8b52fb09289f6559d6cc5b51",
@@ -126,6 +126,7 @@ const RESOURCES = {
 "assets/assets/footer/location.png": "bd2ede533ac82b7d39270bc6f57f2607",
 "assets/assets/footer/logo.png": "e238644ed85d47e7798985ed7172b62e",
 "assets/assets/footer/mail.png": "37dff61a58317db692fd86bd950a90af",
+"assets/assets/footer/send.png": "4f8a7b879257033ab05b18a084bc71af",
 "assets/assets/footer/tel.png": "343205707853144b7956111f31de5ad3",
 "assets/assets/footer/tiktok.png": "c22c864e97216627ac398aec2d612af3",
 "assets/assets/footer/yt.png": "9ea2be2f1ae80e3a202b28e6afec4783",
@@ -167,9 +168,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "8c4753b4e27425a15958339a9620e675",
-"/": "8c4753b4e27425a15958339a9620e675",
-"main.dart.js": "d9a545d8ce57dd465206c19dc2f952b5",
+"index.html": "8d2ff811d0f4dce9dffe6bfafb46adc6",
+"/": "8d2ff811d0f4dce9dffe6bfafb46adc6",
+"main.dart.js": "5487079b7149ce224dc13e9713c09dc9",
 "manifest.json": "26afcf623e5cd36909b9cc815c07ac76",
 "version.json": "419e865cc3a264e6063a854d83f30bfe"
 };

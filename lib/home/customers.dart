@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:wiseintern/home/carousel.dart';
+// import 'package:wiseintern/home/carousel.dart';
 import 'package:wiseintern/responsive.dart';
 // import 'package:flutter_swiper/flutter_swiper.dart';
 // import 'package:carousel_indicator/carousel_indicator.dart';
@@ -73,9 +73,8 @@ class _CustomerState extends State<Customer> {
                         height: 61.15,
                         child: Image.asset("assets/customer/Nutt.png")),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 192 : 244,
-                    height: Responsive.isTablet(context) ? 38 : 40,
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
                     child: Text(
                       "คุณณัฏฐ์ ณัฐนิธิการัตน์",
                       style: GoogleFonts.josefinSans(
@@ -85,9 +84,8 @@ class _CustomerState extends State<Customer> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 182 : 244,
-                    height: Responsive.isTablet(context) ? 48 : 45,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10,right:10),
                     child: Text(
                       "ประธานเจ้าหน้าที่บริหาร\nAdvice IT Infinite Co.,Ltd.",
                       style: GoogleFonts.josefinSans(
@@ -97,21 +95,17 @@ class _CustomerState extends State<Customer> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 374 : 330,
-                    // height: Responsive.isTablet(context) ? 70 : 100,
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        Responsive.isTablet(context)
-                            ? "“เราตระหนักถึงความสำคัญการคุ้มครอง ข้อมูลส่วนบุคคลหนึ่งในรากฐานที่สร้างความสัมพันธ์ทางธุรกิจและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”"
-                            : "“เราตระหนักถึงความสำคัญการคุ้มครองข้อมูลส่วนบุคคล หนึ่งในรากฐานที่สร้างความสัมพันธ์ทางธุรกิจและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”",
-                        style: GoogleFonts.josefinSans(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Color.fromARGB(255, 35, 34, 51)),
-                        textAlign: TextAlign.center,
-                      ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      Responsive.isTablet(context)
+                          ? "“เราตระหนักถึงความสำคัญการคุ้มครอง ข้อมูลส่วนบุคคลหนึ่งในรากฐานที่สร้างความสัมพันธ์ทางธุรกิจและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”"
+                          : "“เราตระหนักถึงความสำคัญการคุ้มครองข้อมูลส่วนบุคคล หนึ่งในรากฐานที่สร้างความสัมพันธ์ทางธุรกิจและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 35, 34, 51)),
+                      textAlign: TextAlign.center,
                     ),
                   )
                 ],
@@ -136,9 +130,8 @@ class _CustomerState extends State<Customer> {
                         height: 61.15,
                         child: Image.asset("assets/customer/Jirayuth.png")),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 200 : 244,
-                    height: Responsive.isTablet(context) ? 30 : 40,
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
                     child: Text(
                       "คุณจิรายุส ทรัพย์ศรีโสภา",
                       style: GoogleFonts.josefinSans(
@@ -148,9 +141,8 @@ class _CustomerState extends State<Customer> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 182 : 244,
-                    height: Responsive.isTablet(context) ? 30 : 30,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10,right: 10),
                     child: Text(
                       "Founder & Group CEO",
                       style: GoogleFonts.josefinSans(
@@ -162,20 +154,15 @@ class _CustomerState extends State<Customer> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Container(
-                      width: Responsive.isTablet(context) ? 380 : 350,
-                      // height: Responsive.isTablet(context) ? 120 : 170,
-                      // color: Colors.amber,
-                      child: Text(
-                        Responsive.isTablet(context)
-                            ? "BitKub ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งานดังนั้นเราจึงให้ความสำคัญอย่างมากเกี่ยวกับ การปฏิบัติตามกฎหมาย PDPAโดยเราเลือกใช้ระบบโมดูลที่มีCenterเข้ามาช่วยในการบริหารจัดการข้อมูลคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม "
-                            : "BitKub ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งานดังนั้นเราจึงให้ความสำคัญอย่างมากเกี่ยวกับการปฏิบัติตามกฎหมาย PDPAโดยเราเลือกใช้ระบบโมดูลที่มีCenterเข้ามาช่วยในการบริหารจัดการข้อมูลคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม ",
-                        style: GoogleFonts.josefinSans(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Color.fromARGB(255, 35, 34, 51)),
-                        textAlign: TextAlign.center,
-                      ),
+                    child: Text(
+                      Responsive.isTablet(context)
+                          ? "BitKub ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งานดังนั้นเราจึงให้ความสำคัญอย่างมากเกี่ยวกับ การปฏิบัติตามกฎหมาย PDPAโดยเราเลือกใช้ระบบโมดูลที่มีCenterเข้ามาช่วยในการบริหารจัดการข้อมูลคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม "
+                          : "BitKub ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งานดังนั้นเราจึงให้ความสำคัญอย่างมากเกี่ยวกับการปฏิบัติตามกฎหมาย PDPAโดยเราเลือกใช้ระบบโมดูลที่มีCenterเข้ามาช่วยในการบริหารจัดการข้อมูลคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม ",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 35, 34, 51)),
+                      textAlign: TextAlign.center,
                     ),
                   )
                 ],
@@ -200,9 +187,8 @@ class _CustomerState extends State<Customer> {
                         height: 61.15,
                         child: Image.asset("assets/customer/Ann.png")),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 192 : 244,
-                    height: Responsive.isTablet(context) ? 30 : 40,
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
                     child: Text(
                       "ANN LUBIN",
                       style: GoogleFonts.josefinSans(
@@ -212,9 +198,8 @@ class _CustomerState extends State<Customer> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 182 : 244,
-                    height: Responsive.isTablet(context) ? 30 : 30,
+                  Padding(
+                    padding: const EdgeInsets.only(left:10,right:10),
                     child: Text(
                       "Co-Funder",
                       style: GoogleFonts.josefinSans(
@@ -265,9 +250,8 @@ class _CustomerState extends State<Customer> {
                         height: 61.15,
                         child: Image.asset("assets/customer/Amorn.png")),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 192 : 244,
-                    height: Responsive.isTablet(context) ? 30 : 40,
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
                     child: Text(
                       "คุณอมร ทองธิว",
                       style: GoogleFonts.josefinSans(
@@ -277,9 +261,8 @@ class _CustomerState extends State<Customer> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  Container(
-                    width: Responsive.isTablet(context) ? 250 : 244,
-                    height: Responsive.isTablet(context) ? 30 : 30,
+                  Padding(
+                    padding: const EdgeInsets.only(left:10,right:10),
                     child: Text(
                       "กรรมการและรองกรรมการผู้จัดการ",
                       style: GoogleFonts.josefinSans(
@@ -291,20 +274,15 @@ class _CustomerState extends State<Customer> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Container(
-                      width: Responsive.isTablet(context) ? 374 : 350,
-                      // height: Responsive.isTablet(context) ? 120 : 165,
-                      // color: Colors.amber,
-                      child: Text(
-                        Responsive.isTablet(context)
-                            ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
-                            : "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนดครอบคลุมทุกภาคธุรกิจ",
-                        style: GoogleFonts.josefinSans(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Color.fromARGB(255, 35, 34, 51)),
-                        textAlign: TextAlign.center,
-                      ),
+                    child: Text(
+                      Responsive.isTablet(context)
+                          ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
+                          : "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนดครอบคลุมทุกภาคธุรกิจ",
+                      style: GoogleFonts.josefinSans(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 35, 34, 51)),
+                      textAlign: TextAlign.center,
                     ),
                   )
                 ],
@@ -1216,28 +1194,17 @@ class _CustomerState extends State<Customer> {
                                                           context)
                                                       ? 218
                                                       : 77,
-                                                  child: Container(
-                                                    width: Responsive.isTablet(
-                                                            context)
-                                                        ? 317
-                                                        : 211,
-                                                    height: Responsive.isTablet(
-                                                            context)
-                                                        ? 100
-                                                        : 75,
-                                                    // color: Colors.amber,
-                                                    child: Text(
-                                                      "Real Stories from Real Customers",
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: Responsive
-                                                                  .isTablet(
-                                                                      context)
-                                                              ? 36
-                                                              : 24,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          color: Colors.white),
-                                                    ),
+                                                  child: Text(
+                                                    "Real Stories from\nReal Customers",
+                                                    style: GoogleFonts.poppins(
+                                                        fontSize: Responsive
+                                                                .isTablet(
+                                                                    context)
+                                                            ? 36
+                                                            : 24,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        color: Colors.white),
                                                   ))
                                             ],
                                           ),
@@ -1273,7 +1240,7 @@ class _CustomerState extends State<Customer> {
                                               height:
                                                   Responsive.isTablet(context)
                                                       ? 350
-                                                      : 400,
+                                                      : 377,
                                               autoPlay: true,
                                               enlargeCenterPage: true,
                                               onPageChanged: (index, reason) {
@@ -1321,7 +1288,7 @@ class _CustomerState extends State<Customer> {
                                       child: Opacity(
                                         opacity: 0.5,
                                         child:
-                                            Image.asset("/customer/comma.png"),
+                                            Image.asset("assets/customer/comma.png"),
                                       )),
                                 ),
                               ],

@@ -93,20 +93,16 @@ class _FooterState extends State<Footer> {
           ],
         ));
 
-    var QLink = Container(
-      width: 115.86,
-      height: 25,
-      child: Text(
-        'Quick Links',
-        style: GoogleFonts.ibmPlexSansThai(
-            color: Colors.white,
-            fontSize: Responsive.isDesktop(context)
-                ? 18
-                : Responsive.isTablet(context)
-                    ? 20
-                    : 25,
-            fontWeight: FontWeight.w600),
-      ),
+    var QLink = Text(
+      'Quick Links',
+      style: GoogleFonts.ibmPlexSansThai(
+          color: Colors.white,
+          fontSize: Responsive.isDesktop(context)
+              ? 18
+              : Responsive.isTablet(context)
+                  ? 20
+                  : 25,
+          fontWeight: FontWeight.w600),
     );
 
     List<String> navbar = ["Home", "About Us", "Our reward", "Blogs", "FAQ"];
@@ -227,15 +223,13 @@ class _FooterState extends State<Footer> {
     //   ),
     // );
 
-    var contact = Container(
-      child: Text(
-        "Contact Us",
-        style: GoogleFonts.ibmPlexSansThai(
-          fontSize: Responsive.isDesktop(context) ? 18 : 20,
-          fontWeight:
-              Responsive.isDesktop(context) ? FontWeight.w700 : FontWeight.w600,
-          color: Colors.white,
-        ),
+    var contact = Text(
+      "Contact Us",
+      style: GoogleFonts.ibmPlexSansThai(
+        fontSize: Responsive.isDesktop(context) ? 18 : 20,
+        fontWeight:
+            Responsive.isDesktop(context) ? FontWeight.w700 : FontWeight.w600,
+        color: Colors.white,
       ),
     );
 
@@ -1180,23 +1174,19 @@ class _FooterState extends State<Footer> {
                                                     top: 63,
                                                     left: 16,
                                                     bottom: 63),
-                                                child: Container(
-                                                  width: 183,
-                                                  height: 24,
-                                                  child: Text(
-                                                    "info@thewiseworks.com",
-                                                    style: GoogleFonts
-                                                        .ibmPlexSansThai(
-                                                            fontSize: 16,
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    35,
-                                                                    34,
-                                                                    51)),
-                                                  ),
+                                                child: Text(
+                                                  "info@thewiseworks.com",
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          fontSize: 16,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          color:
+                                                              Color.fromARGB(
+                                                                  255,
+                                                                  35,
+                                                                  34,
+                                                                  51)),
                                                 ),
                                               ),
                                               Padding(
@@ -1266,7 +1256,7 @@ class _FooterState extends State<Footer> {
                             children: [
                               Container(
                                 width: 1440,
-                                height: 1318,
+                                height: 1323,
                                 color: Color.fromARGB(255, 52, 145, 206),
                               ),
                               Container(
@@ -1279,40 +1269,33 @@ class _FooterState extends State<Footer> {
                                   padding: const EdgeInsets.only(top: 223),
                                   child: Container(
                                     width: 375,
-                                    height: 1095,
+                                    height: 1100,
                                     color: Color.fromARGB(255, 52, 145, 206),
                                     child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.only(
-                                              top: 209, right: 123, left: 31),
-                                          child: Container(
-                                            width: 221,
-                                            height: 38,
-                                            child: Text(
-                                              "Contact Us",
-                                              style: GoogleFonts.poppins(
-                                                  fontSize: 25,
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Colors.white),
-                                              textAlign: TextAlign.start,
-                                            ),
+                                              top: 209, left: 31),
+                                          child: Text(
+                                            "Contact Us",
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 25,
+                                                fontWeight: FontWeight.w600,
+                                                color: Colors.white),
+                                            textAlign: TextAlign.start,
                                           ),
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(
                                               top: 11, left: 31, right: 23),
-                                          child: Container(
-                                            width: 320,
-                                            height: 24,
-                                            child: Text(
-                                              "Get latest updates and offers. Try It Today.",
-                                              style: GoogleFonts.poppins(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w400,
-                                                  color: Colors.white),
-                                              textAlign: TextAlign.start,
-                                            ),
+                                          child: Text(
+                                            "Get latest updates and offers. Try It Today.",
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                color: Colors.white),
+                                            textAlign: TextAlign.start,
                                           ),
                                         ),
                                         Padding(
@@ -1354,7 +1337,7 @@ class _FooterState extends State<Footer> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(
-                                              top: 53, left: 28, right: 205),
+                                              top: 53, left: 28, ),
                                           child: Container(
                                             width: 150,
                                             height: 260,
@@ -1379,7 +1362,7 @@ class _FooterState extends State<Footer> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(
-                                              top: 59,
+                                              top: 20,
                                               left: 32.76,
                                               right: 247.24),
                                           child: Container(
@@ -1548,20 +1531,16 @@ class _FooterState extends State<Footer> {
                                         Padding(
                                           padding:
                                               const EdgeInsets.only(top: 20),
-                                          child: Container(
-                                            width: 228,
-                                            height: 30,
-                                            child: Text(
-                                              "info@thewiseworks.com",
-                                              style:
-                                                  GoogleFonts.ibmPlexSansThai(
-                                                      fontSize: 20,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      color: Color.fromARGB(
-                                                          255, 35, 34, 51)),
-                                              textAlign: TextAlign.center,
-                                            ),
+                                          child: Text(
+                                            "info@thewiseworks.com",
+                                            style:
+                                                GoogleFonts.ibmPlexSansThai(
+                                                    fontSize: 20,
+                                                    fontWeight:
+                                                        FontWeight.w600,
+                                                    color: Color.fromARGB(
+                                                        255, 35, 34, 51)),
+                                            textAlign: TextAlign.center,
                                           ),
                                         ),
                                         Padding(
