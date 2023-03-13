@@ -13,10 +13,42 @@ class _CompareState extends State<Compare> {
     return Center(
       child: Container(
         width: 1440,
-        height: 242,
         color: Color.fromARGB(255, 232, 242, 254),
         child: Column(
           children: [
+            SizedBox(
+              height: 56,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 107,
+                ),
+                Container(
+                  width: 60,
+                  height: 5,
+                  decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 57, 128, 237),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                          color: Color.fromARGB(255, 57, 128, 237), width: 5)),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Container(
+                  // color: Colors.amber,
+                  height: 25,
+                  child: Text(
+                    "Package",
+                    style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                        color: Color.fromARGB(255, 57, 128, 237)),
+                  ),
+                ),
+              ],
+            ),
             Padding(
               padding: const EdgeInsets.only(top: 65),
               child: Text(
@@ -38,7 +70,10 @@ class _CompareState extends State<Compare> {
                   fontWeight: FontWeight.w400,
                   color: Color.fromARGB(255, 75, 196, 213)),
               textAlign: TextAlign.center,
-            )
+            ),
+            SizedBox(
+              height: 102,
+            ),
           ],
         ),
       ),
