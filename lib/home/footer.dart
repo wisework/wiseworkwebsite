@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../responsive.dart';
+import 'package:wiseintern/products/enterprise.dart';
+import 'package:wiseintern/responsive.dart';
+import 'package:go_router/go_router.dart';
 
 class Footer extends StatefulWidget {
   Footer();
@@ -9,7 +11,15 @@ class Footer extends StatefulWidget {
   _FooterState createState() => _FooterState();
 }
 
+class Model {
+  final String name;
+  final String path;
+
+  Model(this.name, this.path);
+}
+
 class _FooterState extends State<Footer> {
+  int? onHover;
   @override
   Widget build(BuildContext context) {
     // List<String> listLo = [
@@ -106,7 +116,13 @@ class _FooterState extends State<Footer> {
     );
 
     List<String> navbar = ["Home", "About Us", "Our reward", "Blogs", "FAQ"];
-
+    List<Model> navbarButton = [
+      Model("Home", "/"),
+      Model("About Us", "/story"),
+      Model("Our Reards", "/story"),
+      Model("Blogs", "/"),
+      Model("FAQ", "/faq")
+    ];
     var navbarlist = Container(
       color: Color.fromARGB(0, 255, 193, 7),
       height: 160,
@@ -122,6 +138,9 @@ class _FooterState extends State<Footer> {
               Container(
                 child: Text(
                   navbar[index],
+                  textAlign: Responsive.isMobile(context)
+                      ? TextAlign.center
+                      : TextAlign.start,
                   style: GoogleFonts.ibmPlexSansThai(
                       fontSize: Responsive.isDesktop(context)
                           ? 15
@@ -195,33 +214,6 @@ class _FooterState extends State<Footer> {
         },
       ),
     );
-
-    // List<String> appList = [
-    //   "/footer/fb.png",
-    //   "/footer/ig.png",
-    //   "/footer/yt.png",
-    //   "/footer/tiktok.png",
-    // ];
-
-    // var app = Container(
-    //   color: Color.fromARGB(0, 255, 193, 7),
-    //   height: 150,
-    //   width: 50,
-    //   child: ListView.builder(
-    //     shrinkWrap: true,
-    //     itemCount: appList.length,
-    //     itemBuilder: (context, index) {
-    //       return Column(
-    //         // mainAxisAlignment: MainAxisAlignment.start,
-    //         crossAxisAlignment: CrossAxisAlignment.start,
-    //         children: [
-    //           Container(child: Image.asset(appList[index])),
-    //           SizedBox(height: 5.0),
-    //         ],
-    //       );
-    //     },
-    //   ),
-    // );
 
     var contact = Text(
       "Contact Us",
@@ -1181,12 +1173,8 @@ class _FooterState extends State<Footer> {
                                                           fontSize: 16,
                                                           fontWeight:
                                                               FontWeight.w600,
-                                                          color:
-                                                              Color.fromARGB(
-                                                                  255,
-                                                                  35,
-                                                                  34,
-                                                                  51)),
+                                                          color: Color.fromARGB(
+                                                              255, 35, 34, 51)),
                                                 ),
                                               ),
                                               Padding(
@@ -1272,11 +1260,12 @@ class _FooterState extends State<Footer> {
                                     height: 1100,
                                     color: Color.fromARGB(255, 52, 145, 206),
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.only(
-                                              top: 209, left: 31),
+                                              top: 209, left: 29),
                                           child: Text(
                                             "Contact Us",
                                             style: GoogleFonts.poppins(
@@ -1288,7 +1277,9 @@ class _FooterState extends State<Footer> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(
-                                              top: 11, left: 31, right: 23),
+                                            top: 11,
+                                            left: 29,
+                                          ),
                                           child: Text(
                                             "Get latest updates and offers. Try It Today.",
                                             style: GoogleFonts.poppins(
@@ -1334,31 +1325,6 @@ class _FooterState extends State<Footer> {
                                               ),
                                             )
                                           ],
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 53, left: 28, ),
-                                          child: Container(
-                                            width: 150,
-                                            height: 260,
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                SizedBox(
-                                                    height: 35,
-                                                    width: 150,
-                                                    child: QLink),
-                                                SizedBox(
-                                                  height: 10,
-                                                ),
-                                                SizedBox(
-                                                    width: 100,
-                                                    height: 210,
-                                                    child: navbarlist)
-                                              ],
-                                            ),
-                                          ),
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(
@@ -1475,6 +1441,92 @@ class _FooterState extends State<Footer> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(
+                                            top: 53,
+                                          ),
+                                          child: Center(
+                                            child: Container(
+                                              width: 150,
+                                              height: 262,
+                                              color: Color.fromARGB(
+                                                  255, 52, 145, 206),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
+                                                children: [
+                                                  QLink,
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                  ListView.builder(
+                                                      shrinkWrap: true,
+                                                      itemCount:
+                                                          navbarButton.length,
+                                                      itemBuilder:
+                                                          (BuildContext
+                                                                  context,
+                                                              int index) {
+                                                        return Container(
+                                                          color:Color.fromARGB(255,52,145,206),
+                                                          child: new Material(
+                                                            color: Colors.transparent,
+                                                            child:new InkWell(
+                                                              onTap: () {},
+                                                              onHover:
+                                                                  (value) {
+                                                                setState(() {
+                                                                  if (value) {
+                                                                    onHover =
+                                                                        index;
+                                                                  } else {
+                                                                    onHover =
+                                                                        null;
+                                                                  }
+                                                                });
+                                                              },
+                                                              child: Center(
+                                                                  child:
+                                                                      Container(
+                                                                color: onHover ==
+                                                                        index
+                                                                    ? Color.fromARGB(
+                                                                        255,
+                                                                        52,
+                                                                        145,
+                                                                        206)
+                                                                    : Color.fromARGB(
+                                                                        255,
+                                                                        52,
+                                                                        145,
+                                                                        206),
+                                                                child: Column(
+                                                                  children: [
+                                                                    TextButton(
+                                                                        onPressed: () => context.go(
+                                                                            '${navbarButton[index].path}'),
+                                                                        child:
+                                                                            Text(
+                                                                          "${navbarButton[index].name}",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 16,
+                                                                              fontWeight: FontWeight.w400,
+                                                                              color: onHover == index ? Color.fromARGB(255, 75, 196, 213) : Colors.white),
+                                                                        )),
+                                                                    
+                                                                  ],
+                                                                ),
+                                                              )),
+                                                            ),
+                                                          ),
+                                                        );
+                                                      })
+                                                
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
                                               top: 25, left: 16, right: 16),
                                           child: Container(
                                             width: 343,
@@ -1533,13 +1585,11 @@ class _FooterState extends State<Footer> {
                                               const EdgeInsets.only(top: 20),
                                           child: Text(
                                             "info@thewiseworks.com",
-                                            style:
-                                                GoogleFonts.ibmPlexSansThai(
-                                                    fontSize: 20,
-                                                    fontWeight:
-                                                        FontWeight.w600,
-                                                    color: Color.fromARGB(
-                                                        255, 35, 34, 51)),
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color.fromARGB(
+                                                    255, 35, 34, 51)),
                                             textAlign: TextAlign.center,
                                           ),
                                         ),
