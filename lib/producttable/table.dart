@@ -42,48 +42,125 @@ class EXModel {
   }
 }
 
+final advise = Text(
+  "รับคำปรึกษาจากทีมงานผู้เชี่ยวชาญของเรา ",
+  style: GoogleFonts.ibmPlexSans(
+      fontSize: 32,
+      fontWeight: FontWeight.w400,
+      color: Color.fromARGB(255, 5, 45, 97)),
+);
+final advisesub = Text(
+  "ให้เราช่วยวางแผนและให้คำแนะนำที่ดีที่สุดสำหรับองค์กรของคุณ",
+  style: GoogleFonts.ibmPlexSans(
+      fontSize: 24,
+      fontWeight: FontWeight.w400,
+      color: Color.fromARGB(255, 57, 128, 237)),
+  textAlign: TextAlign.center,
+);
+final price = Container(
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(30.0),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey.withOpacity(0.5),
+        spreadRadius: 0,
+        blurRadius: 1,
+        offset: Offset(0, 4), // changes position of shadow
+      ),
+    ],
+  ),
+  width: 193,
+  height: 53,
+  child: ElevatedButton(
+      onPressed: () {},
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Color.fromARGB(255, 57, 128, 237),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+        ),
+      ),
+      child: Text(
+        'รับใบเสนอราคา',
+        style: GoogleFonts.ibmPlexSansThai(
+            fontSize: 20, fontWeight: FontWeight.w500),
+      )),
+);
+final demo = Container(
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(30.0),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey.withOpacity(0.5),
+        spreadRadius: 0,
+        blurRadius: 1,
+        offset: Offset(0, 4), // changes position of shadow
+      ),
+    ],
+  ),
+  width: 193,
+  height: 53,
+  child: ElevatedButton(
+      onPressed: () {},
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Color.fromRGBO(75, 195, 211, 1),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+        ),
+      ),
+      child: Text(
+        'Request Demo',
+        style: GoogleFonts.ibmPlexSansThai(
+            fontSize: 20, fontWeight: FontWeight.w500),
+      )),
+);
+
 class _CompareTableState extends State<CompareTable> {
   @override
   Widget build(BuildContext context) {
     final List<EXModel> table = [
-      // EXModel(
-      //   details: '',
-      //   detailsch: "",
-      //   express: "(SaaS)",
-      //   standard: "(Subscriptions License)",
-      //   enterprise: "(Perpetual License)",
-      // ),
       EXModel(
         details: 'PD Management',
-        detailsch: "จัดการบันทึกรายการข้อมูลส่วนบุคคล และการไหลของข้อมูล",
+        detailsch: Responsive.isDesktop(context)
+            ? "จัดการบันทึกรายการข้อมูลส่วนบุคคล และการไหลของข้อมูล"
+            : "จัดการบันทึกรายการข้อมูลส่วนบุคคล\nและการไหลของข้อมูล",
         express: "Check",
         standard: "Check",
         enterprise: "Check",
       ),
       EXModel(
         details: 'DPIA & Risk Management',
-        detailsch: "บริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล",
+        detailsch: Responsive.isDesktop(context)
+            ? "บริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล"
+            : "บริหารความเสี่ยงและผลกระทบจาก\nข้อมูลส่วนบุคคล",
         express: "Lock",
         standard: "Check",
         enterprise: "Check",
       ),
       EXModel(
         details: 'Cookies Consent',
-        detailsch: "การขอความยินยอมจากเจ้าของข้อมูล และการบริหารจัดการคุ้กกี้",
+        detailsch: Responsive.isDesktop(context)
+            ? "การขอความยินยอมจากเจ้าของข้อมูล และการบริหารจัดการคุ้กกี้"
+            : "การขอความยินยอมจากเจ้าของข้อมูล\nและการบริหารจัดการคุ้กกี้",
         express: "Check",
         standard: "Check",
         enterprise: "Check",
       ),
       EXModel(
         details: 'Consent Management',
-        detailsch: "การบริหารจัดการการให้ความยินยอม",
+        detailsch: Responsive.isDesktop(context)
+            ? "การบริหารจัดการการให้ความยินยอม"
+            : "การบริหารจัดการการให้ความ\nยินยอม",
         express: "Check",
         standard: "Check",
         enterprise: "Check",
       ),
       EXModel(
-        details: 'DATA Subject Right Management',
-        detailsch: "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูลส่วนบุคคล",
+        details: Responsive.isDesktop(context)
+            ? "DATA Subject Right Management"
+            : 'DATA Subject Right\nManagement',
+        detailsch: Responsive.isDesktop(context)
+            ? "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูลส่วนบุคคล"
+            : "บริหารการขอใช้สิทธิ์จากเจ้าของ\nข้อมูลส่วนบุคคล",
         express: "Check",
         standard: "Check",
         enterprise: "Check",
@@ -97,28 +174,38 @@ class _CompareTableState extends State<CompareTable> {
       ),
       EXModel(
         details: 'Audit & Gap Management',
-        detailsch: "บริหารงานตรวจสอบ และการทำ GAP Analysis",
+        detailsch: Responsive.isDesktop(context)
+            ? "บริหารงานตรวจสอบ และการทำ GAP Analysis"
+            : "บริหารงานตรวจสอบ และการทำ\nGAP Analysis",
         express: "Lock",
         standard: "Check",
         enterprise: "Check",
       ),
       EXModel(
-        details: 'Policy & Notices Management',
-        detailsch: "บริหารการสื่อสารนโยบาย และประกาศความเป็นส่วนตัว",
+        details: Responsive.isDesktop(context)
+            ? "Policy & Notices Management"
+            : 'Policy & Notices\nManagement',
+        detailsch: Responsive.isDesktop(context)
+            ? "บริหารการสื่อสารนโยบาย และประกาศความเป็นส่วนตัว"
+            : "บริหารการสื่อสารนโยบาย\nและประกาศความเป็นส่วนตัว",
         express: "Lock",
         standard: "Check",
         enterprise: "Check",
       ),
       EXModel(
         details: 'Data Discover',
-        detailsch: "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
+        detailsch: Responsive.isDesktop(context)
+            ? "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ"
+            : "ค้นหาข้อมูลส่วนตัวในระบบ\nสารสนเทศ",
         express: "Lock",
         standard: "Check",
         enterprise: "Check",
       ),
       EXModel(
         details: 'Executive Support System',
-        detailsch: "บริหารงานและจัดการรายงานสำหรับผู้บริหาร",
+        detailsch: Responsive.isDesktop(context)
+            ? "บริหารงานและจัดการรายงานสำหรับผู้บริหาร"
+            : "บริหารงานและจัดการรายงานสำหรับ\nผู้บริหาร",
         express: "Lock",
         standard: "Check",
         enterprise: "Check",
@@ -146,15 +233,21 @@ class _CompareTableState extends State<CompareTable> {
       ),
       EXModel(
         details: 'Number of DATA Subject',
-        detailsch: "จำนวนการจัดเก็บ-จัดส่งข้อมูลส่วนบุคคล",
+        detailsch: Responsive.isDesktop(context)
+            ? "จำนวนการจัดเก็บ-จัดส่งข้อมูลส่วนบุคคล"
+            : "จำนวนการจัดเก็บ-จัดส่ง\nข้อมูลส่วนบุคคล",
         express: "~100,000",
         standard: "~ 1,000,000",
         enterprise: "~ 10,000,000",
       ),
       EXModel(
-        details: 'ครบถ้วนตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล',
+        details: Responsive.isDesktop(context)
+            ? "ครบถ้วนตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล"
+            : 'ครบถ้วนตาม พ.ร.บ.\nคุ้มครองข้อมูลส่วนบุคคล',
         detailsch: "Personal Data Protection Act",
-        express: "มาตรา 19, 20, 21, 23,\n26, 30, 37, 39, 41, 42",
+        express: Responsive.isDesktop(context)
+            ? "มาตรา 19, 20, 21, 23,\n26, 30, 37, 39, 41, 42"
+            : "มาตรา 19, 20,\n21, 23,26, 30,\n37, 39, 41, 42",
         standard: "Check",
         enterprise: "Check",
       ),
@@ -162,11 +255,13 @@ class _CompareTableState extends State<CompareTable> {
         details: 'On Cloud  / On-Premise',
         detailsch: "ระบบการติดตั้ง",
         express: "On Cloud",
-        standard: "On Cloud/On-Premise",
-        enterprise: "On Cloud/On-Premise",
+        standard: "On Cloud\nOn-Premise",
+        enterprise: "On Cloud\nOn-Premise",
       ),
       EXModel(
-        details: 'Custom Software Development',
+        details: Responsive.isDesktop(context)
+            ? "Custom Software Development"
+            : 'Custom Software\nDevelopment',
         detailsch: "พัฒนาเพิ่มเติมตามความต้องการ",
         express: "Cross",
         standard: "Cross",
@@ -189,9 +284,13 @@ class _CompareTableState extends State<CompareTable> {
       EXModel(
         details: 'API for Import & Export',
         detailsch: "ระบบการเชื่อมต่อข้อมูล",
-        express: "Export Only",
-        standard: "Import & Export",
-        enterprise: "Import & Export",
+        express: Responsive.isDesktop(context) ? "Export Only" : "Export\nOnly",
+        standard: Responsive.isDesktop(context)
+            ? "Import & Export"
+            : "Import\n& Export",
+        enterprise: Responsive.isDesktop(context)
+            ? "Import & Export"
+            : "Import\n& Export",
       ),
       EXModel(
         details: '',
@@ -209,18 +308,46 @@ class _CompareTableState extends State<CompareTable> {
           // mainAxisAlignment: MainAxisAlignment.end,
           children: [
             SizedBox(
-              height: 64,
+              height: Responsive.isDesktop(context)
+                  ? 64
+                  : Responsive.isTablet(context)
+                      ? 41
+                      : 17,
             ),
             Container(
-              width: 1328,
-              height: 2313,
+              width: Responsive.isDesktop(context)
+                  ? 1328
+                  : Responsive.isTablet(context)
+                      ? 704
+                      : 231,
+              // height: Responsive.isDesktop(context)
+              //     ? 2313
+              //     : Responsive.isTablet(context)
+              //         ? 2570
+              //         : 1136,
               child: Expanded(
                 child: Table(
                   columnWidths: {
-                    0: FlexColumnWidth(50),
-                    1: FlexColumnWidth(26),
-                    2: FlexColumnWidth(26),
-                    3: FlexColumnWidth(26),
+                    0: FlexColumnWidth(Responsive.isDesktop(context)
+                        ? 52.3
+                        : Responsive.isTablet(context)
+                            ? 306
+                            : 50),
+                    1: FlexColumnWidth(Responsive.isDesktop(context)
+                        ? 26.3
+                        : Responsive.isTablet(context)
+                            ? 135.5
+                            : 26),
+                    2: FlexColumnWidth(Responsive.isDesktop(context)
+                        ? 26.3
+                        : Responsive.isTablet(context)
+                            ? 141
+                            : 26),
+                    3: FlexColumnWidth(Responsive.isDesktop(context)
+                        ? 26.3
+                        : Responsive.isTablet(context)
+                            ? 140.5
+                            : 26),
                   },
                   // border: TableBorder.all(),
                   children: [
@@ -229,13 +356,25 @@ class _CompareTableState extends State<CompareTable> {
                           BoxDecoration(color: Color.fromARGB(0, 255, 193, 7)),
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 68),
+                          padding: Responsive.isDesktop(context)
+                              ? EdgeInsets.only(right: 91)
+                              : Responsive.isTablet(context)
+                                  ? EdgeInsets.only(left: 7, right: 35)
+                                  : EdgeInsets.only(left: 5.5, right: 8.5),
                           child: Container(
-                            width: 412,
-                            height: 61,
+                            width: Responsive.isDesktop(context)
+                                ? 423
+                                : Responsive.isTablet(context)
+                                    ? 257
+                                    : 125,
+                            height: Responsive.isDesktop(context)
+                                ? 61
+                                : Responsive.isTablet(context)
+                                    ? 46
+                                    : 27,
                             decoration: BoxDecoration(
                               border: Border.all(
-                                width: 1.0,
+                                width: 3.0,
                                 color: Color.fromARGB(255, 75, 195, 211),
                               ),
                               color: Color.fromARGB(255, 243, 246,
@@ -247,7 +386,11 @@ class _CompareTableState extends State<CompareTable> {
                               child: Text(
                                 'รายละเอียดแพ็กเกจ',
                                 style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 32,
+                                    fontSize: Responsive.isDesktop(context)
+                                        ? 32
+                                        : Responsive.isTablet(context)
+                                            ? 20
+                                            : 10,
                                     fontWeight: FontWeight.w600,
                                     color: Color.fromARGB(255, 75, 195, 211)),
                               ),
@@ -255,13 +398,25 @@ class _CompareTableState extends State<CompareTable> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 13.5),
+                          padding: Responsive.isDesktop(context)
+                              ? EdgeInsets.only(right: 13.5)
+                              : Responsive.isTablet(context)
+                                  ? EdgeInsets.only(right: 5.5)
+                                  : EdgeInsets.only(right: 16.6),
                           child: Container(
-                            width: 250,
-                            height: 62,
+                            width: Responsive.isDesktop(context)
+                                ? 250
+                                : Responsive.isTablet(context)
+                                    ? 130
+                                    : 70,
+                            height: Responsive.isDesktop(context)
+                                ? 73
+                                : Responsive.isTablet(context)
+                                    ? 41
+                                    : 20,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 75, 195,
-                                  211), // set the background color
+                              color: Color.fromARGB(255, 110, 193,
+                                  208), // set the background color
                               borderRadius: BorderRadius.circular(
                                   30), // set the border radius
                             ),
@@ -270,7 +425,11 @@ class _CompareTableState extends State<CompareTable> {
                                 textAlign: TextAlign.center,
                                 'Express',
                                 style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 32,
+                                    fontSize: Responsive.isDesktop(context)
+                                        ? 32
+                                        : Responsive.isTablet(context)
+                                            ? 20
+                                            : 10,
                                     fontWeight: FontWeight.w600,
                                     color: Color.fromARGB(255, 255, 255, 255)),
                               ),
@@ -278,10 +437,22 @@ class _CompareTableState extends State<CompareTable> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 13.5),
+                          padding: Responsive.isDesktop(context)
+                              ? EdgeInsets.symmetric(horizontal: 13.5)
+                              : Responsive.isTablet(context)
+                                  ? EdgeInsets.symmetric(horizontal: 5.5)
+                                  : EdgeInsets.symmetric(horizontal: 8.3),
                           child: Container(
-                            width: 250,
-                            height: 62,
+                            width: Responsive.isDesktop(context)
+                                ? 250
+                                : Responsive.isTablet(context)
+                                    ? 130
+                                    : 70,
+                            height: Responsive.isDesktop(context)
+                                ? 73
+                                : Responsive.isTablet(context)
+                                    ? 41
+                                    : 20,
                             decoration: BoxDecoration(
                               color: Color.fromARGB(255, 105, 173,
                                   221), // set the background color
@@ -293,7 +464,11 @@ class _CompareTableState extends State<CompareTable> {
                                 textAlign: TextAlign.center,
                                 'Standard',
                                 style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 32,
+                                    fontSize: Responsive.isDesktop(context)
+                                        ? 32
+                                        : Responsive.isTablet(context)
+                                            ? 20
+                                            : 10,
                                     fontWeight: FontWeight.w600,
                                     color: Color.fromARGB(255, 255, 255, 255)),
                               ),
@@ -301,10 +476,22 @@ class _CompareTableState extends State<CompareTable> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 13.5),
+                          padding: Responsive.isDesktop(context)
+                              ? EdgeInsets.only(left: 13.5)
+                              : Responsive.isTablet(context)
+                                  ? EdgeInsets.only(left: 5.5, right: 5)
+                                  : EdgeInsets.only(left: 16.6),
                           child: Container(
-                            width: 250,
-                            height: 62,
+                            width: Responsive.isDesktop(context)
+                                ? 250
+                                : Responsive.isTablet(context)
+                                    ? 130
+                                    : 70,
+                            height: Responsive.isDesktop(context)
+                                ? 73
+                                : Responsive.isTablet(context)
+                                    ? 41
+                                    : 20,
                             decoration: BoxDecoration(
                               color: Color.fromARGB(255, 140, 140,
                                   207), // set the background color
@@ -316,7 +503,11 @@ class _CompareTableState extends State<CompareTable> {
                                 textAlign: TextAlign.center,
                                 'Enterprise',
                                 style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 32,
+                                    fontSize: Responsive.isDesktop(context)
+                                        ? 32
+                                        : Responsive.isTablet(context)
+                                            ? 20
+                                            : 10,
                                     fontWeight: FontWeight.w600,
                                     color: Color.fromARGB(255, 255, 255, 255)),
                               ),
@@ -328,38 +519,67 @@ class _CompareTableState extends State<CompareTable> {
                     TableRow(
                       children: [
                         SizedBox(
-                          width: 500,
-                          height: 71,
+                          height: Responsive.isDesktop(context)
+                              ? 63
+                              : Responsive.isTablet(context)
+                                  ? 126
+                                  : 46,
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 18, bottom: 36),
+                          padding: Responsive.isDesktop(context)
+                              ? EdgeInsets.only(right: 13.5, top: 18)
+                              : Responsive.isTablet(context)
+                                  ? EdgeInsets.only(right: 6.5, top: 18)
+                                  : EdgeInsets.only(right: 13.5, top: 18),
                           child: Text(
                             '(SaaS)',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 20,
+                                height: Responsive.isDesktop(context)
+                                    ? null
+                                    : 1.1875,
+                                fontSize: Responsive.isDesktop(context)
+                                    ? 20
+                                    : Responsive.isTablet(context)
+                                        ? 16
+                                        : 16,
                                 fontWeight: FontWeight.w400,
                                 color: Color.fromARGB(255, 31, 31, 31)),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 18),
+                          padding: const EdgeInsets.only(
+                              left: 13.5, right: 13.5, top: 18),
                           child: Text(
                             '(Subscriptions License)',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 20,
+                                height: Responsive.isDesktop(context)
+                                    ? null
+                                    : 1.1875,
+                                fontSize: Responsive.isDesktop(context)
+                                    ? 20
+                                    : Responsive.isTablet(context)
+                                        ? 16
+                                        : 16,
                                 fontWeight: FontWeight.w400,
                                 color: Color.fromARGB(255, 31, 31, 31)),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 18),
+                          padding: const EdgeInsets.only(left: 13.5, top: 18),
                           child: Text(
                             '(Perpeptual License)',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 20,
+                                height: Responsive.isDesktop(context)
+                                    ? null
+                                    : 1.1875,
+                                fontSize: Responsive.isDesktop(context)
+                                    ? 20
+                                    : Responsive.isTablet(context)
+                                        ? 16
+                                        : 16,
                                 fontWeight: FontWeight.w400,
                                 color: Color.fromARGB(255, 31, 31, 31)),
                           ),
@@ -370,41 +590,45 @@ class _CompareTableState extends State<CompareTable> {
                       return TableRow(
                         decoration: BoxDecoration(
                           // border: Border.all(width: 1),
-                          color:
-                              index % 2 == 0 ? Colors.white : Colors.grey[100],
+                          color: index % 2 == 0
+                              ? Colors.white
+                              : Color.fromARGB(255, 241, 241, 243),
                         ),
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(right: 5),
+                            padding: const EdgeInsets.only(left: 17),
                             child: Container(
-                              width: 495,
-                              height: index % 2 == 0 ? 100 : 93,
-                              // borderRadius: index == table.length - 1
-                              //     ? BorderRadius.only(
-                              //         bottomLeft: Radius.circular(20),
-                              //         bottomRight: Radius.circular(20))
-                              //     : null,
-
+                              // color: Colors.amber,
+                              width: 505,
+                              height: index % 2 == 0
+                                  ? Responsive.isDesktop(context)
+                                      ? 100
+                                      : Responsive.isTablet(context)
+                                          ? index == 4
+                                              ? 159
+                                              : 119
+                                          : 54
+                                  : Responsive.isDesktop(context)
+                                      ? 93
+                                      : Responsive.isTablet(context)
+                                          ? 116
+                                          : 47,
                               child: Column(
-                                mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
+                                  Text(table[index].details,
+                                      style: GoogleFonts.ibmPlexSansThai(
+                                        height: 1.1,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600,
+                                      )),
                                   Container(
-                                    height: 30,
-                                    width: 458,
-                                    child: Text(table[index].details,
-                                        style: GoogleFonts.ibmPlexSansThai(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w600,
-                                        )),
-                                  ),
-                                  Container(
-                                    height: 30,
-                                    width: 458,
+                                    width: 505,
                                     child: Text(table[index].detailsch,
                                         textAlign: TextAlign.start,
                                         style: GoogleFonts.ibmPlexSansThai(
+                                          height: 1.1,
                                           fontSize: 18,
                                           fontWeight: FontWeight.w400,
                                         )),
@@ -413,349 +637,513 @@ class _CompareTableState extends State<CompareTable> {
                               ),
                             ),
                           ),
-                          TableCell(
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 5.0, right: 5),
-                              child: table[index].express == 'Lock'
-                                  ? Transform.translate(
-                                      offset:
-                                          Offset(0, index % 2 == 0 ? 27.5 : 25),
-                                      child: SizedBox(
-                                        height: 40,
-                                        width: 30,
-                                        child: Image(
-                                            fit: BoxFit.fitHeight,
-                                            image: AssetImage(
-                                                "packages/lock.png")),
-                                      ),
-                                    )
-                                  : table[index].express == 'Check'
-                                      ? Transform.translate(
-                                          offset: Offset(
-                                              0, index % 2 == 0 ? 30 : 27.5),
-                                          child: SizedBox(
-                                            height: 40,
-                                            width: 40,
-                                            child: Image(
-                                                fit: BoxFit.fitHeight,
-                                                image: AssetImage(
-                                                    "packages/check.png")),
-                                          ),
-                                        )
-                                      : table[index].express == 'Cross'
-                                          ? Transform.translate(
-                                              offset: Offset(0,
-                                                  index % 2 == 0 ? 30 : 27.5),
-                                              child: SizedBox(
-                                                height: 40,
-                                                width: 40,
-                                                child: Image(
-                                                    fit: BoxFit.fitHeight,
-                                                    image: AssetImage(
-                                                        "packages/cross.png")),
-                                              ),
+                          Padding(
+                              padding: Responsive.isDesktop(context)
+                                  ? EdgeInsets.only(right: 16.6)
+                                  : Responsive.isTablet(context)
+                                      ? EdgeInsets.only(right: 5)
+                                      : EdgeInsets.only(right: 5),
+                              child: Container(
+                                  height: index == table.length - 1
+                                      ? Responsive.isDesktop(context)
+                                          ? 148
+                                          : Responsive.isTablet(context)
+                                              ? 85
+                                              : 44
+                                      : index % 2 == 0
+                                          ? Responsive.isDesktop(context)
+                                              ? 100
+                                              : Responsive.isTablet(context)
+                                                  ? index == 4
+                                                      ? 159
+                                                      : 119
+                                                  : 54
+                                          : Responsive.isDesktop(context)
+                                              ? 93
+                                              : Responsive.isTablet(context)
+                                                  ? 116
+                                                  : 47,
+                                  child: Container(
+                                    height: index == table.length - 1
+                                        ? 165
+                                        : index % 2 == 0
+                                            ? Responsive.isDesktop(context)
+                                                ? 100
+                                                : Responsive.isTablet(context)
+                                                    ? index == 4
+                                                        ? 159
+                                                        : 119
+                                                    : 54
+                                            : Responsive.isDesktop(context)
+                                                ? 93
+                                                : Responsive.isTablet(context)
+                                                    ? 116
+                                                    : 47,
+                                    child: Center(
+                                      child: table[index].express == "Lock" ||
+                                              table[index].express == "Check" ||
+                                              table[index].express == "Cross"
+                                          ? SizedBox(
+                                              height: 40,
+                                              width: table[index].express ==
+                                                          "Check" ||
+                                                      table[index].express ==
+                                                          "Cross"
+                                                  ? 40
+                                                  : 30,
+                                              child: Image(
+                                                  fit: BoxFit.none,
+                                                  image: AssetImage(table[index]
+                                                              .express ==
+                                                          "Check"
+                                                      ? "packages/check.png"
+                                                      : table[index].express ==
+                                                              "Cross"
+                                                          ? "packages/cross.png"
+                                                          : "packages/lock.png")),
                                             )
-                                          : table[index].express == 'Buy Now'
+                                          : table[index].express == "Buy Now"
                                               ? Container(
-                                                  height: 148,
-                                                  child: Center(
-                                                    child: SizedBox(
-                                                      width: 220,
-                                                      height: 63,
-                                                      child: OutlinedButton(
-                                                        onPressed: () {},
-                                                        style: OutlinedButton
-                                                            .styleFrom(
-                                                          side: BorderSide(
-                                                            width: 2.0,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    75,
-                                                                    195,
-                                                                    211),
-                                                          ),
-                                                          backgroundColor:
-                                                              Color.fromARGB(
-                                                                  199,
-                                                                  243,
-                                                                  246,
-                                                                  249),
-                                                          shape:
-                                                              RoundedRectangleBorder(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        30.0),
-                                                          ),
-                                                        ),
-                                                        child: Text(
-                                                          'Buy Now',
-                                                          style: GoogleFonts
-                                                              .ibmPlexSansThai(
-                                                                  fontSize: 24,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          255,
-                                                                          0,
-                                                                          0,
-                                                                          0)),
-                                                        ),
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            30.0),
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: Colors.grey
+                                                            .withOpacity(0.5),
+                                                        spreadRadius: 0,
+                                                        blurRadius: 1,
+                                                        offset: Offset(0,
+                                                            4), // changes position of shadow
                                                       ),
+                                                    ],
+                                                  ),
+                                                  width: Responsive.isDesktop(
+                                                          context)
+                                                      ? 192
+                                                      : Responsive.isTablet(
+                                                              context)
+                                                          ? 113
+                                                          : 57,
+                                                  height: Responsive.isDesktop(
+                                                          context)
+                                                      ? 64
+                                                      : Responsive.isTablet(
+                                                              context)
+                                                          ? 46
+                                                          : 20,
+                                                  child: OutlinedButton(
+                                                    onPressed: () {},
+                                                    style: OutlinedButton
+                                                        .styleFrom(
+                                                      side: BorderSide(
+                                                        width: Responsive
+                                                                .isDesktop(
+                                                                    context)
+                                                            ? 3.0
+                                                            : 2,
+                                                        color: Color.fromARGB(
+                                                            255, 75, 195, 211),
+                                                      ),
+                                                      backgroundColor:
+                                                          Color.fromARGB(255,
+                                                              255, 255, 255),
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius: BorderRadius
+                                                            .circular(Responsive
+                                                                    .isDesktop(
+                                                                        context)
+                                                                ? 30.0
+                                                                : Responsive.isTablet(
+                                                                        context)
+                                                                    ? 20
+                                                                    : 20),
+                                                      ),
+                                                    ),
+                                                    child: Text(
+                                                      'Buy Now',
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                              letterSpacing:
+                                                                  Responsive.isDesktop(
+                                                                          context)
+                                                                      ? 0
+                                                                      : -0.5,
+                                                              fontSize: 20,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                              color: Color
+                                                                  .fromARGB(
+                                                                      255,
+                                                                      75,
+                                                                      195,
+                                                                      211)),
                                                     ),
                                                   ),
                                                 )
-                                              : Transform.translate(
-                                                  offset: Offset(0,
-                                                      index == 14 ? 22.5 : 30),
-                                                  child: Text(
-                                                    '${table[index].express}',
-                                                    textAlign: TextAlign.center,
-                                                    style: GoogleFonts
-                                                        .ibmPlexSansThai(
-                                                            color: Colors.black,
-                                                            fontSize:
-                                                                index == 14
-                                                                    ? 16
-                                                                    : 20,
-                                                            fontWeight:
-                                                                index == 14
-                                                                    ? FontWeight
-                                                                        .w400
-                                                                    : FontWeight
-                                                                        .w700),
-                                                  ),
+                                              : Text(
+                                                  '${table[index].express}',
+                                                  textAlign: TextAlign.center,
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          color: Colors.black,
+                                                          fontSize: index == 14
+                                                              ? 16
+                                                              : Responsive
+                                                                      .isDesktop(
+                                                                          context)
+                                                                  ? 20
+                                                                  : Responsive.isTablet(
+                                                                          context)
+                                                                      ? 16
+                                                                      : 8,
+                                                          fontWeight: index ==
+                                                                  14
+                                                              ? FontWeight.w500
+                                                              : FontWeight
+                                                                  .w700),
                                                 ),
-                            ),
-                          ),
-                          TableCell(
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 5.0, right: 5),
-                              child: table[index].standard == 'Lock'
-                                  ? Transform.translate(
-                                      offset:
-                                          Offset(0, index % 2 == 0 ? 27.5 : 25),
-                                      child: SizedBox(
-                                        height: 40,
-                                        width: 30,
-                                        child: Image(
-                                            fit: BoxFit.fitHeight,
-                                            image: AssetImage(
-                                                "packages/lock.png")),
-                                      ),
-                                    )
-                                  : table[index].standard == 'Check'
-                                      ? Transform.translate(
-                                          offset: Offset(
-                                              0, index % 2 == 0 ? 30 : 27.5),
-                                          child: SizedBox(
-                                            height: 40,
-                                            width: 40,
-                                            child: Image(
-                                                fit: BoxFit.fitHeight,
-                                                image: AssetImage(
-                                                    "packages/check.png")),
-                                          ),
-                                        )
-                                      : table[index].standard == 'Cross'
-                                          ? Transform.translate(
-                                              offset: Offset(0,
-                                                  index % 2 == 0 ? 30 : 27.5),
-                                              child: SizedBox(
-                                                height: 40,
-                                                width: 40,
-                                                child: Image(
-                                                    fit: BoxFit.fitHeight,
-                                                    image: AssetImage(
-                                                        "packages/cross.png")),
-                                              ),
+                                    ),
+                                  ))),
+                          Padding(
+                              padding: Responsive.isDesktop(context)
+                                  ? EdgeInsets.only(left: 8.3, right: 8.3)
+                                  : Responsive.isTablet(context)
+                                      ? EdgeInsets.only(left: 5, right: 1)
+                                      : EdgeInsets.only(left: 5, right: 1),
+                              child: Container(
+                                  height: index == table.length - 1
+                                      ? Responsive.isDesktop(context)
+                                          ? 148
+                                          : Responsive.isTablet(context)
+                                              ? 85
+                                              : 44
+                                      : index % 2 == 0
+                                          ? Responsive.isDesktop(context)
+                                              ? 100
+                                              : Responsive.isTablet(context)
+                                                  ? index == 4
+                                                      ? 159
+                                                      : 119
+                                                  : 54
+                                          : Responsive.isDesktop(context)
+                                              ? 93
+                                              : Responsive.isTablet(context)
+                                                  ? 116
+                                                  : 47,
+                                  child: Container(
+                                    height: index == table.length - 1
+                                        ? 165
+                                        : index % 2 == 0
+                                            ? Responsive.isDesktop(context)
+                                                ? 100
+                                                : Responsive.isTablet(context)
+                                                    ? index == 4
+                                                        ? 159
+                                                        : 119
+                                                    : 54
+                                            : Responsive.isDesktop(context)
+                                                ? 93
+                                                : Responsive.isTablet(context)
+                                                    ? 116
+                                                    : 47,
+                                    child: Center(
+                                      child: table[index].standard == "Lock" ||
+                                              table[index].standard ==
+                                                  "Check" ||
+                                              table[index].standard == "Cross"
+                                          ? SizedBox(
+                                              height: 40,
+                                              width: table[index].standard ==
+                                                          "Check" ||
+                                                      table[index].standard ==
+                                                          "Cross"
+                                                  ? 40
+                                                  : 30,
+                                              child: Image(
+                                                  fit: BoxFit.none,
+                                                  image: AssetImage(table[index]
+                                                              .standard ==
+                                                          "Check"
+                                                      ? "packages/check.png"
+                                                      : table[index].standard ==
+                                                              "Cross"
+                                                          ? "packages/cross.png"
+                                                          : "packages/lock.png")),
                                             )
-                                          : table[index].standard == 'Buy Now'
+                                          : table[index].standard == "Buy Now"
                                               ? Container(
-                                                  height: 148,
-                                                  child: Center(
-                                                    child: SizedBox(
-                                                      width: 220,
-                                                      height: 63,
-                                                      child: OutlinedButton(
-                                                        onPressed: () {},
-                                                        style: OutlinedButton
-                                                            .styleFrom(
-                                                          side: BorderSide(
-                                                            width: 2.0,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    75,
-                                                                    195,
-                                                                    211),
-                                                          ),
-                                                          backgroundColor:
-                                                              Color.fromARGB(
-                                                                  199,
-                                                                  243,
-                                                                  246,
-                                                                  249),
-                                                          shape:
-                                                              RoundedRectangleBorder(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        30.0),
-                                                          ),
-                                                        ),
-                                                        child: Text(
-                                                          'Buy Now',
-                                                          style: GoogleFonts
-                                                              .ibmPlexSansThai(
-                                                                  fontSize: 24,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          255,
-                                                                          0,
-                                                                          0,
-                                                                          0)),
-                                                        ),
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            30.0),
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: Colors.grey
+                                                            .withOpacity(0.5),
+                                                        spreadRadius: 0,
+                                                        blurRadius: 1,
+                                                        offset: Offset(0,
+                                                            4), // changes position of shadow
                                                       ),
+                                                    ],
+                                                  ),
+                                                  width: Responsive.isDesktop(
+                                                          context)
+                                                      ? 192
+                                                      : Responsive.isTablet(
+                                                              context)
+                                                          ? 113
+                                                          : 57,
+                                                  height: Responsive.isDesktop(
+                                                          context)
+                                                      ? 64
+                                                      : Responsive.isTablet(
+                                                              context)
+                                                          ? 46
+                                                          : 20,
+                                                  child: OutlinedButton(
+                                                    onPressed: () {},
+                                                    style: OutlinedButton
+                                                        .styleFrom(
+                                                      side: BorderSide(
+                                                        width: Responsive
+                                                                .isDesktop(
+                                                                    context)
+                                                            ? 3.0
+                                                            : 2,
+                                                        color: Color.fromARGB(
+                                                            255, 75, 195, 211),
+                                                      ),
+                                                      backgroundColor:
+                                                          Color.fromARGB(255,
+                                                              255, 255, 255),
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius: BorderRadius
+                                                            .circular(Responsive
+                                                                    .isDesktop(
+                                                                        context)
+                                                                ? 30.0
+                                                                : Responsive.isTablet(
+                                                                        context)
+                                                                    ? 20
+                                                                    : 20),
+                                                      ),
+                                                    ),
+                                                    child: Text(
+                                                      'Buy Now',
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                              letterSpacing:
+                                                                  -0.5,
+                                                              fontSize: 20,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                              color: Color
+                                                                  .fromARGB(
+                                                                      255,
+                                                                      75,
+                                                                      195,
+                                                                      211)),
                                                     ),
                                                   ),
                                                 )
-                                              : Transform.translate(
-                                                  offset: Offset(0, 30),
-                                                  child: Text(
-                                                    '${table[index].standard}',
-                                                    textAlign: TextAlign.center,
-                                                    style: GoogleFonts
-                                                        .ibmPlexSansThai(
-                                                            color: Colors.black,
-                                                            fontSize: 20,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w700),
-                                                  ),
+                                              : Text(
+                                                  '${table[index].standard}',
+                                                  textAlign: TextAlign.center,
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          color: Colors.black,
+                                                          fontSize: Responsive
+                                                                  .isDesktop(
+                                                                      context)
+                                                              ? 20
+                                                              : Responsive
+                                                                      .isTablet(
+                                                                          context)
+                                                                  ? 16
+                                                                  : 8,
+                                                          fontWeight:
+                                                              FontWeight.w700),
                                                 ),
-                            ),
-                          ),
-                          TableCell(
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 5.0, right: 5),
-                              child: table[index].enterprise == 'Lock'
-                                  ? Transform.translate(
-                                      offset:
-                                          Offset(0, index % 2 == 0 ? 27.5 : 25),
-                                      child: SizedBox(
-                                        height: 40,
-                                        width: 30,
-                                        child: Image(
-                                            fit: BoxFit.fitHeight,
-                                            image: AssetImage(
-                                                "packages/lock.png")),
-                                      ),
-                                    )
-                                  : table[index].enterprise == 'Check'
-                                      ? Transform.translate(
-                                          offset: Offset(
-                                              0, index % 2 == 0 ? 30 : 27.5),
-                                          child: SizedBox(
-                                            height: 40,
-                                            width: 40,
-                                            child: Image(
-                                                fit: BoxFit.fitHeight,
-                                                image: AssetImage(
-                                                    "packages/check.png")),
-                                          ),
+                                    ),
+                                  ))),
+                          Padding(
+                              padding: Responsive.isDesktop(context)
+                                  ? EdgeInsets.only(left: 16.6)
+                                  : Responsive.isTablet(context)
+                                      ? EdgeInsets.only(
+                                          left: 9,
                                         )
-                                      : table[index].enterprise == 'Cross'
-                                          ? Transform.translate(
-                                              offset: Offset(0,
-                                                  index % 2 == 0 ? 30 : 27.5),
-                                              child: SizedBox(
-                                                height: 40,
-                                                width: 40,
-                                                child: Image(
-                                                    fit: BoxFit.fitHeight,
-                                                    image: AssetImage(
-                                                        "packages/cross.png")),
-                                              ),
+                                      : EdgeInsets.only(
+                                          left: 9,
+                                        ),
+                              child: Container(
+                                  height: index == table.length - 1
+                                      ? Responsive.isDesktop(context)
+                                          ? 148
+                                          : Responsive.isTablet(context)
+                                              ? 85
+                                              : 44
+                                      : index % 2 == 0
+                                          ? Responsive.isDesktop(context)
+                                              ? 100
+                                              : Responsive.isTablet(context)
+                                                  ? index == 4
+                                                      ? 159
+                                                      : 119
+                                                  : 54
+                                          : Responsive.isDesktop(context)
+                                              ? 93
+                                              : Responsive.isTablet(context)
+                                                  ? 116
+                                                  : 47,
+                                  child: Container(
+                                    height: index == table.length - 1
+                                        ? 165
+                                        : index % 2 == 0
+                                            ? Responsive.isDesktop(context)
+                                                ? 100
+                                                : Responsive.isTablet(context)
+                                                    ? index == 4
+                                                        ? 159
+                                                        : 119
+                                                    : 54
+                                            : Responsive.isDesktop(context)
+                                                ? 93
+                                                : Responsive.isTablet(context)
+                                                    ? 116
+                                                    : 47,
+                                    child: Center(
+                                      child: table[index].enterprise ==
+                                                  "Lock" ||
+                                              table[index].enterprise ==
+                                                  "Check" ||
+                                              table[index].enterprise == "Cross"
+                                          ? SizedBox(
+                                              height: 40,
+                                              width: table[index].enterprise ==
+                                                          "Check" ||
+                                                      table[index].enterprise ==
+                                                          "Cross"
+                                                  ? 40
+                                                  : 30,
+                                              child: Image(
+                                                  fit: BoxFit.none,
+                                                  image: AssetImage(table[index]
+                                                              .enterprise ==
+                                                          "Check"
+                                                      ? "packages/check.png"
+                                                      : table[index]
+                                                                  .enterprise ==
+                                                              "Cross"
+                                                          ? "packages/cross.png"
+                                                          : "packages/lock.png")),
                                             )
-                                          : table[index].enterprise == 'Buy Now'
+                                          : table[index].enterprise == "Buy Now"
                                               ? Container(
-                                                  height: 148,
-                                                  child: Center(
-                                                    child: SizedBox(
-                                                      width: 220,
-                                                      height: 63,
-                                                      child: OutlinedButton(
-                                                        onPressed: () {},
-                                                        style: OutlinedButton
-                                                            .styleFrom(
-                                                          side: BorderSide(
-                                                            width: 2.0,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    75,
-                                                                    195,
-                                                                    211),
-                                                          ),
-                                                          backgroundColor:
-                                                              Color.fromARGB(
-                                                                  199,
-                                                                  243,
-                                                                  246,
-                                                                  249),
-                                                          shape:
-                                                              RoundedRectangleBorder(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        30.0),
-                                                          ),
-                                                        ),
-                                                        child: Text(
-                                                          'Buy Now',
-                                                          style: GoogleFonts
-                                                              .ibmPlexSansThai(
-                                                                  fontSize: 24,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          255,
-                                                                          0,
-                                                                          0,
-                                                                          0)),
-                                                        ),
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            30.0),
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: Colors.grey
+                                                            .withOpacity(0.5),
+                                                        spreadRadius: 0,
+                                                        blurRadius: 1,
+                                                        offset: Offset(0,
+                                                            4), // changes position of shadow
                                                       ),
+                                                    ],
+                                                  ),
+                                                  width: Responsive.isDesktop(
+                                                          context)
+                                                      ? 192
+                                                      : Responsive.isTablet(
+                                                              context)
+                                                          ? 113
+                                                          : 57,
+                                                  height: Responsive.isDesktop(
+                                                          context)
+                                                      ? 64
+                                                      : Responsive.isTablet(
+                                                              context)
+                                                          ? 46
+                                                          : 20,
+                                                  child: OutlinedButton(
+                                                    onPressed: () {},
+                                                    style: OutlinedButton
+                                                        .styleFrom(
+                                                      side: BorderSide(
+                                                        width: Responsive
+                                                                .isDesktop(
+                                                                    context)
+                                                            ? 3.0
+                                                            : 2,
+                                                        color: Color.fromARGB(
+                                                            255, 75, 195, 211),
+                                                      ),
+                                                      backgroundColor:
+                                                          Color.fromARGB(255,
+                                                              255, 255, 255),
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius: BorderRadius
+                                                            .circular(Responsive
+                                                                    .isDesktop(
+                                                                        context)
+                                                                ? 30.0
+                                                                : Responsive.isTablet(
+                                                                        context)
+                                                                    ? 20
+                                                                    : 20),
+                                                      ),
+                                                    ),
+                                                    child: Text(
+                                                      'Buy Now',
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                              letterSpacing:
+                                                                  -0.5,
+                                                              fontSize: 20,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                              color: Color
+                                                                  .fromARGB(
+                                                                      255,
+                                                                      75,
+                                                                      195,
+                                                                      211)),
                                                     ),
                                                   ),
                                                 )
-                                              : Transform.translate(
-                                                  offset: Offset(0, 30),
-                                                  child: Text(
-                                                    '${table[index].express}',
-                                                    textAlign: TextAlign.center,
-                                                    style: GoogleFonts
-                                                        .ibmPlexSansThai(
-                                                            color: Colors.black,
-                                                            fontSize: 20,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w700),
-                                                  ),
+                                              : Text(
+                                                  '${table[index].enterprise}',
+                                                  textAlign: TextAlign.center,
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          color: Colors.black,
+                                                          fontSize: Responsive
+                                                                  .isDesktop(
+                                                                      context)
+                                                              ? 20
+                                                              : Responsive
+                                                                      .isTablet(
+                                                                          context)
+                                                                  ? 16
+                                                                  : 8,
+                                                          fontWeight:
+                                                              FontWeight.w700),
                                                 ),
-                            ),
-                          ),
+                                    ),
+                                  ))),
                         ],
                       );
                     }),
@@ -763,8 +1151,8 @@ class _CompareTableState extends State<CompareTable> {
                 ),
               ),
             ),
+            SizedBox(height: 30),
             Container(
-              height: 216,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
@@ -781,68 +1169,46 @@ class _CompareTableState extends State<CompareTable> {
                   SizedBox(
                     height: 63,
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "รับคำปรึกษาจากทีมงานผู้เชี่ยวชาญของเรา ",
-                            style: GoogleFonts.ibmPlexSans(
-                                fontSize: 32,
-                                fontWeight: FontWeight.w400,
-                                color: Color.fromARGB(255, 5, 45, 97)),
-                          ),
-                          Text(
-                            "ให้เราช่วยวางแผนและให้คำแนะนำที่ดีที่สุดสำหรับองค์กรของคุณ",
-                            style: GoogleFonts.ibmPlexSans(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w400,
-                                color: Color.fromARGB(255, 57, 128, 237)),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
-                      SizedBox(width: 48),
-                      SizedBox(
-                        width: 254,
-                        height: 57,
-                        child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromRGBO(52, 145, 206, 1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30.0),
-                              ),
+                  Responsive.isDesktop(context)
+                      ? Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                advise,
+                                advisesub,
+                              ],
                             ),
-                            child: Text(
-                              'รับใบเสนอราคา',
-                              style: GoogleFonts.ibmPlexSansThai(
-                                  fontSize: 20, fontWeight: FontWeight.w500),
-                            )),
-                      ),
-                      SizedBox(width: 16),
-                      SizedBox(
-                        width: 254,
-                        height: 57,
-                        child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromRGBO(75, 195, 211, 1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30.0),
-                              ),
+                            SizedBox(width: 110),
+                            price,
+                            SizedBox(width: 26),
+                            demo
+                          ],
+                        )
+                      : Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            advise,
+                            advisesub,
+                            SizedBox(
+                              height: 30,
                             ),
-                            child: Text(
-                              'Request Demo',
-                              style: GoogleFonts.ibmPlexSansThai(
-                                  fontSize: 20, fontWeight: FontWeight.w500),
-                            )),
-                      ),
-                    ],
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                price,
+                                SizedBox(width: 26),
+                                demo,
+                              ],
+                            )
+                          ],
+                        ),
+                  SizedBox(
+                    height: Responsive.isDesktop(context) ? 83 : 74.5,
                   ),
                 ],
               ),

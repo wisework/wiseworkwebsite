@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wiseintern/responsive.dart';
 // import 'package:wiseintern/responsive.dart';
 
 class Compare extends StatefulWidget {
@@ -17,12 +18,12 @@ class _CompareState extends State<Compare> {
         child: Column(
           children: [
             SizedBox(
-              height: 56,
+              height: Responsive.isDesktop(context) ? 56 : 74,
             ),
             Row(
               children: [
                 SizedBox(
-                  width: 107,
+                  width: Responsive.isDesktop(context) ? 107 : 40,
                 ),
                 Container(
                   width: 60,
@@ -52,7 +53,9 @@ class _CompareState extends State<Compare> {
             Padding(
               padding: const EdgeInsets.only(top: 65),
               child: Text(
-                "เปรียบเทียบ Package ต่างกันอย่างไร?",
+                Responsive.isDesktop(context)
+                    ? "เปรียบเทียบ Package ต่างกันอย่างไร?"
+                    : "เปรียบเทียบ Package\nต่างกันอย่างไร?",
                 style: GoogleFonts.ibmPlexSans(
                     fontSize: 48,
                     fontWeight: FontWeight.w700,
