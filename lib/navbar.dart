@@ -16,7 +16,8 @@ class NavBar extends StatefulWidget {
 class FeatureModel {
   final String title;
   final String? routePath;
-  FeatureModel(this.title, this.routePath);
+  bool isExpanded;
+  FeatureModel(this.title, this.routePath, this.isExpanded);
 }
 
 class _NavigationBarState extends State<NavBar> {
@@ -29,6 +30,8 @@ class _NavigationBarState extends State<NavBar> {
 
   String? _selectedItem;
   bool _selected = false;
+  bool isDropdownOpen = false;
+  double buttonWidth = 50.0;
 
   final List<String> listServices = <String>[
     'Our Services',
@@ -39,8 +42,10 @@ class _NavigationBarState extends State<NavBar> {
   String? AboutValue;
   String? ServicesValue;
 
-  List<FeatureModel> features = [
-    FeatureModel("About Us", "/about/aboutpage.dart"),
+  List<FeatureModel> about = [
+    FeatureModel("Our Story", "/story", false),
+    FeatureModel("Our Rewards", "/story", false),
+    FeatureModel("Our Customers", "/customers", false),
   ];
 
   // bool _isExpanded = false;
@@ -53,228 +58,335 @@ class _NavigationBarState extends State<NavBar> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-      Padding(
-              padding: const EdgeInsets.only(top: 9, bottom: 13, left: 200),
-              child: SizedBox(
-                height: 45,
-                width: 120,
-                child: GestureDetector(
-                  onTap:() => context.go('/') ,
-                  child: Image.asset(
-                    'assets/logo.png',
-                  ),
+          Padding(
+            padding: const EdgeInsets.only(top: 9, bottom: 13, left: 200),
+            child: SizedBox(
+              height: 45,
+              width: 120,
+              child: GestureDetector(
+                onTap: () => context.go('/'),
+                child: Image.asset(
+                  'assets/logo.png',
                 ),
               ),
             ),
-            
-            SizedBox(
-              width: 200,
-            ),
-            SizedBox(
-              height: 18,
-              width: 62,
-              child: TextButton(
-                child: Text(
-                  "Home",
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.white,
-                  ),
+          ),
+          SizedBox(
+            width: 200,
+          ),
+          SizedBox(
+            height: 18,
+            width: 62,
+            child: TextButton(
+              child: Text(
+                "Home",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
                 ),
-                onPressed: () => context.go('/'),
               ),
+              onPressed: () => context.go('/'),
             ),
-            
-            DropdownButtonHideUnderline(
-              child: SizedBox(
-                width: 170,
-                child: DropdownButton2(
-                  focusColor: Color.fromARGB(255, 52, 144, 206),
-                  hint: Transform.translate(
-                    offset: Offset(0, 1),
+          ),
+          // DropdownButtonHideUnderline(
+          //   child: DropdownButton2(
+          //     focusColor: Color.fromARGB(255, 52, 144, 206),
+          //     hint: Transform.translate(
+          //       offset: Offset(0, 0),
+          //       child: SizedBox(
+          //         // height: 30,
+          //         width: 100,
+          //         // color: Colors.amber,
+          //         child: Text(
+          //           'About Us',
+          //           style: TextStyle(
+          //             fontSize: 16,
+          //             color: Colors.white,
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //     icon: Transform.translate(
+          //       offset: Offset(0, 0),
+          //       child: Icon(
+          //         Icons.expand_more_outlined,
+          //         color: Colors.white,
+          //       ),
+          //     ),
+          //     value: AboutValue,
+          //     items: [
+          //       DropdownMenuItem(
+          //           value: 'our story',
+          //           onTap: () => context.go('/story'),
+          //           child: Text(
+          //             'Our Story',
+          //             style: TextStyle(
+          //               fontSize: 16,
+          //               color: _selected
+          //                   ? Colors.white
+          //                   : Color.fromARGB(255, 52, 144, 206),
+          //             ),
+          //           )),
+          //       DropdownMenuItem(
+          //           value: 'our rewards',
+          //           onTap: () => context.go('/story'),
+          //           child: Text(
+          //             'Our Rewards',
+          //             style: TextStyle(
+          //               fontSize: 16,
+          //               color: _selected
+          //                   ? Colors.white
+          //                   : Color.fromARGB(255, 52, 144, 206),
+          //             ),
+          //           )),
+          //       DropdownMenuItem(
+          //           value: 'customer',
+          //           onTap: () => context.go('/customers'),
+          //           child: Text(
+          //             'Our Customers',
+          //             style: TextStyle(
+          //               fontSize: 16,
+          //               color: _selected
+          //                   ? Colors.white
+          //                   : Color.fromARGB(255, 52, 144, 206),
+          //             ),
+          //           )),
+
+          //     ],
+          //     onChanged: (value) {
+          //       setState(() {
+          //         // _selectedItem = value.toString();
+          //         // AboutValue = value as String;
+          //       });
+          //     },
+          //   ),
+          // ),
+           DropdownButtonHideUnderline(
+            child: DropdownButton2(
+              isExpanded: true,
+              hint: Text(
+                'About Us',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+                overflow: TextOverflow.ellipsis,
+              ),
+              items: [
+                DropdownMenuItem(
+                    value: 'our story',
+                    onTap: () => context.go('/story'),
                     child: Text(
-                      'About Us',
+                      'Our Story',
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.white,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
                       ),
-                    ),
-                  ),
-                  icon: Transform.translate(
-                    offset: Offset(0, 0),
-                    child: Icon(
-                      Icons.expand_more_outlined,
-                      color: Colors.white,
-                    ),
-                  ),
-                  value: AboutValue,
-                  
-                  items: [
-                    DropdownMenuItem(
-                        value: 'our story',
-                        onTap:  () => context.go('/story'),
-                        child: Text(
-                          'Our Story',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: _selected
-                                ? Colors.white
-                                : Color.fromARGB(255, 52, 144, 206),
-                          ),
-                        )),
-                    DropdownMenuItem(
-                        value: 'our rewards',
-                        onTap: () => context.go('/story'),
-                        child: Text(
-                          'Our Rewards',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: _selected
-                                ? Colors.white
-                                : Color.fromARGB(255, 52, 144, 206),
-                          ),
-                        )),
-                    DropdownMenuItem(
-                        value: 'customer',
-                        onTap: () => context.go('/customers'),
-                        child: Text(
-                          'Our Customers',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: _selected
-                                ? Colors.white
-                                : Color.fromARGB(255, 52, 144, 206),
-                          ),
-                        )),
-                  ],
-                  onChanged: (value) {
-                    setState(() {
-                      // _selectedItem = value.toString();
-                      // AboutValue = value as String;
-                    });
-                  },
-                ),
+                    )),
+                DropdownMenuItem(
+                    value: 'our rewards',
+                    onTap: () => context.go('/story'),
+                    child: Text(
+                      'Our Rewards',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
+                      ),
+                    )),
+                DropdownMenuItem(
+                    value: 'customer',
+                    onTap: () => context.go('/customers'),
+                    child: Text(
+                      'Our Customers',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
+                      ),
+                    )),
+              ],
+              value: AboutValue,
+              onChanged: (value) {
+                setState(() {
+                  // selectedValue = value as String;
+                });
+              },
+              buttonStyleData: ButtonStyleData(
+                height: 50,
+                width: 120,
+                padding: const EdgeInsets.only(left: 14, right: 14),
+                elevation: 0,
               ),
-            ),
-            
-            DropdownButtonHideUnderline(
-              child: DropdownButton2(
-                focusColor: Color.fromARGB(255, 52, 144, 206),
-                hint: Text(
-                  'Our Services',
-                  style: TextStyle(
-                    fontSize: 16,
+              iconStyleData: const IconStyleData(
+                icon: Icon(
+                  Icons.expand_more_outlined,
+                ),
+                iconSize: 20,
+                iconEnabledColor: Colors.white,
+                iconDisabledColor: Colors.white,
+              ),
+              dropdownStyleData: DropdownStyleData(
+                  maxHeight: 150,
+                  width: 150,
+                  padding: null,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
                     color: Colors.white,
                   ),
-                ),
-                icon: Transform.translate(
-                  offset: Offset(0, 0),
-                  child: Icon(
-                    Icons.expand_more_outlined,
-                    color: Colors.white,
-                  ),
-                ),
-                items: [
-                  DropdownMenuItem(
-                      value: 'pdpa',
-                      onTap: () => context.go('/services'),
-                      child: Text(
-                        'PDPA Management\nPlatform',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: _selected
-                              ? Colors.white
-                              : Color.fromARGB(255, 52, 144, 206),
-                        ),
-                      )),
-                  DropdownMenuItem(
-                      value: 'governance',
-                      onTap: () => context.go('/services'),
-                      child: Text(
-                        'Governance\nAssurance Suit',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: _selected
-                              ? Colors.white
-                              : Color.fromARGB(255, 52, 144, 206),
-                        ),
-                      )),
-                  DropdownMenuItem(
-                      value: 'request',
-                      onTap: () => context.go('/demo'),
-                      child: Text(
-                        'Request Demo',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: _selected
-                              ? Colors.white
-                              : Color.fromARGB(255, 52, 144, 206),
-                        ),
-                      )),
-                ],
-                value: ServicesValue,
-                onChanged: (value) {
-                  setState(() {
-                    // _selectedItem = value.toString();
-                    // ServicesValue = value as String;
-                  });
-                },
-                // dropdownDecoration: BoxDecoration(
-                //   color: Colors.white,
-                //   borderRadius: BorderRadius.circular(5)
-                // ),
-                // buttonHeight: 18,
-                // buttonWidth: 170,
-                // itemHeight: 50,
+                  elevation: 8,
+                  offset: const Offset(-10, -10),
+                  scrollbarTheme: ScrollbarThemeData(
+                    radius: const Radius.circular(40),
+                    thickness: MaterialStateProperty.all(6),
+                    thumbVisibility: MaterialStateProperty.all(true),
+                  )),
+              menuItemStyleData: const MenuItemStyleData(
+                height: 40,
+                padding: EdgeInsets.only(left: 14, right: 14),
               ),
             ),
-            
-            TextButton(
-              child: Text(
-                "Blogs",
+          ),
+
+          DropdownButtonHideUnderline(
+            child: DropdownButton2(
+              isExpanded: true,
+              hint: Text(
+                'Our Services',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.white,
                 ),
+                overflow: TextOverflow.ellipsis,
               ),
-              onPressed: () {},
+              items: [
+                DropdownMenuItem(
+                    value: 'pdpa',
+                    onTap: () => context.go('/services'),
+                    child: Text(
+                      'PDPA Management Platform',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
+                      ),
+                    )),
+                DropdownMenuItem(
+                    value: 'governance',
+                    onTap: () => context.go('/services'),
+                    child: Text(
+                      'Governance Assurance Suit',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
+                      ),
+                    )),
+                DropdownMenuItem(
+                    value: 'request',
+                    onTap: () => context.go('/demo'),
+                    child: Text(
+                      'Request Demo',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: _selected
+                            ? Colors.white
+                            : Color.fromARGB(255, 52, 144, 206),
+                      ),
+                    )),
+              ],
+              value: AboutValue,
+              onChanged: (value) {
+                setState(() {
+                  // selectedValue = value as String;
+                });
+              },
+              buttonStyleData: ButtonStyleData(
+                height: 50,
+                width: 160,
+                padding: const EdgeInsets.only(left: 14, right: 14),
+                elevation: 0,
+              ),
+              iconStyleData: const IconStyleData(
+                icon: Icon(
+                  Icons.expand_more_outlined,
+                ),
+                iconSize: 20,
+                iconEnabledColor: Colors.white,
+                iconDisabledColor: Colors.white,
+              ),
+              dropdownStyleData: DropdownStyleData(
+                  maxHeight: 250,
+                  width: 250,
+                  padding: null,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white,
+                  ),
+                  elevation: 8,
+                  offset: const Offset(-20, -10),
+                  scrollbarTheme: ScrollbarThemeData(
+                    radius: const Radius.circular(40),
+                    thickness: MaterialStateProperty.all(6),
+                    thumbVisibility: MaterialStateProperty.all(true),
+                  )),
+              menuItemStyleData: const MenuItemStyleData(
+                height: 40,
+                padding: EdgeInsets.only(left: 14, right: 14),
+              ),
             ),
-            
-            TextButton(
+          ),
+
+          TextButton(
+            child: Text(
+              "Blogs",
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.white,
+              ),
+            ),
+            onPressed: () {},
+          ),
+          TextButton(
+            child: Text(
+              "Contact Us",
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.white,
+              ),
+            ),
+            onPressed: () => context.go('/contact'),
+          ),
+          SizedBox(
+            width: 42,
+          ),
+          SizedBox(
+            width: 195,
+            height: 50,
+            child: ElevatedButton(
+              onPressed: () => context.go('/demo'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 232, 242, 254),
+                side: BorderSide(width: 3, color: Colors.blue),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0)),
+              ),
               child: Text(
-                "Contact Us",
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                ),
-              ),
-              onPressed: () => context.go('/contact'),
-            ),
-            
-            SizedBox(
-              width: 42,
-            ),
-            SizedBox(
-              width: 195,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: () => context.go('/demo'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 232, 242, 254),
-                  side: BorderSide(width: 3, color: Colors.blue),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0)),
-                ),
-                child: Text(
-                  'ทดลองใช้ฟรี',
-                  style: GoogleFonts.ibmPlexSansThai(
-                      color: Color.fromARGB(255, 57, 128, 237),
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600),
-                ),
+                'ทดลองใช้ฟรี',
+                style: GoogleFonts.ibmPlexSansThai(
+                    color: Color.fromARGB(255, 57, 128, 237),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600),
               ),
             ),
-          
+          ),
+        
         ],
       ),
     );

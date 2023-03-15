@@ -94,13 +94,13 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             
-            StoryPage(),
-            Pdpa(),
-            FeaturesPage(),
-            Customer(),
-            PackagesPage(),
-            FAQ(),
-            Footer()
+            // StoryPage(),
+            // Pdpa(),
+            // FeaturesPage(),
+            // Customer(),
+            // PackagesPage(),
+            // FAQ(),
+            // Footer()
           ],
         ),
       ),

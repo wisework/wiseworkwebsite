@@ -107,8 +107,8 @@ class _Register extends State<Register> {
                                             // color: Colors.red,
                                             width: 100,
                                             // height: 103,
-                                            child:
-                                                Image.asset("assets/demo/dot.png")),
+                                            child: Image.asset(
+                                                "assets/demo/dot.png")),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -880,6 +880,7 @@ class _Register extends State<Register> {
                                                           DropdownButtonHideUnderline(
                                                         child: DropdownButton2(
                                                           value: selectedOption,
+                                                          buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
                                                           hint: Text(
                                                             'เลือกประเภทธุรกิจ',
                                                             style: GoogleFonts
@@ -896,20 +897,25 @@ class _Register extends State<Register> {
                                                                             130,
                                                                             130)),
                                                           ),
-                                                          icon: Transform
-                                                              .translate(
-                                                            offset:
-                                                                Offset(-12, -2),
-                                                            child: Icon(
+                                                          iconStyleData:
+                                                              const IconStyleData(
+                                                            icon: Icon(
                                                               Icons
                                                                   .arrow_drop_down_outlined,
-                                                              color: Color
-                                                                  .fromARGB(
-                                                                      255,
-                                                                      79,
-                                                                      79,
-                                                                      79),
                                                             ),
+                                                            iconSize: 20,
+                                                            iconEnabledColor:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    79,
+                                                                    79,
+                                                                    79),
+                                                            iconDisabledColor:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    79,
+                                                                    79,
+                                                                    79),
                                                           ),
                                                           isExpanded: true,
                                                           items: optionsItem
@@ -930,14 +936,18 @@ class _Register extends State<Register> {
                                                               ),
                                                             );
                                                           }).toList(),
-                                                          dropdownDecoration:
-                                                              BoxDecoration(
-                                                                  color: Colors
-                                                                      .white,
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              5)),
+                                                          dropdownStyleData:
+                                                              DropdownStyleData(
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          5),
+                                                              color:
+                                                                  Colors.white,
+                                                            ),
+                                                          ),
                                                           // itemHeight: 8,
                                                           onChanged: (value) {
                                                             setState(() {
@@ -989,6 +999,7 @@ class _Register extends State<Register> {
                                                 child:
                                                     DropdownButtonHideUnderline(
                                                   child: DropdownButton2(
+                                                    buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
                                                     value: selectedPackage,
                                                     hint: Text(
                                                       'เลือกแพ็กเกจ',
@@ -1005,14 +1016,19 @@ class _Register extends State<Register> {
                                                                       130,
                                                                       130)),
                                                     ),
-                                                    icon: Transform.translate(
-                                                      offset: Offset(-12, -2),
-                                                      child: Icon(
+                                                    iconStyleData:
+                                                        const IconStyleData(
+                                                      icon: Icon(
                                                         Icons
                                                             .arrow_drop_down_outlined,
-                                                        color: Color.fromARGB(
-                                                            255, 79, 79, 79),
                                                       ),
+                                                      iconSize: 20,
+                                                      iconEnabledColor:
+                                                          Color.fromARGB(
+                                                              255, 79, 79, 79),
+                                                      iconDisabledColor:
+                                                          Color.fromARGB(
+                                                              255, 79, 79, 79),
                                                     ),
                                                     isExpanded: true,
                                                     items: packageItem
@@ -1033,13 +1049,15 @@ class _Register extends State<Register> {
                                                         ),
                                                       );
                                                     }).toList(),
-                                                    dropdownDecoration:
-                                                        BoxDecoration(
-                                                            color: Colors.white,
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        5)),
+                                                    dropdownStyleData:
+                                                        DropdownStyleData(
+                                                      decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(5),
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
                                                     // itemHeight: 8,
                                                     onChanged: (value) {
                                                       setState(() {
@@ -1332,8 +1350,8 @@ class _Register extends State<Register> {
                                             child: SizedBox(
                                               width: 100,
                                               height: 100,
-                                              child:
-                                                  Image.asset("assets/demo/team.png"),
+                                              child: Image.asset(
+                                                  "assets/demo/team.png"),
                                             ),
                                           ),
                                           Text(
@@ -1426,8 +1444,8 @@ class _Register extends State<Register> {
                                             child: SizedBox(
                                               width: 100,
                                               height: 100,
-                                              child:
-                                                  Image.asset("assets/demo/goal.png"),
+                                              child: Image.asset(
+                                                  "assets/demo/goal.png"),
                                             ),
                                           ),
                                           Text(
@@ -1468,8 +1486,8 @@ class _Register extends State<Register> {
                                   child: SizedBox(
                                       width: 1161,
                                       height: 751,
-                                      child:
-                                          Image.asset("assets/demo/dashboard.png")),
+                                      child: Image.asset(
+                                          "assets/demo/dashboard.png")),
                                 ),
                               )
                             ],
@@ -2462,6 +2480,7 @@ class _Register extends State<Register> {
                                                                     DropdownButtonHideUnderline(
                                                                   child:
                                                                       DropdownButton2(
+                                                                        buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
                                                                     value:
                                                                         selectedOption,
                                                                     hint: Text(
@@ -2477,21 +2496,27 @@ class _Register extends State<Register> {
                                                                               130,
                                                                               130)),
                                                                     ),
-                                                                    icon: Transform
-                                                                        .translate(
-                                                                      offset: Offset(
-                                                                          -12,
-                                                                          -2),
-                                                                      child:
+                                                                    iconStyleData:
+                                                                        const IconStyleData(
+                                                                      icon:
                                                                           Icon(
                                                                         Icons
                                                                             .arrow_drop_down_outlined,
-                                                                        color: Color.fromARGB(
-                                                                            255,
-                                                                            79,
-                                                                            79,
-                                                                            79),
                                                                       ),
+                                                                      iconSize:
+                                                                          20,
+                                                                      iconEnabledColor:
+                                                                          Color.fromARGB(
+                                                                              255,
+                                                                              79,
+                                                                              79,
+                                                                              79),
+                                                                      iconDisabledColor:
+                                                                          Color.fromARGB(
+                                                                              255,
+                                                                              79,
+                                                                              79,
+                                                                              79),
                                                                     ),
                                                                     isExpanded:
                                                                         true,
@@ -2512,11 +2537,16 @@ class _Register extends State<Register> {
                                                                         ),
                                                                       );
                                                                     }).toList(),
-                                                                    dropdownDecoration: BoxDecoration(
+                                                                    dropdownStyleData:
+                                                                        DropdownStyleData(
+                                                                      decoration:
+                                                                          BoxDecoration(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(5),
                                                                         color: Colors
                                                                             .white,
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(5)),
+                                                                      ),
+                                                                    ),
                                                                     // itemHeight: 8,
                                                                     onChanged:
                                                                         (value) {
@@ -2687,6 +2717,7 @@ class _Register extends State<Register> {
                                                                     DropdownButtonHideUnderline(
                                                                   child:
                                                                       DropdownButton2(
+                                                                        buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
                                                                     value:
                                                                         selectedOption,
                                                                     hint: Text(
@@ -2702,21 +2733,27 @@ class _Register extends State<Register> {
                                                                               130,
                                                                               130)),
                                                                     ),
-                                                                    icon: Transform
-                                                                        .translate(
-                                                                      offset: Offset(
-                                                                          -12,
-                                                                          -2),
-                                                                      child:
+                                                                    iconStyleData:
+                                                                        const IconStyleData(
+                                                                      icon:
                                                                           Icon(
                                                                         Icons
                                                                             .arrow_drop_down_outlined,
-                                                                        color: Color.fromARGB(
-                                                                            255,
-                                                                            79,
-                                                                            79,
-                                                                            79),
                                                                       ),
+                                                                      iconSize:
+                                                                          20,
+                                                                      iconEnabledColor:
+                                                                          Color.fromARGB(
+                                                                              255,
+                                                                              79,
+                                                                              79,
+                                                                              79),
+                                                                      iconDisabledColor:
+                                                                          Color.fromARGB(
+                                                                              255,
+                                                                              79,
+                                                                              79,
+                                                                              79),
                                                                     ),
                                                                     isExpanded:
                                                                         true,
@@ -2737,11 +2774,16 @@ class _Register extends State<Register> {
                                                                         ),
                                                                       );
                                                                     }).toList(),
-                                                                    dropdownDecoration: BoxDecoration(
+                                                                    dropdownStyleData:
+                                                                        DropdownStyleData(
+                                                                      decoration:
+                                                                          BoxDecoration(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(5),
                                                                         color: Colors
                                                                             .white,
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(5)),
+                                                                      ),
+                                                                    ),
                                                                     // itemHeight: 8,
                                                                     onChanged:
                                                                         (value) {
@@ -2812,6 +2854,7 @@ class _Register extends State<Register> {
                                                   child:
                                                       DropdownButtonHideUnderline(
                                                     child: DropdownButton2(
+                                                      buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
                                                       value: selectedPackage,
                                                       hint: Text(
                                                         'เลือกแพ็กเกจ',
@@ -2828,15 +2871,21 @@ class _Register extends State<Register> {
                                                                         130,
                                                                         130)),
                                                       ),
-                                                      icon: Transform.translate(
-                                                        offset: Offset(-12, -2),
-                                                        child: Icon(
+                                                      iconStyleData:
+                                                          const IconStyleData(
+                                                        icon: Icon(
                                                           Icons
                                                               .arrow_drop_down_outlined,
-                                                          color: Color.fromARGB(
-                                                              255, 79, 79, 79),
                                                         ),
+                                                        iconSize: 20,
+                                                        iconEnabledColor:
+                                                            Color.fromARGB(255,
+                                                                79, 79, 79),
+                                                        iconDisabledColor:
+                                                            Color.fromARGB(255,
+                                                                79, 79, 79),
                                                       ),
+
                                                       isExpanded: true,
                                                       items: packageItem
                                                           .map((option) {
@@ -2857,14 +2906,16 @@ class _Register extends State<Register> {
                                                           ),
                                                         );
                                                       }).toList(),
-                                                      dropdownDecoration:
-                                                          BoxDecoration(
-                                                              color:
-                                                                  Colors.white,
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          5)),
+                                                      dropdownStyleData:
+                                                          DropdownStyleData(
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(5),
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
                                                       // itemHeight: 8,
                                                       onChanged: (value) {
                                                         setState(() {
@@ -3187,8 +3238,8 @@ class _Register extends State<Register> {
                                               // color: Colors.red,
                                               width: 70,
                                               // height: 103,
-                                              child:
-                                                  Image.asset("assets/demo/dot.png")),
+                                              child: Image.asset(
+                                                  "assets/demo/dot.png")),
                                         )
                                       : SizedBox(),
                                   Responsive.isTablet(context)
