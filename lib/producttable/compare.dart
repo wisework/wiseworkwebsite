@@ -18,64 +18,77 @@ class _CompareState extends State<Compare> {
         child: Column(
           children: [
             SizedBox(
-              height: Responsive.isDesktop(context) ? 56 : 74,
+              height: Responsive.isDesktop(context)
+                  ? 56
+                  : Responsive.isTablet(context)
+                      ? 74
+                      : 53.5,
             ),
-            Row(
-              children: [
-                SizedBox(
-                  width: Responsive.isDesktop(context) ? 107 : 40,
-                ),
-                Container(
-                  width: 60,
-                  height: 5,
-                  decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 57, 128, 237),
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                          color: Color.fromARGB(255, 57, 128, 237), width: 5)),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
-                  // color: Colors.amber,
-                  height: 25,
-                  child: Text(
-                    "Package",
-                    style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
-                        color: Color.fromARGB(255, 57, 128, 237)),
-                  ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 65),
-              child: Text(
-                Responsive.isDesktop(context)
-                    ? "เปรียบเทียบ Package ต่างกันอย่างไร?"
-                    : "เปรียบเทียบ Package\nต่างกันอย่างไร?",
-                style: GoogleFonts.ibmPlexSans(
-                    fontSize: 48,
-                    fontWeight: FontWeight.w700,
-                    color: Color.fromARGB(255, 5, 45, 97)),
-                textAlign: TextAlign.center,
-              ),
-            ),
+            !Responsive.isMobile(context)
+                ? Row(
+                    children: [
+                      SizedBox(
+                        width: Responsive.isDesktop(context) ? 107 : 40,
+                      ),
+                      Container(
+                        width: 60,
+                        height: 5,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 57, 128, 237),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(
+                                color: Color.fromARGB(255, 57, 128, 237),
+                                width: 5)),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Container(
+                        // color: Colors.amber,
+                        height: 25,
+                        child: Text(
+                          "Package",
+                          style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                              color: Color.fromARGB(255, 57, 128, 237)),
+                        ),
+                      ),
+                    ],
+                  )
+                : SizedBox(),
             SizedBox(
-              height: 20,
+              height: Responsive.isDesktop(context)
+                  ? 22.5
+                  : Responsive.isTablet(context)
+                      ? 69.5
+                      : null,
             ),
+            Text(
+              Responsive.isDesktop(context)
+                  ? "เปรียบเทียบ Package ต่างกันอย่างไร?"
+                  : "เปรียบเทียบ Package\nต่างกันอย่างไร?",
+              style: GoogleFonts.ibmPlexSans(
+                  fontSize: !Responsive.isMobile(context) ? 48 : 24,
+                  fontWeight: FontWeight.w700,
+                  color: Color.fromARGB(255, 5, 45, 97)),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 25),
             Text(
               "แนะนำแพ็กเกจที่เหมาะที่สุดสำหรับธุรกิจของคุณ",
               style: GoogleFonts.nunito(
-                  fontSize: 24,
+                  fontSize: !Responsive.isMobile(context) ? 24 : 16,
                   fontWeight: FontWeight.w400,
                   color: Color.fromARGB(255, 75, 196, 213)),
               textAlign: TextAlign.center,
             ),
             SizedBox(
-              height: 102,
+              height: Responsive.isDesktop(context)
+                  ? 102
+                  : Responsive.isTablet(context)
+                      ? 69.5
+                      : 53.5,
             ),
           ],
         ),
