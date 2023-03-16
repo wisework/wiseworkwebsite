@@ -51,7 +51,11 @@ class _FaqPageState extends State<FaqPage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [BannerPage(), Questions(), Footer()],
+          children: [
+            BannerPage(), 
+            Questions(), 
+            Footer()
+            ],
         ),
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wiseintern/responsive.dart';
+// import 'package:wiseintern/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hovering/hovering.dart';
 
@@ -85,14 +85,14 @@ class SingleWhomPage extends StatelessWidget {
               fontWeight: FontWeight.w500,
               color: Color.fromARGB(255, 24, 84, 110))),
     );
-    List<PackageModel> features = [
-      PackageModel("Express Package", "(SaaS)", "assets/packages/cloud.png",
-          "routePath"),
-      PackageModel("Standard Package", "(Subscription License)",
-          "assets/packages/clouds.png", "routePath"),
-      PackageModel("Enterprise Package", "(Perpeptual License)",
-          "assets/packages/rainbow_cloud.png", "routePath"),
-    ];
+    // List<PackageModel> features = [
+    //   PackageModel("Express Package", "(SaaS)", "assets/packages/cloud.png",
+    //       "routePath"),
+    //   PackageModel("Standard Package", "(Subscription License)",
+    //       "assets/packages/clouds.png", "routePath"),
+    //   PackageModel("Enterprise Package", "(Perpeptual License)",
+    //       "assets/packages/rainbow_cloud.png", "routePath"),
+    // ];
 
     return Center(
       child: Container(

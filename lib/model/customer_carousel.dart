@@ -106,25 +106,18 @@ class _CustomerCarouselState extends State<CustomerCarousel> {
                                                                 CrossAxisAlignment
                                                                     .start,
                                                             children: [
-                                                              Padding(
-                                                                padding:
-                                                                    const EdgeInsets
-                                                                            .only(
-                                                                        left:
-                                                                            32),
-                                                                child: Text(
-                                                                  "BitKub ให้ความสำคัญกับการคุ้มครอง ข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งาน ดังนั้น\nเราจึงให้ความสำคัญอย่างมากเกี่ยวกับ\nการปฏิบัติตามกฎหมาย PDPA\nโดยเราเลือกใช้ระบบโมดูลที่มี Center\nเข้ามาช่วยในการบริหารจัดการข้อมูล\nคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม\nเพื่อให้ผู้ใช้บริการมั่นใจว่าข้อมูลของท่านจะได้รับการปกป้องและใช้งานอย่างสบายใจ",
-                                                                  style: GoogleFonts.poppins(
-                                                                      fontSize:
-                                                                          16,
-                                                                      color: Colors
-                                                                          .black,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w400,
-                                                                      height:
-                                                                          2),
-                                                                ),
+                                                              Text(
+                                                                "BitKub ให้ความสำคัญกับการคุ้มครอง ข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งาน ดังนั้น\nเราจึงให้ความสำคัญอย่างมากเกี่ยวกับ\nการปฏิบัติตามกฎหมาย PDPA\nโดยเราเลือกใช้ระบบโมดูลที่มี Center\nเข้ามาช่วยในการบริหารจัดการข้อมูล\nคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม\nเพื่อให้ผู้ใช้บริการมั่นใจว่าข้อมูลของท่านจะได้รับการปกป้องและใช้งานอย่างสบายใจ",
+                                                                style: GoogleFonts.poppins(
+                                                                    fontSize:
+                                                                        16,
+                                                                    color: Colors
+                                                                        .black,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    height:
+                                                                        2),
                                                               ),
                                                             ],
                                                           ),

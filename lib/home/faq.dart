@@ -400,11 +400,11 @@ class _FAQState extends State<FAQ> {
                   )
                 : Stack(
                     children: [
-                      Container(
-                        height: Responsive.isTablet(context) ? 448 : 400,
-                        width: 1440,
-                        color: Color.fromARGB(0, 204, 220, 57),
-                      ),
+                      // Container(
+                      //   height: Responsive.isTablet(context) ? 448 : 400,
+                      //   width: 1440,
+                      //   color: Color.fromARGB(0, 204, 220, 57),
+                      // ),
                       Responsive.isTablet(context)
                           ? new Positioned(
                               left: 0,

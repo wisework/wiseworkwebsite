@@ -28,7 +28,7 @@ class _NavigationBarState extends State<NavBar> {
     'Our Cus',
   ];
 
-  String? _selectedItem;
+  // String? _selectedItem;
   bool _selected = false;
   bool isDropdownOpen = false;
   double buttonWidth = 50.0;

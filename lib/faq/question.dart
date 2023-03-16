@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
@@ -106,7 +108,34 @@ class _QuestionsState extends State<Questions> {
 
   @override
   Widget build(BuildContext context) {
-    
+    var button = SizedBox(
+      width: Responsive.isDesktop(context)
+          ? 190
+          : Responsive.isTablet(context)
+              ? 193
+              : 193,
+      height: Responsive.isDesktop(context)
+          ? 48
+          : Responsive.isTablet(context)
+              ? 50
+              : 46,
+      child: ElevatedButton(
+        onPressed: () {},
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Color.fromARGB(255, 75, 195, 211),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+        ),
+        child: Text(
+          'รับคำปรึกษา',
+          style: GoogleFonts.ibmPlexSans(
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+    );
+
     return Center(
       child: Container(
         color: Color.fromARGB(255, 5, 45, 97),
@@ -126,12 +155,9 @@ class _QuestionsState extends State<Questions> {
                           ? Center(
                               child: Stack(
                                 children: [
-                                  Container(
-                                    width: 1440,
-                                    height: 1500,
-                                  ),
+                                  
                                   new Positioned(
-                                    top: 750,
+                                    top:300,
                                     left: 0,
                                     child: Container(
                                         // color: Colors.black,
@@ -149,7 +175,7 @@ class _QuestionsState extends State<Questions> {
                                       children: [
                                         Container(
                                           width: 700,
-                                          height: 1500,
+                                          // height: 1500,
                                           child: Column(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
@@ -159,7 +185,7 @@ class _QuestionsState extends State<Questions> {
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
-                                                            top: 90),
+                                                            top: 90, left: 50),
                                                     child: Text(
                                                       'รวมคำถามที่พบบ่อย',
                                                       style: GoogleFonts
@@ -174,14 +200,18 @@ class _QuestionsState extends State<Questions> {
                                                   ),
                                                 ],
                                               ),
-                                              Text(
-                                                'Frequently Asked Questions',
-                                                style:
-                                                    GoogleFonts.ibmPlexSansThai(
-                                                  fontSize: 48,
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Color.fromARGB(
-                                                      255, 232, 242, 254),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    left: 50),
+                                                child: Text(
+                                                  'Frequently Asked Questions',
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                    fontSize: 48,
+                                                    fontWeight: FontWeight.w600,
+                                                    color: Color.fromARGB(
+                                                        255, 232, 242, 254),
+                                                  ),
                                                 ),
                                               ),
 
@@ -202,12 +232,8 @@ class _QuestionsState extends State<Questions> {
                           : Center(
                               child: Stack(
                                 children: [
-                                  Container(
-                                    width: 1440,
-                                    height: 1758,
-                                  ),
                                   new Positioned(
-                                    top: 750,
+                                    top: 200,
                                     left: 0,
                                     child: Container(
                                         // color: Colors.black,
@@ -225,7 +251,7 @@ class _QuestionsState extends State<Questions> {
                                       children: [
                                         Container(
                                           width: 375,
-                                          height: 1758,
+                                          // height: 1758,
                                           child: Column(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
@@ -235,7 +261,7 @@ class _QuestionsState extends State<Questions> {
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
-                                                            top: 86),
+                                                            top: 86, left: 30),
                                                     child: Text(
                                                       'รวมคำถามที่พบบ่อย',
                                                       style: GoogleFonts
@@ -252,23 +278,27 @@ class _QuestionsState extends State<Questions> {
                                                   ),
                                                 ],
                                               ),
-                                              Text(
-                                                'Frequently Asked\nQuestions',
-                                                style:
-                                                    GoogleFonts.ibmPlexSansThai(
-                                                  fontSize: 24,
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Color.fromARGB(
-                                                      255, 232, 242, 254),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    left: 30),
+                                                child: Text(
+                                                  'Frequently Asked\nQuestions',
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                    fontSize: 24,
+                                                    fontWeight: FontWeight.w600,
+                                                    color: Color.fromARGB(
+                                                        255, 232, 242, 254),
+                                                  ),
+                                                  textAlign: TextAlign.start,
                                                 ),
-                                                textAlign: TextAlign.start,
                                               ),
 
                                               SizedBox(
-                                                height: 60,
+                                                height: 20,
                                               ),
                                               // listChoice,
-                                              _buildPanel()
+                                              _buildPanel(),
                                             ],
                                           ),
                                         ),
@@ -279,8 +309,103 @@ class _QuestionsState extends State<Questions> {
                               ),
                             )
                     ],
+                  ),
+            
+            
+            Responsive.isDesktop(context)?Container()
+            :Responsive.isTablet(context)?
+            Column(
+              children: [
+                Container(
+                  width: 768,
+                  height: 51,
+                  color: Color.fromARGB(255, 232, 242, 254),
+                ),
+                Stack(
+                  children: [
+                    Container(
+                      width: 768,
+                      height: 360,
+                      color: Color.fromARGB(255, 5, 45, 97),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 73),
+                            child: Text("พร้อมวางแผนให้ธุรกิจคุณ!",
+                            style: GoogleFonts.ibmPlexSansThai(
+                              fontSize: 36,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white
+                            ),textAlign: TextAlign.center,),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 32),
+                            child: Text("ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ\nได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork",
+                            style: GoogleFonts.ibmPlexSansThai(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white
+                            ),textAlign: TextAlign.center,),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 19),
+                            child: button,
+                          )
+
+                        ],
+                      ),
+                    ),
+                    new Positioned(
+                      left:0,
+                      child: SizedBox(
+                        height: 360,
+                        child: Image.asset("assets/faq/half.png",fit: BoxFit.fitHeight,)),
+                    )
+                  ],
+                )
+              ],
+            )
+            :Container(
+              width: 376,
+              height: 374,
+              color: Color.fromARGB(255, 5, 45, 97),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 60),
+                    child: Text("พร้อมวางแผนให้ธุรกิจคุณ ปรึกษา",
+                    style: GoogleFonts.ibmPlexSansThai(
+                      fontSize:16,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),),
+                  ),
+                  Text("#Teamwisework",
+                  style: GoogleFonts.ibmPlexSansThai(
+                    fontSize:24,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white
+                  ),),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 34),
+                    child: Text("ให้องค์กรของคุณ วางแผนและจัดการกับ\nDATA หัวใจสำคัญของธุรกิจ\nได้ถูกต้องตามกฎหมาย",
+                    style: GoogleFonts.ibmPlexSansThai(
+                      fontSize:16,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),textAlign: TextAlign.center,),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 34),
+                    child: button,
                   )
-          ],
+                ],
+              ),
+            )
+
+             ],
         ),
       ),
     );
@@ -319,9 +444,10 @@ class _QuestionsState extends State<Questions> {
                           fontSize: Responsive.isDesktop(context)
                               ? 20
                               : Responsive.isTablet(context)
-                                  ? 20
+                                  ? 18
                                   : 16),
                     ),
+                    // iconColor: Colors.amber,
                     // selectedColor: Colors.amber,
                   ),
                   Container(
@@ -330,18 +456,22 @@ class _QuestionsState extends State<Questions> {
                     child: Transform.translate(
                       offset: Offset(
                           Responsive.isDesktop(context)
-                              ? 1000
+                              ? 680
                               : Responsive.isTablet(context)
-                                  ? 670
-                                  : 350,
-                          -30),
+                                  ? 650
+                                  : 325,
+                          Responsive.isDesktop(context)
+                              ? -30
+                              : Responsive.isTablet(context)
+                                  ? -30
+                                  : -33),
                       child: Icon(
                         isExpanded
                             ? Icons.keyboard_arrow_up
                             : Icons.expand_more_outlined,
-                        color:isExpanded
-                              ? Color.fromARGB(255, 75, 195, 211)
-                              : Colors.white,
+                        color: isExpanded
+                            ? Color.fromARGB(255, 75, 195, 211)
+                            : Colors.white,
                       ),
                     ),
                   ),
