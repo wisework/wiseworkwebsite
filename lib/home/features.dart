@@ -71,6 +71,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
 
   // bool _hover = false;
 
+  int _gridCount = 5;
 
   @override
   Widget build(BuildContext context) {
@@ -116,6 +117,16 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                         : 24,
                               ),
                             ),
+                          ),
+                          Responsive.isDesktop(context)?Container():Responsive.isTablet(context)?Container()
+                          :Padding(
+                            padding: const EdgeInsets.only(top: 16,bottom: 15),
+                            child: Text("“เครื่องมือที่ช่วยให้องค์กรของคุณ\nจัดการ PDPA อย่างเป็นระบบ”",
+                            style: GoogleFonts.ibmPlexSansThai(
+                              fontSize:16,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white
+                            ),textAlign: TextAlign.center,),
                           ),
                           Responsive.isDesktop(context)
                               ? Container(
@@ -416,116 +427,159 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                             );
                                           }),
                                     )
-                                  : Container(
-                                      child: GridView.builder(
-                                          shrinkWrap: true,
-                                          gridDelegate:
-                                              SliverGridDelegateWithFixedCrossAxisCount(
-                                            crossAxisCount: 1,
-                                            crossAxisSpacing: 20,
-                                            mainAxisSpacing: 20,
-                                          ),
-                                          itemCount: features.length,
-                                          itemBuilder: (BuildContext context,
-                                              int index) {
-                                            return Container(
-                                              child: new Material(
-                                                child: new InkWell(
-                                                  borderRadius:
-                                                      BorderRadius.circular(16),
-                                                  onTap: () {},
-                                                  onHover: (value) {
-                                                    setState(() {
-                                                      if (value) {
-                                                        hoveredIndex = index;
-                                                      } else {
-                                                        hoveredIndex = null;
-                                                      }
-                                                    });
-                                                  },
-                                                  hoverColor: Color.fromARGB(
-                                                      255, 228, 238, 250),
-                                                  child: new Container(
-                                                    // width: 266,
-                                                    // height: 189,
-                                                    width: 100,
-                                                    height: 100,
-                                                    child: Center(
-                                                      child: Container(
-                                                        // margin: EdgeInsets.all(15),
-                                                        child: Padding(
-                                                          padding:
-                                                              const EdgeInsets
-                                                                      .only(
-                                                                  left: 6,
-                                                                  right: 6,
-                                                                  bottom: 12),
-                                                          child: Column(
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
-                                                            children: <Widget>[
-                                                              SizedBox(
-                                                                  width: 70,
-                                                                  height: 70,
-                                                                  child: Image
-                                                                      .asset(
-                                                                    'assets/${features[index].imageUrl}',
-                                                                  )),
-                                                              Text(
-                                                                '${features[index].title}',
-                                                                style: GoogleFonts.poppins(
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                    fontSize:
-                                                                        20,
-                                                                    color: hoveredIndex ==
-                                                                            index
-                                                                        ? Color.fromARGB(
-                                                                            255,
-                                                                            57,
-                                                                            129,
-                                                                            237)
-                                                                        : Colors
-                                                                            .white),
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .center,
-                                                              ),
-                                                              Text(
-                                                                '${features[index].description}',
-                                                                style: GoogleFonts
-                                                                    .ibmPlexSansThai(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w400,
-                                                                  color: hoveredIndex ==
-                                                                          index
-                                                                      ? Color.fromARGB(
-                                                                          255,
-                                                                          57,
-                                                                          129,
-                                                                          237)
-                                                                      : Colors
-                                                                          .white,
-                                                                  fontSize: 16,
+                                  : Column(
+                                      children: [
+                                        Container(
+                                            child: GridView.builder(
+                                                shrinkWrap: true,
+                                                gridDelegate:
+                                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                                  crossAxisCount: 1,
+                                                  crossAxisSpacing: 20,
+                                                  mainAxisSpacing: 20,
+                                                ),
+                                                itemCount: _gridCount,
+                                                itemBuilder:
+                                                    (BuildContext context,
+                                                        int index) {
+                                                  return Container(
+                                                    child: new Material(
+                                                      child: new InkWell(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(16),
+                                                        onTap: () {},
+                                                        onHover: (value) {
+                                                          setState(() {
+                                                            if (value) {
+                                                              hoveredIndex =
+                                                                  index;
+                                                            } else {
+                                                              hoveredIndex =
+                                                                  null;
+                                                            }
+                                                          });
+                                                        },
+                                                        hoverColor:
+                                                            Color.fromARGB(255,
+                                                                228, 238, 250),
+                                                        child: new Container(
+                                                          // width: 266,
+                                                          // height: 189,
+                                                          width: 100,
+                                                          height: 100,
+                                                          child: Center(
+                                                            child: Container(
+                                                              // margin: EdgeInsets.all(15),
+                                                              child: Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        left: 6,
+                                                                        right:
+                                                                            6,
+                                                                        bottom:
+                                                                            12),
+                                                                child: Column(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .center,
+                                                                  children: <
+                                                                      Widget>[
+                                                                    SizedBox(
+                                                                        width:
+                                                                            70,
+                                                                        height:
+                                                                            70,
+                                                                        child: Image
+                                                                            .asset(
+                                                                          'assets/${features[index].imageUrl}',
+                                                                        )),
+                                                                    Text(
+                                                                      '${features[index].title}',
+                                                                      style: GoogleFonts.poppins(
+                                                                          fontWeight: FontWeight
+                                                                              .w500,
+                                                                          fontSize:
+                                                                              20,
+                                                                          color: hoveredIndex == index
+                                                                              ? Color.fromARGB(255, 57, 129, 237)
+                                                                              : Colors.white),
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                    ),
+                                                                    Text(
+                                                                      '${features[index].description}',
+                                                                      style: GoogleFonts
+                                                                          .ibmPlexSansThai(
+                                                                        fontWeight:
+                                                                            FontWeight.w400,
+                                                                        color: hoveredIndex ==
+                                                                                index
+                                                                            ? Color.fromARGB(
+                                                                                255,
+                                                                                57,
+                                                                                129,
+                                                                                237)
+                                                                            : Colors.white,
+                                                                        fontSize:
+                                                                            16,
+                                                                      ),
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                    ),
+                                                                  ],
                                                                 ),
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .center,
                                                               ),
-                                                            ],
+                                                            ),
                                                           ),
                                                         ),
                                                       ),
+                                                      color: Colors.transparent,
                                                     ),
-                                                  ),
-                                                ),
-                                                color: Colors.transparent,
+                                                  );
+                                                })),
+                                        Padding(
+                                          padding: const EdgeInsets.only(top: 30),
+                                          child: SizedBox(
+                                            width: 193,
+                                            height: 50,
+                                            child: ElevatedButton(
+                                              onPressed: () {
+                                                setState(() {
+                                                  if (_gridCount == 5) {
+                                                    _gridCount = features.length;
+                                                  } else {
+                                                    _gridCount = 5;
+                                                  }
+                                                });
+                                              },
+                                              child: Text(
+                                                _gridCount == 5
+                                                    ? 'See More'
+                                                    : 'See Less',
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        color: Colors.white),
                                               ),
-                                            );
-                                          }))
+                                              style: ElevatedButton.styleFrom(
+                                                backgroundColor: Color.fromARGB(
+                                                    255, 75, 195, 211),
+                                                shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            30.0)),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                         ],
                       ),
                     ),

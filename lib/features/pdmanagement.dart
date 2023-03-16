@@ -52,7 +52,13 @@ class _PdmanagementPageState extends State<Pdmanagement> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [PD(), Check(), Example(), FeaturesPage(), Footer()],
+          children: [
+            PD(), 
+            Check(), 
+            Example(), 
+            FeaturesPage(), 
+            Footer()
+            ],
         ),
       ),
     );
@@ -67,7 +73,9 @@ class PD extends StatelessWidget {
     return Center(
       child: Container(
         width: 1440,
-        child: Center(
+        child: 
+        Responsive.isDesktop(context)
+        ?Center(
           child: Container(
             width: 1440,
             height: 668,
@@ -87,7 +95,7 @@ class PD extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Key features",
+                              "KEY FEATURES",
                               style: GoogleFonts.poppins(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500,
@@ -145,7 +153,160 @@ class PD extends StatelessWidget {
               ],
             ),
           ),
-        ),
+        )
+        :Responsive.isTablet(context)
+        ?Container(
+          width: 1440,
+          color: Colors.white,
+          child: Center(
+            child: Container(
+              width: 768,
+              // height: 502,
+              color: Colors.white,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 23.5, left: 50),
+                        child: Container(
+                          width: 367,
+                          // color: Colors.amber,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "KEY FEATURES",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color.fromARGB(255, 0, 112, 240)),
+                                textAlign: TextAlign.start,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8),
+                                child: Text(
+                                  "PD\nManagement",
+                                  style: GoogleFonts.poppins(
+                                      fontSize: 44,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color.fromARGB(255, 5, 45, 97)),
+                                  textAlign: TextAlign.start,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Text(
+                                  "จัดการบันทึกรายการข้อมูลส่วนบุคคล\nและการไหลของข้อมูล (Data Flow)",
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Text(
+                                  "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล\nตามกฎหมายมาตรา ได้แก่ มาตรา 24 , มาตรา\n26, มาตรา 30,มาตรา 31, มาตรา 32, มาตรา\n36(1), มาตรา 39",
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 23, 24, 26)),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 30,
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 70, left: 20),
+                        child: SizedBox(
+                            width: 275,
+                            height: 270,
+                            child: Image.asset("assets/features/pdcard.png")),
+                      ),
+                      SizedBox(
+                                height: 30,
+                              )
+                    ],
+                  )
+                ],
+              ),
+            
+            ),
+          ),
+        )
+        :Container(
+          width: 1440,
+          color: Colors.white,
+          child: Center(
+            child: Container(
+              width: 375,
+              color: Colors.white,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30,left: 30),
+                    child: Text("KEY FEATURES",
+                    style: GoogleFonts.ibmPlexSansThai(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromARGB(255, 0, 112, 240)
+                    ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8,left: 30),
+                    child: Text("PD Management",
+                    style: GoogleFonts.ibmPlexSansThai(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
+                      color: Color.fromARGB(255, 5, 45, 97)
+                    ),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20,left: 30),
+                    child: Text("จัดการบันทึกรายการข้อมูลส่วนบุคคล\nและการไหลของข้อมูล (Data Flow) ",
+                      style: GoogleFonts.ibmPlexSansThai(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black
+                      ),textAlign: TextAlign.start,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20,left: 30,bottom: 30),
+                    child: Text("รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล\nตามกฎหมายมาตรา ได้แก่ มาตรา 24 ,\nมาตรา 26, มาตรา 30, มาตรา 31, มาตรา\n32, มาตรา 36(1), มาตรา 39",
+                      style: GoogleFonts.ibmPlexSansThai(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black
+                        ),textAlign: TextAlign.start,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 30),
+                    child: Center(
+                      child: SizedBox(
+                        height: 270,
+                        child: Image.asset("assets/features/pdcard.png",fit: BoxFit.fitHeight,)),
+                    ),
+                  )
+                ],
+              ),
+            )
+            ),
+        )
       ),
     );
   }
@@ -160,7 +321,7 @@ class Check extends StatefulWidget {
 
 class _CheckState extends State<Check> {
   int? hoveredIndex;
-  List<String> check = [
+  List<String> checkDT = [
     "บันทึกรายการข้อมูลส่วนบุคคล โดยจัดการรายละเอียดของรายการ และสามารถระบุรายละเอียดต่างๆ ได้อย่างครบถ้วนตาม พรบ.คุ้มครองข้อมูลส่วนบุคคล 2562 ตามมาตรา (39)",
     "บันทึกรายการข้อมูลส่วนบุคคลและรายละเอียดที่เกี่ยวข้องกับบันทึก เช่น แหล่งที่มาของข้อมูลส่วนบุคคล วัตถุประสงค์ของการประมวลผล\nมาตรการรักษาความมั่นปลอดภัย สถานที่จัดเก็บ สัญญาการประมวลผล การอ้างอิงการขอความยินยอมจากเจ้าของข้อมูลส่วนบุคคล",
     "ระบุหน่วยงานที่เกี่ยวข้อง (สามารถแยกแต่ละหน่วยงาน) ในการนําข้อมูลส่วนบุคคลไปใช้ โดยสามารถกําหนดได้ว่าเป็นการ เก็บรวบรวม นําไปใช้ หรือเปิดเผย",
@@ -174,23 +335,54 @@ class _CheckState extends State<Check> {
     "เชื่อมต่อกับระบบอื่นๆ ได้ ผ่าน REST API และนําข้อมูลออกมาในรูปแบบ Excel file ",
     "รองรับการเชื่อมต่อกับ MS SQL หรือ MySQL เพื่อสุ่มตรวจสอบข้อมูลในฐานข้อมูลส่วนบุคคล โดยรองรับข้อมูลเริ่มต้นที่ 10-500 GB ตามขนาดของข้อมูล"
   ];
+  List<String> checkTB = [
+    "บันทึกรายการข้อมูลส่วนบุคคล โดยจัดการรายละเอียดของรายการ และสามารถระบุ\nรายละเอียดต่างๆ ได้อย่างครบถ้วนตาม พรบ.คุ้มครองข้อมูลส่วนบุคคล 2562 ตามมาตรา (39)",
+    "บันทึกรายการข้อมูลส่วนบุคคลและรายละเอียดที่เกี่ยวข้องกับบันทึก เช่น แหล่งที่มาของข้อมูล\nส่วนบุคคล วัตถุประสงค์ของการประมวลผล มาตรการรักษาความมั่นปลอดภัย สถานที่จัดเก็บ\nสัญญาการประมวลผล การอ้างอิงการขอความยินยอมจากเจ้าของข้อมูลส่วนบุคคล",
+    "ระบุหน่วยงานที่เกี่ยวข้อง (สามารถแยกแต่ละหน่วยงาน) ในการนําข้อมูลส่วนบุคคลไปใช้\nโดยสามารถกําหนดได้ว่าเป็นการ เก็บรวบรวม นําไปใช้ หรือเปิดเผย",
+    "กําหนดฐานกฎหมาย (Lawful Basis) ที่ใช้ประมวลผลข้อมูลส่วนบุคคล และเหตุปฏิเสธคําขอ\nหรือการคัดค้านคําขอที่ใช้ ในแต่ละรายการข้อมูลส่วนบุคคล",
+    "กําหนดสัญญาการประมวลผลข้อมูลส่วนบุคคล สําหรับรายการข้อมูลส่วนบุคคลที่มีการ\nส่งออกไปยังผู้ประมวลผลข้อมูล",
+    "กําหนดผู้ควบคุมข้อมูลส่วนบุคคล เพื่อระบุ และเจาะจงผู้ดูแลข้อมูลในแต่ละบันทึกรายการได้",
+    "สุ่มตรวจสอบข้อมูลส่วนบุคคลในฐานข้อมูล อาจเป็นข้อมูลส่วนบุคคล โดยกําหนดเป็นเปอร์เซ็นต์ที่ต้องการ\nและระบบสามารถคาดการณ์ออกมาเป็นเปอร์เซ็นต์ได้",
+    "รองรับการทำงานของ DPO ที่สามารถมองเห็นภาพรวมและสอบทานกลับได้เมื่อต้องการทราบข้อมูล",
+    "จัดทำผังการไหลของข้อมูลและแสดงผลความเชื่อมโยง (Data Flow) ถึงหน่วยงานที่ รับ-ส่ง\nข้อมูลส่วนบุคคล เป็นลําดับ ก่อน-หลัง โดยระบบจะเชื่อมโยงข้อมูลที่มีอยู่ให้อย่างอัตโนมัติ",
+    "แสดงรายงานสรุปบันทึกรายการข้อมูลส่วนบุคคลเป็นแผนภาพ (Dashboard) โดยสามารถรองรับการจัดเรียง\n(Sort), ค้นหา (Search) และ กรอง (Filter) ได้",
+    "เชื่อมต่อกับระบบอื่นๆ ได้ ผ่าน REST API และนําข้อมูลออกมาในรูปแบบ Excel file ",
+    "รองรับการเชื่อมต่อกับ MS SQL หรือ MySQL เพื่อสุ่มตรวจสอบข้อมูลในฐานข้อมูลส่วนบุคคล\nโดยรองรับข้อมูลเริ่มต้นที่ 10-500 GB ตามขนาดของข้อมูล"
+  ];
+  List<String> checkMB = [
+    "บันทึกรายการข้อมูลส่วนบุคคล โดยจัดการรายละเอียดของรายการ และสามารถระบุ\nรายละเอียดต่างๆ ได้อย่างครบถ้วนตาม พรบ.คุ้มครองข้อมูลส่วนบุคคล 2562 ตามมาตรา (39)",
+    "บันทึกรายการข้อมูลส่วนบุคคลและรายละเอียดที่เกี่ยวข้องกับบันทึก เช่น แหล่งที่มาของข้อมูลส่วนบุคคล\nวัตถุประสงค์ของการประมวลผล มาตรการรักษาความมั่นปลอดภัย สถานที่จัดเก็บ\nสัญญาการประมวลผล การอ้างอิงการขอความยินยอมจากเจ้าของข้อมูลส่วนบุคคล",
+    "ระบุหน่วยงานที่เกี่ยวข้อง (สามารถแยกแต่ละหน่วยงาน) ในการนําข้อมูลส่วนบุคคลไปใช้\nโดยสามารถกําหนดได้ว่าเป็นการ เก็บรวบรวม นําไปใช้ หรือเปิดเผย",
+    "กําหนดฐานกฎหมาย (Lawful Basis) ที่ใช้ประมวลผลข้อมูลส่วนบุคคล และเหตุปฏิเสธคําขอ\nหรือการคัดค้านคําขอที่ใช้ ในแต่ละรายการข้อมูลส่วนบุคคล",
+    "กําหนดสัญญาการประมวลผลข้อมูลส่วนบุคคล สําหรับรายการข้อมูลส่วนบุคคลที่มีการ\nส่งออกไปยังผู้ประมวลผลข้อมูล",
+    "กําหนดผู้ควบคุมข้อมูลส่วนบุคคล เพื่อระบุ และเจาะจงผู้ดูแลข้อมูลในแต่ละบันทึกรายการได้",
+    "สุ่มตรวจสอบข้อมูลส่วนบุคคลในฐานข้อมูล อาจเป็นข้อมูลส่วนบุคคล โดยกําหนดเป็นเปอร์เซ็นต์\nที่ต้องการ และระบบสามารถคาดการณ์ออกมาเป็นเปอร์เซ็นต์ได้",
+    "รองรับการทำงานของ DPO ที่สามารถมองเห็นภาพรวมและสอบทานกลับได้เมื่อต้องการ\nทราบข้อมูล",
+    "จัดทำผังการไหลของข้อมูลและแสดงผลความเชื่อมโยง (Data Flow) ถึงหน่วยงานที่ รับ-ส่ง\nข้อมูลส่วนบุคคล เป็นลําดับ ก่อน-หลัง โดยระบบจะเชื่อมโยงข้อมูลที่มีอยู่ให้อย่างอัตโนมัติ",
+    "แสดงรายงานสรุปบันทึกรายการข้อมูลส่วนบุคคลเป็นแผนภาพ (Dashboard) โดยสามารถรองรับ\nการจัดเรียง (Sort), ค้นหา (Search) และ กรอง (Filter) ได้",
+    "เชื่อมต่อกับระบบอื่นๆ ได้ ผ่าน REST API และนําข้อมูลออกมาในรูปแบบ Excel file ",
+    "รองรับการเชื่อมต่อกับ MS SQL หรือ MySQL เพื่อสุ่มตรวจสอบข้อมูลในฐานข้อมูลส่วนบุคคล\nโดยรองรับข้อมูลเริ่มต้นที่ 10-500 GB ตามขนาดของข้อมูล"
+  ];
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
         width: 1440,
-        child: Center(
+        color: Color.fromARGB(255, 5, 45, 97),
+        child: 
+        
+        Center(
           child: Container(
-            width: 1440,
+            width: Responsive.isDesktop(context)?1440:Responsive.isTablet(context)?768:375,
             color: Color.fromARGB(255, 5, 45, 97),
             child: Padding(
-              padding: const EdgeInsets.only(top: 86, left: 128, bottom: 88),
+              padding: Responsive.isDesktop(context)?const EdgeInsets.only(top: 86, left: 128, bottom: 88):Responsive.isTablet(context)?const EdgeInsets.only(top: 54, left: 31, ):const EdgeInsets.only(top: 54, left: 21, ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ListView.builder(
                       shrinkWrap: true,
-                      itemCount: check.length,
+                      itemCount: checkDT.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
                           child: new Material(
@@ -212,7 +404,7 @@ class _CheckState extends State<Check> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Container(
-                                        height: 28,
+                                        // height: 28,
                                         color: hoveredIndex == index
                                             ? Color.fromARGB(255, 5, 45, 97)
                                             : Color.fromARGB(255, 5, 45, 97),
@@ -236,7 +428,7 @@ class _CheckState extends State<Check> {
                                           title: Transform.translate(
                                             offset: Offset(0, 0),
                                             child: Text(
-                                              check[index],
+                                              checkDT[index],
                                               style:
                                                   GoogleFonts.ibmPlexSansThai(
                                                       color: hoveredIndex ==
@@ -244,7 +436,7 @@ class _CheckState extends State<Check> {
                                                           ? Color.fromARGB(
                                                               255, 75, 195, 211)
                                                           : Colors.white,
-                                                      fontSize: 16,
+                                                      fontSize: Responsive.isDesktop(context)?16:Responsive.isTablet(context)?14:8,
                                                       fontWeight:
                                                           FontWeight.w400),
                                             ),
@@ -287,107 +479,111 @@ class _ExampleState extends State<Example> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Stack(
-        children: [
-          Container(
-            width: 1440,
-            height: 937,
-            // color: Colors.purple,
-            color: Color.fromARGB(255, 250, 251, 252),
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 96, bottom: 153),
-                  child: CarouselSlider(
-                    carouselController: _controller,
-                    options: CarouselOptions(
-                      height: 688,
-                      // enlargeCenterPage: true,
-                      autoPlay: true,
-                      onPageChanged: (index, reason) {
-                        setState(() {
-                          _current = index;
-                          // print('Current Page: $_current');
-                        });
+    return Container(
+      width: 1440,
+      color: Color.fromARGB(255, 232, 242, 252),
+      child: Center(
+        child: Stack(
+          children: [
+            Container(
+              width: Responsive.isDesktop(context)?1440:Responsive.isTablet(context)?768:375,
+              // height: 937,
+              // color: Colors.purple,
+              color: Color.fromARGB(255, 232, 242, 252),
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: Responsive.isDesktop(context)?const EdgeInsets.only(top: 96, bottom: 48):Responsive.isTablet(context)?const EdgeInsets.only(top: 75, bottom: 38):const EdgeInsets.only(top: 38, bottom: 25),
+                    child: Container(
+                      // color: Colors.amber,
+                      child: CarouselSlider(
+                        carouselController: _controller,
+                        options: CarouselOptions(
+                          viewportFraction: 1.25,
+                          height: Responsive.isDesktop(context)?500 : Responsive.isTablet(context)?380:165,
+                          // enlargeCenterPage: true,
+                          autoPlay: true,
+                          onPageChanged: (index, reason) {
+                            setState(() {
+                              _current = index;
+                              // print('Current Page: $_current');
+                            });
+                          },
+                        ),
+                        items: [
+                          Image.asset("assets/features/ex1.png")
+                        ],
+                      ),
+                    ),
+                  ),
+                  Text(
+                "ตัวอย่างแสดงฟังก์ชันการใช้งาน PD Management ",
+                style: GoogleFonts.ibmPlexSansThai(
+                    fontSize: Responsive.isMobile(context)?10:20,
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromARGB(255, 75, 195, 211)),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: Responsive.isDesktop(context)?93:Responsive.isTablet(context)?75:38,)
+                ],
+              ),
+            ),
+            new Positioned(
+              top: Responsive.isDesktop(context)?300:Responsive.isTablet(context)?215:127,
+              left: Responsive.isDesktop(context)?76:Responsive.isTablet(context)?20:23,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: Responsive.isMobile(context)?29:60,
+                    height: Responsive.isMobile(context)?29:60,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.transparent,
+                        border:
+                            Border.all(color: Color.fromARGB(255, 74, 195, 212))),
+                    child: IconButton(
+                      icon: Icon(Icons.keyboard_arrow_left,
+                          size: Responsive.isMobile(context)?9:20, color: Color.fromARGB(255, 77, 193, 216)),
+                      onPressed: () {
+                        _controller.previousPage(
+                          duration: Duration(milliseconds: 300),
+                          curve: Curves.ease,
+                        );
                       },
                     ),
-                    items: [
-                      Container(
-                        width: 1000,
-                        child: Image.asset("assets/features/ex1.png"),
-                      )
-                    ],
                   ),
-                ),
-              ],
-            ),
-          ),
-          new Positioned(
-            top: 450,
-            left: 76,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  width: 59,
-                  height: 61,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.transparent,
-                      border:
-                          Border.all(color: Color.fromARGB(255, 74, 195, 212))),
-                  child: IconButton(
-                    icon: Icon(Icons.keyboard_arrow_left,
-                        size: 32, color: Color.fromARGB(255, 77, 193, 216)),
-                    onPressed: () {
-                      _controller.previousPage(
-                        duration: Duration(milliseconds: 300),
-                        curve: Curves.ease,
-                      );
-                    },
+                  SizedBox(
+                    width:  Responsive.isDesktop(context)?1164:Responsive.isTablet(context)?613:274,
                   ),
-                ),
-                SizedBox(
-                  width: 1164,
-                ),
-                Container(
-                  width: 59,
-                  height: 61,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.transparent,
-                      border:
-                          Border.all(color: Color.fromARGB(255, 74, 195, 212))),
-                  child: IconButton(
-                    icon: Icon(Icons.keyboard_arrow_right,
-                        size: 32, color: Color.fromARGB(255, 77, 193, 216)),
-                    onPressed: () {
-                      _controller.nextPage(
-                        duration: Duration(milliseconds: 300),
-                        curve: Curves.ease,
-                      );
-                    },
+                  Container(
+                    width: Responsive.isMobile(context)?29:60,
+                    height: Responsive.isMobile(context)?29:60,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.transparent,
+                        border:
+                            Border.all(color: Color.fromARGB(255, 74, 195, 212))),
+                    child: IconButton(
+                      icon: Icon(Icons.keyboard_arrow_right,
+                          size: Responsive.isMobile(context)?9:20, color: Color.fromARGB(255, 77, 193, 216)),
+                      onPressed: () {
+                        _controller.nextPage(
+                          duration: Duration(milliseconds: 300),
+                          curve: Curves.ease,
+                        );
+                      },
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          new Positioned(
-            top: 850,
-            left: 506,
-            child: Text(
-              "ตัวอย่างแสดงฟังก์ชันการใช้งาน PD Management ",
-              style: GoogleFonts.ibmPlexSansThai(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  color: Color.fromARGB(255, 75, 195, 211)),
-              textAlign: TextAlign.center,
-            ),
-          )
-        ],
+            
+          ],
+        ),
       ),
     );
   }
