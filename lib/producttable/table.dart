@@ -689,16 +689,9 @@ class _CompareTableState extends State<CompareTable> {
                                           table[index].express == "Check" ||
                                           table[index].express == "Cross"
                                       ? SizedBox(
-                                          height: table[index].express ==
-                                                      "Check" ||
-                                                  table[index].express ==
-                                                      "Cross"
-                                              ? !Responsive.isMobile(context)
-                                                  ? 40
-                                                  : 15
-                                              : !Responsive.isMobile(context)
-                                                  ? 40
-                                                  : 15,
+                                          height: !Responsive.isMobile(context)
+                                              ? 40
+                                              : 15,
                                           child: Image(
                                               fit: BoxFit.fitHeight,
                                               image: AssetImage(table[index]
@@ -861,16 +854,9 @@ class _CompareTableState extends State<CompareTable> {
                                           table[index].standard == "Check" ||
                                           table[index].standard == "Cross"
                                       ? SizedBox(
-                                          height: table[index].express ==
-                                                      "Check" ||
-                                                  table[index].express ==
-                                                      "Cross"
-                                              ? !Responsive.isMobile(context)
-                                                  ? 40
-                                                  : 15
-                                              : !Responsive.isMobile(context)
-                                                  ? 40
-                                                  : 15,
+                                          height: !Responsive.isMobile(context)
+                                              ? 40
+                                              : 15,
                                           child: Image(
                                               fit: BoxFit.fitHeight,
                                               image: AssetImage(table[index]
@@ -1021,16 +1007,9 @@ class _CompareTableState extends State<CompareTable> {
                                           table[index].enterprise == "Check" ||
                                           table[index].enterprise == "Cross"
                                       ? SizedBox(
-                                          height: table[index].express ==
-                                                      "Check" ||
-                                                  table[index].express ==
-                                                      "Cross"
-                                              ? !Responsive.isMobile(context)
-                                                  ? 40
-                                                  : 15
-                                              : !Responsive.isMobile(context)
-                                                  ? 40
-                                                  : 15,
+                                          height: !Responsive.isMobile(context)
+                                              ? 40
+                                              : 15,
                                           child: Image(
                                               fit: BoxFit.fitHeight,
                                               image: AssetImage(table[index]
