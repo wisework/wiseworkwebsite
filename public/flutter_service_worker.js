@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "614b16944bb9c361d61cf3717ecd013c",
+  "assets/AssetManifest.json": "5baaae5d39c020e75d8c231b92f41ef5",
 "assets/assets/about/advise/comp.png": "986e2e67a34c36bcbdccd7fc763637a3",
 "assets/assets/about/awards/cdpo.png": "8654c7aa2a3b1839d616c85c586bdf9f",
 "assets/assets/about/awards/coso.png": "cda85e3f8b52fb09289f6559d6cc5b51",
@@ -101,6 +101,7 @@ const RESOURCES = {
 "assets/assets/demo/team.png": "d2b3da99400092a6f305603bf051a04d",
 "assets/assets/faq/faq-bg.png": "a9ca67b10a1fb5be14b7499a80a3fa75",
 "assets/assets/faq/faq-pic.png": "6a11395adf2350271ff58534595613ba",
+"assets/assets/faq/half.png": "d4393ede126a75c0f4824172aa733bf6",
 "assets/assets/faq/qa.png": "95c0e2fd97aa64609ad81e806e6ed767",
 "assets/assets/faq/Union.png": "a34f1da4d13c3a5008310b47e7422a2e",
 "assets/assets/features/audit.png": "3dd395726dfb52ff1e46d9577ef103e6",
@@ -168,9 +169,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "024171d0255a054af6bca972a980dcb9",
-"/": "024171d0255a054af6bca972a980dcb9",
-"main.dart.js": "4e4bbece7821efdd47429006eea5fe45",
+"index.html": "1aed3cd29cc4dda8e6d8ff780e7cdf05",
+"/": "1aed3cd29cc4dda8e6d8ff780e7cdf05",
+"main.dart.js": "09c73bee98b21a7687ef75967329cd95",
 "manifest.json": "26afcf623e5cd36909b9cc815c07ac76",
 "version.json": "419e865cc3a264e6063a854d83f30bfe"
 };

@@ -67,7 +67,7 @@ class _BannerState extends State<BannerPage> {
                       child: Container(
                         width: 270,
                         height: 270,
-                        child: Image.asset("/faq/qa.png"),
+                        child: Image.asset("assets/faq/qa.png"),
                       ),
                     ),
                     new Positioned(
@@ -181,7 +181,7 @@ class _BannerState extends State<BannerPage> {
                                         SizedBox(
                                             width: 270,
                                             height: 270,
-                                            child: Image.asset("/faq/qa.png")),
+                                            child: Image.asset("assets/faq/qa.png")),
                                         Padding(
                                           padding:
                                               const EdgeInsets.only(top: 50),
@@ -299,7 +299,7 @@ class _BannerState extends State<BannerPage> {
                                         child: SizedBox(
                                             width: 270,
                                             height: 270,
-                                            child: Image.asset("/faq/qa.png")),
+                                            child: Image.asset("assets/faq/qa.png")),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(top: 50),

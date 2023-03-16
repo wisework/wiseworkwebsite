@@ -240,7 +240,7 @@ class _QuestionsState extends State<Questions> {
                                         width: 250,
                                         height: 700,
                                         child: Image.asset(
-                                          "/faq/Union.png",
+                                          "assets/faq/Union.png",
                                           fit: BoxFit.fitWidth,
                                         )),
                                   ),
@@ -317,14 +317,14 @@ class _QuestionsState extends State<Questions> {
             Column(
               children: [
                 Container(
-                  width: 768,
+                  width: 1440,
                   height: 51,
                   color: Color.fromARGB(255, 232, 242, 254),
                 ),
                 Stack(
                   children: [
                     Container(
-                      width: 768,
+                      width: 1440,
                       height: 360,
                       color: Color.fromARGB(255, 5, 45, 97),
                       child: Column(
