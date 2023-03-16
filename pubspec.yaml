@@ -142,6 +142,9 @@ flutter:
   - assets/customer/top.png
   - assets/customer/right.png
   - assets/customer/union.png
+  - assets/customer/notebook.png
+  - assets/customer/Iphone.png
+  - assets/customer/Ipad.png
 
   - assets/story/storypic.png
   - assets/story/storybg.png

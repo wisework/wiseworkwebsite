@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OurservicesPage extends StatefulWidget {
   @override
@@ -8,6 +10,9 @@ class OurservicesPage extends StatefulWidget {
 }
 
 class _OurservicesPageState extends State<OurservicesPage> {
+  CarouselController _controller = CarouselController();
+  int _current = 0;
+
   @override
   Widget build(BuildContext context) {
     List<String> pdpalistDT = [
@@ -132,7 +137,7 @@ class _OurservicesPageState extends State<OurservicesPage> {
                         child: Image.asset("assets/customer/black-check.png")),
                   ),
                   title: Transform.translate(
-                    offset: Offset(0, 0),
+                    offset: Offset(0, -20),
                     child: Text(
                       pdpalistDT[index],
                       style: GoogleFonts.ibmPlexSansThai(
@@ -204,15 +209,48 @@ class _OurservicesPageState extends State<OurservicesPage> {
                                 )
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 120),
-                              child: Container(
+                            Column(
+                              children: [
+                                Container(
                                   width: 729,
-                                  height: 543,
-                                  // color: Colors.indigo,
-                                  child: Image.asset(
-                                      "assets/customer/laptop.png")),
-                            )
+                                  child: CarouselSlider(
+                                    carouselController: _controller,
+                                    options: CarouselOptions(
+                                      viewportFraction: 1.25,
+                                      height: 543,
+                                      // enlargeCenterPage: true,
+                                      autoPlay: true,
+                                      onPageChanged: (index, reason) {
+                                        setState(() {
+                                          _current = index;
+                                          // print('Current Page: $_current');
+                                        });
+                                      },
+                                    ),
+                                    items: [
+                                      Image.asset(
+                                          "assets/customer/notebook.png"),
+                                      Image.asset("assets/customer/Ipad.png"),
+                                      Image.asset("assets/customer/Iphone.png")
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: AnimatedSmoothIndicator(
+                                      activeIndex: _current,
+                                      count: 3,
+                                      effect: ScaleEffect(
+                                          activePaintStyle:
+                                              PaintingStyle.stroke,
+                                          scale: 1.4,
+                                          activeStrokeWidth: 1.0,
+                                          dotWidth: 16,
+                                          dotHeight: 16,
+                                          dotColor:
+                                              Color.fromARGB(255, 5, 45, 97))),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ],
@@ -278,106 +316,138 @@ class _OurservicesPageState extends State<OurservicesPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            width: Responsive.isTablet(context) ? 768 : 375,
-                            height: Responsive.isTablet(context) ? 1300 : 1000,
-                            color: Colors.white,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Responsive.isTablet(context)
-                                    ? Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 77, left: 74),
-                                        child: Container(
-                                          width: 502,
-                                          child: Text(
-                                            "PDPA\nManagemnet Platform",
-                                            style: GoogleFonts.ibmPlexSansThai(
-                                                fontSize: 48,
-                                                fontWeight: FontWeight.w700,
-                                                color: Color.fromARGB(
-                                                    255, 31, 40, 79)),
+                          Center(
+                            child: Container(
+                              width: Responsive.isTablet(context) ? 768 : 375,
+                              // height: Responsive.isTablet(context) ? 1300 : 1000,
+                              color: Colors.white,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Responsive.isTablet(context)
+                                      ? Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 77, left: 74),
+                                          child: Container(
+                                            width: 502,
+                                            child: Text(
+                                              "PDPA\nManagemnet Platform",
+                                              style: GoogleFonts.ibmPlexSansThai(
+                                                  fontSize: 48,
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Color.fromARGB(
+                                                      255, 31, 40, 79)),
+                                            ),
+                                          ),
+                                        )
+                                      : Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 53, left: 35),
+                                          child: Container(
+                                            width: 251,
+                                            child: Text(
+                                              "PDPA\nManagemnet Platform",
+                                              style: GoogleFonts.ibmPlexSansThai(
+                                                  fontSize: 24,
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Color.fromARGB(
+                                                      255, 31, 40, 79)),
+                                            ),
                                           ),
                                         ),
-                                      )
-                                    : Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 53, left: 35),
-                                        child: Container(
-                                          width: 251,
-                                          child: Text(
-                                            "PDPA\nManagemnet Platform",
-                                            style: GoogleFonts.ibmPlexSansThai(
-                                                fontSize: 24,
-                                                fontWeight: FontWeight.w700,
-                                                color: Color.fromARGB(
-                                                    255, 31, 40, 79)),
+                                  Responsive.isTablet(context)
+                                      ? Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 74),
+                                          child: Container(
+                                            width: 629,
+                                            child: Text(
+                                                "Software ที่ถูกออกแบบมา โดยรวมข้อมูลเข้าสู่ศูนย์กลาง\nเพื่อการจัดการอย่างเป็นระบบ ครบทุกขั้นตอนใน Platform เดียว ",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 24,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: Color.fromARGB(
+                                                            255, 74, 195, 212))),
+                                          ),
+                                        )
+                                      : Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 25, left: 35),
+                                          child: Container(
+                                            width: 317,
+                                            child: Text(
+                                                "Software ที่ถูกออกแบบมา\nโดยรวมข้อมูลเข้าสู่ศูนย์กลาง\nเพื่อการจัดการอย่างเป็นระบบ",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 18,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: Color.fromARGB(
+                                                            255, 74, 195, 212))),
                                           ),
                                         ),
-                                      ),
-                                Responsive.isTablet(context)
-                                    ? Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 74),
-                                        child: Container(
-                                          width: 629,
-                                          child: Text(
-                                              "Software ที่ถูกออกแบบมา โดยรวมข้อมูลเข้าสู่ศูนย์กลาง\nเพื่อการจัดการอย่างเป็นระบบ ครบทุกขั้นตอนใน Platform เดียว ",
-                                              style:
-                                                  GoogleFonts.ibmPlexSansThai(
-                                                      fontSize: 24,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      color: Color.fromARGB(
-                                                          255, 74, 195, 212))),
+                                  Responsive.isTablet(context)
+                                      ? Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 15, left: 70),
+                                          child: pdpaTL,
+                                        )
+                                      : Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 15, left: 35),
+                                          child: pdpaMB,
                                         ),
-                                      )
-                                    : Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 25, left: 35),
-                                        child: Container(
-                                          width: 317,
-                                          child: Text(
-                                              "Software ที่ถูกออกแบบมา\nโดยรวมข้อมูลเข้าสู่ศูนย์กลาง\nเพื่อการจัดการอย่างเป็นระบบ",
-                                              style:
-                                                  GoogleFonts.ibmPlexSansThai(
-                                                      fontSize: 18,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      color: Color.fromARGB(
-                                                          255, 74, 195, 212))),
-                                        ),
-                                      ),
-                                Responsive.isTablet(context)
-                                    ? Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 15, left: 70),
-                                        child: pdpaTL,
-                                      )
-                                    : Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 15, left: 35),
-                                        child: pdpaMB,
-                                      ),
-                                Center(
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(top: 20),
-                                    child: SizedBox(
-                                        width: Responsive.isTablet(context)
-                                            ? 691
-                                            : 314,
-                                        height: Responsive.isTablet(context)
-                                            ? 572
-                                            : 235,
-                                        child: Image.asset(
-                                          "assets/customer/laptop.png",
-                                        )),
-                                  ),
-                                )
-                              ],
+                                ],
+                              ),
                             ),
                           ),
+                          Center(
+                            child: Container(
+                              // width: Responsive.isTablet(context) ? 697 : 376,
+                              width: 1440,
+                              child: CarouselSlider(
+                                carouselController: _controller,
+                                options: CarouselOptions(
+                                  viewportFraction: 1.25,
+                                  height:
+                                      Responsive.isTablet(context) ? 430 : 230,
+                                  // enlargeCenterPage: true,
+                                  autoPlay: true,
+                                  onPageChanged: (index, reason) {
+                                    setState(() {
+                                      _current = index;
+                                      // print('Current Page: $_current');
+                                    });
+                                  },
+                                ),
+                                items: [
+                                  Image.asset("assets/customer/notebook.png"),
+                                  Image.asset("assets/customer/Ipad.png"),
+                                  Image.asset("assets/customer/Iphone.png")
+                                ],
+                              ),
+                            ),
+                          ),
+                          Center(
+                            child: Container(
+                              child: AnimatedSmoothIndicator(
+                                  activeIndex: _current,
+                                  count: 3,
+                                  effect: ScaleEffect(
+                                      activePaintStyle: PaintingStyle.stroke,
+                                      scale: 1.4,
+                                      activeStrokeWidth: 1.0,
+                                      dotWidth: 16,
+                                      dotHeight: 16,
+                                      dotColor:
+                                          Color.fromARGB(255, 5, 45, 97))),
+                            ),
+                          ),
+                          SizedBox(
+                            height: Responsive.isTablet(context)?150:60,
+                          )
                         ],
                       ),
                     ),
@@ -386,96 +456,99 @@ class _OurservicesPageState extends State<OurservicesPage> {
                     width: 1440,
                     color: Color.fromARGB(255, 232, 242, 254),
                     child: Center(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Responsive.isTablet(context)
-                          ?Padding(
-                            padding: const EdgeInsets.only(top:67),
-                            child: Text("จัดการ PDPA อย่างเป็นระบบ\nด้วย wisework",
-                            style: GoogleFonts.ibmPlexSansThai(
-                              fontSize: 48,
-                              fontWeight: FontWeight.w700,
-                              color: Color.fromARGB(255, 5, 45, 97)
-                            ),
-                            textAlign: TextAlign.center,
-                            ),
-                          )
-                          :Padding(
-                            padding: const EdgeInsets.only(top:50),
-                            child: Text("จัดการ PDPA อย่างเป็นระบบ\nด้วย wisework",
-                            style: GoogleFonts.ibmPlexSansThai(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700,
-                              color: Color.fromARGB(255, 5, 45, 97)
-                            ),
-                            textAlign: TextAlign.center,
-                            ),
-                          ),
-
-                          Responsive.isTablet(context)
-                          ?Padding(
-                            padding: const EdgeInsets.only(top: 52),
-                            child: Text("“การเก็บ ใช้ เปิดเผย และถ่ายโอนข้อมูลส่วนบุคคล ต้องได้รับความยินยอมจากเจ้าของข้อมูล\nโดยข้อยกเว้นจะมีเหตุอื่นที่ได้รับอนุญาตตามกฎหมาย”",
-                              style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black
-                              ),textAlign: TextAlign.center,
+                        child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Responsive.isTablet(context)
+                            ? Padding(
+                                padding: const EdgeInsets.only(top: 67),
+                                child: Text(
+                                  "จัดการ PDPA อย่างเป็นระบบ\nด้วย wisework",
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 48,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color.fromARGB(255, 5, 45, 97)),
+                                  textAlign: TextAlign.center,
+                                ),
+                              )
+                            : Padding(
+                                padding: const EdgeInsets.only(top: 50),
+                                child: Text(
+                                  "จัดการ PDPA อย่างเป็นระบบ\nด้วย wisework",
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color.fromARGB(255, 5, 45, 97)),
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
-                          )
-                          :Padding(
-                            padding: const EdgeInsets.only(top: 30),
-                            child: Text("“การเก็บ ใช้ เปิดเผย\nและถ่ายโอนข้อมูลส่วนบุคคล\nต้องได้รับความยินยอมจาก\nเจ้าของข้อมูลโดยข้อยกเว้นจะมี\nเหตุอื่นที่ได้รับอนุญาตตามกฎหมาย”",
-                              style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black
-                              ),textAlign: TextAlign.center,
+                        Responsive.isTablet(context)
+                            ? Padding(
+                                padding: const EdgeInsets.only(top: 52),
+                                child: Text(
+                                  "“การเก็บ ใช้ เปิดเผย และถ่ายโอนข้อมูลส่วนบุคคล ต้องได้รับความยินยอมจากเจ้าของข้อมูล\nโดยข้อยกเว้นจะมีเหตุอื่นที่ได้รับอนุญาตตามกฎหมาย”",
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black),
+                                  textAlign: TextAlign.center,
+                                ),
+                              )
+                            : Padding(
+                                padding: const EdgeInsets.only(top: 30),
+                                child: Text(
+                                  "“การเก็บ ใช้ เปิดเผย\nและถ่ายโอนข้อมูลส่วนบุคคล\nต้องได้รับความยินยอมจาก\nเจ้าของข้อมูลโดยข้อยกเว้นจะมี\nเหตุอื่นที่ได้รับอนุญาตตามกฎหมาย”",
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black),
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
-                          ),
-
-                          Responsive.isTablet(context)
-                          ?Padding(
-                            padding: const EdgeInsets.only(top: 25),
-                            child: Text("พร้อมให้คำปรึกษา วางแผน และวางระบบตามกฎหมาย\nสำหรับองค์กรและธุรกิจต่างๆ\nเติมเต็มให้ครบทั้ง People Process และ Technology\nมั่นใจได้ว่า เป็นไปตามที่กฎหมายกำหนด",
-                              style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black
-                              ),textAlign: TextAlign.center,
+                        Responsive.isTablet(context)
+                            ? Padding(
+                                padding: const EdgeInsets.only(top: 25),
+                                child: Text(
+                                  "พร้อมให้คำปรึกษา วางแผน และวางระบบตามกฎหมาย\nสำหรับองค์กรและธุรกิจต่างๆ\nเติมเต็มให้ครบทั้ง People Process และ Technology\nมั่นใจได้ว่า เป็นไปตามที่กฎหมายกำหนด",
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black),
+                                  textAlign: TextAlign.center,
+                                ),
+                              )
+                            : Padding(
+                                padding: const EdgeInsets.only(top: 20),
+                                child: Text(
+                                  "พร้อมให้คำปรึกษา วางแผน\nและวางระบบตามกฎหมาย\nสำหรับองค์กรและธุรกิจต่างๆ\nเติมเต็มให้ครบทั้ง People Process และ\nTechnology มั่นใจได้ว่า\nเป็นไปตามที่กฎหมายกำหนด",
+                                  style: GoogleFonts.ibmPlexSansThai(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black),
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
-                          )
-                          :Padding(
-                            padding: const EdgeInsets.only(top: 20),
-                            child: Text("พร้อมให้คำปรึกษา วางแผน\nและวางระบบตามกฎหมาย\nสำหรับองค์กรและธุรกิจต่างๆ\nเติมเต็มให้ครบทั้ง People Process และ\nTechnology มั่นใจได้ว่า\nเป็นไปตามที่กฎหมายกำหนด",
-                              style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black
-                              ),textAlign: TextAlign.center,
-                              ),
-                          ),
-
-                          Responsive.isTablet(context)
-                          ?Padding(
-                            padding: const EdgeInsets.only(top:60,bottom:67),
-                            child: SizedBox(
-                              width:705,
-                              height:705,
-                              child: Image.asset("assets/customer/process.png")),
-                          )
-                          :Padding(
-                            padding: const EdgeInsets.only(top:50,bottom:50),
-                            child: SizedBox(
-                              width: 320,
-                              height:320,
-                              child: Image.asset("assets/customer/process.png")),
-                          )
-                          
-
-                        ],
-                      )),
+                        Responsive.isTablet(context)
+                            ? Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 60, bottom: 67),
+                                child: SizedBox(
+                                    width: 705,
+                                    height: 705,
+                                    child: Image.asset(
+                                        "assets/customer/process.png")),
+                              )
+                            : Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 50, bottom: 50),
+                                child: SizedBox(
+                                    width: 320,
+                                    height: 320,
+                                    child: Image.asset(
+                                        "assets/customer/process.png")),
+                              )
+                      ],
+                    )),
                   )
                 ],
               ));
