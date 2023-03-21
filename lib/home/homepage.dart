@@ -73,17 +73,21 @@ class _HomePageState extends State<HomePage> {
           title: !Responsive.isDesktop(context)
               ? Padding(
                   padding: const EdgeInsets.all(20),
-                  child: SizedBox(
-                    height: 60,
-                    width: 100,
-                    child: GestureDetector(
-                      onTap: () => context.go('/'),
-                      child: Image.asset(
-                        'assets/logo.png',
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        width: 100,
+                        child: GestureDetector(
+                          onTap: () => context.go('/'),
+                          child: Image.asset(
+                            'assets/logo.png',
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                )
+                    ],
+                  ))
               : 
               // Container()
               NavBar()

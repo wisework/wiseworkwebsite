@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:go_router/go_router.dart';
 
+import 'package:wiseintern/features/new.dart';
+
 class FeatureModel {
   final String title;
   final String description;
@@ -118,16 +120,22 @@ class _FeaturesPageState extends State<FeaturesPage> {
                               ),
                             ),
                           ),
-                          Responsive.isDesktop(context)?Container():Responsive.isTablet(context)?Container()
-                          :Padding(
-                            padding: const EdgeInsets.only(top: 16,bottom: 15),
-                            child: Text("“เครื่องมือที่ช่วยให้องค์กรของคุณ\nจัดการ PDPA อย่างเป็นระบบ”",
-                            style: GoogleFonts.ibmPlexSansThai(
-                              fontSize:16,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white
-                            ),textAlign: TextAlign.center,),
-                          ),
+                          Responsive.isDesktop(context)
+                              ? Container()
+                              : Responsive.isTablet(context)
+                                  ? Container()
+                                  : Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 16, bottom: 15),
+                                      child: Text(
+                                        "“เครื่องมือที่ช่วยให้องค์กรของคุณ\nจัดการ PDPA อย่างเป็นระบบ”",
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.white),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
                           Responsive.isDesktop(context)
                               ? Container(
                                   child: GridView.builder(
@@ -226,9 +234,18 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                                 .center,
                                                           ),
                                                           TextButton(
-                                                            onPressed: () =>
-                                                                context.go(
-                                                                    '/${features[index].page}'),
+                                                            onPressed: () {
+                                                              Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(
+                                                                    builder:
+                                                                        (context) =>
+                                                                            MyDetails(
+                                                                              features[index].title,
+                                                                              features[index].imageUrl,
+                                                                            )),
+                                                              );
+                                                            },
                                                             child: GridTile(
                                                                 child: Row(
                                                               mainAxisAlignment:
@@ -542,7 +559,8 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                   );
                                                 })),
                                         Padding(
-                                          padding: const EdgeInsets.only(top: 30),
+                                          padding:
+                                              const EdgeInsets.only(top: 30),
                                           child: SizedBox(
                                             width: 193,
                                             height: 50,
@@ -550,7 +568,8 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                               onPressed: () {
                                                 setState(() {
                                                   if (_gridCount == 5) {
-                                                    _gridCount = features.length;
+                                                    _gridCount =
+                                                        features.length;
                                                   } else {
                                                     _gridCount = 5;
                                                   }

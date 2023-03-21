@@ -11,6 +11,12 @@ import 'package:wiseintern/contact/contactpage.dart';
 import 'package:wiseintern/faq/faqpage.dart';
 import 'package:wiseintern/demo/demopage.dart';
 import 'package:wiseintern/producttable/producttablepage.dart';
+import 'package:wiseintern/features/new.dart';
+
+import 'package:get/get.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+
 // import 'package:wiseintern/home/features.dart';
 // import 'package:wiseintern/home/packagepage.dart';
 // import 'navbar.dart';
@@ -19,6 +25,15 @@ import 'package:wiseintern/producttable/producttablepage.dart';
 void main() {
   runApp(const MyApp());
 }
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   final jsonString = await rootBundle.loadString('assets/test.json');
+//   final List<dynamic> data = jsonDecode(jsonString);
+//   final List<PageData> pages =
+//       data.map((json) => PageData.fromJson(json)).toList();
+
+//   runApp(MyApp());
+// }
 
 final GoRouter _router = GoRouter(
   routes: <RouteBase>[
@@ -74,6 +89,12 @@ final GoRouter _router = GoRouter(
           path: 'demo',
           builder: (BuildContext context, GoRouterState state) {
             return DemoPage();
+          },
+        ),
+        GoRoute(
+          path: 'test',
+          builder: (BuildContext context, GoRouterState state) {
+            return TestPage();
           },
         ),
       ],

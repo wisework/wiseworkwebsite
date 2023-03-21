@@ -35,6 +35,7 @@ class _DemoPageState extends State<DemoPage> {
               ? Padding(
                   padding: const EdgeInsets.all(20),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(
                         height: 60,
