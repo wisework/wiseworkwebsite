@@ -232,12 +232,11 @@ flutter:
   - assets/about/awards/iso27701.png
   - assets/about/awards/iso31000.png
 
-  - assets/product/productbg.png
-  - assets/product/productpic.png
-  - assets/product/productframe.png
+  - assets/product/mobile_creative.png
   - assets/product/whosepic.png
   - assets/product/select.png
   - assets/product/choices.png
+  - assets/product/creative.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
