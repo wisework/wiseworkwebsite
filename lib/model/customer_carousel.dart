@@ -52,161 +52,145 @@ class _CustomerCarouselState extends State<CustomerCarousel> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
+                            Padding(
+                              padding: const EdgeInsets.only(
                                       left: 200, top: 312),
-                                  child: Container(
-                                    height: 501,
-                                    width: 350,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(16),
-                                        color: Colors.white
-                                        // color: Color.fromARGB(
-                                        //     255, 239, 168, 168),
-                                        ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 12.57, left: 23.21),
-                                          child: SizedBox(
-                                              height: 80,
-                                              width: 166,
-                                              child: Image.asset(
-                                                  "assets/customer/bitkub.png")),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 32),
-                                          child: Container(
-                                            // height: 300,
-                                            width: 286,
-                                            // color: Colors.amber,
-                                            child: Column(
-                                              children: [
-                                                Column(
-                                                  children: [
-                                                    Stack(
-                                                      children: [
-                                                        SizedBox(
-                                                            width: 15.93,
-                                                            height: 14,
-                                                            child: Image.asset(
-                                                                "assets/customer/comma.png")),
-                                                        Container(
-                                                          // height: 384,
-                                                          width: 286,
-                                                          // color:Colors.amber,
-                                                          child: Column(
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              Text(
-                                                                "BitKub ให้ความสำคัญกับการคุ้มครอง ข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งาน ดังนั้น\nเราจึงให้ความสำคัญอย่างมากเกี่ยวกับ\nการปฏิบัติตามกฎหมาย PDPA\nโดยเราเลือกใช้ระบบโมดูลที่มี Center\nเข้ามาช่วยในการบริหารจัดการข้อมูล\nคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม\nเพื่อให้ผู้ใช้บริการมั่นใจว่าข้อมูลของท่านจะได้รับการปกป้องและใช้งานอย่างสบายใจ",
-                                                                style: GoogleFonts.poppins(
-                                                                    fontSize:
-                                                                        16,
-                                                                    color: Colors
-                                                                        .black,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400,
-                                                                    height:
-                                                                        2),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        )
-                                                      ],
-                                                    ),
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                        Row(
-                                          children: [
-                                            Wrap(
-                                              children: [
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 39.92,
-                                                          top: 16.28),
-                                                  child: SizedBox(
-                                                      width: 54.77,
-                                                      height: 57.16,
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 12.57, left: 23.21),
+                                    child: SizedBox(
+                                        height: 80,
+                                        width: 166,
+                                        child: Image.asset(
+                                            "assets/customer/bitkub.png")),
+                                  ),
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.only(left: 32),
+                                    child: Container(
+                                      // height: 300,
+                                      width: 286,
+                                      // color: Colors.amber,
+                                      child: Column(
+                                        children: [
+                                          Column(
+                                            children: [
+                                              Stack(
+                                                children: [
+                                                  SizedBox(
+                                                      width: 15.93,
+                                                      height: 14,
                                                       child: Image.asset(
-                                                          "assets/customer/Jirayuth.png")),
-                                                ),
-                                                SizedBox(
-                                                  width: 9.1,
-                                                ),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          top: 16.28),
-                                                  child: Container(
-                                                    // color: Colors.pink,
+                                                          "assets/customer/comma.png")),
+                                                  Container(
+                                                    // height: 384,
+                                                    width: 286,
+                                                    // color:Colors.amber,
                                                     child: Column(
                                                       crossAxisAlignment:
                                                           CrossAxisAlignment
                                                               .start,
                                                       children: [
-                                                        Container(
-                                                          child: Text(
-                                                            "คุณจิรายุส ทรัพย์ศรีโสภา",
-                                                            style: GoogleFonts
-                                                                .ibmPlexSansThai(
-                                                                    fontSize:
-                                                                        18,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w600,
-                                                                    color: Colors
-                                                                        .black),
-                                                            textAlign:
-                                                                TextAlign.start,
-                                                          ),
+                                                        Text(
+                                                          "BitKub ให้ความสำคัญกับการคุ้มครอง ข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งาน ดังนั้น\nเราจึงให้ความสำคัญอย่างมากเกี่ยวกับ\nการปฏิบัติตามกฎหมาย PDPA\nโดยเราเลือกใช้ระบบโมดูลที่มี Center\nเข้ามาช่วยในการบริหารจัดการข้อมูล\nคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม\nเพื่อให้ผู้ใช้บริการมั่นใจว่าข้อมูลของท่านจะได้รับการปกป้องและใช้งานอย่างสบายใจ",
+                                                          style: GoogleFonts.poppins(
+                                                              fontSize:
+                                                                  16,
+                                                              color: Colors
+                                                                  .black,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
+                                                              height:
+                                                                  2),
                                                         ),
-                                                        Container(
-                                                          // color:Colors.white,
-                                                          child: Text(
-                                                            "Founder & Group CEO",
-                                                            style: GoogleFonts.poppins(
-                                                                fontSize: 15,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                                color: Color
-                                                                    .fromARGB(
-                                                                        255,
-                                                                        87,
-                                                                        87,
-                                                                        87)),
-                                                            textAlign:
-                                                                TextAlign.start,
-                                                          ),
-                                                        )
                                                       ],
                                                     ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        )
-                                      ],
+                                                  )
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                )
-                              ],
+                                  Row(
+                                    children: [
+                                      Wrap(
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(
+                                                    left: 39.92,
+                                                    top: 16.28),
+                                            child: SizedBox(
+                                                width: 54.77,
+                                                height: 57.16,
+                                                child: Image.asset(
+                                                    "assets/customer/Jirayuth.png")),
+                                          ),
+                                          SizedBox(
+                                            width: 9.1,
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(
+                                                    top: 16.28),
+                                            child: Container(
+                                              // color: Colors.pink,
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment
+                                                        .start,
+                                                children: [
+                                                  Container(
+                                                    child: Text(
+                                                      "คุณจิรายุส ทรัพย์ศรีโสภา",
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                              fontSize:
+                                                                  18,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
+                                                              color: Colors
+                                                                  .black),
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    // color:Colors.white,
+                                                    child: Text(
+                                                      "Founder & Group CEO",
+                                                      style: GoogleFonts.poppins(
+                                                          fontSize: 15,
+                                                          fontWeight:
+                                                              FontWeight
+                                                                  .w500,
+                                                          color: Color
+                                                              .fromARGB(
+                                                                  255,
+                                                                  87,
+                                                                  87,
+                                                                  87)),
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,

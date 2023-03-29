@@ -254,7 +254,7 @@ class _BannerState extends State<BannerPage> {
                                   child: Wrap(
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsets.only(top: 10),
+                                        padding: const EdgeInsets.only(top: 10,left: 70),
                                         child: Container(
                                           width: 60,
                                           height: 5,

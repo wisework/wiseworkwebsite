@@ -1,4 +1,4 @@
-import 'dart:html';
+
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -185,7 +185,7 @@ class _QuestionsState extends State<Questions> {
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
-                                                            top: 90, left: 50),
+                                                            top: 90, left: 15),
                                                     child: Text(
                                                       'รวมคำถามที่พบบ่อย',
                                                       style: GoogleFonts
@@ -202,7 +202,7 @@ class _QuestionsState extends State<Questions> {
                                               ),
                                               Padding(
                                                 padding: const EdgeInsets.only(
-                                                    left: 50),
+                                                    left: 15),
                                                 child: Text(
                                                   'Frequently Asked Questions',
                                                   style: GoogleFonts
@@ -261,7 +261,7 @@ class _QuestionsState extends State<Questions> {
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
-                                                            top: 86, left: 30),
+                                                            top: 86, left: 15),
                                                     child: Text(
                                                       'รวมคำถามที่พบบ่อย',
                                                       style: GoogleFonts
@@ -280,7 +280,7 @@ class _QuestionsState extends State<Questions> {
                                               ),
                                               Padding(
                                                 padding: const EdgeInsets.only(
-                                                    left: 30),
+                                                    left: 15),
                                                 child: Text(
                                                   'Frequently Asked\nQuestions',
                                                   style: GoogleFonts

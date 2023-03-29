@@ -4,6 +4,7 @@ import '../responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:go_router/go_router.dart';
 
 class StoryPage extends StatefulWidget {
   @override
@@ -260,7 +261,7 @@ class _DestinationCarouselState extends State<StoryPage> {
       width: 193,
       height: 47,
       child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () => context.go('/contact'),
           style: ElevatedButton.styleFrom(
             backgroundColor: Color.fromRGBO(75, 195, 211, 1),
             shape: RoundedRectangleBorder(
@@ -332,7 +333,7 @@ class _DestinationCarouselState extends State<StoryPage> {
                           width: Responsive.isDesktop(context) ? 613 : 222,
                           height: Responsive.isDesktop(context) ? 88 : 50,
                           child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () => context.go('/demo'),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor:
                                     Color.fromRGBO(75, 195, 211, 1),

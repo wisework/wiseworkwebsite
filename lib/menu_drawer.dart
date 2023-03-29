@@ -38,7 +38,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
                     color: Color.fromARGB(255, 35, 34, 51))),
-            onTap: () => context.go('/'),
+            onTap: () => context.go('/home'),
           ),
           ListTile(
             title: Text('About Us',

@@ -139,7 +139,7 @@ class _NavigationBarState extends State<NavBar> {
                 value: AboutValue,
                 onChanged: (value) {
                   setState(() {
-                    // selectedValue = value as String;
+                    // AboutValue = value as String;
                   });
                 },
                 buttonStyleData: ButtonStyleData(
@@ -147,6 +147,9 @@ class _NavigationBarState extends State<NavBar> {
                   width: 120,
                   padding: const EdgeInsets.only(left: 14, right: 14),
                   elevation: 0,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 52, 144, 206),
+                  )
                 ),
                 iconStyleData: const IconStyleData(
                   icon: Icon(
@@ -226,7 +229,7 @@ class _NavigationBarState extends State<NavBar> {
                         ),
                       )),
                 ],
-                value: AboutValue,
+                value: ServicesValue,
                 onChanged: (value) {
                   setState(() {
                     // selectedValue = value as String;
@@ -237,6 +240,9 @@ class _NavigationBarState extends State<NavBar> {
                   width: 160,
                   padding: const EdgeInsets.only(left: 14, right: 14),
                   elevation: 0,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 52, 144, 206),
+                  )
                 ),
                 iconStyleData: const IconStyleData(
                   icon: Icon(

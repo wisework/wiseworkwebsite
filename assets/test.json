@@ -1,44 +1,88 @@
 
  [
     {
-      "name": "Item 1",
-      "description": "This is the first item in the list."
+      "title": "PD Management",
+      "description": "จัดการบันทึกรายการข้อมูลส่วนบุคคลและการไหลของข้อมูล (Data Flow)",
+      "imageUrl":"features/folder.png",
+      "page" : "detail/1",
+      "detail" : "1"
     },
     {
-      "name": "Item 2",
-      "description": "This is the second item in the list."
+      "title": "DPIA & Risk Management",
+      "description": "การบริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล",
+      "imageUrl":"features/risk.png",
+      "page" : "detail/2",
+      "detail" : "2"
     },
     {
-      "name": "Item 3",
-      "description": "This is the third item in the list."
+      "title": "Cookie Consent",
+      "description": "การขอความยินยอมจากเจ้าของข้อมูลและการบริหารจัดการคุกกี้",
+      "imageUrl":"features/cookie.png",
+      "page" : "detail/3",
+      "detail" : "3"
     },
     {
-      "name": "Item 4",
-      "description": "This is the fourth item in the list."
+      "title": "Consent Management",
+      "description": "การบริหารจัดการให้ความยินยอม",
+      "imageUrl":"features/consent.png",
+      "page" : "detail/4",
+      "detail" : "4"
     },
     {
-      "name": "Item 5",
-      "description": "This is the fifth item in the list."
+      "title": "Data Subject Right Management",
+      "description": "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูล",
+      "imageUrl":"features/data.png",
+      "page" : "detail/5",
+      "detail" : "5"
     },
     {
-      "name": "Item 6",
-      "description": "This is the sixth item in the list."
+      "title": "Data Breach",
+      "description": "บริหารกรณีเกิดข้อมูลรั่วไหล",
+      "imageUrl":"features/breach.png",
+      "page" : "detail/6",
+      "detail" : "6"
     },
     {
-      "name": "Item 7",
-      "description": "This is the seventh item in the list."
+      "title": "Audit&Gap Management",
+      "description": "บริหารงานตรวจสอบและการทำ GAP Analysis",
+      "imageUrl":"features/audit.png",
+      "page" : "detail/7",
+      "detail" : "7"
     },
     {
-      "name": "Item 8",
-      "description": "This is the eighth item in the list."
+      "title": "Policy&Notices Management",
+      "description": "บริหารการสื่อสารนโยบายและประกาศความเป็นส่วนตัว",
+      "imageUrl":"features/policy.png",
+      "page" : "detail/8",
+      "detail" : "8"
     },
     {
-      "name": "Item 9",
-      "description": "This is the ninth item in the list."
+      "title": "Data Discover",
+      "description": "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
+      "imageUrl":"features/discovery.png",
+      "page" : "detail/9",
+      "detail" : "9"
     },
     {
-      "name": "Item 10",
-      "description": "This is the tenth item in the list."
+      "title": "Executive Support System",
+      "description": "บริหารงานและจัดการรายงาน สำหรับผู้บริหาร",
+      "imageUrl":"features/executive.png",
+      "page" : "detail/10",
+      "detail" : "10"
+    },
+    {
+      "title": "Legitimate Interest Assessment",
+      "description": "การประเมินการนำฐานกฏหมายมาใช้",
+      "imageUrl":"features/legi.png",
+      "page" : "detail/11",
+      "detail" : "11"
+    },
+    {
+      "title": "System Setting Management",
+      "description": "ส่วนการตั้งค่าส่วนส่งเสริมที่ถูกพัฒนาขึ้นมาเพื่อให้ผู้ดูแลระบบจัดการกับข้อมูลต่างๆ",
+      "imageUrl":"features/system.png",
+      "page" : "detail/12",
+      "detail" : "12"
     }
   ]
 
