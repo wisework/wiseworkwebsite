@@ -18,8 +18,16 @@ class Model {
   Model(this.name, this.path);
 }
 
+class Services {
+  final String name;
+  final String path;
+
+  Services(this.name, this.path);
+}
+
 class _FooterState extends State<Footer> {
-  int? onHover;
+  int? onHovernav;
+  int? onHoverser;
   @override
   Widget build(BuildContext context) {
     // List<String> listLo = [
@@ -115,55 +123,66 @@ class _FooterState extends State<Footer> {
           fontWeight: FontWeight.w600),
     );
 
-    List<String> navbar = ["Home", "About Us", "Our reward", "Blogs", "FAQ"];
     List<Model> navbarButton = [
       Model("Home", "/"),
       Model("About Us", "/story"),
       Model("Our Reards", "/story"),
       Model("Blogs", "/"),
-      Model("FAQ", "/faq")
+      Model("FAQ ", "/faq")
     ];
-    var navbarlist = Container(
-      color: Color.fromARGB(0, 255, 193, 7),
-      height: 160,
-      width: Responsive.isDesktop(context) ? 80 : 150,
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: navbar.length,
-        itemBuilder: (context, index) {
-          return Column(
-            // mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Text(
-                  navbar[index],
-                  textAlign: Responsive.isMobile(context)
-                      ? TextAlign.center
-                      : TextAlign.start,
-                  style: GoogleFonts.ibmPlexSansThai(
-                      fontSize: Responsive.isDesktop(context)
-                          ? 15
-                          : Responsive.isTablet(context)
-                              ? 16
-                              : 16,
-                      fontWeight: FontWeight.w400,
-                      color: Responsive.isDesktop(context)
-                          ? Color.fromARGB(255, 218, 218, 218)
-                          : Colors.white),
+
+    var navbarBut = Container(
+        height: 160,
+        // color: Colors.red,
+        width: Responsive.isDesktop(context) ? 100 : 150,
+        child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: navbarButton.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Container(
+                color: Color.fromARGB(255, 52, 145, 206),
+                child: new Material(
+                  color: Colors.transparent,
+                  child: new InkWell(
+                    onTap: () {},
+                    onHover: (value) {
+                      setState(() {
+                        if (value) {
+                          onHovernav = index;
+                        } else {
+                          onHovernav = null;
+                        }
+                      });
+                    },
+                    hoverColor: Color.fromARGB(255, 52, 145, 206),
+                    child: Container(
+                      color: Color.fromARGB(255, 52, 145, 206),
+                      child: Column(
+                        crossAxisAlignment: Responsive.isMobile(context)
+                            ? CrossAxisAlignment.center
+                            : CrossAxisAlignment.start,
+                        children: [
+                          TextButton(
+                              onPressed: () =>
+                                  context.go('${navbarButton[index].path}'),
+                              child: Text(
+                                "${navbarButton[index].name}",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: onHovernav == index
+                                        ? Color.fromARGB(255, 75, 196, 213)
+                                        : Colors.white),
+                              )),
+                          SizedBox(
+                              height: Responsive.isTablet(context) ? 10 : 0)
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-              SizedBox(
-                  height: Responsive.isDesktop(context)
-                      ? 0.0
-                      : Responsive.isTablet(context)
-                          ? 15
-                          : 10),
-            ],
-          );
-        },
-      ),
-    );
+              );
+            }));
 
     var services = Container(
       width: 115.86,
@@ -178,42 +197,67 @@ class _FooterState extends State<Footer> {
       ),
     );
 
-    List<String> servicesList = [
-      "PDPA Management Platform",
-      "Governance Assurance Suite",
-      "Get a Free Demo",
-      "Key Partners",
-      "Join Our Amazing Team"
+   
+    List<Services> serviceButton = [
+      Services("PDPA Management Platform", "/services"),
+      Services("Governance Assurance Suite", "/"),
+      Services("Get a Free Demo", "/demo"),
+      Services("Key Partners", "/"),
+      Services("Join Our Amazing Team", "/")
     ];
-    // String? servicesValue;
 
-    var svlist = Container(
-      color: Color.fromARGB(0, 255, 193, 7),
-      height: 160,
-      width: Responsive.isDesktop(context) ? 200 : 180,
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: servicesList.length,
-        itemBuilder: (context, index) {
-          return Column(
-            // mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Text(
-                  servicesList[index],
-                  style: GoogleFonts.ibmPlexSansThai(
-                      fontSize: Responsive.isDesktop(context) ? 15 : 12,
-                      fontWeight: FontWeight.w400,
-                      color: Color.fromARGB(255, 218, 218, 218)),
+    var serviceBut = Container(
+        height: 160,
+        // color: Colors.red,
+        width: 230,
+        child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: serviceButton.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Container(
+                // color: Color.fromARGB(255, 52, 145, 206),
+                child: new Material(
+                  color: Colors.transparent,
+                  child: new InkWell(
+                    onTap: () {},
+                    onHover: (value) {
+                      setState(() {
+                        if (value) {
+                          onHoverser = index;
+                        } else {
+                          onHoverser = null;
+                        }
+                      });
+                    },
+                    hoverColor: Color.fromARGB(255, 52, 145, 206),
+                    child: Container(
+                      color: Color.fromARGB(255, 52, 145, 206),
+                      child: Column(
+                        crossAxisAlignment: Responsive.isMobile(context)
+                            ? CrossAxisAlignment.center
+                            : CrossAxisAlignment.start,
+                        children: [
+                          TextButton(
+                              onPressed: () =>
+                                  context.go('${serviceButton[index].path}'),
+                              child: Text(
+                                "${serviceButton[index].name}",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: onHoverser == index
+                                        ? Color.fromARGB(255, 75, 196, 213)
+                                        : Colors.white),
+                              )),
+                          SizedBox(
+                              height: Responsive.isTablet(context) ? 10 : 0)
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-              SizedBox(height: Responsive.isTablet(context) ? 15 : 0.0),
-            ],
-          );
-        },
-      ),
-    );
+              );
+            }));
 
     var contact = Text(
       "Contact Us",
@@ -400,52 +444,36 @@ class _FooterState extends State<Footer> {
                                   width: 380,
                                   // height: 250,
                                   child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      Column(
+                                      Image.asset("assets/footer/logo.png"),
+                                      Wrap(
+                                        spacing: 10.0,
                                         children: [
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            children: [
-                                              Image.asset(
-                                                  "assets/footer/logo.png")
-                                            ],
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 35),
+                                            child: Column(
+                                              children: [listImg],
+                                            ),
                                           ),
-                                          Row(
-                                            children: [
-                                              Wrap(
-                                                spacing: 10.0,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            top: 35),
-                                                    child: Column(
-                                                      children: [listImg],
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            top: 30),
-                                                    child: Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [list2],
-                                                    ),
-                                                  )
-                                                ],
-                                              ),
-                                            ],
-                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 30),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [list2],
+                                            ),
+                                          )
                                         ],
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
                                 Container(
-                                  width: 380,
+                                  width: 400,
                                   // height: 250,
                                   child: Column(
                                     // mainAxisAlignment: MainAxisAlignment.start,
@@ -454,8 +482,6 @@ class _FooterState extends State<Footer> {
                                       Row(
                                         children: [
                                           Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
@@ -469,7 +495,7 @@ class _FooterState extends State<Footer> {
                                                   SizedBox(
                                                     width: 10,
                                                   ),
-                                                  navbarlist
+                                                  navbarBut
                                                 ],
                                               )
                                             ],
@@ -493,7 +519,7 @@ class _FooterState extends State<Footer> {
                                                   SizedBox(
                                                     width: 10,
                                                   ),
-                                                  svlist
+                                                  serviceBut
                                                 ],
                                               )
                                             ],
@@ -619,22 +645,20 @@ class _FooterState extends State<Footer> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsets.only(top: 10,left:70),
+                                                padding: const EdgeInsets.only(
+                                                    top: 10, left: 70),
                                                 child: Container(
-                                                              // width: 400,
-                                                              child: Text(
-                                                            "© Copyright 2022 Thewiseworks | All Right Reserved.",
-                                                            style: GoogleFonts
-                                                                .ibmPlexSansThai(
-                                                                    color: Colors
-                                                                        .white,
-                                                                        fontSize: 16,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400),
-                                                            textAlign:
-                                                                TextAlign.start,
-                                                          )),
+                                                    // width: 400,
+                                                    child: Text(
+                                                  "© Copyright 2022 Thewiseworks | All Right Reserved.",
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          color: Colors.white,
+                                                          fontSize: 16,
+                                                          fontWeight:
+                                                              FontWeight.w400),
+                                                  textAlign: TextAlign.start,
+                                                )),
                                               ),
                                               Padding(
                                                 padding: const EdgeInsets.only(
@@ -659,46 +683,54 @@ class _FooterState extends State<Footer> {
                                                                 style: GoogleFonts.ibmPlexSansThai(
                                                                     color: Colors
                                                                         .white,
-                                                                        decoration: TextDecoration.underline,
+                                                                    decoration:
+                                                                        TextDecoration
+                                                                            .underline,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w400,
-                                                                            fontSize:16),
+                                                                    fontSize:
+                                                                        16),
                                                               )),
                                                         ),
                                                         Padding(
-                                                          padding: const EdgeInsets.only(left:60,right:60),
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  left: 60,
+                                                                  right: 60),
                                                           child: TextButton(
                                                               onPressed: () {},
                                                               child: Text(
                                                                 "Term of Services",
-                                                                style: GoogleFonts
-                                                                    .ibmPlexSansThai(
-                                                                      fontSize:16,
-                                                                        color: Colors
-                                                                            .white,
-                                                                            decoration: TextDecoration.underline,
-                                                                        fontWeight:
-                                                                            FontWeight
-                                                                                .w400),
+                                                                style: GoogleFonts.ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        16,
+                                                                    color: Colors
+                                                                        .white,
+                                                                    decoration:
+                                                                        TextDecoration
+                                                                            .underline,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400),
                                                               )),
                                                         ),
                                                         TextButton(
                                                             onPressed: () {},
                                                             child: Text(
                                                               "Cookie",
-                                                              style: GoogleFonts
-                                                                  .ibmPlexSansThai(
-                                                                    fontSize: 16,
-                                                                      color: Colors
-                                                                          .white,
-                                                                          decoration: TextDecoration.underline,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w400),
+                                                              style: GoogleFonts.ibmPlexSansThai(
+                                                                  fontSize: 16,
+                                                                  color: Colors
+                                                                      .white,
+                                                                  decoration:
+                                                                      TextDecoration
+                                                                          .underline,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400),
                                                             )),
-                                                        
-                                                        
                                                       ],
                                                     ),
                                                   ],
@@ -936,12 +968,7 @@ class _FooterState extends State<Footer> {
                                                                     .only(
                                                                 top: 10,
                                                                 left: 61),
-                                                        child: Container(
-                                                          width: 114,
-                                                          height: 220,
-                                                          // color: Colors.amber,
-                                                          child: navbarlist,
-                                                        ),
+                                                        child: navbarBut,
                                                       ),
                                                       Column(
                                                         children: [
@@ -1026,7 +1053,8 @@ class _FooterState extends State<Footer> {
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
-                                                            top: 10,),
+                                                      top: 10,
+                                                    ),
                                                     child: Center(
                                                       child: Container(
                                                         width: 688,
@@ -1038,8 +1066,7 @@ class _FooterState extends State<Footer> {
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
-                                                            top: 20,
-                                                            left: 40),
+                                                            top: 20, left: 40),
                                                     child: Container(
                                                       width: 389,
                                                       // height: 24,
@@ -1057,73 +1084,86 @@ class _FooterState extends State<Footer> {
                                                     ),
                                                   ),
                                                   Padding(
-                                                padding: const EdgeInsets.only(
-                                                    top: 10),
-                                                child: Wrap(
-                                                  spacing: 10,
-                                                  children: [
-                                                    Row(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            top: 10),
+                                                    child: Wrap(
+                                                      spacing: 10,
                                                       children: [
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsets
-                                                                      .only(
-                                                                  left: 40),
-                                                          child: TextButton(
-                                                              onPressed: () {},
-                                                              child: Text(
-                                                                "Privacy Policy",
-                                                                style: GoogleFonts.ibmPlexSansThai(
-                                                                    color: Colors
-                                                                        .white,
-                                                                        decoration: TextDecoration.underline,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400,
-                                                                            fontSize:16),
-                                                              )),
-                                                        ),
-                                                        Padding(
-                                                          padding: const EdgeInsets.only(left: 60,right:60),
-                                                          child: TextButton(
-                                                              onPressed: () {},
-                                                              child: Text(
-                                                                "Term of Services",
-                                                                style: GoogleFonts
-                                                                    .ibmPlexSansThai(
-                                                                      fontSize:16,
+                                                        Row(
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .start,
+                                                          children: [
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .only(
+                                                                      left: 40),
+                                                              child: TextButton(
+                                                                  onPressed:
+                                                                      () {},
+                                                                  child: Text(
+                                                                    "Privacy Policy",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         color: Colors
                                                                             .white,
-                                                                            decoration: TextDecoration.underline,
+                                                                        decoration:
+                                                                            TextDecoration
+                                                                                .underline,
                                                                         fontWeight:
                                                                             FontWeight
-                                                                                .w400),
-                                                              )),
-                                                        ),
-                                                        TextButton(
-                                                            onPressed: () {},
-                                                            child: Text(
-                                                              "Cookie",
-                                                              style: GoogleFonts
-                                                                  .ibmPlexSansThai(
-                                                                    fontSize: 16,
+                                                                                .w400,
+                                                                        fontSize:
+                                                                            16),
+                                                                  )),
+                                                            ),
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .only(
+                                                                      left: 60,
+                                                                      right:
+                                                                          60),
+                                                              child: TextButton(
+                                                                  onPressed:
+                                                                      () {},
+                                                                  child: Text(
+                                                                    "Term of Services",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            16,
+                                                                        color: Colors
+                                                                            .white,
+                                                                        decoration:
+                                                                            TextDecoration
+                                                                                .underline,
+                                                                        fontWeight:
+                                                                            FontWeight.w400),
+                                                                  )),
+                                                            ),
+                                                            TextButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                child: Text(
+                                                                  "Cookie",
+                                                                  style: GoogleFonts.ibmPlexSansThai(
+                                                                      fontSize:
+                                                                          16,
                                                                       color: Colors
                                                                           .white,
-                                                                          decoration: TextDecoration.underline,
+                                                                      decoration:
+                                                                          TextDecoration
+                                                                              .underline,
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w400),
-                                                            )),
-                                                        
-                                                        
+                                                                )),
+                                                          ],
+                                                        ),
                                                       ],
                                                     ),
-                                                  ],
-                                                ),
-                                              ),
+                                                  ),
                                                 ],
                                               ),
                                             ),
@@ -1467,73 +1507,7 @@ class _FooterState extends State<Footer> {
                                                   SizedBox(
                                                     height: 10,
                                                   ),
-                                                  ListView.builder(
-                                                      shrinkWrap: true,
-                                                      itemCount:
-                                                          navbarButton.length,
-                                                      itemBuilder:
-                                                          (BuildContext context,
-                                                              int index) {
-                                                        return Container(
-                                                          color: Color.fromARGB(
-                                                              255,
-                                                              52,
-                                                              145,
-                                                              206),
-                                                          child: new Material(
-                                                            color: Colors
-                                                                .transparent,
-                                                            child: new InkWell(
-                                                              onTap: () {},
-                                                              onHover: (value) {
-                                                                setState(() {
-                                                                  if (value) {
-                                                                    onHover =
-                                                                        index;
-                                                                  } else {
-                                                                    onHover =
-                                                                        null;
-                                                                  }
-                                                                });
-                                                              },
-                                                              child: Center(
-                                                                  child:
-                                                                      Container(
-                                                                color: onHover ==
-                                                                        index
-                                                                    ? Color
-                                                                        .fromARGB(
-                                                                            255,
-                                                                            52,
-                                                                            145,
-                                                                            206)
-                                                                    : Color
-                                                                        .fromARGB(
-                                                                            255,
-                                                                            52,
-                                                                            145,
-                                                                            206),
-                                                                child: Column(
-                                                                  children: [
-                                                                    TextButton(
-                                                                        onPressed: () =>
-                                                                            context.go(
-                                                                                '${navbarButton[index].path}'),
-                                                                        child:
-                                                                            Text(
-                                                                          "${navbarButton[index].name}",
-                                                                          style: GoogleFonts.ibmPlexSansThai(
-                                                                              fontSize: 16,
-                                                                              fontWeight: FontWeight.w400,
-                                                                              color: onHover == index ? Color.fromARGB(255, 75, 196, 213) : Colors.white),
-                                                                        )),
-                                                                  ],
-                                                                ),
-                                                              )),
-                                                            ),
-                                                          ),
-                                                        );
-                                                      })
+                                                  navbarBut
                                                 ],
                                               ),
                                             ),
@@ -1550,7 +1524,9 @@ class _FooterState extends State<Footer> {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(
-                                              top: 15, left: 26, ),
+                                            top: 15,
+                                            left: 26,
+                                          ),
                                           child: Container(
                                             width: 303,
                                             height: 20,
@@ -1566,64 +1542,68 @@ class _FooterState extends State<Footer> {
                                           ),
                                         ),
                                         Padding(
-                                                padding: const EdgeInsets.only(
-                                                    left: 20),
-                                                child: Wrap(
-                                                  spacing: 10,
-                                                  children: [
-                                                    Row(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        TextButton(
-                                                            onPressed: () {},
-                                                            child: Text(
-                                                              "Privacy Policy",
-                                                              style: GoogleFonts.ibmPlexSansThai(
+                                          padding:
+                                              const EdgeInsets.only(left: 20),
+                                          child: Wrap(
+                                            spacing: 10,
+                                            children: [
+                                              Row(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  TextButton(
+                                                      onPressed: () {},
+                                                      child: Text(
+                                                        "Privacy Policy",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 13,
-                                                                  color: Colors
-                                                                      .white,
-                                                                      decoration: TextDecoration.underline,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w400),
-                                                            )),
-                                                        TextButton(
-                                                            onPressed: () {},
-                                                            child: Text(
-                                                              "Term of Services",
-                                                              style: GoogleFonts
-                                                                  .ibmPlexSansThai(
-                                                                      color: Colors
-                                                                          .white,
-                                                                          fontSize: 13,
-                                                                          decoration: TextDecoration.underline,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w400),
-                                                            )),
-                                                        TextButton(
-                                                            onPressed: () {},
-                                                            child: Text(
-                                                              "Cookie",
-                                                              style: GoogleFonts
-                                                                  .ibmPlexSansThai(
-                                                                    fontSize: 13,
-                                                                      color: Colors
-                                                                          .white,
-                                                                          decoration: TextDecoration.underline,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w400),
-                                                            )),
-                                                        
-                                                        
-                                                      ],
-                                                    ),
-                                                  ],
-                                                ),
+                                                                color: Colors
+                                                                    .white,
+                                                                decoration:
+                                                                    TextDecoration
+                                                                        .underline,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400),
+                                                      )),
+                                                  TextButton(
+                                                      onPressed: () {},
+                                                      child: Text(
+                                                        "Term of Services",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 13,
+                                                                decoration:
+                                                                    TextDecoration
+                                                                        .underline,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400),
+                                                      )),
+                                                  TextButton(
+                                                      onPressed: () {},
+                                                      child: Text(
+                                                        "Cookie",
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                fontSize: 13,
+                                                                color: Colors
+                                                                    .white,
+                                                                decoration:
+                                                                    TextDecoration
+                                                                        .underline,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400),
+                                                      )),
+                                                ],
                                               ),
+                                            ],
+                                          ),
+                                        ),
                                       ],
                                     ),
                                   ),

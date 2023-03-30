@@ -230,13 +230,11 @@ class _CustomerState extends State<Customer> {
               ),
             )),
       ),
-      Card(
+     Card(
         child: Container(
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(10)),
             width: Responsive.isTablet(context) ? 450 : 343,
-            // height: 250,
-
             child: Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -274,22 +272,26 @@ class _CustomerState extends State<Customer> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Text(
-                      Responsive.isTablet(context)
-                          ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
-                          : "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนดครอบคลุมทุกภาคธุรกิจ",
-                      style: GoogleFonts.josefinSans(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: Color.fromARGB(255, 35, 34, 51)),
-                      textAlign: TextAlign.center,
+                    child: Container(
+                      width: Responsive.isTablet(context) ? 374 : 350,
+                      // height: Responsive.isTablet(context) ? 120 : 165,
+                      child: Text(
+                        Responsive.isTablet(context)
+                            ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
+                            : "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนดครอบคลุมทุกภาคธุรกิจ",
+                        style: GoogleFonts.josefinSans(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            color: Color.fromARGB(255, 35, 34, 51)),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   )
                 ],
               ),
             )),
       ),
-    ];
+      ];
 
     var screenSize = MediaQuery.of(context).size;
 
@@ -335,42 +337,38 @@ class _CustomerState extends State<Customer> {
                   SizedBox(
                     height: Responsive.isDesktop(context) ? 16 : 27,
                   ),
-                  Column(
-                    children: [
-                      Container(
-                        width: Responsive.isDesktop(context)
+                  Container(
+                    width: Responsive.isDesktop(context)
+                        ? 652
+                        : Responsive.isTablet(context)
                             ? 652
+                            : 329,
+                    height: Responsive.isDesktop(context)
+                        ? 60
+                        : Responsive.isTablet(context)
+                            ? 92
+                            : 98,
+                    child: Text(
+                      Responsive.isDesktop(context)
+                          ? 'ด้วยประสบการณ์ Software Solutions ครบวงจร เราได้รับความไว้วางใจ\nให้ดูแลธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน ตลอดจนธุรกิจขนาดเล็ก หรือ SME '
+                          : Responsive.isTablet(context)
+                              ? 'ด้วยประสบการณ์ Software Solutions ครบวงจร เราได้รับความไว้วางใจให้ดูแลธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน ตลอดจนธุรกิจขนาดเล็ก หรือ SME '
+                              : 'ด้วยประสบการณ์ Software Solutions ครบวงจร\nเราได้รับความไว้วางใจให้ดูแล\nธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน\nตลอดจนธุรกิจขนาดเล็ก หรือ SME ',
+                      style: GoogleFonts.ibmPlexSansThai(
+                        fontWeight: FontWeight.w400,
+                        color: Color.fromARGB(255, 108, 108, 114),
+                        fontSize: Responsive.isDesktop(context)
+                            ? 20
                             : Responsive.isTablet(context)
-                                ? 652
-                                : 329,
-                        height: Responsive.isDesktop(context)
-                            ? 60
-                            : Responsive.isTablet(context)
-                                ? 92
-                                : 98,
-                        child: Text(
-                          Responsive.isDesktop(context)
-                              ? 'ด้วยประสบการณ์ Software Solutions ครบวงจร เราได้รับความไว้วางใจ\nให้ดูแลธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน ตลอดจนธุรกิจขนาดเล็ก หรือ SME '
-                              : Responsive.isTablet(context)
-                                  ? 'ด้วยประสบการณ์ Software Solutions ครบวงจร เราได้รับความไว้วางใจให้ดูแลธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน ตลอดจนธุรกิจขนาดเล็ก หรือ SME '
-                                  : 'ด้วยประสบการณ์ Software Solutions ครบวงจร\nเราได้รับความไว้วางใจให้ดูแล\nธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน\nตลอดจนธุรกิจขนาดเล็ก หรือ SME ',
-                          style: GoogleFonts.ibmPlexSansThai(
-                            fontWeight: FontWeight.w400,
-                            color: Color.fromARGB(255, 108, 108, 114),
-                            fontSize: Responsive.isDesktop(context)
                                 ? 20
-                                : Responsive.isTablet(context)
-                                    ? 20
-                                    : 16,
-                          ),
-                          textAlign: Responsive.isDesktop(context)
-                              ? TextAlign.center
-                              : Responsive.isTablet(context)
-                                  ? TextAlign.center
-                                  : TextAlign.start,
-                        ),
+                                : 16,
                       ),
-                    ],
+                      textAlign: Responsive.isDesktop(context)
+                          ? TextAlign.center
+                          : Responsive.isTablet(context)
+                              ? TextAlign.center
+                              : TextAlign.start,
+                    ),
                   ),
                   SizedBox(
                     height: 40,
