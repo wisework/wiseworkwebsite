@@ -21,15 +21,7 @@ class MyDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Future<String> loadjsonData() async {
-    //   return await rootBundle.loadString("assets/test.json");
-    // }
-
-    // Future<void> parsejsonData() async {
-    //   String json = await loadjsonData();
-    //   List<dynamic> data = jsonDecode(json);
-    //   print(data);
-    // }
+    
 
     return Scaffold(
       appBar: AppBar(

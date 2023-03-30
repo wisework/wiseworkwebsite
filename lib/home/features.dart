@@ -71,7 +71,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
 
   // bool _hover = false;
   Future<String> loadjsonData() async {
-    return await rootBundle.loadString("assets/test.json");
+    return await rootBundle.loadString("assets/featuresData.json");
   }
 
   Future<void> parsejsonData() async {

@@ -157,7 +157,7 @@ flutter:
   - assets/faq/Union.png
   - assets/faq/half.png
 
-  - assets/test.json
+  - assets/featuresData.json
 
   - assets/footer/logo.png
   - assets/footer/fb.png
