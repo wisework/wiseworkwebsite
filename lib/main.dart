@@ -14,7 +14,7 @@ import 'package:wiseintern/faq/faqpage.dart';
 import 'package:wiseintern/demo/demopage.dart';
 import 'package:wiseintern/producttable/producttablepage.dart';
 import 'package:wiseintern/features/templateFeatures.dart';
-
+import 'package:wiseintern/products/new_package.dart';
 import 'package:get/get.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
@@ -193,6 +193,13 @@ final GoRouter _router = GoRouter(
                 "ส่วนการตั้งค่าส่วนส่งเสริมที่ถูกพัฒนาขึ้นมาเพื่อให้ผู้ดูแลระบบจัดการกับข้อมูลต่างๆ",
                 "features/system.png",
                 "12");
+          },
+        ),
+        GoRoute(
+          path: 'package/1',
+          builder: (BuildContext context, GoRouterState state) {
+            return MyPackages("Express", "SaaS", "pakages/could.png",
+                "ระบบบริหารจัดการข้อมูลส่วนบุคคล PDPA เหมาะสำหรับองค์กรที่มี การเก็บรวบรวมข้อมูลส่วนบุคคล และข้อมูลส่วนอ่อนไหว จำนวนมาก ฟังก์ชันการใช้งานตรงตาม วัตถุประสงค์ PDPA ตอบโจทย์ธุรกิจ ขนาดกลางและขนาดย่อม");
           },
         ),
       ],
