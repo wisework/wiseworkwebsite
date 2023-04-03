@@ -115,7 +115,7 @@ class WhyPage extends StatelessWidget {
                         height: 130,
                         child: Text(
                           "WHY?",
-                          style: GoogleFonts.bebasNeue(
+                          style: GoogleFonts.ibmPlexSansThai(
                               fontSize: 120,
                               fontWeight: FontWeight.w400,
                               color: Color.fromARGB(255, 5, 45, 97)),
@@ -130,7 +130,7 @@ class WhyPage extends StatelessWidget {
                         height: 130,
                         child: Text(
                           "WISEWORK",
-                          style: GoogleFonts.bebasNeue(
+                          style: GoogleFonts.ibmPlexSansThai(
                               fontSize: 120,
                               fontWeight: FontWeight.w400,
                               color: Color.fromARGB(255, 5, 45, 97)),
@@ -153,7 +153,7 @@ class WhyPage extends StatelessWidget {
                         height: 76,
                         child: Text(
                           'เพราะอะไร ... ทำไมต้อง "เรา"',
-                          style: GoogleFonts.inter(
+                          style: GoogleFonts.ibmPlexSansThai(
                               fontSize: 48,
                               fontWeight: FontWeight.w500,
                               color: Color.fromARGB(255, 5, 45, 97)),
@@ -239,7 +239,7 @@ class WhyPage extends StatelessWidget {
                                 // height: 130,
                                 child: Text(
                                   "WHY?",
-                                  style: GoogleFonts.bebasNeue(
+                                  style: GoogleFonts.ibmPlexSansThai(
                                       fontSize: 120,
                                       fontWeight: FontWeight.w400,
                                       color: Color.fromARGB(255, 5, 45, 97)),
@@ -254,7 +254,7 @@ class WhyPage extends StatelessWidget {
                                 // height: 130,
                                 child: Text(
                                   "WISEWORK",
-                                  style: GoogleFonts.bebasNeue(
+                                  style: GoogleFonts.ibmPlexSansThai(
                                       fontSize: 120,
                                       fontWeight: FontWeight.w400,
                                       color: Color.fromARGB(255, 5, 45, 97)),
@@ -272,7 +272,7 @@ class WhyPage extends StatelessWidget {
                                       // height: 76,
                                       child: Text(
                                         'เพราะอะไร ... ทำไมต้อง "เรา"',
-                                        style: GoogleFonts.inter(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 36,
                                             fontWeight: FontWeight.w500,
                                             color:
@@ -371,7 +371,7 @@ class WhyPage extends StatelessWidget {
                                 // height: 130,
                                 child: Text(
                                   "WHY?",
-                                  style: GoogleFonts.bebasNeue(
+                                  style: GoogleFonts.ibmPlexSansThai(
                                       fontSize: 64,
                                       fontWeight: FontWeight.w400,
                                       color: Color.fromARGB(255, 5, 45, 97)),
@@ -386,7 +386,7 @@ class WhyPage extends StatelessWidget {
                                 // height: 130,
                                 child: Text(
                                   "WISEWORK",
-                                  style: GoogleFonts.bebasNeue(
+                                  style: GoogleFonts.ibmPlexSansThai(
                                       fontSize: 64,
                                       fontWeight: FontWeight.w400,
                                       color: Color.fromARGB(255, 5, 45, 97)),
@@ -404,7 +404,7 @@ class WhyPage extends StatelessWidget {
                                       // height: 76,
                                       child: Text(
                                         'เพราะอะไร ... ทำไมต้อง "เรา"',
-                                        style: GoogleFonts.inter(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w500,
                                             color:

@@ -233,7 +233,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                     child: Center(
                       child: RichText(
                           text: TextSpan(
-                        style: GoogleFonts.nunitoSans(
+                        style: GoogleFonts.ibmPlexSansThai(
                           fontSize: Responsive.isDesktop(context) ? 48 : 36,
                           fontWeight: FontWeight.w700,
                         ),
@@ -260,7 +260,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                         children: [
                           RichText(
                               text: TextSpan(
-                            style: GoogleFonts.nunitoSans(
+                            style: GoogleFonts.ibmPlexSansThai(
                               fontSize: 24,
                               fontWeight: FontWeight.w600,
                             ),
@@ -280,7 +280,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                             ],
                           )),
                           Text(' ที่เหมาะกับธุรกิจของคุณ ?',
-                              style: GoogleFonts.nunitoSans(
+                              style: GoogleFonts.ibmPlexSansThai(
                                 fontSize: 24,
                                 fontWeight: FontWeight.w600,
                               ))

@@ -100,7 +100,7 @@ class PD extends StatelessWidget {
                           children: [
                             Text(
                               "KEY FEATURES",
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.ibmPlexSansThai(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   color: Color.fromARGB(255, 0, 112, 240)),
@@ -110,7 +110,7 @@ class PD extends StatelessWidget {
                               padding: const EdgeInsets.only(top: 8),
                               child: Text(
                                 "Pdmanagement",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.ibmPlexSansThai(
                                     fontSize: 48,
                                     fontWeight: FontWeight.w700,
                                     color: Color.fromARGB(255, 5, 45, 97)),
@@ -183,7 +183,7 @@ class PD extends StatelessWidget {
                             children: [
                               Text(
                                 "KEY FEATURES",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.ibmPlexSansThai(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
                                     color: Color.fromARGB(255, 0, 112, 240)),
@@ -193,7 +193,7 @@ class PD extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 8),
                                 child: Text(
                                   "PD\nManagement",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.ibmPlexSansThai(
                                       fontSize: 44,
                                       fontWeight: FontWeight.w700,
                                       color: Color.fromARGB(255, 5, 45, 97)),

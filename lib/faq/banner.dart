@@ -51,7 +51,7 @@ class _BannerState extends State<BannerPage> {
                               height: 20,
                               child: Text(
                                 "FAQ",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.ibmPlexSansThai(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 16,
                                     color: Color.fromARGB(255, 57, 128, 237)),
@@ -78,14 +78,14 @@ class _BannerState extends State<BannerPage> {
                           children: [
                             Text(
                               "FAQs",
-                              style: GoogleFonts.inter(
+                              style: GoogleFonts.ibmPlexSansThai(
                                   fontSize: 11.77,
                                   fontWeight: FontWeight.w600,
                                   color: Color.fromARGB(255, 83, 104, 106)),
                             ),
                             Text(
                               "Ask us anything",
-                              style: GoogleFonts.inter(
+                              style: GoogleFonts.ibmPlexSansThai(
                                   fontSize: 48,
                                   fontWeight: FontWeight.w600,
                                   color: Color.fromARGB(255, 5, 45, 97)),
@@ -93,7 +93,7 @@ class _BannerState extends State<BannerPage> {
                             ),
                             Text(
                               "มีข้อสงสัยหรือต้องการปรึกษาเกี่ยวกับ wisework เรายินดีให้คำแนะนำ",
-                              style: GoogleFonts.inter(
+                              style: GoogleFonts.ibmPlexSansThai(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w400,
                                   color: Color.fromARGB(255, 5, 45, 97)),
@@ -160,7 +160,7 @@ class _BannerState extends State<BannerPage> {
                                           height: 20,
                                           child: Text(
                                             "FAQ",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontWeight: FontWeight.w600,
                                                 fontSize: 16,
                                                 color: Color.fromARGB(
@@ -187,7 +187,7 @@ class _BannerState extends State<BannerPage> {
                                               const EdgeInsets.only(top: 50),
                                           child: Text(
                                             "FAQs",
-                                            style: GoogleFonts.inter(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 11.77,
                                                 fontWeight: FontWeight.w600,
                                                 color: Color.fromARGB(
@@ -196,7 +196,7 @@ class _BannerState extends State<BannerPage> {
                                         ),
                                         Text(
                                           "Ask us anything",
-                                          style: GoogleFonts.inter(
+                                          style: GoogleFonts.ibmPlexSansThai(
                                               fontSize: 48,
                                               fontWeight: FontWeight.w600,
                                               color: Color.fromARGB(
@@ -204,7 +204,7 @@ class _BannerState extends State<BannerPage> {
                                         ),
                                         Text(
                                           "มีข้อสงสัยหรือต้องการปรึกษาเกี่ยวกับ wisework เรายินดีให้คำแนะนำ",
-                                          style: GoogleFonts.inter(
+                                          style: GoogleFonts.ibmPlexSansThai(
                                               fontSize: 20,
                                               fontWeight: FontWeight.w400,
                                               color: Color.fromARGB(
@@ -277,7 +277,7 @@ class _BannerState extends State<BannerPage> {
                                           height: 20,
                                           child: Text(
                                             "FAQ",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontWeight: FontWeight.w600,
                                                 fontSize: 16,
                                                 color: Color.fromARGB(
@@ -305,7 +305,7 @@ class _BannerState extends State<BannerPage> {
                                         padding: const EdgeInsets.only(top: 50),
                                         child: Text(
                                           "FAQs",
-                                          style: GoogleFonts.inter(
+                                          style: GoogleFonts.ibmPlexSansThai(
                                               fontSize: 11.77,
                                               fontWeight: FontWeight.w600,
                                               color: Color.fromARGB(
@@ -314,7 +314,7 @@ class _BannerState extends State<BannerPage> {
                                       ),
                                       Text(
                                         "Ask us anything",
-                                        style: GoogleFonts.inter(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w600,
                                             color:
@@ -324,7 +324,7 @@ class _BannerState extends State<BannerPage> {
                                         padding: const EdgeInsets.only(top: 17),
                                         child: Text(
                                           "มีข้อสงสัยหรือต้องการปรึกษาเกี่ยวกับ\nwisework เรายินดีให้คำแนะนำ",
-                                          style: GoogleFonts.inter(
+                                          style: GoogleFonts.ibmPlexSansThai(
                                               fontSize: 16,
                                               fontWeight: FontWeight.w400,
                                               color: Color.fromARGB(
@@ -389,7 +389,7 @@ class _SearchBoxState extends State<SearchBox> {
           filled: true,
           fillColor: Colors.white,
           hintText: 'Search here',
-          hintStyle: GoogleFonts.inter(
+          hintStyle: GoogleFonts.ibmPlexSansThai(
               fontSize: 16,
               fontWeight: FontWeight.w400,
               color: Color.fromARGB(255, 183, 197, 204)),

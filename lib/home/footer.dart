@@ -132,9 +132,9 @@ class _FooterState extends State<Footer> {
     ];
 
     var navbarBut = Container(
-        height: 160,
+        height: Responsive.isTablet(context) ? 180 :160,
         // color: Colors.red,
-        width: Responsive.isDesktop(context) ? 100 : 150,
+        width: Responsive.isDesktop(context) ? 100 : Responsive.isTablet(context) ?100:  150,
         child: ListView.builder(
             shrinkWrap: true,
             itemCount: navbarButton.length,
@@ -812,7 +812,7 @@ class _FooterState extends State<Footer> {
                                                       Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                .only(top: 135),
+                                                                .only(top:100),
                                                         child: QLink,
                                                       ),
                                                       SizedBox(
@@ -821,7 +821,7 @@ class _FooterState extends State<Footer> {
                                                       Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                .only(top: 135),
+                                                                .only(top: 100),
                                                         child: contact,
                                                       )
                                                     ],
@@ -1053,7 +1053,7 @@ class _FooterState extends State<Footer> {
                                                   Padding(
                                                     padding:
                                                         const EdgeInsets.only(
-                                                      top: 10,
+                                                      top: 30,
                                                     ),
                                                     child: Center(
                                                       child: Container(
@@ -1310,7 +1310,7 @@ class _FooterState extends State<Footer> {
                                               top: 209, left: 29),
                                           child: Text(
                                             "Contact Us",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 25,
                                                 fontWeight: FontWeight.w600,
                                                 color: Colors.white),
@@ -1324,7 +1324,7 @@ class _FooterState extends State<Footer> {
                                           ),
                                           child: Text(
                                             "Get latest updates and offers. Try It Today.",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.w400,
                                                 color: Colors.white),

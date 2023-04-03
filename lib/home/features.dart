@@ -7,7 +7,7 @@ import 'package:wiseintern/model/features.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 
-import 'package:wiseintern/features/new.dart';
+import 'package:wiseintern/features/templateFeatures.dart';
 
 class FeaturesPage extends StatefulWidget {
   const FeaturesPage({Key? key}) : super(key: key);
@@ -230,7 +230,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                                 )),
                                                             Text(
                                                               '${features[index].title}',
-                                                              style: GoogleFonts.poppins(
+                                                              style: GoogleFonts.ibmPlexSansThai(
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -291,7 +291,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                                 children: [
                                                                   Text(
                                                                     "more",
-                                                                    style: GoogleFonts.inter(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         color: Color.fromARGB(
@@ -386,7 +386,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                         ),
                                                         Text(
                                                           '${features[index].title}',
-                                                          style: GoogleFonts.poppins(
+                                                          style: GoogleFonts.ibmPlexSansThai(
                                                               fontWeight: FontWeight
                                                                   .w500,
                                                               fontSize: 20,
@@ -495,7 +495,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                                   )),
                                                               Text(
                                                                 '${features[index].title}',
-                                                                style: GoogleFonts.poppins(
+                                                                style: GoogleFonts.ibmPlexSansThai(
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,

@@ -48,7 +48,7 @@ class _CompareState extends State<Compare> {
                         height: 25,
                         child: Text(
                           "Package",
-                          style: GoogleFonts.poppins(
+                          style: GoogleFonts.ibmPlexSansThai(
                               fontWeight: FontWeight.w600,
                               fontSize: 16,
                               color: Color.fromARGB(255, 57, 128, 237)),
@@ -77,7 +77,7 @@ class _CompareState extends State<Compare> {
             SizedBox(height: 25),
             Text(
               "แนะนำแพ็กเกจที่เหมาะที่สุดสำหรับธุรกิจของคุณ",
-              style: GoogleFonts.nunito(
+              style: GoogleFonts.ibmPlexSansThai(
                   fontSize: !Responsive.isMobile(context) ? 24 : 16,
                   fontWeight: FontWeight.w400,
                   color: Color.fromARGB(255, 75, 196, 213)),

@@ -216,7 +216,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                               height: 25,
                               child: Text(
                                 "Ours Services",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.ibmPlexSansThai(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 16,
                                     color: Color.fromARGB(255, 57, 128, 237)),
@@ -380,7 +380,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                                               ),
                                               Text(
                                                 '${list[index].title}',
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: !Responsive
                                                             .isMobile(context)
                                                         ? 24
@@ -449,7 +449,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
                                         children: [
                                           Text(
                                             '${list[index].description}',
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                               fontWeight: FontWeight.w400,
                                               color: hoveredIndex == index
                                                   ? Color.fromARGB(

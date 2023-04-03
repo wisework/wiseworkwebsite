@@ -4,70 +4,70 @@
       "title": "PD Management",
       "description": "จัดการบันทึกรายการข้อมูลส่วนบุคคลและการไหลของข้อมูล (Data Flow)",
       "imageUrl":"features/folder.png",
-      "page" : "detail/1",
+      "page" : "/detail/1",
       "detail" : "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่ มาตรา 24 , มาตรา 26, มาตรา 30, มาตรา 31, มาตรา 32, มาตรา 36(1), มาตรา 39"
     },
     {
       "title": "DPIA & Risk Management",
       "description": "การบริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล",
       "imageUrl":"features/risk.png",
-      "page" : "detail/2",
+      "page" : "/detail/2",
       "detail" : "2"
     },
     {
       "title": "Cookie Consent",
       "description": "การขอความยินยอมจากเจ้าของข้อมูลและการบริหารจัดการคุกกี้",
       "imageUrl":"features/cookie.png",
-      "page" : "detail/3",
+      "page" : "/detail/3",
       "detail" : "3"
     },
     {
       "title": "Consent Management",
       "description": "การบริหารจัดการให้ความยินยอม",
       "imageUrl":"features/consent.png",
-      "page" : "detail/4",
+      "page" : "/detail/4",
       "detail" : "4"
     },
     {
       "title": "Data Subject Right Management",
       "description": "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูล",
       "imageUrl":"features/data.png",
-      "page" : "detail/5",
+      "page" : "/detail/5",
       "detail" : "5"
     },
     {
       "title": "Data Breach",
       "description": "บริหารกรณีเกิดข้อมูลรั่วไหล",
       "imageUrl":"features/breach.png",
-      "page" : "detail/6",
+      "page" : "/detail/6",
       "detail" : "6"
     },
     {
       "title": "Audit&Gap Management",
       "description": "บริหารงานตรวจสอบและการทำ GAP Analysis",
       "imageUrl":"features/audit.png",
-      "page" : "detail/7",
+      "page" : "/detail/7",
       "detail" : "7"
     },
     {
       "title": "Policy&Notices Management",
       "description": "บริหารการสื่อสารนโยบายและประกาศความเป็นส่วนตัว",
       "imageUrl":"features/policy.png",
-      "page" : "detail/8",
+      "page" : "/detail/8",
       "detail" : "8"
     },
     {
       "title": "Data Discover",
       "description": "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
       "imageUrl":"features/discovery.png",
-      "page" : "detail/9",
+      "page" : "/detail/9",
       "detail" : "9"
     },
     {
       "title": "Executive Support System",
       "description": "บริหารงานและจัดการรายงาน สำหรับผู้บริหาร",
       "imageUrl":"features/executive.png",
-      "page" : "detail/10",
+      "page" : "/detail/10",
       "detail" : "10"
     },
     {

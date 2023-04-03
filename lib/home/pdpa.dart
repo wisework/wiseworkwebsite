@@ -156,7 +156,7 @@ class _PdpaState extends State<Pdpa> {
                                                               // color: Colors.amber,
                                                               child: Text(
                                                                 "PRIVACY PROTECTION",
-                                                                style: GoogleFonts.poppins(
+                                                                style: GoogleFonts.ibmPlexSansThai(
                                                                     color: Color
                                                                         .fromARGB(
                                                                             255,
@@ -257,7 +257,7 @@ class _PdpaState extends State<Pdpa> {
                                                               // color: Colors.amber,
                                                               child: Text(
                                                                 "SECURITY INTELLIGENCE",
-                                                                style: GoogleFonts.poppins(
+                                                                style: GoogleFonts.ibmPlexSansThai(
                                                                     color: Color
                                                                         .fromARGB(
                                                                             255,
@@ -358,7 +358,7 @@ class _PdpaState extends State<Pdpa> {
                                                               // color: Colors.amber,
                                                               child: Text(
                                                                 "BEST DESIGN SOLUTION",
-                                                                style: GoogleFonts.poppins(
+                                                                style: GoogleFonts.ibmPlexSansThai(
                                                                     color: Color
                                                                         .fromARGB(
                                                                             255,
@@ -579,7 +579,7 @@ class _PdpaState extends State<Pdpa> {
                                                                     // color: Colors.amber,
                                                                     child: Text(
                                                                       "PRIVACY PROTECTION",
-                                                                      style: GoogleFonts.poppins(
+                                                                      style: GoogleFonts.ibmPlexSansThai(
                                                                           color: Color.fromARGB(
                                                                               255,
                                                                               35,
@@ -681,7 +681,7 @@ class _PdpaState extends State<Pdpa> {
                                                                     // color: Colors.amber,
                                                                     child: Text(
                                                                       "SECURITY INTELLIGENCE",
-                                                                      style: GoogleFonts.poppins(
+                                                                      style: GoogleFonts.ibmPlexSansThai(
                                                                           color: Color.fromARGB(
                                                                               255,
                                                                               35,
@@ -783,7 +783,7 @@ class _PdpaState extends State<Pdpa> {
                                                                     // color: Colors.amber,
                                                                     child: Text(
                                                                       "BEST DESIGN SOLUTION",
-                                                                      style: GoogleFonts.poppins(
+                                                                      style: GoogleFonts.ibmPlexSansThai(
                                                                           color: Color.fromARGB(
                                                                               255,
                                                                               35,
@@ -974,7 +974,7 @@ class _PdpaState extends State<Pdpa> {
                                                   // color: Colors.amber,
                                                   child: Text(
                                                     "PRIVACY PROTECTION",
-                                                    style: GoogleFonts.poppins(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         color: Color.fromARGB(
                                                             255, 35, 34, 51),
                                                         fontSize: 20,
@@ -1045,7 +1045,7 @@ class _PdpaState extends State<Pdpa> {
                                                   // color: Colors.amber,
                                                   child: Text(
                                                     "SECURITY INTELLIGENCE",
-                                                    style: GoogleFonts.poppins(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         color: Color.fromARGB(
                                                             255, 35, 34, 51),
                                                         fontSize: 20,
@@ -1116,7 +1116,7 @@ class _PdpaState extends State<Pdpa> {
                                                   // color: Colors.amber,
                                                   child: Text(
                                                     "BEST DESIGN SOLUTION",
-                                                    style: GoogleFonts.poppins(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         color: Color.fromARGB(
                                                             255, 35, 34, 51),
                                                         fontSize: 20,

@@ -77,7 +77,7 @@ class _CustomerState extends State<Customer> {
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
                       "คุณณัฏฐ์ ณัฐนิธิการัตน์",
-                      style: GoogleFonts.josefinSans(
+                      style: GoogleFonts.ibmPlexSansThai(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: Color.fromARGB(255, 35, 34, 51)),
@@ -88,7 +88,7 @@ class _CustomerState extends State<Customer> {
                     padding: const EdgeInsets.only(left: 10,right:10),
                     child: Text(
                       "ประธานเจ้าหน้าที่บริหาร\nAdvice IT Infinite Co.,Ltd.",
-                      style: GoogleFonts.josefinSans(
+                      style: GoogleFonts.ibmPlexSansThai(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 57, 128, 237)),
@@ -101,7 +101,7 @@ class _CustomerState extends State<Customer> {
                       Responsive.isTablet(context)
                           ? "“เราตระหนักถึงความสำคัญการคุ้มครอง ข้อมูลส่วนบุคคลหนึ่งในรากฐานที่สร้างความสัมพันธ์ทางธุรกิจและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”"
                           : "“เราตระหนักถึงความสำคัญการคุ้มครองข้อมูลส่วนบุคคล หนึ่งในรากฐานที่สร้างความสัมพันธ์ทางธุรกิจและสร้างความน่าเชื่อถือที่ลูกค้ามีต่อเรา”",
-                      style: GoogleFonts.josefinSans(
+                      style: GoogleFonts.ibmPlexSansThai(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 35, 34, 51)),
@@ -134,7 +134,7 @@ class _CustomerState extends State<Customer> {
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
                       "คุณจิรายุส ทรัพย์ศรีโสภา",
-                      style: GoogleFonts.josefinSans(
+                      style: GoogleFonts.ibmPlexSansThai(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: Color.fromARGB(255, 35, 34, 51)),
@@ -145,7 +145,7 @@ class _CustomerState extends State<Customer> {
                     padding: const EdgeInsets.only(left: 10,right: 10),
                     child: Text(
                       "Founder & Group CEO",
-                      style: GoogleFonts.josefinSans(
+                      style: GoogleFonts.ibmPlexSansThai(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 57, 128, 237)),
@@ -158,7 +158,7 @@ class _CustomerState extends State<Customer> {
                       Responsive.isTablet(context)
                           ? "BitKub ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งานดังนั้นเราจึงให้ความสำคัญอย่างมากเกี่ยวกับ การปฏิบัติตามกฎหมาย PDPAโดยเราเลือกใช้ระบบโมดูลที่มีCenterเข้ามาช่วยในการบริหารจัดการข้อมูลคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม "
                           : "BitKub ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งานดังนั้นเราจึงให้ความสำคัญอย่างมากเกี่ยวกับการปฏิบัติตามกฎหมาย PDPAโดยเราเลือกใช้ระบบโมดูลที่มีCenterเข้ามาช่วยในการบริหารจัดการข้อมูลคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม ",
-                      style: GoogleFonts.josefinSans(
+                      style: GoogleFonts.ibmPlexSansThai(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 35, 34, 51)),
@@ -191,7 +191,7 @@ class _CustomerState extends State<Customer> {
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
                       "ANN LUBIN",
-                      style: GoogleFonts.josefinSans(
+                      style: GoogleFonts.ibmPlexSansThai(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: Color.fromARGB(255, 35, 34, 51)),
@@ -202,7 +202,7 @@ class _CustomerState extends State<Customer> {
                     padding: const EdgeInsets.only(left:10,right:10),
                     child: Text(
                       "Co-Funder",
-                      style: GoogleFonts.josefinSans(
+                      style: GoogleFonts.ibmPlexSansThai(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 57, 128, 237)),
@@ -218,7 +218,7 @@ class _CustomerState extends State<Customer> {
                         Responsive.isTablet(context)
                             ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
                             : "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนดครอบคลุมทุกภาคธุรกิจ",
-                        style: GoogleFonts.josefinSans(
+                        style: GoogleFonts.ibmPlexSansThai(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
                             color: Color.fromARGB(255, 35, 34, 51)),
@@ -252,7 +252,7 @@ class _CustomerState extends State<Customer> {
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
                       "คุณอมร ทองธิว",
-                      style: GoogleFonts.josefinSans(
+                      style: GoogleFonts.ibmPlexSansThai(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: Color.fromARGB(255, 35, 34, 51)),
@@ -263,7 +263,7 @@ class _CustomerState extends State<Customer> {
                     padding: const EdgeInsets.only(left:10,right:10),
                     child: Text(
                       "กรรมการและรองกรรมการผู้จัดการ",
-                      style: GoogleFonts.josefinSans(
+                      style: GoogleFonts.ibmPlexSansThai(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 57, 128, 237)),
@@ -279,7 +279,7 @@ class _CustomerState extends State<Customer> {
                         Responsive.isTablet(context)
                             ? "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ"
                             : "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้นเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ ทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไปตามกรอบที่กฎหมายกำหนดครอบคลุมทุกภาคธุรกิจ",
-                        style: GoogleFonts.josefinSans(
+                        style: GoogleFonts.ibmPlexSansThai(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
                             color: Color.fromARGB(255, 35, 34, 51)),
@@ -320,7 +320,7 @@ class _CustomerState extends State<Customer> {
                       ? Padding(
                           padding: const EdgeInsets.only(right: 120),
                           child: Text('ลูกค้าคนสำคัญของเรา',
-                              style: GoogleFonts.nunito(
+                              style: GoogleFonts.ibmPlexSansThai(
                                 fontWeight: FontWeight.w700,
                                 color: Color.fromARGB(255, 5, 45, 97),
                                 fontSize: 24,
@@ -328,7 +328,7 @@ class _CustomerState extends State<Customer> {
                         )
                       : Text(
                           'ลูกค้าคนสำคัญของเรา',
-                          style: GoogleFonts.nunito(
+                          style: GoogleFonts.ibmPlexSansThai(
                             fontWeight: FontWeight.w700,
                             color: Color.fromARGB(255, 5, 45, 97),
                             fontSize: Responsive.isDesktop(context) ? 48 : 36,
@@ -1194,7 +1194,7 @@ class _CustomerState extends State<Customer> {
                                                       : 77,
                                                   child: Text(
                                                     "Real Stories from\nReal Customers",
-                                                    style: GoogleFonts.poppins(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         fontSize: Responsive
                                                                 .isTablet(
                                                                     context)
@@ -1536,7 +1536,7 @@ class _CustomerState extends State<Customer> {
                                         ),
                                         Text(
                                           "#Teamwisework",
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.ibmPlexSansThai(
                                               fontSize: 25,
                                               fontWeight: FontWeight.w600,
                                               color: Colors.white),

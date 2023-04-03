@@ -128,7 +128,7 @@ class _QuestionsState extends State<Questions> {
         ),
         child: Text(
           'รับคำปรึกษา',
-          style: GoogleFonts.ibmPlexSans(
+          style: GoogleFonts.ibmPlexSansThai(
             fontSize: 20,
             fontWeight: FontWeight.w500,
           ),

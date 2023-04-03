@@ -39,7 +39,7 @@ class _CompareState extends State<Compare> {
               children: [
                 Text(
                   "แนะนำแพ็กเกจที่เหมาะที่สุดสำหรับธุรกิจของคุณ",
-                  style: GoogleFonts.nunito(
+                  style: GoogleFonts.ibmPlexSansThai(
                       fontSize: 24,
                       fontWeight: FontWeight.w400,
                       color: Color.fromARGB(255, 75, 196, 213)),
@@ -105,7 +105,7 @@ class _CompareState extends State<Compare> {
               ?Padding(
                 padding: const EdgeInsets.only(top: 50),
                 child: Text("แนะนำแพ็กเกจที่เหมาะที่สุดสำหรับธุรกิจของคุณ",
-                style: GoogleFonts.nunito(
+                style: GoogleFonts.ibmPlexSansThai(
                   fontSize:24,
                   fontWeight: FontWeight.w500,
                   color: Color.fromARGB(255, 75, 195, 213)
@@ -114,7 +114,7 @@ class _CompareState extends State<Compare> {
               :Padding(
                 padding: const EdgeInsets.only(top: 25),
                 child: Text("แนะนำแพ็กเกจที่เหมาะที่สุดสำหรับธุรกิจของคุณ",
-                style: GoogleFonts.nunito(
+                style: GoogleFonts.ibmPlexSansThai(
                   fontSize:16,
                   fontWeight: FontWeight.w500,
                   color: Color.fromARGB(255, 75, 195, 213)

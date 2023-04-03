@@ -88,7 +88,7 @@ class _Register extends State<Register> {
                                                 height: 20,
                                                 child: Text(
                                                   "Get A Free Demo",
-                                                  style: GoogleFonts.poppins(
+                                                  style: GoogleFonts.ibmPlexSansThai(
                                                       fontWeight:
                                                           FontWeight.w600,
                                                       fontSize: 16,
@@ -115,7 +115,7 @@ class _Register extends State<Register> {
                                             top: 77, left: 78),
                                         child: Text(
                                           "ทดลองใช้งานฟรี",
-                                          style: GoogleFonts.ibmPlexSans(
+                                          style: GoogleFonts.ibmPlexSansThai(
                                               fontSize: 48,
                                               fontWeight: FontWeight.w600,
                                               color: Color.fromARGB(
@@ -128,7 +128,7 @@ class _Register extends State<Register> {
                                             top: 21, left: 78),
                                         child: Text(
                                           "สัมผัสประสบการณ์ใหม่ของการจัดการข้อมูลส่วนตัว\nที่แตกต่างอย่างเป็นระบบ ทดลองใช้งานโปรแกรม\nPDPA Management Platform ได้แล้ววันนี้เพียง",
-                                          style: GoogleFonts.ibmPlexSans(
+                                          style: GoogleFonts.ibmPlexSansThai(
                                               fontSize: 24,
                                               fontWeight: FontWeight.w500,
                                               color: Color.fromARGB(
@@ -143,7 +143,7 @@ class _Register extends State<Register> {
                                             onPressed: () {},
                                             child: Text(
                                               "คลิกลงทะเบียน",
-                                              style: GoogleFonts.ibmPlexSans(
+                                              style: GoogleFonts.ibmPlexSansThai(
                                                   fontSize: 24,
                                                   fontWeight: FontWeight.w500,
                                                   color: Color.fromARGB(
@@ -239,7 +239,7 @@ class _Register extends State<Register> {
                                                             left: 14,
                                                             child: Text(
                                                               "ลดความยุ่งยาก\nจากการทำงานที่ซ้ำซ้อน",
-                                                              style: GoogleFonts.poppins(
+                                                              style: GoogleFonts.ibmPlexSansThai(
                                                                   fontSize: 24,
                                                                   fontWeight:
                                                                       FontWeight
@@ -265,7 +265,7 @@ class _Register extends State<Register> {
                                                             left: 120,
                                                             child: Text(
                                                               "ประหยัดเวลาในการทำงาน",
-                                                              style: GoogleFonts.poppins(
+                                                              style: GoogleFonts.ibmPlexSansThai(
                                                                   fontSize: 24,
                                                                   fontWeight:
                                                                       FontWeight
@@ -291,7 +291,7 @@ class _Register extends State<Register> {
                                                             left: 236,
                                                             child: Text(
                                                               "ลดภาระของ\nData Protection Officer",
-                                                              style: GoogleFonts.poppins(
+                                                              style: GoogleFonts.ibmPlexSansThai(
                                                                   fontSize: 24,
                                                                   fontWeight:
                                                                       FontWeight
@@ -412,7 +412,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "ชื่อ-นามสกุล",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -426,7 +426,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "*",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -448,7 +448,7 @@ class _Register extends State<Register> {
                                                           InputDecoration(
                                                         hintText: 'wisework',
                                                         hintStyle:
-                                                            GoogleFonts.poppins(
+                                                            GoogleFonts.ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -492,7 +492,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "ชื่อบริษัท",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -506,7 +506,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "*",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -529,7 +529,7 @@ class _Register extends State<Register> {
                                                         hintText:
                                                             'The wisework co.,Ltd.',
                                                         hintStyle:
-                                                            GoogleFonts.poppins(
+                                                            GoogleFonts.ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -581,7 +581,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "อีเมล",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -595,7 +595,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "*",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -618,7 +618,7 @@ class _Register extends State<Register> {
                                                         hintText:
                                                             'hello@thewiseworks.com',
                                                         hintStyle:
-                                                            GoogleFonts.poppins(
+                                                            GoogleFonts.ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -662,7 +662,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "เบอร์โทรศัพท์",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -676,7 +676,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "*",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -699,7 +699,7 @@ class _Register extends State<Register> {
                                                         hintText:
                                                             'xxx-xxx-xxxx',
                                                         hintStyle:
-                                                            GoogleFonts.poppins(
+                                                            GoogleFonts.ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -751,7 +751,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "จำนวนผู้ใช้งาน",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -765,7 +765,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "*",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -787,7 +787,7 @@ class _Register extends State<Register> {
                                                           InputDecoration(
                                                         // hintText: 'hello@thewiseworks.com',
                                                         hintStyle:
-                                                            GoogleFonts.poppins(
+                                                            GoogleFonts.ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -831,7 +831,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "เลือกประเภทธุรกิจ",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -845,7 +845,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "*",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -884,7 +884,7 @@ class _Register extends State<Register> {
                                                           hint: Text(
                                                             'เลือกประเภทธุรกิจ',
                                                             style: GoogleFonts
-                                                                .montserrat(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         18,
                                                                     fontWeight:
@@ -925,7 +925,7 @@ class _Register extends State<Register> {
                                                               value: option,
                                                               child: Text(
                                                                 option,
-                                                                style: GoogleFonts.montserrat(
+                                                                style: GoogleFonts.ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1004,7 +1004,7 @@ class _Register extends State<Register> {
                                                     hint: Text(
                                                       'เลือกแพ็กเกจ',
                                                       style: GoogleFonts
-                                                          .montserrat(
+                                                          .ibmPlexSansThai(
                                                               fontSize: 18,
                                                               fontWeight:
                                                                   FontWeight
@@ -1039,7 +1039,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           option,
                                                           style: GoogleFonts
-                                                              .montserrat(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 16,
                                                                   fontWeight:
                                                                       FontWeight
@@ -1138,7 +1138,7 @@ class _Register extends State<Register> {
                                                       child: Text(
                                                         "CMC (Consent Management)\nPDM (Personal Data Management)\nDSR (Data Subject Right Management)",
                                                         style: GoogleFonts
-                                                            .ibmPlexSans(
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 18,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1181,7 +1181,7 @@ class _Register extends State<Register> {
                                                     child: Text(
                                                       'ลงทะเบียน',
                                                       style: GoogleFonts
-                                                          .ibmPlexSans(
+                                                          .ibmPlexSansThai(
                                                               fontSize: 42,
                                                               fontWeight:
                                                                   FontWeight
@@ -1245,7 +1245,7 @@ class _Register extends State<Register> {
                                                           child: Text(
                                                             'สมัครใช้งานด้วย Google',
                                                             style: GoogleFonts
-                                                                .ibmPlexSans(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         38,
                                                                     fontWeight:
@@ -1316,13 +1316,13 @@ class _Register extends State<Register> {
                                   child: Column(
                                     children: [
                                       Text("ได้รับความไว้วางใจ",
-                                          style: GoogleFonts.inter(
+                                          style: GoogleFonts.ibmPlexSansThai(
                                               color: Color.fromARGB(
                                                   255, 52, 145, 206),
                                               fontSize: 48,
                                               fontWeight: FontWeight.w700)),
                                       Text("จากองค์กรทั่วประเทศ",
-                                          style: GoogleFonts.inter(
+                                          style: GoogleFonts.ibmPlexSansThai(
                                               color: Colors.black,
                                               fontSize: 48,
                                               fontWeight: FontWeight.w700)),
@@ -1356,7 +1356,7 @@ class _Register extends State<Register> {
                                           ),
                                           Text(
                                             "80+",
-                                            style: GoogleFonts.inter(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 36,
                                                 fontWeight: FontWeight.w700,
                                                 color: Color.fromARGB(
@@ -1367,7 +1367,7 @@ class _Register extends State<Register> {
                                                 const EdgeInsets.only(top: 20),
                                             child: Text(
                                               "ธุรกิจ และองค์กรต่างๆ ที่เราได้รับความไว้วางใจ\nให้ wisework ดูแลมากกว่า 80 โครงการ",
-                                              style: GoogleFonts.inter(
+                                              style: GoogleFonts.ibmPlexSansThai(
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                   color: Color.fromARGB(
@@ -1404,7 +1404,7 @@ class _Register extends State<Register> {
                                             ),
                                             Text(
                                               "10 ปี",
-                                              style: GoogleFonts.inter(
+                                              style: GoogleFonts.ibmPlexSansThai(
                                                   fontSize: 36,
                                                   fontWeight: FontWeight.w700,
                                                   color: Color.fromARGB(
@@ -1415,7 +1415,7 @@ class _Register extends State<Register> {
                                                   top: 20),
                                               child: Text(
                                                 "ทีมงานมากประสบการณ์ และเชี่ยวชาญ\nในวงการ Cyber Security กว่า 10 ปี",
-                                                style: GoogleFonts.inter(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w500,
                                                     color: Color.fromARGB(
@@ -1450,7 +1450,7 @@ class _Register extends State<Register> {
                                           ),
                                           Text(
                                             "24 ชั่วโมง",
-                                            style: GoogleFonts.inter(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 36,
                                                 fontWeight: FontWeight.w700,
                                                 color: Color.fromARGB(
@@ -1461,7 +1461,7 @@ class _Register extends State<Register> {
                                                 const EdgeInsets.only(top: 20),
                                             child: Text(
                                               "บริการดูแลระดับ Premium Support\nโดยทีมงานในประเทศไทยตลอด 24 ชั่วโมง",
-                                              style: GoogleFonts.inter(
+                                              style: GoogleFonts.ibmPlexSansThai(
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                   color: Color.fromARGB(
@@ -1540,7 +1540,7 @@ class _Register extends State<Register> {
                                             height: 20,
                                             child: Text(
                                               "Get A Free Demo",
-                                              style: GoogleFonts.poppins(
+                                              style: GoogleFonts.ibmPlexSansThai(
                                                   fontWeight: FontWeight.w600,
                                                   fontSize: 16,
                                                   color: Color.fromARGB(
@@ -1649,7 +1649,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "ชื่อ-นามสกุล",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -1663,7 +1663,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -1685,7 +1685,7 @@ class _Register extends State<Register> {
                                                                     InputDecoration(
                                                                   hintText:
                                                                       'wisework',
-                                                                  hintStyle: GoogleFonts.poppins(
+                                                                  hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                       fontSize:
                                                                           16,
                                                                       fontWeight:
@@ -1732,7 +1732,7 @@ class _Register extends State<Register> {
                                                                 Container(
                                                                   child: Text(
                                                                     "ชื่อบริษัท",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -1746,7 +1746,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -1768,7 +1768,7 @@ class _Register extends State<Register> {
                                                                     InputDecoration(
                                                                   hintText:
                                                                       'The wisework co.,Ltd.',
-                                                                  hintStyle: GoogleFonts.poppins(
+                                                                  hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                       fontSize:
                                                                           16,
                                                                       fontWeight:
@@ -1820,7 +1820,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "ชื่อ-นามสกุล",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -1834,7 +1834,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -1856,7 +1856,7 @@ class _Register extends State<Register> {
                                                                     InputDecoration(
                                                                   hintText:
                                                                       'wisework',
-                                                                  hintStyle: GoogleFonts.poppins(
+                                                                  hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                       fontSize:
                                                                           16,
                                                                       fontWeight:
@@ -1906,7 +1906,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "ชื่อบริษัท",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -1920,7 +1920,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -1942,7 +1942,7 @@ class _Register extends State<Register> {
                                                                     InputDecoration(
                                                                   hintText:
                                                                       'The wisework co.,Ltd.',
-                                                                  hintStyle: GoogleFonts.poppins(
+                                                                  hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                       fontSize:
                                                                           16,
                                                                       fontWeight:
@@ -1998,7 +1998,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "อีเมล",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2012,7 +2012,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2034,7 +2034,7 @@ class _Register extends State<Register> {
                                                                     InputDecoration(
                                                                   hintText:
                                                                       'hello@thewiseworks.com',
-                                                                  hintStyle: GoogleFonts.poppins(
+                                                                  hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                       fontSize:
                                                                           16,
                                                                       fontWeight:
@@ -2081,7 +2081,7 @@ class _Register extends State<Register> {
                                                                 Container(
                                                                   child: Text(
                                                                     "เบอร์โทรศัพท์",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2095,7 +2095,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2117,7 +2117,7 @@ class _Register extends State<Register> {
                                                                     InputDecoration(
                                                                   hintText:
                                                                       'xxx-xxx-xxxx',
-                                                                  hintStyle: GoogleFonts.poppins(
+                                                                  hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                       fontSize:
                                                                           16,
                                                                       fontWeight:
@@ -2169,7 +2169,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "อีเมล",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2183,7 +2183,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2205,7 +2205,7 @@ class _Register extends State<Register> {
                                                                     InputDecoration(
                                                                   hintText:
                                                                       'hello@thewiseworks.com',
-                                                                  hintStyle: GoogleFonts.poppins(
+                                                                  hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                       fontSize:
                                                                           16,
                                                                       fontWeight:
@@ -2255,7 +2255,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "เบอร์โทรศัพท์",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2269,7 +2269,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2291,7 +2291,7 @@ class _Register extends State<Register> {
                                                                     InputDecoration(
                                                                   hintText:
                                                                       'xxx-xxx-xxxx',
-                                                                  hintStyle: GoogleFonts.poppins(
+                                                                  hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                       fontSize:
                                                                           16,
                                                                       fontWeight:
@@ -2347,7 +2347,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "จำนวนผู้ใช้งาน",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2361,7 +2361,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2382,7 +2382,7 @@ class _Register extends State<Register> {
                                                                 decoration:
                                                                     InputDecoration(
                                                                   // hintText: 'hello@thewiseworks.com',
-                                                                  hintStyle: GoogleFonts.poppins(
+                                                                  hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                       fontSize:
                                                                           16,
                                                                       fontWeight:
@@ -2429,7 +2429,7 @@ class _Register extends State<Register> {
                                                                 Container(
                                                                   child: Text(
                                                                     "เลือกประเภทธุรกิจ",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2443,7 +2443,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2485,7 +2485,7 @@ class _Register extends State<Register> {
                                                                         selectedOption,
                                                                     hint: Text(
                                                                       'เลือกประเภทธุรกิจ',
-                                                                      style: GoogleFonts.montserrat(
+                                                                      style: GoogleFonts.ibmPlexSansThai(
                                                                           fontSize:
                                                                               18,
                                                                           fontWeight: FontWeight
@@ -2530,7 +2530,7 @@ class _Register extends State<Register> {
                                                                         child:
                                                                             Text(
                                                                           option,
-                                                                          style: GoogleFonts.montserrat(
+                                                                          style: GoogleFonts.ibmPlexSansThai(
                                                                               fontSize: 16,
                                                                               fontWeight: FontWeight.w500,
                                                                               color: Colors.black),
@@ -2582,7 +2582,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "จำนวนผู้ใช้งาน",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2596,7 +2596,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2617,7 +2617,7 @@ class _Register extends State<Register> {
                                                                 decoration:
                                                                     InputDecoration(
                                                                   // hintText: 'hello@thewiseworks.com',
-                                                                  hintStyle: GoogleFonts.poppins(
+                                                                  hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                       fontSize:
                                                                           16,
                                                                       fontWeight:
@@ -2666,7 +2666,7 @@ class _Register extends State<Register> {
                                                                 Container(
                                                                   child: Text(
                                                                     "ประเภทธุรกิจ",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2680,7 +2680,7 @@ class _Register extends State<Register> {
                                                                   // width: 310,
                                                                   child: Text(
                                                                     "*",
-                                                                    style: GoogleFonts.poppins(
+                                                                    style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
                                                                             18,
                                                                         fontWeight:
@@ -2722,7 +2722,7 @@ class _Register extends State<Register> {
                                                                         selectedOption,
                                                                     hint: Text(
                                                                       'เลือกประเภทธุรกิจ',
-                                                                      style: GoogleFonts.montserrat(
+                                                                      style: GoogleFonts.ibmPlexSansThai(
                                                                           fontSize:
                                                                               18,
                                                                           fontWeight: FontWeight
@@ -2767,7 +2767,7 @@ class _Register extends State<Register> {
                                                                         child:
                                                                             Text(
                                                                           option,
-                                                                          style: GoogleFonts.montserrat(
+                                                                          style: GoogleFonts.ibmPlexSansThai(
                                                                               fontSize: 16,
                                                                               fontWeight: FontWeight.w500,
                                                                               color: Colors.black),
@@ -2859,7 +2859,7 @@ class _Register extends State<Register> {
                                                       hint: Text(
                                                         'เลือกแพ็กเกจ',
                                                         style: GoogleFonts
-                                                            .montserrat(
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 18,
                                                                 fontWeight:
                                                                     FontWeight
@@ -2895,7 +2895,7 @@ class _Register extends State<Register> {
                                                           child: Text(
                                                             option,
                                                             style: GoogleFonts
-                                                                .montserrat(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -3007,7 +3007,7 @@ class _Register extends State<Register> {
                                                         child: Text(
                                                           "CMC (Consent Management)\nPDM (Personal Data Management)\nDSR (Data Subject Right Management)",
                                                           style: GoogleFonts
-                                                              .ibmPlexSans(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -3055,7 +3055,7 @@ class _Register extends State<Register> {
                                                       ),
                                                       child: Text(
                                                         'ลงทะเบียน',
-                                                        style: GoogleFonts.ibmPlexSans(
+                                                        style: GoogleFonts.ibmPlexSansThai(
                                                             fontSize: Responsive
                                                                     .isTablet(
                                                                         context)
@@ -3248,7 +3248,7 @@ class _Register extends State<Register> {
                                               top: 144, left: 97.5),
                                           child: Text(
                                             "ทดลองใช้งานฟรี",
-                                            style: GoogleFonts.ibmPlexSans(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 48,
                                                 fontWeight: FontWeight.w600,
                                                 color: Color.fromARGB(
@@ -3261,7 +3261,7 @@ class _Register extends State<Register> {
                                               top: 79, left: 26),
                                           child: Text(
                                             "ทดลองใช้งานฟรี",
-                                            style: GoogleFonts.ibmPlexSans(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 24,
                                                 fontWeight: FontWeight.w600,
                                                 color: Color.fromARGB(
@@ -3279,7 +3279,7 @@ class _Register extends State<Register> {
                                             children: [
                                               Text(
                                                 "สัมผัสประสบการณ์ใหม่ของการจัดการข้อมูลส่วนตัวที่แตกต่าง\nอย่างเป็นระบบ ทดลองใช้งานโปรแกรม PDPA Management ",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 24,
                                                     fontWeight: FontWeight.w500,
                                                     color: Color.fromARGB(
@@ -3291,7 +3291,7 @@ class _Register extends State<Register> {
                                                   Text(
                                                     "Platform ได้แล้ววันนี้เพียง",
                                                     style:
-                                                        GoogleFonts.ibmPlexSans(
+                                                        GoogleFonts.ibmPlexSansThai(
                                                             fontSize: 24,
                                                             fontWeight:
                                                                 FontWeight.w500,
@@ -3308,7 +3308,7 @@ class _Register extends State<Register> {
                                                     child: Text(
                                                       "คลิกลงทะเบียน",
                                                       style: GoogleFonts
-                                                          .ibmPlexSans(
+                                                          .ibmPlexSansThai(
                                                               fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
@@ -3336,7 +3336,7 @@ class _Register extends State<Register> {
                                             children: [
                                               Text(
                                                 "สัมผัสประสบการณ์ใหม่ของการจัดการ\nข้อมูลส่วนตัวที่แตกต่างอย่างเป็นระบบ\nทดลองใช้งานโปรแกรม PDPA\nManagement Platform ",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 18,
                                                     fontWeight: FontWeight.w400,
                                                     color: Color.fromARGB(
@@ -3351,7 +3351,7 @@ class _Register extends State<Register> {
                                                     Text(
                                                       "ได้แล้ววันนี้เพียง",
                                                       style: GoogleFonts
-                                                          .ibmPlexSans(
+                                                          .ibmPlexSansThai(
                                                               fontSize: 18,
                                                               fontWeight:
                                                                   FontWeight
@@ -3370,7 +3370,7 @@ class _Register extends State<Register> {
                                                       child: Text(
                                                         "คลิกลงทะเบียน",
                                                         style: GoogleFonts
-                                                            .ibmPlexSans(
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 18,
                                                                 fontWeight:
                                                                     FontWeight
@@ -3527,7 +3527,7 @@ class _Register extends State<Register> {
                                                           child: Text(
                                                             "ลดความยุ่งยาก\nจากการทำงานที่ซ้ำซ้อน",
                                                             style: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         24,
                                                                     fontWeight:
@@ -3554,7 +3554,7 @@ class _Register extends State<Register> {
                                                           child: Text(
                                                             "ประหยัดเวลาในการทำงาน",
                                                             style: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         24,
                                                                     fontWeight:
@@ -3581,7 +3581,7 @@ class _Register extends State<Register> {
                                                           child: Text(
                                                             "ลดภาระของ\nData Protection Officer",
                                                             style: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         24,
                                                                     fontWeight:
@@ -3642,7 +3642,7 @@ class _Register extends State<Register> {
                                                           child: Text(
                                                             "ลดความยุ่งยาก\nจากการทำงานที่ซ้ำซ้อน",
                                                             style: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         14,
                                                                     fontWeight:
@@ -3669,7 +3669,7 @@ class _Register extends State<Register> {
                                                           child: Text(
                                                             "ประหยัดเวลาในการทำงาน",
                                                             style: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         14,
                                                                     fontWeight:
@@ -3696,7 +3696,7 @@ class _Register extends State<Register> {
                                                           child: Text(
                                                             "ลดภาระของ\nData Protection Officer",
                                                             style: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         14,
                                                                     fontWeight:
@@ -3739,14 +3739,14 @@ class _Register extends State<Register> {
                                             child: Column(
                                               children: [
                                                 Text("ได้รับความไว้วางใจ",
-                                                    style: GoogleFonts.inter(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         color: Color.fromARGB(
                                                             255, 52, 145, 206),
                                                         fontSize: 48,
                                                         fontWeight:
                                                             FontWeight.w700)),
                                                 Text("จากองค์กรทั่วประเทศ",
-                                                    style: GoogleFonts.inter(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         color: Colors.black,
                                                         fontSize: 48,
                                                         fontWeight:
@@ -3759,14 +3759,14 @@ class _Register extends State<Register> {
                                             child: Column(
                                               children: [
                                                 Text("ได้รับความไว้วางใจ",
-                                                    style: GoogleFonts.inter(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         color: Color.fromARGB(
                                                             255, 52, 145, 206),
                                                         fontSize: 30,
                                                         fontWeight:
                                                             FontWeight.w700)),
                                                 Text("จากองค์กรทั่วประเทศ",
-                                                    style: GoogleFonts.inter(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         color: Colors.black,
                                                         fontSize: 30,
                                                         fontWeight:
@@ -3817,7 +3817,7 @@ class _Register extends State<Register> {
                                                 ),
                                                 Text(
                                                   "80+",
-                                                  style: GoogleFonts.inter(
+                                                  style: GoogleFonts.ibmPlexSansThai(
                                                       fontSize: 36,
                                                       fontWeight:
                                                           FontWeight.w700,
@@ -3830,7 +3830,7 @@ class _Register extends State<Register> {
                                                           top: 20),
                                                   child: Text(
                                                     "ธุรกิจ และองค์กรต่างๆ ที่เราได้รับความไว้วางใจ\nให้ wisework ดูแลมากกว่า 80 โครงการ",
-                                                    style: GoogleFonts.inter(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         fontSize: 16,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -3885,7 +3885,7 @@ class _Register extends State<Register> {
                                                   ),
                                                   Text(
                                                     "10 ปี",
-                                                    style: GoogleFonts.inter(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         fontSize: 36,
                                                         fontWeight:
                                                             FontWeight.w700,
@@ -3898,7 +3898,7 @@ class _Register extends State<Register> {
                                                             top: 20),
                                                     child: Text(
                                                       "ทีมงานมากประสบการณ์ และเชี่ยวชาญ\nในวงการ Cyber Security กว่า 10 ปี",
-                                                      style: GoogleFonts.inter(
+                                                      style: GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 16,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -3950,7 +3950,7 @@ class _Register extends State<Register> {
                                                 ),
                                                 Text(
                                                   "24 ชั่วโมง",
-                                                  style: GoogleFonts.inter(
+                                                  style: GoogleFonts.ibmPlexSansThai(
                                                       fontSize: 36,
                                                       fontWeight:
                                                           FontWeight.w700,
@@ -3963,7 +3963,7 @@ class _Register extends State<Register> {
                                                           top: 20),
                                                   child: Text(
                                                     "บริการดูแลระดับ Premium Support\nโดยทีมงานในประเทศไทยตลอด 24 ชั่วโมง",
-                                                    style: GoogleFonts.inter(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         fontSize: 16,
                                                         fontWeight:
                                                             FontWeight.w500,

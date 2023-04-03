@@ -93,7 +93,7 @@ class _CustomerCarouselState extends State<CustomerCarousel> {
                                               padding: const EdgeInsets.only(left: 30),
                                               child: Text(
                                                 "BitKub ให้ความสำคัญกับการคุ้มครอง ข้อมูลส่วนบุคคลของกลุ่มผู้ใช้งาน ดังนั้น\nเราจึงให้ความสำคัญอย่างมากเกี่ยวกับ\nการปฏิบัติตามกฎหมาย PDPA\nโดยเราเลือกใช้ระบบโมดูลที่มี Center\nเข้ามาช่วยในการบริหารจัดการข้อมูล\nคุ้มครองข้อมูลส่วนบุคคลได้ครอบคลุม\nเพื่อให้ผู้ใช้บริการมั่นใจว่าข้อมูลของท่านจะได้รับการปกป้องและใช้งานอย่างสบายใจ",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize:
                                                         16,
                                                     color: Colors
@@ -159,7 +159,7 @@ class _CustomerCarouselState extends State<CustomerCarousel> {
                                                     // color:Colors.white,
                                                     child: Text(
                                                       "Founder & Group CEO",
-                                                      style: GoogleFonts.poppins(
+                                                      style: GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 15,
                                                           fontWeight:
                                                               FontWeight
@@ -251,7 +251,7 @@ class _CustomerCarouselState extends State<CustomerCarousel> {
                                                                             32),
                                                                     child: Text(
                                                                       "เรามองเห็นภาพกว้างของการทำ PDPA ได้ชัดเจนยิ่งขึ้น\nเมื่อทีม wisework เข้ามาให้คำแนะนำและวางแผนระบบ\nทำให้เรามั่นใจว่าการดำเนินการของขั้นตอนต่างๆ เป็นไป\nตามกรอบที่กฎหมายกำหนด ครอบคลุมทุกภาคธุรกิจ",
-                                                                      style: GoogleFonts.poppins(
+                                                                      style: GoogleFonts.ibmPlexSansThai(
                                                                           fontSize:
                                                                               16,
                                                                           color: Colors
@@ -322,7 +322,7 @@ class _CustomerCarouselState extends State<CustomerCarousel> {
                                                               // color:Colors.white,
                                                               child: Text(
                                                                 "กรรมการและรองกรรมการผู้จัดการ",
-                                                                style: GoogleFonts.poppins(
+                                                                style: GoogleFonts.ibmPlexSansThai(
                                                                     fontSize:
                                                                         15,
                                                                     fontWeight:
@@ -410,7 +410,7 @@ class _CustomerCarouselState extends State<CustomerCarousel> {
                                                                     left: 32),
                                                             child: Text(
                                                               "เราตระหนักถึงความสำคัญการคุ้มครอง\nข้อมูลส่วนบุคคล หนึ่งในรากฐานที่สร้าง\nความสัมพันธ์ทางธุรกิจและสร้างความ\nน่าเชื่อถือที่ลูกค้ามีต่อเรา",
-                                                              style: GoogleFonts.poppins(
+                                                              style: GoogleFonts.ibmPlexSansThai(
                                                                   fontSize: 16,
                                                                   color: Colors
                                                                       .black,
@@ -478,7 +478,7 @@ class _CustomerCarouselState extends State<CustomerCarousel> {
                                                           // color:Colors.white,
                                                           child: Text(
                                                             "ประธานเจ้าหน้าที่บริหาร",
-                                                            style: GoogleFonts.poppins(
+                                                            style: GoogleFonts.ibmPlexSansThai(
                                                                 fontSize: 15,
                                                                 fontWeight:
                                                                     FontWeight

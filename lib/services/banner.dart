@@ -36,7 +36,7 @@ class BannerPage extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 20),
                           child: Text(
                             "Our Services / PDPA Management Platform",
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.ibmPlexSansThai(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 16,
                                 color: Color.fromARGB(255, 57, 128, 237)),
@@ -68,7 +68,7 @@ class BannerPage extends StatelessWidget {
                               padding: const EdgeInsets.only(left: 20),
                               child: Text(
                                 "Our Services / PDPA Management Platform",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.ibmPlexSansThai(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 16,
                                     color: Color.fromARGB(255, 57, 128, 237)),

@@ -68,7 +68,7 @@ class _Address extends State<Address> {
                                           height: 20,
                                           child: Text(
                                             "Contact Us",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontWeight: FontWeight.w600,
                                                 fontSize: 16,
                                                 color: Color.fromARGB(
@@ -101,7 +101,7 @@ class _Address extends State<Address> {
                                                 children: [
                                                   Text(
                                                     "Send Us a",
-                                                    style: GoogleFonts.poppins(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         fontSize: 32,
                                                         fontWeight:
                                                             FontWeight.w300,
@@ -109,7 +109,7 @@ class _Address extends State<Address> {
                                                   ),
                                                   Text(
                                                     "Message",
-                                                    style: GoogleFonts.poppins(
+                                                    style: GoogleFonts.ibmPlexSansThai(
                                                         fontSize: 32,
                                                         fontWeight:
                                                             FontWeight.w600,
@@ -151,7 +151,7 @@ class _Address extends State<Address> {
                                                     child: Text(
                                                       "Name",
                                                       style:
-                                                          GoogleFonts.poppins(
+                                                          GoogleFonts.ibmPlexSansThai(
                                                               fontSize: 18,
                                                               fontWeight:
                                                                   FontWeight
@@ -167,7 +167,7 @@ class _Address extends State<Address> {
                                                           InputDecoration(
                                                         hintText: 'wisework',
                                                         hintStyle:
-                                                            GoogleFonts.poppins(
+                                                            GoogleFonts.ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -207,7 +207,7 @@ class _Address extends State<Address> {
                                                       child: Text(
                                                         "Company / Business Name",
                                                         style:
-                                                            GoogleFonts.poppins(
+                                                            GoogleFonts.ibmPlexSansThai(
                                                                 fontSize: 18,
                                                                 fontWeight:
                                                                     FontWeight
@@ -224,7 +224,7 @@ class _Address extends State<Address> {
                                                           hintText:
                                                               'The wisework co.,Ltd.',
                                                           hintStyle: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 16,
                                                                   fontWeight:
                                                                       FontWeight
@@ -270,7 +270,7 @@ class _Address extends State<Address> {
                                                     child: Text(
                                                       "Email address",
                                                       style:
-                                                          GoogleFonts.poppins(
+                                                          GoogleFonts.ibmPlexSansThai(
                                                               fontSize: 18,
                                                               fontWeight:
                                                                   FontWeight
@@ -287,7 +287,7 @@ class _Address extends State<Address> {
                                                         hintText:
                                                             'hello@thewiseworks.com',
                                                         hintStyle:
-                                                            GoogleFonts.poppins(
+                                                            GoogleFonts.ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -327,7 +327,7 @@ class _Address extends State<Address> {
                                                       child: Text(
                                                         "Phone",
                                                         style:
-                                                            GoogleFonts.poppins(
+                                                            GoogleFonts.ibmPlexSansThai(
                                                                 fontSize: 18,
                                                                 fontWeight:
                                                                     FontWeight
@@ -344,7 +344,7 @@ class _Address extends State<Address> {
                                                           hintText:
                                                               'xx-xxxx-xxxx',
                                                           hintStyle: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 16,
                                                                   fontWeight:
                                                                       FontWeight
@@ -392,7 +392,7 @@ class _Address extends State<Address> {
                                               children: [
                                                 Text(
                                                   "How can we help you?",
-                                                  style: GoogleFonts.poppins(
+                                                  style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 24,
                                                     fontWeight: FontWeight.w600,
                                                     color: Color.fromARGB(
@@ -605,7 +605,7 @@ dropdownStyleData:
                                               left: 61, top: 70),
                                           child: Text(
                                             "Contact",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 32,
                                                 fontWeight: FontWeight.w300,
                                                 color: Colors.black),
@@ -617,7 +617,7 @@ dropdownStyleData:
                                           ),
                                           child: Text(
                                             "Directly",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 32,
                                                 fontWeight: FontWeight.w600,
                                                 color: Colors.black),
@@ -638,7 +638,7 @@ dropdownStyleData:
                                               ),
                                               Text(
                                                 "(02) 103-4379",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w600,
                                                     color: Colors.black),
@@ -702,7 +702,7 @@ dropdownStyleData:
                                               ),
                                               Text(
                                                 "admin@thewiseworks.com",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w600,
                                                     color: Colors.black),
@@ -715,7 +715,7 @@ dropdownStyleData:
                                               top: 76, left: 61),
                                           child: Text(
                                             "Contact",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 32,
                                                 fontWeight: FontWeight.w400,
                                                 color: Colors.black),
@@ -726,7 +726,7 @@ dropdownStyleData:
                                               const EdgeInsets.only(left: 61),
                                           child: Text(
                                             "with Us",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 32,
                                                 fontWeight: FontWeight.w600,
                                                 color: Colors.black),
@@ -895,7 +895,7 @@ dropdownStyleData:
                                                 const EdgeInsets.only(left: 30),
                                             child: Text(
                                               "Get Direction",
-                                              style: GoogleFonts.poppins(
+                                              style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 24,
                                                 fontWeight: FontWeight.w600,
                                                 color: Colors.black,
@@ -957,7 +957,7 @@ dropdownStyleData:
                                           height: 20,
                                           child: Text(
                                             "Contact Us",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontWeight: FontWeight.w600,
                                                 fontSize: 16,
                                                 color: Color.fromARGB(
@@ -1003,7 +1003,7 @@ dropdownStyleData:
                                                   top: 47, left: 83),
                                               child: Text(
                                                 "Send us a",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize:
                                                         Responsive.isTablet(
                                                                 context)
@@ -1019,7 +1019,7 @@ dropdownStyleData:
                                                   top: 65, left: 20),
                                               child: Text(
                                                 "Send us a",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize:
                                                         Responsive.isTablet(
                                                                 context)
@@ -1036,7 +1036,7 @@ dropdownStyleData:
                                                   left: 83),
                                               child: Text(
                                                 "Message",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize:
                                                         Responsive.isTablet(
                                                                 context)
@@ -1052,7 +1052,7 @@ dropdownStyleData:
                                                   left: 20),
                                               child: Text(
                                                 "Message",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize:
                                                         Responsive.isTablet(
                                                                 context)
@@ -1069,7 +1069,7 @@ dropdownStyleData:
                                                   top: 40, left: 83),
                                               child: Text(
                                                 "สอบถามรายละเอียดเพิ่มเติม ส่งข้อความถึงเรา ที่นี่\nทีมงานของเราจะติดต่อกลับท่านโดยเร็วที่สุด",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w500,
                                                     color: Color.fromARGB(
@@ -1081,7 +1081,7 @@ dropdownStyleData:
                                                   top: 40, left: 20),
                                               child: Text(
                                                 "สอบถามรายละเอียดเพิ่มเติม\nส่งข้อความถึงเรา ที่นี่ ทีมงานของเรา\nจะติดต่อกลับท่านโดยเร็วที่สุด",
-                                                style: GoogleFonts.poppins(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w500,
                                                     color: Color.fromARGB(
@@ -1105,7 +1105,7 @@ dropdownStyleData:
                                                         child: Text(
                                                           "Name",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -1122,7 +1122,7 @@ dropdownStyleData:
                                                             hintText:
                                                                 'wisework',
                                                             hintStyle: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1171,7 +1171,7 @@ dropdownStyleData:
                                                         child: Text(
                                                           "Company / Business Name",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -1188,7 +1188,7 @@ dropdownStyleData:
                                                             hintText:
                                                                 'The wisework co.,Ltd.',
                                                             hintStyle: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1241,7 +1241,7 @@ dropdownStyleData:
                                                         child: Text(
                                                           "Name",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -1258,7 +1258,7 @@ dropdownStyleData:
                                                             hintText:
                                                                 'wisework',
                                                             hintStyle: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1307,7 +1307,7 @@ dropdownStyleData:
                                                         child: Text(
                                                           "Company / Business Name",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -1324,7 +1324,7 @@ dropdownStyleData:
                                                             hintText:
                                                                 'The wisework co.,Ltd.',
                                                             hintStyle: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1378,7 +1378,7 @@ dropdownStyleData:
                                                         child: Text(
                                                           "Email address",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -1395,7 +1395,7 @@ dropdownStyleData:
                                                             hintText:
                                                                 'hello@thewiseworks.com',
                                                             hintStyle: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1444,7 +1444,7 @@ dropdownStyleData:
                                                         child: Text(
                                                           "Phone",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -1461,7 +1461,7 @@ dropdownStyleData:
                                                             hintText:
                                                                 'xx-xxxx-xxxx',
                                                             hintStyle: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1514,7 +1514,7 @@ dropdownStyleData:
                                                         child: Text(
                                                           "Email address",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -1531,7 +1531,7 @@ dropdownStyleData:
                                                             hintText:
                                                                 'hello@thewiseworks.com',
                                                             hintStyle: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1580,7 +1580,7 @@ dropdownStyleData:
                                                         child: Text(
                                                           "Phone",
                                                           style: GoogleFonts
-                                                              .poppins(
+                                                              .ibmPlexSansThai(
                                                                   fontSize: 18,
                                                                   fontWeight:
                                                                       FontWeight
@@ -1597,7 +1597,7 @@ dropdownStyleData:
                                                             hintText:
                                                                 'xx-xxxx-xxxx',
                                                             hintStyle: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1709,7 +1709,7 @@ dropdownStyleData:
                                                           hint: Text(
                                                             'Select an option',
                                                             style: GoogleFonts
-                                                                .montserrat(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1748,7 +1748,7 @@ iconStyleData:
                                                               value: option,
                                                               child: Text(
                                                                 option,
-                                                                style: GoogleFonts.montserrat(
+                                                                style: GoogleFonts.ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1804,7 +1804,7 @@ dropdownStyleData:
                                                           hint: Text(
                                                             'Select an option',
                                                             style: GoogleFonts
-                                                                .montserrat(
+                                                                .ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1843,7 +1843,7 @@ iconStyleData:
                                                               value: option,
                                                               child: Text(
                                                                 option,
-                                                                style: GoogleFonts.montserrat(
+                                                                style: GoogleFonts.ibmPlexSansThai(
                                                                     fontSize:
                                                                         16,
                                                                     fontWeight:
@@ -1909,7 +1909,7 @@ dropdownStyleData:
                                                                         horizontal:
                                                                             10),
                                                                 // contentPadding:EdgeInsets.fromLTRB(50, 50, 0, 0),
-                                                                hintStyle: GoogleFonts.montserrat(
+                                                                hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                     fontSize:
                                                                         18,
                                                                     fontWeight:
@@ -1967,7 +1967,7 @@ dropdownStyleData:
                                                                         horizontal:
                                                                             10),
                                                                 // contentPadding:EdgeInsets.fromLTRB(50, 50, 0, 0),
-                                                                hintStyle: GoogleFonts.montserrat(
+                                                                hintStyle: GoogleFonts.ibmPlexSansThai(
                                                                     fontSize:
                                                                         18,
                                                                     fontWeight:
@@ -2020,7 +2020,7 @@ dropdownStyleData:
                                                     child: Text(
                                                       'Send Message',
                                                       style: GoogleFonts
-                                                          .ibmPlexSans(
+                                                          .ibmPlexSansThai(
                                                               color:
                                                                   Colors.white,
                                                               fontSize: 20,
@@ -2209,7 +2209,7 @@ dropdownStyleData:
                                                           child: Text(
                                                             "Get Direction",
                                                             style: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                               fontSize: 24,
                                                               fontWeight:
                                                                   FontWeight
@@ -2270,7 +2270,7 @@ dropdownStyleData:
                                                           child: Text(
                                                             "Get Direction",
                                                             style: GoogleFonts
-                                                                .poppins(
+                                                                .ibmPlexSansThai(
                                                               fontSize: 16,
                                                               fontWeight:
                                                                   FontWeight

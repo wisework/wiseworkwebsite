@@ -61,7 +61,7 @@ class WhoPage extends StatelessWidget {
                                           height: 20,
                                           child: Text(
                                             "Our Story",
-                                            style: GoogleFonts.poppins(
+                                            style: GoogleFonts.ibmPlexSansThai(
                                                 fontWeight: FontWeight.w600,
                                                 fontSize: 16,
                                                 color: Color.fromARGB(

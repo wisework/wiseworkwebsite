@@ -39,7 +39,7 @@ class BannerCus extends StatelessWidget {
                             height: 20,
                             child: Text(
                               "Our Customers",
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.ibmPlexSansThai(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 16,
                                   color: Color.fromARGB(255, 57, 128, 237)),
@@ -75,7 +75,7 @@ class BannerCus extends StatelessWidget {
                                 height: 20,
                                 child: Text(
                                   "Our Customers",
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.ibmPlexSansThai(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 16,
                                       color: Color.fromARGB(255, 57, 128, 237)),

@@ -88,23 +88,21 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ))
-              : 
+              :
               // Container()
-              NavBar()
-              ),
+              NavBar()),
       drawer: MenuDrawer(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            
             // StoryPage(),
             // Pdpa(),
-            FeaturesPage(),
+            // FeaturesPage(),
             // Customer(),
             // PackagesPage(),
             // FAQ(),
-            // Footer()
+            Footer()
           ],
         ),
       ),

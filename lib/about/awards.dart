@@ -94,7 +94,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "ISO/IEC 27001",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -103,7 +103,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "Information Security Management \nSystem:ISMS ",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -135,7 +135,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "ISO/IEC 27017",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -144,7 +144,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "Information technology",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -176,7 +176,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "COSO-ERM",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -185,7 +185,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "Enterprise Risk Management ",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -228,7 +228,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "ISO/IEC 27701",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -237,7 +237,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "Privacy Information Management\nSystem:PIMS",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -269,7 +269,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "ISO/IEC 27018",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -278,7 +278,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "Security techniques",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -310,7 +310,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "ISO/IEC 9001",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -319,7 +319,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "Quality Management System",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -362,7 +362,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "ISO/IEC 20000",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -371,7 +371,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "Lead Auditor (Information Technology\nService Management)",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -403,7 +403,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "ISO/IEC 22301",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -412,7 +412,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "Business Continuity Management",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -444,7 +444,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "CSA",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -453,7 +453,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "The Cloud Security Alliance",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -496,7 +496,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "ISO/IEC 31000",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -505,7 +505,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "Risk Management",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -537,7 +537,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "ISO/IEC 27005",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -546,7 +546,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "Information Security Risk Management",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -581,7 +581,7 @@ class _AwardsState extends State<AwardsPage> {
                                     children: [
                                       Text(
                                         "CDPO",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 24,
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(
@@ -590,7 +590,7 @@ class _AwardsState extends State<AwardsPage> {
                                       ),
                                       Text(
                                         "Certified of Data Protection Officer",
-                                        style: GoogleFonts.ibmPlexSans(
+                                        style: GoogleFonts.ibmPlexSansThai(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w400,
                                             color: Colors.black),
@@ -633,7 +633,7 @@ class _AwardsState extends State<AwardsPage> {
                                     // color: Colors.amber,
                                     child: Text(
                                       "Awards&\nAchievement",
-                                      style: GoogleFonts.ibmPlexSans(
+                                      style: GoogleFonts.ibmPlexSansThai(
                                           fontSize: 36,
                                           fontWeight: FontWeight.w700,
                                           color:
@@ -688,7 +688,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "ISO/IEC 27001",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 20,
                                                           fontWeight:
                                                               FontWeight.w700,
@@ -702,7 +702,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "Information Security\nManagement System:ISMS ",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 16,
                                                           fontWeight:
                                                               FontWeight.w400,
@@ -736,7 +736,7 @@ class _AwardsState extends State<AwardsPage> {
                                             children: [
                                               Text(
                                                 "ISO/IEC 27017",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w700,
                                                     color: Color.fromARGB(
@@ -745,7 +745,7 @@ class _AwardsState extends State<AwardsPage> {
                                               ),
                                               Text(
                                                 "Information technology",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w400,
                                                     color: Colors.black),
@@ -787,7 +787,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "COSO-ERM",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 20,
                                                           fontWeight:
                                                               FontWeight.w700,
@@ -801,7 +801,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "Enterprise Risk\nManagement",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 16,
                                                           fontWeight:
                                                               FontWeight.w400,
@@ -835,7 +835,7 @@ class _AwardsState extends State<AwardsPage> {
                                             children: [
                                               Text(
                                                 "ISO/IEC 27701",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w700,
                                                     color: Color.fromARGB(
@@ -844,7 +844,7 @@ class _AwardsState extends State<AwardsPage> {
                                               ),
                                               Text(
                                                 "Privacy Information\nManagement System:PIMS",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w400,
                                                     color: Colors.black),
@@ -886,7 +886,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "ISO/IEC 27018",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 20,
                                                           fontWeight:
                                                               FontWeight.w700,
@@ -900,7 +900,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "Security techniques",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 16,
                                                           fontWeight:
                                                               FontWeight.w400,
@@ -934,7 +934,7 @@ class _AwardsState extends State<AwardsPage> {
                                             children: [
                                               Text(
                                                 "ISO/IEC 9001",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w700,
                                                     color: Color.fromARGB(
@@ -943,7 +943,7 @@ class _AwardsState extends State<AwardsPage> {
                                               ),
                                               Text(
                                                 "Quality Management System",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w400,
                                                     color: Colors.black),
@@ -985,7 +985,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "ISO/IEC 20000",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 20,
                                                           fontWeight:
                                                               FontWeight.w700,
@@ -999,7 +999,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "Lead Auditor (Information\nTechnology Service Management)",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 16,
                                                           fontWeight:
                                                               FontWeight.w400,
@@ -1033,7 +1033,7 @@ class _AwardsState extends State<AwardsPage> {
                                             children: [
                                               Text(
                                                 "ISO/IEC 22301",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w700,
                                                     color: Color.fromARGB(
@@ -1042,7 +1042,7 @@ class _AwardsState extends State<AwardsPage> {
                                               ),
                                               Text(
                                                 "Business Continuity\nManagement",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w400,
                                                     color: Colors.black),
@@ -1084,7 +1084,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "CSA",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 20,
                                                           fontWeight:
                                                               FontWeight.w700,
@@ -1098,7 +1098,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "The Cloud Security Alliance",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 16,
                                                           fontWeight:
                                                               FontWeight.w400,
@@ -1132,7 +1132,7 @@ class _AwardsState extends State<AwardsPage> {
                                             children: [
                                               Text(
                                                 "ISO/IEC 31000",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w700,
                                                     color: Color.fromARGB(
@@ -1141,7 +1141,7 @@ class _AwardsState extends State<AwardsPage> {
                                               ),
                                               Text(
                                                 "Risk Management",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w400,
                                                     color: Colors.black),
@@ -1183,7 +1183,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "ISO/IEC 27005",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 20,
                                                           fontWeight:
                                                               FontWeight.w700,
@@ -1197,7 +1197,7 @@ class _AwardsState extends State<AwardsPage> {
                                                 Text(
                                                   "Information Security\nRisk Management",
                                                   style:
-                                                      GoogleFonts.ibmPlexSans(
+                                                      GoogleFonts.ibmPlexSansThai(
                                                           fontSize: 16,
                                                           fontWeight:
                                                               FontWeight.w400,
@@ -1231,7 +1231,7 @@ class _AwardsState extends State<AwardsPage> {
                                             children: [
                                               Text(
                                                 "CDPO",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w700,
                                                     color: Color.fromARGB(
@@ -1240,7 +1240,7 @@ class _AwardsState extends State<AwardsPage> {
                                               ),
                                               Text(
                                                 "Certified of Data Protection\nOfficer",
-                                                style: GoogleFonts.ibmPlexSans(
+                                                style: GoogleFonts.ibmPlexSansThai(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.w400,
                                                     color: Colors.black),
@@ -1286,7 +1286,7 @@ class _AwardsState extends State<AwardsPage> {
                                         // color: Colors.amber,
                                         child: Text(
                                           "Awards&\nAchievement",
-                                          style: GoogleFonts.ibmPlexSans(
+                                          style: GoogleFonts.ibmPlexSansThai(
                                               fontSize: 36,
                                               fontWeight: FontWeight.w700,
                                               color: Color.fromARGB(
