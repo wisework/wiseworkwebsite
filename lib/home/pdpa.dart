@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 
+import 'package:go_router/go_router.dart';
+
 class PdpaModel {
   final String title;
   final String description;
@@ -427,7 +429,7 @@ class _PdpaState extends State<Pdpa> {
                                   height: 48,
                                   width: 193,
                                   child: ElevatedButton(
-                                    onPressed: () {},
+                                    onPressed: () =>context.go('/package/1'),
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor:
                                           Color.fromARGB(255, 75, 195, 211),

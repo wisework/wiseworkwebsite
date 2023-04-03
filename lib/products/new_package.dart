@@ -12,12 +12,12 @@ import 'package:wiseintern/home/packagepage.dart';
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/model/packages.dart';
 
-class MyDetails extends StatelessWidget {
+class MyPackages extends StatelessWidget {
   final String title;
   final String description;
   final String imageUrl;
   final String detail;
-  MyDetails(this.title, this.description, this.imageUrl, this.detail);
+  MyPackages(this.title, this.description, this.imageUrl, this.detail);
 
   @override
   Widget build(BuildContext context) {
@@ -73,15 +73,7 @@ class MyDetails extends StatelessWidget {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        "KEY FEATURES",
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500,
-                                            color: Color.fromARGB(
-                                                255, 0, 112, 240)),
-                                        textAlign: TextAlign.start,
-                                      ),
+                                      
                                       Text(
                                         "$title",
                                         style: GoogleFonts.poppins(
@@ -311,8 +303,8 @@ class MyDetails extends StatelessWidget {
                             ),
                           )),
                         ),
-              Check(),
-              Example(),
+              // Check(),
+              // Example(),
               // FeaturesPage(),
               Footer()
             ],

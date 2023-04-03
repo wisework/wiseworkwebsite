@@ -13,8 +13,10 @@ import 'package:wiseintern/contact/contactpage.dart';
 import 'package:wiseintern/faq/faqpage.dart';
 import 'package:wiseintern/demo/demopage.dart';
 import 'package:wiseintern/producttable/producttablepage.dart';
+
 import 'package:wiseintern/features/templateFeatures.dart';
 import 'package:wiseintern/products/new_package.dart';
+
 import 'package:get/get.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
