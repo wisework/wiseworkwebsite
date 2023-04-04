@@ -571,17 +571,9 @@ class PackageCard extends StatelessWidget {
                               Offset(0, Responsive.isMobile(context) ? 10 : -5),
                           child: Text(
                             title,
-                            style: GoogleFonts.ibmPlexSansThai(
-                                // color: Responsive.isDesktop(context)
-                                //     ? middlebox
-                                //         ? Colors.white
-                                //         : Colors.black
-                                // : Colors.black,
-                                fontSize: Responsive.isDesktop(context)
-                                    ? 32
-                                    : Responsive.isTablet(context)
-                                        ? 32
-                                        : 20,
+                            style: GoogleFonts.poppins(
+                                fontSize:
+                                    !Responsive.isMobile(context) ? 32 : 20,
                                 fontWeight: FontWeight.w700),
                           ),
                         )),
@@ -655,7 +647,7 @@ class PackageCard extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: Text(
                         lisence,
-                        style: GoogleFonts.ibmPlexSansThai(
+                        style: GoogleFonts.poppins(
                             // color: Responsive.isDesktop(context)
                             //     ? middlebox
                             //         ? Colors.white
@@ -676,7 +668,8 @@ class PackageCard extends StatelessWidget {
                         width: !Responsive.isMobile(context) ? 321 : 193,
                         height: !Responsive.isMobile(context) ? 61 : 48,
                         child: OutlinedButton(
-                            onPressed: () => context.go('/product'),
+                            onPressed: () => context
+                                .go(firstbox ? '/package/1' : '/package/3'),
                             style: OutlinedButton.styleFrom(
                               side: BorderSide(
                                 width: 1.0,
@@ -700,7 +693,7 @@ class PackageCard extends StatelessWidget {
                         width: !Responsive.isMobile(context) ? 321 : 193,
                         height: !Responsive.isMobile(context) ? 61 : 48,
                         child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () => context.go('/package/2'),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromRGBO(75, 195, 211, 1),
                               shape: RoundedRectangleBorder(

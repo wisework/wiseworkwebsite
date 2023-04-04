@@ -6,7 +6,7 @@ import 'package:go_router/go_router.dart';
 
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/home/features.dart';
-import 'package:wiseintern/products/enterprise.dart';
+import 'package:wiseintern/products/packagedetails.dart';
 import 'package:wiseintern/products/whom.dart';
 import 'package:wiseintern/services/compare.dart';
 
@@ -35,7 +35,7 @@ class _ProductPageState extends State<ProductPage> {
           elevation: 0,
           centerTitle: true,
           title: !Responsive.isDesktop(context)
-              ?Padding(
+              ? Padding(
                   padding: const EdgeInsets.all(20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -58,7 +58,7 @@ class _ProductPageState extends State<ProductPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SingleProductPage(),
+            // SingleProductPage(),
             FeaturesPage(),
             SingleWhomPage(),
             Compare(),

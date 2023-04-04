@@ -86,6 +86,12 @@ final GoRouter _router = GoRouter(
           },
         ),
         GoRoute(
+          path: 'package',
+          builder: (BuildContext context, GoRouterState state) {
+            return ProductTablePage();
+          },
+        ),
+        GoRoute(
           path: 'features/1',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
@@ -203,6 +209,26 @@ final GoRouter _router = GoRouter(
                 "ระบบบริหารจัดการข้อมูลส่วนบุคคล PDPA เหมาะสำหรับองค์กรที่มี การเก็บรวบรวมข้อมูลส่วนบุคคล และข้อมูลส่วนอ่อนไหว จำนวนมาก ฟังก์ชันการใช้งานตรงตาม วัตถุประสงค์ PDPA ตอบโจทย์ธุรกิจ ขนาดกลางและขนาดย่อม");
           },
         ),
+        GoRoute(
+          path: 'package/2',
+          builder: (BuildContext context, GoRouterState state) {
+            return MyPackages(
+                "Standard",
+                "Subscription License",
+                "pakages/clouds.png",
+                "ระบบบริหารจัดการข้อมูลส่วนบุคคล PDPA เหมาะสำหรับองค์กรขนาดใหญ่ ธุรกิจเฉพาะ ต้องการปรับเปลี่ยนให้เข้ากับรูปแบบการทำงาน ขององค์กร ครอบคลุมทุกฟังก์ชันการใช้งาน 11 Modules พร้อมรองรับการเชื่อมต่อ API");
+          },
+        ),
+        GoRoute(
+          path: 'package/3',
+          builder: (BuildContext context, GoRouterState state) {
+            return MyPackages(
+                "Enterprise",
+                "Perpetual License",
+                "pakages/rainbow_cloud.png",
+                "ระบบบริหารจัดการข้อมูลส่วนบุคคล PDPA เหมาะสำหรับองค์กรขนาดใหญ่ มีบริษัทในเครือ ควบคุมระบบทั้งหมดได้จากศูนย์กลาง ครอบคลุมทุกฟังก์ชันการใช้งานเต็มรูปแบบ 11 Modules และไม่มีข้อจำกัดในการเชื่อมต่อกับระบบอื่น");
+          },
+        )
       ],
     ),
   ],

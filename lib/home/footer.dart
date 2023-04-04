@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:wiseintern/products/enterprise.dart';
+import 'package:wiseintern/products/packagedetails.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:go_router/go_router.dart';
 
@@ -132,9 +132,13 @@ class _FooterState extends State<Footer> {
     ];
 
     var navbarBut = Container(
-        height: Responsive.isTablet(context) ? 180 :160,
+        height: Responsive.isTablet(context) ? 180 : 160,
         // color: Colors.red,
-        width: Responsive.isDesktop(context) ? 100 : Responsive.isTablet(context) ?100:  150,
+        width: Responsive.isDesktop(context)
+            ? 100
+            : Responsive.isTablet(context)
+                ? 100
+                : 150,
         child: ListView.builder(
             shrinkWrap: true,
             itemCount: navbarButton.length,
@@ -197,7 +201,6 @@ class _FooterState extends State<Footer> {
       ),
     );
 
-   
     List<Services> serviceButton = [
       Services("PDPA Management Platform", "/services"),
       Services("Governance Assurance Suite", "/"),
@@ -812,7 +815,7 @@ class _FooterState extends State<Footer> {
                                                       Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                .only(top:100),
+                                                                .only(top: 100),
                                                         child: QLink,
                                                       ),
                                                       SizedBox(

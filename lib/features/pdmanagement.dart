@@ -56,13 +56,7 @@ class _PdmanagementPageState extends State<Pdmanagement> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            PD(), 
-            Check(), 
-            Example(), 
-            FeaturesPage(), 
-            Footer()
-            ],
+          children: [PD(), Check(), Example(), FeaturesPage(), Footer()],
         ),
       ),
     );
@@ -76,243 +70,266 @@ class PD extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 1440,
-        child: 
-        Responsive.isDesktop(context)
-        ?Center(
-          child: Container(
-            width: 1440,
-            height: 668,
-            color: Color.fromARGB(255, 255, 255, 255),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 121, left: 150),
-                      child: Container(
-                        width: 553,
-                        // color: Colors.amber,
-                        child: Column(
+          width: 1440,
+          child: Responsive.isDesktop(context)
+              ? Center(
+                  child: Container(
+                    width: 1440,
+                    height: 668,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "KEY FEATURES",
-                              style: GoogleFonts.ibmPlexSansThai(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                  color: Color.fromARGB(255, 0, 112, 240)),
-                              textAlign: TextAlign.start,
-                            ),
                             Padding(
-                              padding: const EdgeInsets.only(top: 8),
-                              child: Text(
-                                "Pdmanagement",
-                                style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 48,
-                                    fontWeight: FontWeight.w700,
-                                    color: Color.fromARGB(255, 5, 45, 97)),
-                                textAlign: TextAlign.start,
+                              padding:
+                                  const EdgeInsets.only(top: 121, left: 150),
+                              child: Container(
+                                width: 553,
+                                // color: Colors.amber,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "KEY FEATURES",
+                                      style: GoogleFonts.ibmPlexSansThai(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                          color:
+                                              Color.fromARGB(255, 0, 112, 240)),
+                                      textAlign: TextAlign.start,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 8),
+                                      child: Text(
+                                        "Pdmanagement",
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                            fontSize: 48,
+                                            fontWeight: FontWeight.w700,
+                                            color:
+                                                Color.fromARGB(255, 5, 45, 97)),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 32),
+                                      child: Text(
+                                        "จัดการบันทึกรายการข้อมูลส่วนบุคคล\nและการไหลของข้อมูล (Data Flow)",
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 63),
+                                      child: Text(
+                                        "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎ\nหมายมาตรา ได้แก่ มาตรา 24 , มาตรา 26, มาตรา 30,\nมาตรา 31, มาตรา 32, มาตรา 36(1), มาตรา 39",
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w400,
+                                            color: Color.fromARGB(
+                                                255, 23, 24, 26)),
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 32),
-                              child: Text(
-                                "จัดการบันทึกรายการข้อมูลส่วนบุคคล\nและการไหลของข้อมูล (Data Flow)",
-                                style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.black),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 63),
-                              child: Text(
-                                "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎ\nหมายมาตรา ได้แก่ มาตรา 24 , มาตรา 26, มาตรา 30,\nมาตรา 31, มาตรา 32, มาตรา 36(1), มาตรา 39",
-                                style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color.fromARGB(255, 23, 24, 26)),
-                              ),
-                            )
                           ],
                         ),
-                      ),
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 64, left: 72),
+                              child: SizedBox(
+                                  width: 540,
+                                  height: 540,
+                                  child: Image.asset(
+                                      "assets/features/pdcard.png")),
+                            )
+                          ],
+                        )
+                      ],
                     ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 64, left: 72),
-                      child: SizedBox(
-                          width: 540,
-                          height: 540,
-                          child: Image.asset("assets/features/pdcard.png")),
-                    )
-                  ],
+                  ),
                 )
-              ],
-            ),
-          ),
-        )
-        :Responsive.isTablet(context)
-        ?Container(
-          width: 1440,
-          color: Colors.white,
-          child: Center(
-            child: Container(
-              width: 768,
-              // height: 502,
-              color: Colors.white,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 23.5, left: 50),
+              : Responsive.isTablet(context)
+                  ? Container(
+                      width: 1440,
+                      color: Colors.white,
+                      child: Center(
                         child: Container(
-                          width: 367,
-                          // color: Colors.amber,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                          width: 768,
+                          // height: 502,
+                          color: Colors.white,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text(
-                                "KEY FEATURES",
-                                style: GoogleFonts.ibmPlexSansThai(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
-                                    color: Color.fromARGB(255, 0, 112, 240)),
-                                textAlign: TextAlign.start,
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 23.5, left: 50),
+                                    child: Container(
+                                      width: 367,
+                                      // color: Colors.amber,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "KEY FEATURES",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w500,
+                                                color: Color.fromARGB(
+                                                    255, 0, 112, 240)),
+                                            textAlign: TextAlign.start,
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 8),
+                                            child: Text(
+                                              "PD\nManagement",
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 44,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                      color: Color.fromARGB(
+                                                          255, 5, 45, 97)),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 10),
+                                            child: Text(
+                                              "จัดการบันทึกรายการข้อมูลส่วนบุคคล\nและการไหลของข้อมูล (Data Flow)",
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 22,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: Colors.black),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 10),
+                                            child: Text(
+                                              "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล\nตามกฎหมายมาตรา ได้แก่ มาตรา 24 , มาตรา\n26, มาตรา 30,มาตรา 31, มาตรา 32, มาตรา\n36(1), มาตรา 39",
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      color: Color.fromARGB(
+                                                          255, 23, 24, 26)),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 30,
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8),
-                                child: Text(
-                                  "PD\nManagement",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 44,
-                                      fontWeight: FontWeight.w700,
-                                      color: Color.fromARGB(255, 5, 45, 97)),
-                                  textAlign: TextAlign.start,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 10),
-                                child: Text(
-                                  "จัดการบันทึกรายการข้อมูลส่วนบุคคล\nและการไหลของข้อมูล (Data Flow)",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 10),
-                                child: Text(
-                                  "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล\nตามกฎหมายมาตรา ได้แก่ มาตรา 24 , มาตรา\n26, มาตรา 30,มาตรา 31, มาตรา 32, มาตรา\n36(1), มาตรา 39",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color.fromARGB(255, 23, 24, 26)),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 30,
+                              Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 70, left: 20),
+                                    child: SizedBox(
+                                        width: 275,
+                                        height: 270,
+                                        child: Image.asset(
+                                            "assets/features/pdcard.png")),
+                                  ),
+                                  SizedBox(
+                                    height: 30,
+                                  )
+                                ],
                               )
                             ],
                           ),
                         ),
                       ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 70, left: 20),
-                        child: SizedBox(
-                            width: 275,
-                            height: 270,
-                            child: Image.asset("assets/features/pdcard.png")),
-                      ),
-                      SizedBox(
-                                height: 30,
-                              )
-                    ],
-                  )
-                ],
-              ),
-            
-            ),
-          ),
-        )
-        :Container(
-          width: 1440,
-          color: Colors.white,
-          child: Center(
-            child: Container(
-              width: 375,
-              color: Colors.white,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 30,left: 30),
-                    child: Text("KEY FEATURES",
-                    style: GoogleFonts.ibmPlexSansThai(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Color.fromARGB(255, 0, 112, 240)
-                    ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8,left: 30),
-                    child: Text("PD Management",
-                    style: GoogleFonts.ibmPlexSansThai(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                      color: Color.fromARGB(255, 5, 45, 97)
-                    ),),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20,left: 30),
-                    child: Text("จัดการบันทึกรายการข้อมูลส่วนบุคคล\nและการไหลของข้อมูล (Data Flow) ",
-                      style: GoogleFonts.ibmPlexSansThai(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black
-                      ),textAlign: TextAlign.start,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20,left: 30,bottom: 30),
-                    child: Text("รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล\nตามกฎหมายมาตรา ได้แก่ มาตรา 24 ,\nมาตรา 26, มาตรา 30, มาตรา 31, มาตรา\n32, มาตรา 36(1), มาตรา 39",
-                      style: GoogleFonts.ibmPlexSansThai(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.black
-                        ),textAlign: TextAlign.start,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 30),
-                    child: Center(
-                      child: SizedBox(
-                        height: 270,
-                        child: Image.asset("assets/features/pdcard.png",fit: BoxFit.fitHeight,)),
-                    ),
-                  )
-                ],
-              ),
-            )
-            ),
-        )
-      
-      ),
+                    )
+                  : Container(
+                      width: 1440,
+                      color: Colors.white,
+                      child: Center(
+                          child: Container(
+                        width: 375,
+                        color: Colors.white,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 30, left: 30),
+                              child: Text(
+                                "KEY FEATURES",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color.fromARGB(255, 0, 112, 240)),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8, left: 30),
+                              child: Text(
+                                "PD Management",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w700,
+                                    color: Color.fromARGB(255, 5, 45, 97)),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20, left: 30),
+                              child: Text(
+                                "จัดการบันทึกรายการข้อมูลส่วนบุคคล\nและการไหลของข้อมูล (Data Flow) ",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black),
+                                textAlign: TextAlign.start,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 20, left: 30, bottom: 30),
+                              child: Text(
+                                "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล\nตามกฎหมายมาตรา ได้แก่ มาตรา 24 ,\nมาตรา 26, มาตรา 30, มาตรา 31, มาตรา\n32, มาตรา 36(1), มาตรา 39",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.black),
+                                textAlign: TextAlign.start,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 30),
+                              child: Center(
+                                child: SizedBox(
+                                    height: 270,
+                                    child: Image.asset(
+                                      "assets/features/pdcard.png",
+                                      fit: BoxFit.fitHeight,
+                                    )),
+                              ),
+                            )
+                          ],
+                        ),
+                      )),
+                    )),
     );
   }
 }
@@ -374,14 +391,26 @@ class _CheckState extends State<Check> {
       child: Container(
         width: 1440,
         color: Color.fromARGB(255, 5, 45, 97),
-        child: 
-        
-        Center(
+        child: Center(
           child: Container(
-            width: Responsive.isDesktop(context)?1440:Responsive.isTablet(context)?768:375,
+            width: Responsive.isDesktop(context)
+                ? 1440
+                : Responsive.isTablet(context)
+                    ? 768
+                    : 375,
             color: Color.fromARGB(255, 5, 45, 97),
             child: Padding(
-              padding: Responsive.isDesktop(context)?const EdgeInsets.only(top: 86, left: 128, bottom: 88):Responsive.isTablet(context)?const EdgeInsets.only(top: 54, left: 31, ):const EdgeInsets.only(top: 54, left: 21, ),
+              padding: Responsive.isDesktop(context)
+                  ? const EdgeInsets.only(top: 86, left: 128, bottom: 88)
+                  : Responsive.isTablet(context)
+                      ? const EdgeInsets.only(
+                          top: 54,
+                          left: 31,
+                        )
+                      : const EdgeInsets.only(
+                          top: 54,
+                          left: 21,
+                        ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -432,48 +461,64 @@ class _CheckState extends State<Check> {
                                           ),
                                           title: Transform.translate(
                                             offset: Offset(0, 0),
-                                            child: 
-                                            Responsive.isDesktop(context)
-                                            ?Text(
-                                              checkDT[index],
-                                              style:
-                                                  GoogleFonts.ibmPlexSansThai(
-                                                      color: hoveredIndex ==
-                                                              index
-                                                          ? Color.fromARGB(
-                                                              255, 75, 195, 211)
-                                                          : Colors.white,
-                                                      fontSize:16,
-                                                      fontWeight:
-                                                          FontWeight.w400),
-                                            )
-                                            :Responsive.isTablet(context)
-                                            ?Text(
-                                              checkTB[index],
-                                              style:
-                                                  GoogleFonts.ibmPlexSansThai(
-                                                      color: hoveredIndex ==
-                                                              index
-                                                          ? Color.fromARGB(
-                                                              255, 75, 195, 211)
-                                                          : Colors.white,
-                                                      fontSize:16,
-                                                      fontWeight:
-                                                          FontWeight.w400),
-                                            )
-                                            :Text(
-                                              checkMB[index],
-                                              style:
-                                                  GoogleFonts.ibmPlexSansThai(
-                                                      color: hoveredIndex ==
-                                                              index
-                                                          ? Color.fromARGB(
-                                                              255, 75, 195, 211)
-                                                          : Colors.white,
-                                                      fontSize:16,
-                                                      fontWeight:
-                                                          FontWeight.w400),
-                                            ),
+                                            child: Responsive.isDesktop(context)
+                                                ? Text(
+                                                    checkDT[index],
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            color: hoveredIndex ==
+                                                                    index
+                                                                ? Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        75,
+                                                                        195,
+                                                                        211)
+                                                                : Colors.white,
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w400),
+                                                  )
+                                                : Responsive.isTablet(context)
+                                                    ? Text(
+                                                        checkTB[index],
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                color: hoveredIndex ==
+                                                                        index
+                                                                    ? Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            75,
+                                                                            195,
+                                                                            211)
+                                                                    : Colors
+                                                                        .white,
+                                                                fontSize: 16,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400),
+                                                      )
+                                                    : Text(
+                                                        checkMB[index],
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                color: hoveredIndex ==
+                                                                        index
+                                                                    ? Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            75,
+                                                                            195,
+                                                                            211)
+                                                                    : Colors
+                                                                        .white,
+                                                                fontSize: 16,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400),
+                                                      ),
                                           ),
                                         ),
                                       ),
@@ -520,7 +565,11 @@ class _ExampleState extends State<Example> {
         child: Stack(
           children: [
             Container(
-              width: Responsive.isDesktop(context)?1440:Responsive.isTablet(context)?768:375,
+              width: Responsive.isDesktop(context)
+                  ? 1440
+                  : Responsive.isTablet(context)
+                      ? 768
+                      : 375,
               // height: 937,
               // color: Colors.purple,
               color: Color.fromARGB(255, 232, 242, 252),
@@ -529,14 +578,22 @@ class _ExampleState extends State<Example> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: Responsive.isDesktop(context)?const EdgeInsets.only(top: 96, bottom: 48):Responsive.isTablet(context)?const EdgeInsets.only(top: 75, bottom: 38):const EdgeInsets.only(top: 38, bottom: 25),
+                    padding: Responsive.isDesktop(context)
+                        ? const EdgeInsets.only(top: 96, bottom: 48)
+                        : Responsive.isTablet(context)
+                            ? const EdgeInsets.only(top: 75, bottom: 38)
+                            : const EdgeInsets.only(top: 38, bottom: 25),
                     child: Container(
                       // color: Colors.amber,
                       child: CarouselSlider(
                         carouselController: _controller,
                         options: CarouselOptions(
                           viewportFraction: 1.25,
-                          height: Responsive.isDesktop(context)?500 : Responsive.isTablet(context)?380:165,
+                          height: Responsive.isDesktop(context)
+                              ? 500
+                              : Responsive.isTablet(context)
+                                  ? 380
+                                  : 165,
                           // enlargeCenterPage: true,
                           autoPlay: true,
                           onPageChanged: (index, reason) {
@@ -546,42 +603,55 @@ class _ExampleState extends State<Example> {
                             });
                           },
                         ),
-                        items: [
-                          Image.asset("assets/features/ex1.png")
-                        ],
+                        items: [Image.asset("assets/features/ex1.png")],
                       ),
                     ),
                   ),
                   Text(
-                "ตัวอย่างแสดงฟังก์ชันการใช้งาน PD Management ",
-                style: GoogleFonts.ibmPlexSansThai(
-                    fontSize: Responsive.isMobile(context)?10:20,
-                    fontWeight: FontWeight.w500,
-                    color: Color.fromARGB(255, 75, 195, 211)),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: Responsive.isDesktop(context)?93:Responsive.isTablet(context)?75:38,)
+                    "ตัวอย่างแสดงฟังก์ชันการใช้งาน PD Management ",
+                    style: GoogleFonts.ibmPlexSansThai(
+                        fontSize: Responsive.isMobile(context) ? 10 : 20,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromARGB(255, 75, 195, 211)),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: Responsive.isDesktop(context)
+                        ? 93
+                        : Responsive.isTablet(context)
+                            ? 75
+                            : 38,
+                  )
                 ],
               ),
             ),
             new Positioned(
-              top: Responsive.isDesktop(context)?300:Responsive.isTablet(context)?215:127,
-              left: Responsive.isDesktop(context)?76:Responsive.isTablet(context)?20:23,
+              top: Responsive.isDesktop(context)
+                  ? 300
+                  : Responsive.isTablet(context)
+                      ? 215
+                      : 127,
+              left: Responsive.isDesktop(context)
+                  ? 76
+                  : Responsive.isTablet(context)
+                      ? 20
+                      : 23,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: Responsive.isMobile(context)?29:60,
-                    height: Responsive.isMobile(context)?29:60,
+                    width: Responsive.isMobile(context) ? 29 : 60,
+                    height: Responsive.isMobile(context) ? 29 : 60,
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.transparent,
-                        border:
-                            Border.all(color: Color.fromARGB(255, 74, 195, 212))),
+                        border: Border.all(
+                            color: Color.fromARGB(255, 74, 195, 212))),
                     child: IconButton(
                       icon: Icon(Icons.keyboard_arrow_left,
-                          size: Responsive.isMobile(context)?9:20, color: Color.fromARGB(255, 77, 193, 216)),
+                          size: Responsive.isMobile(context) ? 9 : 20,
+                          color: Color.fromARGB(255, 77, 193, 216)),
                       onPressed: () {
                         _controller.previousPage(
                           duration: Duration(milliseconds: 300),
@@ -591,19 +661,24 @@ class _ExampleState extends State<Example> {
                     ),
                   ),
                   SizedBox(
-                    width:  Responsive.isDesktop(context)?1164:Responsive.isTablet(context)?613:274,
+                    width: Responsive.isDesktop(context)
+                        ? 1164
+                        : Responsive.isTablet(context)
+                            ? 613
+                            : 274,
                   ),
                   Container(
-                    width: Responsive.isMobile(context)?29:60,
-                    height: Responsive.isMobile(context)?29:60,
+                    width: Responsive.isMobile(context) ? 29 : 60,
+                    height: Responsive.isMobile(context) ? 29 : 60,
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.transparent,
-                        border:
-                            Border.all(color: Color.fromARGB(255, 74, 195, 212))),
+                        border: Border.all(
+                            color: Color.fromARGB(255, 74, 195, 212))),
                     child: IconButton(
                       icon: Icon(Icons.keyboard_arrow_right,
-                          size: Responsive.isMobile(context)?9:20, color: Color.fromARGB(255, 77, 193, 216)),
+                          size: Responsive.isMobile(context) ? 9 : 20,
+                          color: Color.fromARGB(255, 77, 193, 216)),
                       onPressed: () {
                         _controller.nextPage(
                           duration: Duration(milliseconds: 300),
@@ -615,7 +690,6 @@ class _ExampleState extends State<Example> {
                 ],
               ),
             ),
-            
           ],
         ),
       ),

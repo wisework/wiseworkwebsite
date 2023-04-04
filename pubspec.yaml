@@ -89,7 +89,6 @@ flutter:
   - assets/packages/check.png
   - assets/packages/cloud.png
   - assets/packages/clouds.png
-  - assets/packages/white_clouds.png
   - assets/packages/rainbow_cloud.png
   - assets/packages/record.png
   - assets/packages/lock.png
@@ -234,10 +233,15 @@ flutter:
   - assets/about/awards/iso31000.png
 
   - assets/product/mobile_creative.png
-  - assets/product/whosepic.png
+  - assets/product/creative.png
   - assets/product/select.png
   - assets/product/choices.png
-  - assets/product/creative.png
+  - assets/product/enterprise.png
+  - assets/product/standard.png
+  - assets/product/express.png
+  - assets/product/blue_cloud.png
+  - assets/product/blue_clouds.png
+  - assets/product/blue_rainbow.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

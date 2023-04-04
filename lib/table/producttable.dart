@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import '../responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:go_router/go_router.dart';
 
 class CompareTable extends StatefulWidget {
   const CompareTable({Key? key}) : super(key: key);
@@ -70,34 +71,34 @@ final price = Container(
             fontSize: 20, fontWeight: FontWeight.w500),
       )),
 );
-final demo = Container(
-  decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(30.0),
-    boxShadow: [
-      BoxShadow(
-        color: Colors.grey.withOpacity(0.5),
-        spreadRadius: 0,
-        blurRadius: 1,
-        offset: Offset(0, 4), // changes position of shadow
-      ),
-    ],
-  ),
-  width: 193,
-  height: 53,
-  child: ElevatedButton(
-      onPressed: () {},
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Color.fromRGBO(75, 195, 211, 1),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.0),
-        ),
-      ),
-      child: Text(
-        'Request Demo',
-        style: GoogleFonts.ibmPlexSansThai(
-            fontSize: 20, fontWeight: FontWeight.w500),
-      )),
-);
+// final demo = Container(
+//   decoration: BoxDecoration(
+//     borderRadius: BorderRadius.circular(30.0),
+//     boxShadow: [
+//       BoxShadow(
+//         color: Colors.grey.withOpacity(0.5),
+//         spreadRadius: 0,
+//         blurRadius: 1,
+//         offset: Offset(0, 4), // changes position of shadow
+//       ),
+//     ],
+//   ),
+//   width: 193,
+//   height: 53,
+//   child: ElevatedButton(
+//       onPressed: () => context.go('/package/1'),
+//       style: ElevatedButton.styleFrom(
+//         backgroundColor: Color.fromRGBO(75, 195, 211, 1),
+//         shape: RoundedRectangleBorder(
+//           borderRadius: BorderRadius.circular(30.0),
+//         ),
+//       ),
+//       child: Text(
+//         'Request Demo',
+//         style: GoogleFonts.ibmPlexSansThai(
+//             fontSize: 20, fontWeight: FontWeight.w500),
+//       )),
+// );
 
 class _CompareTableState extends State<CompareTable> {
   @override
@@ -732,7 +733,8 @@ class _CompareTableState extends State<CompareTable> {
                                                       ? 46
                                                       : 20,
                                               child: OutlinedButton(
-                                                onPressed: () {},
+                                                onPressed: () =>
+                                                    context.go('/package/1'),
                                                 style: OutlinedButton.styleFrom(
                                                   side: BorderSide(
                                                     width: Responsive.isDesktop(
@@ -897,7 +899,8 @@ class _CompareTableState extends State<CompareTable> {
                                                       ? 46
                                                       : 20,
                                               child: OutlinedButton(
-                                                onPressed: () {},
+                                                onPressed: () =>
+                                                    context.go('/package/2'),
                                                 style: OutlinedButton.styleFrom(
                                                   side: BorderSide(
                                                     width: Responsive.isDesktop(
@@ -1050,7 +1053,8 @@ class _CompareTableState extends State<CompareTable> {
                                                       ? 46
                                                       : 20,
                                               child: OutlinedButton(
-                                                onPressed: () {},
+                                                onPressed: () =>
+                                                    context.go('/package/3'),
                                                 style: OutlinedButton.styleFrom(
                                                   side: BorderSide(
                                                     width: Responsive.isDesktop(
@@ -1177,7 +1181,37 @@ class _CompareTableState extends State<CompareTable> {
                             SizedBox(width: 110),
                             price,
                             SizedBox(width: 26),
-                            demo
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30.0),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 0,
+                                    blurRadius: 1,
+                                    offset: Offset(
+                                        0, 4), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              width: 193,
+                              height: 53,
+                              child: ElevatedButton(
+                                  onPressed: () => context.go('/demo'),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor:
+                                        Color.fromRGBO(75, 195, 211, 1),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(30.0),
+                                    ),
+                                  ),
+                                  child: Text(
+                                    'Request Demo',
+                                    style: GoogleFonts.ibmPlexSansThai(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500),
+                                  )),
+                            )
                           ],
                         )
                       : Column(
@@ -1218,14 +1252,86 @@ class _CompareTableState extends State<CompareTable> {
                                     children: [
                                       price,
                                       SizedBox(width: 26),
-                                      demo,
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(30.0),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color:
+                                                  Colors.grey.withOpacity(0.5),
+                                              spreadRadius: 0,
+                                              blurRadius: 1,
+                                              offset: Offset(0,
+                                                  4), // changes position of shadow
+                                            ),
+                                          ],
+                                        ),
+                                        width: 193,
+                                        height: 53,
+                                        child: ElevatedButton(
+                                            onPressed: () =>
+                                                context.go('/demo'),
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor: Color.fromRGBO(
+                                                  75, 195, 211, 1),
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(30.0),
+                                              ),
+                                            ),
+                                            child: Text(
+                                              'Request Demo',
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                            )),
+                                      ),
                                     ],
                                   )
                                 : Column(
                                     children: [
                                       price,
                                       SizedBox(height: 20),
-                                      demo,
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(30.0),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color:
+                                                  Colors.grey.withOpacity(0.5),
+                                              spreadRadius: 0,
+                                              blurRadius: 1,
+                                              offset: Offset(0,
+                                                  4), // changes position of shadow
+                                            ),
+                                          ],
+                                        ),
+                                        width: 193,
+                                        height: 53,
+                                        child: ElevatedButton(
+                                            onPressed: () =>
+                                                context.go('/demo'),
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor: Color.fromRGBO(
+                                                  75, 195, 211, 1),
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(30.0),
+                                              ),
+                                            ),
+                                            child: Text(
+                                              'Request Demo',
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                            )),
+                                      ),
                                     ],
                                   ),
                           ],
