@@ -478,10 +478,13 @@ class MyPackages extends StatelessWidget {
                             ),
                           )),
                         ),
-              packagedetails(
+              ProductDetails(
                 title: title,
               ),
               FeaturesPage(),
+              ProductWith(
+                title: title,
+              ),
               Compare(),
               Footer()
             ],

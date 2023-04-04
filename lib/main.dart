@@ -6,7 +6,6 @@ import 'package:wiseintern/about/aboutpage.dart';
 import 'package:wiseintern/customers/customerspage.dart';
 import 'package:wiseintern/model/features.dart';
 import 'package:wiseintern/services/servicespage.dart';
-import 'package:wiseintern/products/productspage.dart';
 import 'package:wiseintern/features/pdmanagement.dart';
 import 'package:wiseintern/contact/contactpage.dart';
 import 'package:wiseintern/faq/faqpage.dart';
@@ -59,12 +58,6 @@ final GoRouter _router = GoRouter(
           path: 'services',
           builder: (BuildContext context, GoRouterState state) {
             return ServicesPage();
-          },
-        ),
-        GoRoute(
-          path: 'product',
-          builder: (BuildContext context, GoRouterState state) {
-            return ProductPage();
           },
         ),
         GoRoute(

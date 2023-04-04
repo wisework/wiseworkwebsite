@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
-import 'package:wiseintern/products/productspage.dart';
+import 'package:wiseintern/products/producttemplate.dart';
 
 class AdvisePage extends StatefulWidget {
   @override
@@ -93,7 +93,11 @@ class _AdviseState extends State<AdvisePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ProductPage()),
+                                  builder: (context) => MyPackages(
+                                      "Enterprise",
+                                      "Perpetual License",
+                                      "pakages/rainbow_cloud.png",
+                                      "ระบบบริหารจัดการข้อมูลส่วนบุคคล PDPA เหมาะสำหรับองค์กรขนาดใหญ่ มีบริษัทในเครือ ควบคุมระบบทั้งหมดได้จากศูนย์กลาง ครอบคลุมทุกฟังก์ชันการใช้งานเต็มรูปแบบ 11 Modules และไม่มีข้อจำกัดในการเชื่อมต่อกับระบบอื่น")),
                             );
                           },
                           style: ElevatedButton.styleFrom(

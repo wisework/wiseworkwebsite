@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 
-class packagedetails extends StatefulWidget {
+class ProductDetails extends StatefulWidget {
   final String title;
-  packagedetails({required this.title});
+  ProductDetails({required this.title});
 
   @override
-  _packagedetailsState createState() => _packagedetailsState();
+  _ProductDetailsState createState() => _ProductDetailsState();
 }
 
-class _packagedetailsState extends State<packagedetails> {
+class _ProductDetailsState extends State<ProductDetails> {
   int? hoveredIndex;
   final List<String> listname = [
     "Modules",

@@ -1,21 +1,76 @@
 import 'package:flutter/material.dart';
-// import 'package:wiseintern/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hovering/hovering.dart';
 import 'package:wiseintern/responsive.dart';
+import 'package:go_router/go_router.dart';
 
-class PackageModel {
+class ProductWith extends StatefulWidget {
   final String title;
-  final String lisence;
-  final String imageUrl;
-  final String? routePath;
-  PackageModel(this.title, this.lisence, this.imageUrl, this.routePath);
+  ProductWith({required this.title});
+
+  @override
+  _ProductWithState createState() => _ProductWithState();
 }
 
-class SingleWhomPage extends StatelessWidget {
+class _ProductWithState extends State<ProductWith> {
   @override
   Widget build(BuildContext context) {
-    List<String> whomlist = [
+    List<String> explist = [
+      !Responsive.isMobile(context)
+          ? "ธุรกิจและองค์กรทุกประเภท ธุรกิจขนาดย่อม (SME)"
+          : "ธุรกิจและองค์กรทุกประเภท ธุรกิจ\nขนาดย่อม (SME)",
+      "วิสาหกิจขนาดกลางและขนาดเล็ก" "วิสาหกิจขนาดกลางและขนาดเล็ก",
+      !Responsive.isMobile(context)
+          ? "องค์กรที่มีความเสี่ยงในการเก็บข้อมูลส่วนบุคคลจำนวนมาก"
+          : "องค์กรที่มีความเสี่ยงในการเก็บข้อมูล\nส่วนบุคคลจำนวนมาก",
+      "องค์กรอยู่ในตลาดหลักทรัพย์",
+      !Responsive.isMobile(context)
+          ? "มีความเสี่ยงในการเก็บข้อมูลอ่อนไหว (Sensitivity Data)"
+          : "มีความเสี่ยงในการเก็บข้อมูลอ่อนไหว\n(Sensitivity Data)",
+      !Responsive.isMobile(context)
+          ? "ไม่ต้องการเชื่อมต่อกับระบบภายในเพื่อนำเข้าข้อมูล"
+          : "ไม่ต้องการเชื่อมต่อกับระบบภายใน\nเพื่อนำเข้าข้อมูล",
+      "องค์กรไม่มีการติดต่อกับต่างประเทศ",
+      !Responsive.isMobile(context)
+          ? "องค์กรไม่อยู่ภายใต้ระเบียบของหน่วยงานกำกับ เช่น กลต. คปภ. ธปท."
+          : "องค์กรไม่อยู่ภายใต้ระเบียบของ\nหน่วยงานกำกับ เช่น กลต. คปภ. ธปท.",
+      "ต้องการใช้ Storage จำนวนมาก",
+      !Responsive.isMobile(context)
+          ? "สามารถใช้งาน Modules ได้ตรงตามวัตถุประสงค์หลักของ พรบ.\nได้แก่ PD Management, Consent Management, Cookies\nManagement , Data Subject Right Management"
+          : "สามารถใช้งาน Modules ได้ตรงตาม\nวัตถุประสงค์หลักของ พรบ. ได้แก่\nPD Management, Consent\nManagement, Cookies\nManagement , Data Subject Right\nanagement",
+    ];
+    List<String> stalist = [
+      !Responsive.isMobile(context)
+          ? "องค์กรขนาดกลางไปจนถึงขนาดใหญ่"
+          : "องค์กรขนาดใหญ่ มีสาขา มีบริษัท\nในเครือ",
+      !Responsive.isMobile(context)
+          ? "มีความเสี่ยงในการเก็บข้อมูลส่วนบุคคลจำนวนมาก"
+          : "มีความเสี่ยงในการเก็บข้อมูลส่วน\nบุคคลจำนวนมาก",
+      !Responsive.isMobile(context)
+          ? "มีความเสี่ยงในการเก็บข้อมูลอ่อนไหว (Sensitivity Data)"
+          : "มีความเสี่ยงในการเก็บข้อมูลอ่อนไหว\n(Sensitivity Data)",
+      "องค์กรอยู่ในตลาดหลักทรัพย์",
+      !Responsive.isMobile(context)
+          ? "องค์กรอยู่ในตลาดหลักทรัพย์"
+          : "มีการติดต่อกับต่างประเทศที่มี\nกฎหมายลักษณะเดียวกัน",
+      !Responsive.isMobile(context)
+          ? "มีการติดต่อกับต่างประเทศที่มีกฎหมายลักษณะเดียวกัน"
+          : "องค์กรอยู่ภายใต้ระเบียบของ\nหน่วยงานกำกับ เช่น กลต. คปภ. ธปท.",
+      !Responsive.isMobile(context)
+          ? "องค์กรอยู่ภายใต้ระเบียบของหน่วยงานกำกับ เช่น กลต. คปภ. ธปท."
+          : "ธุรกิจเฉพาะต้องการปรับแต่งให้\nเข้ากับการทำงานสูงมาก",
+      !Responsive.isMobile(context)
+          ? "ธุรกิจเฉพาะต้องการปรับแต่งให้เข้ากับการทำงาน"
+          : "ต้องการเชื่อมต่อกับระบบภายในที่มี\nอยู่เดิม เช่น ERP, Single Sign-On",
+      "ต้องการใช้ Storage จำนวนมาก",
+      !Responsive.isMobile(context)
+          ? "ไม่ต้องการเชื่อมต่อกับระบบภายในที่มีอยู่เดิม"
+          : "ต้องการ Security ที่สามารถควบคุม\nเองได้ทั้งหมด",
+      !Responsive.isMobile(context)
+          ? "มีกฎระเบียบภายในรองรับการใช้ Cloud"
+          : "ต้องการ Security ที่สามารถควบคุม\nเองได้ทั้งหมด",
+    ];
+    List<String> entlist = [
       !Responsive.isMobile(context)
           ? "องค์กรขนาดใหญ่ มีสาขา มีบริษัทในเครือ"
           : "องค์กรขนาดใหญ่ มีสาขา มีบริษัท\nในเครือ",
@@ -27,18 +82,23 @@ class SingleWhomPage extends StatelessWidget {
           : "มีความเสี่ยงในการเก็บข้อมูลอ่อนไหว\n(Sensitivity Data)",
       "องค์กรอยู่ในตลาดหลักทรัพย์",
       !Responsive.isMobile(context)
+          ? "องค์กรอยู่ในตลาดหลักทรัพย์"
+          : "องค์กรอยู่ในตลาดหลักทรัพย์",
+      !Responsive.isMobile(context)
           ? "มีการติดต่อกับต่างประเทศที่มีกฎหมายลักษณะเดียวกัน"
-          : "มีการติดต่อกับต่างประเทศที่มี\nกฎหมายลักษณะเดียวกัน",
+          : "มีการติดต่อกับต่างประเทศที่มีกฎหมายลักษณะเดียวกัน.",
       !Responsive.isMobile(context)
           ? "องค์กรอยู่ภายใต้ระเบียบของหน่วยงานกำกับ เช่น กลต. คปภ. ธปท."
-          : "องค์กรอยู่ภายใต้ระเบียบของ\nหน่วยงานกำกับ เช่น กลต. คปภ. ธปท.",
+          : "องค์กรอยู่ภายใต้ระเบียบของหน่วยงานกำกับ เช่น กลต. คปภ. ธปท.",
       !Responsive.isMobile(context)
           ? "ธุรกิจเฉพาะต้องการปรับแต่งให้เข้ากับการทำงานสูงมาก"
-          : "ธุรกิจเฉพาะต้องการปรับแต่งให้\nเข้ากับการทำงานสูงมาก",
+          : "ธุรกิจเฉพาะต้องการปรับแต่งให้เข้ากับการทำงานสูงมาก",
       !Responsive.isMobile(context)
           ? "ต้องการเชื่อมต่อกับระบบภายในที่มีอยู่เดิม เช่น ERP, Single Sign-On"
-          : "ต้องการเชื่อมต่อกับระบบภายในที่มี\nอยู่เดิม เช่น ERP, Single Sign-On",
-      "ต้องการใช้ Storage จำนวนมาก",
+          : "ต้องการเชื่อมต่อกับระบบภายในที่มีอยู่เดิม เช่น ERP, Single Sign-On",
+      !Responsive.isMobile(context)
+          ? "ต้องการใช้ Storage จำนวนมาก"
+          : "ต้องการใช้ Storage จำนวนมาก",
       !Responsive.isMobile(context)
           ? "ต้องการ Security ที่สามารถควบคุมเองได้ทั้งหมด"
           : "ต้องการ Security ที่สามารถควบคุม\nเองได้ทั้งหมด",
@@ -48,7 +108,7 @@ class SingleWhomPage extends StatelessWidget {
       // height: 60,
       // width: 461,
       child: Text('เหมาะกับใคร?',
-          style: GoogleFonts.ibmPlexSansThai(
+          style: GoogleFonts.poppins(
               // letterSpacing: 2,
               // height: 1.25,
               fontSize: !Responsive.isMobile(context) ? 48 : 36,
@@ -58,10 +118,14 @@ class SingleWhomPage extends StatelessWidget {
     var whoselist = Container(
       color: Color.fromARGB(0, 255, 255, 255),
       // height: 486,
-      width: !Responsive.isMobile(context) ? 740 : 350,
+      width: !Responsive.isMobile(context) ? 750 : 375,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: whomlist.length,
+        itemCount: widget.title == "Express"
+            ? explist.length
+            : widget.title == "Standard"
+                ? stalist.length
+                : entlist.length,
         itemBuilder: (context, index) {
           return ListTile(
             horizontalTitleGap: 0,
@@ -74,12 +138,16 @@ class SingleWhomPage extends StatelessWidget {
               child: SizedBox(
                   width: !Responsive.isMobile(context) ? 25 : 23,
                   height: !Responsive.isMobile(context) ? 25 : 23,
-                  child: Image(image: AssetImage("assets/packages/check.png"))),
+                  child: Image(image: AssetImage("assets/product/check.png"))),
             ),
             title: Transform.translate(
-              offset: Offset(0, 0),
+              offset: Offset(!Responsive.isMobile(context) ? 34 : 21, 0),
               child: Text(
-                whomlist[index],
+                widget.title == "Express"
+                    ? explist[index]
+                    : widget.title == "Standard"
+                        ? stalist[index]
+                        : entlist[index],
                 style: GoogleFonts.ibmPlexSansThai(
                     color: Color.fromARGB(255, 0, 0, 0),
                     fontSize: !Responsive.isMobile(context) ? 24 : 20,
@@ -117,7 +185,7 @@ class SingleWhomPage extends StatelessWidget {
         SizedBox(
             height: 47,
             width: 80,
-            child: Image.asset("assets/packages/rainbow_cloud.png")),
+            child: Image.asset("assets/product/blue_rainbow.png")),
         SizedBox(height: 24),
         Text('Enterprise Package',
             style: GoogleFonts.ibmPlexSansThai(
@@ -126,11 +194,14 @@ class SingleWhomPage extends StatelessWidget {
             style: GoogleFonts.ibmPlexSansThai(
                 fontSize: 20, fontWeight: FontWeight.w400)),
         SizedBox(height: 16),
-        Text('Read more >',
-            style: GoogleFonts.ibmPlexSansThai(
-                color: Color.fromARGB(255, 75, 196, 213),
-                fontSize: 16,
-                fontWeight: FontWeight.w600))
+        TextButton(
+          onPressed: () => context.go('/package/3'),
+          child: Text('Read more >',
+              style: GoogleFonts.poppins(
+                  color: Color.fromARGB(255, 75, 196, 213),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600)),
+        )
       ]),
     );
     var standard = HoverContainer(
@@ -149,7 +220,7 @@ class SingleWhomPage extends StatelessWidget {
         SizedBox(
             height: 45,
             width: 75,
-            child: Image.asset("assets/packages/clouds.png")),
+            child: Image.asset("assets/product/blue_clouds.png")),
         SizedBox(height: 24),
         Text('Standard Package',
             style: GoogleFonts.ibmPlexSansThai(
@@ -158,11 +229,14 @@ class SingleWhomPage extends StatelessWidget {
             style: GoogleFonts.ibmPlexSansThai(
                 fontSize: 20, fontWeight: FontWeight.w400)),
         SizedBox(height: 16),
-        Text('Read more >',
-            style: GoogleFonts.ibmPlexSansThai(
-                color: Color.fromARGB(255, 75, 196, 213),
-                fontSize: 16,
-                fontWeight: FontWeight.w600))
+        TextButton(
+          onPressed: () => context.go('/package/2'),
+          child: Text('Read more >',
+              style: GoogleFonts.poppins(
+                  color: Color.fromARGB(255, 75, 196, 213),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600)),
+        )
       ]),
     );
     var express = HoverContainer(
@@ -181,7 +255,7 @@ class SingleWhomPage extends StatelessWidget {
         SizedBox(
             height: 60,
             width: 60,
-            child: Image.asset("assets/packages/cloud.png")),
+            child: Image.asset("assets/product/blue_cloud.png")),
         SizedBox(height: 24),
         Text('Express Package',
             style: GoogleFonts.ibmPlexSansThai(
@@ -190,11 +264,14 @@ class SingleWhomPage extends StatelessWidget {
             style: GoogleFonts.ibmPlexSansThai(
                 fontSize: 20, fontWeight: FontWeight.w400)),
         SizedBox(height: 16),
-        Text('Read more >',
-            style: GoogleFonts.ibmPlexSansThai(
-                color: Color.fromARGB(255, 75, 196, 213),
-                fontSize: 16,
-                fontWeight: FontWeight.w600))
+        TextButton(
+          onPressed: () => context.go('/package/1'),
+          child: Text('Read more >',
+              style: GoogleFonts.poppins(
+                  color: Color.fromARGB(255, 75, 196, 213),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600)),
+        )
       ]),
     );
     return Center(
@@ -239,10 +316,13 @@ class SingleWhomPage extends StatelessWidget {
                           ),
                           Container(
                               height: 469,
-                              width: 506,
+                              width: 567,
                               child: Image(
-                                  image: AssetImage(
-                                      "assets/product/whosepic.png"))),
+                                  image: AssetImage(widget.title == "Express"
+                                      ? "assets/product/express.png"
+                                      : widget.title == "Standard"
+                                          ? "assets/product/standard.png"
+                                          : "assets/product/enterprise.png"))),
                         ],
                       )
                     : SizedBox()
@@ -261,8 +341,11 @@ class SingleWhomPage extends StatelessWidget {
                           height: Responsive.isTablet(context) ? 469 : 233,
                           width: Responsive.isTablet(context) ? 506 : 282,
                           child: Image(
-                              image:
-                                  AssetImage("assets/product/whosepic.png"))),
+                              image: AssetImage(widget.title == "Express"
+                                  ? "assets/product/express.png"
+                                  : widget.title == "Standard"
+                                      ? "assets/product/standard.png"
+                                      : "assets/product/enterprise.png"))),
                     ],
                   )
                 : SizedBox(),
