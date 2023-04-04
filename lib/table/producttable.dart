@@ -5,11 +5,11 @@ import '../responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
 
-class CompareTable extends StatefulWidget {
-  const CompareTable({Key? key}) : super(key: key);
+class ProductTable extends StatefulWidget {
+  const ProductTable({Key? key}) : super(key: key);
 
   @override
-  State<CompareTable> createState() => _CompareTableState();
+  State<ProductTable> createState() => _ProductTableState();
 }
 
 class EXModel {
@@ -100,7 +100,7 @@ final price = Container(
 //       )),
 // );
 
-class _CompareTableState extends State<CompareTable> {
+class _ProductTableState extends State<ProductTable> {
   @override
   Widget build(BuildContext context) {
     final List<EXModel> table = [

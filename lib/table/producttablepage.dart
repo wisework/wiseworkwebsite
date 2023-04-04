@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:wiseintern/navbar.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/menu_drawer.dart';
 import 'package:wiseintern/home/footer.dart';
-import 'package:wiseintern/producttable/compare.dart';
-import 'package:wiseintern/producttable/table.dart';
+import 'package:wiseintern/table/tableheader.dart';
+import 'package:wiseintern/table/producttable.dart';
 import 'package:wiseintern/faq/question.dart';
 
 class ProductTablePage extends StatefulWidget {
@@ -47,7 +48,7 @@ class _ProductTablePageState extends State<ProductTablePage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [Compare(), CompareTable(), Questions(), Footer()],
+          children: [TableHeader(), ProductTable(), Questions(), Footer()],
         ),
       ),
     );

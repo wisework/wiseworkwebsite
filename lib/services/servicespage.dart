@@ -11,7 +11,7 @@ import 'package:wiseintern/services/banner.dart';
 import 'package:wiseintern/services/ourservices.dart';
 import 'package:wiseintern/services/compare.dart';
 import 'package:wiseintern/home/features.dart';
-import 'package:wiseintern/home/packagepage.dart';
+import 'package:wiseintern/home/packages.dart';
 
 class ServicesPage extends StatefulWidget {
   @override

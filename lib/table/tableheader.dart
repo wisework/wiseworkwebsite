@@ -3,12 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 // import 'package:wiseintern/responsive.dart';
 
-class Compare extends StatefulWidget {
+class TableHeader extends StatefulWidget {
   @override
-  _CompareState createState() => _CompareState();
+  _TableHeaderState createState() => _TableHeaderState();
 }
 
-class _CompareState extends State<Compare> {
+class _TableHeaderState extends State<TableHeader> {
   @override
   Widget build(BuildContext context) {
     return Center(

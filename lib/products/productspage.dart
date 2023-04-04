@@ -6,8 +6,8 @@ import 'package:go_router/go_router.dart';
 
 import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/home/features.dart';
-import 'package:wiseintern/products/packagedetails.dart';
-import 'package:wiseintern/products/whom.dart';
+import 'package:wiseintern/products/productdetails.dart';
+import 'package:wiseintern/products/productwith.dart';
 import 'package:wiseintern/services/compare.dart';
 
 class ProductPage extends StatefulWidget {

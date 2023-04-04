@@ -11,10 +11,10 @@ import 'package:wiseintern/features/pdmanagement.dart';
 import 'package:wiseintern/contact/contactpage.dart';
 import 'package:wiseintern/faq/faqpage.dart';
 import 'package:wiseintern/demo/demopage.dart';
-import 'package:wiseintern/producttable/producttablepage.dart';
+import 'package:wiseintern/table/producttablepage.dart';
 
 import 'package:wiseintern/features/templateFeatures.dart';
-import 'package:wiseintern/products/new_package.dart';
+import 'package:wiseintern/products/producttemplate.dart';
 
 import 'package:get/get.dart';
 import 'dart:convert';
