@@ -7,7 +7,7 @@ import 'package:wiseintern/model/features.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 
-import 'package:wiseintern/features/templateFeatures.dart';
+// import 'package:wiseintern/features/templateFeatures.dart';
 
 class FeaturesPage extends StatefulWidget {
   const FeaturesPage({Key? key}) : super(key: key);
@@ -377,12 +377,12 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                       children: <Widget>[
                                                         SizedBox(
                                                             width: 50,
-                                                            height: 50,
+                                                            height: 60,
                                                             child: Image.asset(
                                                               'assets/${features[index].imageUrl}',
                                                             )),
                                                         SizedBox(
-                                                          height: 24,
+                                                          height: 10,
                                                         ),
                                                         Text(
                                                           '${features[index].title}',

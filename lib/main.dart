@@ -86,17 +86,17 @@ final GoRouter _router = GoRouter(
           },
         ),
         GoRoute(
-          path: 'detail/1',
+          path: 'features/1',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
                 "PD Management",
                 "จัดการบันทึกรายการข้อมูลส่วนบุคคลและการไหลของข้อมูล (Data Flow)",
-                "features/folder.png",
+                "features/pdcard.png",
                 "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่ มาตรา 24 , มาตรา 26, มาตรา 30, มาตรา 31, มาตรา 32, มาตรา 36(1), มาตรา 39");
           },
         ),
         GoRoute(
-          path: 'detail/2',
+          path: 'features/2',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
                 "DPIA & Risk Management",
@@ -106,7 +106,7 @@ final GoRouter _router = GoRouter(
           },
         ),
         GoRoute(
-          path: 'detail/3',
+          path: 'features/3',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
                 "Cookie Consent",
@@ -116,14 +116,14 @@ final GoRouter _router = GoRouter(
           },
         ),
         GoRoute(
-          path: 'detail/4',
+          path: 'features/4',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails("Consent Management",
                 "การบริหารจัดการให้ความยินยอม", "features/consent.png", "4");
           },
         ),
         GoRoute(
-          path: 'detail/5',
+          path: 'features/5',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
                 "Data Subject Right Management",
@@ -133,14 +133,14 @@ final GoRouter _router = GoRouter(
           },
         ),
         GoRoute(
-          path: 'detail/6',
+          path: 'features/6',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails("Data Breach", "บริหารกรณีเกิดข้อมูลรั่วไหล",
                 "features/breach.png", "6");
           },
         ),
         GoRoute(
-          path: 'detail/7',
+          path: 'features/7',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
                 "Audit&Gap Management",
@@ -150,7 +150,7 @@ final GoRouter _router = GoRouter(
           },
         ),
         GoRoute(
-          path: 'detail/8',
+          path: 'features/8',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
                 "Policy&Notices Management",
@@ -160,7 +160,7 @@ final GoRouter _router = GoRouter(
           },
         ),
         GoRoute(
-          path: 'detail/9',
+          path: 'features/9',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
                 "Data Discover",
@@ -170,7 +170,7 @@ final GoRouter _router = GoRouter(
           },
         ),
         GoRoute(
-          path: 'detail/10',
+          path: 'features/10',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
                 "Executive Support System",
@@ -180,14 +180,14 @@ final GoRouter _router = GoRouter(
           },
         ),
         GoRoute(
-          path: 'detail/11',
+          path: 'features/11',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails("Legitimate Interest Assessment",
                 "การประเมินการนำฐานกฏหมายมาใช้", "features/legi.png", "11");
           },
         ),
         GoRoute(
-          path: 'detail/12',
+          path: 'features/12',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
                 "System Setting Management",
@@ -271,89 +271,89 @@ class _MyAppState extends State<MyApp> {
   //       return FaqPage();
   //     case "demo":
   //       return DemoPage();
-  //     case "detail/1":
+  //     case "features/1":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
-  //     case "detail/2":
+  //     case "features/2":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
-  //     case "detail/3":
+  //     case "features/3":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
-  //     case "detail/4":
+  //     case "features/4":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
-  //     case "detail/5":
+  //     case "features/5":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
-  //     case "detail/6":
+  //     case "features/6":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
-  //     case "detail/7":
+  //     case "features/7":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
-  //     case "detail/8":
+  //     case "features/8":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
-  //     case "detail/9":
+  //     case "features/9":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
-  //     case "detail/10":
+  //     case "features/10":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
-  //     case "detail/11":
+  //     case "features/11":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
-  //     case "detail/12":
+  //     case "features/12":
   //       return MyDetails(
   //         model.title,
   //         model.description,
   //         model.imageUrl,
-  //         model.detail,
+  //         model.features,
   //       );
 
   //     default:

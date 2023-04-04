@@ -117,6 +117,7 @@ class _CustomerState extends State<Customer> {
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(10)),
             width: Responsive.isTablet(context) ? 450 : 343,
+            height: Responsive.isTablet(context)? 400: 300,
             child: Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -1237,8 +1238,8 @@ class _CustomerState extends State<Customer> {
                                                       : 0.76,
                                               height:
                                                   Responsive.isTablet(context)
-                                                      ? 350
-                                                      : 377,
+                                                      ? 380
+                                                      : 410,
                                               autoPlay: true,
                                               enlargeCenterPage: true,
                                               onPageChanged: (index, reason) {

@@ -6,14 +6,12 @@ class FeatureModel {
   final String description;
   final String imageUrl;
   final String page;
-  final String detail;
   // final String? routePath;
   const FeatureModel({
     required this.title,
     required this.description,
     required this.imageUrl,
     required this.page,
-    required this.detail,
   });
 
   Map<String, dynamic> toJson() => <String, dynamic>{
@@ -21,7 +19,6 @@ class FeatureModel {
         'description': description,
         'imageUrl': imageUrl,
         'page': page,
-        'detail': detail,
       };
 
   factory FeatureModel.fromJson(Map<String, dynamic> map) {
@@ -30,7 +27,6 @@ class FeatureModel {
       description: map['description'] as String,
       imageUrl: map['imageUrl'] as String,
       page: map['page'] as String,
-      detail: map['detail'] as String,
     );
   }
 
@@ -46,7 +42,6 @@ class FeatureModel {
       description: description ?? this.description,
       imageUrl: imageUrl ?? this.imageUrl,
       page: page ?? this.page,
-      detail: detail ?? this.detail,
     );
   }
 }
