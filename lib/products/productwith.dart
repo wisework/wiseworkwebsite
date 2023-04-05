@@ -19,11 +19,10 @@ class _ProductWithState extends State<ProductWith> {
       !Responsive.isMobile(context)
           ? "ธุรกิจและองค์กรทุกประเภท ธุรกิจขนาดย่อม (SME)"
           : "ธุรกิจและองค์กรทุกประเภท ธุรกิจ\nขนาดย่อม (SME)",
-      "วิสาหกิจขนาดกลางและขนาดเล็ก" "วิสาหกิจขนาดกลางและขนาดเล็ก",
+      "วิสาหกิจขนาดกลางและขนาดเล็ก",
       !Responsive.isMobile(context)
           ? "องค์กรที่มีความเสี่ยงในการเก็บข้อมูลส่วนบุคคลจำนวนมาก"
           : "องค์กรที่มีความเสี่ยงในการเก็บข้อมูล\nส่วนบุคคลจำนวนมาก",
-      "องค์กรอยู่ในตลาดหลักทรัพย์",
       !Responsive.isMobile(context)
           ? "มีความเสี่ยงในการเก็บข้อมูลอ่อนไหว (Sensitivity Data)"
           : "มีความเสี่ยงในการเก็บข้อมูลอ่อนไหว\n(Sensitivity Data)",
@@ -34,7 +33,6 @@ class _ProductWithState extends State<ProductWith> {
       !Responsive.isMobile(context)
           ? "องค์กรไม่อยู่ภายใต้ระเบียบของหน่วยงานกำกับ เช่น กลต. คปภ. ธปท."
           : "องค์กรไม่อยู่ภายใต้ระเบียบของ\nหน่วยงานกำกับ เช่น กลต. คปภ. ธปท.",
-      "ต้องการใช้ Storage จำนวนมาก",
       !Responsive.isMobile(context)
           ? "สามารถใช้งาน Modules ได้ตรงตามวัตถุประสงค์หลักของ พรบ.\nได้แก่ PD Management, Consent Management, Cookies\nManagement , Data Subject Right Management"
           : "สามารถใช้งาน Modules ได้ตรงตาม\nวัตถุประสงค์หลักของ พรบ. ได้แก่\nPD Management, Consent\nManagement, Cookies\nManagement , Data Subject Right\nanagement",
@@ -42,33 +40,29 @@ class _ProductWithState extends State<ProductWith> {
     List<String> stalist = [
       !Responsive.isMobile(context)
           ? "องค์กรขนาดกลางไปจนถึงขนาดใหญ่"
-          : "องค์กรขนาดใหญ่ มีสาขา มีบริษัท\nในเครือ",
+          : "องค์กรขนาดกลางไปจนถึงขนาดใหญ่",
       !Responsive.isMobile(context)
           ? "มีความเสี่ยงในการเก็บข้อมูลส่วนบุคคลจำนวนมาก"
           : "มีความเสี่ยงในการเก็บข้อมูลส่วน\nบุคคลจำนวนมาก",
       !Responsive.isMobile(context)
           ? "มีความเสี่ยงในการเก็บข้อมูลอ่อนไหว (Sensitivity Data)"
           : "มีความเสี่ยงในการเก็บข้อมูลอ่อนไหว\n(Sensitivity Data)",
-      "องค์กรอยู่ในตลาดหลักทรัพย์",
       !Responsive.isMobile(context)
           ? "องค์กรอยู่ในตลาดหลักทรัพย์"
-          : "มีการติดต่อกับต่างประเทศที่มี\nกฎหมายลักษณะเดียวกัน",
+          : "องค์กรอยู่ในตลาดหลักทรัพย์",
       !Responsive.isMobile(context)
           ? "มีการติดต่อกับต่างประเทศที่มีกฎหมายลักษณะเดียวกัน"
-          : "องค์กรอยู่ภายใต้ระเบียบของ\nหน่วยงานกำกับ เช่น กลต. คปภ. ธปท.",
+          : "มีการติดต่อกับต่างประเทศที่มี\nกฎหมายลักษณะเดียวกัน",
       !Responsive.isMobile(context)
           ? "องค์กรอยู่ภายใต้ระเบียบของหน่วยงานกำกับ เช่น กลต. คปภ. ธปท."
-          : "ธุรกิจเฉพาะต้องการปรับแต่งให้\nเข้ากับการทำงานสูงมาก",
+          : "องค์กรอยู่ภายใต้ระเบียบของ\nหน่วยงานกำกับ เช่น กลต. คปภ. ธปท.",
       !Responsive.isMobile(context)
           ? "ธุรกิจเฉพาะต้องการปรับแต่งให้เข้ากับการทำงาน"
-          : "ต้องการเชื่อมต่อกับระบบภายในที่มี\nอยู่เดิม เช่น ERP, Single Sign-On",
-      "ต้องการใช้ Storage จำนวนมาก",
+          : "ธุรกิจเฉพาะต้องการปรับแต่งให้\nเข้ากับการทำงาน",
       !Responsive.isMobile(context)
           ? "ไม่ต้องการเชื่อมต่อกับระบบภายในที่มีอยู่เดิม"
-          : "ต้องการ Security ที่สามารถควบคุม\nเองได้ทั้งหมด",
-      !Responsive.isMobile(context)
-          ? "มีกฎระเบียบภายในรองรับการใช้ Cloud"
-          : "ต้องการ Security ที่สามารถควบคุม\nเองได้ทั้งหมด",
+          : "ไม่ต้องการเชื่อมต่อกับระบบภายในที่\nมีอยู่เดิม",
+      "มีกฎระเบียบภายในรองรับการใช้ Cloud",
     ];
     List<String> entlist = [
       !Responsive.isMobile(context)
@@ -82,23 +76,18 @@ class _ProductWithState extends State<ProductWith> {
           : "มีความเสี่ยงในการเก็บข้อมูลอ่อนไหว\n(Sensitivity Data)",
       "องค์กรอยู่ในตลาดหลักทรัพย์",
       !Responsive.isMobile(context)
-          ? "องค์กรอยู่ในตลาดหลักทรัพย์"
-          : "องค์กรอยู่ในตลาดหลักทรัพย์",
-      !Responsive.isMobile(context)
           ? "มีการติดต่อกับต่างประเทศที่มีกฎหมายลักษณะเดียวกัน"
-          : "มีการติดต่อกับต่างประเทศที่มีกฎหมายลักษณะเดียวกัน.",
+          : "มีการติดต่อกับต่างประเทศที่มี\nกฎหมายลักษณะเดียวกัน",
       !Responsive.isMobile(context)
           ? "องค์กรอยู่ภายใต้ระเบียบของหน่วยงานกำกับ เช่น กลต. คปภ. ธปท."
-          : "องค์กรอยู่ภายใต้ระเบียบของหน่วยงานกำกับ เช่น กลต. คปภ. ธปท.",
+          : "องค์กรอยู่ภายใต้ระเบียบของ\nหน่วยงานกำกับ เช่น กลต. คปภ. ธปท.",
       !Responsive.isMobile(context)
           ? "ธุรกิจเฉพาะต้องการปรับแต่งให้เข้ากับการทำงานสูงมาก"
-          : "ธุรกิจเฉพาะต้องการปรับแต่งให้เข้ากับการทำงานสูงมาก",
+          : "ธุรกิจเฉพาะต้องการปรับแต่งให้\nเข้ากับการทำงานสูงมาก",
       !Responsive.isMobile(context)
           ? "ต้องการเชื่อมต่อกับระบบภายในที่มีอยู่เดิม เช่น ERP, Single Sign-On"
-          : "ต้องการเชื่อมต่อกับระบบภายในที่มีอยู่เดิม เช่น ERP, Single Sign-On",
-      !Responsive.isMobile(context)
-          ? "ต้องการใช้ Storage จำนวนมาก"
-          : "ต้องการใช้ Storage จำนวนมาก",
+          : "ต้องการเชื่อมต่อกับระบบภายในที่มี\nอยู่เดิม เช่น ERP, Single Sign-On",
+      "ต้องการใช้ Storage จำนวนมาก",
       !Responsive.isMobile(context)
           ? "ต้องการ Security ที่สามารถควบคุมเองได้ทั้งหมด"
           : "ต้องการ Security ที่สามารถควบคุม\nเองได้ทั้งหมด",
@@ -134,14 +123,20 @@ class _ProductWithState extends State<ProductWith> {
             dense: true,
             visualDensity: VisualDensity(vertical: -4, horizontal: -4),
             leading: Transform.translate(
-              offset: Offset(0, 0),
+              offset: Offset(
+                  Responsive.isDesktop(context)
+                      ? 0
+                      : Responsive.isTablet(context)
+                          ? 20
+                          : 0,
+                  0),
               child: SizedBox(
                   width: !Responsive.isMobile(context) ? 25 : 23,
                   height: !Responsive.isMobile(context) ? 25 : 23,
                   child: Image(image: AssetImage("assets/product/check.png"))),
             ),
             title: Transform.translate(
-              offset: Offset(!Responsive.isMobile(context) ? 34 : 21, 0),
+              offset: Offset(!Responsive.isMobile(context) ? 34 : 5, 0),
               child: Text(
                 widget.title == "Express"
                     ? explist[index]
@@ -149,6 +144,8 @@ class _ProductWithState extends State<ProductWith> {
                         ? stalist[index]
                         : entlist[index],
                 style: GoogleFonts.ibmPlexSansThai(
+                    letterSpacing: -0.2,
+                    height: 2,
                     color: Color.fromARGB(255, 0, 0, 0),
                     fontSize: !Responsive.isMobile(context) ? 24 : 20,
                     fontWeight: FontWeight.w400),
@@ -170,9 +167,11 @@ class _ProductWithState extends State<ProductWith> {
             fontWeight: FontWeight.w500,
             color: Color.fromARGB(255, 24, 84, 110)));
     var enterprise = HoverContainer(
-      padding: const EdgeInsets.only(top: 40, left: 40),
-      width: 363,
-      height: 256,
+      padding: !Responsive.isMobile(context)
+          ? const EdgeInsets.only(top: 27, left: 40)
+          : const EdgeInsets.only(top: 40, left: 40),
+      width: !Responsive.isMobile(context) ? 363 : 320,
+      height: !Responsive.isMobile(context) ? 256 : 226,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: Color.fromARGB(255, 255, 255, 255),
@@ -189,11 +188,11 @@ class _ProductWithState extends State<ProductWith> {
         SizedBox(height: 24),
         Text('Enterprise Package',
             style: GoogleFonts.ibmPlexSansThai(
-                fontSize: 20, fontWeight: FontWeight.w500)),
+                height: 1.4, fontSize: 20, fontWeight: FontWeight.w500)),
         Text('(Perpeptual License)',
             style: GoogleFonts.ibmPlexSansThai(
-                fontSize: 20, fontWeight: FontWeight.w400)),
-        SizedBox(height: 16),
+                height: 1.4, fontSize: 20, fontWeight: FontWeight.w400)),
+        SizedBox(height: !Responsive.isMobile(context) ? 16 : 6),
         TextButton(
           onPressed: () => context.go('/package/3'),
           child: Text('Read more >',
@@ -205,9 +204,11 @@ class _ProductWithState extends State<ProductWith> {
       ]),
     );
     var standard = HoverContainer(
-      padding: const EdgeInsets.only(top: 40, left: 40),
-      width: 363,
-      height: 256,
+      padding: !Responsive.isMobile(context)
+          ? const EdgeInsets.only(top: 27, left: 40)
+          : const EdgeInsets.only(top: 40, left: 40),
+      width: !Responsive.isMobile(context) ? 363 : 320,
+      height: !Responsive.isMobile(context) ? 256 : 226,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: Color.fromARGB(255, 255, 255, 255),
@@ -224,11 +225,11 @@ class _ProductWithState extends State<ProductWith> {
         SizedBox(height: 24),
         Text('Standard Package',
             style: GoogleFonts.ibmPlexSansThai(
-                fontSize: 20, fontWeight: FontWeight.w500)),
+                height: 1.4, fontSize: 20, fontWeight: FontWeight.w500)),
         Text('(Subscription License)',
             style: GoogleFonts.ibmPlexSansThai(
-                fontSize: 20, fontWeight: FontWeight.w400)),
-        SizedBox(height: 16),
+                height: 1.4, fontSize: 20, fontWeight: FontWeight.w400)),
+        SizedBox(height: !Responsive.isMobile(context) ? 16 : 6),
         TextButton(
           onPressed: () => context.go('/package/2'),
           child: Text('Read more >',
@@ -240,9 +241,11 @@ class _ProductWithState extends State<ProductWith> {
       ]),
     );
     var express = HoverContainer(
-      padding: const EdgeInsets.only(top: 27, left: 40),
-      width: 363,
-      height: 256,
+      padding: !Responsive.isMobile(context)
+          ? const EdgeInsets.only(top: 27, left: 40)
+          : const EdgeInsets.only(top: 23, left: 36),
+      width: !Responsive.isMobile(context) ? 363 : 320,
+      height: !Responsive.isMobile(context) ? 256 : 226,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: Color.fromARGB(255, 255, 255, 255),
@@ -259,11 +262,11 @@ class _ProductWithState extends State<ProductWith> {
         SizedBox(height: 24),
         Text('Express Package',
             style: GoogleFonts.ibmPlexSansThai(
-                fontSize: 20, fontWeight: FontWeight.w500)),
+                height: 1.4, fontSize: 20, fontWeight: FontWeight.w500)),
         Text('(SaaS)',
             style: GoogleFonts.ibmPlexSansThai(
-                fontSize: 20, fontWeight: FontWeight.w400)),
-        SizedBox(height: 16),
+                height: 1.4, fontSize: 20, fontWeight: FontWeight.w400)),
+        SizedBox(height: !Responsive.isMobile(context) ? 16 : 6),
         TextButton(
           onPressed: () => context.go('/package/1'),
           child: Text('Read more >',
@@ -283,7 +286,11 @@ class _ProductWithState extends State<ProductWith> {
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: 84,
+              height: Responsive.isDesktop(context)
+                  ? 84
+                  : Responsive.isTablet(context)
+                      ? 50
+                      : 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -293,7 +300,14 @@ class _ProductWithState extends State<ProductWith> {
                       ? CrossAxisAlignment.start
                       : CrossAxisAlignment.center,
                   children: [
-                    title,
+                    Padding(
+                      padding: Responsive.isDesktop(context)
+                          ? const EdgeInsets.only(left: 0)
+                          : Responsive.isTablet(context)
+                              ? const EdgeInsets.only(left: 20)
+                              : const EdgeInsets.only(left: 0),
+                      child: title,
+                    ),
                     SizedBox(
                       height: 19,
                     ),
@@ -312,7 +326,7 @@ class _ProductWithState extends State<ProductWith> {
                     ? Column(
                         children: [
                           SizedBox(
-                            height: 60,
+                            height: Responsive.isTablet(context) ? 80 : 40,
                           ),
                           Container(
                               height: 469,
@@ -328,80 +342,77 @@ class _ProductWithState extends State<ProductWith> {
                     : SizedBox()
               ],
             ),
-            SizedBox(
-              height: 94,
-            ),
             !Responsive.isDesktop(context)
-                ? Column(
-                    children: [
-                      SizedBox(
-                        height: 51,
-                      ),
-                      Container(
-                          height: Responsive.isTablet(context) ? 469 : 233,
-                          width: Responsive.isTablet(context) ? 506 : 282,
-                          child: Image(
-                              image: AssetImage(widget.title == "Express"
-                                  ? "assets/product/express.png"
-                                  : widget.title == "Standard"
-                                      ? "assets/product/standard.png"
-                                      : "assets/product/enterprise.png"))),
-                    ],
-                  )
+                ? Container(
+                    height: Responsive.isTablet(context) ? 469 : 272,
+                    width: Responsive.isTablet(context) ? 506 : 322,
+                    child: Image(
+                        image: AssetImage(widget.title == "Express"
+                            ? "assets/product/express.png"
+                            : widget.title == "Standard"
+                                ? "assets/product/standard.png"
+                                : "assets/product/enterprise.png")))
                 : SizedBox(),
-            Container(
-              // height: 342,
-              // width: 1140,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    crossAxisAlignment: Responsive.isDesktop(context)
-                        ? CrossAxisAlignment.start
-                        : CrossAxisAlignment.center,
-                    children: [
-                      relate,
-                      SizedBox(
-                        width: Responsive.isDesktop(context) ? 1140 : null,
-                        height: Responsive.isDesktop(context)
-                            ? 38
-                            : Responsive.isTablet(context)
-                                ? 74
-                                : 34,
-                      ),
-                    ],
-                  ),
-                  Responsive.isDesktop(context)
-                      ? Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          // mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            express,
-                            SizedBox(
-                              width: 25,
-                            ),
-                            standard,
-                            SizedBox(
-                              width: 25,
-                            ),
-                            enterprise
-                          ],
-                        )
-                      : Column(
-                          // mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            express,
-                            SizedBox(
-                              height: 56,
-                            ),
-                            standard,
-                            SizedBox(
-                              height: 56,
-                            ),
-                            enterprise
-                          ],
+            Padding(
+              padding: Responsive.isDesktop(context)
+                  ? const EdgeInsets.only(top: 93)
+                  : Responsive.isDesktop(context)
+                      ? const EdgeInsets.only(top: 25)
+                      : const EdgeInsets.only(top: 60),
+              child: Container(
+                // height: 342,
+                // width: 1140,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      crossAxisAlignment: Responsive.isDesktop(context)
+                          ? CrossAxisAlignment.start
+                          : CrossAxisAlignment.center,
+                      children: [
+                        relate,
+                        SizedBox(
+                          width: Responsive.isDesktop(context) ? 1140 : null,
+                          height: Responsive.isDesktop(context)
+                              ? 38
+                              : Responsive.isTablet(context)
+                                  ? 74
+                                  : 34,
                         ),
-                ],
+                      ],
+                    ),
+                    Responsive.isDesktop(context)
+                        ? Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            // mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              express,
+                              SizedBox(
+                                width: 25,
+                              ),
+                              standard,
+                              SizedBox(
+                                width: 25,
+                              ),
+                              enterprise
+                            ],
+                          )
+                        : Column(
+                            // mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              express,
+                              SizedBox(
+                                height: 56,
+                              ),
+                              standard,
+                              SizedBox(
+                                height: 56,
+                              ),
+                              enterprise
+                            ],
+                          ),
+                  ],
+                ),
               ),
             ),
             SizedBox(

@@ -2,6 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 
+class PakageDetails {
+  final String title;
+  final String express;
+  final String standard;
+  final String enterprise;
+  PakageDetails({
+    required this.title,
+    required this.express,
+    required this.standard,
+    required this.enterprise,
+  });
+
+  PakageDetails copyWith(
+      {String? title, String? express, String? standard, String? enterprise}) {
+    return PakageDetails(
+      title: title ?? this.title,
+      express: express ?? this.express,
+      standard: standard ?? this.standard,
+      enterprise: enterprise ?? this.enterprise,
+    );
+  }
+}
+
 class ProductDetails extends StatefulWidget {
   final String title;
   ProductDetails({required this.title});
@@ -12,64 +35,84 @@ class ProductDetails extends StatefulWidget {
 
 class _ProductDetailsState extends State<ProductDetails> {
   int? hoveredIndex;
-  final List<String> listname = [
-    "Modules",
-    "Concurrent User",
-    "Storage",
-    "Number of Data Subject",
-    "ครบถ้วนตามพรบ.ฯ",
-    "การติดตั้งระบบ",
-    "พัฒนาเพิ่มเติมตามความต้องการ",
-    "รองรับการทำงานแบบ Multi-Tenant",
-    "Product Support",
-    "API for Import&Export"
-  ];
-  final List<String> exlist = [
-    "Main (4 Modules)",
-    "5",
-    "10 GB",
-    "~ 100,000",
-    "Support ส่วนที่เป็นวัตถุประสงค์หลักของ PDPA",
-    "On Cloud",
-    "Not Support",
-    "Not Support",
-    "8x5 Standard Support",
-    "For Export Only"
-  ];
-  final List<String> stlist = [
-    "Max (11 Modules)",
-    "10",
-    "100 GB",
-    "~ 1,000,000",
-    "Support",
-    "On Cloud / On Premise",
-    "Support",
-    "Not Support",
-    "8x5 Standard Support",
-    "Import & Export"
-  ];
-  final List<String> enlist = [
-    "Max (11 Modules)",
-    "Unlimited",
-    "Unlimited",
-    "~ 10,000,000",
-    "Support",
-    "On Cloud/ On Premise",
-    "Support",
-    "Support",
-    "24x7 Premium Support",
-    "Import & Export"
-  ];
 
   @override
   Widget build(BuildContext context) {
+    final List<PakageDetails> detaillist = [
+      PakageDetails(
+          title: "Modules",
+          express: "Main (4 Modules)",
+          standard: "Max (11 Modules)",
+          enterprise: "Max (11 Modules)"),
+      PakageDetails(
+          title: "Concurrent User",
+          express: "5",
+          standard: "10",
+          enterprise: "Unlimited"),
+      PakageDetails(
+          title: "Storage",
+          express: "10 GB",
+          standard: "100 GB",
+          enterprise: "Unlimited"),
+      PakageDetails(
+          title: !Responsive.isMobile(context)
+              ? "Number of Data Subject"
+              : "Number of Data\nSubject",
+          express: "~ 100,000",
+          standard: "~ 1,000,000",
+          enterprise: "~ 10,000,000"),
+      PakageDetails(
+          title: "ครบถ้วนตามพรบ.ฯ",
+          express: Responsive.isDesktop(context)
+              ? "Support ส่วนที่เป็นวัตถุประสงค์หลักของ PDPA"
+              : Responsive.isTablet(context)
+                  ? "Support ส่วนที่เป็นวัตถุ\nประสงค์หลักของ PDPA"
+                  : "Support วัตถุประสงค์หลัก",
+          standard: "Support",
+          enterprise: "Support"),
+      PakageDetails(
+          title: "การติดตั้งระบบ",
+          express: "On Cloud",
+          standard: "On Cloud/ On Premise",
+          enterprise: "On Cloud/ On Premise"),
+      PakageDetails(
+          title: !Responsive.isMobile(context)
+              ? "พัฒนาเพิ่มเติมตามความต้องการ"
+              : "พัฒนาเพิ่มเติมตาม\nความต้องการ",
+          express: "Not Support",
+          standard: "Support",
+          enterprise: "Support"),
+      PakageDetails(
+          title: Responsive.isDesktop(context)
+              ? "รองรับการทำงานแบบ Multi-Tenant"
+              : "รองรับการทำงานแบบ\nMulti-Tenant",
+          express: "Not Support",
+          standard: "Not Support",
+          enterprise: "Support"),
+      PakageDetails(
+          title: "Product Support",
+          express: "8x5 Standard Support",
+          standard: "8x5 Standard Support",
+          enterprise: "24x7 Premium Support"),
+      PakageDetails(
+          title: !Responsive.isMobile(context)
+              ? "API for Import & Export"
+              : "API for Import &\nExport",
+          express: "For Export Only",
+          standard: "Import & Export",
+          enterprise: "Import & Export"),
+    ];
     return Center(
       child: Container(
         width: 1440,
         color: Color.fromARGB(255, 255, 255, 255),
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.only(bottom: 85),
+            padding: Responsive.isDesktop(context)
+                ? const EdgeInsets.only(bottom: 85, left: 200)
+                : Responsive.isTablet(context)
+                    ? const EdgeInsets.only(bottom: 75, left: 40)
+                    : const EdgeInsets.only(bottom: 35, left: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -82,10 +125,10 @@ class _ProductDetailsState extends State<ProductDetails> {
                             ? 500
                             : Responsive.isTablet(context)
                                 ? 411
-                                : 189,
+                                : 177,
                         child: ListView.builder(
                             shrinkWrap: true,
-                            itemCount: listname.length,
+                            itemCount: detaillist.length,
                             itemBuilder: (BuildContext context, int index) {
                               return Container(
                                 child: new Material(
@@ -108,10 +151,18 @@ class _ProductDetailsState extends State<ProductDetails> {
                                         height: Responsive.isDesktop(context)
                                             ? 56
                                             : Responsive.isTablet(context)
-                                                ? index == 7
+                                                ? (widget.title == "Express" &&
+                                                                index == 4 ||
+                                                            index == 7) ||
+                                                        index == 7
                                                     ? 90
-                                                    : 56
-                                                : 27.5,
+                                                    : 60
+                                                : index == 3 ||
+                                                        index == 6 ||
+                                                        index == 7 ||
+                                                        index == 9
+                                                    ? 58
+                                                    : 40,
                                         color: hoveredIndex == index
                                             ? Color.fromARGB(255, 255, 255, 255)
                                             : Color.fromARGB(
@@ -123,14 +174,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                                             Row(
                                               children: [
                                                 SizedBox(
-                                                  width: !Responsive.isMobile(
+                                                  width: Responsive.isDesktop(
                                                           context)
                                                       ? 16
-                                                      : 7,
+                                                      : 11,
                                                   height: !Responsive.isMobile(
                                                           context)
                                                       ? 16
-                                                      : 7,
+                                                      : 11,
                                                   child: Image.asset(hoveredIndex ==
                                                           index
                                                       ? "assets/product/select.png"
@@ -140,17 +191,17 @@ class _ProductDetailsState extends State<ProductDetails> {
                                                   width: !Responsive.isMobile(
                                                           context)
                                                       ? 24
-                                                      : 7,
+                                                      : 15,
                                                 ),
                                                 Text(
-                                                  '${listname[index]}',
+                                                  '${detaillist[index].title}',
                                                   style: GoogleFonts
                                                       .ibmPlexSansThai(
                                                           fontSize: !Responsive
                                                                   .isMobile(
                                                                       context)
                                                               ? 24
-                                                              : 10,
+                                                              : 14,
                                                           fontWeight:
                                                               FontWeight.w400,
                                                           color: hoveredIndex ==
@@ -183,10 +234,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                   children: [
                     Container(
                       // color: Colors.red,
-                      width: !Responsive.isMobile(context) ? 291 : 122,
+                      width: Responsive.isDesktop(context)
+                          ? 480
+                          : Responsive.isTablet(context)
+                              ? 315
+                              : 160,
                       child: ListView.builder(
                           shrinkWrap: true,
-                          itemCount: listname.length,
+                          itemCount: detaillist.length,
                           itemBuilder: (BuildContext context, int index) {
                             return Container(
                               child: new Material(
@@ -209,10 +264,18 @@ class _ProductDetailsState extends State<ProductDetails> {
                                       height: Responsive.isDesktop(context)
                                           ? 56
                                           : Responsive.isTablet(context)
-                                              ? index == 7
+                                              ? (widget.title == "Express" &&
+                                                              index == 4 ||
+                                                          index == 7) ||
+                                                      index == 7
                                                   ? 90
-                                                  : 56
-                                              : 27.5,
+                                                  : 60
+                                              : index == 3 ||
+                                                      index == 6 ||
+                                                      index == 7 ||
+                                                      index == 9
+                                                  ? 58
+                                                  : 40,
                                       color: hoveredIndex == index
                                           ? Color.fromARGB(255, 255, 255, 255)
                                           : Color.fromARGB(255, 255, 255, 255),
@@ -222,10 +285,10 @@ class _ProductDetailsState extends State<ProductDetails> {
                                         children: [
                                           Text(
                                             widget.title == "Express"
-                                                ? '${exlist[index]}'
+                                                ? '${detaillist[index].express}'
                                                 : widget.title == "Standard"
-                                                    ? '${stlist[index]}'
-                                                    : '${enlist[index]}',
+                                                    ? '${detaillist[index].standard}'
+                                                    : '${detaillist[index].enterprise}',
                                             style: GoogleFonts.ibmPlexSansThai(
                                               fontWeight: FontWeight.w400,
                                               color: hoveredIndex == index
@@ -236,7 +299,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                                               fontSize:
                                                   !Responsive.isMobile(context)
                                                       ? 24
-                                                      : 10,
+                                                      : 14,
                                             ),
                                             textAlign: TextAlign.center,
                                           ),
