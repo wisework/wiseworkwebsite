@@ -257,186 +257,193 @@ class MyPackages extends StatelessWidget {
                     )
                   : Responsive.isTablet(context)
                       ? Container(
-                          width: 768,
+                          width: 1440,
                           color: Colors.white,
-                          child: Center(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 76, left: 40, bottom: 60),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width: 60,
-                                        height: 5,
-                                        decoration: BoxDecoration(
-                                            color: Color.fromARGB(
-                                                255, 57, 128, 237),
-                                            borderRadius:
-                                                BorderRadius.circular(20),
-                                            border: Border.all(
+                          child: Container(
+                            width: 768,
+                            child: Center(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: 768,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 76, left: 40, bottom: 60),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          Container(
+                                            width: 60,
+                                            height: 5,
+                                            decoration: BoxDecoration(
                                                 color: Color.fromARGB(
                                                     255, 57, 128, 237),
-                                                width: 5)),
+                                                borderRadius:
+                                                    BorderRadius.circular(20),
+                                                border: Border.all(
+                                                    color: Color.fromARGB(
+                                                        255, 57, 128, 237),
+                                                    width: 5)),
+                                          ),
+                                          SizedBox(
+                                            width: 20,
+                                          ),
+                                          Container(
+                                            // color: Colors.amber,
+                                            height: 25,
+                                            child: Text(
+                                              "Our Services",
+                                              style: GoogleFonts.ibmPlexSansThai(
+                                                  fontWeight: FontWeight.w600,
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      255, 57, 128, 237)),
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                      SizedBox(
-                                        width: 20,
-                                      ),
-                                      Container(
-                                        // color: Colors.amber,
-                                        height: 25,
-                                        child: Text(
-                                          "Our Services",
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 16,
-                                              color: Color.fromARGB(
-                                                  255, 57, 128, 237)),
-                                        ),
-                                      ),
-                                    ],
+                                    ),
                                   ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 50),
-                                  child: Container(
-                                    width: 467,
-                                    // color: Colors.amber,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "PDPA MANAGEMENT PLATFORM",
-                                          style: GoogleFonts.poppins(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w500,
-                                              color: Color.fromARGB(
-                                                  255, 0, 112, 240)),
-                                          textAlign: TextAlign.start,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(top: 0),
-                                          child: Text(
-                                            "$title",
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 50),
+                                    child: Container(
+                                      width: 467,
+                                      // color: Colors.amber,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "PDPA MANAGEMENT PLATFORM",
                                             style: GoogleFonts.poppins(
-                                                fontSize: 50,
-                                                fontWeight: FontWeight.w700,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w500,
                                                 color: Color.fromARGB(
-                                                    255, 5, 45, 97)),
+                                                    255, 0, 112, 240)),
                                             textAlign: TextAlign.start,
                                           ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(top: 32),
-                                          child: Text(
-                                            "$description",
-                                            style: GoogleFonts.ibmPlexSansThai(
-                                                fontSize: 24,
-                                                fontWeight: FontWeight.w500,
-                                                color: Colors.black),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 32, right: 100),
-                                          child: Text(
-                                            "$detail",
-                                            style: GoogleFonts.ibmPlexSansThai(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.w400,
-                                                color: Color.fromARGB(
-                                                    255, 23, 24, 26)),
-                                          ),
-                                        ),
-                                        Row(
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  top: 32),
-                                              child: SizedBox(
-                                                width: 193,
-                                                height: 48,
-                                                child: ElevatedButton(
-                                                    onPressed: () {},
-                                                    style: ElevatedButton
-                                                        .styleFrom(
-                                                      backgroundColor:
-                                                          Color.fromARGB(255,
-                                                              52, 145, 206),
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(30.0),
-                                                      ),
-                                                    ),
-                                                    child: Text(
-                                                      'รับใบเสนอราคา',
-                                                      style: GoogleFonts
-                                                          .ibmPlexSansThai(
-                                                              fontSize: 20,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500),
-                                                    )),
-                                              ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 0),
+                                            child: Text(
+                                              "$title",
+                                              style: GoogleFonts.poppins(
+                                                  fontSize: 50,
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Color.fromARGB(
+                                                      255, 5, 45, 97)),
+                                              textAlign: TextAlign.start,
                                             ),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  top: 32, left: 16),
-                                              child: SizedBox(
-                                                width: 193,
-                                                height: 48,
-                                                child: ElevatedButton(
-                                                    onPressed: () =>
-                                                        context.go('/demo'),
-                                                    style: ElevatedButton
-                                                        .styleFrom(
-                                                      backgroundColor:
-                                                          Color.fromARGB(255,
-                                                              75, 195, 211),
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(30.0),
-                                                      ),
-                                                    ),
-                                                    child: Text(
-                                                      'Request Demo',
-                                                      style: GoogleFonts
-                                                          .ibmPlexSansThai(
-                                                              fontSize: 20,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500),
-                                                    )),
-                                              ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 32),
+                                            child: Text(
+                                              "$description",
+                                              style: GoogleFonts.ibmPlexSansThai(
+                                                  fontSize: 24,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: Colors.black),
                                             ),
-                                          ],
-                                        ),
-                                      ],
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 32, right: 100),
+                                            child: Text(
+                                              "$detail",
+                                              style: GoogleFonts.ibmPlexSansThai(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Color.fromARGB(
+                                                      255, 23, 24, 26)),
+                                            ),
+                                          ),
+                                          Row(
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 32),
+                                                child: SizedBox(
+                                                  width: 193,
+                                                  height: 48,
+                                                  child: ElevatedButton(
+                                                      onPressed: () {},
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                        backgroundColor:
+                                                            Color.fromARGB(255,
+                                                                52, 145, 206),
+                                                        shape:
+                                                            RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(30.0),
+                                                        ),
+                                                      ),
+                                                      child: Text(
+                                                        'รับใบเสนอราคา',
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                fontSize: 20,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500),
+                                                      )),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 32, left: 16),
+                                                child: SizedBox(
+                                                  width: 193,
+                                                  height: 48,
+                                                  child: ElevatedButton(
+                                                      onPressed: () =>
+                                                          context.go('/demo'),
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                        backgroundColor:
+                                                            Color.fromARGB(255,
+                                                                75, 195, 211),
+                                                        shape:
+                                                            RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(30.0),
+                                                        ),
+                                                      ),
+                                                      child: Text(
+                                                        'Request Demo',
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                fontSize: 20,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500),
+                                                      )),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.only(top: 70, left: 20),
-                                  child: Container(
-                                    color: Color.fromARGB(0, 255, 193, 7),
-                                    child: Image.asset(
-                                      'assets/product/creative.png',
-                                      width: 828,
-                                      height: 628,
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.only(top: 70, left: 20),
+                                    child: Container(
+                                      color: Color.fromARGB(0, 255, 193, 7),
+                                      child: Image.asset(
+                                        'assets/product/creative.png',
+                                        width: 828,
+                                        height: 628,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         )
@@ -563,6 +570,7 @@ class MyPackages extends StatelessWidget {
                             ),
                           )),
                         ),
+              
               ProductDetails(
                 title: title,
               ),

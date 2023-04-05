@@ -82,7 +82,10 @@ flutter:
   - assets/features/system.png
   - assets/logo.png
   - assets/features/ex1.png
+  - assets/features/ex2.png
   - assets/features/pdcard.png
+  - assets/features/dpiacard.png
+  - assets/features/cookiecard.png
   - assets/features/blue-check.png
   - assets/features/white-check.png
   
