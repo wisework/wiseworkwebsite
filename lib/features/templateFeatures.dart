@@ -597,7 +597,21 @@ class _CheckState extends State<Check> {
               ? "ระบุความคืบหน้าเปอร์เซ็น (%) ความสำเร็จการดําเนินการตามแผนการจัดการความเสี่ยง\nเป็นเปอร์เซ็นต์ความคืบหน้า"
               : "ระบุความคืบหน้าเปอร์เซ็น (%) ความสำเร็จ\nการดําเนินการตามแผนการจัดการความ\nเสี่ยงเป็นเปอร์เซ็นต์ความคืบหน้า",
     ];
-
+    List<String> checkCookie = [
+      Responsive.isDesktop(context)? "สร้างแบบฟอร์มการขอความยินยอม (Consent) แบบอิเล็กทรอนิกส์ E-Form เพื่อขอความยินยอมจากเจ้าของข้อมูลส่วนบุคคล โดยสามารถสร้างเป็น QR Code และ URL\nสำหรับเข้าใช้งานแบบฟอร์ม ผ่านโทรศัพท์มือถือ หรืออุปกรณ์เคลื่อนที่ต่างๆ โดยไม่จํากัดจํานวน": Responsive.isTablet(context)? "สร้างแบบฟอร์มการขอความยินยอม (Consent) แบบอิเล็กทรอนิกส์ E-Form\nเพื่อขอความยินยอมจากเจ้าของข้อมูลส่วนบุคคล โดยสามารถสร้างเป็น QR Code และ URL\nสำหรับเข้าใช้งานแบบฟอร์ม ผ่านโทรศัพท์มือถือ หรืออุปกรณ์เคลื่อนที่ต่างๆ โดยไม่จํากัดจํานวน":"สร้างแบบฟอร์มการขอความยินยอม\n(Consent) แบบอิเล็กทรอนิกส์ E-Form\nเพื่อขอความยินยอมจากเจ้าของข้อมูลส่วน\nบุคคล โดยสามารถสร้างเป็น QR Code และ\nURL สำหรับเข้าใช้งานแบบฟอร์ม ผ่าน\nโทรศัพท์มือถือ หรืออุปกรณ์เคลื่อนที่ต่างๆ\nโดยไม่จํากัดจํานวน",
+      Responsive.isDesktop(context)? "บริหารจัดการ Version การให้ Consent แก้ไขแบบฟอร์มอิเล็กทรอนิกส์ได้บนระบบทั้งหมด": Responsive.isTablet(context)? "บริหารจัดการ Version การให้ Consent แก้ไขแบบฟอร์มอิเล็กทรอนิกส์ได้บนระบบทั้งหมด":"บริหารจัดการ Version การให้ Consent\nแก้ไขแบบฟอร์มอิเล็กทรอนิกส์ได้บนระบบ\nทั้งหมด",
+      Responsive.isDesktop(context)? "จัดการ Cookies บนหน้าเว็บไซต์ ปรับแต่งค่า แสดงผล และบันทึกการใช้ Cookies ทั้งหมดได้จากระบบศูนย์กลาง": Responsive.isTablet(context)? "จัดการ Cookies บนหน้าเว็บไซต์ ปรับแต่งค่า แสดงผล และบันทึกการใช้ Cookies\nทั้งหมดได้จากระบบศูนย์กลาง":"จัดการ Cookies บนหน้าเว็บไซต์ ปรับแต่ง\nค่า แสดงผล และบันทึกการใช้ Cookies\nทั้งหมดได้จากระบบศูนย์กลาง",
+      Responsive.isDesktop(context)? "บริหารจัดการกับข้อมูลการให้ความยินยอมจากเจ้าของข้อมูลส่วนบุคคล ได้ถูกต้องรวดเร็ว เช่น สืบค้น เปลี่ยนแปลง ยกเลิก": Responsive.isTablet(context)? "บริหารจัดการกับข้อมูลการให้ความยินยอมจากเจ้าของข้อมูลส่วนบุคคล ได้ถูกต้องรวดเร็ว เช่น\nสืบค้น เปลี่ยนแปลง ยกเลิก" :"บริหารจัดการกับข้อมูลการให้ความยินยอม\nจากเจ้าของข้อมูลส่วนบุคคล ได้ถูกต้องรวดเร็ว\nเช่น สืบค้น เปลี่ยนแปลง ยกเลิก",
+      Responsive.isDesktop(context)? "เจ้าของข้อมูลสามารถยืนยันตัวตนได้หลายช่องทาง ผ่านอีเมล์ ข้อความ (SMS-OTP) และลายเซ็น": Responsive.isTablet(context)? "เจ้าของข้อมูลสามารถยืนยันตัวตนได้หลายช่องทาง ผ่านอีเมล์ ข้อความ (SMS-OTP)และลายเซ็น":"เจ้าของข้อมูลสามารถยืนยันตัวตนได้หลาย\nช่องทาง ผ่านอีเมล์ ข้อความ (SMS-OTP)\nและลายเซ็น",
+      Responsive.isDesktop(context)? "สร้าง Source Code การขอความยินยอม และนำไปใช้กับเว็บไซต์ที่รองรับ JavaScript เพื่อขอความยินยอมใช้ข้อมูล Cookies บนเว็บไซต์": Responsive.isTablet(context)?"สร้าง Source Code การขอความยินยอม และนำไปใช้กับเว็บไซต์ที่รองรับ JavaScript\nเพื่อขอความยินยอมใช้ข้อมูล Cookies บนเว็บไซต์" :"สร้าง Source Code การขอความยินยอม\nและนำไปใช้กับเว็บไซต์ที่รองรับ JavaScript\nเพื่อขอความยินยอมใช้ข้อมูล Cookies\nบนเว็บไซต์",
+      Responsive.isDesktop(context)? "สร้าง Source Code การประกาศนโยบายและประกาศความเป็นส่วนตัว สำหรับนําไปประกาศใช้บนเว็บไซต์": Responsive.isTablet(context)? "สร้าง Source Code การประกาศนโยบายและประกาศความเป็นส่วนตัว สำหรับนําไปประกาศใช้บนเว็บไซต์":"สร้าง Source Code การประกาศนโยบาย\nและประกาศความเป็นส่วนตัว สำหรับนําไป\nประกาศใช้บนเว็บไซต์",
+      Responsive.isDesktop(context)? "ระบบครอบคลุมกรณีการบริหารจัดการการขอความยินยอมจากผู้เยาว์ และผู้ไร้ความสามารถ": Responsive.isTablet(context)? "ระบบครอบคลุมกรณีการบริหารจัดการการขอความยินยอมจากผู้เยาว์ และผู้ไร้ความสามารถ":"ระบบครอบคลุมกรณีการบริหารจัดการ\nการขอความยินยอมจากผู้เยาว์ และผู้ไร้\nความสามารถ",
+      Responsive.isDesktop(context)? "แสดงรายงานสรุปบันทึกการขอความยินยอมในลักษณะแผนภาพ (Dashboard)": Responsive.isTablet(context)? "แสดงรายงานสรุปบันทึกการขอความยินยอมในลักษณะแผนภาพ (Dashboard)":"แสดงรายงานสรุปบันทึกการขอความยิน\nยอมในลักษณะแผนภาพ (Dashboard)",
+      Responsive.isDesktop(context)? "ศูนย์กลางรายการความยินยอม รวบรวมและบริหารจัดการจากส่วนกลาง โดยรองรับการจัดเรียง (sort) ค้นหา (search) และ กรอง (filter) รายการคําร้องขอใช้สิทธิ์\nเพื่อสำหรับนำออกไปใช้ในงานที่เกี่ยวข้อง": Responsive.isTablet(context)?"ศูนย์กลางรายการความยินยอม รวบรวมและบริหารจัดการจากส่วนกลาง โดยรองรับ\nการจัดเรียง (sort) ค้นหา (search) และ กรอง (filter) รายการคําร้องขอใช้สิทธิ์ เพื่อสำหรับ\nนำออกไปใช้ในงานที่เกี่ยวข้อง" :"ศูนย์กลางรายการความยินยอม รวบรวม\nและบริหารจัดการจากส่วนกลาง โดยรองรับ\nการจัดเรียง (sort) ค้นหา (search) และ\nกรอง (filter) รายการคําร้องขอใช้สิทธิ์\nเพื่อสำหรับนำออกไปใช้ในงานที่เกี่ยวข้อง",
+      Responsive.isDesktop(context)? "เชื่อมต่อการให้ความยินยอมกับระบบอื่นๆ ผ่าน REST API และนําข้อมูลออกมาเป็น Excel file": Responsive.isTablet(context)? "เชื่อมต่อการให้ความยินยอมกับระบบอื่นๆ ผ่าน REST API และนําข้อมูลออกมาเป็น Excel file":"เชื่อมต่อการให้ความยินยอมกับระบบอื่นๆ\nผ่าน REST API และนําข้อมูลออกมาเป็น\nExcel file",
+      Responsive.isDesktop(context)? "สะดวกในการเชื่อมต่อระบบที่เกี่ยวข้อง โดยการรวบรวมการขอความยินยอมผ่านทาง API": Responsive.isTablet(context)? "สะดวกในการเชื่อมต่อระบบที่เกี่ยวข้อง โดยการรวบรวมการขอความยินยอมผ่านทาง API":"สะดวกในการเชื่อมต่อระบบที่เกี่ยวข้อง\nโดยการรวบรวมการขอความยินยอมผ่าน\nทาง API",
+    ];
+    
     return Center(
       child: Container(
         width: 1440,
@@ -629,7 +643,7 @@ class _CheckState extends State<Check> {
                       shrinkWrap: true,
                       itemCount: widget.title == "PD Management"
                           ? checkPD.length
-                          : checkDpia.length,
+                          :widget.title == "DPIA & Risk Management"? checkDpia.length : checkCookie.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
                           child: new Material(
@@ -679,7 +693,9 @@ class _CheckState extends State<Check> {
                                                     widget.title ==
                                                             "PD Management"
                                                         ? checkPD[index]
-                                                        : checkDpia[index],
+                                                        : widget.title ==
+                                                            "DPIA & Risk Management"
+                                                        ?checkDpia[index] :checkCookie[index],
                                                     style: GoogleFonts
                                                         .ibmPlexSansThai(
                                                             color: hoveredIndex ==
@@ -699,9 +715,11 @@ class _CheckState extends State<Check> {
                                                 : Responsive.isTablet(context)
                                                     ? Text(
                                                         widget.title ==
-                                                                "PD Management"
-                                                            ? checkPD[index]
-                                                            : checkDpia[index],
+                                                            "PD Management"
+                                                        ? checkPD[index]
+                                                        : widget.title ==
+                                                            "DPIA & Risk Management"
+                                                        ?checkDpia[index] :checkCookie[index],
                                                         style: GoogleFonts
                                                             .ibmPlexSansThai(
                                                                 color: hoveredIndex ==
@@ -721,9 +739,11 @@ class _CheckState extends State<Check> {
                                                       )
                                                     : Text(
                                                         widget.title ==
-                                                                "PD Management"
-                                                            ? checkPD[index]
-                                                            : checkDpia[index],
+                                                            "PD Management"
+                                                        ? checkPD[index]
+                                                        : widget.title ==
+                                                            "DPIA & Risk Management"
+                                                        ?checkDpia[index] :checkCookie[index],
                                                         style: GoogleFonts
                                                             .ibmPlexSansThai(
                                                                 color: hoveredIndex ==
