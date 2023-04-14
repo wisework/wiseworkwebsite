@@ -86,6 +86,15 @@ flutter:
   - assets/features/pdcard.png
   - assets/features/dpiacard.png
   - assets/features/cookiecard.png
+  - assets/features/auditcard.png
+  - assets/features/discoverycard.png
+  - assets/features/breachcard.png
+  - assets/features/systemcard.png
+  - assets/features/executivecard.png
+  - assets/features/legicard.png
+  - assets/features/datacard.png
+  - assets/features/policycard.png
+
   - assets/features/blue-check.png
   - assets/features/white-check.png
   
