@@ -18,9 +18,12 @@ class MyDetails extends StatefulWidget {
   final String description;
   final String imageUrl;
   final String detail;
-  final String carousel;
   MyDetails(
-      this.title, this.description, this.imageUrl, this.detail, this.carousel);
+    this.title,
+    this.description,
+    this.imageUrl,
+    this.detail,
+  );
 
   @override
   State<MyDetails> createState() => _MyDetailsState();
@@ -32,6 +35,71 @@ class _MyDetailsState extends State<MyDetails> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> carouselPD = [
+      "assets/features/pd00.png",
+      "assets/features/pd01.png",
+      "assets/features/pd02.png",
+      "assets/features/pd03.png"
+    ];
+    List<String> carouselDPIA = [
+      "assets/features/DPIA01.png",
+      "assets/features/DPIA02.png",
+      "assets/features/DPIA03.png",
+      "assets/features/DPIA04.png",
+      "assets/features/DPIA02-1.png",
+    ];
+    List<String> carouselDSR = [
+      "assets/features/DSR011.png",
+      "assets/features/DSR02.png",
+      "assets/features/DSR03.png",
+      "assets/features/DSR04.png",
+      "assets/features/DSR05.png"
+    ];
+    List<String> carouselDB = [
+      "assets/features/DB01.png",
+      "assets/features/DB02.png",
+      "assets/features/DB03.png",
+      "assets/features/DB04.png"
+    ];
+    List<String> carouselAD = [
+      "assets/features/AD01.png",
+      "assets/features/AD02.png",
+      "assets/features/AD03.png",
+      "assets/features/AD04.png"
+    ];
+    List<String> carouselPAN = [
+      "assets/features/PAN01.png",
+      "assets/features/PAN02.png"
+    ];
+    List<String> carouselDD = [
+      "assets/features/DD01.png",
+      "assets/features/DD021.png",
+      "assets/features/DD03.png"
+    ];
+    List<String> carouselES = [
+      "assets/features/ES01.png",
+      "assets/features/ES02.png",
+      "assets/features/ES03.png",
+      "assets/features/ES04.png"
+    ];
+    List<String> carouselLIA = [
+      "assets/features/LIA01.png",
+      "assets/features/LIA02.png",
+      "assets/features/LIA03.png",
+      "assets/features/LIA04.png"
+    ];
+    List<String> carouselST = [
+      "assets/features/ST03.png",
+      "assets/features/ST011.png",
+      "assets/features/ST02.png",
+      "assets/features/ST041.png"
+    ];
+    List<String> carouselCS = [
+      "assets/features/CS01.png",
+      "assets/features/CS02.png",
+      "assets/features/CS031.png"
+    ];
+
     return Scaffold(
       appBar: AppBar(
           toolbarHeight: Responsive.isDesktop(context) ? 80 : 60,
@@ -374,9 +442,102 @@ class _MyDetailsState extends State<MyDetails> {
                                       });
                                     },
                                   ),
-                                  items: [
-                                    Image.asset("assets/${widget.carousel}")
-                                  ],
+                                  items: widget.title =="PD Management"? carouselPD.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
+                                       : widget.title =="DPIA & Risk Management"?carouselDPIA.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
+                                      :widget.title =="Cookie Consent"? carouselCS.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
+                                       : widget.title =="Consent Management"?carouselCS.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
+                                      :widget.title =="Data Subject Right Management"? carouselDSR.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
+                                       : widget.title =="Data Breach Management"?carouselDB.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
+                                      :widget.title =="Audit&Gap\nManagement"? carouselAD.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
+                                       : widget.title =="Privacy&Notices Management"?carouselPAN.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
+                                      :widget.title =="Data Discover"? carouselDD.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
+                                       : widget.title =="Executive Support System"?carouselES.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
+                                      : widget.title =="Legitimate Interest Assessment"?carouselLIA.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
+                                      :carouselST.map((item) => Container(
+                                            child: Center(
+                                              child: Image.asset(
+                                                item,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList()
                                 ),
                               ),
                             ),
@@ -496,84 +657,6 @@ class Check extends StatefulWidget {
 
 class _CheckState extends State<Check> {
   int? hoveredIndex;
-
-  // @override
-  // Widget builddata(BuildContext context) {
-  //   List<String> checkData = [
-  //     Responsive.isDesktop(context)
-  //         ? "จัดการคำร้องขออย่างเป็นระบบ โดยสร้าง Work Flow การดำเนินการเพื่อจัดการสิทธิ์ตามกฎหมายจากเจ้าของข้อมูลส่วนบุคคล โดยแจ้งเตือนขั้นตอนการดำเนินการคำร้องขอ\nผ่านอีเมล"
-  //         : Responsive.isTablet(context)
-  //             ? "จัดการคำร้องขออย่างเป็นระบบ โดยสร้าง Work Flow การดำเนินการเพื่อจัดการสิทธิ์\nตามกฎหมายจากเจ้าของข้อมูลส่วนบุคคล โดยแจ้งเตือนขั้นตอนการดำเนินการคำร้องขอ\nผ่านอีเมล"
-  //             : "จัดการคำร้องขออย่างเป็นระบบ โดยสร้าง\nWork Flow การดำเนินการเพื่อจัดการสิทธิ์\nตามกฎหมายจากเจ้าของข้อมูลส่วนบุคคล\nโดยแจ้งเตือนขั้นตอนการดำเนินการคำร้อง\nขอ ผ่านอีเมล",
-  //     Responsive.isDesktop(context)
-  //         ? "สร้างแบบฟอร์มการยื่นขอแก้ไขการยินยอมสิทธิ์ โดยแสดงผ่านช่องทาง Website ในรูปแบบ URL และ QR code เพื่อให้เจ้าของข้อมูลส่วนบุคคลเข้าถึงแบบฟอร์ม โดยแบบฟอร์ม\nสามารถจัดการสิทธิของเจ้าของข้อมูลส่วนบุคคล ดังนี้"
-  //         : Responsive.isTablet(context)
-  //             ? "สร้างแบบฟอร์มการยื่นขอแก้ไขการยินยอมสิทธิ์ โดยแสดงผ่านช่องทาง Website ในรูปแบบ\nURL และ QR code เพื่อให้เจ้าของข้อมูลส่วนบุคคลเข้าถึงแบบฟอร์ม โดยแบบฟอร์ม\nสามารถจัดการสิทธิของเจ้าของข้อมูลส่วนบุคคล ดังนี้"
-  //             : "สร้างแบบฟอร์มการยื่นขอแก้ไขการยินยอม\nสิทธิ์ โดยแสดงผ่านช่องทาง Website\nในรูปแบบ URL และ QR code เพื่อให้\nเจ้าของข้อมูลส่วนบุคคลเข้าถึงแบบฟอร์ม\nโดยแบบฟอร์ม สามารถจัดการสิทธิของ\nเจ้าของข้อมูลส่วนบุคคล ดังนี้",
-  //     Responsive.isDesktop(context)
-  //         ? "กําหนดกระบวนการการยื่นขอใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล ทั้งการตรวจความสมบูรณ์ของคําร้อง, การพิจารณาคําร้อง,การดําเนินการคําร้อง และสรุปผลดําเนินการคําร้อง"
-  //         : Responsive.isTablet(context)
-  //             ? "กําหนดกระบวนการการยื่นขอใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล ทั้งการตรวจความสมบูรณ์\nของคําร้อง, การพิจารณาคําร้อง,การดําเนินการคําร้อง และสรุปผลดําเนินการคําร้อง"
-  //             : "กําหนดกระบวนการการยื่นขอใช้สิทธิของ\nเจ้าของข้อมูลส่วนบุคคล ทั้งการตรวจความ\nสมบูรณ์ของคําร้อง, การพิจารณาคําร้อง,\nการดําเนินการคําร้อง และสรุปผลดําเนินการคําร้อง",
-  //     Responsive.isDesktop(context)
-  //         ? "กำหนดเกณฑ์การตัดสินใจในการรับคำร้องขอ หรือปฏิเสธคำร้องขอใช้สิทธิ์"
-  //         : Responsive.isTablet(context)
-  //             ? "กำหนดเกณฑ์การตัดสินใจในการรับคำร้องขอ หรือปฏิเสธคำร้องขอใช้สิทธิ์"
-  //             : "กำหนดเกณฑ์การตัดสินใจในการรับ\nคำร้องขอ หรือปฏิเสธคำร้องขอใช้สิทธิ์",
-  //     Responsive.isDesktop(context)
-  //         ? "จัดเก็บและแสดงประวัติคําร้องขอตามประเภทการร้องขอของเจ้าของข้อมูลส่วนบุคคล"
-  //         : Responsive.isTablet(context)
-  //             ? "จัดเก็บและแสดงประวัติคําร้องขอตามประเภทการร้องขอของเจ้าของข้อมูลส่วนบุคคล"
-  //             : "จัดเก็บและแสดงประวัติคําร้องขอตาม\nประเภทการร้องขอของเจ้าของข้อมูล\nส่วนบุคคล",
-  //     Responsive.isDesktop(context)
-  //         ? "แสดงรายงานสรุปคําร้องขอใช้สิทธิ์ตามกฎหมายในลักษณะแผนภาพ (Dashboard) โดยสามารถรองรับการจัดเรียง (Sort) ค้นหา (Search) และ กรอง (Filter) คําร้องขอโดยแบ่งเป็น\nประเภท คือ การขอเพิกถอน, การขอเข้าถึงการขอแก้ไข, การขอลบ, การขอระงับ, การขอให้โอนย้าย, การขอคัดค้าน"
-  //         : Responsive.isTablet(context)
-  //             ? "แสดงรายงานสรุปคําร้องขอใช้สิทธิ์ตามกฎหมายในลักษณะแผนภาพ (Dashboard)\nโดยสามารถรองรับการจัดเรียง (Sort) ค้นหา (Search) และ กรอง (Filter) คําร้องขอโดยแบ่งเป็น\nประเภท คือ การขอเพิกถอน, การขอเข้าถึงการขอแก้ไข, การขอลบ, การขอระงับ, การขอให้โอนย้าย,\nการขอคัดค้าน"
-  //             : "แสดงรายงานสรุปคําร้องขอใช้สิทธิ์ตาม\nกฎหมายในลักษณะแผนภาพ (Dashboard)\nโดยสามารถรองรับการจัดเรียง (Sort)\nค้นหา (Search) และ กรอง (Filter)\nคําร้องขอโดยแบ่งเป็น ประเภท คือ\n การขอเพิกถอน, การขอเข้าถึงการขอแก้ไข,\nการขอลบ, การขอระงับ, การขอให้โอนย้าย,\nการขอคัดค้าน",
-  //     Responsive.isDesktop(context)
-  //         ? "ติดตามสถานะและแจ้งความคืบหน้าการดำเนินการคำขอใช้สิทธิ์ตามกฎหมาย แสดงรายงานสรุปการขอใช้สิทธิตามกฎหมายจากเจ้าของข้อมูลส่วนบุคคล โดยแบ่งแยกตาม\nจํานวนคําร้อง ประเภทคําร้อง วันที่ยื่นคําร้อง สถานะคําร้อง และระยะเวลาคําร้อง เพื่อง่ายต่อการค้นหาและประมวลผลข้อมูล"
-  //         : Responsive.isTablet(context)
-  //             ? "ติดตามสถานะและแจ้งความคืบหน้าการดำเนินการคำขอใช้สิทธิ์ตามกฎหมาย แสดงรายงานสรุป\nการขอใช้สิทธิตามกฎหมายจากเจ้าของข้อมูลส่วนบุคคล โดยแบ่งแยกตาม จํานวนคําร้อง\nประเภทคําร้อง วันที่ยื่นคําร้อง สถานะคําร้อง และระยะเวลาคําร้อง เพื่อง่ายต่อการค้นหาและ\nประมวลผลข้อมูล"
-  //             : "ติดตามสถานะและแจ้งความคืบหน้าการ\nดำเนินการคำขอใช้สิทธิ์ตามกฎหมาย\nแสดงรายงานสรุปการขอใช้สิทธิตาม\nกฎหมายจากเจ้าของข้อมูลส่วนบุคคล\nโดยแบ่งแยกตาม จํานวนคําร้อง ประเภท\nคําร้อง วันที่ยื่นคําร้อง สถานะคําร้อง และระยะเวลา\nคําร้อง เพื่อง่ายต่อการค้นหาและประมวลผลข้อมูล",
-  //     Responsive.isDesktop(context)
-  //         ? "เชื่อมต่อการให้ความยินยอมกับระบบอื่นๆ ผ่าน REST API และนําข้อมูลออกมาเป็น Excel file"
-  //         : Responsive.isTablet(context)
-  //             ? "เชื่อมต่อการให้ความยินยอมกับระบบอื่นๆ ผ่าน REST API และนําข้อมูลออกมาเป็น Excel file"
-  //             : "เชื่อมต่อการให้ความยินยอมกับระบบอื่นๆ\nผ่าน REST API และนําข้อมูลออกมาเป็น\nExcel file",
-  //   ];
-
-  //   return ListView.builder(
-  //     itemCount: checkData.length,
-  //     itemBuilder: (BuildContext context, int index) {
-  //       if (index == 1) {
-  //         return ExpansionTile(
-  //           title: Text(checkData[index]),
-  //           children: [
-  //             ListTile(title: Text('การเข้าถึงข้อมูลส่วนบุคคล')),
-  //             ListTile(title: Text('การเปลี่ยนแปลงงข้อมูลส่วนบุคคล')),
-  //             ListTile(title: Text('การยกเลิกมิให้จัดเก็บข้อมูลส่วนบุคคล')),
-  //             ListTile(title: Text('การระงับใช้ข้อมูลส่วนบุคคล')),
-  //             ListTile(
-  //                 title: Text('การขอรับหรือโอนย้ายข้อมูลส่วนบุคคลของตนเอง')),
-  //             ListTile(title: Text('การขอเพิกถอนความยินยอม')),
-  //             ListTile(
-  //                 title: Text(
-  //                     'การขอคัดค้านการเก็บรวบรวมใช้หรือเปิดเผยข้อมูลส่วนบุคคล')),
-  //             ListTile(title: Text('การขอลบหรือทำลายข้อมูลส่วนบุคคล')),
-  //             ListTile(
-  //                 title: Text(
-  //                     'สิทธิอื่นๆ ตามที่พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคลกําหนด')),
-  //           ],
-  //         );
-  //       } else {
-  //         return ListTile(
-  //           title: Text(checkData[index]),
-  //           subtitle: Text('Description ${index + 1}'),
-  //         );
-  //       }
-  //     },
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -1004,108 +1087,6 @@ class _CheckState extends State<Check> {
               ? "รองรับการเชื่อมต่อระบบกับ Authentication ด้วย AD ภายในหน่วยงานของผู้ใช้งานได้"
               : "รองรับการเชื่อมต่อระบบกับ\nAuthentication ด้วย AD ภายในหน่วยงาน\nของผู้ใช้งานได้",
     ];
-    //   final datacheck = Container(
-    //     child: ListView.builder(
-    //     itemCount: checkData.length,
-    //     itemBuilder: (BuildContext context, int index) {
-    //     if (index == 1) {
-    //       return ExpansionTile(
-    //         title: Text(checkData[index]),
-    //         subtitle: Text('Description 3'),
-    //         children: [
-    //            ListTile(title: Text('การเข้าถึงข้อมูลส่วนบุคคล')),
-    //             ListTile(title: Text('การเปลี่ยนแปลงข้อมูลส่วนบุคคล')),
-    //             ListTile(title: Text('การยกเลิกมิให้จัดเก็บข้อมูลส่วนบุคคล')),
-    //             ListTile(title: Text('การระงับใช้ข้อมูลส่วนบุคคล')),
-    //             ListTile(
-    //                 title: Text('การขอรับหรือโอนย้ายข้อมูลส่วนบุคคลของตนเอง')),
-    //             ListTile(title: Text('การขอเพิกถอนความยินยอม')),
-    //             ListTile(
-    //                 title: Text(
-    //                     'การขอคัดค้านการเก็บรวบรวมใช้หรือเปิดเผยข้อมูลส่วนบุคคล')),
-    //             ListTile(title: Text('การขอลบหรือทำลายข้อมูลส่วนบุคคล')),
-    //             ListTile(
-    //                 title: Text(
-    //                     'สิทธิอื่นๆ ตามที่พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคลกําหนด')),
-    //         ],
-    //       );
-    //     } else {
-    //       return ListTile(
-    //         title: Text(checkData[index]),
-    //       );
-    //     }
-    //     },
-    // ),
-    //   );
-    //   List checkData2 = [
-    //     CheckData(
-    //         title: Responsive.isDesktop(context)
-    //             ? "จัดการคำร้องขออย่างเป็นระบบ โดยสร้าง Work Flow การดำเนินการเพื่อจัดการสิทธิ์ตามกฎหมายจากเจ้าของข้อมูลส่วนบุคคล โดยแจ้งเตือนขั้นตอนการดำเนินการคำร้องขอ\nผ่านอีเมล"
-    //             : Responsive.isTablet(context)
-    //                 ? "จัดการคำร้องขออย่างเป็นระบบ โดยสร้าง Work Flow การดำเนินการเพื่อจัดการสิทธิ์\nตามกฎหมายจากเจ้าของข้อมูลส่วนบุคคล โดยแจ้งเตือนขั้นตอนการดำเนินการคำร้องขอ\nผ่านอีเมล"
-    //                 : "จัดการคำร้องขออย่างเป็นระบบ โดยสร้าง\nWork Flow การดำเนินการเพื่อจัดการสิทธิ์\nตามกฎหมายจากเจ้าของข้อมูลส่วนบุคคล\nโดยแจ้งเตือนขั้นตอนการดำเนินการคำร้อง\nขอ ผ่านอีเมล",
-    //         children: []),
-    //     CheckData(
-    //         title: Responsive.isDesktop(context)
-    //             ? "สร้างแบบฟอร์มการยื่นขอแก้ไขการยินยอมสิทธิ์ โดยแสดงผ่านช่องทาง Website ในรูปแบบ URL และ QR code เพื่อให้เจ้าของข้อมูลส่วนบุคคลเข้าถึงแบบฟอร์ม โดยแบบฟอร์ม\nสามารถจัดการสิทธิของเจ้าของข้อมูลส่วนบุคคล ดังนี้"
-    //             : Responsive.isTablet(context)
-    //                 ? "สร้างแบบฟอร์มการยื่นขอแก้ไขการยินยอมสิทธิ์ โดยแสดงผ่านช่องทาง Website ในรูปแบบ\nURL และ QR code เพื่อให้เจ้าของข้อมูลส่วนบุคคลเข้าถึงแบบฟอร์ม โดยแบบฟอร์ม\nสามารถจัดการสิทธิของเจ้าของข้อมูลส่วนบุคคล ดังนี้"
-    //                 : "สร้างแบบฟอร์มการยื่นขอแก้ไขการยินยอม\nสิทธิ์ โดยแสดงผ่านช่องทาง Website\nในรูปแบบ URL และ QR code เพื่อให้\nเจ้าของข้อมูลส่วนบุคคลเข้าถึงแบบฟอร์ม\nโดยแบบฟอร์ม สามารถจัดการสิทธิของ\nเจ้าของข้อมูลส่วนบุคคล ดังนี้",
-    //         children: [
-    //           'การเข้าถึงข้อมูลส่วนบุคคล',
-    //           'การเปลี่ยนแปลงงข้อมูลส่วนบุคคล',
-    //           'การยกเลิกมิให้จัดเก็บข้อมูลส่วนบุคคล',
-    //           'การระงับใช้ข้อมูลส่วนบุคคล',
-    //           'การขอรับหรือโอนย้ายข้อมูลส่วนบุคคลของตนเอง',
-    //           'การขอเพิกถอนความยินยอม',
-    //           'การขอคัดค้านการเก็บรวบรวมใช้หรือเปิดเผยข้อมูลส่วนบุคคล',
-    //           'การขอลบหรือทำลายข้อมูลส่วนบุคคล',
-    //           'สิทธิอื่นๆ ตามที่พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคลกําหนด'
-    //         ]),
-    //     CheckData(
-    //         title: Responsive.isDesktop(context)
-    //             ? "กําหนดกระบวนการการยื่นขอใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล ทั้งการตรวจความสมบูรณ์ของคําร้อง, การพิจารณาคําร้อง,การดําเนินการคําร้อง และสรุปผลดําเนินการคําร้อง"
-    //             : Responsive.isTablet(context)
-    //                 ? "กําหนดกระบวนการการยื่นขอใช้สิทธิของเจ้าของข้อมูลส่วนบุคคล ทั้งการตรวจความสมบูรณ์\nของคําร้อง, การพิจารณาคําร้อง,การดําเนินการคําร้อง และสรุปผลดําเนินการคําร้อง"
-    //                 : "กําหนดกระบวนการการยื่นขอใช้สิทธิของ\nเจ้าของข้อมูลส่วนบุคคล ทั้งการตรวจความ\nสมบูรณ์ของคําร้อง, การพิจารณาคําร้อง,\nการดําเนินการคําร้อง และสรุปผลดําเนินการคําร้อง",
-    //         children: []),
-    //     CheckData(
-    //         title: Responsive.isDesktop(context)
-    //             ? "กำหนดเกณฑ์การตัดสินใจในการรับคำร้องขอ หรือปฏิเสธคำร้องขอใช้สิทธิ์"
-    //             : Responsive.isTablet(context)
-    //                 ? "กำหนดเกณฑ์การตัดสินใจในการรับคำร้องขอ หรือปฏิเสธคำร้องขอใช้สิทธิ์"
-    //                 : "กำหนดเกณฑ์การตัดสินใจในการรับ\nคำร้องขอ หรือปฏิเสธคำร้องขอใช้สิทธิ์",
-    //         children: []),
-    //     CheckData(
-    //         title: Responsive.isDesktop(context)
-    //             ? "จัดเก็บและแสดงประวัติคําร้องขอตามประเภทการร้องขอของเจ้าของข้อมูลส่วนบุคคล"
-    //             : Responsive.isTablet(context)
-    //                 ? "จัดเก็บและแสดงประวัติคําร้องขอตามประเภทการร้องขอของเจ้าของข้อมูลส่วนบุคคล"
-    //                 : "จัดเก็บและแสดงประวัติคําร้องขอตาม\nประเภทการร้องขอของเจ้าของข้อมูล\nส่วนบุคคล",
-    //         children: []),
-    //     CheckData(
-    //         title: Responsive.isDesktop(context)
-    //             ? "แสดงรายงานสรุปคําร้องขอใช้สิทธิ์ตามกฎหมายในลักษณะแผนภาพ (Dashboard) โดยสามารถรองรับการจัดเรียง (Sort) ค้นหา (Search) และ กรอง (Filter) คําร้องขอโดยแบ่งเป็น\nประเภท คือ การขอเพิกถอน, การขอเข้าถึงการขอแก้ไข, การขอลบ, การขอระงับ, การขอให้โอนย้าย, การขอคัดค้าน"
-    //             : Responsive.isTablet(context)
-    //                 ? "แสดงรายงานสรุปคําร้องขอใช้สิทธิ์ตามกฎหมายในลักษณะแผนภาพ (Dashboard)\nโดยสามารถรองรับการจัดเรียง (Sort) ค้นหา (Search) และ กรอง (Filter) คําร้องขอโดยแบ่งเป็น\nประเภท คือ การขอเพิกถอน, การขอเข้าถึงการขอแก้ไข, การขอลบ, การขอระงับ, การขอให้โอนย้าย,\nการขอคัดค้าน"
-    //                 : "แสดงรายงานสรุปคําร้องขอใช้สิทธิ์ตาม\nกฎหมายในลักษณะแผนภาพ (Dashboard)\nโดยสามารถรองรับการจัดเรียง (Sort)\nค้นหา (Search) และ กรอง (Filter)\nคําร้องขอโดยแบ่งเป็น ประเภท คือ\n การขอเพิกถอน, การขอเข้าถึงการขอแก้ไข,\nการขอลบ, การขอระงับ, การขอให้โอนย้าย,\nการขอคัดค้าน",
-    //         children: []),
-    //     CheckData(
-    //       title: Responsive.isDesktop(context)
-    //           ? "ติดตามสถานะและแจ้งความคืบหน้าการดำเนินการคำขอใช้สิทธิ์ตามกฎหมาย แสดงรายงานสรุปการขอใช้สิทธิตามกฎหมายจากเจ้าของข้อมูลส่วนบุคคล โดยแบ่งแยกตาม\nจํานวนคําร้อง ประเภทคําร้อง วันที่ยื่นคําร้อง สถานะคําร้อง และระยะเวลาคําร้อง เพื่อง่ายต่อการค้นหาและประมวลผลข้อมูล"
-    //           : Responsive.isTablet(context)
-    //               ? "ติดตามสถานะและแจ้งความคืบหน้าการดำเนินการคำขอใช้สิทธิ์ตามกฎหมาย แสดงรายงานสรุป\nการขอใช้สิทธิตามกฎหมายจากเจ้าของข้อมูลส่วนบุคคล โดยแบ่งแยกตาม จํานวนคําร้อง\nประเภทคําร้อง วันที่ยื่นคําร้อง สถานะคําร้อง และระยะเวลาคําร้อง เพื่อง่ายต่อการค้นหาและ\nประมวลผลข้อมูล"
-    //               : "ติดตามสถานะและแจ้งความคืบหน้าการ\nดำเนินการคำขอใช้สิทธิ์ตามกฎหมาย\nแสดงรายงานสรุปการขอใช้สิทธิตาม\nกฎหมายจากเจ้าของข้อมูลส่วนบุคคล\nโดยแบ่งแยกตาม จํานวนคําร้อง ประเภท\nคําร้อง วันที่ยื่นคําร้อง สถานะคําร้อง และระยะเวลา\nคําร้อง เพื่อง่ายต่อการค้นหาและประมวลผลข้อมูล",
-    //       children: [],
-    //     ),
-    //     CheckData(
-    //         title: Responsive.isDesktop(context)
-    //             ? "เชื่อมต่อการให้ความยินยอมกับระบบอื่นๆ ผ่าน REST API และนําข้อมูลออกมาเป็น Excel file"
-    //             : Responsive.isTablet(context)
-    //                 ? "เชื่อมต่อการให้ความยินยอมกับระบบอื่นๆ ผ่าน REST API และนําข้อมูลออกมาเป็น Excel file"
-    //                 : "เชื่อมต่อการให้ความยินยอมกับระบบอื่นๆ\nผ่าน REST API และนําข้อมูลออกมาเป็น\nExcel file",
-    //         children: [])
-    //   ];
 
     return Center(
       child: Container(
@@ -1164,8 +1145,12 @@ class _CheckState extends State<Check> {
                                                                   "Executive Support System"
                                                               ? checkexecutive
                                                                   .length
-                                                              :widget.title=="Legitimate Interest Assessment"? checklegi.length
-                                                              :checksystem.length,
+                                                              : widget.title ==
+                                                                      "Legitimate Interest Assessment"
+                                                                  ? checklegi
+                                                                      .length
+                                                                  : checksystem
+                                                                      .length,
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
                           child: new Material(
@@ -1241,8 +1226,9 @@ class _CheckState extends State<Check> {
                                                                                         ? checkdiscorver[index]
                                                                                         : widget.title == "Executive Support System"
                                                                                             ? checkexecutive[index]
-                                                                                            :widget.title=="Legitimate Interest Assessment"? checklegi[index]
-                                                                                            :checksystem[index],
+                                                                                            : widget.title == "Legitimate Interest Assessment"
+                                                                                                ? checklegi[index]
+                                                                                                : checksystem[index],
                                                     style: GoogleFonts
                                                         .ibmPlexSansThai(
                                                             color: hoveredIndex ==
@@ -1262,36 +1248,36 @@ class _CheckState extends State<Check> {
                                                 : Responsive.isTablet(context)
                                                     ? Text(
                                                         widget.title ==
-                                                            "PD Management"
-                                                        ? checkPD[index]
-                                                        : widget.title ==
-                                                                "DPIA & Risk Management"
-                                                            ? checkDpia[index]
+                                                                "PD Management"
+                                                            ? checkPD[index]
                                                             : widget.title ==
-                                                                    "Cookie Consent"
-                                                                ? checkCookie[
+                                                                    "DPIA & Risk Management"
+                                                                ? checkDpia[
                                                                     index]
                                                                 : widget.title ==
-                                                                        "Consent Management"
+                                                                        "Cookie Consent"
                                                                     ? checkCookie[
                                                                         index]
                                                                     : widget.title ==
-                                                                            "Data Subject Right Management"
-                                                                        ? checkData[
+                                                                            "Consent Management"
+                                                                        ? checkCookie[
                                                                             index]
                                                                         : widget.title ==
-                                                                                "Data Breach Management"
-                                                                            ? checkBreach[index]
-                                                                            : widget.title == "Audit&Gap\nManagement"
-                                                                                ? checkaudit[index]
-                                                                                : widget.title == "Policy&Notices Management"
-                                                                                    ? checkpolicy[index]
-                                                                                    : widget.title == "Data Discover"
-                                                                                        ? checkdiscorver[index]
-                                                                                        : widget.title == "Executive Support System"
-                                                                                            ? checkexecutive[index]
-                                                                                            :widget.title=="Legitimate Interest Assessment"? checklegi[index]
-                                                                                            :checksystem[index],
+                                                                                "Data Subject Right Management"
+                                                                            ? checkData[index]
+                                                                            : widget.title == "Data Breach Management"
+                                                                                ? checkBreach[index]
+                                                                                : widget.title == "Audit&Gap\nManagement"
+                                                                                    ? checkaudit[index]
+                                                                                    : widget.title == "Policy&Notices Management"
+                                                                                        ? checkpolicy[index]
+                                                                                        : widget.title == "Data Discover"
+                                                                                            ? checkdiscorver[index]
+                                                                                            : widget.title == "Executive Support System"
+                                                                                                ? checkexecutive[index]
+                                                                                                : widget.title == "Legitimate Interest Assessment"
+                                                                                                    ? checklegi[index]
+                                                                                                    : checksystem[index],
                                                         style: GoogleFonts
                                                             .ibmPlexSansThai(
                                                                 color: hoveredIndex ==
@@ -1311,36 +1297,36 @@ class _CheckState extends State<Check> {
                                                       )
                                                     : Text(
                                                         widget.title ==
-                                                            "PD Management"
-                                                        ? checkPD[index]
-                                                        : widget.title ==
-                                                                "DPIA & Risk Management"
-                                                            ? checkDpia[index]
+                                                                "PD Management"
+                                                            ? checkPD[index]
                                                             : widget.title ==
-                                                                    "Cookie Consent"
-                                                                ? checkCookie[
+                                                                    "DPIA & Risk Management"
+                                                                ? checkDpia[
                                                                     index]
                                                                 : widget.title ==
-                                                                        "Consent Management"
+                                                                        "Cookie Consent"
                                                                     ? checkCookie[
                                                                         index]
                                                                     : widget.title ==
-                                                                            "Data Subject Right Management"
-                                                                        ? checkData[
+                                                                            "Consent Management"
+                                                                        ? checkCookie[
                                                                             index]
                                                                         : widget.title ==
-                                                                                "Data Breach Management"
-                                                                            ? checkBreach[index]
-                                                                            : widget.title == "Audit&Gap\nManagement"
-                                                                                ? checkaudit[index]
-                                                                                : widget.title == "Policy&Notices Management"
-                                                                                    ? checkpolicy[index]
-                                                                                    : widget.title == "Data Discover"
-                                                                                        ? checkdiscorver[index]
-                                                                                        : widget.title == "Executive Support System"
-                                                                                            ? checkexecutive[index]
-                                                                                            :widget.title=="Legitimate Interest Assessment"? checklegi[index]
-                                                                                            :checksystem[index],
+                                                                                "Data Subject Right Management"
+                                                                            ? checkData[index]
+                                                                            : widget.title == "Data Breach Management"
+                                                                                ? checkBreach[index]
+                                                                                : widget.title == "Audit&Gap\nManagement"
+                                                                                    ? checkaudit[index]
+                                                                                    : widget.title == "Policy&Notices Management"
+                                                                                        ? checkpolicy[index]
+                                                                                        : widget.title == "Data Discover"
+                                                                                            ? checkdiscorver[index]
+                                                                                            : widget.title == "Executive Support System"
+                                                                                                ? checkexecutive[index]
+                                                                                                : widget.title == "Legitimate Interest Assessment"
+                                                                                                    ? checklegi[index]
+                                                                                                    : checksystem[index],
                                                         style: GoogleFonts
                                                             .ibmPlexSansThai(
                                                                 color: hoveredIndex ==
