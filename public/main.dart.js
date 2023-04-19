@@ -78304,10 +78304,10 @@ k=A.d(a4,A.t(A.a([p,o,l,A.r(a4,c3.k(c2).f.a.a>=1440?10:5,a4),A.h("02-103-4376",a
 if(c3.k(c2).f.a.a>=1440)s=18
 else s=A.o(c3)?20:25
 j=A.h(a6,a4,a4,a4,A.f(B.i,a4,s,B.r,a4,a4),a4,a4)
-i=A.a([new A.mT("Home","/"),new A.mT("About Us","/story"),new A.mT("Our Reards","/story"),new A.mT("Blogs","/"),new A.mT("FAQ ","/faq")],t.zp)
+i=A.a([new A.mT("Home","/"),new A.mT("About Us","/story"),new A.mT("Our Rewards","/story"),new A.mT("Blogs","/"),new A.mT("FAQ","/faq")],t.zp)
 s=A.o(c3)?180:160
-if(c3.k(c2).f.a.a>=1440)r=100
-else r=A.o(c3)?100:150
+if(c3.k(c2).f.a.a>=1440)r=110
+else r=A.o(c3)?110:150
 h=A.d(a4,A.i8(new A.ahX(this,i),5,!0),B.b,a4,a4,a4,a4,s,a4,a4,a4,a4,a4,r)
 g=A.d(a4,A.h("Our Services",a4,a4,a4,A.f(B.i,a4,c3.k(c2).f.a.a>=1440?18:14,B.y,a4,a4),a4,a4),B.b,a4,a4,a4,a4,a4,a4,a4,a4,a4,a4,115.86)
 f=A.d(a4,A.i8(new A.ahY(this,A.a([new A.no("PDPA Management Platform","/services"),new A.no("Governance Assurance Suite","/"),new A.no("Get a Free Demo","/demo"),new A.no("Key Partners","/"),new A.no("Join Our Amazing Team","/")],t.aD)),5,!0),B.b,a4,a4,a4,a4,160,a4,a4,a4,a4,a4,230)
