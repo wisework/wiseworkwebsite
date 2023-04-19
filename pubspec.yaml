@@ -81,8 +81,73 @@ flutter:
   - assets/features/risk.png
   - assets/features/system.png
   - assets/logo.png
-  - assets/features/ex1.png
+  
   - assets/features/pdcard.png
+  - assets/features/dpiacard.png
+  - assets/features/cookiecard.png
+  - assets/features/auditcard.png
+  - assets/features/discoverycard.png
+  - assets/features/breachcard.png
+  - assets/features/systemcard.png
+  - assets/features/executivecard.png
+  - assets/features/legicard.png
+  - assets/features/datacard.png
+  - assets/features/policycard.png
+
+  - assets/features/pd00.png
+  - assets/features/pd01.png
+  - assets/features/pd02.png
+  - assets/features/pd03.png
+  
+  - assets/features/DPIA01.png
+  - assets/features/DPIA02.png
+  - assets/features/DPIA03.png
+  - assets/features/DPIA04.png
+  - assets/features/DPIA02-1.png
+
+  - assets/features/DSR011.png
+  - assets/features/DSR02.png
+  - assets/features/DSR03.png
+  - assets/features/DSR04.png
+  - assets/features/DSR05.png
+
+  - assets/features/DB01.png
+  - assets/features/DB02.png
+  - assets/features/DB03.png
+  - assets/features/DB04.png
+
+  - assets/features/AD01.png
+  - assets/features/AD02.png
+  - assets/features/AD03.png
+  - assets/features/AD04.png
+
+  - assets/features/PAN01.png
+  - assets/features/PAN02.png
+
+  - assets/features/DD01.png
+  - assets/features/DD021.png
+  - assets/features/DD03.png
+
+  - assets/features/ES01.png
+  - assets/features/ES02.png
+  - assets/features/ES03.png
+  - assets/features/ES04.png
+
+  - assets/features/LIA01.png
+  - assets/features/LIA02.png
+  - assets/features/LIA03.png
+  - assets/features/LIA04.png
+
+  - assets/features/ST03.png
+  - assets/features/ST011.png
+  - assets/features/ST02.png
+  - assets/features/ST041.png
+  
+
+  - assets/features/CS01.png
+  - assets/features/CS02.png
+  - assets/features/CS031.png
+
   - assets/features/blue-check.png
   - assets/features/white-check.png
   

@@ -58,7 +58,7 @@ class WhyPage extends StatelessWidget {
               child: SizedBox(
                   width: 25,
                   height: 26,
-                  child: Image(image: AssetImage("/about/why/check.png"))),
+                  child: Image.asset("assets/about/why/check.png")),
             ),
             title: Transform.translate(
               offset: Offset(-20, 2.5),
@@ -97,16 +97,16 @@ class WhyPage extends StatelessWidget {
                             Color.fromARGB(255, 232, 242, 254)
                           ])),
                     ),
-                    new Positioned(
-                      top: 63,
-                      right: 1148,
-                      child: Container(
-                        width: 312,
-                        height: 1058,
-                        // color: Colors.amber,
-                        child: Image.asset("assets/about/why/wisework.png"),
-                      ),
-                    ),
+                    // new Positioned(
+                    //   top: 63,
+                    //   right: 1148,
+                    //   child: Container(
+                    //     width: 312,
+                    //     height: 1058,
+                    //     // color: Colors.amber,
+                    //     child: Image.asset("assets/about/why/wisework.png"),
+                    //   ),
+                    // ),
                     new Positioned(
                       top: 95,
                       left: 174,
@@ -114,10 +114,10 @@ class WhyPage extends StatelessWidget {
                         width: 449,
                         height: 130,
                         child: Text(
-                          "WHY?",
+                          "Why?",
                           style: GoogleFonts.ibmPlexSansThai(
-                              fontSize: 120,
-                              fontWeight: FontWeight.w400,
+                              fontSize: 80,
+                              fontWeight: FontWeight.w700,
                               color: Color.fromARGB(255, 5, 45, 97)),
                         ),
                       ),
@@ -129,10 +129,10 @@ class WhyPage extends StatelessWidget {
                         width: 449,
                         height: 130,
                         child: Text(
-                          "WISEWORK",
+                          "wisework",
                           style: GoogleFonts.ibmPlexSansThai(
-                              fontSize: 120,
-                              fontWeight: FontWeight.w400,
+                              fontSize:80,
+                              fontWeight: FontWeight.w700,
                               color: Color.fromARGB(255, 5, 45, 97)),
                         ),
                       ),

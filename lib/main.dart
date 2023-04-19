@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:wiseintern/responsive.dart';
 
 import 'package:wiseintern/home/homepage.dart';
 import 'package:wiseintern/about/aboutpage.dart';
@@ -14,6 +15,7 @@ import 'package:wiseintern/table/producttablepage.dart';
 
 import 'package:wiseintern/features/templateFeatures.dart';
 import 'package:wiseintern/products/producttemplate.dart';
+import 'package:wiseintern/features/pdmanagement.dart';
 
 import 'package:get/get.dart';
 import 'dart:convert';
@@ -88,111 +90,144 @@ final GoRouter _router = GoRouter(
           path: 'features/1',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
-                "PD Management",
-                "จัดการบันทึกรายการข้อมูลส่วนบุคคลและการไหลของข้อมูล (Data Flow)",
-                "features/pdcard.png",
-                "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่ มาตรา 24 , มาตรา 26, มาตรา 30, มาตรา 31, มาตรา 32, มาตรา 36(1), มาตรา 39");
+              "PD Management",
+              "จัดการบันทึกรายการข้อมูลส่วนบุคคลและการไหลของข้อมูล (Data Flow)",
+              "features/pdcard.png",
+              "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่ มาตรา 24 , มาตรา 26, มาตรา 30, มาตรา 31, มาตรา 32, มาตรา 36(1), มาตรา 39",
+              
+            );
           },
         ),
         GoRoute(
           path: 'features/2',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
-                "DPIA & Risk Management",
-                "การบริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล",
-                "features/risk.png",
-                "2");
+              "DPIA & Risk Management",
+              "การบริหารความเสี่ยงและผลกระทบจากข้อมูลส่วนบุคคล",
+              "features/dpiacard.png",
+              "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่ มาตรา 37, มาตรา 40",
+              
+            );
           },
         ),
         GoRoute(
           path: 'features/3',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
-                "Cookie Consent",
-                "การขอความยินยอมจากเจ้าของข้อมูลและการบริหารจัดการคุกกี้",
-                "features/cookie.png",
-                "3");
+              "Cookie Consent",
+              "ระบบบริหารจัดการการขอความยินยอม และการบริหารจัดการคุกกี้",
+              "features/cookiecard.png",
+              "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่ มาตรา 19, มาตรา 20, มาตรา 21, มาตรา 22, มาตรา 23, มาตรา 24, มาตรา 25, มาตรา 26, มาตรา 26(5), มาตรา 27",
+              
+            );
           },
         ),
         GoRoute(
           path: 'features/4',
           builder: (BuildContext context, GoRouterState state) {
-            return MyDetails("Consent Management",
-                "การบริหารจัดการให้ความยินยอม", "features/consent.png", "4");
+            return MyDetails(
+              "Consent Management",
+              "ระบบบริหารจัดการการขอความยินยอม และการบริหารจัดการคุกกี้",
+              "features/cookiecard.png",
+              "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่ มาตรา 19, มาตรา 30, มาตรา 31, มาตรา 32, มาตรา 33, มาตรา 34, มาตรา 35, มาตรา 36, มาตรา 38, มาตรา 39, มาตรา 40",
+             
+            );
           },
         ),
         GoRoute(
           path: 'features/5',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
-                "Data Subject Right Management",
-                "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูล",
-                "features/data.png",
-                "5");
+              "Data Subject Right\nManagement",
+              "บริหารการขอใช้สิทธิ์จากเจ้าของข้อมูล",
+              "features/datacard.png",
+              "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่ มาตรา 19, มาตรา 30, มาตรา 31, มาตรา 32, มาตรา 33, มาตรา 34, มาตรา 35, มาตรา 36, มาตรา 38, มาตรา 39, มาตรา 40",
+             
+            );
           },
         ),
         GoRoute(
           path: 'features/6',
           builder: (BuildContext context, GoRouterState state) {
-            return MyDetails("Data Breach", "บริหารกรณีเกิดข้อมูลรั่วไหล",
-                "features/breach.png", "6");
+            return MyDetails(
+              "Data Breach\nManagement",
+              "บริหารกรณีเกิดข้อมูลรั่วไหล",
+              "features/breachcard.png",
+              "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่ มาตรา 37, มาตรา 40",
+              
+            );
           },
         ),
         GoRoute(
           path: 'features/7',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
-                "Audit&Gap Management",
-                "บริหารงานตรจสอบและการทำ GAP Analysis",
-                "features/audit.png",
-                "7");
+              "Audit&Gap\nManagement",
+              "บริหารงานตรจสอบ\nและการทำ GAP Analysis",
+              "features/auditcard.png",
+              "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่ มาตรา 19, มาตรา 20, มาตรา 23, มาตรา 24, มาตรา 26, มาตรา 39, มาตรา 40",
+            
+            );
           },
         ),
         GoRoute(
           path: 'features/8',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
-                "Policy&Notices Management",
-                "บริหารการสื่อสารนโยบายและประกาศความเป็นส่วนตัว",
-                "features/policy.png",
-                "8");
+              "Privacy&Notices Management",
+              "บริหารการสื่อสารนโยบายและประกาศความเป็นส่วนตัว",
+              "features/policycard.png",
+              "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่ มาตรา 19 - มาตรา 40, มาตรา 95 และประกาศกระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม เรื่อง มาตรฐานการรักษาความมั่นคงปลอดภัยของ ข้อมูลส่วนบุคคล พ.ศ.2563 ข้อ (3), (4), (5), (6) ",
+             
+            );
           },
         ),
         GoRoute(
           path: 'features/9',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
-                "Data Discover",
-                "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
-                "features/discovery.png",
-                "9");
+              "Data Discover",
+              "ค้นหาข้อมูลส่วนตัวในระบบสารสนเทศ",
+              "features/discoverycard.png",
+              "Module ที่พัฒนาร่วมกันกับคณะ วิศวกรรมศาสตร์ มหาวิทยาลัยเกษตรศาสตร์ ส่งเสริมประสิทธิภาพการทำงานด้านต่างๆ ให้สอดคล้องกับ พรบ.คุ้มครองข้อมูล ส่วนบุคคล อาทิ ด้านความเสี่ยง ด้านการ ตรวจสอบ และระบบขององค์กร เป็นต้น",
+             
+            );
           },
         ),
         GoRoute(
           path: 'features/10',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
-                "Executive Support System",
-                "บริหารงานและจัดการรายงาน สำหรับผู้บริหาร",
-                "features/executive.png",
-                "10");
+              "Executive Support System",
+              "บริหารงานและจัดการรายงาน สำหรับผู้บริหาร",
+              "features/executivecard.png",
+              "Module สนับสนุนงานผู้บริหาร รองรับการ ปฏิบัติตาม พรบ.คุ้มครองข้อมูลส่วนบุคคลตาม กฎหมายมาตรา 81",
+             
+            );
           },
         ),
         GoRoute(
           path: 'features/11',
           builder: (BuildContext context, GoRouterState state) {
-            return MyDetails("Legitimate Interest Assessment",
-                "การประเมินการนำฐานกฏหมายมาใช้", "features/legi.png", "11");
+            return MyDetails(
+              "Legitimate Interest Assessment",
+              "การประเมินการนำฐานกฏหมายมาใช้",
+              "features/legicard.png",
+              "รองรับการใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมายมาตรา ได้แก่  มาตรา 24(5)",
+             
+            );
           },
         ),
         GoRoute(
           path: 'features/12',
           builder: (BuildContext context, GoRouterState state) {
             return MyDetails(
-                "System Setting Management",
-                "ส่วนการตั้งค่าส่วนส่งเสริมที่ถูกพัฒนาขึ้นมาเพื่อให้ผู้ดูแลระบบจัดการกับข้อมูลต่างๆ",
-                "features/system.png",
-                "12");
+              "System Setting Management",
+              "ส่วนการตั้งค่าส่วนส่งเสริมที่ถูกพัฒนาขึ้นมาเพื่อให้ผู้ดูแลระบบจัดการกับข้อมูลต่างๆ",
+              "features/systemcard.png",
+              "ส่วนเสริมที่ถูกพัฒนาขึ้นมาเพื่อให้ผู้ดูแลระบบใช้สำหรับจัดการกับข้อมูลต่างๆ ได้",
+              
+            );
           },
         ),
         GoRoute(

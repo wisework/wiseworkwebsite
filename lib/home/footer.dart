@@ -126,18 +126,18 @@ class _FooterState extends State<Footer> {
     List<Model> navbarButton = [
       Model("Home", "/"),
       Model("About Us", "/story"),
-      Model("Our Reards", "/story"),
+      Model("Our Rewards", "/story"),
       Model("Blogs", "/"),
-      Model("FAQ ", "/faq")
+      Model("FAQ", "/faq")
     ];
 
     var navbarBut = Container(
-        height: Responsive.isTablet(context) ? 180 : 160,
+        height: Responsive.isTablet(context) ? 190 : 160,
         // color: Colors.red,
         width: Responsive.isDesktop(context)
-            ? 100
+            ? 110
             : Responsive.isTablet(context)
-                ? 100
+                ? 110
                 : 150,
         child: ListView.builder(
             shrinkWrap: true,
@@ -504,7 +504,7 @@ class _FooterState extends State<Footer> {
                                             ],
                                           ),
                                           SizedBox(
-                                            width: 30,
+                                            width:20,
                                           ),
                                           Column(
                                             mainAxisAlignment:
@@ -780,398 +780,394 @@ class _FooterState extends State<Footer> {
                                 Center(
                                   child: Column(
                                     children: [
-                                      Column(
-                                        children: [
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(top: 171),
-                                            child: Container(
-                                              width: 768,
-                                              height: 540,
-                                              color: Color.fromARGB(
-                                                  255, 52, 145, 206),
-                                              child: Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(top: 171),
+                                        child: Container(
+                                          width: 768,
+                                          height: 540,
+                                          color: Color.fromARGB(
+                                              255, 52, 145, 206),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Row(
                                                 children: [
-                                                  Row(
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                    .only(
-                                                                top: 108,
-                                                                left: 39),
-                                                        child: Container(
-                                                          width: 123.39,
-                                                          height: 48,
-                                                          child: Image.asset(
-                                                              "assets/footer/logo.png"),
-                                                        ),
-                                                      ),
-                                                      SizedBox(
-                                                        width: 145.61,
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .only(top: 100),
-                                                        child: QLink,
-                                                      ),
-                                                      SizedBox(
-                                                        width: 87,
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .only(top: 100),
-                                                        child: contact,
-                                                      )
-                                                    ],
-                                                  ),
-                                                  Row(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Column(children: [
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsets
-                                                                      .only(
-                                                                  top: 35,
-                                                                  left: 40),
-                                                          child: Container(
-                                                            width: 213,
-                                                            // height: 97,
-                                                            child: Text(
-                                                              "The Wise Work Co.,Ltd.\n7 Soi Lat Pla Khao 19,\nChorakhe Bua Subdistrict,\nLat Phrao District, Bangkok",
-                                                              style: GoogleFonts.ibmPlexSansThai(
-                                                                  fontSize: 16,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w400,
-                                                                  color: Colors
-                                                                      .white),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsets
-                                                                      .only(
-                                                                  top: 38,
-                                                                  left: 40),
-                                                          child: Container(
-                                                            width: 218,
-                                                            height: 25,
-                                                            child: Row(
-                                                              children: [
-                                                                InkWell(
-                                                                  onTap: () {},
-                                                                  child: Container(
-                                                                      width: 25,
-                                                                      height: 25,
-                                                                      child: Image.asset(
-                                                                        "assets/footer/fb.png",
-                                                                      )),
-                                                                ),
-                                                                Padding(
-                                                                  padding: const EdgeInsets
-                                                                          .only(
-                                                                      left: 18),
-                                                                  child:
-                                                                      Container(
-                                                                    width: 1,
-                                                                    height: 20,
-                                                                    color: Colors
-                                                                        .white,
-                                                                  ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: const EdgeInsets
-                                                                          .only(
-                                                                      left: 20),
-                                                                  child:
-                                                                      InkWell(
-                                                                    onTap:
-                                                                        () {},
-                                                                    child: Container(
-                                                                        width: 25,
-                                                                        height: 25,
-                                                                        child: Image.asset(
-                                                                          "assets/footer/ig.png",
-                                                                        )),
-                                                                  ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: const EdgeInsets
-                                                                          .only(
-                                                                      left: 18),
-                                                                  child:
-                                                                      Container(
-                                                                    width: 1,
-                                                                    height: 20,
-                                                                    color: Colors
-                                                                        .white,
-                                                                  ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: const EdgeInsets
-                                                                          .only(
-                                                                      left: 20),
-                                                                  child:
-                                                                      InkWell(
-                                                                    onTap:
-                                                                        () {},
-                                                                    child: Container(
-                                                                        width: 25,
-                                                                        height: 25,
-                                                                        child: Image.asset(
-                                                                          "assets/footer/yt.png",
-                                                                        )),
-                                                                  ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: const EdgeInsets
-                                                                          .only(
-                                                                      left: 18),
-                                                                  child:
-                                                                      Container(
-                                                                    width: 1,
-                                                                    height: 20,
-                                                                    color: Colors
-                                                                        .white,
-                                                                  ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: const EdgeInsets
-                                                                          .only(
-                                                                      left: 20),
-                                                                  child:
-                                                                      InkWell(
-                                                                    onTap:
-                                                                        () {},
-                                                                    child: Container(
-                                                                        width: 25,
-                                                                        height: 25,
-                                                                        child: Image.asset(
-                                                                          "assets/footer/tiktok.png",
-                                                                        )),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ]),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                    .only(
-                                                                top: 10,
-                                                                left: 61),
-                                                        child: navbarBut,
-                                                      ),
-                                                      Column(
-                                                        children: [
-                                                          Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                        .only(
-                                                                    top: 13,
-                                                                    left: 87),
-                                                            child: Container(
-                                                              width: 213,
-                                                              height: 48,
-                                                              child: Text(
-                                                                "Get latest updates and offers.\nTry It Today.",
-                                                                style: GoogleFonts.ibmPlexSansThai(
-                                                                    fontSize:
-                                                                        16,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400,
-                                                                    color: Colors
-                                                                        .white),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                        .only(
-                                                                    top: 32,
-                                                                    left: 87),
-                                                            child: formtext,
-                                                          ),
-                                                          Row(
-                                                            children: [
-                                                              Padding(
-                                                                padding:
-                                                                    const EdgeInsets
-                                                                            .only(
-                                                                        top:
-                                                                            6.58,
-                                                                        left:
-                                                                            87),
-                                                                child:
-                                                                    formEmail,
-                                                              ),
-                                                              Padding(
-                                                                padding: const EdgeInsets
-                                                                        .only(
-                                                                    top: 7.87,
-                                                                    left: 3.76),
-                                                                child:
-                                                                    Container(
-                                                                  width: 31.34,
-                                                                  height: 29.83,
-                                                                  decoration: BoxDecoration(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              3),
-                                                                      color: Color.fromARGB(
-                                                                          255,
-                                                                          75,
-                                                                          195,
-                                                                          211)),
-                                                                  child:
-                                                                      InkWell(
-                                                                    onTap: () {
-                                                                      // do something when the button is tapped
-                                                                    },
-                                                                    child: Image
-                                                                        .asset(
-                                                                            '/footer/send.png'),
-                                                                  ),
-                                                                ),
-                                                              )
-                                                            ],
-                                                          ),
-                                                        ],
-                                                      )
-                                                    ],
-                                                  ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsets.only(
-                                                      top: 30,
-                                                    ),
-                                                    child: Center(
-                                                      child: Container(
-                                                        width: 688,
-                                                        height: 2,
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            top: 20, left: 40),
+                                                        const EdgeInsets
+                                                                .only(
+                                                            top: 108,
+                                                            left: 39),
                                                     child: Container(
-                                                      width: 389,
-                                                      // height: 24,
-                                                      child: Text(
-                                                        "©  Copyright 2022 Thewiseworks | All Right Reserved.",
-                                                        style: GoogleFonts
-                                                            .ibmPlexSansThai(
-                                                                fontSize: 16,
+                                                      width: 123.39,
+                                                      height: 48,
+                                                      child: Image.asset(
+                                                          "assets/footer/logo.png"),
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 145.61,
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets
+                                                            .only(top: 100),
+                                                    child: QLink,
+                                                  ),
+                                                  SizedBox(
+                                                    width: 87,
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets
+                                                            .only(top: 100),
+                                                    child: contact,
+                                                  )
+                                                ],
+                                              ),
+                                              Row(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment
+                                                        .start,
+                                                children: [
+                                                  Column(children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                                  .only(
+                                                              top: 35,
+                                                              left: 40),
+                                                      child: Container(
+                                                        width: 213,
+                                                        // height: 97,
+                                                        child: Text(
+                                                          "The Wise Work Co.,Ltd.\n7 Soi Lat Pla Khao 19,\nChorakhe Bua Subdistrict,\nLat Phrao District, Bangkok",
+                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                              fontSize: 16,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
+                                                              color: Colors
+                                                                  .white),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                                  .only(
+                                                              top: 38,
+                                                              left: 40),
+                                                      child: Container(
+                                                        width: 218,
+                                                        height: 25,
+                                                        child: Row(
+                                                          children: [
+                                                            InkWell(
+                                                              onTap: () {},
+                                                              child: Container(
+                                                                  width: 25,
+                                                                  height: 25,
+                                                                  child: Image.asset(
+                                                                    "assets/footer/fb.png",
+                                                                  )),
+                                                            ),
+                                                            Padding(
+                                                              padding: const EdgeInsets
+                                                                      .only(
+                                                                  left: 18),
+                                                              child:
+                                                                  Container(
+                                                                width: 1,
+                                                                height: 20,
+                                                                color: Colors
+                                                                    .white,
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding: const EdgeInsets
+                                                                      .only(
+                                                                  left: 20),
+                                                              child:
+                                                                  InkWell(
+                                                                onTap:
+                                                                    () {},
+                                                                child: Container(
+                                                                    width: 25,
+                                                                    height: 25,
+                                                                    child: Image.asset(
+                                                                      "assets/footer/ig.png",
+                                                                    )),
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding: const EdgeInsets
+                                                                      .only(
+                                                                  left: 18),
+                                                              child:
+                                                                  Container(
+                                                                width: 1,
+                                                                height: 20,
+                                                                color: Colors
+                                                                    .white,
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding: const EdgeInsets
+                                                                      .only(
+                                                                  left: 20),
+                                                              child:
+                                                                  InkWell(
+                                                                onTap:
+                                                                    () {},
+                                                                child: Container(
+                                                                    width: 25,
+                                                                    height: 25,
+                                                                    child: Image.asset(
+                                                                      "assets/footer/yt.png",
+                                                                    )),
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding: const EdgeInsets
+                                                                      .only(
+                                                                  left: 18),
+                                                              child:
+                                                                  Container(
+                                                                width: 1,
+                                                                height: 20,
+                                                                color: Colors
+                                                                    .white,
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding: const EdgeInsets
+                                                                      .only(
+                                                                  left: 20),
+                                                              child:
+                                                                  InkWell(
+                                                                onTap:
+                                                                    () {},
+                                                                child: Container(
+                                                                    width: 25,
+                                                                    height: 25,
+                                                                    child: Image.asset(
+                                                                      "assets/footer/tiktok.png",
+                                                                    )),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ]),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets
+                                                                .only(
+                                                            top: 10,
+                                                            left: 61),
+                                                    child: navbarBut,
+                                                  ),
+                                                  Column(
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                top: 13,
+                                                                left: 87),
+                                                        child: Container(
+                                                          width: 213,
+                                                          height: 48,
+                                                          child: Text(
+                                                            "Get latest updates and offers.\nTry It Today.",
+                                                            style: GoogleFonts.ibmPlexSansThai(
+                                                                fontSize:
+                                                                    16,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w400,
                                                                 color: Colors
                                                                     .white),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            top: 10),
-                                                    child: Wrap(
-                                                      spacing: 10,
-                                                      children: [
-                                                        Row(
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
-                                                          children: [
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets
-                                                                          .only(
-                                                                      left: 40),
-                                                              child: TextButton(
-                                                                  onPressed:
-                                                                      () {},
-                                                                  child: Text(
-                                                                    "Privacy Policy",
-                                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                                        color: Colors
-                                                                            .white,
-                                                                        decoration:
-                                                                            TextDecoration
-                                                                                .underline,
-                                                                        fontWeight:
-                                                                            FontWeight
-                                                                                .w400,
-                                                                        fontSize:
-                                                                            16),
-                                                                  )),
-                                                            ),
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets
-                                                                          .only(
-                                                                      left: 60,
-                                                                      right:
-                                                                          60),
-                                                              child: TextButton(
-                                                                  onPressed:
-                                                                      () {},
-                                                                  child: Text(
-                                                                    "Term of Services",
-                                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                                        fontSize:
-                                                                            16,
-                                                                        color: Colors
-                                                                            .white,
-                                                                        decoration:
-                                                                            TextDecoration
-                                                                                .underline,
-                                                                        fontWeight:
-                                                                            FontWeight.w400),
-                                                                  )),
-                                                            ),
-                                                            TextButton(
-                                                                onPressed:
-                                                                    () {},
-                                                                child: Text(
-                                                                  "Cookie",
-                                                                  style: GoogleFonts.ibmPlexSansThai(
-                                                                      fontSize:
-                                                                          16,
-                                                                      color: Colors
-                                                                          .white,
-                                                                      decoration:
-                                                                          TextDecoration
-                                                                              .underline,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w400),
-                                                                )),
-                                                          ],
+                                                          ),
                                                         ),
-                                                      ],
-                                                    ),
-                                                  ),
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                top: 32,
+                                                                left: 87),
+                                                        child: formtext,
+                                                      ),
+                                                      Row(
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    top:
+                                                                        6.58,
+                                                                    left:
+                                                                        87),
+                                                            child:
+                                                                formEmail,
+                                                          ),
+                                                          Padding(
+                                                            padding: const EdgeInsets
+                                                                    .only(
+                                                                top: 7.87,
+                                                                left: 3.76),
+                                                            child:
+                                                                Container(
+                                                              width: 31.34,
+                                                              height: 29.83,
+                                                              decoration: BoxDecoration(
+                                                                  borderRadius:
+                                                                      BorderRadius.circular(
+                                                                          3),
+                                                                  color: Color.fromARGB(
+                                                                      255,
+                                                                      75,
+                                                                      195,
+                                                                      211)),
+                                                              child:
+                                                                  InkWell(
+                                                                onTap: () {
+                                                                  // do something when the button is tapped
+                                                                },
+                                                                child: Image
+                                                                    .asset(
+                                                                        '/footer/send.png'),
+                                                              ),
+                                                            ),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    ],
+                                                  )
                                                 ],
                                               ),
-                                            ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.only(
+                                                  top: 30,
+                                                ),
+                                                child: Center(
+                                                  child: Container(
+                                                    width: 688,
+                                                    height: 2,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.only(
+                                                        top: 20, left: 40),
+                                                child: Container(
+                                                  width: 389,
+                                                  // height: 24,
+                                                  child: Text(
+                                                    "©  Copyright 2022 Thewiseworks | All Right Reserved.",
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w400,
+                                                            color: Colors
+                                                                .white),
+                                                  ),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.only(
+                                                        top: 10),
+                                                child: Wrap(
+                                                  spacing: 10,
+                                                  children: [
+                                                    Row(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  left: 40),
+                                                          child: TextButton(
+                                                              onPressed:
+                                                                  () {},
+                                                              child: Text(
+                                                                "Privacy Policy",
+                                                                style: GoogleFonts.ibmPlexSansThai(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    decoration:
+                                                                        TextDecoration
+                                                                            .underline,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    fontSize:
+                                                                        16),
+                                                              )),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  left: 60,
+                                                                  right:
+                                                                      60),
+                                                          child: TextButton(
+                                                              onPressed:
+                                                                  () {},
+                                                              child: Text(
+                                                                "Term of Services",
+                                                                style: GoogleFonts.ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        16,
+                                                                    color: Colors
+                                                                        .white,
+                                                                    decoration:
+                                                                        TextDecoration
+                                                                            .underline,
+                                                                    fontWeight:
+                                                                        FontWeight.w400),
+                                                              )),
+                                                        ),
+                                                        TextButton(
+                                                            onPressed:
+                                                                () {},
+                                                            child: Text(
+                                                              "Cookie",
+                                                              style: GoogleFonts.ibmPlexSansThai(
+                                                                  fontSize:
+                                                                      16,
+                                                                  color: Colors
+                                                                      .white,
+                                                                  decoration:
+                                                                      TextDecoration
+                                                                          .underline,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400),
+                                                            )),
+                                                      ],
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                        ],
+                                        ),
                                       ),
                                     ],
                                   ),
