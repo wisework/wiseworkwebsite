@@ -253,7 +253,7 @@ class _DestinationCarouselState extends State<PackagesPage> {
                     ))
                 : Container(
                     padding: const EdgeInsets.only(left: 0),
-                    height: 75,
+                    height: 80,
                     width: 287,
                     child: Center(
                       child: Column(
