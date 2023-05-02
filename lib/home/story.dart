@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import '../responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,48 +20,6 @@ class _DestinationCarouselState extends State<StoryPage> {
 
   int _current = 0;
 
-  final List<Widget> images = [
-    Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/carousel/med_crs.png'),
-          fit: BoxFit.fill,
-        ),
-      ),
-    ),
-    Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/carousel/med_crs.png'),
-          fit: BoxFit.fill,
-        ),
-      ),
-    ),
-    Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/carousel/med_crs.png'),
-          fit: BoxFit.fill,
-        ),
-      ),
-    ),
-    Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/carousel/med_crs.png'),
-          fit: BoxFit.fill,
-        ),
-      ),
-    ),
-    Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/carousel/med_crs.png'),
-          fit: BoxFit.fill,
-        ),
-      ),
-    ),
-  ];
   List<Widget> med_images = [
     Container(
       decoration: BoxDecoration(
@@ -76,7 +33,7 @@ class _DestinationCarouselState extends State<StoryPage> {
     Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/carousel/med_crs.png'),
+          image: AssetImage('assets/carousel/med_crs2.png'),
           fit: BoxFit.fill,
         ),
       ),
@@ -84,7 +41,7 @@ class _DestinationCarouselState extends State<StoryPage> {
     Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/carousel/med_crs.png'),
+          image: AssetImage('assets/carousel/med_crs3.png'),
           fit: BoxFit.fill,
         ),
       ),
@@ -182,7 +139,7 @@ class _DestinationCarouselState extends State<StoryPage> {
     //     ],
     //   ),
     // );
-   
+
     var title = Container(
       color: Color.fromARGB(0, 0, 187, 212),
       height: !Responsive.isMobile(context) ? 62 : 120,
@@ -294,11 +251,9 @@ class _DestinationCarouselState extends State<StoryPage> {
                       Column(
                         children: [
                           CarouselSlider(
-                            items: Responsive.isDesktop(context)
-                                ? images
-                                : Responsive.isTablet(context)
-                                    ? med_images
-                                    : min_images,
+                            items: !Responsive.isMobile(context)
+                                ? med_images
+                                : min_images,
                             options: CarouselOptions(
                                 scrollPhysics: PageScrollPhysics(),
                                 //  NeverScrollableScrollPhysics(),
@@ -322,16 +277,16 @@ class _DestinationCarouselState extends State<StoryPage> {
                         ],
                       ),
                       Positioned(
-                        bottom: Responsive.isDesktop(context) ? 164 : 0,
+                        bottom: Responsive.isDesktop(context) ? 201 : 0,
                         left: Responsive.isDesktop(context)
-                            ? 412
-                            : (MediaQuery.of(context).size.width / 2) - 111,
+                            ? 598
+                            : (MediaQuery.of(context).size.width - 222) / 2,
                         right: Responsive.isDesktop(context)
-                            ? 412
-                            : (MediaQuery.of(context).size.width / 2) - 111,
+                            ? 598
+                            : (MediaQuery.of(context).size.width - 222) / 2,
                         child: SizedBox(
-                          width: Responsive.isDesktop(context) ? 613 : 222,
-                          height: Responsive.isDesktop(context) ? 88 : 50,
+                          width: Responsive.isDesktop(context) ? 243 : 222,
+                          height: 50,
                           child: ElevatedButton(
                               onPressed: () => context.go('/demo'),
                               style: ElevatedButton.styleFrom(
@@ -345,7 +300,7 @@ class _DestinationCarouselState extends State<StoryPage> {
                                 "Get A free Demo",
                                 style: GoogleFonts.ibmPlexSansThai(
                                     fontSize:
-                                        Responsive.isDesktop(context) ? 42 : 20,
+                                        Responsive.isDesktop(context) ? 24 : 20,
                                     fontWeight: FontWeight.w500),
                               )),
                         ),

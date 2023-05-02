@@ -3,6 +3,8 @@
 // import 'package:flutter/foundation.dart';
 // import 'package:wiseintern/home/carousel.dart';
 
+import 'package:get/get_connect/http/src/utils/utils.dart';
+
 import '../responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:dotted_line/dotted_line.dart';
@@ -663,51 +665,53 @@ class PackageCard extends StatelessWidget {
                             ? 19
                             : 22
                         : 11),
-                buttoncolor
-                    ? SizedBox(
-                        width: !Responsive.isMobile(context) ? 321 : 193,
-                        height: !Responsive.isMobile(context) ? 61 : 48,
-                        child: OutlinedButton(
-                            onPressed: () => context
-                                .go(firstbox ? '/package/1' : '/package/3'),
-                            style: OutlinedButton.styleFrom(
-                              side: BorderSide(
-                                width: 1.0,
-                                color: Color.fromARGB(255, 75, 195, 211),
-                              ),
-                              backgroundColor: Color.fromARGB(19, 75, 195, 211),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30.0),
-                              ),
-                            ),
-                            child: Text(
-                              ' See more',
-                              style: GoogleFonts.ibmPlexSansThai(
-                                  fontSize:
-                                      !Responsive.isMobile(context) ? 22 : 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.black),
-                            )),
-                      )
-                    : SizedBox(
-                        width: !Responsive.isMobile(context) ? 321 : 193,
-                        height: !Responsive.isMobile(context) ? 61 : 48,
-                        child: ElevatedButton(
-                            onPressed: () => context.go('/package/2'),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromRGBO(75, 195, 211, 1),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30.0),
-                              ),
-                            ),
-                            child: Text(
-                              ' See more',
-                              style: GoogleFonts.ibmPlexSansThai(
-                                  fontSize:
-                                      !Responsive.isMobile(context) ? 22 : 20,
-                                  fontWeight: FontWeight.w600),
-                            )),
-                      ),
+                HButton(
+                    middlebox: middlebox, firstbox: firstbox, lastbox: lastbox),
+                // buttoncolor
+                //     ? SizedBox(
+                //         width: !Responsive.isMobile(context) ? 321 : 193,
+                //         height: !Responsive.isMobile(context) ? 61 : 48,
+                //         child: OutlinedButton(
+                //             onPressed: () => context
+                //                 .go(firstbox ? '/package/1' : '/package/3'),
+                //             style: OutlinedButton.styleFrom(
+                //               side: BorderSide(
+                //                 width: 1.0,
+                //                 color: Color.fromARGB(255, 75, 195, 211),
+                //               ),
+                //               backgroundColor: Color.fromARGB(19, 75, 195, 211),
+                //               shape: RoundedRectangleBorder(
+                //                 borderRadius: BorderRadius.circular(30.0),
+                //               ),
+                //             ),
+                //             child: Text(
+                //               ' See more',
+                //               style: GoogleFonts.ibmPlexSansThai(
+                //                   fontSize:
+                //                       !Responsive.isMobile(context) ? 22 : 20,
+                //                   fontWeight: FontWeight.w600,
+                //                   color: Colors.black),
+                //             )),
+                //       )
+                //     : SizedBox(
+                //         width: !Responsive.isMobile(context) ? 321 : 193,
+                //         height: !Responsive.isMobile(context) ? 61 : 48,
+                //         child: ElevatedButton(
+                //             onPressed: () => context.go('/package/2'),
+                //             style: ElevatedButton.styleFrom(
+                //               backgroundColor: Color.fromRGBO(75, 195, 211, 1),
+                //               shape: RoundedRectangleBorder(
+                //                 borderRadius: BorderRadius.circular(30.0),
+                //               ),
+                //             ),
+                //             child: Text(
+                //               ' See more',
+                //               style: GoogleFonts.ibmPlexSansThai(
+                //                   fontSize:
+                //                       !Responsive.isMobile(context) ? 22 : 20,
+                //                   fontWeight: FontWeight.w600),
+                //             )),
+                //       ),
                 SizedBox(height: Responsive.isMobile(context) ? 23 : 32),
               ],
             ),
@@ -878,6 +882,83 @@ class Buildpackagetile extends StatelessWidget {
           },
         ),
       ],
+    );
+  }
+}
+
+class HButton extends StatefulWidget {
+  @override
+  const HButton(
+      {super.key,
+      required this.middlebox,
+      required this.firstbox,
+      required this.lastbox});
+  final bool firstbox;
+  final bool middlebox;
+  final bool lastbox;
+  State<StatefulWidget> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<HButton> {
+  bool isHovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: MouseRegion(
+          onEnter: (_) => setState(() => isHovered = true),
+          onExit: (_) => setState(() => isHovered = false),
+          child: isHovered
+              ? SizedBox(
+                  width: !Responsive.isMobile(context) ? 321 : 193,
+                  height: !Responsive.isMobile(context) ? 61 : 48,
+                  child: TextButton(
+                      onPressed: () => context.go(widget.firstbox
+                          ? '/package/1'
+                          : widget.middlebox
+                              ? '/package/2'
+                              : '/package/3'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 75, 195, 211),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                      ),
+                      child: Text(
+                        ' See more',
+                        style: GoogleFonts.ibmPlexSansThai(
+                            fontSize: !Responsive.isMobile(context) ? 22 : 20,
+                            fontWeight: FontWeight.w600,
+                            color: Color.fromARGB(255, 255, 255, 255)),
+                      )),
+                )
+              : SizedBox(
+                  width: !Responsive.isMobile(context) ? 321 : 193,
+                  height: !Responsive.isMobile(context) ? 61 : 48,
+                  child: OutlinedButton(
+                      onPressed: () => context.go(widget.firstbox
+                          ? '/package/1'
+                          : widget.middlebox
+                              ? '/package/2'
+                              : '/package/3'),
+                      style: OutlinedButton.styleFrom(
+                        side: BorderSide(
+                          width: 1.0,
+                          color: Color.fromARGB(255, 75, 195, 211),
+                        ),
+                        backgroundColor: Color.fromARGB(19, 75, 195, 211),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                      ),
+                      child: Text(
+                        ' See more',
+                        style: GoogleFonts.ibmPlexSansThai(
+                            fontSize: !Responsive.isMobile(context) ? 22 : 20,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black),
+                      )),
+                )),
     );
   }
 }

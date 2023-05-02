@@ -43,34 +43,35 @@ class EXModel {
   }
 }
 
-final price = Container(
-  decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(30.0),
-    boxShadow: [
-      BoxShadow(
-        color: Colors.grey.withOpacity(0.5),
-        spreadRadius: 0,
-        blurRadius: 1,
-        offset: Offset(0, 4), // changes position of shadow
-      ),
-    ],
-  ),
-  width: 193,
-  height: 50,
-  child: ElevatedButton(
-      onPressed: () {},
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Color.fromARGB(255, 57, 128, 237),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.0),
-        ),
-      ),
-      child: Text(
-        'รับใบเสนอราคา',
-        style: GoogleFonts.ibmPlexSansThai(
-            fontSize: 20, fontWeight: FontWeight.w500),
-      )),
-);
+// final price = Container(
+//   decoration: BoxDecoration(
+//     borderRadius: BorderRadius.circular(30.0),
+//     boxShadow: [
+//       BoxShadow(
+//         color: Colors.grey.withOpacity(0.5),
+//         spreadRadius: 0,
+//         blurRadius: 1,
+//         offset: Offset(0, 4), // changes position of shadow
+//       ),
+//     ],
+//   ),
+//   width: 193,
+//   height: 50,
+//   child: ElevatedButton(
+//       onPressed: () =>
+//                                                 context.go('/demo'),
+//       style: ElevatedButton.styleFrom(
+//         backgroundColor: Color.fromARGB(255, 57, 128, 237),
+//         shape: RoundedRectangleBorder(
+//           borderRadius: BorderRadius.circular(30.0),
+//         ),
+//       ),
+//       child: Text(
+//         'รับใบเสนอราคา',
+//         style: GoogleFonts.ibmPlexSansThai(
+//             fontSize: 20, fontWeight: FontWeight.w500),
+//       )),
+// );
 // final demo = Container(
 //   decoration: BoxDecoration(
 //     borderRadius: BorderRadius.circular(30.0),
@@ -364,8 +365,8 @@ class _ProductTableState extends State<ProductTable> {
                               width: !Responsive.isMobile(context) ? 3.0 : 1,
                               color: Color.fromARGB(255, 75, 195, 211),
                             ),
-                            color: Color.fromARGB(255, 243, 246,
-                                249), // set the background color
+                            color: Color.fromARGB(
+                                255, 243, 246, 249), // set the background color
                             borderRadius: BorderRadius.circular(
                                 30), // set the border radius
                           ),
@@ -402,8 +403,8 @@ class _ProductTableState extends State<ProductTable> {
                                   ? 41
                                   : 20,
                           decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 110, 193,
-                                208), // set the background color
+                            color: Color.fromARGB(
+                                255, 110, 193, 208), // set the background color
                             borderRadius: BorderRadius.circular(
                                 30), // set the border radius
                           ),
@@ -441,8 +442,8 @@ class _ProductTableState extends State<ProductTable> {
                                   ? 41
                                   : 20,
                           decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 105, 173,
-                                221), // set the background color
+                            color: Color.fromARGB(
+                                255, 105, 173, 221), // set the background color
                             borderRadius: BorderRadius.circular(
                                 30), // set the border radius
                           ),
@@ -480,8 +481,8 @@ class _ProductTableState extends State<ProductTable> {
                                   ? 41
                                   : 20,
                           decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 140, 140,
-                                207), // set the background color
+                            color: Color.fromARGB(
+                                255, 140, 140, 207), // set the background color
                             borderRadius: BorderRadius.circular(
                                 30), // set the border radius
                           ),
@@ -522,9 +523,8 @@ class _ProductTableState extends State<ProductTable> {
                           '(SaaS)',
                           textAlign: TextAlign.center,
                           style: GoogleFonts.ibmPlexSansThai(
-                              height: Responsive.isDesktop(context)
-                                  ? null
-                                  : 1.1875,
+                              height:
+                                  Responsive.isDesktop(context) ? null : 1.1875,
                               fontSize: Responsive.isDesktop(context)
                                   ? 20
                                   : Responsive.isTablet(context)
@@ -536,8 +536,7 @@ class _ProductTableState extends State<ProductTable> {
                       ),
                       Padding(
                         padding: Responsive.isDesktop(context)
-                            ? EdgeInsets.only(
-                                left: 13.5, right: 13.5, top: 18)
+                            ? EdgeInsets.only(left: 13.5, right: 13.5, top: 18)
                             : Responsive.isTablet(context)
                                 ? EdgeInsets.only(
                                     left: 6.5, right: 6.5, top: 18)
@@ -549,9 +548,8 @@ class _ProductTableState extends State<ProductTable> {
                           '(Subscriptions License)',
                           textAlign: TextAlign.center,
                           style: GoogleFonts.ibmPlexSansThai(
-                              height: Responsive.isDesktop(context)
-                                  ? null
-                                  : 1.1875,
+                              height:
+                                  Responsive.isDesktop(context) ? null : 1.1875,
                               fontSize: Responsive.isDesktop(context)
                                   ? 20
                                   : Responsive.isTablet(context)
@@ -574,9 +572,8 @@ class _ProductTableState extends State<ProductTable> {
                           '(Perpeptual License)',
                           textAlign: TextAlign.center,
                           style: GoogleFonts.ibmPlexSansThai(
-                              height: Responsive.isDesktop(context)
-                                  ? null
-                                  : 1.1875,
+                              height:
+                                  Responsive.isDesktop(context) ? null : 1.1875,
                               fontSize: Responsive.isDesktop(context)
                                   ? 20
                                   : Responsive.isTablet(context)
@@ -641,10 +638,9 @@ class _ProductTableState extends State<ProductTable> {
                                       textAlign: TextAlign.start,
                                       style: GoogleFonts.ibmPlexSansThai(
                                         height: 1.1,
-                                        fontSize:
-                                            !Responsive.isMobile(context)
-                                                ? 18
-                                                : 8,
+                                        fontSize: !Responsive.isMobile(context)
+                                            ? 18
+                                            : 8,
                                         fontWeight: FontWeight.w400,
                                       )),
                                 ),
@@ -719,8 +715,7 @@ class _ProductTableState extends State<ProductTable> {
                                                 ),
                                               ],
                                             ),
-                                            width: Responsive.isDesktop(
-                                                    context)
+                                            width: Responsive.isDesktop(context)
                                                 ? 192
                                                 : Responsive.isTablet(context)
                                                     ? 113
@@ -733,7 +728,7 @@ class _ProductTableState extends State<ProductTable> {
                                                     : 20,
                                             child: OutlinedButton(
                                               onPressed: () =>
-                                                  context.go('/package/1'),
+                                                  context.go('/contact'),
                                               style: OutlinedButton.styleFrom(
                                                 side: BorderSide(
                                                   width: Responsive.isDesktop(
@@ -746,18 +741,16 @@ class _ProductTableState extends State<ProductTable> {
                                                   color: Color.fromARGB(
                                                       255, 75, 195, 211),
                                                 ),
-                                                backgroundColor:
-                                                    Color.fromARGB(
-                                                        255, 255, 255, 255),
+                                                backgroundColor: Color.fromARGB(
+                                                    255, 255, 255, 255),
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius: BorderRadius
                                                       .circular(Responsive
                                                               .isDesktop(
                                                                   context)
                                                           ? 30.0
-                                                          : Responsive
-                                                                  .isTablet(
-                                                                      context)
+                                                          : Responsive.isTablet(
+                                                                  context)
                                                               ? 20
                                                               : 30),
                                                 ),
@@ -775,12 +768,11 @@ class _ProductTableState extends State<ProductTable> {
                                                               : 8,
                                                           fontWeight:
                                                               FontWeight.w500,
-                                                          color:
-                                                              Color.fromARGB(
-                                                                  255,
-                                                                  75,
-                                                                  195,
-                                                                  211)),
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              75,
+                                                              195,
+                                                              211)),
                                                 ),
                                               ),
                                             ),
@@ -788,31 +780,26 @@ class _ProductTableState extends State<ProductTable> {
                                         : Text(
                                             '${table[index].express}',
                                             textAlign: TextAlign.center,
-                                            style:
-                                                GoogleFonts.ibmPlexSansThai(
-                                                    color: Colors.black,
-                                                    fontSize: index == 14
-                                                        ? Responsive
-                                                                .isDesktop(
-                                                                    context)
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                color: Colors.black,
+                                                fontSize: index == 14
+                                                    ? Responsive.isDesktop(
+                                                            context)
+                                                        ? 16
+                                                        : Responsive.isTablet(
+                                                                context)
                                                             ? 16
-                                                            : Responsive
-                                                                    .isTablet(
-                                                                        context)
-                                                                ? 16
-                                                                : 7
-                                                        : Responsive
-                                                                .isDesktop(
-                                                                    context)
-                                                            ? 20
-                                                            : Responsive
-                                                                    .isTablet(
-                                                                        context)
-                                                                ? 16
-                                                                : 8,
-                                                    fontWeight: index == 14
-                                                        ? FontWeight.w500
-                                                        : FontWeight.w700),
+                                                            : 7
+                                                    : Responsive.isDesktop(
+                                                            context)
+                                                        ? 20
+                                                        : Responsive.isTablet(
+                                                                context)
+                                                            ? 16
+                                                            : 8,
+                                                fontWeight: index == 14
+                                                    ? FontWeight.w500
+                                                    : FontWeight.w700),
                                           ),
                               ),
                             )),
@@ -885,8 +872,7 @@ class _ProductTableState extends State<ProductTable> {
                                                 ),
                                               ],
                                             ),
-                                            width: Responsive.isDesktop(
-                                                    context)
+                                            width: Responsive.isDesktop(context)
                                                 ? 192
                                                 : Responsive.isTablet(context)
                                                     ? 113
@@ -899,7 +885,7 @@ class _ProductTableState extends State<ProductTable> {
                                                     : 20,
                                             child: OutlinedButton(
                                               onPressed: () =>
-                                                  context.go('/package/2'),
+                                                  context.go('/contact'),
                                               style: OutlinedButton.styleFrom(
                                                 side: BorderSide(
                                                   width: Responsive.isDesktop(
@@ -912,18 +898,16 @@ class _ProductTableState extends State<ProductTable> {
                                                   color: Color.fromARGB(
                                                       255, 75, 195, 211),
                                                 ),
-                                                backgroundColor:
-                                                    Color.fromARGB(
-                                                        255, 255, 255, 255),
+                                                backgroundColor: Color.fromARGB(
+                                                    255, 255, 255, 255),
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius: BorderRadius
                                                       .circular(Responsive
                                                               .isDesktop(
                                                                   context)
                                                           ? 30.0
-                                                          : Responsive
-                                                                  .isTablet(
-                                                                      context)
+                                                          : Responsive.isTablet(
+                                                                  context)
                                                               ? 20
                                                               : 30),
                                                 ),
@@ -941,12 +925,11 @@ class _ProductTableState extends State<ProductTable> {
                                                               : 8,
                                                           fontWeight:
                                                               FontWeight.w500,
-                                                          color:
-                                                              Color.fromARGB(
-                                                                  255,
-                                                                  75,
-                                                                  195,
-                                                                  211)),
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              75,
+                                                              195,
+                                                              211)),
                                                 ),
                                               ),
                                             ),
@@ -954,19 +937,16 @@ class _ProductTableState extends State<ProductTable> {
                                         : Text(
                                             '${table[index].standard}',
                                             textAlign: TextAlign.center,
-                                            style:
-                                                GoogleFonts.ibmPlexSansThai(
-                                                    color: Colors.black,
-                                                    fontSize: Responsive
-                                                            .isDesktop(
-                                                                context)
-                                                        ? 20
-                                                        : Responsive.isTablet(
-                                                                context)
-                                                            ? 16
-                                                            : 8,
-                                                    fontWeight:
-                                                        FontWeight.w700),
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                color: Colors.black,
+                                                fontSize: Responsive.isDesktop(
+                                                        context)
+                                                    ? 20
+                                                    : Responsive.isTablet(
+                                                            context)
+                                                        ? 16
+                                                        : 8,
+                                                fontWeight: FontWeight.w700),
                                           ),
                               ),
                             )),
@@ -1039,8 +1019,7 @@ class _ProductTableState extends State<ProductTable> {
                                                 ),
                                               ],
                                             ),
-                                            width: Responsive.isDesktop(
-                                                    context)
+                                            width: Responsive.isDesktop(context)
                                                 ? 192
                                                 : Responsive.isTablet(context)
                                                     ? 113
@@ -1053,7 +1032,7 @@ class _ProductTableState extends State<ProductTable> {
                                                     : 20,
                                             child: OutlinedButton(
                                               onPressed: () =>
-                                                  context.go('/package/3'),
+                                                  context.go('/contact'),
                                               style: OutlinedButton.styleFrom(
                                                 side: BorderSide(
                                                   width: Responsive.isDesktop(
@@ -1066,18 +1045,16 @@ class _ProductTableState extends State<ProductTable> {
                                                   color: Color.fromARGB(
                                                       255, 75, 195, 211),
                                                 ),
-                                                backgroundColor:
-                                                    Color.fromARGB(
-                                                        255, 255, 255, 255),
+                                                backgroundColor: Color.fromARGB(
+                                                    255, 255, 255, 255),
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius: BorderRadius
                                                       .circular(Responsive
                                                               .isDesktop(
                                                                   context)
                                                           ? 30.0
-                                                          : Responsive
-                                                                  .isTablet(
-                                                                      context)
+                                                          : Responsive.isTablet(
+                                                                  context)
                                                               ? 20
                                                               : 30),
                                                 ),
@@ -1095,12 +1072,11 @@ class _ProductTableState extends State<ProductTable> {
                                                               : 8,
                                                           fontWeight:
                                                               FontWeight.w500,
-                                                          color:
-                                                              Color.fromARGB(
-                                                                  255,
-                                                                  75,
-                                                                  195,
-                                                                  211)),
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              75,
+                                                              195,
+                                                              211)),
                                                 ),
                                               ),
                                             ),
@@ -1108,19 +1084,16 @@ class _ProductTableState extends State<ProductTable> {
                                         : Text(
                                             '${table[index].enterprise}',
                                             textAlign: TextAlign.center,
-                                            style:
-                                                GoogleFonts.ibmPlexSansThai(
-                                                    color: Colors.black,
-                                                    fontSize: Responsive
-                                                            .isDesktop(
-                                                                context)
-                                                        ? 20
-                                                        : Responsive.isTablet(
-                                                                context)
-                                                            ? 16
-                                                            : 8,
-                                                    fontWeight:
-                                                        FontWeight.w700),
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                color: Colors.black,
+                                                fontSize: Responsive.isDesktop(
+                                                        context)
+                                                    ? 20
+                                                    : Responsive.isTablet(
+                                                            context)
+                                                        ? 16
+                                                        : 8,
+                                                fontWeight: FontWeight.w700),
                                           ),
                               ),
                             )),
@@ -1177,7 +1150,37 @@ class _ProductTableState extends State<ProductTable> {
                               ],
                             ),
                             SizedBox(width: 110),
-                            price,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30.0),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 0,
+                                    blurRadius: 1,
+                                    offset: Offset(
+                                        0, 4), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              width: 193,
+                              height: 50,
+                              child: ElevatedButton(
+                                  onPressed: () => context.go('/contact'),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor:
+                                        Color.fromARGB(255, 57, 128, 237),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(30.0),
+                                    ),
+                                  ),
+                                  child: Text(
+                                    'รับใบเสนอราคา',
+                                    style: GoogleFonts.ibmPlexSansThai(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500),
+                                  )),
+                            ),
                             SizedBox(width: 26),
                             Container(
                               decoration: BoxDecoration(
@@ -1248,7 +1251,43 @@ class _ProductTableState extends State<ProductTable> {
                                 ? Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      price,
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(30.0),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color:
+                                                  Colors.grey.withOpacity(0.5),
+                                              spreadRadius: 0,
+                                              blurRadius: 1,
+                                              offset: Offset(0,
+                                                  4), // changes position of shadow
+                                            ),
+                                          ],
+                                        ),
+                                        width: 193,
+                                        height: 50,
+                                        child: ElevatedButton(
+                                            onPressed: () =>
+                                                context.go('/contact'),
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor: Color.fromARGB(
+                                                  255, 57, 128, 237),
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(30.0),
+                                              ),
+                                            ),
+                                            child: Text(
+                                              'รับใบเสนอราคา',
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                            )),
+                                      ),
                                       SizedBox(width: 26),
                                       Container(
                                         decoration: BoxDecoration(
@@ -1291,7 +1330,43 @@ class _ProductTableState extends State<ProductTable> {
                                   )
                                 : Column(
                                     children: [
-                                      price,
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(30.0),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color:
+                                                  Colors.grey.withOpacity(0.5),
+                                              spreadRadius: 0,
+                                              blurRadius: 1,
+                                              offset: Offset(0,
+                                                  4), // changes position of shadow
+                                            ),
+                                          ],
+                                        ),
+                                        width: 193,
+                                        height: 50,
+                                        child: ElevatedButton(
+                                            onPressed: () =>
+                                                context.go('/contact'),
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor: Color.fromARGB(
+                                                  255, 57, 128, 237),
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(30.0),
+                                              ),
+                                            ),
+                                            child: Text(
+                                              'รับใบเสนอราคา',
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                            )),
+                                      ),
                                       SizedBox(height: 20),
                                       Container(
                                         decoration: BoxDecoration(
@@ -1344,7 +1419,6 @@ class _ProductTableState extends State<ProductTable> {
                 ],
               ),
             ),
-          
           ],
         ),
       ),

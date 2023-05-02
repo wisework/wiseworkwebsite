@@ -169,7 +169,7 @@ class _ProductWithState extends State<ProductWith> {
     var enterprise = HoverContainer(
       padding: !Responsive.isMobile(context)
           ? const EdgeInsets.only(top: 27, left: 40)
-          : const EdgeInsets.only(top: 40, left: 40),
+          : const EdgeInsets.only(top: 23, left: 36),
       width: !Responsive.isMobile(context) ? 363 : 320,
       height: !Responsive.isMobile(context) ? 256 : 226,
       decoration: BoxDecoration(
@@ -180,33 +180,35 @@ class _ProductWithState extends State<ProductWith> {
           borderRadius: BorderRadius.circular(16),
           color: Color.fromARGB(255, 241, 251, 252),
           border: Border.all(color: Color.fromARGB(255, 75, 195, 211))),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        SizedBox(
-            height: 47,
-            width: 80,
-            child: Image.asset("assets/product/blue_rainbow.png")),
-        SizedBox(height: 24),
-        Text('Enterprise Package',
-            style: GoogleFonts.ibmPlexSansThai(
-                height: 1.4, fontSize: 20, fontWeight: FontWeight.w500)),
-        Text('(Perpeptual License)',
-            style: GoogleFonts.ibmPlexSansThai(
-                height: 1.4, fontSize: 20, fontWeight: FontWeight.w400)),
-        SizedBox(height: !Responsive.isMobile(context) ? 16 : 6),
-        TextButton(
-          onPressed: () => context.go('/package/3'),
-          child: Text('Read more >',
+      child: InkWell(
+        onTap: () {
+          context.go('/package/3');
+        },
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          SizedBox(
+              height: 47,
+              width: 80,
+              child: Image.asset("assets/product/blue_rainbow.png")),
+          SizedBox(height: 24),
+          Text('Enterprise Package',
+              style: GoogleFonts.ibmPlexSansThai(
+                  height: 1.4, fontSize: 20, fontWeight: FontWeight.w500)),
+          Text('(Perpeptual License)',
+              style: GoogleFonts.ibmPlexSansThai(
+                  height: 1.4, fontSize: 20, fontWeight: FontWeight.w400)),
+          SizedBox(height: !Responsive.isMobile(context) ? 16 : 6),
+          Text('Read more >',
               style: GoogleFonts.poppins(
                   color: Color.fromARGB(255, 75, 196, 213),
                   fontSize: 16,
                   fontWeight: FontWeight.w600)),
-        )
-      ]),
+        ]),
+      ),
     );
     var standard = HoverContainer(
       padding: !Responsive.isMobile(context)
           ? const EdgeInsets.only(top: 27, left: 40)
-          : const EdgeInsets.only(top: 40, left: 40),
+          : const EdgeInsets.only(top: 23, left: 36),
       width: !Responsive.isMobile(context) ? 363 : 320,
       height: !Responsive.isMobile(context) ? 256 : 226,
       decoration: BoxDecoration(
@@ -217,28 +219,30 @@ class _ProductWithState extends State<ProductWith> {
           borderRadius: BorderRadius.circular(16),
           color: Color.fromARGB(255, 241, 251, 252),
           border: Border.all(color: Color.fromARGB(255, 75, 195, 211))),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        SizedBox(
-            height: 45,
-            width: 75,
-            child: Image.asset("assets/product/blue_clouds.png")),
-        SizedBox(height: 24),
-        Text('Standard Package',
-            style: GoogleFonts.ibmPlexSansThai(
-                height: 1.4, fontSize: 20, fontWeight: FontWeight.w500)),
-        Text('(Subscription License)',
-            style: GoogleFonts.ibmPlexSansThai(
-                height: 1.4, fontSize: 20, fontWeight: FontWeight.w400)),
-        SizedBox(height: !Responsive.isMobile(context) ? 16 : 6),
-        TextButton(
-          onPressed: () => context.go('/package/2'),
-          child: Text('Read more >',
+      child: InkWell(
+        onTap: () {
+          context.go('/package/2');
+        },
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          SizedBox(
+              height: 45,
+              width: 75,
+              child: Image.asset("assets/product/blue_clouds.png")),
+          SizedBox(height: 24),
+          Text('Standard Package',
+              style: GoogleFonts.ibmPlexSansThai(
+                  height: 1.4, fontSize: 20, fontWeight: FontWeight.w500)),
+          Text('(Subscription License)',
+              style: GoogleFonts.ibmPlexSansThai(
+                  height: 1.4, fontSize: 20, fontWeight: FontWeight.w400)),
+          SizedBox(height: !Responsive.isMobile(context) ? 16 : 6),
+          Text('Read more >',
               style: GoogleFonts.poppins(
                   color: Color.fromARGB(255, 75, 196, 213),
                   fontSize: 16,
                   fontWeight: FontWeight.w600)),
-        )
-      ]),
+        ]),
+      ),
     );
     var express = HoverContainer(
       padding: !Responsive.isMobile(context)
@@ -254,29 +258,32 @@ class _ProductWithState extends State<ProductWith> {
           borderRadius: BorderRadius.circular(16),
           color: Color.fromARGB(255, 241, 251, 252),
           border: Border.all(color: Color.fromARGB(255, 75, 195, 211))),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        SizedBox(
-            height: 60,
-            width: 60,
-            child: Image.asset("assets/product/blue_cloud.png")),
-        SizedBox(height: 24),
-        Text('Express Package',
-            style: GoogleFonts.ibmPlexSansThai(
-                height: 1.4, fontSize: 20, fontWeight: FontWeight.w500)),
-        Text('(SaaS)',
-            style: GoogleFonts.ibmPlexSansThai(
-                height: 1.4, fontSize: 20, fontWeight: FontWeight.w400)),
-        SizedBox(height: !Responsive.isMobile(context) ? 16 : 6),
-        TextButton(
-          onPressed: () => context.go('/package/1'),
-          child: Text('Read more >',
+      child: InkWell(
+        onTap: () {
+          context.go('/package/1');
+        },
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          SizedBox(
+              height: 60,
+              width: 60,
+              child: Image.asset("assets/product/blue_cloud.png")),
+          SizedBox(height: 24),
+          Text('Express Package',
+              style: GoogleFonts.ibmPlexSansThai(
+                  height: 1.4, fontSize: 20, fontWeight: FontWeight.w500)),
+          Text('(SaaS)',
+              style: GoogleFonts.ibmPlexSansThai(
+                  height: 1.4, fontSize: 20, fontWeight: FontWeight.w400)),
+          SizedBox(height: !Responsive.isMobile(context) ? 16 : 6),
+          Text('Read more >',
               style: GoogleFonts.poppins(
                   color: Color.fromARGB(255, 75, 196, 213),
                   fontSize: 16,
                   fontWeight: FontWeight.w600)),
-        )
-      ]),
+        ]),
+      ),
     );
+
     return Center(
       child: Container(
         color: Colors.white,
