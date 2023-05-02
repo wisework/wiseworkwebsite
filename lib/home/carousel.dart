@@ -84,7 +84,7 @@ class _DestinationCarouselState extends State<CarouselPage> {
       width: 768,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/carousel/med_crs.png'),
+          image: AssetImage('assets/carousel/med_crs2.png'),
           fit: BoxFit.fill,
         ),
       ),
@@ -94,7 +94,7 @@ class _DestinationCarouselState extends State<CarouselPage> {
       width: 768,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/carousel/med_crs.png'),
+          image: AssetImage('assets/carousel/med_crs3.png'),
           fit: BoxFit.fill,
         ),
       ),
