@@ -176,7 +176,8 @@ class MyPackages extends StatelessWidget {
                                                   width: 193,
                                                   height: 48,
                                                   child: ElevatedButton(
-                                                      onPressed: () {},
+                                                      onPressed: () => context
+                                                          .go('/contact'),
                                                       style: ElevatedButton
                                                           .styleFrom(
                                                         backgroundColor:
@@ -271,7 +272,8 @@ class MyPackages extends StatelessWidget {
                                       padding: const EdgeInsets.only(
                                           top: 76, left: 40, bottom: 60),
                                       child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
                                         children: [
                                           Container(
                                             width: 60,
@@ -294,11 +296,13 @@ class MyPackages extends StatelessWidget {
                                             height: 25,
                                             child: Text(
                                               "Our Services",
-                                              style: GoogleFonts.ibmPlexSansThai(
-                                                  fontWeight: FontWeight.w600,
-                                                  fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      255, 57, 128, 237)),
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      fontSize: 16,
+                                                      color: Color.fromARGB(
+                                                          255, 57, 128, 237)),
                                             ),
                                           ),
                                         ],
@@ -341,10 +345,12 @@ class MyPackages extends StatelessWidget {
                                                 const EdgeInsets.only(top: 32),
                                             child: Text(
                                               "$description",
-                                              style: GoogleFonts.ibmPlexSansThai(
-                                                  fontSize: 24,
-                                                  fontWeight: FontWeight.w500,
-                                                  color: Colors.black),
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 24,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: Colors.black),
                                             ),
                                           ),
                                           Padding(
@@ -352,11 +358,13 @@ class MyPackages extends StatelessWidget {
                                                 top: 32, right: 100),
                                             child: Text(
                                               "$detail",
-                                              style: GoogleFonts.ibmPlexSansThai(
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w400,
-                                                  color: Color.fromARGB(
-                                                      255, 23, 24, 26)),
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 20,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      color: Color.fromARGB(
+                                                          255, 23, 24, 26)),
                                             ),
                                           ),
                                           Row(
@@ -368,7 +376,8 @@ class MyPackages extends StatelessWidget {
                                                   width: 193,
                                                   height: 48,
                                                   child: ElevatedButton(
-                                                      onPressed: () {},
+                                                      onPressed: () => context
+                                                          .go('/contact'),
                                                       style: ElevatedButton
                                                           .styleFrom(
                                                         backgroundColor:
@@ -378,7 +387,8 @@ class MyPackages extends StatelessWidget {
                                                             RoundedRectangleBorder(
                                                           borderRadius:
                                                               BorderRadius
-                                                                  .circular(30.0),
+                                                                  .circular(
+                                                                      30.0),
                                                         ),
                                                       ),
                                                       child: Text(
@@ -410,7 +420,8 @@ class MyPackages extends StatelessWidget {
                                                             RoundedRectangleBorder(
                                                           borderRadius:
                                                               BorderRadius
-                                                                  .circular(30.0),
+                                                                  .circular(
+                                                                      30.0),
                                                         ),
                                                       ),
                                                       child: Text(
@@ -431,8 +442,8 @@ class MyPackages extends StatelessWidget {
                                     ),
                                   ),
                                   Padding(
-                                    padding:
-                                        const EdgeInsets.only(top: 70, left: 20),
+                                    padding: const EdgeInsets.only(
+                                        top: 70, left: 20),
                                     child: Container(
                                       color: Color.fromARGB(0, 255, 193, 7),
                                       child: Image.asset(
@@ -514,7 +525,7 @@ class MyPackages extends StatelessWidget {
                                     width: 193,
                                     height: 48,
                                     child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () => context.go('/contact'),
                                         style: ElevatedButton.styleFrom(
                                           backgroundColor:
                                               Color.fromARGB(255, 52, 145, 206),
@@ -570,7 +581,6 @@ class MyPackages extends StatelessWidget {
                             ),
                           )),
                         ),
-              
               ProductDetails(
                 title: title,
               ),
