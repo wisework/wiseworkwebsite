@@ -6,6 +6,7 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:flutter/services.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -88,12 +89,16 @@ class _Register extends State<Register> {
                                                 height: 20,
                                                 child: Text(
                                                   "Get A Free Demo",
-                                                  style: GoogleFonts.ibmPlexSansThai(
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      fontSize: 16,
-                                                      color: Color.fromARGB(
-                                                          255, 57, 128, 237)),
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontSize: 16,
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              57,
+                                                              128,
+                                                              237)),
                                                 ),
                                               ),
                                             )
@@ -143,11 +148,13 @@ class _Register extends State<Register> {
                                             onPressed: () {},
                                             child: Text(
                                               "คลิกลงทะเบียน",
-                                              style: GoogleFonts.ibmPlexSansThai(
-                                                  fontSize: 24,
-                                                  fontWeight: FontWeight.w500,
-                                                  color: Color.fromARGB(
-                                                      255, 75, 196, 213)),
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 24,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: Color.fromARGB(
+                                                          255, 75, 196, 213)),
                                               textAlign: TextAlign.start,
                                             ),
                                           )),
@@ -447,8 +454,8 @@ class _Register extends State<Register> {
                                                       decoration:
                                                           InputDecoration(
                                                         hintText: 'wisework',
-                                                        hintStyle:
-                                                            GoogleFonts.ibmPlexSansThai(
+                                                        hintStyle: GoogleFonts
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -528,8 +535,8 @@ class _Register extends State<Register> {
                                                           InputDecoration(
                                                         hintText:
                                                             'The wisework co.,Ltd.',
-                                                        hintStyle:
-                                                            GoogleFonts.ibmPlexSansThai(
+                                                        hintStyle: GoogleFonts
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -617,8 +624,8 @@ class _Register extends State<Register> {
                                                           InputDecoration(
                                                         hintText:
                                                             'hello@thewiseworks.com',
-                                                        hintStyle:
-                                                            GoogleFonts.ibmPlexSansThai(
+                                                        hintStyle: GoogleFonts
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -694,12 +701,19 @@ class _Register extends State<Register> {
                                                   Container(
                                                     width: 310,
                                                     child: TextField(
+                                                      keyboardType:
+                                                          TextInputType.number,
+                                                      inputFormatters: <
+                                                          TextInputFormatter>[
+                                                        FilteringTextInputFormatter
+                                                            .digitsOnly
+                                                      ],
                                                       decoration:
                                                           InputDecoration(
                                                         hintText:
                                                             'xxx-xxx-xxxx',
-                                                        hintStyle:
-                                                            GoogleFonts.ibmPlexSansThai(
+                                                        hintStyle: GoogleFonts
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -783,11 +797,18 @@ class _Register extends State<Register> {
                                                   Container(
                                                     width: 310,
                                                     child: TextField(
+                                                      keyboardType:
+                                                          TextInputType.number,
+                                                      inputFormatters: <
+                                                          TextInputFormatter>[
+                                                        FilteringTextInputFormatter
+                                                            .digitsOnly
+                                                      ],
                                                       decoration:
                                                           InputDecoration(
                                                         // hintText: 'hello@thewiseworks.com',
-                                                        hintStyle:
-                                                            GoogleFonts.ibmPlexSansThai(
+                                                        hintStyle: GoogleFonts
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -880,7 +901,12 @@ class _Register extends State<Register> {
                                                           DropdownButtonHideUnderline(
                                                         child: DropdownButton2(
                                                           value: selectedOption,
-                                                          buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
+                                                          buttonStyleData:
+                                                              const ButtonStyleData(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      right:
+                                                                          12)),
                                                           hint: Text(
                                                             'เลือกประเภทธุรกิจ',
                                                             style: GoogleFonts
@@ -999,7 +1025,12 @@ class _Register extends State<Register> {
                                                 child:
                                                     DropdownButtonHideUnderline(
                                                   child: DropdownButton2(
-                                                    buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
+                                                    buttonStyleData:
+                                                        const ButtonStyleData(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    right: 12)),
                                                     value: selectedPackage,
                                                     hint: Text(
                                                       'เลือกแพ็กเกจ',
@@ -1162,8 +1193,8 @@ class _Register extends State<Register> {
                                                   top: 36),
                                               child: Center(
                                                 child: SizedBox(
-                                                  width: 571,
-                                                  height: 88,
+                                                  width: 344,
+                                                  height: 66,
                                                   child: ElevatedButton(
                                                     onPressed: () {},
                                                     style: ElevatedButton
@@ -1182,7 +1213,7 @@ class _Register extends State<Register> {
                                                       'ลงทะเบียน',
                                                       style: GoogleFonts
                                                           .ibmPlexSansThai(
-                                                              fontSize: 42,
+                                                              fontSize: 32,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w500,
@@ -1217,8 +1248,8 @@ class _Register extends State<Register> {
                                                   top: 25),
                                               child: Center(
                                                 child: SizedBox(
-                                                  width: 571,
-                                                  height: 91,
+                                                  width: 61,
+                                                  height: 50,
                                                   child: ElevatedButton(
                                                     onPressed: () {},
                                                     style: ElevatedButton
@@ -1241,13 +1272,13 @@ class _Register extends State<Register> {
                                                             child: Image.asset(
                                                                 "assets/demo/google.png")),
                                                         SizedBox(
-                                                          width: 438,
+                                                          width: 458,
                                                           child: Text(
                                                             'สมัครใช้งานด้วย Google',
                                                             style: GoogleFonts
                                                                 .ibmPlexSansThai(
                                                                     fontSize:
-                                                                        38,
+                                                                        32,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w400,
@@ -1367,11 +1398,13 @@ class _Register extends State<Register> {
                                                 const EdgeInsets.only(top: 20),
                                             child: Text(
                                               "ธุรกิจ และองค์กรต่างๆ ที่เราได้รับความไว้วางใจ\nให้ wisework ดูแลมากกว่า 80 โครงการ",
-                                              style: GoogleFonts.ibmPlexSansThai(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w500,
-                                                  color: Color.fromARGB(
-                                                      255, 0, 0, 0)),
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: Color.fromARGB(
+                                                          255, 0, 0, 0)),
                                               textAlign: TextAlign.center,
                                             ),
                                           )
@@ -1404,22 +1437,26 @@ class _Register extends State<Register> {
                                             ),
                                             Text(
                                               "10 ปี",
-                                              style: GoogleFonts.ibmPlexSansThai(
-                                                  fontSize: 36,
-                                                  fontWeight: FontWeight.w700,
-                                                  color: Color.fromARGB(
-                                                      255, 52, 145, 206)),
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 36,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                      color: Color.fromARGB(
+                                                          255, 52, 145, 206)),
                                             ),
                                             Padding(
                                               padding: const EdgeInsets.only(
                                                   top: 20),
                                               child: Text(
                                                 "ทีมงานมากประสบการณ์ และเชี่ยวชาญ\nในวงการ Cyber Security กว่า 10 ปี",
-                                                style: GoogleFonts.ibmPlexSansThai(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: Color.fromARGB(
-                                                        255, 0, 0, 0)),
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0)),
                                                 textAlign: TextAlign.center,
                                               ),
                                             )
@@ -1461,11 +1498,13 @@ class _Register extends State<Register> {
                                                 const EdgeInsets.only(top: 20),
                                             child: Text(
                                               "บริการดูแลระดับ Premium Support\nโดยทีมงานในประเทศไทยตลอด 24 ชั่วโมง",
-                                              style: GoogleFonts.ibmPlexSansThai(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w500,
-                                                  color: Color.fromARGB(
-                                                      255, 0, 0, 0)),
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: Color.fromARGB(
+                                                          255, 0, 0, 0)),
                                               textAlign: TextAlign.center,
                                             ),
                                           )
@@ -1540,11 +1579,13 @@ class _Register extends State<Register> {
                                             height: 20,
                                             child: Text(
                                               "Get A Free Demo",
-                                              style: GoogleFonts.ibmPlexSansThai(
-                                                  fontWeight: FontWeight.w600,
-                                                  fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      255, 57, 128, 237)),
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      fontSize: 16,
+                                                      color: Color.fromARGB(
+                                                          255, 57, 128, 237)),
                                             ),
                                           ),
                                         )
@@ -2287,6 +2328,14 @@ class _Register extends State<Register> {
                                                             Container(
                                                               width: 300,
                                                               child: TextField(
+                                                                keyboardType:
+                                                                    TextInputType
+                                                                        .number,
+                                                                inputFormatters: <
+                                                                    TextInputFormatter>[
+                                                                  FilteringTextInputFormatter
+                                                                      .digitsOnly
+                                                                ],
                                                                 decoration:
                                                                     InputDecoration(
                                                                   hintText:
@@ -2480,7 +2529,10 @@ class _Register extends State<Register> {
                                                                     DropdownButtonHideUnderline(
                                                                   child:
                                                                       DropdownButton2(
-                                                                        buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
+                                                                    buttonStyleData:
+                                                                        const ButtonStyleData(
+                                                                            padding:
+                                                                                const EdgeInsets.only(right: 12)),
                                                                     value:
                                                                         selectedOption,
                                                                     hint: Text(
@@ -2614,6 +2666,14 @@ class _Register extends State<Register> {
                                                             Container(
                                                               width: 300,
                                                               child: TextField(
+                                                                keyboardType:
+                                                                    TextInputType
+                                                                        .number,
+                                                                inputFormatters: <
+                                                                    TextInputFormatter>[
+                                                                  FilteringTextInputFormatter
+                                                                      .digitsOnly
+                                                                ],
                                                                 decoration:
                                                                     InputDecoration(
                                                                   // hintText: 'hello@thewiseworks.com',
@@ -2668,7 +2728,7 @@ class _Register extends State<Register> {
                                                                     "ประเภทธุรกิจ",
                                                                     style: GoogleFonts.ibmPlexSansThai(
                                                                         fontSize:
-                                                                            18,
+                                                                            14,
                                                                         fontWeight:
                                                                             FontWeight
                                                                                 .w400,
@@ -2717,7 +2777,10 @@ class _Register extends State<Register> {
                                                                     DropdownButtonHideUnderline(
                                                                   child:
                                                                       DropdownButton2(
-                                                                        buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
+                                                                    buttonStyleData:
+                                                                        const ButtonStyleData(
+                                                                            padding:
+                                                                                const EdgeInsets.only(right: 12)),
                                                                     value:
                                                                         selectedOption,
                                                                     hint: Text(
@@ -2854,13 +2917,23 @@ class _Register extends State<Register> {
                                                   child:
                                                       DropdownButtonHideUnderline(
                                                     child: DropdownButton2(
-                                                      buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
+                                                      buttonStyleData:
+                                                          const ButtonStyleData(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                          .only(
+                                                                      right:
+                                                                          12)),
                                                       value: selectedPackage,
                                                       hint: Text(
                                                         'เลือกแพ็กเกจ',
                                                         style: GoogleFonts
                                                             .ibmPlexSansThai(
-                                                                fontSize: 18,
+                                                                fontSize: Responsive
+                                                                        .isTablet(
+                                                                            context)
+                                                                    ? 18
+                                                                    : 14,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w500,
@@ -3008,7 +3081,11 @@ class _Register extends State<Register> {
                                                           "CMC (Consent Management)\nPDM (Personal Data Management)\nDSR (Data Subject Right Management)",
                                                           style: GoogleFonts
                                                               .ibmPlexSansThai(
-                                                                  fontSize: 18,
+                                                                  fontSize:
+                                                                      Responsive.isTablet(
+                                                                              context)
+                                                                          ? 18
+                                                                          : 15,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w400,
@@ -3034,11 +3111,11 @@ class _Register extends State<Register> {
                                                   child: SizedBox(
                                                     width: Responsive.isTablet(
                                                             context)
-                                                        ? 571
-                                                        : 300,
+                                                        ? 344
+                                                        : 200,
                                                     height: Responsive.isTablet(
                                                             context)
-                                                        ? 88
+                                                        ? 66
                                                         : 46,
                                                     child: ElevatedButton(
                                                       onPressed: () {},
@@ -3055,16 +3132,18 @@ class _Register extends State<Register> {
                                                       ),
                                                       child: Text(
                                                         'ลงทะเบียน',
-                                                        style: GoogleFonts.ibmPlexSansThai(
-                                                            fontSize: Responsive
-                                                                    .isTablet(
-                                                                        context)
-                                                                ? 42
-                                                                : 20,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                            color:
-                                                                Colors.white),
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
+                                                                fontSize: Responsive
+                                                                        .isTablet(
+                                                                            context)
+                                                                    ? 42
+                                                                    : 20,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
+                                                                color: Colors
+                                                                    .white),
                                                       ),
                                                     ),
                                                   ),
@@ -3104,12 +3183,12 @@ class _Register extends State<Register> {
                                                 child: SizedBox(
                                                   width: Responsive.isTablet(
                                                           context)
-                                                      ? 571
+                                                      ? 460
                                                       : 300,
                                                   height: Responsive.isTablet(
                                                           context)
-                                                      ? 91
-                                                      : 60,
+                                                      ? 65
+                                                      : 46,
                                                   child: ElevatedButton(
                                                     onPressed: () {},
                                                     style: ElevatedButton
@@ -3124,26 +3203,32 @@ class _Register extends State<Register> {
                                                                       .circular(
                                                                           44.0)),
                                                     ),
-                                                    child: Wrap(
+                                                    child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
                                                       children: [
                                                         SizedBox(
                                                             width: Responsive
                                                                     .isTablet(
                                                                         context)
-                                                                ? 71
+                                                                ? 61
                                                                 : 45,
-                                                            height: Responsive
-                                                                    .isTablet(
-                                                                        context)
-                                                                ? 59
-                                                                : 37,
+                                                            // height: Responsive
+                                                            //         .isTablet(
+                                                            //             context)
+                                                            //     ? 50
+                                                            //     : 37,
                                                             child: Image.asset(
-                                                                "assets/demo/google.png")),
+                                                              "assets/demo/google.png",
+                                                              fit: BoxFit
+                                                                  .fitWidth,
+                                                            )),
                                                         SizedBox(
                                                           width: Responsive
                                                                   .isTablet(
                                                                       context)
-                                                              ? 438
+                                                              ? 366
                                                               : 205,
                                                           child: Text(
                                                             'สมัครใช้งานด้วย Google',
@@ -3151,7 +3236,7 @@ class _Register extends State<Register> {
                                                                 fontSize: Responsive
                                                                         .isTablet(
                                                                             context)
-                                                                    ? 38
+                                                                    ? 32
                                                                     : 20,
                                                                 fontWeight:
                                                                     FontWeight
@@ -3279,19 +3364,21 @@ class _Register extends State<Register> {
                                             children: [
                                               Text(
                                                 "สัมผัสประสบการณ์ใหม่ของการจัดการข้อมูลส่วนตัวที่แตกต่าง\nอย่างเป็นระบบ ทดลองใช้งานโปรแกรม PDPA Management ",
-                                                style: GoogleFonts.ibmPlexSansThai(
-                                                    fontSize: 24,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: Color.fromARGB(
-                                                        255, 83, 104, 106)),
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 24,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: Color.fromARGB(
+                                                            255, 83, 104, 106)),
                                                 textAlign: TextAlign.start,
                                               ),
                                               Wrap(
                                                 children: [
                                                   Text(
                                                     "Platform ได้แล้ววันนี้เพียง",
-                                                    style:
-                                                        GoogleFonts.ibmPlexSansThai(
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
                                                             fontSize: 24,
                                                             fontWeight:
                                                                 FontWeight.w500,
@@ -3336,11 +3423,13 @@ class _Register extends State<Register> {
                                             children: [
                                               Text(
                                                 "สัมผัสประสบการณ์ใหม่ของการจัดการ\nข้อมูลส่วนตัวที่แตกต่างอย่างเป็นระบบ\nทดลองใช้งานโปรแกรม PDPA\nManagement Platform ",
-                                                style: GoogleFonts.ibmPlexSansThai(
-                                                    fontSize: 18,
-                                                    fontWeight: FontWeight.w400,
-                                                    color: Color.fromARGB(
-                                                        255, 83, 104, 106)),
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 18,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        color: Color.fromARGB(
+                                                            255, 83, 104, 106)),
                                                 textAlign: TextAlign.start,
                                               ),
                                               Padding(
@@ -3739,18 +3828,26 @@ class _Register extends State<Register> {
                                             child: Column(
                                               children: [
                                                 Text("ได้รับความไว้วางใจ",
-                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                        color: Color.fromARGB(
-                                                            255, 52, 145, 206),
-                                                        fontSize: 48,
-                                                        fontWeight:
-                                                            FontWeight.w700)),
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    52,
+                                                                    145,
+                                                                    206),
+                                                            fontSize: 48,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w700)),
                                                 Text("จากองค์กรทั่วประเทศ",
-                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                        color: Colors.black,
-                                                        fontSize: 48,
-                                                        fontWeight:
-                                                            FontWeight.w700)),
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            color: Colors.black,
+                                                            fontSize: 48,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w700)),
                                               ],
                                             ))
                                         : Padding(
@@ -3759,18 +3856,26 @@ class _Register extends State<Register> {
                                             child: Column(
                                               children: [
                                                 Text("ได้รับความไว้วางใจ",
-                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                        color: Color.fromARGB(
-                                                            255, 52, 145, 206),
-                                                        fontSize: 30,
-                                                        fontWeight:
-                                                            FontWeight.w700)),
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    52,
+                                                                    145,
+                                                                    206),
+                                                            fontSize: 30,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w700)),
                                                 Text("จากองค์กรทั่วประเทศ",
-                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                        color: Colors.black,
-                                                        fontSize: 30,
-                                                        fontWeight:
-                                                            FontWeight.w700)),
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            color: Colors.black,
+                                                            fontSize: 30,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w700)),
                                               ],
                                             )),
                                     Padding(
@@ -3817,12 +3922,16 @@ class _Register extends State<Register> {
                                                 ),
                                                 Text(
                                                   "80+",
-                                                  style: GoogleFonts.ibmPlexSansThai(
-                                                      fontSize: 36,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      color: Color.fromARGB(
-                                                          255, 52, 145, 206)),
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          fontSize: 36,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              52,
+                                                              145,
+                                                              206)),
                                                 ),
                                                 Padding(
                                                   padding:
@@ -3830,12 +3939,17 @@ class _Register extends State<Register> {
                                                           top: 20),
                                                   child: Text(
                                                     "ธุรกิจ และองค์กรต่างๆ ที่เราได้รับความไว้วางใจ\nให้ wisework ดูแลมากกว่า 80 โครงการ",
-                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                        fontSize: 16,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        color: Color.fromARGB(
-                                                            255, 0, 0, 0)),
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    0,
+                                                                    0,
+                                                                    0)),
                                                     textAlign: TextAlign.center,
                                                   ),
                                                 )
@@ -3885,12 +3999,17 @@ class _Register extends State<Register> {
                                                   ),
                                                   Text(
                                                     "10 ปี",
-                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                        fontSize: 36,
-                                                        fontWeight:
-                                                            FontWeight.w700,
-                                                        color: Color.fromARGB(
-                                                            255, 52, 145, 206)),
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 36,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    52,
+                                                                    145,
+                                                                    206)),
                                                   ),
                                                   Padding(
                                                     padding:
@@ -3898,12 +4017,15 @@ class _Register extends State<Register> {
                                                             top: 20),
                                                     child: Text(
                                                       "ทีมงานมากประสบการณ์ และเชี่ยวชาญ\nในวงการ Cyber Security กว่า 10 ปี",
-                                                      style: GoogleFonts.ibmPlexSansThai(
-                                                          fontSize: 16,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          color: Color.fromARGB(
-                                                              255, 0, 0, 0)),
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
+                                                              fontSize: 16,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                              color: Color
+                                                                  .fromARGB(255,
+                                                                      0, 0, 0)),
                                                       textAlign:
                                                           TextAlign.center,
                                                     ),
@@ -3950,12 +4072,16 @@ class _Register extends State<Register> {
                                                 ),
                                                 Text(
                                                   "24 ชั่วโมง",
-                                                  style: GoogleFonts.ibmPlexSansThai(
-                                                      fontSize: 36,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      color: Color.fromARGB(
-                                                          255, 52, 145, 206)),
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
+                                                          fontSize: 36,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              52,
+                                                              145,
+                                                              206)),
                                                 ),
                                                 Padding(
                                                   padding:
@@ -3963,12 +4089,17 @@ class _Register extends State<Register> {
                                                           top: 20),
                                                   child: Text(
                                                     "บริการดูแลระดับ Premium Support\nโดยทีมงานในประเทศไทยตลอด 24 ชั่วโมง",
-                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                        fontSize: 16,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        color: Color.fromARGB(
-                                                            255, 0, 0, 0)),
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    0,
+                                                                    0,
+                                                                    0)),
                                                     textAlign: TextAlign.center,
                                                   ),
                                                 )

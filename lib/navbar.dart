@@ -63,7 +63,8 @@ class _NavigationBarState extends State<NavBar> {
             SizedBox(
               height: 45,
               width: 120,
-              child: GestureDetector(
+              child:InkWell(
+                hoverColor: Color.fromARGB(255, 52, 144, 206),
                 onTap: () => context.go('/'),
                 child: Image.asset(
                   'assets/logo.png',

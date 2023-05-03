@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:wiseintern/products/producttemplate.dart';
+import 'package:go_router/go_router.dart';
 
 class AdvisePage extends StatefulWidget {
   @override
@@ -89,17 +90,7 @@ class _AdviseState extends State<AdvisePage> {
                         width: 193,
                         height: 40,
                         child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => MyPackages(
-                                      "Enterprise",
-                                      "Perpetual License",
-                                      "pakages/rainbow_cloud.png",
-                                      "ระบบบริหารจัดการข้อมูลส่วนบุคคล PDPA เหมาะสำหรับองค์กรขนาดใหญ่ มีบริษัทในเครือ ควบคุมระบบทั้งหมดได้จากศูนย์กลาง ครอบคลุมทุกฟังก์ชันการใช้งานเต็มรูปแบบ 11 Modules และไม่มีข้อจำกัดในการเชื่อมต่อกับระบบอื่น")),
-                            );
-                          },
+                          onPressed: () => context.go('/contact'),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color.fromARGB(255, 75, 195, 211),
                             shape: RoundedRectangleBorder(
@@ -190,7 +181,7 @@ class _AdviseState extends State<AdvisePage> {
                                   width: 193,
                                   height: 46,
                                   child: ElevatedButton(
-                                    onPressed: () {},
+                                    onPressed: () => context.go('/contact'),
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor:
                                           Color.fromARGB(255, 75, 195, 211),

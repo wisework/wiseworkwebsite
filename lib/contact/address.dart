@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/services.dart';
 // import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Address extends StatefulWidget {
@@ -339,6 +341,14 @@ class _Address extends State<Address> {
                                                     Container(
                                                       width: 310,
                                                       child: TextField(
+                                                        keyboardType:
+                                                            TextInputType
+                                                                .number,
+                                                        inputFormatters: <
+                                                            TextInputFormatter>[
+                                                          FilteringTextInputFormatter
+                                                              .digitsOnly
+                                                        ],
                                                         decoration:
                                                             InputDecoration(
                                                           hintText:
@@ -866,7 +876,10 @@ dropdownStyleData:
                                 width: 439,
                                 height: 74,
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    launch(
+                                        "https://goo.gl/maps/6kDD9bQbLJnwY4UM6");
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.white,
                                     shape: RoundedRectangleBorder(
@@ -922,7 +935,7 @@ dropdownStyleData:
                     Container(
                       width: 1440,
                       // width: Responsive.isTablet(context) ? 768 : 375,
-                      height: Responsive.isTablet(context) ? 2300 : 1795,
+                      height: Responsive.isTablet(context) ? 2372 : 1900,
                       color: Color.fromARGB(255, 232, 242, 254),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -980,7 +993,7 @@ dropdownStyleData:
                                 Container(
                                   width:
                                       Responsive.isTablet(context) ? 625 : 350,
-                                  height: 1261,
+                                  height: Responsive.isTablet(context)?1350:1300,
                                   decoration: BoxDecoration(
                                       boxShadow: [
                                         BoxShadow(
@@ -1526,6 +1539,14 @@ dropdownStyleData:
                                                       Container(
                                                         width: 310,
                                                         child: TextField(
+                                                           keyboardType:
+                                                              TextInputType
+                                                                  .number,
+                                                          inputFormatters: <
+                                                              TextInputFormatter>[
+                                                            FilteringTextInputFormatter
+                                                                .digitsOnly
+                                                          ],
                                                           decoration:
                                                               InputDecoration(
                                                             hintText:
@@ -1592,6 +1613,14 @@ dropdownStyleData:
                                                       Container(
                                                         width: 310,
                                                         child: TextField(
+                                                           keyboardType:
+                                                              TextInputType
+                                                                  .number,
+                                                          inputFormatters: <
+                                                              TextInputFormatter>[
+                                                            FilteringTextInputFormatter
+                                                                .digitsOnly
+                                                          ],
                                                           decoration:
                                                               InputDecoration(
                                                             hintText:
@@ -2171,7 +2200,10 @@ dropdownStyleData:
                                               width: 439,
                                               height: 74,
                                               child: ElevatedButton(
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  launch(
+                                                      "https://goo.gl/maps/6kDD9bQbLJnwY4UM6");
+                                                },
                                                 style: ElevatedButton.styleFrom(
                                                   backgroundColor: Colors.white,
                                                   shape: RoundedRectangleBorder(
@@ -2232,7 +2264,10 @@ dropdownStyleData:
                                               width: 206,
                                               height: 42,
                                               child: ElevatedButton(
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  launch(
+                                                      "https://goo.gl/maps/6kDD9bQbLJnwY4UM6");
+                                                },
                                                 style: ElevatedButton.styleFrom(
                                                   backgroundColor: Colors.white,
                                                   shape: RoundedRectangleBorder(

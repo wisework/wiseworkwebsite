@@ -344,11 +344,11 @@ class _CustomerState extends State<Customer> {
                         : Responsive.isTablet(context)
                             ? 652
                             : 329,
-                    height: Responsive.isDesktop(context)
-                        ? 60
-                        : Responsive.isTablet(context)
-                            ? 92
-                            : 98,
+                    // height: Responsive.isDesktop(context)
+                    //     ? 60
+                    //     : Responsive.isTablet(context)
+                    //         ? 92
+                    //         : 98,
                     child: Text(
                       Responsive.isDesktop(context)
                           ? 'ด้วยประสบการณ์ Software Solutions ครบวงจร เราได้รับความไว้วางใจ\nให้ดูแลธุรกิจทั้งองค์กรภาครัฐ องค์กรเอกชน ตลอดจนธุรกิจขนาดเล็ก หรือ SME '
@@ -378,8 +378,8 @@ class _CustomerState extends State<Customer> {
                     children: [
                       Responsive.isDesktop(context)
                           ? Container(
-                              width: 1440,
-                              color: Color.fromARGB(255, 232, 242, 254),
+                              width: 990,
+                              color: Colors.white,
                               child: Padding(
                                 padding: const EdgeInsets.all(60),
                                 child: Container(
@@ -390,16 +390,26 @@ class _CustomerState extends State<Customer> {
                                               crossAxisCount: 3,
                                               crossAxisSpacing: 20,
                                               mainAxisSpacing: 20,
-                                              childAspectRatio: 405 / 390),
+                                              childAspectRatio: 1),
                                       itemCount: stories.length,
                                       itemBuilder:
                                           (BuildContext context, int index) {
                                         return Container(
                                           child: new Material(
                                             child: new Container(
-                                              width: 405,
-                                              height: 390,
+                                              width: 298,
+                                              height: 300,
                                               decoration: BoxDecoration(
+                                                boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.grey
+                                                          .withOpacity(0.3),
+                                                      spreadRadius: 2,
+                                                      blurRadius: 2,
+                                                      offset: Offset(0,
+                                                          3), // changes position of shadow
+                                                    ),
+                                                  ],
                                                   color: Colors.white,
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -426,40 +436,40 @@ class _CustomerState extends State<Customer> {
                                                               '${stories[index].img}',
                                                               // fit: BoxFit.fill,
                                                             )),
-                                                        Text(
-                                                          '${stories[index].brand}',
-                                                          style: GoogleFonts
-                                                              .ibmPlexSansThai(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w700,
-                                                                  fontSize: 30,
-                                                                  color: Color
-                                                                      .fromARGB(
-                                                                          255,
-                                                                          33,
-                                                                          31,
-                                                                          37)),
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                        ),
-                                                        Text(
-                                                          '${stories[index].story}',
-                                                          style: GoogleFonts
-                                                              .ibmPlexSansThai(
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    61,
-                                                                    58,
-                                                                    65),
-                                                            fontSize: 16,
-                                                          ),
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                        ),
+                                                        // Text(
+                                                        //   '${stories[index].brand}',
+                                                        //   style: GoogleFonts
+                                                        //       .ibmPlexSansThai(
+                                                        //           fontWeight:
+                                                        //               FontWeight
+                                                        //                   .w700,
+                                                        //           fontSize: 30,
+                                                        //           color: Color
+                                                        //               .fromARGB(
+                                                        //                   255,
+                                                        //                   33,
+                                                        //                   31,
+                                                        //                   37)),
+                                                        //   textAlign:
+                                                        //       TextAlign.center,
+                                                        // ),
+                                                        // Text(
+                                                        //   '${stories[index].story}',
+                                                        //   style: GoogleFonts
+                                                        //       .ibmPlexSansThai(
+                                                        //     fontWeight:
+                                                        //         FontWeight.w400,
+                                                        //     color:
+                                                        //         Color.fromARGB(
+                                                        //             255,
+                                                        //             61,
+                                                        //             58,
+                                                        //             65),
+                                                        //     fontSize: 16,
+                                                        //   ),
+                                                        //   textAlign:
+                                                        //       TextAlign.center,
+                                                        // ),
                                                       ],
                                                     ),
                                                   ),
@@ -474,7 +484,7 @@ class _CustomerState extends State<Customer> {
                             )
                           : Responsive.isTablet(context)
                               ? Container(
-                                  width: 768,
+                                  width: 667,
                                   child: Center(
                                     child: Padding(
                                       padding: const EdgeInsets.all(30),
@@ -518,8 +528,8 @@ class _CustomerState extends State<Customer> {
                                                         ),
                                                       ],
                                                     ),
-                                                    width: 150,
-                                                    height: 150,
+                                                    width: 192,
+                                                    height: 193,
                                                     child: Center(
                                                       child: Container(
                                                         margin:

@@ -429,7 +429,7 @@ class _PdpaState extends State<Pdpa> {
                                   height: 48,
                                   width: 193,
                                   child: ElevatedButton(
-                                    onPressed: () =>context.go('/package/1'),
+                                    onPressed: () =>context.go('/services'),
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor:
                                           Color.fromARGB(255, 75, 195, 211),
@@ -851,7 +851,7 @@ class _PdpaState extends State<Pdpa> {
                                                   height: 54,
                                                   width: 193,
                                                   child: ElevatedButton(
-                                                    onPressed: () {},
+                                                    onPressed: ()  =>context.go('/services'),
                                                     style: ElevatedButton
                                                         .styleFrom(
                                                       backgroundColor:
@@ -1162,7 +1162,7 @@ class _PdpaState extends State<Pdpa> {
                                       height: 48,
                                       width: 193,
                                       child: ElevatedButton(
-                                        onPressed: () {},
+                                        onPressed: () =>context.go('/services'),
                                         style: ElevatedButton.styleFrom(
                                           backgroundColor:
                                               Color.fromARGB(255, 75, 195, 211),

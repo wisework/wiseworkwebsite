@@ -174,7 +174,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                         shrinkWrap: true,
                                         gridDelegate:
                                             SliverGridDelegateWithFixedCrossAxisCount(
-                                          crossAxisCount: 3,
+                                          crossAxisCount: 4,
                                           crossAxisSpacing: 20,
                                           mainAxisSpacing: 20,
                                         ),
@@ -186,7 +186,8 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                               child: new InkWell(
                                                 borderRadius:
                                                     BorderRadius.circular(16),
-                                                onTap: () {},
+                                                onTap: () => context
+                                            .go('/${features[index].page}'),
                                                 onHover: (value) {
                                                 setState(() {
                                                 if (value) {
@@ -203,8 +204,8 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                 hoverColor: Color.fromARGB(
                                                     255, 228, 238, 250),
                                                 child: new Container(
-                                                  width: 368,
-                                                  height: 338,
+                                                  width: 333,
+                                          height: 305,
                                                   child: Center(
                                                     child: Container(
                                                       // margin: EdgeInsets.all(15),
@@ -345,7 +346,8 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                           child: new InkWell(
                                             borderRadius:
                                                 BorderRadius.circular(16),
-                                            onTap: () {},
+                                            onTap: () => context
+                                                .go('/${features[index].page}'),
                                             onHover: (value) {
                                               setState(() {
                                                 if (value) {
@@ -358,8 +360,8 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                             hoverColor: Color.fromARGB(
                                                 255, 228, 238, 250),
                                             child: new Container(
-                                              width: 244,
-                                              height: 244,
+                                              width: 200,
+                                              height: 195,
                                               child: Center(
                                                 child: Container(
                                                   // margin: EdgeInsets.all(15),
@@ -377,7 +379,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                       children: <Widget>[
                                                         SizedBox(
                                                             width: 50,
-                                                            height: 60,
+                                                            height: 50,
                                                             child: Image.asset(
                                                               'assets/${features[index].imageUrl}',
                                                             )),
@@ -454,7 +456,8 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                 child: new InkWell(
                                                   borderRadius:
                                                       BorderRadius.circular(16),
-                                                  onTap: () {},
+                                                  onTap: () => context.go(
+                                                      '/${features[index].page}'),
                                                   onHover: (value) {
                                                     setState(() {
                                                       if (value) {
@@ -469,8 +472,8 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                   child: new Container(
                                                     // width: 266,
                                                     // height: 189,
-                                                    width: 100,
-                                                    height: 100,
+                                                    width: 160,
+                                                    height: 300,
                                                     child: Center(
                                                       child: Container(
                                                         // margin: EdgeInsets.all(15),
@@ -488,7 +491,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                             children: <Widget>[
                                                               SizedBox(
                                                                   width: 70,
-                                                                  height: 70,
+                                                                  height: 52,
                                                                   child: Image
                                                                       .asset(
                                                                     'assets/${features[index].imageUrl}',
@@ -500,7 +503,7 @@ class _FeaturesPageState extends State<FeaturesPage> {
                                                                         FontWeight
                                                                             .w500,
                                                                     fontSize:
-                                                                        20,
+                                                                        18,
                                                                     color: hoveredIndex ==
                                                                             index
                                                                         ? Color.fromARGB(

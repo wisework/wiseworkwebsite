@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
-
+import 'package:go_router/go_router.dart';
 class WhoPage extends StatelessWidget {
   const WhoPage({super.key});
 
@@ -267,7 +267,7 @@ class WhoPage extends StatelessWidget {
                                     width: 193,
                                     height: 48,
                                     child: ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () => context.go('/contact'),
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor:
                                             Color.fromARGB(255, 75, 195, 211),
@@ -292,7 +292,7 @@ class WhoPage extends StatelessWidget {
                                     width: 193,
                                     height: 48,
                                     child: ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () => context.go('/package'),
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor:
                                             Color.fromARGB(255, 52, 145, 206),
@@ -504,7 +504,7 @@ class WhoPage extends StatelessWidget {
                                             width: 193,
                                             height: 48,
                                             child: ElevatedButton(
-                                              onPressed: () {},
+                                              onPressed:() => context.go('/contact'),
                                               style: ElevatedButton.styleFrom(
                                                 backgroundColor: Color.fromARGB(
                                                     255, 75, 195, 211),
@@ -532,7 +532,7 @@ class WhoPage extends StatelessWidget {
                                             width: 193,
                                             height: 48,
                                             child: ElevatedButton(
-                                              onPressed: () {},
+                                              onPressed: () => context.go('/package'),
                                               style: ElevatedButton.styleFrom(
                                                 backgroundColor: Color.fromARGB(
                                                     255, 52, 145, 206),
@@ -802,7 +802,7 @@ class WhoPage extends StatelessWidget {
                                     width: 193,
                                     height: 48,
                                     child: ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () => context.go('/contact'),
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor:
                                             Color.fromARGB(255, 75, 195, 211),
@@ -827,7 +827,7 @@ class WhoPage extends StatelessWidget {
                                     width: 222,
                                     height: 47,
                                     child: ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () => context.go('/package'),
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor:
                                             Color.fromARGB(255, 52, 145, 206),
