@@ -41,7 +41,8 @@ class _CustomerPageState extends State<CustomerPage> {
                       SizedBox(
                         height: 60,
                         width: 100,
-                        child: GestureDetector(
+                        child: InkWell(
+                          hoverColor: Color.fromARGB(255, 52, 144, 206),
                           onTap: () => context.go('/'),
                           child: Image.asset(
                             'assets/logo.png',

@@ -103,19 +103,23 @@ class _Address extends State<Address> {
                                                 children: [
                                                   Text(
                                                     "Send Us a",
-                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                        fontSize: 32,
-                                                        fontWeight:
-                                                            FontWeight.w300,
-                                                        color: Colors.black),
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 32,
+                                                            fontWeight:
+                                                                FontWeight.w300,
+                                                            color:
+                                                                Colors.black),
                                                   ),
                                                   Text(
                                                     "Message",
-                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                        fontSize: 32,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        color: Colors.black),
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 32,
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            color:
+                                                                Colors.black),
                                                   )
                                                 ],
                                               ),
@@ -152,8 +156,8 @@ class _Address extends State<Address> {
                                                     width: 310,
                                                     child: Text(
                                                       "Name",
-                                                      style:
-                                                          GoogleFonts.ibmPlexSansThai(
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
                                                               fontSize: 18,
                                                               fontWeight:
                                                                   FontWeight
@@ -168,8 +172,8 @@ class _Address extends State<Address> {
                                                       decoration:
                                                           InputDecoration(
                                                         hintText: 'wisework',
-                                                        hintStyle:
-                                                            GoogleFonts.ibmPlexSansThai(
+                                                        hintStyle: GoogleFonts
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -208,8 +212,8 @@ class _Address extends State<Address> {
                                                       width: 310,
                                                       child: Text(
                                                         "Company / Business Name",
-                                                        style:
-                                                            GoogleFonts.ibmPlexSansThai(
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 18,
                                                                 fontWeight:
                                                                     FontWeight
@@ -271,8 +275,8 @@ class _Address extends State<Address> {
                                                     width: 310,
                                                     child: Text(
                                                       "Email address",
-                                                      style:
-                                                          GoogleFonts.ibmPlexSansThai(
+                                                      style: GoogleFonts
+                                                          .ibmPlexSansThai(
                                                               fontSize: 18,
                                                               fontWeight:
                                                                   FontWeight
@@ -288,8 +292,8 @@ class _Address extends State<Address> {
                                                           InputDecoration(
                                                         hintText:
                                                             'hello@thewiseworks.com',
-                                                        hintStyle:
-                                                            GoogleFonts.ibmPlexSansThai(
+                                                        hintStyle: GoogleFonts
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 16,
                                                                 fontWeight:
                                                                     FontWeight
@@ -328,8 +332,8 @@ class _Address extends State<Address> {
                                                       width: 310,
                                                       child: Text(
                                                         "Phone",
-                                                        style:
-                                                            GoogleFonts.ibmPlexSansThai(
+                                                        style: GoogleFonts
+                                                            .ibmPlexSansThai(
                                                                 fontSize: 18,
                                                                 fontWeight:
                                                                     FontWeight
@@ -402,7 +406,8 @@ class _Address extends State<Address> {
                                               children: [
                                                 Text(
                                                   "How can we help you?",
-                                                  style: GoogleFonts.ibmPlexSansThai(
+                                                  style: GoogleFonts
+                                                      .ibmPlexSansThai(
                                                     fontSize: 24,
                                                     fontWeight: FontWeight.w600,
                                                     color: Color.fromARGB(
@@ -445,24 +450,34 @@ class _Address extends State<Address> {
                                                                           130,
                                                                           130)),
                                                         ),
-                                                        buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
+                                                        buttonStyleData:
+                                                            const ButtonStyleData(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        right:
+                                                                            12)),
 
-
-
-iconStyleData:
-                                                          const IconStyleData(
-                                                        icon: Icon(
-                                                          Icons
-                                                              .arrow_drop_down_outlined,
+                                                        iconStyleData:
+                                                            const IconStyleData(
+                                                          icon: Icon(
+                                                            Icons
+                                                                .arrow_drop_down_outlined,
+                                                          ),
+                                                          iconSize: 20,
+                                                          iconEnabledColor:
+                                                              Color.fromARGB(
+                                                                  255,
+                                                                  79,
+                                                                  79,
+                                                                  79),
+                                                          iconDisabledColor:
+                                                              Color.fromARGB(
+                                                                  255,
+                                                                  79,
+                                                                  79,
+                                                                  79),
                                                         ),
-                                                        iconSize: 20,
-                                                        iconEnabledColor:
-                                                            Color.fromARGB(255,
-                                                                79, 79, 79),
-                                                        iconDisabledColor:
-                                                            Color.fromARGB(255,
-                                                                79, 79, 79),
-                                                      ),
                                                         isExpanded: true,
                                                         items: optionsItem
                                                             .map((option) {
@@ -481,17 +496,18 @@ iconStyleData:
                                                             ),
                                                           );
                                                         }).toList(),
-                                                        
-dropdownStyleData:
-                                                          DropdownStyleData(
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          color: Colors.white,
+
+                                                        dropdownStyleData:
+                                                            DropdownStyleData(
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        5),
+                                                            color: Colors.white,
+                                                          ),
                                                         ),
-                                                      ),
                                                         // itemHeight: 8,
                                                         onChanged: (value) {
                                                           setState(() {
@@ -648,10 +664,12 @@ dropdownStyleData:
                                               ),
                                               Text(
                                                 "(02) 103-4379",
-                                                style: GoogleFonts.ibmPlexSansThai(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.w600,
-                                                    color: Colors.black),
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        color: Colors.black),
                                               ),
                                               Padding(
                                                 padding: const EdgeInsets.only(
@@ -712,10 +730,12 @@ dropdownStyleData:
                                               ),
                                               Text(
                                                 "admin@thewiseworks.com",
-                                                style: GoogleFonts.ibmPlexSansThai(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.w600,
-                                                    color: Colors.black),
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        color: Colors.black),
                                               ),
                                             ],
                                           ),
@@ -862,8 +882,8 @@ dropdownStyleData:
                                       child: SizedBox(
                                         width: 62,
                                         height: 62,
-                                        child:
-                                            Image.asset("assets/contact/route.png"),
+                                        child: Image.asset(
+                                            "assets/contact/route.png"),
                                       ),
                                     )
                                   ],
@@ -908,7 +928,8 @@ dropdownStyleData:
                                                 const EdgeInsets.only(left: 30),
                                             child: Text(
                                               "Get Direction",
-                                              style: GoogleFonts.ibmPlexSansThai(
+                                              style:
+                                                  GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 24,
                                                 fontWeight: FontWeight.w600,
                                                 color: Colors.black,
@@ -993,7 +1014,9 @@ dropdownStyleData:
                                 Container(
                                   width:
                                       Responsive.isTablet(context) ? 625 : 350,
-                                  height: Responsive.isTablet(context)?1350:1300,
+                                  height: Responsive.isTablet(context)
+                                      ? 1350
+                                      : 1300,
                                   decoration: BoxDecoration(
                                       boxShadow: [
                                         BoxShadow(
@@ -1016,15 +1039,17 @@ dropdownStyleData:
                                                   top: 47, left: 83),
                                               child: Text(
                                                 "Send us a",
-                                                style: GoogleFonts.ibmPlexSansThai(
-                                                    fontSize:
-                                                        Responsive.isTablet(
-                                                                context)
-                                                            ? 32
-                                                            : 24,
-                                                    fontWeight: FontWeight.w300,
-                                                    color: Color.fromARGB(
-                                                        255, 2, 2, 2)),
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize:
+                                                            Responsive.isTablet(
+                                                                    context)
+                                                                ? 32
+                                                                : 24,
+                                                        fontWeight:
+                                                            FontWeight.w300,
+                                                        color: Color.fromARGB(
+                                                            255, 2, 2, 2)),
                                               ),
                                             )
                                           : Padding(
@@ -1032,15 +1057,17 @@ dropdownStyleData:
                                                   top: 65, left: 20),
                                               child: Text(
                                                 "Send us a",
-                                                style: GoogleFonts.ibmPlexSansThai(
-                                                    fontSize:
-                                                        Responsive.isTablet(
-                                                                context)
-                                                            ? 32
-                                                            : 24,
-                                                    fontWeight: FontWeight.w300,
-                                                    color: Color.fromARGB(
-                                                        255, 2, 2, 2)),
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize:
+                                                            Responsive.isTablet(
+                                                                    context)
+                                                                ? 32
+                                                                : 24,
+                                                        fontWeight:
+                                                            FontWeight.w300,
+                                                        color: Color.fromARGB(
+                                                            255, 2, 2, 2)),
                                               ),
                                             ),
                                       Responsive.isTablet(context)
@@ -1049,15 +1076,17 @@ dropdownStyleData:
                                                   left: 83),
                                               child: Text(
                                                 "Message",
-                                                style: GoogleFonts.ibmPlexSansThai(
-                                                    fontSize:
-                                                        Responsive.isTablet(
-                                                                context)
-                                                            ? 32
-                                                            : 24,
-                                                    fontWeight: FontWeight.w600,
-                                                    color: Color.fromARGB(
-                                                        255, 2, 2, 2)),
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize:
+                                                            Responsive.isTablet(
+                                                                    context)
+                                                                ? 32
+                                                                : 24,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        color: Color.fromARGB(
+                                                            255, 2, 2, 2)),
                                               ),
                                             )
                                           : Padding(
@@ -1065,15 +1094,17 @@ dropdownStyleData:
                                                   left: 20),
                                               child: Text(
                                                 "Message",
-                                                style: GoogleFonts.ibmPlexSansThai(
-                                                    fontSize:
-                                                        Responsive.isTablet(
-                                                                context)
-                                                            ? 32
-                                                            : 24,
-                                                    fontWeight: FontWeight.w600,
-                                                    color: Color.fromARGB(
-                                                        255, 2, 2, 2)),
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize:
+                                                            Responsive.isTablet(
+                                                                    context)
+                                                                ? 32
+                                                                : 24,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        color: Color.fromARGB(
+                                                            255, 2, 2, 2)),
                                               ),
                                             ),
                                       Responsive.isTablet(context)
@@ -1082,11 +1113,13 @@ dropdownStyleData:
                                                   top: 40, left: 83),
                                               child: Text(
                                                 "สอบถามรายละเอียดเพิ่มเติม ส่งข้อความถึงเรา ที่นี่\nทีมงานของเราจะติดต่อกลับท่านโดยเร็วที่สุด",
-                                                style: GoogleFonts.ibmPlexSansThai(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: Color.fromARGB(
-                                                        255, 52, 145, 206)),
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: Color.fromARGB(
+                                                            255, 52, 145, 206)),
                                               ),
                                             )
                                           : Padding(
@@ -1094,11 +1127,13 @@ dropdownStyleData:
                                                   top: 40, left: 20),
                                               child: Text(
                                                 "สอบถามรายละเอียดเพิ่มเติม\nส่งข้อความถึงเรา ที่นี่ ทีมงานของเรา\nจะติดต่อกลับท่านโดยเร็วที่สุด",
-                                                style: GoogleFonts.ibmPlexSansThai(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: Color.fromARGB(
-                                                        255, 52, 145, 206)),
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: Color.fromARGB(
+                                                            255, 52, 145, 206)),
                                               ),
                                             ),
                                       Responsive.isTablet(context)
@@ -1539,7 +1574,7 @@ dropdownStyleData:
                                                       Container(
                                                         width: 310,
                                                         child: TextField(
-                                                           keyboardType:
+                                                          keyboardType:
                                                               TextInputType
                                                                   .number,
                                                           inputFormatters: <
@@ -1613,7 +1648,7 @@ dropdownStyleData:
                                                       Container(
                                                         width: 310,
                                                         child: TextField(
-                                                           keyboardType:
+                                                          keyboardType:
                                                               TextInputType
                                                                   .number,
                                                           inputFormatters: <
@@ -1751,24 +1786,33 @@ dropdownStyleData:
                                                                             130,
                                                                             130)),
                                                           ),
-                                                          buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
+                                                          buttonStyleData:
+                                                              const ButtonStyleData(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      right:
+                                                                          12)),
 
-
-
-iconStyleData:
-                                                          const IconStyleData(
-                                                        icon: Icon(
-                                                          Icons
-                                                              .arrow_drop_down_outlined,
-                                                        ),
-                                                        iconSize: 20,
-                                                        iconEnabledColor:
-                                                            Color.fromARGB(255,
-                                                                79, 79, 79),
-                                                        iconDisabledColor:
-                                                            Color.fromARGB(255,
-                                                                79, 79, 79),
-                                                      ),
+                                                          iconStyleData:
+                                                              const IconStyleData(
+                                                            icon: Icon(
+                                                              Icons
+                                                                  .arrow_drop_down_outlined,
+                                                            ),
+                                                            iconSize: 20,
+                                                            iconEnabledColor:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    79,
+                                                                    79,
+                                                                    79),
+                                                            iconDisabledColor:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    79,
+                                                                    79,
+                                                                    79),
+                                                          ),
                                                           isExpanded: true,
                                                           items: optionsItem
                                                               .map((option) {
@@ -1788,17 +1832,19 @@ iconStyleData:
                                                               ),
                                                             );
                                                           }).toList(),
-                                                          
-dropdownStyleData:
-                                                          DropdownStyleData(
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          color: Colors.white,
-                                                        ),
-                                                      ),
+
+                                                          dropdownStyleData:
+                                                              DropdownStyleData(
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          5),
+                                                              color:
+                                                                  Colors.white,
+                                                            ),
+                                                          ),
                                                           // itemHeight: 8,
                                                           onChanged: (value) {
                                                             setState(() {
@@ -1846,24 +1892,33 @@ dropdownStyleData:
                                                                             130,
                                                                             130)),
                                                           ),
-                                                          buttonStyleData: const ButtonStyleData(padding:const EdgeInsets.only(right: 12)),
+                                                          buttonStyleData:
+                                                              const ButtonStyleData(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      right:
+                                                                          12)),
 
-
-
-iconStyleData:
-                                                          const IconStyleData(
-                                                        icon: Icon(
-                                                          Icons
-                                                              .arrow_drop_down_outlined,
-                                                        ),
-                                                        iconSize: 20,
-                                                        iconEnabledColor:
-                                                            Color.fromARGB(255,
-                                                                79, 79, 79),
-                                                        iconDisabledColor:
-                                                            Color.fromARGB(255,
-                                                                79, 79, 79),
-                                                      ),
+                                                          iconStyleData:
+                                                              const IconStyleData(
+                                                            icon: Icon(
+                                                              Icons
+                                                                  .arrow_drop_down_outlined,
+                                                            ),
+                                                            iconSize: 20,
+                                                            iconEnabledColor:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    79,
+                                                                    79,
+                                                                    79),
+                                                            iconDisabledColor:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    79,
+                                                                    79,
+                                                                    79),
+                                                          ),
                                                           isExpanded: true,
                                                           items: optionsItem
                                                               .map((option) {
@@ -1883,17 +1938,19 @@ iconStyleData:
                                                               ),
                                                             );
                                                           }).toList(),
-                                                          
-dropdownStyleData:
-                                                          DropdownStyleData(
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(5),
-                                                          color: Colors.white,
-                                                        ),
-                                                      ),
+
+                                                          dropdownStyleData:
+                                                              DropdownStyleData(
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          5),
+                                                              color:
+                                                                  Colors.white,
+                                                            ),
+                                                          ),
                                                           // itemHeight: 8,
                                                           onChanged: (value) {
                                                             setState(() {
@@ -2079,14 +2136,14 @@ dropdownStyleData:
                                             height: 758,
                                             child: Image.asset(
                                               "assets/contact/map.png",
-                                              fit: BoxFit.fitHeight,
+                                              fit: BoxFit.fitWidth,
                                             ),
                                           )
                                         : Container(
                                             height: 423,
                                             child: Image.asset(
                                               "assets/contact/map.png",
-                                              fit: BoxFit.fitHeight,
+                                              fit: BoxFit.fitWidth,
                                             ),
                                           ),
                                     Responsive.isTablet(context)

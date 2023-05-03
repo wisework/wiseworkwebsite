@@ -1248,8 +1248,8 @@ class _Register extends State<Register> {
                                                   top: 25),
                                               child: Center(
                                                 child: SizedBox(
-                                                  width: 61,
-                                                  height: 50,
+                                                  width: 458,
+                                                  height: 65,
                                                   child: ElevatedButton(
                                                     onPressed: () {},
                                                     style: ElevatedButton
@@ -1267,24 +1267,21 @@ class _Register extends State<Register> {
                                                     child: Wrap(
                                                       children: [
                                                         SizedBox(
-                                                            width: 71,
-                                                            height: 59,
+                                                            width: 61,
+                                                            height: 50,
                                                             child: Image.asset(
                                                                 "assets/demo/google.png")),
-                                                        SizedBox(
-                                                          width: 458,
-                                                          child: Text(
-                                                            'สมัครใช้งานด้วย Google',
-                                                            style: GoogleFonts
-                                                                .ibmPlexSansThai(
-                                                                    fontSize:
-                                                                        32,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400,
-                                                                    color: Colors
-                                                                        .black),
-                                                          ),
+                                                        Text(
+                                                          'สมัครใช้งานด้วย Google',
+                                                          style: GoogleFonts
+                                                              .ibmPlexSansThai(
+                                                                  fontSize:
+                                                                      32,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                  color: Colors
+                                                                      .black),
                                                         ),
                                                       ],
                                                     ),
@@ -1314,6 +1311,7 @@ class _Register extends State<Register> {
                                           ),
                                         ),
                                         TextButton(
+                                          
                                             onPressed: () {},
                                             child: Text(
                                               ' เข้าสู่ระบบ',

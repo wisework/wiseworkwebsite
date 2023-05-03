@@ -7,6 +7,7 @@ import 'package:wiseintern/home/footer.dart';
 import 'package:wiseintern/table/tableheader.dart';
 import 'package:wiseintern/table/producttable.dart';
 import 'package:wiseintern/faq/question.dart';
+import 'package:go_router/go_router.dart';
 
 class ProductTablePage extends StatefulWidget {
   @override
@@ -35,12 +36,21 @@ class _ProductTablePageState extends State<ProductTablePage> {
           title: !Responsive.isDesktop(context)
               ? Padding(
                   padding: const EdgeInsets.all(20),
-                  child: SizedBox(
-                    height: 60,
-                    width: 100,
-                    child: Image.asset(
-                      'logo.png',
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        width: 100,
+                        child: InkWell(
+                          hoverColor: Color.fromARGB(255, 52, 144, 206),
+                          onTap: () => context.go('/'),
+                          child: Image.asset(
+                            'assets/logo.png',
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 )
               : NavBar()),
@@ -48,11 +58,7 @@ class _ProductTablePageState extends State<ProductTablePage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TableHeader(), 
-          ProductTable(), 
-          Questions(), Footer()
-          ],
+          children: [TableHeader(), ProductTable(), Questions(), Footer()],
         ),
       ),
     );
