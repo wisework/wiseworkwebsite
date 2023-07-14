@@ -49,7 +49,7 @@ class _DestinationCarouselState extends State<StoryPage> {
     Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/carousel/med_crs.png'),
+          image: AssetImage('assets/carousel/med_crs4.png'),
           fit: BoxFit.fill,
         ),
       ),
@@ -57,7 +57,7 @@ class _DestinationCarouselState extends State<StoryPage> {
     Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/carousel/med_crs.png'),
+          image: AssetImage('assets/carousel/med_crs5.png'),
           fit: BoxFit.fill,
         ),
       ),

@@ -46,7 +46,7 @@ dependencies:
   url_launcher: ^6.1.10
   
 dev_dependencies:
-  flutter_staggered_grid_view: ^0.3.3
+  flutter_staggered_grid_view: ^0.6.2
   hovering: ^1.0.4 
   flutter_test:
     sdk: flutter
@@ -258,6 +258,8 @@ flutter:
   - assets/carousel/med_crs3.png
   - assets/carousel/med_crs.png
   - assets/carousel/min_crs.png
+  - assets/carousel/med_crs4.png
+  - assets/carousel/med_crs5.png
 
   - assets/about/who/computer.png
   - assets/about/who/diagram.png
@@ -311,6 +313,14 @@ flutter:
   - assets/product/blue_cloud.png
   - assets/product/blue_clouds.png
   - assets/product/blue_rainbow.png
+
+  - assets/about/BG-gams.png
+  - assets/about/Iphone_GAMS01.png
+  - assets/about/Ipad_GAMS02.png
+  - assets/about/PC_GAMS03.png
+  - assets/about/Laptop_GAMS04.png
+  - assets/about/Ipad_GAMS05.png
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

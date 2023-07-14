@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:wiseintern/gams/gams.dart';
+import 'package:wiseintern/gams/gamspage.dart';
+import 'package:wiseintern/policy/cookiespolicypage.dart';
+import 'package:wiseintern/policy/privacypolicypage.dart';
 import 'package:wiseintern/responsive.dart';
 
 import 'package:wiseintern/home/homepage.dart';
@@ -18,8 +22,10 @@ import 'package:wiseintern/products/producttemplate.dart';
 import 'package:wiseintern/features/pdmanagement.dart';
 
 import 'package:get/get.dart';
-import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:wiseintern/termsofservice/termsofservicepage.dart';
+
+import 'demo/demodetail.dart';
 
 // import 'package:wiseintern/home/features.dart';
 // import 'package:wiseintern/home/packagepage.dart';
@@ -252,6 +258,42 @@ final GoRouter _router = GoRouter(
                 !Responsive.isMobile(context)
                     ? "ระบบบริหารจัดการข้อมูลส่วนบุคคล PDPA\nเหมาะสำหรับองค์กรขนาดใหญ่ มีบริษัทในเครือ\nควบคุมระบบทั้งหมดได้จากศูนย์กลาง\nครอบคลุมทุกฟังก์ชันการใช้งานเต็มรูปแบบ 11\nModules และไม่มีข้อจำกัดในการเชื่อมต่อกับระบบอื่น"
                     : "ระบบบริหารจัดการข้อมูลส่วนบุคคล\nPDPA เหมาะสำหรับองค์กรขนาดใหญ่\nมีบริษัทในเครือ ควบคุมระบบทั้งหมด\nได้จากศูนย์กลาง ครอบคลุมทุก\nฟังก์ชันการใช้งานเต็มรูปแบบ\n11 Modules และไม่มีข้อจำกัด\nในการเชื่อมต่อกับระบบอื่น");
+          },
+        ),
+        GoRoute(
+          path: 'termsofservice',
+          builder: (BuildContext context, GoRouterState state) {
+            return TermsOfServicePage();
+          },
+        ),
+        GoRoute(
+          path: 'demodetail',
+          builder: (BuildContext context, GoRouterState state) {
+            return DemoDetailPage();
+          },
+        ),
+        GoRoute(
+          path: 'privacypolicy',
+          builder: (BuildContext context, GoRouterState state) {
+            return PrivacyPolicyPage();
+          },
+        ),
+        GoRoute(
+          path: 'cookiespolicypage',
+          builder: (BuildContext context, GoRouterState state) {
+            return CookiesPolicyPage();
+          },
+        ),
+        GoRoute(
+          path: 'cookiespolicy',
+          builder: (BuildContext context, GoRouterState state) {
+            return CookiesPolicyPage();
+          },
+        ),
+        GoRoute(
+          path: 'gams',
+          builder: (BuildContext context, GoRouterState state) {
+            return GAMSPage();
           },
         )
       ],

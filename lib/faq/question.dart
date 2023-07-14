@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
@@ -28,17 +26,17 @@ List<Item> items = [
       // 2,
       "ธุรกิจอะไรบ้างที่ต้องปฏิบัติตาม PDPA?",
       "ธุรกิจทุกประเภทหน่วยงานภาครัฐและองค์กรเอกชนที่มีความเกี่ยวข้องเกี่ยวกับข้อมูลส่วนบุคคล โดยมี “การเก็บ ใช้ เปิดเผยและถ่ายโอนข้อมูลส่วนบุคคล ในไทยให้เป็นไปตามมาตรการปกป้องข้อมูลของผู้อื่นจากการถูกละเมิดสิทธิส่วนบุคคลโดยต้องได้รับความยินยอมจากเจ้าของข้อมูลโดยข้อยกเว้นจะมีเหตุอื่นที่ได้รับอนุญาตตามกฎหมาย”องค์กรที่มีการละเมิดข้อกำหนด PDPA หรือพรบ.คุ้มครองข้อมูลส่วนบุคคล จะมีความผิดโดยมีบทลงโทษทางแพ่ง โทษทางอาญา และโทษทางปกครอง",
-     false),
+      false),
   Item(
       // 3,
       "ต้องการทำ PDPA จะเริ่มต้นอย่างไร",
       "ธุรกิจควรทำความเข้าใจเกี่ยวกับกฎระเบียบและข้อบังคับของPDPA โดยมีขั้นตอนสำคัญ ดังนี้\n1) จัดตั้งทีม DPO (Data Protection Officer)\n2) จัดอบรบพนักงานให้เข้าใจ PDPA\n3) เชื่อมโยงข้อมูล Data Mapping\n4) จัดทำนโยบายความเป็นส่วนตัว (Privacy Policy)\n5) ทบทวนพื้นฐานทางกฎหมาย (Lawful Basis for Processing)\n6) ประเมินผลกระทบการละเมิดข้อมูส่วนบุคคล (DPIA)\n7) ระบบแจ้งเตือนเฝ้าระวัง (Data Breach notification)\n8)Provide Technology Control \n\nปรึกษาเรา #Teamwisework พร้อมวางแผนให้อย่างเป็นระบบให้ธุรกิจของคุณดำเนินไปอย่างถูกต้องตามกฎหมาย",
-     false),
+      false),
   Item(
       // 4,
       "wisework สามารถให้คำปรึกษาเรื่อง PDPA ได้ไหม",
       "wisework มีทีมผู้ให้คำปรึกษาที่มีประสบการณ์มามากกว่า 50+ โครงการ พร้อมให้คำปรึกษา วางแผน และวางระบบตามกฎหมายสำหรับองค์กรและธุรกิจต่างๆการันตีความเชี่ยวชาญด้วยทีมที่ปรึกษาด้านกฎหมายและนักพัฒนามากประสบการณ์ที่ผ่านการฝึกอบรมและได้รับรองมาตรฐานระดับสากลเราดูแลตั้งแต่เริ่มต้นจนเสร็จสิ้นกระบวนการช่วยเติมเต็มให้ครบทั้ง People Process และ Technology",
-     false),
+      false),
   Item(
       // 5,
       "wisework มีมาตรฐานอะไรบ้างในการควบคุมกระบวนการบริหารความเสี่ยง",
@@ -51,14 +49,14 @@ List<Item> items = [
       false),
   Item(
       // 7,
-       "wisework ติดตั้งบนระบบ ERP รูปแบบใด",
+      "wisework ติดตั้งบนระบบ ERP รูปแบบใด",
       "wiseworks สามารถติดตั้งไว้บนระบบ ERP ทั้งแบบ On-Premise และ On-Cloud ใน Microsoft Azure ที่มีความยืดหยุ่นและรองรับการทำงานด้วยประสิทธิภาพสูงสุดอย่างต่อเนื่อง ทั้งนี้ขึ้นอยู่กับความต้องการของลูกค้าในการเลือกระบบ ERP ที่เหมาะกับองค์กรและสามารถตอบโจทย์ในการดำเนินธุรกิจมากที่สุด ปัจจุบันเรากำลังพัฒนา “Hybrid Cloud” ซึ่งเป็นการนำองค์ประกอบของ On-premise มาใช้ร่วมกับระบบ Cloud เพื่อช่วยอำนวยความสะดวกและง่ายต่อการเรียกข้อมูลมาใช้งานได้ในทุกที่ ทุกเวลา และตอบโจทย์รูปแบบการทำงานในปัจจุบัน",
-     false),
+      false),
   Item(
       // 8,
       "wisework สามารถเชื่อมต่อกับ software ภายในองค์กรได้ไหม",
       "wiseworks เชื่อมต่อกับ operation หรือ monitor software ภายในเพื่อดึงค่าที่สนใจ มาประมวลผลเพื่อประเมินความเสี่ยง หรือใช้เป็นตัวชี้วัดระดับความเสี่ยง KRI ซึ่งช่วยในการบริหารจัดการความเสี่ยงให้กับองค์กร",
-     false),
+      false),
   Item(
       // 9,
       "wisework ช่วยประเมินความเสี่ยงได้อย่างไร แบบใด",
@@ -66,20 +64,19 @@ List<Item> items = [
       false),
   Item(
       // 10,
-       "wisework จะช่วย support การบริหารจัดการได้ไหม",
+      "wisework จะช่วย support การบริหารจัดการได้ไหม",
       "wisework เชื่อมต่อกับ Module ‘Executive support system’ Feature สำคัญที่ช่วยในการติดตาม รายงาน และสั่งการ RTP ได้อย่างมีประสิทธิภาพ ผู้บริหารสามารถสั่งการและ มองเห็นภาพรวมของความคืบหน้าของงานได้อย่างต่อเนื่อง สามารถจัดการประสิทธิผลและประสิทธิภาพของงานให้เป็นไปตามแนวทางที่กำหนดไว้ โดยระบบสามารถสรุปการสั่งงานและข้อมูลงานทั้งหมด ออกมาเป็นแผนภาพ (Dashboard) ได้",
-       false),
+      false),
   Item(
       // 11,
       "wisework มีคู่มือการใช้งานให้หรือไม่",
       "หากมีข้อสงสัยเกี่ยวกับการใช้งานผลิตภัณฑ์สามารถติดต่อสอบถามรายละเอียดเพิ่มเติมได้ที่ admin@thewiseworks.com",
-     false),
+      false),
   Item(
       // 12,
-       "สนใจผลิตภัณฑ์ wisework จะขอทดลองใช้งานได้อย่างไร",
+      "สนใจผลิตภัณฑ์ wisework จะขอทดลองใช้งานได้อย่างไร",
       "หากสนใจ wisework และต้องการสอบถามรายละเอียดเกี่ยวกับผลิตภัณฑ์หรือทดลองใช้งาน สามารถติดต่อผ่านทางอีเมล์ admin@thewiseworks.com โดยทางเจ้าหน้าที่จะติดต่อกลับโดยเร็วที่สุดเพื่อขอข้อมูลเพิ่มเติมเพื่อแนะนำ solutions ที่เหมาะสมที่สุดสำหรับธุรกิจของคุณ",
-     false),
-  
+      false),
 ];
 
 class Questions extends StatefulWidget {
@@ -151,9 +148,8 @@ class _QuestionsState extends State<Questions> {
                           ? Center(
                               child: Stack(
                                 children: [
-                                  
                                   new Positioned(
-                                    top:300,
+                                    top: 300,
                                     left: 0,
                                     child: Container(
                                         // color: Colors.black,
@@ -306,102 +302,110 @@ class _QuestionsState extends State<Questions> {
                             )
                     ],
                   ),
-            
-            
-            Responsive.isDesktop(context)?Container()
-            :Responsive.isTablet(context)?
-            Column(
-              children: [
-                Container(
-                  width: 1440,
-                  height: 51,
-                  color: Color.fromARGB(255, 232, 242, 254),
-                ),
-                Stack(
-                  children: [
-                    Container(
-                      width: 1440,
-                      height: 360,
-                      color: Color.fromARGB(255, 5, 45, 97),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+            Responsive.isDesktop(context)
+                ? Container()
+                : Responsive.isTablet(context)
+                    ? Column(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 73),
-                            child: Text("พร้อมวางแผนให้ธุรกิจคุณ!",
-                            style: GoogleFonts.ibmPlexSansThai(
-                              fontSize: 36,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.white
-                            ),textAlign: TextAlign.center,),
+                          Container(
+                            width: 1440,
+                            height: 51,
+                            color: Color.fromARGB(255, 232, 242, 254),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 32),
-                            child: Text("ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ\nได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork",
-                            style: GoogleFonts.ibmPlexSansThai(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white
-                            ),textAlign: TextAlign.center,),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 19),
-                            child: button,
+                          Stack(
+                            children: [
+                              Container(
+                                width: 1440,
+                                height: 360,
+                                color: Color.fromARGB(255, 5, 45, 97),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 73),
+                                      child: Text(
+                                        "พร้อมวางแผนให้ธุรกิจคุณ!",
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                            fontSize: 36,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 32),
+                                      child: Text(
+                                        "ให้องค์กรของคุณ วางแผนและจัดการกับ DATA หัวใจสำคัญของธุรกิจ\nได้ถูกต้องตามกฎหมาย ปรึกษาเรา #TeamWiseWork",
+                                        style: GoogleFonts.ibmPlexSansThai(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.white),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 19),
+                                      child: button,
+                                    )
+                                  ],
+                                ),
+                              ),
+                              new Positioned(
+                                left: 0,
+                                child: SizedBox(
+                                    height: 360,
+                                    child: Image.asset(
+                                      "assets/faq/half.png",
+                                      fit: BoxFit.fitHeight,
+                                    )),
+                              )
+                            ],
                           )
-
                         ],
-                      ),
-                    ),
-                    new Positioned(
-                      left:0,
-                      child: SizedBox(
-                        height: 360,
-                        child: Image.asset("assets/faq/half.png",fit: BoxFit.fitHeight,)),
-                    )
-                  ],
-                )
-              ],
-            )
-            :Container(
-              width: 376,
-              height: 374,
-              color: Color.fromARGB(255, 5, 45, 97),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 60),
-                    child: Text("พร้อมวางแผนให้ธุรกิจคุณ ปรึกษา",
-                    style: GoogleFonts.ibmPlexSansThai(
-                      fontSize:16,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white
-                    ),),
-                  ),
-                  Text("#Teamwisework",
-                  style: GoogleFonts.ibmPlexSansThai(
-                    fontSize:24,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white
-                  ),),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 34),
-                    child: Text("ให้องค์กรของคุณ วางแผนและจัดการกับ\nDATA หัวใจสำคัญของธุรกิจ\nได้ถูกต้องตามกฎหมาย",
-                    style: GoogleFonts.ibmPlexSansThai(
-                      fontSize:16,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white
-                    ),textAlign: TextAlign.center,),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 34),
-                    child: button,
-                  )
-                ],
-              ),
-            )
-
-             ],
+                      )
+                    : Container(
+                        width: 376,
+                        height: 374,
+                        color: Color.fromARGB(255, 5, 45, 97),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 60),
+                              child: Text(
+                                "พร้อมวางแผนให้ธุรกิจคุณ ปรึกษา",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white),
+                              ),
+                            ),
+                            Text(
+                              "#Teamwisework",
+                              style: GoogleFonts.ibmPlexSansThai(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.white),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 34),
+                              child: Text(
+                                "ให้องค์กรของคุณ วางแผนและจัดการกับ\nDATA หัวใจสำคัญของธุรกิจ\nได้ถูกต้องตามกฎหมาย",
+                                style: GoogleFonts.ibmPlexSansThai(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 34),
+                              child: button,
+                            )
+                          ],
+                        ),
+                      )
+          ],
         ),
       ),
     );

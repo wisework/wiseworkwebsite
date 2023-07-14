@@ -63,7 +63,7 @@ class _NavigationBarState extends State<NavBar> {
             SizedBox(
               height: 45,
               width: 120,
-              child:InkWell(
+              child: InkWell(
                 hoverColor: Color.fromARGB(255, 52, 144, 206),
                 onTap: () => context.go('/'),
                 child: Image.asset(
@@ -72,7 +72,7 @@ class _NavigationBarState extends State<NavBar> {
               ),
             ),
             SizedBox(
-              width:screenSize.width /4,
+              width: screenSize.width / 4,
             ),
             SizedBox(
               height: 18,
@@ -144,14 +144,13 @@ class _NavigationBarState extends State<NavBar> {
                   });
                 },
                 buttonStyleData: ButtonStyleData(
-                  height: 50,
-                  width: 120,
-                  padding: const EdgeInsets.only(left: 14, right: 14),
-                  elevation: 0,
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 52, 144, 206),
-                  )
-                ),
+                    height: 50,
+                    width: 120,
+                    padding: const EdgeInsets.only(left: 14, right: 14),
+                    elevation: 0,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 52, 144, 206),
+                    )),
                 iconStyleData: const IconStyleData(
                   icon: Icon(
                     Icons.expand_more_outlined,
@@ -207,7 +206,7 @@ class _NavigationBarState extends State<NavBar> {
                       )),
                   DropdownMenuItem(
                       value: 'governance',
-                      onTap: () => context.go('/services'),
+                      onTap: () => context.go('/gams'),
                       child: Text(
                         'Governance Assurance Suit',
                         style: TextStyle(
@@ -237,14 +236,13 @@ class _NavigationBarState extends State<NavBar> {
                   });
                 },
                 buttonStyleData: ButtonStyleData(
-                  height: 50,
-                  width: 160,
-                  padding: const EdgeInsets.only(left: 14, right: 14),
-                  elevation: 0,
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 52, 144, 206),
-                  )
-                ),
+                    height: 50,
+                    width: 160,
+                    padding: const EdgeInsets.only(left: 14, right: 14),
+                    elevation: 0,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 52, 144, 206),
+                    )),
                 iconStyleData: const IconStyleData(
                   icon: Icon(
                     Icons.expand_more_outlined,
@@ -282,7 +280,7 @@ class _NavigationBarState extends State<NavBar> {
                   color: Colors.white,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => context.go('/blogs'),
             ),
             TextButton(
               child: Text(
