@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Standard Document Control System",
+        "description": "ระบบบริหารจัดการเอกสาร",
+        "imageUrl":"features/GAMS-SDCD01.png",
+        "page" : "gams"
+        
+      },
+      {
+        "title": "Risk Management System",
+        "description": "ระบบบริหารจัดการความเสี่ยง",
+        "imageUrl":"features/GAMS-RMS02.png",
+        "page" : "gams"
+        
+      },
+      {
+        "title": "Asset Management System",
+        "description": "ระบบบริหารจัดการทรัพย์สิน",
+        "imageUrl":"features/GAMS-Aesset03.png",
+        "page" : "gams"
+        
+      },
+      {
+        "title": "Assurance Management System",
+        "description": "ระบบบริหารงานตรวจสอบภายใน",
+        "imageUrl":"features/GAMS-AMS04.png",
+        "page" : "gams"
+        
+      },
+      {
+        "title": "Knowledge Management Systemt",
+        "description": "ระบบคลังความรู้",
+        "imageUrl":"features/GAMS-KMS05.png",
+        "page" : "gams"
+        
+      },
+      {
+        "title": "Executive Support System",
+        "description": "ระบบสนับสนุนงานผู้บริหาร",
+        "imageUrl":"features/GAMS-ESS06.png",
+        "page" : "gams"
+        
+      }
+]

@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:wiseintern/navbar.dart';
 import 'package:go_router/go_router.dart';
+// import 'package:dropdown_button2/dropdown_button2.dart';
+// import 'package:google_fonts/google_fonts.dart';
+import 'package:wiseintern/navbar.dart';
 
-import 'package:wiseintern/responsive.dart';
-// import 'package:wiseintern/home/customers.dart';
-// import 'package:wiseintern/home/story.dart';
-import 'package:wiseintern/menu_drawer.dart';
-import 'package:wiseintern/home/footer.dart';
-import 'package:wiseintern/services/banner.dart';
-import 'package:wiseintern/services/ourservices.dart';
-import 'package:wiseintern/services/compare.dart';
+import 'package:wiseintern/home/pdpa.dart';
 import 'package:wiseintern/home/features.dart';
 import 'package:wiseintern/home/packages.dart';
+import 'package:wiseintern/responsive.dart';
+import 'package:wiseintern/home/customers.dart';
+import 'package:wiseintern/home/story.dart';
+import 'package:wiseintern/menu_drawer.dart';
+import 'package:wiseintern/home/footer.dart';
+import 'package:wiseintern/home/faq.dart';
 import 'package:wiseintern/gams/gams.dart';
+import 'package:wiseintern/gams/features.dart';
+import 'package:wiseintern/gams/gamsfeatures.dart';
 
 class GAMSPage extends StatefulWidget {
   @override
@@ -62,15 +65,7 @@ class _GAMSPageState extends State<GAMSPage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            BannerPage(),
-            OurservicesPage(),
-            FeaturesPage(),
-            PackagesPage(),
-            Compare(),
-            GAMS(),
-            Footer()
-          ],
+          children: [GAMS(), FeaturesgamsPage(), GAMSfeaturesPage(), Footer()],
         ),
       ),
     );

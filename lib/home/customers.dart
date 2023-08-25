@@ -49,7 +49,9 @@ class _CustomerState extends State<Customer> {
     RealStory("assets/customer/advice.png", "Advice IT Infinite",
         "ผู้นำด้านการจัดจำหน่ายสินค้าไอที สมาร์ทโฟน\nจำหน่ายทั่วประเทศไทย และสปป.ลาว กว่า 333 สาขา"),
     RealStory("assets/customer/p-pat.png", "โรงพยาบาล ป.แพทย์",
-        "บริษัท บิทคับ แคปปิตอล กรุ๊ป โฮลดิ้งส์ จำกัด\nให้บริการเกี่ยวกับเทคโนโลยีบล็อกเชน "),
+        "โรงพยาบาล ป.แพทย์\nให้บริการเกี่ยวกับเทคโนโลยีบล็อกเชน "),
+    RealStory("assets/customer/Permier_Tecnology.png", "Permier Tecnology",
+        "บริษัท พรีเมียร์ เทคโนโลยี จำกัด (มหาชน)\nให้บริการเกี่ยวกับเทคโนโลยีบล็อกเชน "),
   ];
 
   @override
@@ -85,7 +87,7 @@ class _CustomerState extends State<Customer> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 10,right:10),
+                    padding: const EdgeInsets.only(left: 10, right: 10),
                     child: Text(
                       "ประธานเจ้าหน้าที่บริหาร\nAdvice IT Infinite Co.,Ltd.",
                       style: GoogleFonts.ibmPlexSansThai(
@@ -117,7 +119,7 @@ class _CustomerState extends State<Customer> {
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(10)),
             width: Responsive.isTablet(context) ? 450 : 343,
-            height: Responsive.isTablet(context)? 400: 300,
+            height: Responsive.isTablet(context) ? 400 : 300,
             child: Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -143,7 +145,7 @@ class _CustomerState extends State<Customer> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 10,right: 10),
+                    padding: const EdgeInsets.only(left: 10, right: 10),
                     child: Text(
                       "Founder & Group CEO",
                       style: GoogleFonts.ibmPlexSansThai(
@@ -200,7 +202,7 @@ class _CustomerState extends State<Customer> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left:10,right:10),
+                    padding: const EdgeInsets.only(left: 10, right: 10),
                     child: Text(
                       "Co-Funder",
                       style: GoogleFonts.ibmPlexSansThai(
@@ -231,7 +233,7 @@ class _CustomerState extends State<Customer> {
               ),
             )),
       ),
-     Card(
+      Card(
         child: Container(
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(10)),
@@ -261,7 +263,7 @@ class _CustomerState extends State<Customer> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left:10,right:10),
+                    padding: const EdgeInsets.only(left: 10, right: 10),
                     child: Text(
                       "กรรมการและรองกรรมการผู้จัดการ",
                       style: GoogleFonts.ibmPlexSansThai(
@@ -292,7 +294,7 @@ class _CustomerState extends State<Customer> {
               ),
             )),
       ),
-      ];
+    ];
 
     var screenSize = MediaQuery.of(context).size;
 
@@ -400,7 +402,7 @@ class _CustomerState extends State<Customer> {
                                               width: 298,
                                               height: 300,
                                               decoration: BoxDecoration(
-                                                boxShadow: [
+                                                  boxShadow: [
                                                     BoxShadow(
                                                       color: Colors.grey
                                                           .withOpacity(0.3),
@@ -1205,15 +1207,17 @@ class _CustomerState extends State<Customer> {
                                                       : 77,
                                                   child: Text(
                                                     "Real Stories from\nReal Customers",
-                                                    style: GoogleFonts.ibmPlexSansThai(
-                                                        fontSize: Responsive
-                                                                .isTablet(
-                                                                    context)
-                                                            ? 36
-                                                            : 24,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        color: Colors.white),
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: Responsive
+                                                                    .isTablet(
+                                                                        context)
+                                                                ? 36
+                                                                : 24,
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            color:
+                                                                Colors.white),
                                                   ))
                                             ],
                                           ),
@@ -1296,8 +1300,8 @@ class _CustomerState extends State<Customer> {
                                           : 72,
                                       child: Opacity(
                                         opacity: 0.5,
-                                        child:
-                                            Image.asset("assets/customer/comma.png"),
+                                        child: Image.asset(
+                                            "assets/customer/comma.png"),
                                       )),
                                 ),
                               ],

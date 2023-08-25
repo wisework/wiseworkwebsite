@@ -79,7 +79,7 @@ class _FooterState extends State<Footer> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "7 Soi Lat Pla Khao 19, Chorakhe Bua Subdistrict, Lat Phrao District, Bangkok",
+              "179/98 Soi Ruammitpattana Junction 8, Tarang, Bangkhen, Bangkok 10220",
               style: GoogleFonts.ibmPlexSansThai(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
@@ -90,7 +90,7 @@ class _FooterState extends State<Footer> {
               height: Responsive.isDesktop(context) ? 10 : 5,
             ),
             Text(
-              "admin@thewiseworks.com",
+              "info@thewiseworks.com",
               style: GoogleFonts.ibmPlexSansThai(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
@@ -836,7 +836,7 @@ class _FooterState extends State<Footer> {
                                                       width: 213,
                                                       // height: 97,
                                                       child: Text(
-                                                        "The Wise Work Co.,Ltd.\n7 Soi Lat Pla Khao 19,\nChorakhe Bua Subdistrict,\nLat Phrao District, Bangkok",
+                                                        "The Wise Work Co.,Ltd.\n179/98 Soi Ruammitpattana Junction 8, Tarang, Bangkhen, Bangkok 10220",
                                                         style: GoogleFonts
                                                             .ibmPlexSansThai(
                                                                 fontSize: 16,
@@ -1188,7 +1188,7 @@ class _FooterState extends State<Footer> {
                                                   left: 16,
                                                   bottom: 63),
                                               child: Text(
-                                                "info@thewiseworks.com",
+                                                "info@thewisework.com",
                                                 style:
                                                     GoogleFonts.ibmPlexSansThai(
                                                         fontSize: 16,
@@ -1359,7 +1359,7 @@ class _FooterState extends State<Footer> {
                                           width: 301,
                                           height: 72,
                                           child: Text(
-                                            "The Wise Work Co.,Ltd.\n7 Soi Lat Pla Khao 19, Chorakhe Bua\nSubdistrict, Lat Phrao District, Bangkok",
+                                            "The Wise Work Co.,Ltd.\n179/98 Soi Ruammitpattana Junction 8, Tarang, Bangkhen, Bangkok 10220",
                                             style: GoogleFonts.ibmPlexSansThai(
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.w400,

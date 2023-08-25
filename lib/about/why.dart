@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
@@ -131,7 +129,7 @@ class WhyPage extends StatelessWidget {
                         child: Text(
                           "wisework",
                           style: GoogleFonts.ibmPlexSansThai(
-                              fontSize:80,
+                              fontSize: 80,
                               fontWeight: FontWeight.w700,
                               color: Color.fromARGB(255, 5, 45, 97)),
                         ),
@@ -143,7 +141,8 @@ class WhyPage extends StatelessWidget {
                       child: Container(
                           width: 704.61,
                           height: 220,
-                          child: Image.asset("assets/about/why/successful.png")),
+                          child:
+                              Image.asset("assets/about/why/successful.png")),
                     ),
                     new Positioned(
                       top: 350,

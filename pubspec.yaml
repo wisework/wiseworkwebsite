@@ -151,6 +151,13 @@ flutter:
 
   - assets/features/blue-check.png
   - assets/features/white-check.png
+
+  - assets/features/GAMS-SDCD01.png
+  - assets/features/GAMS-RMS02.png
+  - assets/features/GAMS-Aesset03.png
+  - assets/features/GAMS-AMS04.png
+  - assets/features/GAMS-KMS05.png
+  - assets/features/GAMS-ESS06.png
   
   - assets/packages/check.png
   - assets/packages/cloud.png
@@ -211,6 +218,7 @@ flutter:
   - assets/customer/notebook.png
   - assets/customer/Iphone.png
   - assets/customer/Ipad.png
+  - assets/customer/Permier_Tecnology.png
 
   - assets/story/storypic.png
   - assets/story/storybg.png
@@ -224,6 +232,7 @@ flutter:
 
   - assets/featuresData.json
   - assets/packagesData.json
+  - assets/featuresGAMS.json
 
   - assets/footer/logo.png
   - assets/footer/fb.png
@@ -314,12 +323,26 @@ flutter:
   - assets/product/blue_clouds.png
   - assets/product/blue_rainbow.png
 
-  - assets/about/BG-gams.png
-  - assets/about/Iphone_GAMS01.png
-  - assets/about/Ipad_GAMS02.png
-  - assets/about/PC_GAMS03.png
-  - assets/about/Laptop_GAMS04.png
-  - assets/about/Ipad_GAMS05.png
+  - assets/about/gams/BG-gams.png
+  - assets/about/gams/Gams_Header.png
+  - assets/about/gams/Gams_Header01.png
+  - assets/about/gams/Gams_Header_BG.png
+  - assets/about/gams/Gams_Header_Mobile_BG.png
+  - assets/about/gams/Iphone_GAMS01.png
+  - assets/about/gams/Ipad_GAMS02.png
+  - assets/about/gams/PC_GAMS03.png
+  - assets/about/gams/Laptop_GAMS04.png
+  - assets/about/gams/Ipad_GAMS05.png
+  - assets/about/gams/Macbook_GAMS.png 
+  - assets/about/gams/icon_Check.png 
+  - assets/about/gams/Frame-220.png 
+  - assets/about/gams/AMS_01.png 
+  - assets/about/gams/AMS_02.png 
+  - assets/about/gams/AMS_03.png 
+  - assets/about/gams/AMS_04.png 
+  - assets/about/gams/AMS_05.png 
+  
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

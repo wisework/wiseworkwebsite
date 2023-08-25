@@ -1,254 +1,296 @@
 import 'package:flutter/material.dart';
+import '../responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:wiseintern/responsive.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:go_router/go_router.dart';
 
 class GAMS extends StatefulWidget {
   @override
-  _GAMSPageState createState() => _GAMSPageState();
+  _DestinationCarouselState createState() => _DestinationCarouselState();
 }
 
-class _GAMSPageState extends State<GAMS> {
-  CarouselController _controller = CarouselController();
+class _DestinationCarouselState extends State<GAMS> {
+  final String imagePath = 'assets/about/gams/';
+
+  // final CarouselController _controller = CarouselController();
+
+  // List _isHovering = [false, false, false, false, false];
+  // List _isSelected = [true, false, false, false, false];
+
   int _current = 0;
+
+  List<Widget> med_images = [
+    Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          // opacity: 80,
+          image: AssetImage('assets/about/gams/Gams_Header.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+  ];
+  List<Widget> min_images = [
+    Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/about/gams/Gams_Header.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+    ),
+  ];
+  final controller =
+      PageController(viewportFraction: 0.8, keepPage: true, initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
-    List<String> pdpalistDT = [
-      "ควบคุมกระบวนการด้วยระบบ บริหารงานผ่านระบบทั้งหมด\nได้อย่างมีประสิทธิภาพ ควบคุมกระบวนการได้ถูกต้องตามกฎหมาย",
-      "จัดเก็บข้อมูลในระบบ รวบรวม consent ไว้ที่เดียว\nจัดการได้ง่าย เป็นปัจจุบัน มั่นใจว่านำไปใช้ตามวัตถุประสงค์",
-      "ประเมิน ติดตามความเสี่ยง ตรวจสอบอย่างเป็นระบบ\nพร้อมบันทึกข้อมูลสำคัญที่จำเป็นในคดีความ เมื่อต้องใช้ในชั้นศาล",
-      "บันทึกการขอใช้สิทธิฯ และการเปลี่ยนแปลงแก้ไขอย่างละเอียด\nรองรับการตรวจสอบจากสำนักงานคุ้มครองข้อมูลส่วนบุคคล"
-    ];
-    List<String> pdpalistTL = [
-      "ควบคุมกระบวนการด้วยระบบ บริหารงานผ่านระบบทั้งหมด\nได้อย่างมีประสิทธิภาพ ควบคุมกระบวนการได้ถูกต้องตามกฎหมาย",
-      "จัดเก็บข้อมูลในระบบ รวบรวม consent ไว้ที่เดียว จัดการได้ง่าย\nเป็นปัจจุบัน มั่นใจว่านำไปใช้ตามวัตถุประสงค์",
-      "ประเมิน ติดตามความเสี่ยง ตรวจสอบอย่างเป็นระบบ\nพร้อมบันทึกข้อมูลสำคัญที่จำเป็นในคดีความ เมื่อต้องใช้ในชั้นศาล",
-      "บันทึกการขอใช้สิทธิฯ และการเปลี่ยนแปลงแก้ไขอย่างละเอียด\nรองรับการตรวจสอบจากสำนักงานคุ้มครองข้อมูลส่วนบุคคล"
-    ];
-    List<String> pdpalistMB = [
-      "ควบคุมกระบวนการด้วยระบบบริหารงาน\nผ่านระบบทั้งหมด ได้อย่างมีประสิทธิภาพ\nควบคุมกระบวนการได้ถูกต้องตามกฎหมาย",
-      "จัดเก็บข้อมูลในระบบ รวบรวม consent\nไว้ที่เดียว จัดการได้ง่าย เป็นปัจจุบัน มั่นใจ\nว่านำไปใช้ตามวัตถุประสงค์",
-      "ประเมิน ติดตามความเสี่ยง ตรวจสอบ\nอย่างเป็นระบบ พร้อมบันทึกข้อมูลสำคัญที่\nจำเป็นในคดีความ เมื่อต้องใช้ในชั้นศาล",
-      "บันทึกการขอใช้สิทธิฯ และการเปลี่ยนแปลง\nแก้ไขอย่างละเอียด รองรับการตรวจสอบ\nจากสำนักงานคุ้มครองข้อมูลส่วนบุคคล"
-    ];
-
-    var pdpaDT = Container(
-      // color: Colors.purpleAccent,
-      width: 540,
-      // height: 300,
-      child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: pdpalistDT.length,
-          itemBuilder: (context, index) {
-            return Column(
-              children: [
-                ListTile(
-                  minLeadingWidth: 0,
-                  minVerticalPadding: 0,
-                  dense: true,
-                  visualDensity: VisualDensity(vertical: -4, horizontal: -4),
-                  leading: Transform.translate(
-                    offset: Offset(0, 0),
-                    child: SizedBox(
-                        width: 19,
-                        height: 13,
-                        child: Image.asset("assets/customer/black-check.png")),
-                  ),
-                  title: Transform.translate(
-                    offset: Offset(0, 0),
-                    child: Text(
-                      pdpalistDT[index],
-                      style: GoogleFonts.ibmPlexSansThai(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 15,
-                )
-              ],
-            );
-          }),
-    );
-    var pdpaTL = Container(
-      // color: Colors.purpleAccent,
-      width: 520,
-      // height: 300,
-      child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: pdpalistDT.length,
-          itemBuilder: (context, index) {
-            return Column(
-              children: [
-                ListTile(
-                  minLeadingWidth: 0,
-                  minVerticalPadding: 0,
-                  dense: true,
-                  visualDensity: VisualDensity(vertical: -4, horizontal: -4),
-                  leading: Transform.translate(
-                    offset: Offset(0, 0),
-                    child: SizedBox(
-                        width: 19,
-                        height: 13,
-                        child: Image.asset("assets/customer/black-check.png")),
-                  ),
-                  title: Transform.translate(
-                    offset: Offset(0, 0),
-                    child: Text(
-                      pdpalistDT[index],
-                      style: GoogleFonts.ibmPlexSans(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 15,
-                )
-              ],
-            );
-          }),
-    );
-    var pdpaMB = Container(
-      // color: Colors.purpleAccent,
-      width: 290,
-      // height: 300,
-      child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: pdpalistDT.length,
-          itemBuilder: (context, index) {
-            return Column(
-              children: [
-                ListTile(
-                  minLeadingWidth: 0,
-                  minVerticalPadding: 0,
-                  dense: true,
-                  visualDensity: VisualDensity(vertical: -4, horizontal: -4),
-                  leading: Transform.translate(
-                    offset: Offset(0, 0),
-                    child: SizedBox(
-                        width: 19,
-                        height: 13,
-                        child: Image.asset("assets/customer/black-check.png")),
-                  ),
-                  title: Transform.translate(
-                    offset: Offset(0, -20),
-                    child: Text(
-                      pdpalistDT[index],
-                      style: GoogleFonts.ibmPlexSansThai(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 15,
-                )
-              ],
-            );
-          }),
-    );
-
     return Center(
-        child: Responsive.isDesktop(context)
-            ? Column(
+      child: Responsive.isDesktop(context)
+          ? Container(
+              width: 1440,
+              child: Column(
                 children: [
                   Container(
                     width: 1440,
-                    height: 670,
-                    color: Colors.white,
-                    child: Column(
+                    height: 1039,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    // color: Colors.amber,
+                    child: Row(
                       children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        Column(
                           children: [
-                            Column(
+                            Stack(
                               children: [
                                 Padding(
-                                  padding:
-                                      const EdgeInsets.only(top: 60, left: 135),
-                                  child: Container(
-                                    width: 502,
-                                    // color: Colors.indigo,
-                                    child: Text(
-                                      "Governance Assurance Suit",
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                          fontSize: 48,
-                                          fontWeight: FontWeight.w700,
-                                          color:
-                                              Color.fromARGB(255, 31, 40, 79)),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.only(top: 44, left: 157),
-                                  child: Container(
-                                    // width: 662,
-                                    // color: Colors.amber,
-                                    child: Text(
-                                      "Software ที่ถูกออกแบบมา โดยรวมข้อมูลเข้าสู่ศูนย์กลาง\nเพื่อการจัดการอย่างเป็นระบบ ครบทุกขั้นตอนใน Platform เดียว ",
-                                      style: GoogleFonts.ibmPlexSansThai(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color.fromARGB(
-                                              255, 74, 195, 212)),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.only(top: 15, left: 140),
-                                  child: pdpaDT,
-                                )
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                  width: 729,
-                                  child: CarouselSlider(
-                                    carouselController: _controller,
-                                    options: CarouselOptions(
-                                      viewportFraction: 1.25,
-                                      height: 543,
-                                      // enlargeCenterPage: true,
-                                      autoPlay: true,
-                                      onPageChanged: (index, reason) {
-                                        setState(() {
-                                          _current = index;
-                                          // print('Current Page: $_current');
-                                        });
-                                      },
-                                    ),
-                                    items: [
-                                      Image.asset(
-                                          "assets/customer/notebook.png"),
-                                      Image.asset("assets/customer/Ipad.png"),
-                                      Image.asset("assets/customer/Iphone.png")
+                                  padding: const EdgeInsets.only(top: 0),
+                                  child: Stack(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Stack(
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 0, left: 0),
+                                                child: Container(
+                                                    width: 1440,
+                                                    height: 1039,
+                                                    child: Image.asset(
+                                                        "assets/about/gams/Gams_Header01.png")),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 68, left: 106),
+                                                child: Wrap(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              top: 10),
+                                                      child: Container(
+                                                        width: 60,
+                                                        height: 5,
+                                                        decoration: BoxDecoration(
+                                                            color: Color.fromARGB(
+                                                                255, 57, 128, 237),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        20),
+                                                            border: Border.all(
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        57,
+                                                                        128,
+                                                                        237),
+                                                                width: 5)),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              left: 10),
+                                                      child: Container(
+                                                        // color: Colors.amber,
+                                                        height: 20,
+                                                        child: Text(
+                                                          "Governance and Assurance Master Suit",
+                                                          style: GoogleFonts
+                                                              .ibmPlexSansThai(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  fontSize: 16,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          57,
+                                                                          128,
+                                                                          237)),
+                                                        ),
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 300, left: 85, right: 145),
+                                            child: Container(
+                                              width: 550,
+                                              height: 150,
+                                              child: Text(
+                                                "Governance And Assurance Master Suit",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 48,
+                                                        fontWeight:
+                                                            FontWeight.w700,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0)),
+                                                textAlign: TextAlign.start,
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 20, left: 0),
+                                            child: Container(
+                                              width: 620,
+                                              height: 200,
+                                              child: Text(
+                                                "ระบบสำหรับบริหารจัดการทรัพย์สิน (Asset Management) และบริหารจัดการความเสี่ยง (Risk Management) ครอบคลุม ทั้งการบันทึก และจัดเก็บ พร้อมเสริมประสิทธิภาพการดำเนินงาน ขององค์กรให้เป็นไปตามมาตรฐาน ISO 27001",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 24,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        color: Color.fromARGB(
+                                                            255, 37, 37, 37)),
+                                                textAlign: TextAlign.start,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Positioned(
+                                        bottom: Responsive.isDesktop(context)
+                                            ? 201
+                                            : 0,
+                                        left: Responsive.isDesktop(context)
+                                            ? 598
+                                            : (MediaQuery.of(context)
+                                                        .size
+                                                        .width -
+                                                    222) /
+                                                2,
+                                        right: Responsive.isDesktop(context)
+                                            ? 598
+                                            : (MediaQuery.of(context)
+                                                        .size
+                                                        .width -
+                                                    222) /
+                                                2,
+                                        child: SizedBox(
+                                          width: Responsive.isDesktop(context)
+                                              ? 243
+                                              : 222,
+                                          height: 50,
+                                          child: ElevatedButton(
+                                              onPressed: () =>
+                                                  context.go('/demo'),
+                                              style: ElevatedButton.styleFrom(
+                                                backgroundColor: Color.fromRGBO(
+                                                    75, 195, 211, 1),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          44.0),
+                                                ),
+                                              ),
+                                              child: Text(
+                                                "Get A free Demo",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: Responsive
+                                                                .isDesktop(
+                                                                    context)
+                                                            ? 24
+                                                            : 20,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                              )),
+                                        ),
+                                      ),
+                                      Positioned(
+                                        bottom: Responsive.isDesktop(context)
+                                            ? 61
+                                            : Responsive.isTablet(context)
+                                                ? 100
+                                                : 96,
+                                        left: Responsive.isDesktop(context)
+                                            ? 675
+                                            : (MediaQuery.of(context)
+                                                        .size
+                                                        .width /
+                                                    2) -
+                                                44,
+                                        right: Responsive.isDesktop(context)
+                                            ? 675
+                                            : (MediaQuery.of(context)
+                                                        .size
+                                                        .width /
+                                                    2) -
+                                                44,
+                                        child: Container(
+                                          child: AnimatedSmoothIndicator(
+                                            activeIndex: _current,
+                                            count: 5,
+                                            effect: CustomizableEffect(
+                                              activeDotDecoration:
+                                                  DotDecoration(
+                                                width: 16,
+                                                height: 6,
+                                                color:
+                                                    //  Responsive.isDesktop(context)
+                                                    //     ? Color.fromARGB(255, 0, 0, 0)
+                                                    //     :
+                                                    Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(50),
+                                              ),
+                                              dotDecoration: DotDecoration(
+                                                width: 10,
+                                                height: 4,
+                                                color:
+                                                    //  Responsive.isDesktop(context)
+                                                    //     ? Colors.grey
+                                                    //     :
+                                                    Color.fromARGB(
+                                                        40, 255, 255, 255),
+                                                borderRadius:
+                                                    BorderRadius.circular(50),
+                                                verticalOffset: 0,
+                                              ),
+                                              spacing: 6.0,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
                                     ],
                                   ),
-                                ),
-                                Container(
-                                  child: AnimatedSmoothIndicator(
-                                      activeIndex: _current,
-                                      count: 3,
-                                      effect: ScaleEffect(
-                                          activePaintStyle:
-                                              PaintingStyle.stroke,
-                                          scale: 1.4,
-                                          activeStrokeWidth: 1.0,
-                                          dotWidth: 16,
-                                          dotHeight: 16,
-                                          dotColor:
-                                              Color.fromARGB(255, 5, 45, 97))),
-                                ),
+                                )
                               ],
                             ),
                           ],
@@ -256,311 +298,417 @@ class _GAMSPageState extends State<GAMS> {
                       ],
                     ),
                   ),
-                  Container(
-                    width: 1440,
-                    color: Color.fromARGB(255, 232, 242, 254),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40),
-                          child: Text(
-                            "จัดการ PDPA อย่างเป็นระบบ ด้วย wisework",
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 48.36,
-                                fontWeight: FontWeight.w700,
-                                color: Color.fromARGB(255, 5, 45, 97)),
-                          ),
-                        ),
-                        Container(
-                          child: Text(
-                            "“การเก็บ ใช้ เปิดเผย และถ่ายโอนข้อมูลส่วนบุคคล ต้องได้รับความยินยอมจากเจ้าของข้อมูล\nโดยข้อยกเว้นจะมีเหตุอื่นที่ได้รับอนุญาตตามกฎหมาย”",
-                            style: GoogleFonts.ibmPlexSansThai(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20),
-                          child: Container(
-                            child: Text(
-                              "พร้อมให้คำปรึกษา วางแผน และวางระบบตามกฎหมาย สำหรับองค์กรและธุรกิจต่างๆ\nเติมเต็มให้ครบทั้ง People Process และ Technology มั่นใจได้ว่า เป็นไปตามที่กฎหมายกำหนด",
-                              style: GoogleFonts.ibmPlexSansThai(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.black),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 40, bottom: 50),
-                          child: Container(
-                              width: 705,
-                              height: 705,
-                              child:
-                                  Image.asset("assets/customer/process.png")),
-                        )
-                      ],
-                    ),
-                  ),
                 ],
-              )
-            : Column(
-                children: [
-                  Container(
-                    width: 1440,
-                    color: Colors.white,
-                    child: Center(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Center(
-                            child: Container(
-                              width: Responsive.isTablet(context) ? 768 : 375,
-                              // height: Responsive.isTablet(context) ? 1300 : 1000,
-                              color: Colors.white,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Responsive.isTablet(context)
-                                      ? Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 77, left: 74),
-                                          child: Container(
-                                            width: 502,
-                                            child: Text(
-                                              "PDPA\nManagemnet Platform",
-                                              style:
-                                                  GoogleFonts.ibmPlexSansThai(
-                                                      fontSize: 48,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      color: Color.fromARGB(
-                                                          255, 31, 40, 79)),
-                                            ),
+              ),
+            )
+          : Responsive.isTablet(context)
+              ? Container(
+                  width: 768,
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 768,
+                        height: 1300,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        // color: Colors.amber,
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Stack(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 0),
+                                      child: Stack(
+                                        children: [
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Stack(
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            top: 0, left: 0),
+                                                    child: Container(
+                                                        width: 768,
+                                                        height: 877,
+                                                        child: Image.asset(
+                                                            "assets/about/gams/Gams_Header_BG.png")),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            top: 700, left: 62),
+                                                    child: Container(
+                                                        width: 701,
+                                                        height: 566,
+                                                        // decoration: BoxDecoration(
+                                                        //     border: Border.all(
+                                                        //         color: Colors
+                                                        //             .blueAccent)),
+                                                        child: Image.asset(
+                                                            "assets/about/gams/Macbook_GAMS.png")),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            top: 68, left: 106),
+                                                    child: Wrap(
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 10),
+                                                          child: Container(
+                                                            width: 60,
+                                                            height: 5,
+                                                            decoration: BoxDecoration(
+                                                                color: Color
+                                                                    .fromARGB(
+                                                                        255,
+                                                                        57,
+                                                                        128,
+                                                                        237),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            20),
+                                                                border: Border.all(
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            57,
+                                                                            128,
+                                                                            237),
+                                                                    width: 5)),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  left: 10),
+                                                          child: Container(
+                                                            // color: Colors.amber,
+                                                            height: 20,
+                                                            child: Text(
+                                                              "Governance and Assurance Master Suit",
+                                                              style: GoogleFonts.ibmPlexSansThai(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  fontSize: 16,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          57,
+                                                                          128,
+                                                                          237)),
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
                                           ),
-                                        )
-                                      : Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 53, left: 35),
-                                          child: Container(
-                                            width: 251,
-                                            child: Text(
-                                              "PDPA\nManagemnet Platform",
-                                              style:
-                                                  GoogleFonts.ibmPlexSansThai(
-                                                      fontSize: 24,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      color: Color.fromARGB(
-                                                          255, 31, 40, 79)),
-                                            ),
+                                          Column(
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 150, left: 100),
+                                                child: Container(
+                                                  width: 550,
+                                                  height: 150,
+                                                  child: Text(
+                                                    "Governance And Assurance Master Suit",
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 48,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    0,
+                                                                    0,
+                                                                    0)),
+                                                    textAlign: TextAlign.start,
+                                                  ),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 20, left: 100),
+                                                child: Container(
+                                                  width: 550,
+                                                  height: 250,
+                                                  child: Text(
+                                                    "ระบบสำหรับบริหารจัดการทรัพย์สิน (Asset Management) และบริหารจัดการความเสี่ยง (Risk Management) ครอบคลุม ทั้งการบันทึก และจัดเก็บ พร้อมเสริมประสิทธิภาพการดำเนินงาน ขององค์กรให้เป็นไปตามมาตรฐาน ISO 27001",
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 24,
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    37,
+                                                                    37,
+                                                                    37)),
+                                                    textAlign: TextAlign.start,
+                                                  ),
+                                                ),
+                                              ),
+                                              Positioned(
+                                                top: 50,
+                                                bottom: Responsive.isDesktop(
+                                                        context)
+                                                    ? 201
+                                                    : 0,
+                                                left: Responsive.isDesktop(
+                                                        context)
+                                                    ? 598
+                                                    : (MediaQuery.of(context)
+                                                                .size
+                                                                .width -
+                                                            222) /
+                                                        2,
+                                                right: Responsive.isDesktop(
+                                                        context)
+                                                    ? 598
+                                                    : (MediaQuery.of(context)
+                                                                .size
+                                                                .width -
+                                                            222) /
+                                                        2,
+                                                child: SizedBox(
+                                                  width: Responsive.isDesktop(
+                                                          context)
+                                                      ? 243
+                                                      : 222,
+                                                  height: 50,
+                                                  child: ElevatedButton(
+                                                      onPressed: () =>
+                                                          context.go('/demo'),
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                        backgroundColor:
+                                                            Color.fromRGBO(75,
+                                                                195, 211, 1),
+                                                        shape:
+                                                            RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      44.0),
+                                                        ),
+                                                      ),
+                                                      child: Text(
+                                                        "Get A free Demo",
+                                                        style: GoogleFonts.ibmPlexSansThai(
+                                                            fontSize: Responsive
+                                                                    .isDesktop(
+                                                                        context)
+                                                                ? 24
+                                                                : 20,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w500),
+                                                      )),
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                        ),
-                                  Responsive.isTablet(context)
-                                      ? Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 74),
-                                          child: Container(
-                                            width: 629,
-                                            child: Text(
-                                                "Software ที่ถูกออกแบบมา โดยรวมข้อมูลเข้าสู่ศูนย์กลาง\nเพื่อการจัดการอย่างเป็นระบบ ครบทุกขั้นตอนใน Platform เดียว ",
-                                                style:
-                                                    GoogleFonts.ibmPlexSansThai(
-                                                        fontSize: 24,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        color: Color.fromARGB(
-                                                            255,
-                                                            74,
-                                                            195,
-                                                            212))),
-                                          ),
-                                        )
-                                      : Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 25, left: 35),
-                                          child: Container(
-                                            width: 317,
-                                            child: Text(
-                                                "Software ที่ถูกออกแบบมา\nโดยรวมข้อมูลเข้าสู่ศูนย์กลาง\nเพื่อการจัดการอย่างเป็นระบบ",
-                                                style:
-                                                    GoogleFonts.ibmPlexSansThai(
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        color: Color.fromARGB(
-                                                            255,
-                                                            74,
-                                                            195,
-                                                            212))),
-                                          ),
-                                        ),
-                                  Responsive.isTablet(context)
-                                      ? Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 15, left: 70),
-                                          child: pdpaTL,
-                                        )
-                                      : Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 15, left: 35),
-                                          child: pdpaMB,
-                                        ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Container(
-                              // width: Responsive.isTablet(context) ? 697 : 376,
-                              width: 1440,
-                              child: CarouselSlider(
-                                carouselController: _controller,
-                                options: CarouselOptions(
-                                  viewportFraction: 1.25,
-                                  height:
-                                      Responsive.isTablet(context) ? 430 : 230,
-                                  // enlargeCenterPage: true,
-                                  autoPlay: true,
-                                  onPageChanged: (index, reason) {
-                                    setState(() {
-                                      _current = index;
-                                      // print('Current Page: $_current');
-                                    });
-                                  },
+                                        ],
+                                      ),
+                                    )
+                                  ],
                                 ),
-                                items: [
-                                  Image.asset("assets/customer/notebook.png"),
-                                  Image.asset("assets/customer/Ipad.png"),
-                                  Image.asset("assets/customer/Iphone.png")
-                                ],
-                              ),
+                              ],
                             ),
-                          ),
-                          Center(
-                            child: Container(
-                              child: AnimatedSmoothIndicator(
-                                  activeIndex: _current,
-                                  count: 3,
-                                  effect: ScaleEffect(
-                                      activePaintStyle: PaintingStyle.stroke,
-                                      scale: 1.4,
-                                      activeStrokeWidth: 1.0,
-                                      dotWidth: 16,
-                                      dotHeight: 16,
-                                      dotColor:
-                                          Color.fromARGB(255, 5, 45, 97))),
-                            ),
-                          ),
-                          SizedBox(
-                            height: Responsive.isTablet(context) ? 150 : 60,
-                          )
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                  Container(
-                    width: 1440,
-                    color: Color.fromARGB(255, 232, 242, 254),
-                    child: Center(
-                        child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Responsive.isTablet(context)
-                            ? Padding(
-                                padding: const EdgeInsets.only(top: 67),
-                                child: Text(
-                                  "จัดการ PDPA อย่างเป็นระบบ\nด้วย wisework",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 48,
-                                      fontWeight: FontWeight.w700,
-                                      color: Color.fromARGB(255, 5, 45, 97)),
-                                  textAlign: TextAlign.center,
+                )
+              : Center(
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 368,
+                        // height: 1300,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        // color: Colors.amber,
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Stack(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 0),
+                                      child: Stack(
+                                        children: [
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Stack(
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            top: 0,
+                                                            left: 0,
+                                                            right: 50),
+                                                    child: Container(
+                                                        width: 368,
+                                                        height: 773,
+                                                        child: Image.asset(
+                                                            "assets/about/gams/Gams_Header_Mobile_BG.png")),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            top: 500, left: 20),
+                                                    child: Container(
+                                                        width: 352,
+                                                        height: 284,
+                                                        child: Image.asset(
+                                                            "assets/about/gams/Macbook_GAMS.png")),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                          Column(
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 70, left: 0),
+                                                child: Container(
+                                                  width: 300,
+                                                  height: 100,
+                                                  child: Text(
+                                                    "Governance And \nAssurance Master Suit",
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 24,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    0,
+                                                                    0,
+                                                                    0)),
+                                                    textAlign: TextAlign.start,
+                                                  ),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 20, left: 20),
+                                                child: Container(
+                                                  width: 320,
+                                                  height: 180,
+                                                  child: Text(
+                                                    "ระบบสำหรับบริหารจัดการทรัพย์สิน (Asset Management) และบริหารจัดการความเสี่ยง (Risk Management) ครอบคลุม ทั้งการบันทึก และจัดเก็บ พร้อมเสริมประสิทธิภาพการดำเนินงาน ขององค์กรให้เป็นไปตามมาตรฐาน ISO 27001",
+                                                    style: GoogleFonts
+                                                        .ibmPlexSansThai(
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    37,
+                                                                    37,
+                                                                    37)),
+                                                    textAlign: TextAlign.start,
+                                                  ),
+                                                ),
+                                              ),
+                                              Positioned(
+                                                top: 50,
+                                                bottom: Responsive.isDesktop(
+                                                        context)
+                                                    ? 201
+                                                    : 0,
+                                                left: Responsive.isDesktop(
+                                                        context)
+                                                    ? 598
+                                                    : (MediaQuery.of(context)
+                                                                .size
+                                                                .width -
+                                                            222) /
+                                                        2,
+                                                right: Responsive.isDesktop(
+                                                        context)
+                                                    ? 598
+                                                    : (MediaQuery.of(context)
+                                                                .size
+                                                                .width -
+                                                            222) /
+                                                        2,
+                                                child: SizedBox(
+                                                  width: Responsive.isDesktop(
+                                                          context)
+                                                      ? 243
+                                                      : 222,
+                                                  height: 50,
+                                                  child: ElevatedButton(
+                                                      onPressed: () =>
+                                                          context.go('/demo'),
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                        backgroundColor:
+                                                            Color.fromRGBO(75,
+                                                                195, 211, 1),
+                                                        shape:
+                                                            RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      44.0),
+                                                        ),
+                                                      ),
+                                                      child: Text(
+                                                        "Get A free Demo",
+                                                        style: GoogleFonts.ibmPlexSansThai(
+                                                            fontSize: Responsive
+                                                                    .isDesktop(
+                                                                        context)
+                                                                ? 24
+                                                                : 20,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w500),
+                                                      )),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
                                 ),
-                              )
-                            : Padding(
-                                padding: const EdgeInsets.only(top: 50),
-                                child: Text(
-                                  "จัดการ PDPA อย่างเป็นระบบ\nด้วย wisework",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w700,
-                                      color: Color.fromARGB(255, 5, 45, 97)),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                        Responsive.isTablet(context)
-                            ? Padding(
-                                padding: const EdgeInsets.only(top: 52),
-                                child: Text(
-                                  "“การเก็บ ใช้ เปิดเผย และถ่ายโอนข้อมูลส่วนบุคคล ต้องได้รับความยินยอมจากเจ้าของข้อมูล\nโดยข้อยกเว้นจะมีเหตุอื่นที่ได้รับอนุญาตตามกฎหมาย”",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black),
-                                  textAlign: TextAlign.center,
-                                ),
-                              )
-                            : Padding(
-                                padding: const EdgeInsets.only(top: 30),
-                                child: Text(
-                                  "“การเก็บ ใช้ เปิดเผย\nและถ่ายโอนข้อมูลส่วนบุคคล\nต้องได้รับความยินยอมจาก\nเจ้าของข้อมูลโดยข้อยกเว้นจะมี\nเหตุอื่นที่ได้รับอนุญาตตามกฎหมาย”",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                        Responsive.isTablet(context)
-                            ? Padding(
-                                padding: const EdgeInsets.only(top: 25),
-                                child: Text(
-                                  "พร้อมให้คำปรึกษา วางแผน และวางระบบตามกฎหมาย\nสำหรับองค์กรและธุรกิจต่างๆ\nเติมเต็มให้ครบทั้ง People Process และ Technology\nมั่นใจได้ว่า เป็นไปตามที่กฎหมายกำหนด",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w400,
-                                      color: Colors.black),
-                                  textAlign: TextAlign.center,
-                                ),
-                              )
-                            : Padding(
-                                padding: const EdgeInsets.only(top: 20),
-                                child: Text(
-                                  "พร้อมให้คำปรึกษา วางแผน\nและวางระบบตามกฎหมาย\nสำหรับองค์กรและธุรกิจต่างๆ\nเติมเต็มให้ครบทั้ง People Process และ\nTechnology มั่นใจได้ว่า\nเป็นไปตามที่กฎหมายกำหนด",
-                                  style: GoogleFonts.ibmPlexSansThai(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                        Responsive.isTablet(context)
-                            ? Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 60, bottom: 67),
-                                child: SizedBox(
-                                    width: 705,
-                                    height: 705,
-                                    child: Image.asset(
-                                        "assets/customer/process.png")),
-                              )
-                            : Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 50, bottom: 50),
-                                child: SizedBox(
-                                    width: 320,
-                                    height: 320,
-                                    child: Image.asset(
-                                        "assets/customer/process.png")),
-                              )
-                      ],
-                    )),
-                  )
-                ],
-              ));
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+    );
   }
 }

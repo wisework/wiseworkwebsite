@@ -124,7 +124,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 87, 87, 87))),
-                  onTap: () => context.go('/services'),
+                  onTap: () => context.go('/gams'),
                 ),
                 ListTile(
                   title: Text('Request Demo',
