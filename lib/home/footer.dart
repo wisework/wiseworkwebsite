@@ -548,19 +548,23 @@ class _FooterState extends State<Footer> {
                                             width: 10,
                                           ),
                                           InkWell(
-                                              onTap: () {},
+                                              onTap: () => context.go(
+                                                  'https://www.facebook.com/thewiseworks'),
                                               child: Image.asset(
                                                   "assets/footer/fb.png")),
                                           InkWell(
-                                              onTap: () {},
+                                              onTap: () => context.go(
+                                                  'https://www.instagram.com/thewiseworks/'),
                                               child: Image.asset(
                                                   "assets/footer/ig.png")),
                                           InkWell(
-                                              onTap: () {},
+                                              onTap: () => context.go(
+                                                  'https://www.youtube.com/@thewiseworks8166'),
                                               child: Image.asset(
                                                   "assets/footer/yt.png")),
                                           InkWell(
-                                              onTap: () {},
+                                              onTap: () => context.go(
+                                                  'https://www.tiktok.com/@thewiseworks'),
                                               child: Image.asset(
                                                   "assets/footer/tiktok.png")),
                                         ],

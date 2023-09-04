@@ -287,6 +287,19 @@ flutter:
   - assets/demo/pic3.png
   - assets/demo/team.png
 
+  - assets/demo/personal_01.png
+  - assets/demo/personal_02.png
+  - assets/demo/personal_03.png
+  - assets/demo/personal_04.png
+  - assets/demo/time_01.png
+  - assets/demo/time_02.png
+  - assets/demo/time_03.png
+  - assets/demo/time_04.png
+  - assets/demo/DPO_01.png
+  - assets/demo/DPO_02.png
+  - assets/demo/DPO_03.png
+  - assets/demo/DPO_04.png
+
   - assets/about/why/wisework.png
   - assets/about/why/successful.png
   - assets/about/why/check.png

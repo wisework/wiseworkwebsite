@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "468972636774",
+    "project_id": "thewiseworks-website",
+    "storage_bucket": "thewiseworks-website.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468972636774:android:5c77917edbd16adaa87ba7",
+        "android_client_info": {
+          "package_name": "com.example.wiseintern"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468972636774-oqnhp8qpoecam40p92gll1dpeo8hgoup.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd3sbdhpH-WTJHwVDw-xpbXlVjVfYB1wI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468972636774-oqnhp8qpoecam40p92gll1dpeo8hgoup.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

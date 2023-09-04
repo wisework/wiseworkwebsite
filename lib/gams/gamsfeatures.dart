@@ -477,31 +477,6 @@ class GAMSfeaturesPage extends StatelessWidget {
                                       child: Image.asset(
                                           "assets/about/gams/Iphone_GAMS01.png")),
                                 ),
-                                // Padding(
-                                //   padding:
-                                //       const EdgeInsets.only(top: 68, left: 106),
-                                //   child: Wrap(
-                                //     children: [
-                                //       Padding(
-                                //         padding: const EdgeInsets.only(top: 10),
-                                //         child: Container(
-                                //           width: 60,
-                                //           height: 5,
-                                //           decoration: BoxDecoration(
-                                //               color: Color.fromARGB(
-                                //                   255, 57, 128, 237),
-                                //               borderRadius:
-                                //                   BorderRadius.circular(20),
-                                //               border: Border.all(
-                                //                   color: Color.fromARGB(
-                                //                       255, 57, 128, 237),
-                                //                   width: 5)),
-                                //         ),
-                                //       ),
-                                //       //
-                                //     ],
-                                //   ),
-                                // ),
                               ],
                             ),
                           ],
@@ -514,7 +489,7 @@ class GAMSfeaturesPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 28),
+                                    padding: const EdgeInsets.only(top: 80),
                                     child: Container(
                                       width: 800,
                                       height: 150,
@@ -557,75 +532,6 @@ class GAMSfeaturesPage extends StatelessWidget {
                                       child: gamsreasonsList,
                                     ),
                                   ),
-                                  // Container(
-                                  //   width: 800,
-                                  //   height: 388,
-                                  //   child: Text.rich(TextSpan(children: [
-                                  //     TextSpan(
-                                  //         text:
-                                  //             '\u2022 บันทึกและจัดเก็บเอกสาร ที่ใช้งานภายใต้มาตรฐาน ISO/IEC 27001\n',
-                                  //         style: GoogleFonts.ibmPlexSansThai(
-                                  //             fontSize: 18,
-                                  //             fontWeight: FontWeight.w400,
-                                  //             color: Colors.black)),
-                                  //     TextSpan(
-                                  //         text:
-                                  //             '\u2022 บริหารจัดการเวอร์ชั่นของเอกสาร เพื่อลดความเสี่ยงการหยิบใช้งานเอกสารที่ไม่ได้ใช้งานแล้ว\n',
-                                  //         style: GoogleFonts.ibmPlexSansThai(
-                                  //             fontSize: 18,
-                                  //             fontWeight: FontWeight.w400,
-                                  //             color: Colors.black)),
-                                  //     TextSpan(
-                                  //         text:
-                                  //             '\u2022 จําแนกเอกสารตามหมวดหมู่ ประเภทของเอกสาร ตามประเภทเอกสารที่กําหนดขึ้น\n',
-                                  //         style: GoogleFonts.ibmPlexSansThai(
-                                  //             fontSize: 18,
-                                  //             fontWeight: FontWeight.w400,
-                                  //             color: Colors.black)),
-                                  //     TextSpan(
-                                  //         text:
-                                  //             '\u2022 ระบบจัดการมาตรการควบคุม Statement of Applicability (SoA) และจัดเก็บเวอร์ชันของ SOA\n',
-                                  //         style: GoogleFonts.ibmPlexSansThai(
-                                  //             fontSize: 18,
-                                  //             fontWeight: FontWeight.w400,
-                                  //             color: Colors.black)),
-                                  //     TextSpan(
-                                  //         text:
-                                  //             '\u2022 บันทึกและจัดการระดับชั้นความลับของเอกสาร เพื่อสะดวกสําหรับการจัดการสิทธิการเข้าใช้งานแต่ละเอกสาร\n',
-                                  //         style: GoogleFonts.ibmPlexSansThai(
-                                  //             fontSize: 18,
-                                  //             fontWeight: FontWeight.w400,
-                                  //             color: Colors.black)),
-                                  //     TextSpan(
-                                  //         text:
-                                  //             '\u2022 แสดง Master List ในปัจจุบัน เพื่อง่ายต่อการติดตาม และใช้งานเอกสารภายใต้มาตรฐาน ISO/IEC 27001\n',
-                                  //         style: GoogleFonts.ibmPlexSansThai(
-                                  //             fontSize: 18,
-                                  //             fontWeight: FontWeight.w400,
-                                  //             color: Colors.black)),
-                                  //     TextSpan(
-                                  //         text:
-                                  //             '\u2022 แสดงข้อกําหนดต่างๆ ของมาตรฐาน ISO/IEC 27001 ที่ต้องมีการจัดการเอกสาร หลักฐาน เพื่อง่ายต่อการติดตาม และทบทวนเอกสารเหล่านั้น\n',
-                                  //         style: GoogleFonts.ibmPlexSansThai(
-                                  //             fontSize: 18,
-                                  //             fontWeight: FontWeight.w400,
-                                  //             color: Colors.black)),
-                                  //     TextSpan(
-                                  //         text:
-                                  //             '\u2022 สามารถค้นหาชื่อเอกสารและแสดงรายละเอียดรายการเอกสารที่ค้นหาได้\n',
-                                  //         style: GoogleFonts.ibmPlexSansThai(
-                                  //             fontSize: 18,
-                                  //             fontWeight: FontWeight.w400,
-                                  //             color: Colors.black)),
-                                  //     TextSpan(
-                                  //         text:
-                                  //             '\u2022 จัดทํารายงาน รายการเอกสารออกจากระบบในรูปแบบ Excel ได้',
-                                  //         style: GoogleFonts.ibmPlexSansThai(
-                                  //             fontSize: 18,
-                                  //             fontWeight: FontWeight.w400,
-                                  //             color: Colors.black)),
-                                  //   ])),
-                                  // )
                                 ],
                               ),
                             ],
@@ -965,7 +871,7 @@ class GAMSfeaturesPage extends StatelessWidget {
                     child: Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 0),
+                          padding: const EdgeInsets.only(left: 100),
                           child: Stack(
                             children: [
                               Column(
@@ -973,7 +879,7 @@ class GAMSfeaturesPage extends StatelessWidget {
                                 children: [
                                   Padding(
                                     padding:
-                                        const EdgeInsets.only(top: 81, left: 0),
+                                        const EdgeInsets.only(top: 81, left: 1),
                                     child: Container(
                                       width: 610,
                                       height: 120,

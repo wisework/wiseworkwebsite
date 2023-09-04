@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wiseintern/responsive.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
@@ -46,7 +47,7 @@ class _Register extends State<Register> {
                     children: [
                       Container(
                         width: 1440,
-                        // height: 1614,
+                        height: 1750,
                         color: Color.fromARGB(255, 232, 242, 254),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -62,7 +63,7 @@ class _Register extends State<Register> {
                                     children: [
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            top: 68, left: 106),
+                                            top: 50, left: 106),
                                         child: Wrap(
                                           children: [
                                             Padding(
@@ -133,14 +134,18 @@ class _Register extends State<Register> {
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             top: 21, left: 78),
-                                        child: Text(
-                                          "สัมผัสประสบการณ์ใหม่ของการจัดการข้อมูลส่วนตัว\nที่แตกต่างอย่างเป็นระบบ ทดลองใช้งานโปรแกรม\nPDPA Management Platform ได้แล้ววันนี้เพียง",
-                                          style: GoogleFonts.ibmPlexSansThai(
-                                              fontSize: 24,
-                                              fontWeight: FontWeight.w500,
-                                              color: Color.fromARGB(
-                                                  255, 83, 104, 106)),
-                                          textAlign: TextAlign.start,
+                                        child: Container(
+                                          width: 520,
+                                          height: 120,
+                                          child: Text(
+                                            "สัมผัสประสบการณ์ใหม่ของการจัดการข้อมูลส่วนตัวที่แตกต่างอย่างเป็นระบบ ทดลองใช้งานโปรแกรม\nPDPA Management Platform ได้แล้ววันนี้เพียง",
+                                            style: GoogleFonts.ibmPlexSansThai(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w500,
+                                                color: Color.fromARGB(
+                                                    255, 83, 104, 106)),
+                                            textAlign: TextAlign.start,
+                                          ),
                                         ),
                                       ),
                                       Padding(
@@ -149,7 +154,7 @@ class _Register extends State<Register> {
                                           child: TextButton(
                                             onPressed: () {},
                                             child: Text(
-                                              "ถัดไป",
+                                              "คลิกลงทะเบียน",
                                               style:
                                                   GoogleFonts.ibmPlexSansThai(
                                                       fontSize: 24,
@@ -247,7 +252,7 @@ class _Register extends State<Register> {
                                                             top: 169,
                                                             left: 14,
                                                             child: Text(
-                                                              "ลดความยุ่งยาก\nจากการทำงานที่ซ้ำซ้อน1",
+                                                              "ลดความยุ่งยาก\nจากการทำงานที่ซ้ำซ้อน",
                                                               style: GoogleFonts.ibmPlexSansThai(
                                                                   fontSize: 24,
                                                                   fontWeight:
@@ -259,7 +264,7 @@ class _Register extends State<Register> {
                                                                   TextAlign
                                                                       .center,
                                                             ),
-                                                          )
+                                                          ),
                                                         ],
                                                       ),
                                                       Stack(
@@ -489,87 +494,6 @@ class _Register extends State<Register> {
                                                 ],
                                               ),
                                             ),
-                                            // Padding(
-                                            //   padding: const EdgeInsets.only(
-                                            //       left: 32),
-                                            //   child: Column(
-                                            //     crossAxisAlignment:
-                                            //         CrossAxisAlignment.start,
-                                            //     children: [
-                                            //       Wrap(
-                                            //         children: [
-                                            //           Container(
-                                            //             child: Text(
-                                            //               "ชื่อบริษัท",
-                                            //               style: GoogleFonts
-                                            //                   .ibmPlexSansThai(
-                                            //                       fontSize: 18,
-                                            //                       fontWeight:
-                                            //                           FontWeight
-                                            //                               .w400,
-                                            //                       color: Colors
-                                            //                           .black),
-                                            //             ),
-                                            //           ),
-                                            //           Container(
-                                            //             // width: 310,
-                                            //             child: Text(
-                                            //               "*",
-                                            //               style: GoogleFonts
-                                            //                   .ibmPlexSansThai(
-                                            //                       fontSize: 18,
-                                            //                       fontWeight:
-                                            //                           FontWeight
-                                            //                               .w400,
-                                            //                       color: Color
-                                            //                           .fromARGB(
-                                            //                               255,
-                                            //                               52,
-                                            //                               145,
-                                            //                               206)),
-                                            //             ),
-                                            //           ),
-                                            //         ],
-                                            //       ),
-                                            //       Container(
-                                            //         width: 310,
-                                            //         child: TextField(
-                                            //           decoration:
-                                            //               InputDecoration(
-                                            //             hintText:
-                                            //                 'The wisework co.,Ltd.',
-                                            //             hintStyle: GoogleFonts
-                                            //                 .ibmPlexSansThai(
-                                            //                     fontSize: 16,
-                                            //                     fontWeight:
-                                            //                         FontWeight
-                                            //                             .w500,
-                                            //                     color: Color
-                                            //                         .fromARGB(
-                                            //                             255,
-                                            //                             232,
-                                            //                             242,
-                                            //                             254)),
-                                            //             contentPadding:
-                                            //                 EdgeInsets.fromLTRB(
-                                            //                     0, 20, 0, 0),
-                                            //             border:
-                                            //                 UnderlineInputBorder(
-                                            //               borderSide:
-                                            //                   BorderSide(
-                                            //                       color: Color
-                                            //                           .fromARGB(
-                                            //                               255,
-                                            //                               52,
-                                            //                               145,
-                                            //                               206)),
-                                            //             ),
-                                            //           ),
-                                            //         ),
-                                            //       ),
-                                            //     ],
-                                            //   ),
-                                            // )
                                           ],
                                         ),
                                       ),
@@ -756,249 +680,6 @@ class _Register extends State<Register> {
                                           ],
                                         ),
                                       ),
-                                      // Padding(
-                                      //   padding: const EdgeInsets.only(top: 64),
-                                      //   child: Row(
-                                      //     children: [
-                                      //       // Padding(
-                                      //       //   padding: const EdgeInsets.only(
-                                      //       //       left: 25),
-                                      //       //   child: Column(
-                                      //       //     crossAxisAlignment:
-                                      //       //         CrossAxisAlignment.start,
-                                      //       //     children: [
-                                      //       //       Wrap(
-                                      //       //         children: [
-                                      //       //           Container(
-                                      //       //             // width: 310,
-                                      //       //             child: Text(
-                                      //       //               "จำนวนผู้ใช้งาน",
-                                      //       //               style: GoogleFonts
-                                      //       //                   .ibmPlexSansThai(
-                                      //       //                       fontSize: 18,
-                                      //       //                       fontWeight:
-                                      //       //                           FontWeight
-                                      //       //                               .w400,
-                                      //       //                       color: Colors
-                                      //       //                           .black),
-                                      //       //             ),
-                                      //       //           ),
-                                      //       //           Container(
-                                      //       //             // width: 310,
-                                      //       //             child: Text(
-                                      //       //               "*",
-                                      //       //               style: GoogleFonts
-                                      //       //                   .ibmPlexSansThai(
-                                      //       //                       fontSize: 18,
-                                      //       //                       fontWeight:
-                                      //       //                           FontWeight
-                                      //       //                               .w400,
-                                      //       //                       color: Color
-                                      //       //                           .fromARGB(
-                                      //       //                               255,
-                                      //       //                               52,
-                                      //       //                               145,
-                                      //       //                               206)),
-                                      //       //             ),
-                                      //       //           ),
-                                      //       //         ],
-                                      //       //       ),
-                                      //       //       Container(
-                                      //       //         width: 310,
-                                      //       //         child: TextField(
-                                      //       //           keyboardType:
-                                      //       //               TextInputType.number,
-                                      //       //           inputFormatters: <TextInputFormatter>[
-                                      //       //             FilteringTextInputFormatter
-                                      //       //                 .digitsOnly
-                                      //       //           ],
-                                      //       //           decoration:
-                                      //       //               InputDecoration(
-                                      //       //             // hintText: 'hello@thewiseworks.com',
-                                      //       //             hintStyle: GoogleFonts
-                                      //       //                 .ibmPlexSansThai(
-                                      //       //                     fontSize: 16,
-                                      //       //                     fontWeight:
-                                      //       //                         FontWeight
-                                      //       //                             .w500,
-                                      //       //                     color: Color
-                                      //       //                         .fromARGB(
-                                      //       //                             255,
-                                      //       //                             232,
-                                      //       //                             242,
-                                      //       //                             254)),
-                                      //       //             contentPadding:
-                                      //       //                 EdgeInsets.fromLTRB(
-                                      //       //                     0, 20, 0, 0),
-                                      //       //             border:
-                                      //       //                 UnderlineInputBorder(
-                                      //       //               borderSide:
-                                      //       //                   BorderSide(
-                                      //       //                       color: Color
-                                      //       //                           .fromARGB(
-                                      //       //                               255,
-                                      //       //                               52,
-                                      //       //                               145,
-                                      //       //                               206)),
-                                      //       //             ),
-                                      //       //           ),
-                                      //       //         ),
-                                      //       //       ),
-                                      //       //     ],
-                                      //       //   ),
-                                      //       // ),
-                                      //       // Padding(
-                                      //       //   padding: const EdgeInsets.only(
-                                      //       //       left: 25),
-                                      //       //   child: Column(
-                                      //       //     crossAxisAlignment:
-                                      //       //         CrossAxisAlignment.start,
-                                      //       //     children: [
-                                      //       //       Wrap(
-                                      //       //         children: [
-                                      //       //           Container(
-                                      //       //             child: Text(
-                                      //       //               "เลือกประเภทธุรกิจ",
-                                      //       //               style: GoogleFonts
-                                      //       //                   .ibmPlexSansThai(
-                                      //       //                       fontSize: 18,
-                                      //       //                       fontWeight:
-                                      //       //                           FontWeight
-                                      //       //                               .w400,
-                                      //       //                       color: Colors
-                                      //       //                           .black),
-                                      //       //             ),
-                                      //       //           ),
-                                      //       //           Container(
-                                      //       //             // width: 310,
-                                      //       //             child: Text(
-                                      //       //               "*",
-                                      //       //               style: GoogleFonts
-                                      //       //                   .ibmPlexSansThai(
-                                      //       //                       fontSize: 18,
-                                      //       //                       fontWeight:
-                                      //       //                           FontWeight
-                                      //       //                               .w400,
-                                      //       //                       color: Color
-                                      //       //                           .fromARGB(
-                                      //       //                               255,
-                                      //       //                               52,
-                                      //       //                               145,
-                                      //       //                               206)),
-                                      //       //             ),
-                                      //       //           ),
-                                      //       //         ],
-                                      //       //       ),
-                                      //       //       Padding(
-                                      //       //         padding:
-                                      //       //             const EdgeInsets.only(
-                                      //       //                 top: 15),
-                                      //       //         child: Container(
-                                      //       //           width: 615,
-                                      //       //           height: 60,
-                                      //       //           decoration: BoxDecoration(
-                                      //       //               borderRadius:
-                                      //       //                   BorderRadius
-                                      //       //                       .circular(20),
-                                      //       //               color: Color.fromARGB(
-                                      //       //                   255,
-                                      //       //                   232,
-                                      //       //                   242,
-                                      //       //                   254)),
-                                      //       //           child:
-                                      //       //               DropdownButtonHideUnderline(
-                                      //       //             child: DropdownButton2(
-                                      //       //               value: selectedOption,
-                                      //       //               buttonStyleData:
-                                      //       //                   const ButtonStyleData(
-                                      //       //                       padding: const EdgeInsets
-                                      //       //                               .only(
-                                      //       //                           right:
-                                      //       //                               12)),
-                                      //       //               hint: Text(
-                                      //       //                 'เลือกประเภทธุรกิจ',
-                                      //       //                 style: GoogleFonts
-                                      //       //                     .ibmPlexSansThai(
-                                      //       //                         fontSize:
-                                      //       //                             18,
-                                      //       //                         fontWeight:
-                                      //       //                             FontWeight
-                                      //       //                                 .w500,
-                                      //       //                         color: Color
-                                      //       //                             .fromARGB(
-                                      //       //                                 255,
-                                      //       //                                 130,
-                                      //       //                                 130,
-                                      //       //                                 130)),
-                                      //       //               ),
-                                      //       //               iconStyleData:
-                                      //       //                   const IconStyleData(
-                                      //       //                 icon: Icon(
-                                      //       //                   Icons
-                                      //       //                       .arrow_drop_down_outlined,
-                                      //       //                 ),
-                                      //       //                 iconSize: 20,
-                                      //       //                 iconEnabledColor:
-                                      //       //                     Color.fromARGB(
-                                      //       //                         255,
-                                      //       //                         79,
-                                      //       //                         79,
-                                      //       //                         79),
-                                      //       //                 iconDisabledColor:
-                                      //       //                     Color.fromARGB(
-                                      //       //                         255,
-                                      //       //                         79,
-                                      //       //                         79,
-                                      //       //                         79),
-                                      //       //               ),
-                                      //       //               isExpanded: true,
-                                      //       //               items: optionsItem
-                                      //       //                   .map((option) {
-                                      //       //                 return DropdownMenuItem<
-                                      //       //                     String>(
-                                      //       //                   value: option,
-                                      //       //                   child: Text(
-                                      //       //                     option,
-                                      //       //                     style: GoogleFonts.ibmPlexSansThai(
-                                      //       //                         fontSize:
-                                      //       //                             16,
-                                      //       //                         fontWeight:
-                                      //       //                             FontWeight
-                                      //       //                                 .w500,
-                                      //       //                         color: Colors
-                                      //       //                             .black),
-                                      //       //                   ),
-                                      //       //                 );
-                                      //       //               }).toList(),
-                                      //       //               dropdownStyleData:
-                                      //       //                   DropdownStyleData(
-                                      //       //                 decoration:
-                                      //       //                     BoxDecoration(
-                                      //       //                   borderRadius:
-                                      //       //                       BorderRadius
-                                      //       //                           .circular(
-                                      //       //                               5),
-                                      //       //                   color:
-                                      //       //                       Colors.white,
-                                      //       //                 ),
-                                      //       //               ),
-                                      //       //               // itemHeight: 8,
-                                      //       //               onChanged: (value) {
-                                      //       //                 setState(() {
-                                      //       //                   selectedOption =
-                                      //       //                       value;
-                                      //       //                 });
-                                      //       //               },
-                                      //       //             ),
-                                      //       //           ),
-                                      //       //         ),
-                                      //       //       )
-                                      //       //     ],
-                                      //       //   ),
-                                      //       // )
-                                      //     ],
-                                      //   ),
-                                      // ),
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             left: 25, top: 36),
@@ -1006,196 +687,6 @@ class _Register extends State<Register> {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            // Container(
-                                            //   child: Text(
-                                            //     "แพ็กเกจ",
-                                            //     style:
-                                            //         GoogleFonts.ibmPlexSansThai(
-                                            //             fontSize: 18,
-                                            //             fontWeight:
-                                            //                 FontWeight.w500,
-                                            //             color: Color.fromARGB(
-                                            //                 255, 51, 51, 51)),
-                                            //   ),
-                                            // ),
-                                            // Padding(
-                                            //   padding: const EdgeInsets.only(
-                                            //       top: 15),
-                                            //   child: Container(
-                                            //     width: 615,
-                                            //     height: 60,
-                                            //     decoration: BoxDecoration(
-                                            //         borderRadius:
-                                            //             BorderRadius.circular(
-                                            //                 20),
-                                            //         color: Color.fromARGB(
-                                            //             255, 232, 242, 254)),
-                                            //     child:
-                                            //         DropdownButtonHideUnderline(
-                                            //       child: DropdownButton2(
-                                            //         buttonStyleData:
-                                            //             const ButtonStyleData(
-                                            //                 padding:
-                                            //                     const EdgeInsets
-                                            //                             .only(
-                                            //                         right: 12)),
-                                            //         value: selectedPackage,
-                                            //         hint: Text(
-                                            //           'เลือกแพ็กเกจ',
-                                            //           style: GoogleFonts
-                                            //               .ibmPlexSansThai(
-                                            //                   fontSize: 18,
-                                            //                   fontWeight:
-                                            //                       FontWeight
-                                            //                           .w500,
-                                            //                   color: Color
-                                            //                       .fromARGB(
-                                            //                           255,
-                                            //                           130,
-                                            //                           130,
-                                            //                           130)),
-                                            //         ),
-                                            //         iconStyleData:
-                                            //             const IconStyleData(
-                                            //           icon: Icon(
-                                            //             Icons
-                                            //                 .arrow_drop_down_outlined,
-                                            //           ),
-                                            //           iconSize: 20,
-                                            //           iconEnabledColor:
-                                            //               Color.fromARGB(
-                                            //                   255, 79, 79, 79),
-                                            //           iconDisabledColor:
-                                            //               Color.fromARGB(
-                                            //                   255, 79, 79, 79),
-                                            //         ),
-                                            //         isExpanded: true,
-                                            //         items: packageItem
-                                            //             .map((option) {
-                                            //           return DropdownMenuItem<
-                                            //               String>(
-                                            //             value: option,
-                                            //             child: Text(
-                                            //               option,
-                                            //               style: GoogleFonts
-                                            //                   .ibmPlexSansThai(
-                                            //                       fontSize: 16,
-                                            //                       fontWeight:
-                                            //                           FontWeight
-                                            //                               .w500,
-                                            //                       color: Colors
-                                            //                           .black),
-                                            //             ),
-                                            //           );
-                                            //         }).toList(),
-                                            //         dropdownStyleData:
-                                            //             DropdownStyleData(
-                                            //           decoration: BoxDecoration(
-                                            //             borderRadius:
-                                            //                 BorderRadius
-                                            //                     .circular(5),
-                                            //             color: Colors.white,
-                                            //           ),
-                                            //         ),
-                                            //         // itemHeight: 8,
-                                            //         onChanged: (value) {
-                                            //           setState(() {
-                                            //             selectedPackage = value;
-                                            //           });
-                                            //         },
-                                            //       ),
-                                            //     ),
-                                            //   ),
-                                            // ),
-                                            // Padding(
-                                            //   padding: const EdgeInsets.only(
-                                            //       top: 36, left: 25),
-                                            //   child: Container(
-                                            //     width: 628,
-                                            //     height: 220,
-                                            //     decoration: BoxDecoration(
-                                            //         color: Colors.white,
-                                            //         borderRadius:
-                                            //             BorderRadius.circular(
-                                            //                 20),
-                                            //         border: Border.all(
-                                            //             color: Color.fromARGB(
-                                            //                 255, 232, 242, 254),
-                                            //             width: 1)),
-                                            //     child: Column(
-                                            //       crossAxisAlignment:
-                                            //           CrossAxisAlignment.start,
-                                            //       children: [
-                                            //         // Padding(
-                                            //         //   padding:
-                                            //         //       const EdgeInsets.only(
-                                            //         //           top: 29,
-                                            //         //           left: 15),
-                                            //         //   child: Text(
-                                            //         //     "โมดูลผลิตภัณฑ์",
-                                            //         //     style: GoogleFonts
-                                            //         //         .ibmPlexSansThai(
-                                            //         //             fontSize: 20,
-                                            //         //             fontWeight:
-                                            //         //                 FontWeight
-                                            //         //                     .w600,
-                                            //         //             color: Colors
-                                            //         //                 .black),
-                                            //         //     textAlign:
-                                            //         //         TextAlign.start,
-                                            //         //   ),
-                                            //         // ),
-                                            //         // Padding(
-                                            //         //   padding:
-                                            //         //       const EdgeInsets.only(
-                                            //         //           top: 18,
-                                            //         //           left: 15),
-                                            //         //   child: Container(
-                                            //         //     width: 310,
-                                            //         //     decoration: BoxDecoration(
-                                            //         //         color:
-                                            //         //             Color.fromARGB(
-                                            //         //                 255,
-                                            //         //                 75,
-                                            //         //                 195,
-                                            //         //                 211),
-                                            //         //         border: Border.all(
-                                            //         //             color: Color
-                                            //         //                 .fromARGB(
-                                            //         //                     255,
-                                            //         //                     52,
-                                            //         //                     145,
-                                            //         //                     206),
-                                            //         //             width: 1)),
-                                            //         //   ),
-                                            //         // ),
-                                            //         // Padding(
-                                            //         //   padding:
-                                            //         //       const EdgeInsets.only(
-                                            //         //           top: 18,
-                                            //         //           left: 15),
-                                            //         //   child: Text(
-                                            //         //     "CMC (Consent Management)\nPDM (Personal Data Management)\nDSR (Data Subject Right Management)",
-                                            //         //     style: GoogleFonts
-                                            //         //         .ibmPlexSansThai(
-                                            //         //             fontSize: 18,
-                                            //         //             fontWeight:
-                                            //         //                 FontWeight
-                                            //         //                     .w400,
-                                            //         //             color: Color
-                                            //         //                 .fromARGB(
-                                            //         //                     255,
-                                            //         //                     130,
-                                            //         //                     130,
-                                            //         //                     130)),
-                                            //         //     textAlign:
-                                            //         //         TextAlign.start,
-                                            //         //   ),
-                                            //         // ),
-                                            //       ],
-                                            //     ),
-                                            //   ),
-                                            // ),
                                             Padding(
                                               padding: const EdgeInsets.only(
                                                   top: 36),
@@ -1204,7 +695,8 @@ class _Register extends State<Register> {
                                                   width: 344,
                                                   height: 66,
                                                   child: ElevatedButton(
-                                                    onPressed: () {},
+                                                    onPressed: () => context
+                                                        .go('/demodetail'),
                                                     style: ElevatedButton
                                                         .styleFrom(
                                                       backgroundColor:
@@ -1253,7 +745,7 @@ class _Register extends State<Register> {
                                             ),
                                             Padding(
                                               padding: const EdgeInsets.only(
-                                                  top: 25),
+                                                  top: 50),
                                               child: Center(
                                                 child: SizedBox(
                                                   width: 384,
@@ -1283,7 +775,7 @@ class _Register extends State<Register> {
                                                           'สมัครใช้งานด้วย Google',
                                                           style: GoogleFonts
                                                               .ibmPlexSansThai(
-                                                                  fontSize: 24,
+                                                                  fontSize: 26,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w400,
@@ -1318,7 +810,8 @@ class _Register extends State<Register> {
                                           ),
                                         ),
                                         TextButton(
-                                            onPressed: () {},
+                                            onPressed: () => context.go(
+                                                'https://demo-pdpa-trialversion.thewiseworks.com/'),
                                             child: Text(
                                               ' เข้าสู่ระบบ',
                                               style:
@@ -1334,13 +827,745 @@ class _Register extends State<Register> {
                                   ),
                                 ),
                               ],
-                            )
+                            ),
                           ],
                         ),
                       ),
                       Container(
                         width: 1440,
-                        height: 1578,
+                        height: 800,
+                        color: Color.fromARGB(255, 232, 242, 254),
+                        child: Center(
+                          child: Container(
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 0),
+                                  child: Stack(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 71, left: 150),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  width: 1150,
+                                                  height: 450,
+                                                  // color: Colors.purple,
+                                                  color: Color.fromARGB(
+                                                      0, 250, 251, 252),
+                                                  child: Column(
+                                                    // mainAxisAlignment: MainAxisAlignment.center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      CarouselSlider(
+                                                        carouselController:
+                                                            _controller,
+                                                        options:
+                                                            CarouselOptions(
+                                                          // viewportFraction: 0.876,
+                                                          height: 425,
+                                                          // enlargeCenterPage: true,
+                                                          autoPlay: true,
+                                                          onPageChanged:
+                                                              (index, reason) {
+                                                            setState(() {
+                                                              _current = index;
+                                                              // print('Current Page: $_current');
+                                                            });
+                                                          },
+                                                        ),
+                                                        items: [
+                                                          Stack(
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top: 48,
+                                                                        left:
+                                                                            170),
+                                                                child: RichText(
+                                                                  text:
+                                                                      TextSpan(
+                                                                    children: [
+                                                                      TextSpan(
+                                                                        text:
+                                                                            'บันทึกรายการข้อมูลส่วนบุคคล',
+                                                                        style: GoogleFonts
+                                                                            .ibmPlexSansThai(
+                                                                          fontSize:
+                                                                              36,
+                                                                          fontWeight:
+                                                                              FontWeight.w500,
+                                                                          color: Color.fromARGB(
+                                                                              255,
+                                                                              52,
+                                                                              145,
+                                                                              206),
+                                                                        ),
+                                                                      ),
+                                                                      TextSpan(
+                                                                        text:
+                                                                            '\nไม่ซ้ำซ้อน ลดความผิดพลาด',
+                                                                        style: GoogleFonts
+                                                                            .ibmPlexSansThai(
+                                                                          fontSize:
+                                                                              36,
+                                                                          fontWeight:
+                                                                              FontWeight.w500,
+                                                                          color:
+                                                                              Colors.black,
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .start,
+                                                                  children: <Widget>[
+                                                                    // new Positioned(
+                                                                    //   top: 50,
+                                                                    //   left: 0,
+                                                                    //   // right: 100,
+                                                                    //   child:
+                                                                    //       Container(
+                                                                    //     width:
+                                                                    //         350,
+                                                                    //     height:
+                                                                    //         120,
+                                                                    //     child:
+                                                                    //         Text(
+                                                                    //       "ลดขั้นตอนการทำงานที่ซับซ้อน จัดการเอกสารด้วยระบบ Digital",
+                                                                    //       style: GoogleFonts.ibmPlexSansThai(
+                                                                    //           fontSize: 24,
+                                                                    //           fontWeight: FontWeight.w500,
+                                                                    //           color: Color.fromARGB(255, 0, 0, 0)),
+                                                                    //       textAlign:
+                                                                    //           TextAlign.start,
+                                                                    //     ),
+                                                                    //   ),
+                                                                    // ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              160,
+                                                                          left:
+                                                                              20),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/personal_01.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              200,
+                                                                          left:
+                                                                              30),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            350,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "ลดขั้นตอนการทำงานที่ซับซ้อน จัดการเอกสารด้วยระบบ Digital",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              160,
+                                                                          left:
+                                                                              20),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/personal_02.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              200,
+                                                                          left:
+                                                                              30),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            370,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "ระบบบันทึกรายการข้อมูลส่วนบุคคล และรายงานสรุป Active  Dashboard ",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ]),
+                                                              Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .start,
+                                                                  children: <Widget>[
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              320,
+                                                                          left:
+                                                                              20),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/personal_03.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              330,
+                                                                          left:
+                                                                              30),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            340,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "ลดความเสี่ยงการถูกฟ้องร้อง หรือเกิดข้อพิพาททางกฎหมาย",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              320,
+                                                                          left:
+                                                                              20),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/personal_04.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              330,
+                                                                          left:
+                                                                              35),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            340,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "พร้อมอัพเดทตามข้อกฎหมาย ล่าสุดของประเทศไทย",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ]),
+                                                            ],
+                                                          ),
+                                                          Stack(
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top: 48,
+                                                                        left:
+                                                                            300),
+                                                                child: RichText(
+                                                                  text:
+                                                                      TextSpan(
+                                                                    children: [
+                                                                      TextSpan(
+                                                                        text:
+                                                                            'ประหยัดเวลา',
+                                                                        style: GoogleFonts
+                                                                            .ibmPlexSansThai(
+                                                                          fontSize:
+                                                                              36,
+                                                                          fontWeight:
+                                                                              FontWeight.w500,
+                                                                          color: Color.fromARGB(
+                                                                              255,
+                                                                              52,
+                                                                              145,
+                                                                              206),
+                                                                        ),
+                                                                      ),
+                                                                      TextSpan(
+                                                                        text:
+                                                                            '\nในการทำงาน',
+                                                                        style: GoogleFonts
+                                                                            .ibmPlexSansThai(
+                                                                          fontSize:
+                                                                              36,
+                                                                          fontWeight:
+                                                                              FontWeight.w500,
+                                                                          color:
+                                                                              Colors.black,
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .start,
+                                                                  children: <Widget>[
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              160,
+                                                                          left:
+                                                                              20),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/time_01.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              200,
+                                                                          left:
+                                                                              30),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            300,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "บริหารจัดการข้อมูลส่วนบุคคล ได้อย่างสะดวก",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              160,
+                                                                          left:
+                                                                              20),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/time_02.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              200,
+                                                                          left:
+                                                                              30),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            370,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "ครอบคลุมทั้งการจัดเก็บ เผยแพร่ ประมวลผล และตรวจสอบข้อมูล",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ]),
+                                                              Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .start,
+                                                                  children: <Widget>[
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              320,
+                                                                          left:
+                                                                              20),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/time_03.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              330,
+                                                                          left:
+                                                                              30),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            250,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "รองรับการเชื่อมต่อ API และนำเข้าข้อมูล",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              320,
+                                                                          left:
+                                                                              70),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/time_04.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              320,
+                                                                          left:
+                                                                              35),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            300,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "ควบคุมและจัดการผ่านระบบ เข้าถึงทุกแพลตฟอร์ม ",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ]),
+                                                            ],
+                                                          ),
+                                                          Stack(
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top: 48,
+                                                                        left:
+                                                                            280),
+                                                                child: RichText(
+                                                                  text:
+                                                                      TextSpan(
+                                                                    children: [
+                                                                      TextSpan(
+                                                                        text:
+                                                                            'ลดภาระของ DPO',
+                                                                        style: GoogleFonts
+                                                                            .ibmPlexSansThai(
+                                                                          fontSize:
+                                                                              36,
+                                                                          fontWeight:
+                                                                              FontWeight.w500,
+                                                                          color: Color.fromARGB(
+                                                                              255,
+                                                                              52,
+                                                                              145,
+                                                                              206),
+                                                                        ),
+                                                                      ),
+                                                                      TextSpan(
+                                                                        text:
+                                                                            '\nData Protection Officer',
+                                                                        style: GoogleFonts
+                                                                            .ibmPlexSansThai(
+                                                                          fontSize:
+                                                                              36,
+                                                                          fontWeight:
+                                                                              FontWeight.w500,
+                                                                          color:
+                                                                              Colors.black,
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .start,
+                                                                  children: <Widget>[
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              160,
+                                                                          left:
+                                                                              20),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/DPO_01.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              200,
+                                                                          left:
+                                                                              30),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            300,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "ประมวลผลข้อมูลส่วนบุคคล รวดเร็วยิ่งขึ้น",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              160,
+                                                                          left:
+                                                                              20),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/DPO_02.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              200,
+                                                                          left:
+                                                                              30),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            370,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "ตรวจสอบการดำเนินงานของผู้ที่มี ความเกี่ยวข้องให้เป็นไปตามกฎหมาย",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ]),
+                                                              Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .start,
+                                                                  children: <Widget>[
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              320,
+                                                                          left:
+                                                                              20),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/DPO_03.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              330,
+                                                                          left:
+                                                                              30),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            300,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "ปรับกระบวนการการทำงาน สอดคล้องตาม PDPA",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              320,
+                                                                          left:
+                                                                              20),
+                                                                      child: Container(
+                                                                          // color: Colors.red,
+                                                                          width: 65,
+                                                                          height: 65,
+                                                                          child: Image.asset("assets/demo/DPO_04.png")),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              320,
+                                                                          left:
+                                                                              35),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            450,
+                                                                        height:
+                                                                            120,
+                                                                        child:
+                                                                            Text(
+                                                                          "ช่วยประสานงานให้ความร่วมมือกับสำนักงาน คณะกรรมการคุ้มครองข้อมูลส่วนบุคคล",
+                                                                          style: GoogleFonts.ibmPlexSansThai(
+                                                                              fontSize: 24,
+                                                                              fontWeight: FontWeight.w500,
+                                                                              color: Color.fromARGB(255, 0, 0, 0)),
+                                                                          textAlign:
+                                                                              TextAlign.start,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ]),
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [],
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 1440,
+                        height: 800,
                         color: Color.fromARGB(255, 245, 245, 245),
                         child: Center(
                           child: Column(
@@ -1398,20 +1623,24 @@ class _Register extends State<Register> {
                                                     255, 52, 145, 206)),
                                           ),
                                           Padding(
-                                            padding:
-                                                const EdgeInsets.only(top: 20),
-                                            child: Text(
-                                              "ธุรกิจ และองค์กรต่างๆ ที่เราได้รับความไว้วางใจ\nให้ wisework ดูแลมากกว่า 80 โครงการ",
-                                              style:
-                                                  GoogleFonts.ibmPlexSansThai(
-                                                      fontSize: 16,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      color: Color.fromARGB(
-                                                          255, 0, 0, 0)),
-                                              textAlign: TextAlign.center,
+                                            padding: const EdgeInsets.only(
+                                                top: 20, left: 20),
+                                            child: Container(
+                                              width: 320,
+                                              height: 150,
+                                              child: Text(
+                                                "ธุรกิจ และองค์กรต่างๆ ที่เราได้รับความไว้วางใจให้ wisework ดูแลมากกว่า 80 โครงการ",
+                                                style:
+                                                    GoogleFonts.ibmPlexSansThai(
+                                                        fontSize: 16,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: Color.fromARGB(
+                                                            255, 0, 0, 0)),
+                                                textAlign: TextAlign.center,
+                                              ),
                                             ),
-                                          )
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -1546,7 +1775,7 @@ class _Register extends State<Register> {
                   children: [
                     Container(
                       width: 1440,
-                      height: Responsive.isTablet(context) ? 1636 : 1800,
+                      height: Responsive.isTablet(context) ? 1336 : 1800,
                       color: Color.fromARGB(255, 232, 242, 252),
                       child: Center(
                         child: Column(
@@ -1763,89 +1992,6 @@ class _Register extends State<Register> {
                                                           ],
                                                         ),
                                                       ),
-                                                      // Padding(
-                                                      //   padding:
-                                                      //       const EdgeInsets
-                                                      //           .only(left: 32),
-                                                      //   child: Column(
-                                                      //     crossAxisAlignment:
-                                                      //         CrossAxisAlignment
-                                                      //             .start,
-                                                      //     children: [
-                                                      //       Wrap(
-                                                      //         children: [
-                                                      //           Container(
-                                                      //             child: Text(
-                                                      //               "ชื่อบริษัท",
-                                                      //               style: GoogleFonts.ibmPlexSansThai(
-                                                      //                   fontSize:
-                                                      //                       18,
-                                                      //                   fontWeight:
-                                                      //                       FontWeight
-                                                      //                           .w400,
-                                                      //                   color: Colors
-                                                      //                       .black),
-                                                      //             ),
-                                                      //           ),
-                                                      //           Container(
-                                                      //             // width: 310,
-                                                      //             child: Text(
-                                                      //               "*",
-                                                      //               style: GoogleFonts.ibmPlexSansThai(
-                                                      //                   fontSize:
-                                                      //                       18,
-                                                      //                   fontWeight:
-                                                      //                       FontWeight
-                                                      //                           .w400,
-                                                      //                   color: Color.fromARGB(
-                                                      //                       255,
-                                                      //                       52,
-                                                      //                       145,
-                                                      //                       206)),
-                                                      //             ),
-                                                      //           ),
-                                                      //         ],
-                                                      //       ),
-                                                      //       Container(
-                                                      //         width: 310,
-                                                      //         child: TextField(
-                                                      //           decoration:
-                                                      //               InputDecoration(
-                                                      //             hintText:
-                                                      //                 'The wisework co.,Ltd.',
-                                                      //             hintStyle: GoogleFonts.ibmPlexSansThai(
-                                                      //                 fontSize:
-                                                      //                     16,
-                                                      //                 fontWeight:
-                                                      //                     FontWeight
-                                                      //                         .w500,
-                                                      //                 color: Color.fromARGB(
-                                                      //                     255,
-                                                      //                     232,
-                                                      //                     242,
-                                                      //                     254)),
-                                                      //             contentPadding:
-                                                      //                 EdgeInsets
-                                                      //                     .fromLTRB(
-                                                      //                         0,
-                                                      //                         20,
-                                                      //                         0,
-                                                      //                         0),
-                                                      //             border:
-                                                      //                 UnderlineInputBorder(
-                                                      //               borderSide: BorderSide(
-                                                      //                   color: Color.fromARGB(
-                                                      //                       255,
-                                                      //                       52,
-                                                      //                       145,
-                                                      //                       206)),
-                                                      //             ),
-                                                      //           ),
-                                                      //         ),
-                                                      //       ),
-                                                      //     ],
-                                                      //   ),
-                                                      // ),
                                                     ],
                                                   )
                                                 : Column(
@@ -1934,92 +2080,6 @@ class _Register extends State<Register> {
                                                           ],
                                                         ),
                                                       ),
-                                                      // Padding(
-                                                      //   padding:
-                                                      //       const EdgeInsets
-                                                      //               .only(
-                                                      //           top: 32,
-                                                      //           left: 25),
-                                                      //   child: Column(
-                                                      //     crossAxisAlignment:
-                                                      //         CrossAxisAlignment
-                                                      //             .start,
-                                                      //     children: [
-                                                      //       Wrap(
-                                                      //         children: [
-                                                      //           Container(
-                                                      //             // width: 310,
-                                                      //             child: Text(
-                                                      //               "ชื่อบริษัท",
-                                                      //               style: GoogleFonts.ibmPlexSansThai(
-                                                      //                   fontSize:
-                                                      //                       18,
-                                                      //                   fontWeight:
-                                                      //                       FontWeight
-                                                      //                           .w400,
-                                                      //                   color: Colors
-                                                      //                       .black),
-                                                      //             ),
-                                                      //           ),
-                                                      //           Container(
-                                                      //             // width: 310,
-                                                      //             child: Text(
-                                                      //               "*",
-                                                      //               style: GoogleFonts.ibmPlexSansThai(
-                                                      //                   fontSize:
-                                                      //                       18,
-                                                      //                   fontWeight:
-                                                      //                       FontWeight
-                                                      //                           .w400,
-                                                      //                   color: Color.fromARGB(
-                                                      //                       255,
-                                                      //                       52,
-                                                      //                       145,
-                                                      //                       206)),
-                                                      //             ),
-                                                      //           ),
-                                                      //         ],
-                                                      //       ),
-                                                      //       Container(
-                                                      //         width: 300,
-                                                      //         child: TextField(
-                                                      //           decoration:
-                                                      //               InputDecoration(
-                                                      //             hintText:
-                                                      //                 'The wisework co.,Ltd.',
-                                                      //             hintStyle: GoogleFonts.ibmPlexSansThai(
-                                                      //                 fontSize:
-                                                      //                     16,
-                                                      //                 fontWeight:
-                                                      //                     FontWeight
-                                                      //                         .w500,
-                                                      //                 color: Color.fromARGB(
-                                                      //                     255,
-                                                      //                     232,
-                                                      //                     242,
-                                                      //                     254)),
-                                                      //             contentPadding:
-                                                      //                 EdgeInsets
-                                                      //                     .fromLTRB(
-                                                      //                         0,
-                                                      //                         20,
-                                                      //                         0,
-                                                      //                         0),
-                                                      //             border:
-                                                      //                 UnderlineInputBorder(
-                                                      //               borderSide: BorderSide(
-                                                      //                   color: Color.fromARGB(
-                                                      //                       255,
-                                                      //                       52,
-                                                      //                       145,
-                                                      //                       206)),
-                                                      //             ),
-                                                      //           ),
-                                                      //         ),
-                                                      //       ),
-                                                      //     ],
-                                                      //   ),
-                                                      // ),
                                                     ],
                                                   )),
                                         Padding(
@@ -2382,410 +2442,6 @@ class _Register extends State<Register> {
                                                       ),
                                                     ],
                                                   )),
-                                        // Padding(
-                                        //     padding:
-                                        //         const EdgeInsets.only(top: 36),
-                                        //     child: Responsive.isTablet(context)
-                                        //         ? Row(
-                                        //             children: [
-                                        //               // Padding(
-                                        //               //   padding:
-                                        //               //       const EdgeInsets
-                                        //               //           .only(left: 25),
-                                        //               //   child: Column(
-                                        //               //     crossAxisAlignment:
-                                        //               //         CrossAxisAlignment
-                                        //               //             .start,
-                                        //               //     children: [
-                                        //               //       Wrap(
-                                        //               //         children: [
-                                        //               //           Container(
-                                        //               //             child: Text(
-                                        //               //               "เลือกประเภทธุรกิจ",
-                                        //               //               style: GoogleFonts.ibmPlexSansThai(
-                                        //               //                   fontSize:
-                                        //               //                       18,
-                                        //               //                   fontWeight:
-                                        //               //                       FontWeight
-                                        //               //                           .w400,
-                                        //               //                   color: Colors
-                                        //               //                       .black),
-                                        //               //             ),
-                                        //               //           ),
-                                        //               //           Container(
-                                        //               //             // width: 310,
-                                        //               //             child: Text(
-                                        //               //               "*",
-                                        //               //               style: GoogleFonts.ibmPlexSansThai(
-                                        //               //                   fontSize:
-                                        //               //                       18,
-                                        //               //                   fontWeight:
-                                        //               //                       FontWeight
-                                        //               //                           .w400,
-                                        //               //                   color: Color.fromARGB(
-                                        //               //                       255,
-                                        //               //                       52,
-                                        //               //                       145,
-                                        //               //                       206)),
-                                        //               //             ),
-                                        //               //           ),
-                                        //               //         ],
-                                        //               //       ),
-                                        //               //       Padding(
-                                        //               //         padding:
-                                        //               //             const EdgeInsets
-                                        //               //                     .only(
-                                        //               //                 top: 15),
-                                        //               //         child: Container(
-                                        //               //           width: 600,
-                                        //               //           height: 60,
-                                        //               //           decoration: BoxDecoration(
-                                        //               //               borderRadius:
-                                        //               //                   BorderRadius.circular(
-                                        //               //                       20),
-                                        //               //               color: Color
-                                        //               //                   .fromARGB(
-                                        //               //                       255,
-                                        //               //                       232,
-                                        //               //                       242,
-                                        //               //                       254)),
-                                        //               //           child:
-                                        //               //               DropdownButtonHideUnderline(
-                                        //               //             child:
-                                        //               //                 DropdownButton2(
-                                        //               //               buttonStyleData:
-                                        //               //                   const ButtonStyleData(
-                                        //               //                       padding:
-                                        //               //                           const EdgeInsets.only(right: 12)),
-                                        //               //               value:
-                                        //               //                   selectedOption,
-                                        //               //               hint: Text(
-                                        //               //                 'เลือกประเภทธุรกิจ',
-                                        //               //                 style: GoogleFonts.ibmPlexSansThai(
-                                        //               //                     fontSize:
-                                        //               //                         18,
-                                        //               //                     fontWeight: FontWeight
-                                        //               //                         .w500,
-                                        //               //                     color: Color.fromARGB(
-                                        //               //                         255,
-                                        //               //                         130,
-                                        //               //                         130,
-                                        //               //                         130)),
-                                        //               //               ),
-                                        //               //               iconStyleData:
-                                        //               //                   const IconStyleData(
-                                        //               //                 icon:
-                                        //               //                     Icon(
-                                        //               //                   Icons
-                                        //               //                       .arrow_drop_down_outlined,
-                                        //               //                 ),
-                                        //               //                 iconSize:
-                                        //               //                     20,
-                                        //               //                 iconEnabledColor:
-                                        //               //                     Color.fromARGB(
-                                        //               //                         255,
-                                        //               //                         79,
-                                        //               //                         79,
-                                        //               //                         79),
-                                        //               //                 iconDisabledColor:
-                                        //               //                     Color.fromARGB(
-                                        //               //                         255,
-                                        //               //                         79,
-                                        //               //                         79,
-                                        //               //                         79),
-                                        //               //               ),
-                                        //               //               isExpanded:
-                                        //               //                   true,
-                                        //               //               items: optionsItem
-                                        //               //                   .map(
-                                        //               //                       (option) {
-                                        //               //                 return DropdownMenuItem<
-                                        //               //                     String>(
-                                        //               //                   value:
-                                        //               //                       option,
-                                        //               //                   child:
-                                        //               //                       Text(
-                                        //               //                     option,
-                                        //               //                     style: GoogleFonts.ibmPlexSansThai(
-                                        //               //                         fontSize: 16,
-                                        //               //                         fontWeight: FontWeight.w500,
-                                        //               //                         color: Colors.black),
-                                        //               //                   ),
-                                        //               //                 );
-                                        //               //               }).toList(),
-                                        //               //               dropdownStyleData:
-                                        //               //                   DropdownStyleData(
-                                        //               //                 decoration:
-                                        //               //                     BoxDecoration(
-                                        //               //                   borderRadius:
-                                        //               //                       BorderRadius.circular(5),
-                                        //               //                   color: Colors
-                                        //               //                       .white,
-                                        //               //                 ),
-                                        //               //               ),
-                                        //               //               // itemHeight: 8,
-                                        //               //               onChanged:
-                                        //               //                   (value) {
-                                        //               //                 setState(
-                                        //               //                     () {
-                                        //               //                   selectedOption =
-                                        //               //                       value;
-                                        //               //                 });
-                                        //               //               },
-                                        //               //             ),
-                                        //               //           ),
-                                        //               //         ),
-                                        //               //       )
-                                        //               //     ],
-                                        //               //   ),
-                                        //               // )
-                                        //             ],
-                                        //           )
-                                        //         : Column(
-                                        //             children: [
-                                        //               // Padding(
-                                        //               //   padding:
-                                        //               //       const EdgeInsets
-                                        //               //           .only(left: 25),
-                                        //               //   child: Column(
-                                        //               //     crossAxisAlignment:
-                                        //               //         CrossAxisAlignment
-                                        //               //             .start,
-                                        //               //     children: [
-                                        //               //       Wrap(
-                                        //               //         children: [
-                                        //               //           Container(
-                                        //               //             // width: 310,
-                                        //               //             child: Text(
-                                        //               //               "จำนวนผู้ใช้งาน",
-                                        //               //               style: GoogleFonts.ibmPlexSansThai(
-                                        //               //                   fontSize:
-                                        //               //                       18,
-                                        //               //                   fontWeight:
-                                        //               //                       FontWeight
-                                        //               //                           .w400,
-                                        //               //                   color: Colors
-                                        //               //                       .black),
-                                        //               //             ),
-                                        //               //           ),
-                                        //               //           Container(
-                                        //               //             // width: 310,
-                                        //               //             child: Text(
-                                        //               //               "*",
-                                        //               //               style: GoogleFonts.ibmPlexSansThai(
-                                        //               //                   fontSize:
-                                        //               //                       18,
-                                        //               //                   fontWeight:
-                                        //               //                       FontWeight
-                                        //               //                           .w400,
-                                        //               //                   color: Color.fromARGB(
-                                        //               //                       255,
-                                        //               //                       52,
-                                        //               //                       145,
-                                        //               //                       206)),
-                                        //               //             ),
-                                        //               //           ),
-                                        //               //         ],
-                                        //               //       ),
-                                        //               //       Container(
-                                        //               //         width: 300,
-                                        //               //         child: TextField(
-                                        //               //           keyboardType:
-                                        //               //               TextInputType
-                                        //               //                   .number,
-                                        //               //           inputFormatters: <TextInputFormatter>[
-                                        //               //             FilteringTextInputFormatter
-                                        //               //                 .digitsOnly
-                                        //               //           ],
-                                        //               //           decoration:
-                                        //               //               InputDecoration(
-                                        //               //             // hintText: 'hello@thewiseworks.com',
-                                        //               //             hintStyle: GoogleFonts.ibmPlexSansThai(
-                                        //               //                 fontSize:
-                                        //               //                     16,
-                                        //               //                 fontWeight:
-                                        //               //                     FontWeight
-                                        //               //                         .w500,
-                                        //               //                 color: Color.fromARGB(
-                                        //               //                     255,
-                                        //               //                     232,
-                                        //               //                     242,
-                                        //               //                     254)),
-                                        //               //             contentPadding:
-                                        //               //                 EdgeInsets
-                                        //               //                     .fromLTRB(
-                                        //               //                         0,
-                                        //               //                         20,
-                                        //               //                         0,
-                                        //               //                         0),
-                                        //               //             border:
-                                        //               //                 UnderlineInputBorder(
-                                        //               //               borderSide: BorderSide(
-                                        //               //                   color: Color.fromARGB(
-                                        //               //                       255,
-                                        //               //                       52,
-                                        //               //                       145,
-                                        //               //                       206)),
-                                        //               //             ),
-                                        //               //           ),
-                                        //               //         ),
-                                        //               //       ),
-                                        //               //     ],
-                                        //               //   ),
-                                        //               // ),
-                                        //               // Padding(
-                                        //               //   padding:
-                                        //               //       const EdgeInsets
-                                        //               //           .only(left: 25),
-                                        //               //   child: Column(
-                                        //               //     crossAxisAlignment:
-                                        //               //         CrossAxisAlignment
-                                        //               //             .start,
-                                        //               //     children: [
-                                        //               //       Wrap(
-                                        //               //         children: [
-                                        //               //           Container(
-                                        //               //             child: Text(
-                                        //               //               "ประเภทธุรกิจ",
-                                        //               //               style: GoogleFonts.ibmPlexSansThai(
-                                        //               //                   fontSize:
-                                        //               //                       14,
-                                        //               //                   fontWeight:
-                                        //               //                       FontWeight
-                                        //               //                           .w400,
-                                        //               //                   color: Colors
-                                        //               //                       .black),
-                                        //               //             ),
-                                        //               //           ),
-                                        //               //           Container(
-                                        //               //             // width: 310,
-                                        //               //             child: Text(
-                                        //               //               "*",
-                                        //               //               style: GoogleFonts.ibmPlexSansThai(
-                                        //               //                   fontSize:
-                                        //               //                       18,
-                                        //               //                   fontWeight:
-                                        //               //                       FontWeight
-                                        //               //                           .w400,
-                                        //               //                   color: Color.fromARGB(
-                                        //               //                       255,
-                                        //               //                       52,
-                                        //               //                       145,
-                                        //               //                       206)),
-                                        //               //             ),
-                                        //               //           ),
-                                        //               //         ],
-                                        //               //       ),
-                                        //               //       // Padding(
-                                        //               //       //   padding:
-                                        //               //       //       const EdgeInsets
-                                        //               //       //               .only(
-                                        //               //       //           top: 15),
-                                        //               //       //   child: Container(
-                                        //               //       //     width: 280,
-                                        //               //       //     height: 40,
-                                        //               //       //     decoration: BoxDecoration(
-                                        //               //       //         borderRadius:
-                                        //               //       //             BorderRadius.circular(
-                                        //               //       //                 20),
-                                        //               //       //         color: Color
-                                        //               //       //             .fromARGB(
-                                        //               //       //                 255,
-                                        //               //       //                 232,
-                                        //               //       //                 242,
-                                        //               //       //                 254)),
-                                        //               //       //     child:
-                                        //               //       //         DropdownButtonHideUnderline(
-                                        //               //       //       child:
-                                        //               //       //           DropdownButton2(
-                                        //               //       //         buttonStyleData:
-                                        //               //       //             const ButtonStyleData(
-                                        //               //       //                 padding:
-                                        //               //       //                     const EdgeInsets.only(right: 12)),
-                                        //               //       //         value:
-                                        //               //       //             selectedOption,
-                                        //               //       //         hint: Text(
-                                        //               //       //           'เลือกประเภทธุรกิจ',
-                                        //               //       //           style: GoogleFonts.ibmPlexSansThai(
-                                        //               //       //               fontSize:
-                                        //               //       //                   18,
-                                        //               //       //               fontWeight: FontWeight
-                                        //               //       //                   .w500,
-                                        //               //       //               color: Color.fromARGB(
-                                        //               //       //                   255,
-                                        //               //       //                   130,
-                                        //               //       //                   130,
-                                        //               //       //                   130)),
-                                        //               //       //         ),
-                                        //               //       //         iconStyleData:
-                                        //               //       //             const IconStyleData(
-                                        //               //       //           icon:
-                                        //               //       //               Icon(
-                                        //               //       //             Icons
-                                        //               //       //                 .arrow_drop_down_outlined,
-                                        //               //       //           ),
-                                        //               //       //           iconSize:
-                                        //               //       //               20,
-                                        //               //       //           iconEnabledColor:
-                                        //               //       //               Color.fromARGB(
-                                        //               //       //                   255,
-                                        //               //       //                   79,
-                                        //               //       //                   79,
-                                        //               //       //                   79),
-                                        //               //       //           iconDisabledColor:
-                                        //               //       //               Color.fromARGB(
-                                        //               //       //                   255,
-                                        //               //       //                   79,
-                                        //               //       //                   79,
-                                        //               //       //                   79),
-                                        //               //       //         ),
-                                        //               //       //         isExpanded:
-                                        //               //       //             true,
-                                        //               //       //         items: optionsItem
-                                        //               //       //             .map(
-                                        //               //       //                 (option) {
-                                        //               //       //           return DropdownMenuItem<
-                                        //               //       //               String>(
-                                        //               //       //             value:
-                                        //               //       //                 option,
-                                        //               //       //             child:
-                                        //               //       //                 Text(
-                                        //               //       //               option,
-                                        //               //       //               style: GoogleFonts.ibmPlexSansThai(
-                                        //               //       //                   fontSize: 16,
-                                        //               //       //                   fontWeight: FontWeight.w500,
-                                        //               //       //                   color: Colors.black),
-                                        //               //       //             ),
-                                        //               //       //           );
-                                        //               //       //         }).toList(),
-                                        //               //       //         dropdownStyleData:
-                                        //               //       //             DropdownStyleData(
-                                        //               //       //           decoration:
-                                        //               //       //               BoxDecoration(
-                                        //               //       //             borderRadius:
-                                        //               //       //                 BorderRadius.circular(5),
-                                        //               //       //             color: Colors
-                                        //               //       //                 .white,
-                                        //               //       //           ),
-                                        //               //       //         ),
-                                        //               //       //         // itemHeight: 8,
-                                        //               //       //         onChanged:
-                                        //               //       //             (value) {
-                                        //               //       //           setState(
-                                        //               //       //               () {
-                                        //               //       //             selectedOption =
-                                        //               //       //                 value;
-                                        //               //       //           });
-                                        //               //       //         },
-                                        //               //       //       ),
-                                        //               //       //     ),
-                                        //               //       //   ),
-                                        //               //       // )
-                                        //               //     ],
-                                        //               //   ),
-                                        //               // )
-                                        //             ],
-                                        //           )),
                                         Padding(
                                           padding:
                                               const EdgeInsets.only(top: 36),
@@ -2793,237 +2449,6 @@ class _Register extends State<Register> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              // Padding(
-                                              //   padding: const EdgeInsets.only(
-                                              //       left: 25),
-                                              //   child: Container(
-                                              //     child: Text(
-                                              //       "แพ็กเกจ",
-                                              //       style: GoogleFonts
-                                              //           .ibmPlexSansThai(
-                                              //               fontSize: Responsive
-                                              //                       .isTablet(
-                                              //                           context)
-                                              //                   ? 24
-                                              //                   : 18,
-                                              //               fontWeight:
-                                              //                   FontWeight.w500,
-                                              //               color:
-                                              //                   Color.fromARGB(
-                                              //                       255,
-                                              //                       51,
-                                              //                       51,
-                                              //                       51)),
-                                              //     ),
-                                              //   ),
-                                              // ),
-                                              // Padding(
-                                              //   padding: const EdgeInsets.only(
-                                              //       top: 15, left: 25),
-                                              //   child: Container(
-                                              //     width: Responsive.isTablet(
-                                              //             context)
-                                              //         ? 600
-                                              //         : 290,
-                                              //     height: Responsive.isTablet(
-                                              //             context)
-                                              //         ? 60
-                                              //         : 40,
-                                              //     decoration: BoxDecoration(
-                                              //         borderRadius:
-                                              //             BorderRadius.circular(
-                                              //                 20),
-                                              //         color: Color.fromARGB(
-                                              //             255, 232, 242, 254)),
-                                              //     child:
-                                              //         DropdownButtonHideUnderline(
-                                              //       child: DropdownButton2(
-                                              //         buttonStyleData:
-                                              //             const ButtonStyleData(
-                                              //                 padding:
-                                              //                     const EdgeInsets
-                                              //                             .only(
-                                              //                         right:
-                                              //                             12)),
-                                              //         value: selectedPackage,
-                                              //         hint: Text(
-                                              //           'เลือกแพ็กเกจ',
-                                              //           style: GoogleFonts
-                                              //               .ibmPlexSansThai(
-                                              //                   fontSize: Responsive
-                                              //                           .isTablet(
-                                              //                               context)
-                                              //                       ? 18
-                                              //                       : 14,
-                                              //                   fontWeight:
-                                              //                       FontWeight
-                                              //                           .w500,
-                                              //                   color: Color
-                                              //                       .fromARGB(
-                                              //                           255,
-                                              //                           130,
-                                              //                           130,
-                                              //                           130)),
-                                              //         ),
-                                              //         iconStyleData:
-                                              //             const IconStyleData(
-                                              //           icon: Icon(
-                                              //             Icons
-                                              //                 .arrow_drop_down_outlined,
-                                              //           ),
-                                              //           iconSize: 20,
-                                              //           iconEnabledColor:
-                                              //               Color.fromARGB(255,
-                                              //                   79, 79, 79),
-                                              //           iconDisabledColor:
-                                              //               Color.fromARGB(255,
-                                              //                   79, 79, 79),
-                                              //         ),
-
-                                              //         isExpanded: true,
-                                              //         items: packageItem
-                                              //             .map((option) {
-                                              //           return DropdownMenuItem<
-                                              //               String>(
-                                              //             value: option,
-                                              //             child: Text(
-                                              //               option,
-                                              //               style: GoogleFonts
-                                              //                   .ibmPlexSansThai(
-                                              //                       fontSize:
-                                              //                           16,
-                                              //                       fontWeight:
-                                              //                           FontWeight
-                                              //                               .w500,
-                                              //                       color: Colors
-                                              //                           .black),
-                                              //             ),
-                                              //           );
-                                              //         }).toList(),
-                                              //         dropdownStyleData:
-                                              //             DropdownStyleData(
-                                              //           decoration:
-                                              //               BoxDecoration(
-                                              //             borderRadius:
-                                              //                 BorderRadius
-                                              //                     .circular(5),
-                                              //             color: Colors.white,
-                                              //           ),
-                                              //         ),
-                                              //         // itemHeight: 8,
-                                              //         onChanged: (value) {
-                                              //           setState(() {
-                                              //             selectedPackage =
-                                              //                 value;
-                                              //           });
-                                              //         },
-                                              //       ),
-                                              //     ),
-                                              //   ),
-                                              // ),
-                                              // Padding(
-                                              //   padding: const EdgeInsets.only(
-                                              //       top: 36, left: 25),
-                                              //   child: Container(
-                                              //     width: Responsive.isTablet(
-                                              //             context)
-                                              //         ? 628
-                                              //         : 300,
-                                              //     height: 220,
-                                              //     decoration: BoxDecoration(
-                                              //         color: Colors.white,
-                                              //         borderRadius:
-                                              //             BorderRadius.circular(
-                                              //                 20),
-                                              //         border: Border.all(
-                                              //             color: Color.fromARGB(
-                                              //                 255,
-                                              //                 232,
-                                              //                 242,
-                                              //                 254),
-                                              //             width: 1)),
-                                              //     child: Column(
-                                              //       crossAxisAlignment:
-                                              //           CrossAxisAlignment
-                                              //               .start,
-                                              //       children: [
-                                              //         Padding(
-                                              //           padding:
-                                              //               const EdgeInsets
-                                              //                       .only(
-                                              //                   top: 29,
-                                              //                   left: 15),
-                                              //           child: Text(
-                                              //             "โมดูลผลิตภัณฑ์",
-                                              //             style: GoogleFonts
-                                              //                 .ibmPlexSansThai(
-                                              //                     fontSize: 20,
-                                              //                     fontWeight:
-                                              //                         FontWeight
-                                              //                             .w600,
-                                              //                     color: Colors
-                                              //                         .black),
-                                              //             textAlign:
-                                              //                 TextAlign.start,
-                                              //           ),
-                                              //         ),
-                                              //         Padding(
-                                              //           padding:
-                                              //               const EdgeInsets
-                                              //                       .only(
-                                              //                   top: 18,
-                                              //                   left: 15),
-                                              //           child: Container(
-                                              //             width: 310,
-                                              //             decoration: BoxDecoration(
-                                              //                 color:
-                                              //                     Color.fromARGB(
-                                              //                         255,
-                                              //                         75,
-                                              //                         195,
-                                              //                         211),
-                                              //                 border: Border.all(
-                                              //                     color: Color
-                                              //                         .fromARGB(
-                                              //                             255,
-                                              //                             52,
-                                              //                             145,
-                                              //                             206),
-                                              //                     width: 1)),
-                                              //           ),
-                                              //         ),
-                                              //         Padding(
-                                              //           padding:
-                                              //               const EdgeInsets
-                                              //                       .only(
-                                              //                   top: 18,
-                                              //                   left: 15),
-                                              //           child: Text(
-                                              //             "CMC (Consent Management)\nPDM (Personal Data Management)\nDSR (Data Subject Right Management)",
-                                              //             style: GoogleFonts
-                                              //                 .ibmPlexSansThai(
-                                              //                     fontSize:
-                                              //                         Responsive.isTablet(
-                                              //                                 context)
-                                              //                             ? 18
-                                              //                             : 15,
-                                              //                     fontWeight:
-                                              //                         FontWeight
-                                              //                             .w400,
-                                              //                     color: Color
-                                              //                         .fromARGB(
-                                              //                             255,
-                                              //                             130,
-                                              //                             130,
-                                              //                             130)),
-                                              //             textAlign:
-                                              //                 TextAlign.start,
-                                              //           ),
-                                              //         ),
-                                              //       ],
-                                              //     ),
-                                              //   ),
-                                              // ),
                                               Padding(
                                                 padding: const EdgeInsets.only(
                                                   top: 36,
@@ -3197,7 +2622,8 @@ class _Register extends State<Register> {
                                           ),
                                         ),
                                         TextButton(
-                                            onPressed: () {},
+                                            onPressed: () => context.go(
+                                                'https://demo-pdpa-trialversion.thewiseworks.com/'),
                                             child: Text(
                                               ' เข้าสู่ระบบ',
                                               style:
@@ -3223,7 +2649,7 @@ class _Register extends State<Register> {
                     ),
                     Container(
                       width: 1440,
-                      height: Responsive.isTablet(context) ? 3176 : 2300,
+                      height: Responsive.isTablet(context) ? 3376 : 2300,
                       color: Colors.white,
                       child: Center(
                         child: Column(
@@ -3251,7 +2677,7 @@ class _Register extends State<Register> {
                                   Responsive.isTablet(context)
                                       ? Padding(
                                           padding: const EdgeInsets.only(
-                                              top: 144, left: 97.5),
+                                              top: 100, left: 97.5),
                                           child: Text(
                                             "ทดลองใช้งานฟรี",
                                             style: GoogleFonts.ibmPlexSansThai(
@@ -3498,7 +2924,7 @@ class _Register extends State<Register> {
                                         ? Container(
                                             // width: 523,
                                             width: 1440,
-                                            height: 425,
+                                            height: 1000,
                                             // color: Colors.purple,
                                             color: Color.fromARGB(
                                                 0, 250, 251, 252),
@@ -3512,7 +2938,7 @@ class _Register extends State<Register> {
                                                       _controller,
                                                   options: CarouselOptions(
                                                     // viewportFraction: 0.95,
-                                                    height: 425,
+                                                    height: 1000,
                                                     // enlargeCenterPage: true,
                                                     autoPlay: true,
                                                     onPageChanged:
@@ -3548,7 +2974,244 @@ class _Register extends State<Register> {
                                                             textAlign: TextAlign
                                                                 .center,
                                                           ),
-                                                        )
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 500,
+                                                                  left: 150),
+                                                          child: RichText(
+                                                            text: TextSpan(
+                                                              children: [
+                                                                TextSpan(
+                                                                  text:
+                                                                      'บันทึกรายการข้อมูลส่วนบุคคล',
+                                                                  style: GoogleFonts
+                                                                      .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        36,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            52,
+                                                                            145,
+                                                                            206),
+                                                                  ),
+                                                                ),
+                                                                TextSpan(
+                                                                  text:
+                                                                      '\nไม่ซ้ำซ้อน ลดความผิดพลาด',
+                                                                  style: GoogleFonts
+                                                                      .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        36,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Colors
+                                                                        .black,
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .start,
+                                                            children: <Widget>[
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            600,
+                                                                        left:
+                                                                            20),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/personal_01.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            650,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 250,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "ลดขั้นตอนการทำงานที่ซับซ้อน จัดการเอกสารด้วยระบบ Digital",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            600,
+                                                                        left:
+                                                                            0),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/personal_02.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            650,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 250,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "ระบบบันทึกรายการข้อมูลส่วนบุคคล และรายงานสรุป Active  Dashboard ",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ]),
+                                                        Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .start,
+                                                            children: <Widget>[
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            750,
+                                                                        left:
+                                                                            20),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/personal_03.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            800,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 250,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "ลดความเสี่ยงการถูกฟ้องร้อง หรือเกิดข้อพิพาททางกฎหมาย",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            750,
+                                                                        left:
+                                                                            0),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/personal_04.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            800,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 250,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "พร้อมอัพเดทตามข้อกฎหมาย ล่าสุดของประเทศไทย",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ]),
                                                       ],
                                                     ),
                                                     Stack(
@@ -3575,7 +3238,244 @@ class _Register extends State<Register> {
                                                             textAlign: TextAlign
                                                                 .center,
                                                           ),
-                                                        )
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 500,
+                                                                  left: 150),
+                                                          child: RichText(
+                                                            text: TextSpan(
+                                                              children: [
+                                                                TextSpan(
+                                                                  text:
+                                                                      'ประหยัดเวลา',
+                                                                  style: GoogleFonts
+                                                                      .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        36,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            52,
+                                                                            145,
+                                                                            206),
+                                                                  ),
+                                                                ),
+                                                                TextSpan(
+                                                                  text:
+                                                                      '\nในการทำงาน',
+                                                                  style: GoogleFonts
+                                                                      .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        36,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Colors
+                                                                        .black,
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .start,
+                                                            children: <Widget>[
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            600,
+                                                                        left:
+                                                                            20),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/time_01.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            650,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 230,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "บริหารจัดการข้อมูลส่วนบุคคล ได้อย่างสะดวก",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            600,
+                                                                        left:
+                                                                            10),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/time_02.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            650,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 250,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "ครอบคลุมทั้งการจัดเก็บ เผยแพร่ ประมวลผล และตรวจสอบข้อมูล",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ]),
+                                                        Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .start,
+                                                            children: <Widget>[
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            750,
+                                                                        left:
+                                                                            20),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/time_03.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            800,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 220,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "รองรับการเชื่อมต่อ API และนำเข้าข้อมูล",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            750,
+                                                                        left:
+                                                                            10),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/time_04.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            800,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 250,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "ควบคุมและจัดการผ่านระบบ เข้าถึงทุกแพลตฟอร์ม ",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ]),
                                                       ],
                                                     ),
                                                     Stack(
@@ -3602,7 +3502,244 @@ class _Register extends State<Register> {
                                                             textAlign: TextAlign
                                                                 .center,
                                                           ),
-                                                        )
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 500,
+                                                                  left: 150),
+                                                          child: RichText(
+                                                            text: TextSpan(
+                                                              children: [
+                                                                TextSpan(
+                                                                  text:
+                                                                      'ลดภาระของ DPO',
+                                                                  style: GoogleFonts
+                                                                      .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        36,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Color
+                                                                        .fromARGB(
+                                                                            255,
+                                                                            52,
+                                                                            145,
+                                                                            206),
+                                                                  ),
+                                                                ),
+                                                                TextSpan(
+                                                                  text:
+                                                                      '\nData Protection Officer',
+                                                                  style: GoogleFonts
+                                                                      .ibmPlexSansThai(
+                                                                    fontSize:
+                                                                        36,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                    color: Colors
+                                                                        .black,
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .start,
+                                                            children: <Widget>[
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            600,
+                                                                        left:
+                                                                            20),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/DPO_01.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            650,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 250,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "ประมวลผลข้อมูลส่วนบุคคล รวดเร็วยิ่งขึ้น",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            600,
+                                                                        left:
+                                                                            0),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/DPO_02.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            650,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 250,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "ตรวจสอบการดำเนินงานของผู้ที่มี ความเกี่ยวข้องให้เป็นไปตามกฎหมาย",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ]),
+                                                        Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .start,
+                                                            children: <Widget>[
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            750,
+                                                                        left:
+                                                                            20),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/DPO_03.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            800,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 240,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "ปรับกระบวนการการทำงาน สอดคล้องตาม PDPA",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            750,
+                                                                        left:
+                                                                            10),
+                                                                child: Container(
+                                                                    // color: Colors.red,
+                                                                    width: 65,
+                                                                    height: 65,
+                                                                    child: Image.asset("assets/demo/DPO_04.png")),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top:
+                                                                            800,
+                                                                        left:
+                                                                            10),
+                                                                child:
+                                                                    Container(
+                                                                  width: 250,
+                                                                  height: 120,
+                                                                  child: Text(
+                                                                    "ช่วยประสานงานให้ความร่วมมือกับสำนักงาน คณะกรรมการคุ้มครองข้อมูลส่วนบุคคล",
+                                                                    style: GoogleFonts.ibmPlexSansThai(
+                                                                        fontSize:
+                                                                            24,
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w500,
+                                                                        color: Color.fromARGB(
+                                                                            255,
+                                                                            0,
+                                                                            0,
+                                                                            0)),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .start,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ]),
                                                       ],
                                                     )
                                                   ],
@@ -3742,6 +3879,7 @@ class _Register extends State<Register> {
                                                     255, 137, 141, 149))),
                                       ),
                                     ),
+
                                     Responsive.isTablet(context)
                                         ? Padding(
                                             padding:
